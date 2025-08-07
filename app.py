@@ -1,11 +1,13 @@
 from flask import Flask, request, jsonify, render_template_string, Response
 from service.twelvelabs_service import TwelveLabsService
 from service.sonar_service import SonarService
+from service.firebase_service import FirebaseService
 import os
 import requests
 from datetime import datetime
 from apscheduler.schedulers.background import BackgroundScheduler
 from dotenv import load_dotenv
+from functools import wraps
 
 load_dotenv()
 
@@ -33,6 +35,28 @@ app = Flask(__name__)
 app.config['TWELVELABS_API_KEY'] = os.environ.get('TWELVELABS_API_KEY', '')
 app.config['PERPLEXITY_API_KEY'] = os.environ.get('PERPLEXITY', '')
 
+# Initialize Firebase service
+firebase_service = FirebaseService()
+
+def firebase_auth_required(f):
+    @wraps(f)
+    def decorated_function(*args, **kwargs):
+        auth_header = request.headers.get('Authorization')
+        if not auth_header or not auth_header.startswith('Bearer '):
+            return jsonify({'error': 'Missing or invalid authorization header'}), 401
+        
+        id_token = auth_header.split('Bearer ')[1]
+        verification_result = firebase_service.verify_id_token(id_token)
+        
+        if not verification_result['success']:
+            return jsonify({'error': verification_result['error']}), 401
+        
+        # Add user info to request context
+        request.current_user = verification_result['user']
+        return f(*args, **kwargs)
+    
+    return decorated_function
+
 @app.route('/')
 def index():
     return jsonify({
@@ -47,7 +71,12 @@ def index():
             'sonar_research': 'POST /api/sonar/research',
             'sonar_research_stream': 'POST /api/sonar/research/stream',
             'workflow': 'POST /api/workflow',
-            'workflow_steps': 'POST /api/workflow/steps'
+            'workflow_steps': 'POST /api/workflow/steps',
+            'auth': {
+                'verify_token': 'POST /api/auth/verify',
+                'user_profile': 'GET /api/auth/user',
+                'logout': 'POST /api/auth/logout'
+            }
         }
     })
 
@@ -58,6 +87,8 @@ def health_check():
         'timestamp': datetime.now().isoformat(),
         'message': 'TwelveLabs Video DeepResearch API is running'
     })
+
+
 
 @app.route('/api/indexes', methods=['POST'])
 def get_indexes():
@@ -366,6 +397,106 @@ def workflow_steps():
         else:
             return jsonify({'success': False, 'error': 'Invalid step. Available steps: get_indexes, get_videos, analyze_video, sonar_research, sonar_research_stream'}), 400
         
+    except Exception as e:
+        return jsonify({'success': False, 'error': str(e)}), 500
+
+# Firebase Authentication Routes
+@app.route('/api/auth/verify', methods=['POST'])
+def verify_firebase_token():
+    try:
+        data = request.get_json()
+        id_token = data.get('id_token')
+        
+        if not id_token:
+            return jsonify({'error': 'ID token is required'}), 400
+        
+        verification_result = firebase_service.verify_id_token(id_token)
+        
+        if verification_result['success']:
+            return jsonify({
+                'success': True,
+                'user': verification_result['user'],
+                'message': 'Token verified successfully'
+            })
+        else:
+            return jsonify({
+                'success': False,
+                'error': verification_result['error']
+            }), 401
+            
+    except Exception as e:
+        return jsonify({'success': False, 'error': str(e)}), 500
+
+@app.route('/api/auth/user', methods=['GET'])
+@firebase_auth_required
+def get_user_profile():
+    try:
+        user = request.current_user
+        
+        # Get additional user details from Firebase
+        user_details = firebase_service.get_user_by_uid(user['uid'])
+        
+        if user_details['success']:
+            return jsonify({
+                'success': True,
+                'user': user_details['user']
+            })
+        else:
+            return jsonify({
+                'success': False,
+                'error': user_details['error']
+            }), 404
+            
+    except Exception as e:
+        return jsonify({'success': False, 'error': str(e)}), 500
+
+@app.route('/api/auth/logout', methods=['POST'])
+@firebase_auth_required
+def logout_user():
+    try:
+        user = request.current_user
+        uid = user['uid']
+        
+        # Revoke all refresh tokens for the user
+        revoke_result = firebase_service.revoke_refresh_tokens(uid)
+        
+        if revoke_result['success']:
+            return jsonify({
+                'success': True,
+                'message': 'User logged out successfully'
+            })
+        else:
+            return jsonify({
+                'success': False,
+                'error': revoke_result['error']
+            }), 500
+            
+    except Exception as e:
+        return jsonify({'success': False, 'error': str(e)}), 500
+
+@app.route('/api/auth/create-custom-token', methods=['POST'])
+def create_custom_token():
+    try:
+        data = request.get_json()
+        uid = data.get('uid')
+        additional_claims = data.get('additional_claims', {})
+        
+        if not uid:
+            return jsonify({'error': 'UID is required'}), 400
+        
+        token_result = firebase_service.create_custom_token(uid, additional_claims)
+        
+        if token_result['success']:
+            return jsonify({
+                'success': True,
+                'token': token_result['token']
+            })
+        else:
+            return jsonify({
+                'success': False,
+                'error': token_result['error']
+            }), 500
+            
     except Exception as e:
         return jsonify({'success': False, 'error': str(e)}), 500
 

@@ -4,3 +4,4 @@ requests
 python-dotenv
 apscheduler
 gunicorn
+firebase-admin

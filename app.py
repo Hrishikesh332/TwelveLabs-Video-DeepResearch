@@ -88,6 +88,78 @@ def health_check():
         'message': 'TwelveLabs Video DeepResearch API is running'
     })
 
+@app.route('/api/config/twelvelabs', methods=['POST'])
+def set_twelvelabs_config():
+    try:
+        data = request.get_json()
+        api_key = data.get('api_key')
+        
+        if not api_key:
+            return jsonify({'success': False, 'error': 'API key is required'}), 400
+        
+        # Test the API key by trying to fetch indexes
+        service = TwelveLabsService(api_key=api_key)
+        test_result = service.get_indexes()
+        
+        if isinstance(test_result, list):
+            # API key is valid, store it in app config
+            app.config['TWELVELABS_API_KEY'] = api_key
+            return jsonify({
+                'success': True,
+                'message': 'TwelveLabs API key configured successfully',
+                'indexes': test_result
+            })
+        else:
+            return jsonify({
+                'success': False,
+                'error': 'Invalid API key: Failed to fetch indexes'
+            }), 401
+            
+    except Exception as e:
+        return jsonify({
+            'success': False,
+            'error': f'Error configuring API key: {str(e)}'
+        }), 500
+
+@app.route('/api/config/twelvelabs', methods=['GET'])
+def get_twelvelabs_config():
+    try:
+        api_key = app.config.get('TWELVELABS_API_KEY')
+        if api_key:
+            # Mask the API key for security
+            masked_key = f"{api_key[:8]}...{api_key[-4:]}" if len(api_key) > 12 else "***"
+            return jsonify({
+                'success': True,
+                'configured': True,
+                'api_key': masked_key
+            })
+        else:
+            return jsonify({
+                'success': True,
+                'configured': False
+            })
+            
+    except Exception as e:
+        return jsonify({
+            'success': False,
+            'error': f'Error getting API key configuration: {str(e)}'
+        }), 500
+
+@app.route('/api/config/twelvelabs', methods=['DELETE'])
+def clear_twelvelabs_config():
+    try:
+        app.config['TWELVELABS_API_KEY'] = ''
+        return jsonify({
+            'success': True,
+            'message': 'TwelveLabs API key cleared successfully'
+        })
+            
+    except Exception as e:
+        return jsonify({
+            'success': False,
+            'error': f'Error clearing API key configuration: {str(e)}'
+        }), 500
+
 
 
 @app.route('/api/indexes', methods=['POST'])

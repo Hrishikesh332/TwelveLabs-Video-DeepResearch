@@ -1,4 +1,5 @@
 from flask import Flask, request, jsonify, render_template_string, Response
+from flask_cors import CORS
 from service.twelvelabs_service import TwelveLabsService
 from service.sonar_service import SonarService
 from service.firebase_service import FirebaseService
@@ -30,6 +31,17 @@ scheduler.add_job(wake_up_app, 'interval', minutes=9)
 scheduler.start()
 
 app = Flask(__name__)
+
+
+CORS(app, resources={
+    r"/*": {  
+        "origins": "*", 
+        "methods": ["GET", "POST", "PUT", "DELETE", "OPTIONS", "PATCH"],  
+        "allow_headers": ["Content-Type", "Authorization", "X-Requested-With", "Accept", "Origin"],  
+        "supports_credentials": True,  
+        "expose_headers": ["Content-Range", "X-Content-Range"]  
+    }
+})
 
 # Default configuration
 app.config['TWELVELABS_API_KEY'] = os.environ.get('TWELVELABS_API_KEY', '')

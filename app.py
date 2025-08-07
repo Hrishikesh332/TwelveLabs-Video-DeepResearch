@@ -2,9 +2,30 @@ from flask import Flask, request, jsonify, render_template_string, Response
 from service.twelvelabs_service import TwelveLabsService
 from service.sonar_service import SonarService
 import os
+import requests
+from datetime import datetime
+from apscheduler.schedulers.background import BackgroundScheduler
 from dotenv import load_dotenv
 
 load_dotenv()
+
+# Wake-up scheduler to keep app alive
+def wake_up_app():
+    try:
+        app_url = os.getenv('APP_URL', 'http://localhost:5000')
+        health_url = f"{app_url}/health"
+        response = requests.get(health_url, timeout=10)
+        if response.status_code == 200:
+            print(f"Successfully pinged {health_url} at {datetime.now()}")
+        else:
+            print(f"Failed to ping {health_url} (status code: {response.status_code}) at {datetime.now()}")
+    except Exception as e:
+        print(f"Error occurred while pinging app: {e}")
+
+# Initialize scheduler
+scheduler = BackgroundScheduler()
+scheduler.add_job(wake_up_app, 'interval', minutes=9)
+scheduler.start()
 
 app = Flask(__name__)
 
@@ -28,6 +49,14 @@ def index():
             'workflow': 'POST /api/workflow',
             'workflow_steps': 'POST /api/workflow/steps'
         }
+    })
+
+@app.route('/health')
+def health_check():
+    return jsonify({
+        'status': 'healthy',
+        'timestamp': datetime.now().isoformat(),
+        'message': 'TwelveLabs Video DeepResearch API is running'
     })
 
 @app.route('/api/indexes', methods=['POST'])
@@ -341,4 +370,13 @@ def workflow_steps():
         return jsonify({'success': False, 'error': str(e)}), 500
 
 if __name__ == '__main__':
-    app.run(debug=True, host='0.0.0.0', port=5000) 
+    try:
+        print("Starting TwelveLabs Video DeepResearch API...")
+        app.run(debug=True, host='0.0.0.0', port=5000)
+    except KeyboardInterrupt:
+        print("\nShutting down...")
+        scheduler.shutdown()
+        print("Scheduler stopped")
+    except Exception as e:
+        print(f"Error starting app: {e}")
+        scheduler.shutdown() 

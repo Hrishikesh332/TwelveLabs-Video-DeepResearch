@@ -84,6 +84,7 @@ def index():
             'sonar_research_stream': 'POST /api/sonar/research/stream',
             'workflow': 'POST /api/workflow',
             'workflow_steps': 'POST /api/workflow/steps',
+            'workflow_streaming': 'POST /api/workflow/streaming',
             'auth': {
                 'verify_token': 'POST /api/auth/verify',
                 'user_profile': 'GET /api/auth/user',
@@ -360,9 +361,9 @@ def complete_workflow():
         except Exception as e:
             return jsonify({'success': False, 'error': f'Video analysis failed: {str(e)}'}), 500
         
-        # Step 3 - Conduct deep research using Sonar
+        # Step 3 - Conduct deep research using Sonar (with shorter timeout for Render)
         sonar_service = SonarService()
-        research_result = sonar_service.deep_research(research_query)
+        research_result = sonar_service.deep_research(research_query, timeout=25)  # Reduced timeout for Render
         
         if 'error' in research_result:
             return jsonify({'success': False, 'error': f'Sonar research failed: {research_result["error"]}'}), 500
@@ -446,13 +447,13 @@ def workflow_steps():
                 return jsonify({'success': False, 'error': f'Video analysis failed: {str(e)}'}), 500
         
         elif step == 'sonar_research':
-            # Step 4 - Conduct deep research
+            # Step 4 - Conduct deep research (with shorter timeout for Render)
             research_query = data.get('research_query')
             if not research_query:
                 return jsonify({'success': False, 'error': 'Research query is required'}), 400
             
             sonar_service = SonarService()
-            research_result = sonar_service.deep_research(research_query)
+            research_result = sonar_service.deep_research(research_query, timeout=25)  # Reduced timeout for Render
             
             if 'error' in research_result:
                 return jsonify({'success': False, 'error': f'Sonar research failed: {research_result["error"]}'}), 500
@@ -465,7 +466,7 @@ def workflow_steps():
             })
         
         elif step == 'sonar_research_stream':
-            # Step 4: Conduct deep research with streaming
+            # Step 4: Conduct deep research with streaming (with shorter timeout for Render)
             research_query = data.get('research_query')
             if not research_query:
                 return jsonify({'success': False, 'error': 'Research query is required'}), 400
@@ -473,13 +474,69 @@ def workflow_steps():
             sonar_service = SonarService()
             
             def generate():
-                for chunk in sonar_service.deep_research_stream(research_query):
+                for chunk in sonar_service.deep_research_stream(research_query, timeout=45):  # Reduced timeout for Render
                     yield chunk
             
             return Response(generate(), mimetype='text/plain')
         
         else:
             return jsonify({'success': False, 'error': 'Invalid step. Available steps: get_indexes, get_videos, analyze_video, sonar_research, sonar_research_stream'}), 400
+        
+    except Exception as e:
+        return jsonify({'success': False, 'error': str(e)}), 500
+
+@app.route('/api/workflow/streaming', methods=['POST'])
+def streaming_workflow():
+
+    try:
+        data = request.get_json()
+        twelvelabs_api_key = data.get('twelvelabs_api_key')
+        index_id = data.get('index_id')
+        video_id = data.get('video_id')
+        analysis_prompt = data.get('analysis_prompt', 'Describe what happens in this video')
+        research_query = data.get('research_query')
+        
+        if not twelvelabs_api_key:
+            return jsonify({'success': False, 'error': 'TwelveLabs API key is required'}), 400
+        
+        if not research_query:
+            return jsonify({'success': False, 'error': 'Research query is required'}), 400
+        
+        def generate():
+            # Step 1: Get video details
+            yield f"data: {json.dumps({'step': 'video_details', 'message': 'Fetching video details...'})}\n\n"
+            
+            try:
+                twelvelabs_service = TwelveLabsService(api_key=twelvelabs_api_key)
+                if index_id and video_id:
+                    video_details = twelvelabs_service.get_video_details(index_id, video_id)
+                    yield f"data: {json.dumps({'step': 'video_details', 'data': video_details})}\n\n"
+            except Exception as e:
+                yield f"data: {json.dumps({'step': 'video_details', 'error': str(e)})}\n\n"
+            
+            # Step 2: Analyze video (if video_id provided)
+            if video_id:
+                yield f"data: {json.dumps({'step': 'analysis', 'message': 'Analyzing video content...'})}\n\n"
+                try:
+                    analysis_result = twelvelabs_service.analyze_video(video_id, analysis_prompt)
+                    yield f"data: {json.dumps({'step': 'analysis', 'data': analysis_result})}\n\n"
+                except Exception as e:
+                    yield f"data: {json.dumps({'step': 'analysis', 'error': str(e)})}\n\n"
+            
+            # Step 3: Conduct deep research
+            yield f"data: {json.dumps({'step': 'research', 'message': 'Conducting deep research...'})}\n\n"
+            
+            sonar_service = SonarService()
+            try:
+                for chunk in sonar_service.deep_research_stream(research_query, timeout=45):
+                    yield chunk
+            except Exception as e:
+                yield f"data: {json.dumps({'step': 'research', 'error': str(e)})}\n\n"
+            
+            # Step 4: Complete
+            yield f"data: {json.dumps({'step': 'complete', 'message': 'Workflow completed!'})}\n\n"
+        
+        return Response(generate(), mimetype='text/plain')
         
     except Exception as e:
         return jsonify({'success': False, 'error': str(e)}), 500

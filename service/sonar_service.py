@@ -10,12 +10,13 @@ class SonarService:
         self.api_key = api_key
         self.base_url = "https://api.perplexity.ai/chat/completions"
     
-    def deep_research(self, query):
+    def deep_research(self, query, timeout=30):
         """
         Conduct deep research using Perplexity AI's Sonar model
         
         Args:
             query (str): The research query to analyze
+            timeout (int): Request timeout in seconds (default: 30)
             
         Returns:
             dict: The response from the Sonar API
@@ -36,7 +37,13 @@ class SonarService:
                 "Content-Type": "application/json"
             }
             
-            response = requests.post(self.base_url, json=payload, headers=headers)
+            # Add timeout to prevent hanging requests
+            response = requests.post(
+                self.base_url, 
+                json=payload, 
+                headers=headers, 
+                timeout=timeout
+            )
             
             if response.status_code == 200:
                 return response.json()
@@ -44,16 +51,23 @@ class SonarService:
                 print(f"Error: {response.status_code} - {response.text}")
                 return {"error": f"API request failed with status {response.status_code}"}
                 
+        except requests.exceptions.Timeout:
+            print("Request timed out")
+            return {"error": "Request timed out - Sonar research is taking too long"}
+        except requests.exceptions.RequestException as e:
+            print(f"Request error: {e}")
+            return {"error": f"Network error: {str(e)}"}
         except Exception as e:
             print(f"Error in deep_research: {e}")
             return {"error": str(e)}
     
-    def deep_research_stream(self, query):
+    def deep_research_stream(self, query, timeout=60):
         """
         Conduct deep research using Perplexity AI's Sonar model with streaming
         
         Args:
             query (str): The research query to analyze
+            timeout (int): Request timeout in seconds (default: 60)
             
         Yields:
             str: Streaming content chunks
@@ -75,7 +89,14 @@ class SonarService:
                 "Content-Type": "application/json"
             }
             
-            response = requests.post(self.base_url, json=payload, headers=headers, stream=True)
+            # Add timeout to prevent hanging requests
+            response = requests.post(
+                self.base_url, 
+                json=payload, 
+                headers=headers, 
+                stream=True,
+                timeout=timeout
+            )
             
             if response.status_code != 200:
                 print(f"Error: {response.status_code} - {response.text}")
@@ -98,6 +119,12 @@ class SonarService:
                         except json.JSONDecodeError:
                             continue
                 
+        except requests.exceptions.Timeout:
+            print("Streaming request timed out")
+            yield f"data: {json.dumps({'error': 'Request timed out - Sonar research is taking too long'})}\n\n"
+        except requests.exceptions.RequestException as e:
+            print(f"Streaming request error: {e}")
+            yield f"data: {json.dumps({'error': f'Network error: {str(e)}'})}\n\n"
         except Exception as e:
             print(f"Error in deep_research_stream: {e}")
             yield f"data: {json.dumps({'error': str(e)})}\n\n" 

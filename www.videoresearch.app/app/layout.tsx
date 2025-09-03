@@ -26,14 +26,12 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode
-}>) {
+}) {
   return (
-    <html lang="en">
-      <body className={`font-sans ${GeistSans.variable} ${GeistMono.variable}`}>
-        {children}
-      </body>
+    <html lang="en" suppressHydrationWarning>
+      <body className={GeistSans.className}>{children}</body>
     </html>
   )
 }

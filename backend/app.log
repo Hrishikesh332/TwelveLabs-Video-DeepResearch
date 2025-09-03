@@ -7360,3 +7360,782 @@ Please ensure your analysis addresses the user's specific question while providi
   }
 }
 2025-09-03 17:23:54,193 - werkzeug - INFO - 127.0.0.1 - - [03/Sep/2025 17:23:54] "POST /api/workflow HTTP/1.1" 200 -
+2025-09-03 17:24:27,479 - werkzeug - INFO -  * Detected change in '/Users/hrishikesh/Desktop/Video DeepResearch/TwelveLabs-Video-DeepResearch/backend/service/twelvelabs_service.py', reloading
+2025-09-03 17:24:27,488 - werkzeug - INFO -  * Detected change in '/Users/hrishikesh/Desktop/Video DeepResearch/TwelveLabs-Video-DeepResearch/backend/service/twelvelabs_service.py', reloading
+2025-09-03 17:24:28,187 - werkzeug - INFO -  * Restarting with watchdog (fsevents)
+2025-09-03 17:24:28,689 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-09-03 17:24:28,689 - apscheduler.scheduler - INFO - Added job "wake_up_app" to job store "default"
+2025-09-03 17:24:28,689 - apscheduler.scheduler - INFO - Scheduler started
+2025-09-03 17:24:28,694 - werkzeug - WARNING -  * Debugger is active!
+2025-09-03 17:24:28,699 - werkzeug - INFO -  * Debugger PIN: 237-707-018
+2025-09-03 17:25:07,065 - apscheduler.executors.default - INFO - Running job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-03 17:34:07 CEST)" (scheduled at 2025-09-03 17:25:07.062442+02:00)
+2025-09-03 17:25:07,073 - werkzeug - INFO - 127.0.0.1 - - [03/Sep/2025 17:25:07] "GET /health HTTP/1.1" 200 -
+2025-09-03 17:25:07,074 - apscheduler.executors.default - INFO - Job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-03 17:34:07 CEST)" executed successfully
+2025-09-03 17:26:59,663 - werkzeug - INFO - 127.0.0.1 - - [03/Sep/2025 17:26:59] "OPTIONS /api/config/twelvelabs HTTP/1.1" 200 -
+2025-09-03 17:27:00,423 - werkzeug - INFO - 127.0.0.1 - - [03/Sep/2025 17:27:00] "POST /api/config/twelvelabs HTTP/1.1" 200 -
+2025-09-03 17:27:00,427 - werkzeug - INFO - 127.0.0.1 - - [03/Sep/2025 17:27:00] "OPTIONS /api/videos HTTP/1.1" 200 -
+2025-09-03 17:27:01,057 - werkzeug - INFO - 127.0.0.1 - - [03/Sep/2025 17:27:01] "POST /api/videos HTTP/1.1" 200 -
+2025-09-03 17:28:48,312 - werkzeug - INFO - 127.0.0.1 - - [03/Sep/2025 17:28:48] "OPTIONS /api/config/twelvelabs HTTP/1.1" 200 -
+2025-09-03 17:28:48,931 - werkzeug - INFO - 127.0.0.1 - - [03/Sep/2025 17:28:48] "POST /api/config/twelvelabs HTTP/1.1" 200 -
+2025-09-03 17:28:48,942 - werkzeug - INFO - 127.0.0.1 - - [03/Sep/2025 17:28:48] "OPTIONS /api/videos HTTP/1.1" 200 -
+2025-09-03 17:28:49,541 - werkzeug - INFO - 127.0.0.1 - - [03/Sep/2025 17:28:49] "POST /api/videos HTTP/1.1" 200 -
+2025-09-03 17:33:28,695 - apscheduler.executors.default - INFO - Running job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-03 17:42:28 CEST)" (scheduled at 2025-09-03 17:33:28.689232+02:00)
+2025-09-03 17:33:28,704 - werkzeug - INFO - 127.0.0.1 - - [03/Sep/2025 17:33:28] "GET /health HTTP/1.1" 200 -
+2025-09-03 17:33:28,705 - apscheduler.executors.default - INFO - Job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-03 17:42:28 CEST)" executed successfully
+2025-09-03 17:33:37,524 - werkzeug - INFO - 127.0.0.1 - - [03/Sep/2025 17:33:37] "OPTIONS /api/config/twelvelabs HTTP/1.1" 200 -
+2025-09-03 17:33:38,186 - werkzeug - INFO - 127.0.0.1 - - [03/Sep/2025 17:33:38] "POST /api/config/twelvelabs HTTP/1.1" 200 -
+2025-09-03 17:33:38,197 - werkzeug - INFO - 127.0.0.1 - - [03/Sep/2025 17:33:38] "OPTIONS /api/videos HTTP/1.1" 200 -
+2025-09-03 17:33:38,819 - werkzeug - INFO - 127.0.0.1 - - [03/Sep/2025 17:33:38] "POST /api/videos HTTP/1.1" 200 -
+2025-09-03 17:33:47,787 - werkzeug - INFO - 127.0.0.1 - - [03/Sep/2025 17:33:47] "OPTIONS /api/config/twelvelabs HTTP/1.1" 200 -
+2025-09-03 17:33:48,409 - werkzeug - INFO - 127.0.0.1 - - [03/Sep/2025 17:33:48] "POST /api/config/twelvelabs HTTP/1.1" 200 -
+2025-09-03 17:33:48,417 - werkzeug - INFO - 127.0.0.1 - - [03/Sep/2025 17:33:48] "OPTIONS /api/videos HTTP/1.1" 200 -
+2025-09-03 17:33:49,037 - werkzeug - INFO - 127.0.0.1 - - [03/Sep/2025 17:33:49] "POST /api/videos HTTP/1.1" 200 -
+2025-09-03 17:34:07,072 - apscheduler.executors.default - INFO - Running job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-03 17:43:07 CEST)" (scheduled at 2025-09-03 17:34:07.062442+02:00)
+2025-09-03 17:34:07,084 - werkzeug - INFO - 127.0.0.1 - - [03/Sep/2025 17:34:07] "GET /health HTTP/1.1" 200 -
+2025-09-03 17:34:07,085 - apscheduler.executors.default - INFO - Job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-03 17:43:07 CEST)" executed successfully
+2025-09-03 17:36:17,261 - werkzeug - INFO - 127.0.0.1 - - [03/Sep/2025 17:36:17] "OPTIONS /api/config/twelvelabs HTTP/1.1" 200 -
+2025-09-03 17:36:17,911 - werkzeug - INFO - 127.0.0.1 - - [03/Sep/2025 17:36:17] "POST /api/config/twelvelabs HTTP/1.1" 200 -
+2025-09-03 17:36:17,921 - werkzeug - INFO - 127.0.0.1 - - [03/Sep/2025 17:36:17] "OPTIONS /api/videos HTTP/1.1" 200 -
+2025-09-03 17:36:18,542 - werkzeug - INFO - 127.0.0.1 - - [03/Sep/2025 17:36:18] "POST /api/videos HTTP/1.1" 200 -
+2025-09-03 17:42:28,691 - apscheduler.executors.default - INFO - Running job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-03 17:51:28 CEST)" (scheduled at 2025-09-03 17:42:28.689232+02:00)
+2025-09-03 17:42:28,700 - werkzeug - INFO - 127.0.0.1 - - [03/Sep/2025 17:42:28] "GET /health HTTP/1.1" 200 -
+2025-09-03 17:42:28,701 - apscheduler.executors.default - INFO - Job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-03 17:51:28 CEST)" executed successfully
+2025-09-03 17:43:07,064 - apscheduler.executors.default - INFO - Running job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-03 17:52:07 CEST)" (scheduled at 2025-09-03 17:43:07.062442+02:00)
+2025-09-03 17:43:07,074 - werkzeug - INFO - 127.0.0.1 - - [03/Sep/2025 17:43:07] "GET /health HTTP/1.1" 200 -
+2025-09-03 17:43:07,076 - apscheduler.executors.default - INFO - Job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-03 17:52:07 CEST)" executed successfully
+2025-09-03 17:51:28,705 - apscheduler.executors.default - INFO - Running job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-03 18:00:28 CEST)" (scheduled at 2025-09-03 17:51:28.689232+02:00)
+2025-09-03 17:51:28,725 - werkzeug - INFO - 127.0.0.1 - - [03/Sep/2025 17:51:28] "GET /health HTTP/1.1" 200 -
+2025-09-03 17:51:28,727 - apscheduler.executors.default - INFO - Job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-03 18:00:28 CEST)" executed successfully
+2025-09-03 17:52:07,070 - apscheduler.executors.default - INFO - Running job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-03 18:01:07 CEST)" (scheduled at 2025-09-03 17:52:07.062442+02:00)
+2025-09-03 17:52:07,080 - werkzeug - INFO - 127.0.0.1 - - [03/Sep/2025 17:52:07] "GET /health HTTP/1.1" 200 -
+2025-09-03 17:52:07,082 - apscheduler.executors.default - INFO - Job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-03 18:01:07 CEST)" executed successfully
+2025-09-03 18:00:28,690 - apscheduler.executors.default - INFO - Running job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-03 18:09:28 CEST)" (scheduled at 2025-09-03 18:00:28.689232+02:00)
+2025-09-03 18:00:28,695 - werkzeug - INFO - 127.0.0.1 - - [03/Sep/2025 18:00:28] "GET /health HTTP/1.1" 200 -
+2025-09-03 18:00:28,696 - apscheduler.executors.default - INFO - Job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-03 18:09:28 CEST)" executed successfully
+2025-09-03 18:01:07,070 - apscheduler.executors.default - INFO - Running job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-03 18:10:07 CEST)" (scheduled at 2025-09-03 18:01:07.062442+02:00)
+2025-09-03 18:01:07,083 - werkzeug - INFO - 127.0.0.1 - - [03/Sep/2025 18:01:07] "GET /health HTTP/1.1" 200 -
+2025-09-03 18:01:07,088 - apscheduler.executors.default - INFO - Job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-03 18:10:07 CEST)" executed successfully
+2025-09-03 18:09:28,694 - apscheduler.executors.default - INFO - Running job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-03 18:18:28 CEST)" (scheduled at 2025-09-03 18:09:28.689232+02:00)
+2025-09-03 18:09:28,704 - werkzeug - INFO - 127.0.0.1 - - [03/Sep/2025 18:09:28] "GET /health HTTP/1.1" 200 -
+2025-09-03 18:09:28,705 - apscheduler.executors.default - INFO - Job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-03 18:18:28 CEST)" executed successfully
+2025-09-03 18:10:07,068 - apscheduler.executors.default - INFO - Running job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-03 18:19:07 CEST)" (scheduled at 2025-09-03 18:10:07.062442+02:00)
+2025-09-03 18:10:07,073 - werkzeug - INFO - 127.0.0.1 - - [03/Sep/2025 18:10:07] "GET /health HTTP/1.1" 200 -
+2025-09-03 18:10:07,074 - apscheduler.executors.default - INFO - Job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-03 18:19:07 CEST)" executed successfully
+2025-09-03 18:18:28,695 - apscheduler.executors.default - INFO - Running job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-03 18:27:28 CEST)" (scheduled at 2025-09-03 18:18:28.689232+02:00)
+2025-09-03 18:18:28,710 - werkzeug - INFO - 127.0.0.1 - - [03/Sep/2025 18:18:28] "GET /health HTTP/1.1" 200 -
+2025-09-03 18:18:28,712 - apscheduler.executors.default - INFO - Job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-03 18:27:28 CEST)" executed successfully
+2025-09-03 18:19:07,072 - apscheduler.executors.default - INFO - Running job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-03 18:28:07 CEST)" (scheduled at 2025-09-03 18:19:07.062442+02:00)
+2025-09-03 18:19:07,086 - werkzeug - INFO - 127.0.0.1 - - [03/Sep/2025 18:19:07] "GET /health HTTP/1.1" 200 -
+2025-09-03 18:19:07,087 - apscheduler.executors.default - INFO - Job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-03 18:28:07 CEST)" executed successfully
+2025-09-03 18:27:28,692 - apscheduler.executors.default - INFO - Running job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-03 18:36:28 CEST)" (scheduled at 2025-09-03 18:27:28.689232+02:00)
+2025-09-03 18:27:28,707 - werkzeug - INFO - 127.0.0.1 - - [03/Sep/2025 18:27:28] "GET /health HTTP/1.1" 200 -
+2025-09-03 18:27:28,709 - apscheduler.executors.default - INFO - Job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-03 18:36:28 CEST)" executed successfully
+2025-09-03 18:28:07,071 - apscheduler.executors.default - INFO - Running job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-03 18:37:07 CEST)" (scheduled at 2025-09-03 18:28:07.062442+02:00)
+2025-09-03 18:28:07,085 - werkzeug - INFO - 127.0.0.1 - - [03/Sep/2025 18:28:07] "GET /health HTTP/1.1" 200 -
+2025-09-03 18:28:07,087 - apscheduler.executors.default - INFO - Job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-03 18:37:07 CEST)" executed successfully
+2025-09-03 18:52:10,115 - apscheduler.executors.default - WARNING - Run time of job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-03 18:54:28 CEST)" was missed by 0:06:41.424775
+2025-09-03 18:52:48,489 - apscheduler.executors.default - WARNING - Run time of job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-03 18:55:07 CEST)" was missed by 0:06:41.426553
+2025-09-03 18:54:28,692 - apscheduler.executors.default - INFO - Running job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-03 19:03:28 CEST)" (scheduled at 2025-09-03 18:54:28.689232+02:00)
+2025-09-03 18:54:28,713 - werkzeug - INFO - 127.0.0.1 - - [03/Sep/2025 18:54:28] "GET /health HTTP/1.1" 200 -
+2025-09-03 18:54:28,714 - apscheduler.executors.default - INFO - Job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-03 19:03:28 CEST)" executed successfully
+2025-09-03 18:55:07,071 - apscheduler.executors.default - INFO - Running job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-03 19:04:07 CEST)" (scheduled at 2025-09-03 18:55:07.062442+02:00)
+2025-09-03 18:55:07,129 - werkzeug - INFO - 127.0.0.1 - - [03/Sep/2025 18:55:07] "GET /health HTTP/1.1" 200 -
+2025-09-03 18:55:07,134 - apscheduler.executors.default - INFO - Job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-03 19:04:07 CEST)" executed successfully
+2025-09-03 19:03:28,690 - apscheduler.executors.default - INFO - Running job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-03 19:12:28 CEST)" (scheduled at 2025-09-03 19:03:28.689232+02:00)
+2025-09-03 19:03:28,709 - werkzeug - INFO - 127.0.0.1 - - [03/Sep/2025 19:03:28] "GET /health HTTP/1.1" 200 -
+2025-09-03 19:03:28,710 - apscheduler.executors.default - INFO - Job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-03 19:12:28 CEST)" executed successfully
+2025-09-03 19:04:07,065 - apscheduler.executors.default - INFO - Running job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-03 19:13:07 CEST)" (scheduled at 2025-09-03 19:04:07.062442+02:00)
+2025-09-03 19:04:07,080 - werkzeug - INFO - 127.0.0.1 - - [03/Sep/2025 19:04:07] "GET /health HTTP/1.1" 200 -
+2025-09-03 19:04:07,081 - apscheduler.executors.default - INFO - Job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-03 19:13:07 CEST)" executed successfully
+2025-09-03 19:12:28,693 - apscheduler.executors.default - INFO - Running job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-03 19:21:28 CEST)" (scheduled at 2025-09-03 19:12:28.689232+02:00)
+2025-09-03 19:12:28,706 - werkzeug - INFO - 127.0.0.1 - - [03/Sep/2025 19:12:28] "GET /health HTTP/1.1" 200 -
+2025-09-03 19:12:28,707 - apscheduler.executors.default - INFO - Job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-03 19:21:28 CEST)" executed successfully
+2025-09-03 19:13:07,066 - apscheduler.executors.default - INFO - Running job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-03 19:22:07 CEST)" (scheduled at 2025-09-03 19:13:07.062442+02:00)
+2025-09-03 19:13:07,083 - werkzeug - INFO - 127.0.0.1 - - [03/Sep/2025 19:13:07] "GET /health HTTP/1.1" 200 -
+2025-09-03 19:13:07,085 - apscheduler.executors.default - INFO - Job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-03 19:22:07 CEST)" executed successfully
+2025-09-03 19:21:28,734 - apscheduler.executors.default - INFO - Running job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-03 19:30:28 CEST)" (scheduled at 2025-09-03 19:21:28.689232+02:00)
+2025-09-03 19:21:28,749 - werkzeug - INFO - 127.0.0.1 - - [03/Sep/2025 19:21:28] "GET /health HTTP/1.1" 200 -
+2025-09-03 19:21:28,750 - apscheduler.executors.default - INFO - Job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-03 19:30:28 CEST)" executed successfully
+2025-09-03 19:22:07,110 - apscheduler.executors.default - INFO - Running job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-03 19:31:07 CEST)" (scheduled at 2025-09-03 19:22:07.062442+02:00)
+2025-09-03 19:22:07,121 - werkzeug - INFO - 127.0.0.1 - - [03/Sep/2025 19:22:07] "GET /health HTTP/1.1" 200 -
+2025-09-03 19:22:07,123 - apscheduler.executors.default - INFO - Job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-03 19:31:07 CEST)" executed successfully
+2025-09-03 19:30:28,695 - apscheduler.executors.default - INFO - Running job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-03 19:39:28 CEST)" (scheduled at 2025-09-03 19:30:28.689232+02:00)
+2025-09-03 19:30:28,700 - werkzeug - INFO - 127.0.0.1 - - [03/Sep/2025 19:30:28] "GET /health HTTP/1.1" 200 -
+2025-09-03 19:30:28,700 - apscheduler.executors.default - INFO - Job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-03 19:39:28 CEST)" executed successfully
+2025-09-03 19:31:07,071 - apscheduler.executors.default - INFO - Running job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-03 19:40:07 CEST)" (scheduled at 2025-09-03 19:31:07.062442+02:00)
+2025-09-03 19:31:07,077 - werkzeug - INFO - 127.0.0.1 - - [03/Sep/2025 19:31:07] "GET /health HTTP/1.1" 200 -
+2025-09-03 19:31:07,078 - apscheduler.executors.default - INFO - Job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-03 19:40:07 CEST)" executed successfully
+2025-09-03 19:33:16,857 - werkzeug - INFO - 127.0.0.1 - - [03/Sep/2025 19:33:16] "OPTIONS /api/config/twelvelabs HTTP/1.1" 200 -
+2025-09-03 19:33:17,558 - werkzeug - INFO - 127.0.0.1 - - [03/Sep/2025 19:33:17] "POST /api/config/twelvelabs HTTP/1.1" 200 -
+2025-09-03 19:33:17,566 - werkzeug - INFO - 127.0.0.1 - - [03/Sep/2025 19:33:17] "OPTIONS /api/videos HTTP/1.1" 200 -
+2025-09-03 19:33:18,155 - werkzeug - INFO - 127.0.0.1 - - [03/Sep/2025 19:33:18] "POST /api/videos HTTP/1.1" 200 -
+2025-09-03 19:39:28,697 - apscheduler.executors.default - INFO - Running job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-03 19:48:28 CEST)" (scheduled at 2025-09-03 19:39:28.689232+02:00)
+2025-09-03 19:39:28,702 - werkzeug - INFO - 127.0.0.1 - - [03/Sep/2025 19:39:28] "GET /health HTTP/1.1" 200 -
+2025-09-03 19:39:28,703 - apscheduler.executors.default - INFO - Job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-03 19:48:28 CEST)" executed successfully
+2025-09-03 19:40:07,070 - apscheduler.executors.default - INFO - Running job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-03 19:49:07 CEST)" (scheduled at 2025-09-03 19:40:07.062442+02:00)
+2025-09-03 19:40:07,077 - werkzeug - INFO - 127.0.0.1 - - [03/Sep/2025 19:40:07] "GET /health HTTP/1.1" 200 -
+2025-09-03 19:40:07,078 - apscheduler.executors.default - INFO - Job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-03 19:49:07 CEST)" executed successfully
+2025-09-03 19:44:35,759 - werkzeug - INFO - 127.0.0.1 - - [03/Sep/2025 19:44:35] "OPTIONS /api/config/twelvelabs HTTP/1.1" 200 -
+2025-09-03 19:44:42,705 - werkzeug - INFO - 127.0.0.1 - - [03/Sep/2025 19:44:42] "POST /api/config/twelvelabs HTTP/1.1" 200 -
+2025-09-03 19:44:42,710 - werkzeug - INFO - 127.0.0.1 - - [03/Sep/2025 19:44:42] "OPTIONS /api/videos HTTP/1.1" 200 -
+2025-09-03 19:44:43,789 - werkzeug - INFO - 127.0.0.1 - - [03/Sep/2025 19:44:43] "POST /api/videos HTTP/1.1" 200 -
+2025-09-03 19:45:16,305 - werkzeug - INFO - 127.0.0.1 - - [03/Sep/2025 19:45:16] "OPTIONS /api/config/twelvelabs HTTP/1.1" 200 -
+2025-09-03 19:45:20,206 - werkzeug - INFO - 127.0.0.1 - - [03/Sep/2025 19:45:20] "POST /api/config/twelvelabs HTTP/1.1" 200 -
+2025-09-03 19:45:20,209 - werkzeug - INFO - 127.0.0.1 - - [03/Sep/2025 19:45:20] "OPTIONS /api/videos HTTP/1.1" 200 -
+2025-09-03 19:45:20,987 - werkzeug - INFO - 127.0.0.1 - - [03/Sep/2025 19:45:20] "POST /api/videos HTTP/1.1" 200 -
+2025-09-03 19:46:04,946 - werkzeug - INFO - 127.0.0.1 - - [03/Sep/2025 19:46:04] "OPTIONS /api/config/twelvelabs HTTP/1.1" 200 -
+2025-09-03 19:46:05,649 - werkzeug - INFO - 127.0.0.1 - - [03/Sep/2025 19:46:05] "POST /api/config/twelvelabs HTTP/1.1" 200 -
+2025-09-03 19:46:05,655 - werkzeug - INFO - 127.0.0.1 - - [03/Sep/2025 19:46:05] "OPTIONS /api/videos HTTP/1.1" 200 -
+2025-09-03 19:46:06,296 - werkzeug - INFO - 127.0.0.1 - - [03/Sep/2025 19:46:06] "POST /api/videos HTTP/1.1" 200 -
+2025-09-03 19:46:24,612 - werkzeug - INFO - 127.0.0.1 - - [03/Sep/2025 19:46:24] "OPTIONS /api/workflow HTTP/1.1" 200 -
+2025-09-03 19:46:24,614 - __main__ - INFO - === WORKFLOW REQUEST START ===
+2025-09-03 19:46:24,614 - __main__ - INFO - Request data: {
+  "twelvelabs_api_key": "tlk_0ZBSDQ10EJJGS728AC05F3CNWFND",
+  "index_id": "689df72e4427a7b96b7a2cb8",
+  "video_id": "689df76cb1ba49c5144b7eca",
+  "analysis_prompt": "Please provide a comprehensive analysis of this video content. Include:\n\n1. **Content Overview**: What is happening in the video? Describe the main events, actions, and scenes.\n2. **Key Elements**: Identify important objects, people, locations, activities, and interactions.\n3. **Context & Setting**: What is the environment, time period, or context of the video?\n4. **Narrative Flow**: How does the story or sequence of events unfold?\n5. **Notable Details**: Highlight any significant details, patterns, or unique aspects.\n6. **Technical Aspects**: Note video quality, camera work, editing, or production elements if relevant.\n\nUser's Specific Query: Please do research about the player and the other winnings\n\nPlease ensure your analysis addresses the user's specific question while providing comprehensive coverage of the video content.",
+  "research_query": "Please do research about the player and the other winnings"
+}
+2025-09-03 19:46:24,614 - __main__ - INFO - Parameters extracted:
+2025-09-03 19:46:24,614 - __main__ - INFO -   - Index ID: 689df72e4427a7b96b7a2cb8
+2025-09-03 19:46:24,614 - __main__ - INFO -   - Video ID: 689df76cb1ba49c5144b7eca
+2025-09-03 19:46:24,614 - __main__ - INFO -   - Analysis Prompt: Please provide a comprehensive analysis of this video content. Include:
+
+1. **Content Overview**: What is happening in the video? Describe the main events, actions, and scenes.
+2. **Key Elements**: Identify important objects, people, locations, activities, and interactions.
+3. **Context & Setting**: What is the environment, time period, or context of the video?
+4. **Narrative Flow**: How does the story or sequence of events unfold?
+5. **Notable Details**: Highlight any significant details, patterns, or unique aspects.
+6. **Technical Aspects**: Note video quality, camera work, editing, or production elements if relevant.
+
+User's Specific Query: Please do research about the player and the other winnings
+
+Please ensure your analysis addresses the user's specific question while providing comprehensive coverage of the video content.
+2025-09-03 19:46:24,614 - __main__ - INFO -   - Research Query: Please do research about the player and the other winnings
+2025-09-03 19:46:24,614 - __main__ - INFO - Step 1: Getting video details from TwelveLabs...
+2025-09-03 19:46:25,221 - __main__ - INFO - Video details retrieved successfully: {
+  "_id": "689df76cb1ba49c5144b7eca",
+  "created_at": "2025-08-14T14:49:17Z",
+  "system_metadata": {
+    "duration": 128.05805,
+    "filename": "Olympics 3.mp4",
+    "fps": 30,
+    "height": 360,
+    "size": 10289757,
+    "width": 640
+  },
+  "hls": {
+    "video_url": "https://deuqpmn4rs7j5.cloudfront.net/67ca0ec8d29800ecabf27d70/689df76cb1ba49c5144b7eca/stream/79db76d4-493c-4f5f-899d-ea6aa9fd77e8.m3u8",
+    "thumbnail_urls": [
+      "https://deuqpmn4rs7j5.cloudfront.net/67ca0ec8d29800ecabf27d70/689df76cb1ba49c5144b7eca/thumbnails/79db76d4-493c-4f5f-899d-ea6aa9fd77e8.0000001.jpg"
+    ],
+    "status": "COMPLETE",
+    "updated_at": "2025-08-14T14:49:46.316Z"
+  }
+}
+2025-09-03 19:46:25,222 - __main__ - INFO - Step 2: Analyzing video content...
+2025-09-03 19:46:43,247 - httpx - INFO - HTTP Request: POST https://api.twelvelabs.io/v1.3/analyze "HTTP/1.1 200 OK"
+2025-09-03 19:46:43,265 - __main__ - INFO - Video analysis completed: "The video showcases the Women's Singles Gold Medal Match at the Paris 2024 Olympics between Chen Meng and Sun Yingsha, both from China. The match is set in a large indoor stadium with a significant number of spectators, many of whom are Chinese supporters waving flags and banners. The video begins with an overview of the court and a graphic overlay displaying the match details, including the players' world rankings. The players enter the court, wave to the audience, and prepare for the match. The match itself is fast-paced and intense, with both players demonstrating exceptional skills. Chen Meng ultimately secures her second consecutive Olympic gold medal, displaying a masterclass in precision and mental toughness.\n\n**Key Elements**: The key elements include the players Chen Meng and Sun Yingsha, the table tennis table, the scoreboard, the cheering crowd, and the award ceremony. Chen Meng's red shirt with a dragon design is also notable.\n\n**Context & Setting**: The setting is the Paris 2024 Olympic Games, specifically the Women's Singles Gold Medal Match. The environment is vibrant and energetic, with a large audience present.\n\n**Narrative Flow**: The video starts with an introduction of the players and the match details. It then transitions to the players entering the court and preparing for the match. The narrative progresses through the rally, the scoring, and concludes with Chen Meng's victory and the award ceremony where she receives her gold medal.\n\n**Notable Details**: Chen Meng's victory is a significant moment, highlighted by her emotional reaction and the support from the crowd. The presence of Chinese fans adds to the atmosphere of the event. Despite not winning the gold, Sun Yingsha receives the silver medal, and Hayata Hina of Japan is awarded the bronze.\n\n**Technical Aspects**: The video quality is high, with clear shots of the players and the audience. The camera work effectively captures the intensity of the match and the excitement of the crowd.\n\nRegarding the user's specific query about Chen Meng and her other winnings, Chen Meng is a renowned table tennis player who has won multiple Olympic medals. She has previously won gold medals in the Women's Singles event at the Rio 2016 Olympics and the Tokyo 2020 Olympics. Her success at the Paris 2024 Olympics further solidifies her status as one of the top players in the sport."
+2025-09-03 19:46:43,265 - __main__ - INFO - Step 3: Conducting deep research using Sonar...
+2025-09-03 19:46:43,265 - __main__ - INFO - Enhanced research query created: "\nBased on this video analysis: The video showcases the Women's Singles Gold Medal Match at the Paris 2024 Olympics between Chen Meng and Sun Yingsha, both from China. The match is set in a large indoor stadium with a significant number of spectators, many of whom are Chinese supporters waving flags and banners. The video begins with an overview of the court and a graphic overlay displaying the match details, including the players' world rankings. The players enter the court, wave to the audience, and prepare for the match. The match itself is fast-paced and intense, with both players demonstrating exceptional skills. Chen Meng ultimately secures her second consecutive Olympic gold medal, displaying a masterclass in precision and mental toughness.\n\n**Key Elements**: The key elements include the players Chen Meng and Sun Yingsha, the table tennis table, the scoreboard, the cheering crowd, and the award ceremony. Chen Meng's red shirt with a dragon design is also notable.\n\n**Context & Setting**: The setting is the Paris 2024 Olympic Games, specifically the Women's Singles Gold Medal Match. The environment is vibrant and energetic, with a large audience present.\n\n**Narrative Flow**: The video starts with an introduction of the players and the match details. It then transitions to the players entering the court and preparing for the match. The narrative progresses through the rally, the scoring, and concludes with Chen Meng's victory and the award ceremony where she receives her gold medal.\n\n**Notable Details**: Chen Meng's victory is a significant moment, highlighted by her emotional reaction and the support from the crowd. The presence of Chinese fans adds to the atmosphere of the event. Despite not winning the gold, Sun Yingsha receives the silver medal, and Hayata Hina of Japan is awarded the bronze.\n\n**Technical Aspects**: The video quality is high, with clear shots of the players and the audience. The camera work effectively captures the intensity of the match and the excitement of the crowd.\n\nRegarding the user's specific query about Chen Meng and her other winnings, Chen Meng is a renowned table tennis player who has won multiple Olympic medals. She has previously won gold medals in the Women's Singles event at the Rio 2016 Olympics and the Tokyo 2020 Olympics. Her success at the Paris 2024 Olympics further solidifies her status as one of the top players in the sport.\n\nPlease research: Please do research about the player and the other winnings\n\nProvide comprehensive insights that connect the video content with current trends, developments, and relevant information.\n"
+2025-09-03 19:46:53,904 - __main__ - INFO - Sonar research completed: {
+  "id": "c50e77bd-ec93-4a2b-9410-103d66d056ea",
+  "model": "sonar",
+  "created": 1756921613,
+  "usage": {
+    "prompt_tokens": 507,
+    "completion_tokens": 611,
+    "total_tokens": 1118,
+    "search_context_size": "low",
+    "cost": {
+      "input_tokens_cost": 0.001,
+      "output_tokens_cost": 0.001,
+      "request_cost": 0.005,
+      "total_cost": 0.006
+    }
+  },
+  "citations": [
+    "https://www.ittf.com/2025/08/03/one-year-ago-chen-meng-became-back-to-back-olympic-champion-in-paris/",
+    "https://www.youtube.com/watch?v=E7NZ2CZRLOE",
+    "https://factcheck.afp.com/doc.afp.com.36CZ8RC",
+    "https://www.worldtabletennis.com/description?artId=4080",
+    "https://www.youtube.com/watch?v=MO3ES7S7lRc"
+  ],
+  "search_results": [
+    {
+      "title": "One Year Ago: Chen Meng Became Back-to-Back Olympic ...",
+      "url": "https://www.ittf.com/2025/08/03/one-year-ago-chen-meng-became-back-to-back-olympic-champion-in-paris/",
+      "date": "2025-08-03",
+      "last_updated": "2025-08-30",
+      "snippet": "For Chen Meng, 10 August 2024 was the day she joined table tennis royalty \u2013 a back-to-back Olympic champion whose legacy will inspire ..."
+    },
+    {
+      "title": "Chen Meng wins BACK-TO-BACK table tennis golds in a ... - YouTube",
+      "url": "https://www.youtube.com/watch?v=E7NZ2CZRLOE",
+      "date": "2024-08-03",
+      "last_updated": "2025-08-30",
+      "snippet": "... Sun Yingsha to become the third woman in history to win back-to-back titles. #NBCSports #Olympics #Paris2024 \u00bb Subscribe to NBC Sports ..."
+    },
+    {
+      "title": "Chinese table tennis champion did not slam Olympic audience in ...",
+      "url": "https://factcheck.afp.com/doc.afp.com.36CZ8RC",
+      "date": "2024-08-13",
+      "last_updated": "2025-09-03",
+      "snippet": "Chinese table tennis Olympic champion Chen Meng did not complain of unfair treatment by the audience after she beat teammate Sun Yingsha and took gold in the ..."
+    },
+    {
+      "title": "WTT - World Table Tennis",
+      "url": "https://www.worldtabletennis.com/description?artId=4080",
+      "date": null,
+      "last_updated": null,
+      "snippet": "China's Chen Meng celebrated back-to-back Women's Singles Olympic gold medals today at Paris 2024. The Tokyo 2020 champion was once again on top of the Olympic ..."
+    },
+    {
+      "title": "Chen Meng vs Sun Yingsha Paris2024 Final highlights ... - YouTube",
+      "url": "https://www.youtube.com/watch?v=MO3ES7S7lRc",
+      "date": "2024-10-19",
+      "last_updated": "2025-08-30",
+      "snippet": "Paris 2024 Table Tennis: Chen Meng of the People's Republic of China wins gold in women's singles. Chen Meng of the People's Republic of ..."
+    }
+  ],
+  "object": "chat.completion",
+  "choices": [
+    {
+      "index": 0,
+      "finish_reason": "stop",
+      "message": {
+        "role": "assistant",
+        "content": "**Chen Meng is one of the most successful women\u2019s table tennis players in Olympic history**, having won back-to-back Olympic gold medals in the Women\u2019s Singles event at the Tokyo 2020 and Paris 2024 Olympic Games. She became only the third woman ever to achieve consecutive Olympic singles golds in table tennis, joining legendary Chinese players Deng Yaping (1992, 1996) and Zhang Yining (2004, 2008)[1][4].\n\nHer victory at Paris 2024 was a hard-fought 4-2 win over her compatriot and world No. 1 Sun Yingsha, in a match noted for its intensity, momentum swings, and championship-level skill. Chen Meng demonstrated remarkable precision and mental toughness, particularly in the crucial fifth and sixth games, to retain her Olympic title[1][2].\n\nRegarding other major accomplishments, while your initial information mentioned gold medals at Rio 2016 and Tokyo 2020, it is important to clarify:\n\n- Chen Meng *did not win* the gold medals at Rio 2016; the gold medalist in Women\u2019s Singles in Rio was Ding Ning, another Chinese player. Chen Meng\u2019s first Olympic singles gold came at Tokyo 2020, where she claimed the Women\u2019s Singles title for the first time[1][4].\n  \n- She has won multiple World Table Tennis (WTT) and International Table Tennis Federation (ITTF) titles across her career, consistently ranking at or near the top of the world rankings.\n\nHer Paris 2024 gold solidified her legacy as one of the all-time greats in the sport by successfully defending her Olympic title against the sport\u2019s current top player[1].\n\n**Contextually, Chen Meng is celebrated not only for her titles but her composure and sportsmanship.** Despite some unfounded online controversies regarding crowd behavior during the Paris final, Chen Meng maintained a professional demeanor and did not publicly express grievances or complaints about the atmosphere or officials[3].\n\nIn summary:\n\n| Achievement                         | Details                                  |\n|----------------------------------|------------------------------------------|\n| **Olympic Gold Medals**            | Tokyo 2020 Women's Singles Gold, Paris 2024 Women's Singles Gold |\n| **Historical Significance**        | Third woman ever to win back-to-back Olympic singles titles (after Deng Yaping, Zhang Yining) |\n| **Key Rival**                      | Sun Yingsha (world No. 1, silver medalist at Paris 2024) |\n| **Other Titles**                   | Multiple ITTF and WTT championships, consistent top world ranking |\n| **Playing Style & Legacy**         | Known for precision, mental toughness, championship mindset |\n\nChen Meng's continued dominance at the Olympic level and her high-profile rivalry with Sun Yingsha highlight ongoing shifts in women's table tennis, cementing China\u2019s leading position while inspiring new generations worldwide[1][4].\n\nIf you want detailed statistics on her career titles beyond the Olympics, I can provide more information."
+      },
+      "delta": {
+        "role": "assistant",
+        "content": ""
+      }
+    }
+  ]
+}
+2025-09-03 19:46:53,904 - __main__ - INFO - Adding sources to research result...
+2025-09-03 19:46:53,905 - __main__ - INFO - Sources added to research result: [
+  {
+    "title": "TechCrunch",
+    "url": "https://techcrunch.com",
+    "description": "Technology news and analysis"
+  },
+  {
+    "title": "Gartner Research",
+    "url": "https://gartner.com",
+    "description": "Industry research and insights"
+  },
+  {
+    "title": "McKinsey & Company",
+    "url": "https://mckinsey.com",
+    "description": "Business and technology trends"
+  },
+  {
+    "title": "The Verge",
+    "url": "https://theverge.com",
+    "description": "Technology and culture coverage"
+  },
+  {
+    "title": "MIT Technology Review",
+    "url": "https://technologyreview.com",
+    "description": "In-depth technology analysis"
+  }
+]
+2025-09-03 19:46:53,905 - __main__ - INFO - === WORKFLOW COMPLETED SUCCESSFULLY ===
+2025-09-03 19:46:53,905 - __main__ - INFO - Final response: {
+  "success": true,
+  "workflow": {
+    "video_details": {
+      "_id": "689df76cb1ba49c5144b7eca",
+      "created_at": "2025-08-14T14:49:17Z",
+      "system_metadata": {
+        "duration": 128.05805,
+        "filename": "Olympics 3.mp4",
+        "fps": 30,
+        "height": 360,
+        "size": 10289757,
+        "width": 640
+      },
+      "hls": {
+        "video_url": "https://deuqpmn4rs7j5.cloudfront.net/67ca0ec8d29800ecabf27d70/689df76cb1ba49c5144b7eca/stream/79db76d4-493c-4f5f-899d-ea6aa9fd77e8.m3u8",
+        "thumbnail_urls": [
+          "https://deuqpmn4rs7j5.cloudfront.net/67ca0ec8d29800ecabf27d70/689df76cb1ba49c5144b7eca/thumbnails/79db76d4-493c-4f5f-899d-ea6aa9fd77e8.0000001.jpg"
+        ],
+        "status": "COMPLETE",
+        "updated_at": "2025-08-14T14:49:46.316Z"
+      }
+    },
+    "analysis": "The video showcases the Women's Singles Gold Medal Match at the Paris 2024 Olympics between Chen Meng and Sun Yingsha, both from China. The match is set in a large indoor stadium with a significant number of spectators, many of whom are Chinese supporters waving flags and banners. The video begins with an overview of the court and a graphic overlay displaying the match details, including the players' world rankings. The players enter the court, wave to the audience, and prepare for the match. The match itself is fast-paced and intense, with both players demonstrating exceptional skills. Chen Meng ultimately secures her second consecutive Olympic gold medal, displaying a masterclass in precision and mental toughness.\n\n**Key Elements**: The key elements include the players Chen Meng and Sun Yingsha, the table tennis table, the scoreboard, the cheering crowd, and the award ceremony. Chen Meng's red shirt with a dragon design is also notable.\n\n**Context & Setting**: The setting is the Paris 2024 Olympic Games, specifically the Women's Singles Gold Medal Match. The environment is vibrant and energetic, with a large audience present.\n\n**Narrative Flow**: The video starts with an introduction of the players and the match details. It then transitions to the players entering the court and preparing for the match. The narrative progresses through the rally, the scoring, and concludes with Chen Meng's victory and the award ceremony where she receives her gold medal.\n\n**Notable Details**: Chen Meng's victory is a significant moment, highlighted by her emotional reaction and the support from the crowd. The presence of Chinese fans adds to the atmosphere of the event. Despite not winning the gold, Sun Yingsha receives the silver medal, and Hayata Hina of Japan is awarded the bronze.\n\n**Technical Aspects**: The video quality is high, with clear shots of the players and the audience. The camera work effectively captures the intensity of the match and the excitement of the crowd.\n\nRegarding the user's specific query about Chen Meng and her other winnings, Chen Meng is a renowned table tennis player who has won multiple Olympic medals. She has previously won gold medals in the Women's Singles event at the Rio 2016 Olympics and the Tokyo 2020 Olympics. Her success at the Paris 2024 Olympics further solidifies her status as one of the top players in the sport.",
+    "research": {
+      "id": "c50e77bd-ec93-4a2b-9410-103d66d056ea",
+      "model": "sonar",
+      "created": 1756921613,
+      "usage": {
+        "prompt_tokens": 507,
+        "completion_tokens": 611,
+        "total_tokens": 1118,
+        "search_context_size": "low",
+        "cost": {
+          "input_tokens_cost": 0.001,
+          "output_tokens_cost": 0.001,
+          "request_cost": 0.005,
+          "total_cost": 0.006
+        }
+      },
+      "citations": [
+        "https://www.ittf.com/2025/08/03/one-year-ago-chen-meng-became-back-to-back-olympic-champion-in-paris/",
+        "https://www.youtube.com/watch?v=E7NZ2CZRLOE",
+        "https://factcheck.afp.com/doc.afp.com.36CZ8RC",
+        "https://www.worldtabletennis.com/description?artId=4080",
+        "https://www.youtube.com/watch?v=MO3ES7S7lRc"
+      ],
+      "search_results": [
+        {
+          "title": "One Year Ago: Chen Meng Became Back-to-Back Olympic ...",
+          "url": "https://www.ittf.com/2025/08/03/one-year-ago-chen-meng-became-back-to-back-olympic-champion-in-paris/",
+          "date": "2025-08-03",
+          "last_updated": "2025-08-30",
+          "snippet": "For Chen Meng, 10 August 2024 was the day she joined table tennis royalty \u2013 a back-to-back Olympic champion whose legacy will inspire ..."
+        },
+        {
+          "title": "Chen Meng wins BACK-TO-BACK table tennis golds in a ... - YouTube",
+          "url": "https://www.youtube.com/watch?v=E7NZ2CZRLOE",
+          "date": "2024-08-03",
+          "last_updated": "2025-08-30",
+          "snippet": "... Sun Yingsha to become the third woman in history to win back-to-back titles. #NBCSports #Olympics #Paris2024 \u00bb Subscribe to NBC Sports ..."
+        },
+        {
+          "title": "Chinese table tennis champion did not slam Olympic audience in ...",
+          "url": "https://factcheck.afp.com/doc.afp.com.36CZ8RC",
+          "date": "2024-08-13",
+          "last_updated": "2025-09-03",
+          "snippet": "Chinese table tennis Olympic champion Chen Meng did not complain of unfair treatment by the audience after she beat teammate Sun Yingsha and took gold in the ..."
+        },
+        {
+          "title": "WTT - World Table Tennis",
+          "url": "https://www.worldtabletennis.com/description?artId=4080",
+          "date": null,
+          "last_updated": null,
+          "snippet": "China's Chen Meng celebrated back-to-back Women's Singles Olympic gold medals today at Paris 2024. The Tokyo 2020 champion was once again on top of the Olympic ..."
+        },
+        {
+          "title": "Chen Meng vs Sun Yingsha Paris2024 Final highlights ... - YouTube",
+          "url": "https://www.youtube.com/watch?v=MO3ES7S7lRc",
+          "date": "2024-10-19",
+          "last_updated": "2025-08-30",
+          "snippet": "Paris 2024 Table Tennis: Chen Meng of the People's Republic of China wins gold in women's singles. Chen Meng of the People's Republic of ..."
+        }
+      ],
+      "object": "chat.completion",
+      "choices": [
+        {
+          "index": 0,
+          "finish_reason": "stop",
+          "message": {
+            "role": "assistant",
+            "content": "**Chen Meng is one of the most successful women\u2019s table tennis players in Olympic history**, having won back-to-back Olympic gold medals in the Women\u2019s Singles event at the Tokyo 2020 and Paris 2024 Olympic Games. She became only the third woman ever to achieve consecutive Olympic singles golds in table tennis, joining legendary Chinese players Deng Yaping (1992, 1996) and Zhang Yining (2004, 2008)[1][4].\n\nHer victory at Paris 2024 was a hard-fought 4-2 win over her compatriot and world No. 1 Sun Yingsha, in a match noted for its intensity, momentum swings, and championship-level skill. Chen Meng demonstrated remarkable precision and mental toughness, particularly in the crucial fifth and sixth games, to retain her Olympic title[1][2].\n\nRegarding other major accomplishments, while your initial information mentioned gold medals at Rio 2016 and Tokyo 2020, it is important to clarify:\n\n- Chen Meng *did not win* the gold medals at Rio 2016; the gold medalist in Women\u2019s Singles in Rio was Ding Ning, another Chinese player. Chen Meng\u2019s first Olympic singles gold came at Tokyo 2020, where she claimed the Women\u2019s Singles title for the first time[1][4].\n  \n- She has won multiple World Table Tennis (WTT) and International Table Tennis Federation (ITTF) titles across her career, consistently ranking at or near the top of the world rankings.\n\nHer Paris 2024 gold solidified her legacy as one of the all-time greats in the sport by successfully defending her Olympic title against the sport\u2019s current top player[1].\n\n**Contextually, Chen Meng is celebrated not only for her titles but her composure and sportsmanship.** Despite some unfounded online controversies regarding crowd behavior during the Paris final, Chen Meng maintained a professional demeanor and did not publicly express grievances or complaints about the atmosphere or officials[3].\n\nIn summary:\n\n| Achievement                         | Details                                  |\n|----------------------------------|------------------------------------------|\n| **Olympic Gold Medals**            | Tokyo 2020 Women's Singles Gold, Paris 2024 Women's Singles Gold |\n| **Historical Significance**        | Third woman ever to win back-to-back Olympic singles titles (after Deng Yaping, Zhang Yining) |\n| **Key Rival**                      | Sun Yingsha (world No. 1, silver medalist at Paris 2024) |\n| **Other Titles**                   | Multiple ITTF and WTT championships, consistent top world ranking |\n| **Playing Style & Legacy**         | Known for precision, mental toughness, championship mindset |\n\nChen Meng's continued dominance at the Olympic level and her high-profile rivalry with Sun Yingsha highlight ongoing shifts in women's table tennis, cementing China\u2019s leading position while inspiring new generations worldwide[1][4].\n\nIf you want detailed statistics on her career titles beyond the Olympics, I can provide more information."
+          },
+          "delta": {
+            "role": "assistant",
+            "content": ""
+          }
+        }
+      ],
+      "sources": [
+        {
+          "title": "TechCrunch",
+          "url": "https://techcrunch.com",
+          "description": "Technology news and analysis"
+        },
+        {
+          "title": "Gartner Research",
+          "url": "https://gartner.com",
+          "description": "Industry research and insights"
+        },
+        {
+          "title": "McKinsey & Company",
+          "url": "https://mckinsey.com",
+          "description": "Business and technology trends"
+        },
+        {
+          "title": "The Verge",
+          "url": "https://theverge.com",
+          "description": "Technology and culture coverage"
+        },
+        {
+          "title": "MIT Technology Review",
+          "url": "https://technologyreview.com",
+          "description": "In-depth technology analysis"
+        }
+      ]
+    }
+  },
+  "summary": {
+    "video_id": "689df76cb1ba49c5144b7eca",
+    "index_id": "689df72e4427a7b96b7a2cb8",
+    "analysis_prompt": "Please provide a comprehensive analysis of this video content. Include:\n\n1. **Content Overview**: What is happening in the video? Describe the main events, actions, and scenes.\n2. **Key Elements**: Identify important objects, people, locations, activities, and interactions.\n3. **Context & Setting**: What is the environment, time period, or context of the video?\n4. **Narrative Flow**: How does the story or sequence of events unfold?\n5. **Notable Details**: Highlight any significant details, patterns, or unique aspects.\n6. **Technical Aspects**: Note video quality, camera work, editing, or production elements if relevant.\n\nUser's Specific Query: Please do research about the player and the other winnings\n\nPlease ensure your analysis addresses the user's specific question while providing comprehensive coverage of the video content.",
+    "research_query": "Please do research about the player and the other winnings",
+    "research_status": "completed"
+  }
+}
+2025-09-03 19:46:53,905 - werkzeug - INFO - 127.0.0.1 - - [03/Sep/2025 19:46:53] "POST /api/workflow HTTP/1.1" 200 -
+2025-09-03 19:48:28,717 - apscheduler.executors.default - INFO - Running job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-03 19:57:28 CEST)" (scheduled at 2025-09-03 19:48:28.689232+02:00)
+2025-09-03 19:48:28,722 - werkzeug - INFO - 127.0.0.1 - - [03/Sep/2025 19:48:28] "GET /health HTTP/1.1" 200 -
+2025-09-03 19:48:28,722 - apscheduler.executors.default - INFO - Job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-03 19:57:28 CEST)" executed successfully
+2025-09-03 19:49:07,094 - apscheduler.executors.default - INFO - Running job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-03 19:58:07 CEST)" (scheduled at 2025-09-03 19:49:07.062442+02:00)
+2025-09-03 19:49:07,098 - werkzeug - INFO - 127.0.0.1 - - [03/Sep/2025 19:49:07] "GET /health HTTP/1.1" 200 -
+2025-09-03 19:49:07,099 - apscheduler.executors.default - INFO - Job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-03 19:58:07 CEST)" executed successfully
+2025-09-03 19:57:28,699 - apscheduler.executors.default - INFO - Running job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-03 20:06:28 CEST)" (scheduled at 2025-09-03 19:57:28.689232+02:00)
+2025-09-03 19:57:28,707 - werkzeug - INFO - 127.0.0.1 - - [03/Sep/2025 19:57:28] "GET /health HTTP/1.1" 200 -
+2025-09-03 19:57:28,708 - apscheduler.executors.default - INFO - Job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-03 20:06:28 CEST)" executed successfully
+2025-09-03 19:58:07,074 - apscheduler.executors.default - INFO - Running job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-03 20:07:07 CEST)" (scheduled at 2025-09-03 19:58:07.062442+02:00)
+2025-09-03 19:58:07,079 - werkzeug - INFO - 127.0.0.1 - - [03/Sep/2025 19:58:07] "GET /health HTTP/1.1" 200 -
+2025-09-03 19:58:07,080 - apscheduler.executors.default - INFO - Job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-03 20:07:07 CEST)" executed successfully
+2025-09-03 20:06:12,626 - werkzeug - INFO - 127.0.0.1 - - [03/Sep/2025 20:06:12] "OPTIONS /api/config/twelvelabs HTTP/1.1" 200 -
+2025-09-03 20:06:13,270 - werkzeug - INFO - 127.0.0.1 - - [03/Sep/2025 20:06:13] "POST /api/config/twelvelabs HTTP/1.1" 200 -
+2025-09-03 20:06:13,277 - werkzeug - INFO - 127.0.0.1 - - [03/Sep/2025 20:06:13] "OPTIONS /api/videos HTTP/1.1" 200 -
+2025-09-03 20:06:13,873 - werkzeug - INFO - 127.0.0.1 - - [03/Sep/2025 20:06:13] "POST /api/videos HTTP/1.1" 200 -
+2025-09-03 20:06:28,698 - apscheduler.executors.default - INFO - Running job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-03 20:15:28 CEST)" (scheduled at 2025-09-03 20:06:28.689232+02:00)
+2025-09-03 20:06:28,700 - werkzeug - INFO - 127.0.0.1 - - [03/Sep/2025 20:06:28] "GET /health HTTP/1.1" 200 -
+2025-09-03 20:06:28,701 - apscheduler.executors.default - INFO - Job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-03 20:15:28 CEST)" executed successfully
+2025-09-03 20:06:42,356 - werkzeug - INFO - 127.0.0.1 - - [03/Sep/2025 20:06:42] "OPTIONS /api/workflow HTTP/1.1" 200 -
+2025-09-03 20:06:42,358 - __main__ - INFO - === WORKFLOW REQUEST START ===
+2025-09-03 20:06:42,358 - __main__ - INFO - Request data: {
+  "twelvelabs_api_key": "tlk_0ZBSDQ10EJJGS728AC05F3CNWFND",
+  "index_id": "689df72e4427a7b96b7a2cb8",
+  "video_id": "689df76c6dc89588d1e871a0",
+  "analysis_prompt": "Please provide a comprehensive analysis of this video content. Include:\n\n1. **Content Overview**: What is happening in the video? Describe the main events, actions, and scenes.\n2. **Key Elements**: Identify important objects, people, locations, activities, and interactions.\n3. **Context & Setting**: What is the environment, time period, or context of the video?\n4. **Narrative Flow**: How does the story or sequence of events unfold?\n5. **Notable Details**: Highlight any significant details, patterns, or unique aspects.\n6. **Technical Aspects**: Note video quality, camera work, editing, or production elements if relevant.\n\nUser's Specific Query: Research about the player and about the details of match\n\nPlease ensure your analysis addresses the user's specific question while providing comprehensive coverage of the video content.",
+  "research_query": "Research about the player and about the details of match"
+}
+2025-09-03 20:06:42,358 - __main__ - INFO - Parameters extracted:
+2025-09-03 20:06:42,358 - __main__ - INFO -   - Index ID: 689df72e4427a7b96b7a2cb8
+2025-09-03 20:06:42,358 - __main__ - INFO -   - Video ID: 689df76c6dc89588d1e871a0
+2025-09-03 20:06:42,358 - __main__ - INFO -   - Analysis Prompt: Please provide a comprehensive analysis of this video content. Include:
+
+1. **Content Overview**: What is happening in the video? Describe the main events, actions, and scenes.
+2. **Key Elements**: Identify important objects, people, locations, activities, and interactions.
+3. **Context & Setting**: What is the environment, time period, or context of the video?
+4. **Narrative Flow**: How does the story or sequence of events unfold?
+5. **Notable Details**: Highlight any significant details, patterns, or unique aspects.
+6. **Technical Aspects**: Note video quality, camera work, editing, or production elements if relevant.
+
+User's Specific Query: Research about the player and about the details of match
+
+Please ensure your analysis addresses the user's specific question while providing comprehensive coverage of the video content.
+2025-09-03 20:06:42,358 - __main__ - INFO -   - Research Query: Research about the player and about the details of match
+2025-09-03 20:06:42,358 - __main__ - INFO - Step 1: Getting video details from TwelveLabs...
+2025-09-03 20:06:42,968 - __main__ - INFO - Video details retrieved successfully: {
+  "_id": "689df76c6dc89588d1e871a0",
+  "created_at": "2025-08-14T14:49:16Z",
+  "system_metadata": {
+    "duration": 112.059501,
+    "filename": "Olympics 1.mp4",
+    "fps": 30,
+    "height": 360,
+    "size": 9573691,
+    "width": 640
+  },
+  "hls": {
+    "video_url": "https://deuqpmn4rs7j5.cloudfront.net/67ca0ec8d29800ecabf27d70/689df76c6dc89588d1e871a0/stream/258510c7-11e5-4b06-bf32-faac08691681.m3u8",
+    "thumbnail_urls": [
+      "https://deuqpmn4rs7j5.cloudfront.net/67ca0ec8d29800ecabf27d70/689df76c6dc89588d1e871a0/thumbnails/258510c7-11e5-4b06-bf32-faac08691681.0000001.jpg"
+    ],
+    "status": "COMPLETE",
+    "updated_at": "2025-08-14T14:49:55.371Z"
+  }
+}
+2025-09-03 20:06:42,968 - __main__ - INFO - Step 2: Analyzing video content...
+2025-09-03 20:06:59,501 - httpx - INFO - HTTP Request: POST https://api.twelvelabs.io/v1.3/analyze "HTTP/1.1 200 OK"
+2025-09-03 20:06:59,504 - __main__ - INFO - Video analysis completed: "The video captures the Women's 50m Freestyle Final at the Paris 2024 Olympic Games, featuring a competitive race among elite swimmers. Here is a detailed analysis:\n\n1. **Content Overview**: The video opens with a wide shot of an empty swimming pool inside a large stadium with spectators. It then transitions to the athletes entering the arena, preparing for the race, diving into the pool, and competing in freestyle strokes. The race concludes with the athletes celebrating their achievements and the medal ceremony.\n\n2. **Key Elements**: The main participants are Sarah Sjostrom from Sweden, Meg Harris from Australia, and Zhang Yufei from China. The setting is an Olympic swimming venue with a large audience. The race involves swimmers diving into the pool and competing in freestyle strokes.\n\n3. **Context & Setting**: The event takes place during the Paris 2024 Olympic Games, a prestigious international sporting event. The atmosphere is competitive and celebratory, with national flags and cheering crowds.\n\n4. **Narrative Flow**: The video starts with the introduction of the competitors, showing them entering the arena and preparing for the race. It then captures the race itself from various angles, including underwater and overhead shots. The race concludes with the athletes touching the wall, and the video ends with the medal ceremony where the top three finishers receive their medals.\n\n5. **Notable Details**: Sarah Sjostrom wins the gold medal, Meg Harris secures silver, and Zhang Yufei takes bronze. The audience's enthusiasm and the athletes' expressions of joy are notable highlights. Sarah Sjostrom, the clear favorite and world record holder, was aiming to complete her set of Olympic titles. Meg Harris's performance was particularly impressive as she secured her first individual Olympic medal.\n\n6. **Technical Aspects**: The video quality is high, with clear shots of the pool and the athletes. The camera work effectively captures the excitement of the race and the celebration afterward, using multiple angles to provide a comprehensive view of the event.\n\nThis analysis provides a comprehensive overview of the video content, focusing on the key elements and narrative flow as requested by the user."
+2025-09-03 20:06:59,504 - __main__ - INFO - Step 3: Conducting deep research using Sonar...
+2025-09-03 20:06:59,505 - __main__ - INFO - Enhanced research query created: "\nBased on this video analysis: The video captures the Women's 50m Freestyle Final at the Paris 2024 Olympic Games, featuring a competitive race among elite swimmers. Here is a detailed analysis:\n\n1. **Content Overview**: The video opens with a wide shot of an empty swimming pool inside a large stadium with spectators. It then transitions to the athletes entering the arena, preparing for the race, diving into the pool, and competing in freestyle strokes. The race concludes with the athletes celebrating their achievements and the medal ceremony.\n\n2. **Key Elements**: The main participants are Sarah Sjostrom from Sweden, Meg Harris from Australia, and Zhang Yufei from China. The setting is an Olympic swimming venue with a large audience. The race involves swimmers diving into the pool and competing in freestyle strokes.\n\n3. **Context & Setting**: The event takes place during the Paris 2024 Olympic Games, a prestigious international sporting event. The atmosphere is competitive and celebratory, with national flags and cheering crowds.\n\n4. **Narrative Flow**: The video starts with the introduction of the competitors, showing them entering the arena and preparing for the race. It then captures the race itself from various angles, including underwater and overhead shots. The race concludes with the athletes touching the wall, and the video ends with the medal ceremony where the top three finishers receive their medals.\n\n5. **Notable Details**: Sarah Sjostrom wins the gold medal, Meg Harris secures silver, and Zhang Yufei takes bronze. The audience's enthusiasm and the athletes' expressions of joy are notable highlights. Sarah Sjostrom, the clear favorite and world record holder, was aiming to complete her set of Olympic titles. Meg Harris's performance was particularly impressive as she secured her first individual Olympic medal.\n\n6. **Technical Aspects**: The video quality is high, with clear shots of the pool and the athletes. The camera work effectively captures the excitement of the race and the celebration afterward, using multiple angles to provide a comprehensive view of the event.\n\nThis analysis provides a comprehensive overview of the video content, focusing on the key elements and narrative flow as requested by the user.\n\nPlease research: Research about the player and about the details of match\n\nProvide comprehensive insights that connect the video content with current trends, developments, and relevant information.\n"
+2025-09-03 20:07:07,069 - apscheduler.executors.default - INFO - Running job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-03 20:16:07 CEST)" (scheduled at 2025-09-03 20:07:07.062442+02:00)
+2025-09-03 20:07:07,073 - werkzeug - INFO - 127.0.0.1 - - [03/Sep/2025 20:07:07] "GET /health HTTP/1.1" 200 -
+2025-09-03 20:07:07,074 - apscheduler.executors.default - INFO - Job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-03 20:16:07 CEST)" executed successfully
+2025-09-03 20:07:08,627 - __main__ - INFO - Sonar research completed: {
+  "id": "914d962a-5300-4db6-96af-1afeaa6961c7",
+  "model": "sonar",
+  "created": 1756922828,
+  "usage": {
+    "prompt_tokens": 473,
+    "completion_tokens": 554,
+    "total_tokens": 1027,
+    "search_context_size": "low",
+    "cost": {
+      "input_tokens_cost": 0.0,
+      "output_tokens_cost": 0.001,
+      "request_cost": 0.005,
+      "total_cost": 0.006
+    }
+  },
+  "citations": [
+    "https://en.wikipedia.org/wiki/Swimming_at_the_2024_Summer_Olympics_%E2%80%93_Women's_50-metre_freestyle",
+    "https://swimswam.com/2024-olympics-race-data-breakdown-womens-50-free/",
+    "https://www.youtube.com/watch?v=UwvnXFUcFSE",
+    "https://www.lemonde.fr/en/sport/jo-2024/results/swimming/50m-freestyle-swimming-f/",
+    "https://www.worldaquatics.com/competitions/2943/olympic-games-paris-2024/results"
+  ],
+  "search_results": [
+    {
+      "title": "Swimming at the 2024 Summer Olympics \u2013 Women's 50- ...",
+      "url": "https://en.wikipedia.org/wiki/Swimming_at_the_2024_Summer_Olympics_%E2%80%93_Women's_50-metre_freestyle",
+      "date": "2022-11-12",
+      "last_updated": "2025-08-16",
+      "snippet": "In the final, Sj\u00f6str\u00f6m won gold, Meg Harris won silver and Zhang Yufei won bronze, finishing ahead of Gretchen Walsh by 0.01 seconds. Slovenia's Ne\u017ea Klan\u010dar ..."
+    },
+    {
+      "title": "2024 Olympics Race Data Breakdown: Women's 50 Free",
+      "url": "https://swimswam.com/2024-olympics-race-data-breakdown-womens-50-free/",
+      "date": "2024-08-16",
+      "last_updated": "2025-07-24",
+      "snippet": "Sarah Sj\u00f6str\u00f6m, the world record holder in the event, recently took home the gold medal in the women's 50 freestyle. Let's dig into the data ..."
+    },
+    {
+      "title": "Women's 50m Freestyle Final \ud83c\udfca\u200d\u2640\ufe0f | Paris Champions",
+      "url": "https://www.youtube.com/watch?v=UwvnXFUcFSE",
+      "date": "2024-08-16",
+      "last_updated": "2025-07-30",
+      "snippet": "Women's 50m Freestyle Final \u200d\u2640\ufe0f | Paris Champions. 123K ... she grabbed six medals in paris 2024. 1 silver, 5 bronze... 13:44 \u00b7 Go ..."
+    },
+    {
+      "title": "50m Freestyle Swimming results Paris 2024 Olympic Games",
+      "url": "https://www.lemonde.fr/en/sport/jo-2024/results/swimming/50m-freestyle-swimming-f/",
+      "date": "2025-08-21",
+      "last_updated": "2025-08-30",
+      "snippet": "Explore the scores and performances of each 50m Freestyle Swimming in swimming. Follow the full results of the Paris 2024 Olympics with \u00ab Le Monde \u00bb."
+    },
+    {
+      "title": "Olympic Games Paris 2024",
+      "url": "https://www.worldaquatics.com/competitions/2943/olympic-games-paris-2024/results",
+      "date": "2022-04-08",
+      "last_updated": "2025-08-29",
+      "snippet": "The latest results for Olympic Games Paris 2024 - France ... Swimming. Women 50m Freestyle. List View; Bracket View. Women 100m Freestyle."
+    }
+  ],
+  "object": "chat.completion",
+  "choices": [
+    {
+      "index": 0,
+      "finish_reason": "stop",
+      "message": {
+        "role": "assistant",
+        "content": "The Women's 50m Freestyle Final at the Paris 2024 Olympics was won by **Sarah Sj\u00f6str\u00f6m** of Sweden, who secured the gold medal with a finish time close to her Olympic record pace. **Meg Harris** of Australia took silver, achieving her first individual Olympic medal with a sub-24-second swim, and **Zhang Yufei** of China earned the bronze, marking her fourth medal at these Games[1][2]. This race occurred at the Paris La D\u00e9fense Arena, converted into a swimming venue, amid a highly competitive field and enthusiastic spectators[1].\n\n**Sarah Sj\u00f6str\u00f6m** entered the event as the world record holder (23.61 seconds set at the 2023 World Championships) and was the clear favorite. She had already claimed gold in the 100m freestyle earlier at these Games, exhibiting exceptional speed and race consistency, especially in the critical middle segment of the race[1][2]. Her semifinal time of 23.66 seconds set a new Olympic record, cementing her dominance going into the final[1].\n\nMeg Harris\u2019s silver medal performance was notable for her first-ever sub-24-second swim, underscoring her rise as a premier sprint freestyler[2]. Zhang\u2019s bronze placed her narrowly ahead of Gretchen Walsh from the United States by just 0.01 seconds, highlighting the tight competition for podium positions in this sprint event[1][2].\n\nOther notable performances included Slovenia\u2019s Ne\u017ea Klan\u010dar, who advanced to the final despite a lower seed and set multiple national records throughout the rounds, demonstrating the depth and unexpected excellence emerging in women\u2019s sprint freestyle swimming[1][2].\n\nThe race was covered with high technical quality video: multiple angles, including underwater and overhead shots, captured the explosive start, stroke technique, and final finishes. The narrative of the video closely follows the progression from athlete introductions and preparations through the competitive race and concludes with a celebratory medal ceremony reflecting the athletes' achievements and the vibrant Olympic atmosphere[3].\n\nThis event at Paris 2024 reflects current trends in Olympic swimming: the continued prominence of established elite athletes like Sj\u00f6str\u00f6m, the emergence of new talents pushing performance boundaries, and the razor-thin margins deciding medals in sprint events. The utilization of advanced venue conversion and broadcast graphics enhances public engagement and appreciation of the sport's speed and technical precision[1][2][3].\n\nIn summary, this Women's 50m Freestyle Final represents both the culmination of Sarah Sj\u00f6str\u00f6m\u2019s sustained excellence and the growing international competitiveness in sprint freestyle swimming, marked by record-breaking performances and a packed, enthusiastic Olympic audience in Paris[1][2][3]."
+      },
+      "delta": {
+        "role": "assistant",
+        "content": ""
+      }
+    }
+  ]
+}
+2025-09-03 20:07:08,628 - __main__ - INFO - Adding sources to research result...
+2025-09-03 20:07:08,628 - __main__ - INFO - Sources added to research result: [
+  {
+    "title": "TechCrunch",
+    "url": "https://techcrunch.com",
+    "description": "Technology news and analysis"
+  },
+  {
+    "title": "Gartner Research",
+    "url": "https://gartner.com",
+    "description": "Industry research and insights"
+  },
+  {
+    "title": "McKinsey & Company",
+    "url": "https://mckinsey.com",
+    "description": "Business and technology trends"
+  },
+  {
+    "title": "The Verge",
+    "url": "https://theverge.com",
+    "description": "Technology and culture coverage"
+  },
+  {
+    "title": "MIT Technology Review",
+    "url": "https://technologyreview.com",
+    "description": "In-depth technology analysis"
+  }
+]
+2025-09-03 20:07:08,628 - __main__ - INFO - === WORKFLOW COMPLETED SUCCESSFULLY ===
+2025-09-03 20:07:08,628 - __main__ - INFO - Final response: {
+  "success": true,
+  "workflow": {
+    "video_details": {
+      "_id": "689df76c6dc89588d1e871a0",
+      "created_at": "2025-08-14T14:49:16Z",
+      "system_metadata": {
+        "duration": 112.059501,
+        "filename": "Olympics 1.mp4",
+        "fps": 30,
+        "height": 360,
+        "size": 9573691,
+        "width": 640
+      },
+      "hls": {
+        "video_url": "https://deuqpmn4rs7j5.cloudfront.net/67ca0ec8d29800ecabf27d70/689df76c6dc89588d1e871a0/stream/258510c7-11e5-4b06-bf32-faac08691681.m3u8",
+        "thumbnail_urls": [
+          "https://deuqpmn4rs7j5.cloudfront.net/67ca0ec8d29800ecabf27d70/689df76c6dc89588d1e871a0/thumbnails/258510c7-11e5-4b06-bf32-faac08691681.0000001.jpg"
+        ],
+        "status": "COMPLETE",
+        "updated_at": "2025-08-14T14:49:55.371Z"
+      }
+    },
+    "analysis": "The video captures the Women's 50m Freestyle Final at the Paris 2024 Olympic Games, featuring a competitive race among elite swimmers. Here is a detailed analysis:\n\n1. **Content Overview**: The video opens with a wide shot of an empty swimming pool inside a large stadium with spectators. It then transitions to the athletes entering the arena, preparing for the race, diving into the pool, and competing in freestyle strokes. The race concludes with the athletes celebrating their achievements and the medal ceremony.\n\n2. **Key Elements**: The main participants are Sarah Sjostrom from Sweden, Meg Harris from Australia, and Zhang Yufei from China. The setting is an Olympic swimming venue with a large audience. The race involves swimmers diving into the pool and competing in freestyle strokes.\n\n3. **Context & Setting**: The event takes place during the Paris 2024 Olympic Games, a prestigious international sporting event. The atmosphere is competitive and celebratory, with national flags and cheering crowds.\n\n4. **Narrative Flow**: The video starts with the introduction of the competitors, showing them entering the arena and preparing for the race. It then captures the race itself from various angles, including underwater and overhead shots. The race concludes with the athletes touching the wall, and the video ends with the medal ceremony where the top three finishers receive their medals.\n\n5. **Notable Details**: Sarah Sjostrom wins the gold medal, Meg Harris secures silver, and Zhang Yufei takes bronze. The audience's enthusiasm and the athletes' expressions of joy are notable highlights. Sarah Sjostrom, the clear favorite and world record holder, was aiming to complete her set of Olympic titles. Meg Harris's performance was particularly impressive as she secured her first individual Olympic medal.\n\n6. **Technical Aspects**: The video quality is high, with clear shots of the pool and the athletes. The camera work effectively captures the excitement of the race and the celebration afterward, using multiple angles to provide a comprehensive view of the event.\n\nThis analysis provides a comprehensive overview of the video content, focusing on the key elements and narrative flow as requested by the user.",
+    "research": {
+      "id": "914d962a-5300-4db6-96af-1afeaa6961c7",
+      "model": "sonar",
+      "created": 1756922828,
+      "usage": {
+        "prompt_tokens": 473,
+        "completion_tokens": 554,
+        "total_tokens": 1027,
+        "search_context_size": "low",
+        "cost": {
+          "input_tokens_cost": 0.0,
+          "output_tokens_cost": 0.001,
+          "request_cost": 0.005,
+          "total_cost": 0.006
+        }
+      },
+      "citations": [
+        "https://en.wikipedia.org/wiki/Swimming_at_the_2024_Summer_Olympics_%E2%80%93_Women's_50-metre_freestyle",
+        "https://swimswam.com/2024-olympics-race-data-breakdown-womens-50-free/",
+        "https://www.youtube.com/watch?v=UwvnXFUcFSE",
+        "https://www.lemonde.fr/en/sport/jo-2024/results/swimming/50m-freestyle-swimming-f/",
+        "https://www.worldaquatics.com/competitions/2943/olympic-games-paris-2024/results"
+      ],
+      "search_results": [
+        {
+          "title": "Swimming at the 2024 Summer Olympics \u2013 Women's 50- ...",
+          "url": "https://en.wikipedia.org/wiki/Swimming_at_the_2024_Summer_Olympics_%E2%80%93_Women's_50-metre_freestyle",
+          "date": "2022-11-12",
+          "last_updated": "2025-08-16",
+          "snippet": "In the final, Sj\u00f6str\u00f6m won gold, Meg Harris won silver and Zhang Yufei won bronze, finishing ahead of Gretchen Walsh by 0.01 seconds. Slovenia's Ne\u017ea Klan\u010dar ..."
+        },
+        {
+          "title": "2024 Olympics Race Data Breakdown: Women's 50 Free",
+          "url": "https://swimswam.com/2024-olympics-race-data-breakdown-womens-50-free/",
+          "date": "2024-08-16",
+          "last_updated": "2025-07-24",
+          "snippet": "Sarah Sj\u00f6str\u00f6m, the world record holder in the event, recently took home the gold medal in the women's 50 freestyle. Let's dig into the data ..."
+        },
+        {
+          "title": "Women's 50m Freestyle Final \ud83c\udfca\u200d\u2640\ufe0f | Paris Champions",
+          "url": "https://www.youtube.com/watch?v=UwvnXFUcFSE",
+          "date": "2024-08-16",
+          "last_updated": "2025-07-30",
+          "snippet": "Women's 50m Freestyle Final \u200d\u2640\ufe0f | Paris Champions. 123K ... she grabbed six medals in paris 2024. 1 silver, 5 bronze... 13:44 \u00b7 Go ..."
+        },
+        {
+          "title": "50m Freestyle Swimming results Paris 2024 Olympic Games",
+          "url": "https://www.lemonde.fr/en/sport/jo-2024/results/swimming/50m-freestyle-swimming-f/",
+          "date": "2025-08-21",
+          "last_updated": "2025-08-30",
+          "snippet": "Explore the scores and performances of each 50m Freestyle Swimming in swimming. Follow the full results of the Paris 2024 Olympics with \u00ab Le Monde \u00bb."
+        },
+        {
+          "title": "Olympic Games Paris 2024",
+          "url": "https://www.worldaquatics.com/competitions/2943/olympic-games-paris-2024/results",
+          "date": "2022-04-08",
+          "last_updated": "2025-08-29",
+          "snippet": "The latest results for Olympic Games Paris 2024 - France ... Swimming. Women 50m Freestyle. List View; Bracket View. Women 100m Freestyle."
+        }
+      ],
+      "object": "chat.completion",
+      "choices": [
+        {
+          "index": 0,
+          "finish_reason": "stop",
+          "message": {
+            "role": "assistant",
+            "content": "The Women's 50m Freestyle Final at the Paris 2024 Olympics was won by **Sarah Sj\u00f6str\u00f6m** of Sweden, who secured the gold medal with a finish time close to her Olympic record pace. **Meg Harris** of Australia took silver, achieving her first individual Olympic medal with a sub-24-second swim, and **Zhang Yufei** of China earned the bronze, marking her fourth medal at these Games[1][2]. This race occurred at the Paris La D\u00e9fense Arena, converted into a swimming venue, amid a highly competitive field and enthusiastic spectators[1].\n\n**Sarah Sj\u00f6str\u00f6m** entered the event as the world record holder (23.61 seconds set at the 2023 World Championships) and was the clear favorite. She had already claimed gold in the 100m freestyle earlier at these Games, exhibiting exceptional speed and race consistency, especially in the critical middle segment of the race[1][2]. Her semifinal time of 23.66 seconds set a new Olympic record, cementing her dominance going into the final[1].\n\nMeg Harris\u2019s silver medal performance was notable for her first-ever sub-24-second swim, underscoring her rise as a premier sprint freestyler[2]. Zhang\u2019s bronze placed her narrowly ahead of Gretchen Walsh from the United States by just 0.01 seconds, highlighting the tight competition for podium positions in this sprint event[1][2].\n\nOther notable performances included Slovenia\u2019s Ne\u017ea Klan\u010dar, who advanced to the final despite a lower seed and set multiple national records throughout the rounds, demonstrating the depth and unexpected excellence emerging in women\u2019s sprint freestyle swimming[1][2].\n\nThe race was covered with high technical quality video: multiple angles, including underwater and overhead shots, captured the explosive start, stroke technique, and final finishes. The narrative of the video closely follows the progression from athlete introductions and preparations through the competitive race and concludes with a celebratory medal ceremony reflecting the athletes' achievements and the vibrant Olympic atmosphere[3].\n\nThis event at Paris 2024 reflects current trends in Olympic swimming: the continued prominence of established elite athletes like Sj\u00f6str\u00f6m, the emergence of new talents pushing performance boundaries, and the razor-thin margins deciding medals in sprint events. The utilization of advanced venue conversion and broadcast graphics enhances public engagement and appreciation of the sport's speed and technical precision[1][2][3].\n\nIn summary, this Women's 50m Freestyle Final represents both the culmination of Sarah Sj\u00f6str\u00f6m\u2019s sustained excellence and the growing international competitiveness in sprint freestyle swimming, marked by record-breaking performances and a packed, enthusiastic Olympic audience in Paris[1][2][3]."
+          },
+          "delta": {
+            "role": "assistant",
+            "content": ""
+          }
+        }
+      ],
+      "sources": [
+        {
+          "title": "TechCrunch",
+          "url": "https://techcrunch.com",
+          "description": "Technology news and analysis"
+        },
+        {
+          "title": "Gartner Research",
+          "url": "https://gartner.com",
+          "description": "Industry research and insights"
+        },
+        {
+          "title": "McKinsey & Company",
+          "url": "https://mckinsey.com",
+          "description": "Business and technology trends"
+        },
+        {
+          "title": "The Verge",
+          "url": "https://theverge.com",
+          "description": "Technology and culture coverage"
+        },
+        {
+          "title": "MIT Technology Review",
+          "url": "https://technologyreview.com",
+          "description": "In-depth technology analysis"
+        }
+      ]
+    }
+  },
+  "summary": {
+    "video_id": "689df76c6dc89588d1e871a0",
+    "index_id": "689df72e4427a7b96b7a2cb8",
+    "analysis_prompt": "Please provide a comprehensive analysis of this video content. Include:\n\n1. **Content Overview**: What is happening in the video? Describe the main events, actions, and scenes.\n2. **Key Elements**: Identify important objects, people, locations, activities, and interactions.\n3. **Context & Setting**: What is the environment, time period, or context of the video?\n4. **Narrative Flow**: How does the story or sequence of events unfold?\n5. **Notable Details**: Highlight any significant details, patterns, or unique aspects.\n6. **Technical Aspects**: Note video quality, camera work, editing, or production elements if relevant.\n\nUser's Specific Query: Research about the player and about the details of match\n\nPlease ensure your analysis addresses the user's specific question while providing comprehensive coverage of the video content.",
+    "research_query": "Research about the player and about the details of match",
+    "research_status": "completed"
+  }
+}
+2025-09-03 20:07:08,628 - werkzeug - INFO - 127.0.0.1 - - [03/Sep/2025 20:07:08] "POST /api/workflow HTTP/1.1" 200 -
+2025-09-03 20:08:18,956 - werkzeug - INFO - 127.0.0.1 - - [03/Sep/2025 20:08:18] "OPTIONS /api/sonar/research HTTP/1.1" 200 -
+2025-09-03 20:08:29,291 - werkzeug - INFO - 127.0.0.1 - - [03/Sep/2025 20:08:29] "POST /api/sonar/research HTTP/1.1" 200 -
+2025-09-03 20:15:28,701 - apscheduler.executors.default - INFO - Running job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-03 20:24:28 CEST)" (scheduled at 2025-09-03 20:15:28.689232+02:00)
+2025-09-03 20:15:28,706 - werkzeug - INFO - 127.0.0.1 - - [03/Sep/2025 20:15:28] "GET /health HTTP/1.1" 200 -
+2025-09-03 20:15:28,706 - apscheduler.executors.default - INFO - Job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-03 20:24:28 CEST)" executed successfully
+2025-09-03 20:16:07,075 - apscheduler.executors.default - INFO - Running job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-03 20:25:07 CEST)" (scheduled at 2025-09-03 20:16:07.062442+02:00)
+2025-09-03 20:16:07,079 - werkzeug - INFO - 127.0.0.1 - - [03/Sep/2025 20:16:07] "GET /health HTTP/1.1" 200 -
+2025-09-03 20:16:07,079 - apscheduler.executors.default - INFO - Job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-03 20:25:07 CEST)" executed successfully
+2025-09-03 20:24:28,703 - apscheduler.executors.default - INFO - Running job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-03 20:33:28 CEST)" (scheduled at 2025-09-03 20:24:28.689232+02:00)
+2025-09-03 20:24:28,719 - werkzeug - INFO - 127.0.0.1 - - [03/Sep/2025 20:24:28] "GET /health HTTP/1.1" 200 -
+2025-09-03 20:24:28,719 - apscheduler.executors.default - INFO - Job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-03 20:33:28 CEST)" executed successfully
+2025-09-03 20:25:07,080 - apscheduler.executors.default - INFO - Running job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-03 20:34:07 CEST)" (scheduled at 2025-09-03 20:25:07.062442+02:00)
+2025-09-03 20:25:07,096 - werkzeug - INFO - 127.0.0.1 - - [03/Sep/2025 20:25:07] "GET /health HTTP/1.1" 200 -
+2025-09-03 20:25:07,099 - apscheduler.executors.default - INFO - Job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-03 20:34:07 CEST)" executed successfully
+2025-09-03 20:33:29,500 - apscheduler.executors.default - INFO - Running job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-03 20:42:28 CEST)" (scheduled at 2025-09-03 20:33:28.689232+02:00)
+2025-09-03 20:33:29,505 - werkzeug - INFO - 127.0.0.1 - - [03/Sep/2025 20:33:29] "GET /health HTTP/1.1" 200 -
+2025-09-03 20:33:29,505 - apscheduler.executors.default - INFO - Job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-03 20:42:28 CEST)" executed successfully
+2025-09-03 20:50:25,989 - apscheduler.executors.default - WARNING - Run time of job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-03 20:52:07 CEST)" was missed by 0:07:18.926750
+2025-09-03 20:52:07,065 - apscheduler.executors.default - INFO - Running job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-03 21:01:07 CEST)" (scheduled at 2025-09-03 20:52:07.062442+02:00)
+2025-09-03 20:52:07,070 - werkzeug - INFO - 127.0.0.1 - - [03/Sep/2025 20:52:07] "GET /health HTTP/1.1" 200 -
+2025-09-03 20:52:07,070 - apscheduler.executors.default - INFO - Job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-03 21:01:07 CEST)" executed successfully
+2025-09-03 21:32:16,289 - apscheduler.executors.default - WARNING - Run time of job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-03 21:36:28 CEST)" was missed by 0:04:47.599775
+2025-09-03 22:07:08,993 - apscheduler.executors.default - WARNING - Run time of job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-03 22:13:07 CEST)" was missed by 0:03:01.931108
+2025-09-03 22:09:01,156 - apscheduler.executors.default - WARNING - Run time of job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-03 22:12:28 CEST)" was missed by 0:05:32.467686
+2025-09-03 22:12:28,699 - apscheduler.executors.default - INFO - Running job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-03 22:21:28 CEST)" (scheduled at 2025-09-03 22:12:28.689232+02:00)
+2025-09-03 22:12:28,705 - werkzeug - INFO - 127.0.0.1 - - [03/Sep/2025 22:12:28] "GET /health HTTP/1.1" 200 -
+2025-09-03 22:12:28,705 - apscheduler.executors.default - INFO - Job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-03 22:21:28 CEST)" executed successfully
+2025-09-03 22:13:07,063 - apscheduler.executors.default - INFO - Running job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-03 22:22:07 CEST)" (scheduled at 2025-09-03 22:13:07.062442+02:00)
+2025-09-03 22:13:07,067 - werkzeug - INFO - 127.0.0.1 - - [03/Sep/2025 22:13:07] "GET /health HTTP/1.1" 200 -
+2025-09-03 22:13:07,068 - apscheduler.executors.default - INFO - Job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-03 22:22:07 CEST)" executed successfully
+2025-09-03 22:21:28,700 - apscheduler.executors.default - INFO - Running job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-03 22:30:28 CEST)" (scheduled at 2025-09-03 22:21:28.689232+02:00)
+2025-09-03 22:21:28,704 - werkzeug - INFO - 127.0.0.1 - - [03/Sep/2025 22:21:28] "GET /health HTTP/1.1" 200 -
+2025-09-03 22:21:28,704 - apscheduler.executors.default - INFO - Job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-03 22:30:28 CEST)" executed successfully
+2025-09-03 22:22:07,075 - apscheduler.executors.default - INFO - Running job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-03 22:31:07 CEST)" (scheduled at 2025-09-03 22:22:07.062442+02:00)
+2025-09-03 22:22:07,077 - werkzeug - INFO - 127.0.0.1 - - [03/Sep/2025 22:22:07] "GET /health HTTP/1.1" 200 -
+2025-09-03 22:22:07,078 - apscheduler.executors.default - INFO - Job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-03 22:31:07 CEST)" executed successfully
+2025-09-03 22:48:13,087 - apscheduler.executors.default - WARNING - Run time of job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-03 22:48:28 CEST)" was missed by 0:08:44.397947
+2025-09-03 22:48:28,691 - apscheduler.executors.default - INFO - Running job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-03 22:57:28 CEST)" (scheduled at 2025-09-03 22:48:28.689232+02:00)
+2025-09-03 22:48:28,695 - werkzeug - INFO - 127.0.0.1 - - [03/Sep/2025 22:48:28] "GET /health HTTP/1.1" 200 -
+2025-09-03 22:48:28,695 - apscheduler.executors.default - INFO - Job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-03 22:57:28 CEST)" executed successfully
+2025-09-03 22:48:51,462 - apscheduler.executors.default - WARNING - Run time of job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-03 22:49:07 CEST)" was missed by 0:08:44.399896
+2025-09-03 22:49:07,067 - apscheduler.executors.default - INFO - Running job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-03 22:58:07 CEST)" (scheduled at 2025-09-03 22:49:07.062442+02:00)
+2025-09-03 22:49:07,073 - werkzeug - INFO - 127.0.0.1 - - [03/Sep/2025 22:49:07] "GET /health HTTP/1.1" 200 -
+2025-09-03 22:49:07,074 - apscheduler.executors.default - INFO - Job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-03 22:58:07 CEST)" executed successfully

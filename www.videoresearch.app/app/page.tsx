@@ -170,286 +170,77 @@ export default function DeepResearchLanding() {
 
   const [isApiModalOpen, setIsApiModalOpen] = useState(false)
   const [isComingSoonOpen, setIsComingSoonOpen] = useState(false)
+  const [isUploadVideoModalOpen, setIsUploadVideoModalOpen] = useState(false)
   const [isInfoModalOpen, setIsInfoModalOpen] = useState(false)
+  const [isBlogModalOpen, setIsBlogModalOpen] = useState(false)
   const [currentInfoStep, setCurrentInfoStep] = useState(0)
   
   const infoSteps = [
     {
-      title: "Welcome to Video Deep Research",
+      title: "Demo of Video Deep Research",
       content: (
-        <div className="text-center space-y-6">
-          <div className="w-20 h-20 mx-auto bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center">
-            <Video className="w-10 h-10 text-white" />
+        <div className="text-center">
+          <div className="mb-6">
+            <div className="w-full h-64 bg-gray-100 rounded-lg border-2 border-dashed border-gray-300 flex items-center justify-center">
+              <div className="text-center">
+                <div className="text-4xl mb-2">🎬</div>
+                <p className="text-gray-600">GIF Demo Area</p>
+                <p className="text-sm text-gray-500">Video Deep Research in Action</p>
+              </div>
+            </div>
           </div>
-          <h2 className="text-2xl font-bold text-gray-900">Video Deep Research Platform</h2>
-          <p className="text-gray-600 text-lg leading-relaxed max-w-md mx-auto">
-            Transform your video content into comprehensive research insights using cutting-edge AI technology. 
-            Combine video analysis with deep research to unlock new perspectives and discoveries.
+          <h3 className="text-xl font-semibold text-black mb-3">Welcome to Video Deep Research</h3>
+          <p className="text-black text-lg">
+            Experience the power of AI-powered research from video content. 
+            Get up-to-date insights and reliable sources in seconds.
           </p>
-          <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
-            <p className="text-blue-800 text-sm">
-              <strong>Perfect for:</strong> Content creators, researchers, educators, marketers, and anyone who wants to extract deeper meaning from video content.
-            </p>
-          </div>
         </div>
       )
     },
     {
-      title: "Getting Started",
+      title: "Connect Your API Key",
       content: (
-        <div className="space-y-6">
-          <div className="bg-gradient-to-r from-green-50 to-blue-50 border border-green-200 rounded-lg p-4">
-            <h4 className="font-semibold text-green-900 mb-2">🚀 Quick Setup</h4>
-            <p className="text-green-800 text-sm">Follow these simple steps to begin your research journey</p>
-          </div>
-          
-          <div className="space-y-4">
-            <div className="flex items-start space-x-4">
-              <div className="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0">
-                <span className="text-blue-600 font-bold text-lg">1</span>
-              </div>
-              <div className="flex-1">
-                <h4 className="font-semibold text-gray-900">Connect Your API Key</h4>
-                <p className="text-gray-600 text-sm">Click "Connect TwelveLabs API Key" and enter your API key to access the platform</p>
-                <div className="mt-2 text-xs text-gray-500 bg-gray-50 p-2 rounded">
-                  💡 <strong>Tip:</strong> You can get a free API key from TwelveLabs
-                </div>
-              </div>
-            </div>
-            
-            <div className="flex items-start space-x-4">
-              <div className="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0">
-                <span className="text-blue-600 font-bold text-lg">2</span>
-              </div>
-              <div className="flex-1">
-                <h4 className="font-semibold text-gray-900">Select Your Index</h4>
-                <p className="text-gray-600 text-sm">Choose from your available video indexes or create a new one</p>
-                <div className="mt-2 text-xs text-gray-500 bg-gray-50 p-2 rounded">
-                  📁 <strong>Index:</strong> A collection of videos organized by topic or project
-                </div>
-              </div>
-            </div>
-            
-            <div className="flex items-start space-x-4">
-              <div className="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0">
-                <span className="text-blue-600 font-bold text-lg">3</span>
-              </div>
-              <div className="flex-1">
-                <h4 className="font-semibold text-gray-900">Choose Your Video</h4>
-                <p className="text-gray-600 text-sm">Select the video you want to research from your index</p>
-                <div className="mt-2 text-xs text-gray-500 bg-gray-50 p-2 rounded">
-                  🎥 <strong>Supported:</strong> MP4, MOV, AVI, and other common video formats
-                </div>
+        <div className="text-center">
+          <div className="mb-6">
+            <div className="w-full h-64 bg-gray-100 rounded-lg border-2 border-dashed border-gray-300 flex items-center justify-center">
+              <div className="text-center">
+                <div className="text-4xl mb-2">🔑</div>
+                <p className="text-gray-600">GIF Tutorial Area</p>
+                <p className="text-sm text-gray-500">How to Connect API Key</p>
               </div>
             </div>
           </div>
-        </div>
-      )
-    },
-    {
-      title: "How the AI Works",
-      content: (
-        <div className="space-y-6">
-          <div className="bg-gradient-to-r from-purple-50 to-pink-50 border border-purple-200 rounded-lg p-4">
-            <h4 className="font-semibold text-purple-900 mb-2">🧠 AI-Powered Analysis Pipeline</h4>
-            <p className="text-purple-800 text-sm">Our advanced AI systems work together to provide comprehensive insights</p>
-          </div>
-          
-          <div className="grid grid-cols-1 gap-4">
-            <div className="bg-white border border-gray-200 rounded-lg p-4 shadow-sm">
-              <div className="flex items-center space-x-3 mb-3">
-                <div className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center">
-                  <span className="text-blue-600 font-semibold text-sm">1</span>
-                </div>
-                <h4 className="font-semibold text-gray-900">TwelveLabs Video Analysis</h4>
-              </div>
-              <p className="text-gray-600 text-sm">Advanced AI analyzes your video frame-by-frame, understanding:</p>
-              <ul className="mt-2 text-xs text-gray-500 space-y-1 ml-4">
-                <li>• Visual content and scenes</li>
-                <li>• Audio and speech recognition</li>
-                <li>• Context and meaning</li>
-                <li>• Key moments and highlights</li>
-              </ul>
-            </div>
-            
-            <div className="bg-white border border-gray-200 rounded-lg p-4 shadow-sm">
-              <div className="flex items-center space-x-3 mb-3">
-                <div className="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center">
-                  <span className="text-green-600 font-semibold text-sm">2</span>
-                </div>
-                <h4 className="font-semibold text-gray-900">Perplexity AI Research</h4>
-              </div>
-              <p className="text-gray-600 text-sm">AI conducts comprehensive research based on video analysis:</p>
-              <ul className="mt-2 text-xs text-gray-500 space-y-1 ml-4">
-                <li>• Current trends and developments</li>
-                <li>• Related research and studies</li>
-                <li>• Industry insights and analysis</li>
-                <li>• Verified sources and citations</li>
-              </ul>
-            </div>
-            
-            <div className="bg-white border border-gray-200 rounded-lg p-4 shadow-sm">
-              <div className="flex items-center space-x-3 mb-3">
-                <div className="w-8 h-8 bg-orange-100 rounded-full flex items-center justify-center">
-                  <span className="text-orange-600 font-semibold text-sm">3</span>
-                </div>
-                <h4 className="font-semibold text-gray-900">Interactive Chat & Follow-ups</h4>
-              </div>
-              <p className="text-gray-600 text-sm">Continue the conversation with contextual AI responses:</p>
-              <ul className="mt-2 text-xs text-gray-500 space-y-1 ml-4">
-                <li>• Ask follow-up questions</li>
-                <li>• Explore specific topics deeper</li>
-                <li>• Get additional research insights</li>
-                <li>• Maintain conversation context</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      )
-    },
-    {
-      title: "Example Use Cases",
-      content: (
-        <div className="space-y-6">
-          <div className="bg-gradient-to-r from-orange-50 to-red-50 border border-orange-200 rounded-lg p-4">
-            <h4 className="font-semibold text-orange-900 mb-2">💡 Real-World Applications</h4>
-            <p className="text-orange-800 text-sm">Discover how professionals use our platform across different industries</p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <div className="bg-white border border-gray-200 rounded-lg p-4 shadow-sm">
-              <div className="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center mb-3">
-                <Video className="w-5 h-5 text-blue-600" />
-              </div>
-              <h4 className="font-semibold text-gray-900 text-sm">Content Creation</h4>
-              <p className="text-gray-600 text-xs mb-2">Research trends for your next video</p>
-              <div className="text-xs text-gray-500 bg-gray-50 p-2 rounded">
-                <strong>Example:</strong> "Research market trends for this technology to create engaging content"
-              </div>
-            </div>
-            
-            <div className="bg-white border border-gray-200 rounded-lg p-4 shadow-sm">
-              <div className="w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center mb-3">
-                <BookOpen className="w-5 h-5 text-green-600" />
-              </div>
-              <h4 className="font-semibold text-gray-900 text-sm">Education</h4>
-              <p className="text-gray-600 text-xs mb-2">Enhance learning materials</p>
-              <div className="text-xs text-gray-500 bg-gray-50 p-2 rounded">
-                <strong>Example:</strong> "Research current developments in this field for my students"
-              </div>
-            </div>
-            
-            <div className="bg-white border border-gray-200 rounded-lg p-4 shadow-sm">
-              <div className="w-10 h-10 bg-purple-100 rounded-lg flex items-center justify-center mb-3">
-                <TrendingUp className="w-5 h-5 text-purple-600" />
-              </div>
-              <h4 className="font-semibold text-gray-900 text-sm">Market Research</h4>
-              <p className="text-gray-600 text-xs mb-2">Analyze industry trends</p>
-              <div className="text-xs text-gray-500 bg-gray-50 p-2 rounded">
-                <strong>Example:</strong> "Research competitive landscape for this product category"
-              </div>
-            </div>
-            
-            <div className="bg-white border border-gray-200 rounded-lg p-4 shadow-sm">
-              <div className="w-10 h-10 bg-orange-100 rounded-lg flex items-center justify-center mb-3">
-                <Lightbulb className="w-5 h-5 text-orange-600" />
-              </div>
-              <h4 className="font-semibold text-gray-900 text-sm">Innovation</h4>
-              <p className="text-gray-600 text-xs mb-2">Discover new opportunities</p>
-              <div className="text-xs text-gray-500 bg-gray-50 p-2 rounded">
-                <strong>Example:</strong> "Research emerging technologies related to this concept"
-              </div>
-            </div>
-          </div>
-        </div>
-      )
-    },
-    {
-      title: "Pro Tips & Best Practices",
-      content: (
-        <div className="space-y-6">
-          <div className="bg-gradient-to-r from-indigo-50 to-blue-50 border border-indigo-200 rounded-lg p-4">
-            <h4 className="font-semibold text-indigo-900 mb-2">🎯 Maximize Your Research Results</h4>
-            <p className="text-indigo-800 text-sm">Follow these tips to get the most out of the platform</p>
-          </div>
-          
-          <div className="space-y-4">
-            <div className="bg-white border border-gray-200 rounded-lg p-4 shadow-sm">
-              <h4 className="font-semibold text-gray-900 mb-2 flex items-center">
-                <span className="w-6 h-6 bg-blue-100 rounded-full flex items-center justify-center mr-2">
-                  <span className="text-blue-600 text-xs font-bold">💡</span>
-                </span>
-                Writing Effective Research Queries
-              </h4>
-              <div className="space-y-2 text-sm text-gray-600">
-                <p><strong>Be Specific:</strong> Instead of "Research this", try "Research current market trends and competitive landscape for this technology"</p>
-                <p><strong>Include Context:</strong> Mention your industry, target audience, or specific goals</p>
-                <p><strong>Ask for Actionable Insights:</strong> Request practical recommendations and next steps</p>
-              </div>
-            </div>
-            
-            <div className="bg-white border border-gray-200 rounded-lg p-4 shadow-sm">
-              <h4 className="font-semibold text-gray-900 mb-2 flex items-center">
-                <span className="w-6 h-6 bg-green-100 rounded-full flex items-center justify-center mr-2">
-                  <span className="text-green-600 text-xs font-bold">🔍</span>
-                </span>
-                Follow-up Questions Strategy
-              </h4>
-              <div className="space-y-2 text-sm text-gray-600">
-                <p><strong>Dive Deeper:</strong> Ask for specific examples, case studies, or detailed explanations</p>
-                <p><strong>Explore Connections:</strong> Ask how different topics relate to each other</p>
-                <p><strong>Get Practical:</strong> Request implementation steps or best practices</p>
-              </div>
-            </div>
-            
-            <div className="bg-white border border-gray-200 rounded-lg p-4 shadow-sm">
-              <h4 className="font-semibold text-gray-900 mb-2 flex items-center">
-                <span className="w-6 h-6 bg-purple-100 rounded-full flex items-center justify-center mr-2">
-                  <span className="text-purple-600 text-xs font-bold">⚡</span>
-                </span>
-                Platform Features to Explore
-              </h4>
-              <div className="space-y-2 text-sm text-gray-600">
-                <p><strong>Source Citations:</strong> Click on research sources to verify information and explore further</p>
-                <p><strong>Progress Tracking:</strong> Monitor your research progress in real-time</p>
-                <p><strong>Context Preservation:</strong> Your conversation history is maintained for continuity</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      )
-    },
-    {
-      title: "Ready to Start",
-      content: (
-        <div className="text-center space-y-6">
-          <div className="w-20 h-20 mx-auto bg-gradient-to-br from-green-500 to-blue-600 rounded-full flex items-center justify-center">
-            <Check className="w-10 h-10 text-white" />
-          </div>
-          <h2 className="text-2xl font-bold text-gray-900">You're All Set!</h2>
-          <p className="text-gray-600 text-lg leading-relaxed max-w-md mx-auto">
-            You now have everything you need to start your video research journey. 
-            Connect your API key and begin exploring the power of AI-driven video analysis.
+          <h3 className="text-xl font-semibold text-black mb-3">Step 1: Connect TwelveLabs API Key</h3>
+          <p className="text-black text-lg">
+            Start by connecting your TwelveLabs API key to access video analysis capabilities. 
+            This enables the platform to analyze your video content and provide deep insights.
           </p>
-          
-          <div className="bg-green-50 border border-green-200 rounded-lg p-4 max-w-md mx-auto">
-            <h4 className="font-semibold text-green-900 mb-2">🎉 What's Next?</h4>
-            <div className="text-left text-sm text-green-800 space-y-1">
-              <p>• Connect your TwelveLabs API key</p>
-              <p>• Select an index and video</p>
-              <p>• Write your research query</p>
-              <p>• Start exploring with AI!</p>
+        </div>
+      )
+    },
+    {
+      title: "Get Up-to-Date Sources",
+      content: (
+        <div className="text-center">
+          <div className="mb-6">
+            <div className="w-full h-64 bg-gray-100 rounded-lg border-2 border-dashed border-gray-300 flex items-center justify-center">
+              <div className="text-center">
+                <div className="text-4xl mb-2">📚</div>
+                <p className="text-gray-600">GIF Demo Area</p>
+                <p className="text-sm text-gray-500">Real-time Source Generation</p>
+              </div>
             </div>
           </div>
-          
-          <div className="text-xs text-gray-500">
-            <p>Need help? The platform is designed to be intuitive and user-friendly.</p>
-            <p>Your research journey starts now!</p>
-          </div>
+          <h3 className="text-xl font-semibold text-black mb-3">Step 2: Access Reliable Sources</h3>
+          <p className="text-black text-lg">
+            Receive comprehensive research with up-to-date and reputable sources. 
+            Our AI analyzes your video content and provides current, relevant information 
+            backed by credible sources.
+          </p>
         </div>
       )
     }
-  ]
+  ];
 
   const nextStep = () => {
     if (currentInfoStep < infoSteps.length - 1) {
@@ -1107,7 +898,7 @@ Please provide a comprehensive answer that builds upon the previous research and
                   <div className="w-full mb-6">
                     <div className="w-full text-gray-900 px-6 py-6 border-t border-b border-gray-200">
                       <div className="flex items-center space-x-3">
-                        <Loader2 className="w-5 h-5 text-gray-900 animate-spin" />
+                        <Loader2 className="w-6 h-6 text-gray-900 animate-spin" />
                         <span className="text-gray-600">Searching for the references please...</span>
                       </div>
                     </div>
@@ -1307,6 +1098,17 @@ Please provide a comprehensive answer that builds upon the previous research and
               >
                 <Info className="w-4 h-4" />
               </Button>
+              {/* Blog Logo */}
+              <Button
+                onClick={() => setIsBlogModalOpen(true)}
+                variant="outline"
+                size="sm"
+                className="text-gray-600 border-gray-200 bg-transparent hover:bg-gray-50"
+              >
+                <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M21 5c-1.11-.35-2.33-.5-3.5-.5-1.95 0-4.05.4-5.5 1.5-1.45-1.1-3.55-1.5-5.5-1.5S2.45 4.9 1 6v14.65c0 .25.25.5.5.5.1 0 .15-.05.25-.05C3.1 20.45 5.05 20 6.5 20c1.95 0 4.05.4 5.5 1.5 1.35-.85 3.8-1.5 5.5-1.5 1.65 0 3.35.3 4.75 1.05.1.05.15.05.25.05.25 0 .5-.25.5-.5V6c-.6-.45-1.25-.75-2-1zm0 13.5c-1.1-.35-2.3-.5-3.5-.5-1.7 0-4.15.65-5.5 1.5V8c1.35-.85 3.8-1.5 5.5-1.5 1.2 0 2.4.15 3.5.5v11.5z"/>
+                </svg>
+              </Button>
               <Button variant="outline" size="sm" className="text-gray-600 border-gray-200 bg-transparent">
                 <Github className="w-4 h-4" />
               </Button>
@@ -1320,11 +1122,13 @@ Please provide a comprehensive answer that builds upon the previous research and
         <div className="max-w-4xl mx-auto">
           {/* Badge */}
           <div className="flex justify-center mb-12">
-            <div className="inline-flex items-center px-4 py-2 bg-gray-50 border border-gray-200 rounded-full text-sm text-gray-700">
+            <button 
+              onClick={() => setIsInfoModalOpen(true)}
+              className="inline-flex items-center px-4 py-2 bg-gray-50 border border-gray-200 rounded-full text-sm text-gray-700 hover:bg-gray-100 hover:border-gray-300 transition-colors cursor-pointer"
+            >
               <span className="bg-gray-900 text-white px-2 py-1 rounded-full text-xs font-medium mr-3">New</span>
               AI-powered research from video content
-              <span className="ml-2 text-gray-400">→</span>
-            </div>
+            </button>
           </div>
 
           {/* Hero */}
@@ -1382,7 +1186,7 @@ Please provide a comprehensive answer that builds upon the previous research and
                               <VideoThumbnail 
                                 src={selectedVideoThumbnail} 
                                 alt="Selected video thumbnail" 
-                                className="w-5 h-5"
+                                className="w-6 h-6"
                               />
                               <span className="truncate">
                                 {videos.find(v => v.id === selectedVideo)?.name}
@@ -1424,21 +1228,28 @@ Please provide a comprehensive answer that builds upon the previous research and
                   </div>
 
                   {/* Connect TwelveLabs API Key button */}
-                  <Button
-                    onClick={() => setIsApiModalOpen(true)}
-                    variant="outline"
-                    size="sm"
-                    className="text-xs text-gray-600 border-gray-200 bg-transparent hover:bg-gray-50"
-                  >
-                    {isConnected ? (
+                  {isConnected ? (
+                    <Button
+                      variant="ghost"
+                      size="sm"
+                      className="text-green-600 hover:text-green-700 hover:bg-green-50 p-0 h-auto"
+                      onClick={() => setIsApiModalOpen(true)}
+                    >
                       <div className="flex items-center space-x-2">
-                        <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+                        <Check className="w-4 h-4" />
                         <span>Connected</span>
                       </div>
-                    ) : (
-                      "Connect TwelveLabs API Key"
-                    )}
-                  </Button>
+                    </Button>
+                  ) : (
+                    <Button
+                      variant="outline"
+                      size="sm"
+                      className="text-xs text-gray-600 border-gray-200 bg-transparent hover:bg-gray-50"
+                      onClick={() => setIsApiModalOpen(true)}
+                    >
+                      Connect TwelveLabs API Key
+                    </Button>
+                  )}
                 </div>
 
                 {/* Text input */}
@@ -1502,7 +1313,12 @@ Please provide a comprehensive answer that builds upon the previous research and
                 {/* Bottom toolbar */}
                 <div className="flex items-center justify-between pt-4 border-t border-gray-100">
                   <div className="flex items-center space-x-3">
-                    <Button variant="outline" size="sm" className="text-gray-500 hover:text-gray-700 hover:bg-gray-50">
+                    <Button 
+                      variant="outline" 
+                      size="sm" 
+                      className="text-gray-500 hover:text-gray-700 hover:bg-gray-50"
+                      onClick={() => setIsUploadVideoModalOpen(true)}
+                    >
                       <Video className="w-4 h-4 mr-2" />
                       Upload Video
                     </Button>
@@ -1539,17 +1355,23 @@ Please provide a comprehensive answer that builds upon the previous research and
               <span className="text-gray-500 text-sm">Powered by</span>
               <span className="font-semibold text-gray-900">TwelveLabs</span>
             </div>
-            <div className="flex items-center space-x-8 md:absolute md:right-4">
-              {/* Web Logo */}
-              <div className="w-8 h-8 bg-gray-100 rounded-lg flex items-center justify-center">
-                <svg className="w-5 h-5 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
+            <div className="flex items-center space-x-2 md:absolute md:right-2">
+              {/* Globe/Web Logo */}
+              <div className="w-7 h-7 flex items-center justify-center">
+                <svg className="w-4 h-4 text-gray-700" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.94-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
                 </svg>
               </div>
-              {/* Integration Logo */}
-              <div className="w-8 h-8 bg-gray-100 rounded-lg flex items-center justify-center">
-                <svg className="w-5 h-5 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+              {/* Discord Logo */}
+              <div className="w-7 h-7 flex items-center justify-center">
+                <svg className="w-4 h-4 text-gray-700" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515a.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0a12.64 12.64 0 0 0-.617-1.25a.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057a19.9 19.9 0 0 0 5.993 3.03a.078.078 0 0 0 .084-.028a14.09 14.09 0 0 0 1.226-1.994a.076.076 0 0 0-.041-.106a13.107 13.107 0 0 1-1.872-.892a.077.077 0 0 1-.008-.128a10.2 10.2 0 0 0 .372-.292a.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127a12.299 12.299 0 0 1-1.873.892a.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028a19.839 19.839 0 0 0 6.002-3.03a.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419c0-1.333.956-2.419 2.157-2.419c1.21 0 2.176 1.096 2.157 2.42c0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419c0-1.333.955-2.419 2.157-2.419c1.21 0 2.176 1.096 2.157 2.42c0 1.333-.946 2.418-2.157 2.418z"/>
+                </svg>
+              </div>
+              {/* New Twitter/X Logo */}
+              <div className="w-7 h-7 flex items-center justify-center">
+                <svg className="w-4 h-4 text-gray-700" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
                 </svg>
               </div>
             </div>
@@ -1561,47 +1383,95 @@ Please provide a comprehensive answer that builds upon the previous research and
       <Dialog open={isApiModalOpen} onOpenChange={setIsApiModalOpen}>
         <DialogContent className="sm:max-w-md">
           <DialogHeader>
-            <DialogTitle>Connect TwelveLabs API</DialogTitle>
+            <DialogTitle>
+              {isConnected ? 'TwelveLabs API Configuration' : 'Connect TwelveLabs API'}
+            </DialogTitle>
             <DialogDescription>
-              Enter your TwelveLabs API key to start analyzing videos and conducting research.
+              {isConnected 
+                ? 'Manage your TwelveLabs API connection or disconnect.'
+                : 'Enter your TwelveLabs API key to start analyzing videos and conducting research.'
+              }
             </DialogDescription>
           </DialogHeader>
           <div className="space-y-4">
-            <div className="space-y-2">
-              <label htmlFor="api-key" className="text-sm font-medium text-gray-700">
-                API Key
-              </label>
-              <Input
-                id="api-key"
-                type="password"
-                placeholder="Enter your TwelveLabs API key (starts with 'tlk_')"
-                value={apiKey}
-                onChange={(e) => setApiKey(e.target.value)}
-                className="w-full"
-              />
-            </div>
-            <div className="flex justify-end space-x-2">
-              <Button
-                variant="outline"
-                onClick={() => setIsApiModalOpen(false)}
-              >
-                Cancel
-              </Button>
-              <Button
-                onClick={handleConnect}
-                disabled={isConnecting || !apiKey.trim()}
-                className="bg-gray-900 hover:bg-gray-800 text-white"
-              >
-                {isConnecting ? (
-                  <>
-                    <Loader2 className="w-4 h-4 mr-2 animate-spin" />
-                    Connecting...
-                  </>
-                ) : (
-                  "Connect"
-                )}
-              </Button>
-            </div>
+            {isConnected ? (
+              <div className="space-y-4">
+                <div className="p-4 bg-gray-50 border border-gray-200 rounded-lg">
+                  <div className="flex items-center space-x-2">
+                    <Check className="w-6 h-6 text-gray-900" />
+                    <span className="text-gray-900 font-medium">API Key Connected</span>
+                  </div>
+                  <p className="text-sm text-gray-700 mt-2">
+                    Your TwelveLabs API key is successfully configured and working.
+                  </p>
+                </div>
+                <div className="flex justify-end space-x-2">
+                  <Button
+                    variant="outline"
+                    onClick={() => setIsApiModalOpen(false)}
+                    className="border-gray-300 text-gray-700 hover:bg-gray-50 hover:border-gray-400"
+                  >
+                    Close
+                  </Button>
+                  <Button
+                    variant="outline"
+                    onClick={() => {
+                      setApiKey("")
+                      setIsConnected(false)
+                      setSelectedIndex("")
+                      setSelectedVideo("")
+                      setSelectedVideoThumbnail(null)
+                      setSelectedVideoUrl(null)
+                      setIndexes([])
+                      setVideos([])
+                      toast({ title: "Disconnected", description: "TwelveLabs API key has been disconnected." })
+                      // Don't close modal - let it show the connection form
+                    }}
+                    className="bg-gray-900 text-white border-gray-900 hover:bg-gray-800 hover:border-gray-800"
+                  >
+                    Disconnect
+                  </Button>
+                </div>
+              </div>
+            ) : (
+              <>
+                <div className="space-y-2">
+                  <label htmlFor="api-key" className="text-sm font-medium text-gray-700">
+                    API Key
+                  </label>
+                  <Input
+                    id="api-key"
+                    type="password"
+                    placeholder="Enter your TwelveLabs API key (starts with 'tlk_')"
+                    value={apiKey}
+                    onChange={(e) => setApiKey(e.target.value)}
+                    className="w-full"
+                  />
+                </div>
+                <div className="flex justify-end space-x-2">
+                  <Button
+                    variant="outline"
+                    onClick={() => setIsApiModalOpen(false)}
+                  >
+                    Cancel
+                  </Button>
+                  <Button
+                    onClick={handleConnect}
+                    disabled={isConnecting || !apiKey.trim()}
+                    className="bg-gray-900 hover:bg-gray-800 text-white"
+                  >
+                    {isConnecting ? (
+                      <>
+                        <Loader2 className="w-4 h-4 mr-2 animate-spin" />
+                        Connecting...
+                      </>
+                    ) : (
+                      "Connect"
+                    )}
+                  </Button>
+                </div>
+              </>
+            )}
           </div>
         </DialogContent>
       </Dialog>
@@ -1623,73 +1493,135 @@ Please provide a comprehensive answer that builds upon the previous research and
         </DialogContent>
       </Dialog>
 
+      {/* Upload Video Modal */}
+      <Dialog open={isUploadVideoModalOpen} onOpenChange={setIsUploadVideoModalOpen}>
+        <DialogContent className="sm:max-w-md">
+          <DialogHeader>
+            <DialogTitle>Upload Video - Coming Soon!</DialogTitle>
+            <DialogDescription>
+              Video upload functionality is currently under development. You'll be able to upload your own videos for analysis soon!
+            </DialogDescription>
+          </DialogHeader>
+          <div className="flex justify-end">
+            <Button onClick={() => setIsUploadVideoModalOpen(false)}>
+              Got it
+            </Button>
+          </div>
+        </DialogContent>
+      </Dialog>
+
       {/* Info Modal */}
       <Dialog open={isInfoModalOpen} onOpenChange={setIsInfoModalOpen}>
-        <DialogContent className="sm:max-w-2xl h-[90vh] flex flex-col">
-          <DialogHeader className="flex-shrink-0">
-            <DialogTitle className="text-xl font-semibold text-gray-900">
-              {infoSteps[currentInfoStep].title}
+        <DialogContent className="sm:max-w-2xl w-[600px] h-[600px] flex flex-col p-0 overflow-hidden !rounded-[58px] border-2 border-black bg-transparent shadow-none" style={{ 
+          backgroundImage: 'url(/card.png)', 
+          backgroundSize: 'cover', 
+          backgroundPosition: 'center'
+        }}>
+          <div className="flex-1 overflow-hidden relative">
+            {/* Content */}
+            <div className="relative z-10 h-full flex flex-col">
+              <DialogHeader className="px-6 pt-6 pb-4 relative">
+                {/* Close Button */}
+                <button
+                  onClick={() => setIsInfoModalOpen(false)}
+                  className="absolute top-0 right-0 w-8 h-8 flex items-center justify-center text-black rounded-full transition-colors"
+                >
+                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                  </svg>
+                </button>
+                
+                <DialogTitle className="text-2xl font-bold text-black text-center">
+                  {infoSteps[currentInfoStep].title}
+                </DialogTitle>
+                {/* Step Indicator */}
+                <div className="text-center mt-2">
+                  <span className="text-sm text-black font-medium">
+                    Step {currentInfoStep + 1} of {infoSteps.length}
+                  </span>
+                </div>
+              </DialogHeader>
+              
+              {/* Content Area with Bigger GIF */}
+              <div className="flex-1 overflow-hidden px-6 pb-4">
+                <div className="h-full overflow-y-auto">
+                  {infoSteps[currentInfoStep].content}
+                </div>
+              </div>
+              
+              {/* Navigation Footer */}
+              <div className="px-6 pb-6">
+                <div className="flex items-center justify-between">
+                  <Button
+                    onClick={prevStep}
+                    disabled={currentInfoStep === 0}
+                    variant="outline"
+                    size="sm"
+                    className="text-black border-gray-300 hover:bg-gray-50 disabled:opacity-50 rounded-full transition-colors"
+                  >
+                    <ArrowLeft className="w-4 h-4 mr-2" />
+                    Previous
+                  </Button>
+                  
+                  {/* Step Indicators */}
+                  <div className="flex space-x-2">
+                    {infoSteps.map((_, index) => (
+                      <button
+                        key={index}
+                        onClick={() => setCurrentInfoStep(index)}
+                        className={`w-3 h-3 rounded-full transition-colors ${
+                          index === currentInfoStep 
+                            ? 'bg-black' 
+                            : 'bg-gray-300 hover:bg-gray-400'
+                        }`}
+                      />
+                    ))}
+                  </div>
+                  
+                  <Button
+                    onClick={currentInfoStep === infoSteps.length - 1 ? closeModal : nextStep}
+                    size="sm"
+                    className="bg-black text-white hover:bg-gray-800 rounded-full transition-colors"
+                  >
+                    {currentInfoStep === infoSteps.length - 1 ? (
+                      'Get Started'
+                    ) : (
+                      <>
+                        Next
+                        <ArrowLeft className="w-4 h-4 ml-2 rotate-180" />
+                      </>
+                    )}
+                  </Button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </DialogContent>
+      </Dialog>
+
+      {/* Blog Modal */}
+      <Dialog open={isBlogModalOpen} onOpenChange={setIsBlogModalOpen}>
+        <DialogContent className="sm:max-w-md">
+          <DialogHeader>
+            <DialogTitle className="text-center text-xl font-semibold text-gray-900">
+              Coming Soon!
             </DialogTitle>
           </DialogHeader>
-          
-          {/* Progress Bar */}
-          <div className="flex-shrink-0 mb-6">
-            <div className="flex justify-between items-center mb-2">
-              <span className="text-sm text-gray-500">Step {currentInfoStep + 1} of {infoSteps.length}</span>
-              <span className="text-sm font-medium text-gray-700">{Math.round(((currentInfoStep + 1) / infoSteps.length) * 100)}%</span>
+          <div className="text-center py-6">
+            <div className="mb-4">
+              <svg className="w-16 h-16 mx-auto text-gray-400" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M21 5c-1.11-.35-2.33-.5-3.5-.5-1.95 0-4.05.4-5.5 1.5-1.45-1.1-3.55-1.5-5.5-1.5S2.45 4.9 1 6v14.65c0 .25.25.5.5.5.1 0 .15-.05.25-.05C3.1 20.45 5.05 20 6.5 20c1.95 0 4.05.4 5.5 1.5 1.35-.85 3.8-1.5 5.5-1.5 1.65 0 3.35.3 4.75 1.05.1.05.15.05.25.05.25 0 .5-.25.5-.5V6c-.6-.45-1.25-.75-2-1zm0 13.5c-1.1-.35-2.3-.5-3.5-.5-1.7 0-4.15.65-5.5 1.5V8c1.35-.85 3.8-1.5 5.5-1.5 1.2 0 2.4.15 3.5.5v11.5z"/>
+              </svg>
             </div>
-            <div className="w-full bg-gray-200 rounded-full h-2">
-              <div 
-                className="bg-blue-600 h-2 rounded-full transition-all duration-300 ease-in-out"
-                style={{ width: `${((currentInfoStep + 1) / infoSteps.length) * 100}%` }}
-              ></div>
-            </div>
-          </div>
-          
-          {/* Content Area - Non-scrollable */}
-          <div className="flex-1 overflow-hidden">
-            <div className="h-full">
-              {infoSteps[currentInfoStep].content}
-            </div>
-          </div>
-          
-          {/* Navigation Footer */}
-          <div className="flex-shrink-0 flex items-center justify-between pt-6 border-t border-gray-200">
-            <Button
-              variant="outline"
-              onClick={prevStep}
-              disabled={currentInfoStep === 0}
-              className="flex items-center space-x-2"
+            <p className="text-gray-600 mb-6">
+              We're working on bringing you insightful technical content about building video deep research.
+            </p>
+            <Button 
+              onClick={() => setIsBlogModalOpen(false)}
+              className="w-full bg-gray-900 text-white hover:bg-gray-800"
             >
-              <ArrowLeft className="w-4 h-4" />
-              <span>Previous</span>
+              Got it!
             </Button>
-            
-            <div className="flex space-x-2">
-              {infoSteps.map((_, index) => (
-                <button
-                  key={index}
-                  onClick={() => setCurrentInfoStep(index)}
-                  className={`w-3 h-3 rounded-full transition-colors ${
-                    index === currentInfoStep ? 'bg-blue-600' : 'bg-gray-300 hover:bg-gray-400'
-                  }`}
-                />
-              ))}
-            </div>
-            
-            {currentInfoStep === infoSteps.length - 1 ? (
-              <Button onClick={closeModal} className="bg-blue-600 hover:bg-blue-700">
-                Get Started
-              </Button>
-            ) : (
-              <Button
-                onClick={nextStep}
-                className="bg-blue-600 hover:bg-blue-700 flex items-center space-x-2"
-              >
-                <span>Next</span>
-                <ArrowLeft className="w-4 h-4 rotate-180" />
-              </Button>
-            )}
           </div>
         </DialogContent>
       </Dialog>

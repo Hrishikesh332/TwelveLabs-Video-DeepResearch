@@ -71,7 +71,11 @@ class TwelveLabsService:
                         "name": system_metadata.get('filename', f'Video {video["_id"]}'),
                         "duration": system_metadata.get('duration', 0),
                         "thumbnail_url": thumbnail_url,
-                        "video_url": video_url
+                        "video_url": video_url,
+                        "width": system_metadata.get('width', 0),
+                        "height": system_metadata.get('height', 0),
+                        "fps": system_metadata.get('fps', 0),
+                        "size": system_metadata.get('size', 0)
                     })
                 return result
             else:

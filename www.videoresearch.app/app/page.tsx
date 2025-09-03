@@ -26,7 +26,17 @@ import remarkGfm from 'remark-gfm'
 import { Label } from "@/components/ui/label"
 
 type IndexItem = { id: string; name: string }
-type VideoItem = { id: string; name: string; duration: number; thumbnail_url?: string; video_url?: string }
+type VideoItem = { 
+  id: string; 
+  name: string; 
+  duration: number; 
+  thumbnail_url?: string; 
+  video_url?: string;
+  width?: number;
+  height?: number;
+  fps?: number;
+  size?: number;
+}
 
 const API_BASE_URL = "http://localhost:5000"
 
@@ -519,6 +529,15 @@ export default function DeepResearchLanding() {
       return
     }
     
+    // Validate API key format
+    if (!apiKey.trim().startsWith('tlk_')) {
+      toast({ 
+        title: "Invalid API key format", 
+        description: "Please provide a correct TwelveLabs API key." 
+      })
+      return
+    }
+    
     setIsConnecting(true)
     
     ;(async () => {
@@ -584,7 +603,16 @@ export default function DeepResearchLanding() {
 
       const data = await res.json()
       if (data?.success) {
-        setVideos(data.videos || [])
+        const videosList = data.videos || []
+        setVideos(videosList)
+        
+        // Automatically select the first video if available
+        if (videosList.length > 0) {
+          const firstVideo = videosList[0]
+          setSelectedVideo(firstVideo.id)
+          setSelectedVideoThumbnail(firstVideo.thumbnail_url || null)
+          setSelectedVideoUrl(firstVideo.video_url || null)
+        }
       } else {
         throw new Error(data?.error || "Could not load videos for this index.")
       }
@@ -655,7 +683,7 @@ export default function DeepResearchLanding() {
     }])
     
     // Add initial activity log
-    addActivityLog(`I'm gathering information on ${prompt.toLowerCase()}, including emerging innovations, major developments, and shifts in consumer or industry behavior as of 2025. I'll provide you with a structured overview of key areas such as AI, hardware, software, cybersecurity, and more, using up-to-date, reputable sources.`, 'info')
+    addActivityLog(`Starting research on: ${prompt}. I will provide you with up-to-date and reputable sources.`, 'info')
     
     // Initialize steps
     const initialSteps = [
@@ -992,23 +1020,6 @@ Please provide a comprehensive answer that builds upon the previous research and
                   <ArrowLeft className="w-4 h-4 mr-2" />
                   Back to Search
                 </Button>
-                {selectedVideoThumbnail && (
-                  <div className="flex items-center space-x-3 p-3 bg-gray-50 rounded-lg border border-gray-200">
-                    <VideoThumbnail 
-                      src={selectedVideoThumbnail} 
-                      alt="Video thumbnail" 
-                      className="w-12 h-12"
-                    />
-                    <div className="text-sm">
-                      <div className="font-medium text-gray-900">
-                        {videos.find(v => v.id === selectedVideo)?.name || 'Selected Video'}
-                      </div>
-                      <div className="text-xs text-gray-500">
-                        Duration: {Math.round((videos.find(v => v.id === selectedVideo)?.duration || 0) / 60)}m {Math.round((videos.find(v => v.id === selectedVideo)?.duration || 0) % 60)}s
-                      </div>
-                    </div>
-                  </div>
-                )}
               </div>
             </div>
           </div>
@@ -1028,6 +1039,19 @@ Please provide a comprehensive answer that builds upon the previous research and
                     {message.type === 'user' && (
                       <div className="flex justify-end mb-6">
                         <div className="max-w-5xl px-6 py-4 rounded-2xl bg-gray-900 text-white rounded-br-sm">
+                          {/* Video Thumbnail - Show when available */}
+                          {selectedVideoThumbnail && (
+                            <div className="mb-3 flex items-center space-x-3">
+                              <VideoThumbnail 
+                                src={selectedVideoThumbnail || undefined} 
+                                alt="Video thumbnail" 
+                                className="w-8 h-8"
+                              />
+                              <span className="text-sm text-gray-300">
+                                {videos.find(v => v.id === selectedVideo)?.name || 'Selected Video'}
+                              </span>
+                            </div>
+                          )}
                           <p className="text-base">{message.content}</p>
                         </div>
                       </div>
@@ -1066,7 +1090,7 @@ Please provide a comprehensive answer that builds upon the previous research and
                     {/* Assistant Message */}
                     {message.type === 'assistant' && (
                       <div className="w-full mb-6">
-                        <div className="w-full bg-gray-50 text-gray-900 px-6 py-6 border-t border-b border-gray-200">
+                        <div className="w-full text-gray-900 px-6 py-6 border-t border-b border-gray-200">
                           <div className="prose prose-lg max-w-none">
                             <ReactMarkdown remarkPlugins={[remarkGfm]}>
                               {message.content}
@@ -1077,6 +1101,18 @@ Please provide a comprehensive answer that builds upon the previous research and
                     )}
                   </div>
                 ))}
+
+                {/* Loading Message for Follow-up Questions */}
+                {isSendingMessage && (
+                  <div className="w-full mb-6">
+                    <div className="w-full text-gray-900 px-6 py-6 border-t border-b border-gray-200">
+                      <div className="flex items-center space-x-3">
+                        <Loader2 className="w-5 h-5 text-gray-900 animate-spin" />
+                        <span className="text-gray-600">Searching for the references please...</span>
+                      </div>
+                    </div>
+                  </div>
+                )}
 
                 {/* Progress Bar - Show only during research */}
                 {isResearching && (
@@ -1099,8 +1135,14 @@ Please provide a comprehensive answer that builds upon the previous research and
                           }
                         })()}
                       </span>
-                      <div className="w-6 h-6 bg-gray-300 rounded-full flex items-center justify-center">
-                        <div className="w-2 h-2 bg-gray-900 rounded-sm"></div>
+                      <div className="w-8 h-8 flex items-center justify-center">
+                        <img 
+                          src="/Twelve Labs.gif" 
+                          alt="TwelveLabs" 
+                          className="w-8 h-8 object-contain"
+                          key={`twelvelabs-gif-${Date.now()}`}
+                          style={{ animation: 'none' }}
+                        />
                       </div>
                     </div>
                     
@@ -1137,7 +1179,7 @@ Please provide a comprehensive answer that builds upon the previous research and
                     <textarea
                       value={chatInput}
                       onChange={(e) => setChatInput(e.target.value)}
-                      placeholder="Ask a follow-up question about the research..."
+                      placeholder={isSendingMessage ? "Processing your question..." : "Ask a follow-up question about the research..."}
                       className="w-full px-4 py-3 border border-gray-300 rounded-2xl resize-none focus:outline-none focus:ring-2 focus:ring-gray-900 focus:border-transparent"
                       rows={1}
                       onKeyDown={(e) => {
@@ -1169,7 +1211,6 @@ Please provide a comprehensive answer that builds upon the previous research and
             <div className="p-6 h-full overflow-y-auto">
               <div className="flex items-center justify-between mb-6">
                 <h3 className="text-lg font-semibold text-gray-900">Research Mode</h3>
-                <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
               </div>
 
               {/* Tabs */}
@@ -1201,12 +1242,7 @@ Please provide a comprehensive answer that builds upon the previous research and
                 <div className="space-y-4">
                   {activityLogs.map((log, index) => (
                     <div key={index} className="flex items-start space-x-3">
-                      <div className={`w-2 h-2 rounded-full mt-2 flex-shrink-0 ${
-                        log.type === 'info' ? 'bg-blue-500' :
-                        log.type === 'progress' ? 'bg-yellow-500' :
-                        log.type === 'complete' ? 'bg-green-500' :
-                        'bg-red-500'
-                      }`} />
+                      <div className="w-2 h-2 bg-gray-900 rounded-full mt-2 flex-shrink-0" />
                       <div className="flex-1 min-w-0">
                         <p className="text-sm text-gray-700">{log.message}</p>
                         <p className="text-xs text-gray-500 mt-1">
@@ -1425,13 +1461,23 @@ Please provide a comprehensive answer that builds upon the previous research and
                               <span className="font-medium">Duration:</span> {Math.round((videos.find(v => v.id === selectedVideo)?.duration || 0) / 60)}m {Math.round((videos.find(v => v.id === selectedVideo)?.duration || 0) % 60)}s
                             </p>
                             <p>
-                              <span className="font-medium">Dimensions:</span> {videos.find(v => v.id === selectedVideo)?.system_metadata?.width || 'N/A'} × {videos.find(v => v.id === selectedVideo)?.system_metadata?.height || 'N/A'}
+                              <span className="font-medium">FPS:</span> {
+                                (() => {
+                                  const video = videos.find(v => v.id === selectedVideo);
+                                  return video?.fps && video.fps > 0 ? video.fps : 'N/A';
+                                })()
+                              }
                             </p>
                             <p>
-                              <span className="font-medium">FPS:</span> {videos.find(v => v.id === selectedVideo)?.system_metadata?.fps || 'N/A'}
-                            </p>
-                            <p>
-                              <span className="font-medium">File Size:</span> {Math.round((videos.find(v => v.id === selectedVideo)?.system_metadata?.size || 0) / (1024 * 1024))} MB
+                              <span className="font-medium">File Size:</span> {
+                                (() => {
+                                  const video = videos.find(v => v.id === selectedVideo);
+                                  if (video?.size && video.size > 0) {
+                                    return `${Math.round(video.size / (1024 * 1024))} MB`;
+                                  }
+                                  return 'N/A';
+                                })()
+                              }
                             </p>
                           </div>
                         </div>
@@ -1528,7 +1574,7 @@ Please provide a comprehensive answer that builds upon the previous research and
               <Input
                 id="api-key"
                 type="password"
-                placeholder="Enter your TwelveLabs API key"
+                placeholder="Enter your TwelveLabs API key (starts with 'tlk_')"
                 value={apiKey}
                 onChange={(e) => setApiKey(e.target.value)}
                 className="w-full"

@@ -5,4 +5,3 @@ python-dotenv
 flask-cors
 apscheduler
 gunicorn
-firebase-admin

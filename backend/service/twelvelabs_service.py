@@ -1,13 +1,13 @@
 from twelvelabs import TwelveLabs
-from flask import current_app
 import requests
 import sys
+import os
 
 class TwelveLabsService:
     
     def __init__(self, api_key=None):
         if api_key is None:
-            api_key = current_app.config['TWELVELABS_API_KEY']
+            api_key = os.environ.get('TWELVELABS_API_KEY', '')
         self.api_key = api_key
         self.client = TwelveLabs(api_key=api_key)
     
@@ -61,10 +61,17 @@ class TwelveLabsService:
                 result = []
                 for video in data.get('data', []):
                     system_metadata = video.get('system_metadata', {})
+                    hls_data = video.get('hls', {})
+                    thumbnail_urls = hls_data.get('thumbnail_urls', [])
+                    thumbnail_url = thumbnail_urls[0] if thumbnail_urls else None
+                    video_url = hls_data.get('video_url')
+                    
                     result.append({
                         "id": video['_id'],
                         "name": system_metadata.get('filename', f'Video {video["_id"]}'),
-                        "duration": system_metadata.get('duration', 0)
+                        "duration": system_metadata.get('duration', 0),
+                        "thumbnail_url": thumbnail_url,
+                        "video_url": video_url
                     })
                 return result
             else:

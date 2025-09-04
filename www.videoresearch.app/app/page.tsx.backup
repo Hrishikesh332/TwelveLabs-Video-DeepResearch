@@ -898,7 +898,7 @@ Please provide a comprehensive answer that builds upon the previous research and
                   <div className="w-full mb-6">
                     <div className="w-full text-gray-900 px-6 py-6 border-t border-b border-gray-200">
                       <div className="flex items-center space-x-3">
-                        <Loader2 className="w-5 h-5 text-gray-900 animate-spin" />
+                        <Loader2 className="w-6 h-6 text-gray-900 animate-spin" />
                         <span className="text-gray-600">Searching for the references please...</span>
                       </div>
                     </div>
@@ -1186,7 +1186,7 @@ Please provide a comprehensive answer that builds upon the previous research and
                               <VideoThumbnail 
                                 src={selectedVideoThumbnail} 
                                 alt="Selected video thumbnail" 
-                                className="w-5 h-5"
+                                className="w-6 h-6"
                               />
                               <span className="truncate">
                                 {videos.find(v => v.id === selectedVideo)?.name}
@@ -1398,7 +1398,7 @@ Please provide a comprehensive answer that builds upon the previous research and
               <div className="space-y-4">
                 <div className="p-4 bg-gray-50 border border-gray-200 rounded-lg">
                   <div className="flex items-center space-x-2">
-                    <Check className="w-5 h-5 text-gray-900" />
+                    <Check className="w-6 h-6 text-gray-900" />
                     <span className="text-gray-900 font-medium">API Key Connected</span>
                   </div>
                   <p className="text-sm text-gray-700 mt-2">
@@ -1526,7 +1526,7 @@ Please provide a comprehensive answer that builds upon the previous research and
                   onClick={() => setIsInfoModalOpen(false)}
                   className="absolute top-0 right-0 w-8 h-8 flex items-center justify-center text-black rounded-full transition-colors"
                 >
-                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
                   </svg>
                 </button>

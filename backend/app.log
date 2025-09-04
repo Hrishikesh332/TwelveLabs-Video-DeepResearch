@@ -8139,3 +8139,1014 @@ Please ensure your analysis addresses the user's specific question while providi
 2025-09-03 22:49:07,067 - apscheduler.executors.default - INFO - Running job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-03 22:58:07 CEST)" (scheduled at 2025-09-03 22:49:07.062442+02:00)
 2025-09-03 22:49:07,073 - werkzeug - INFO - 127.0.0.1 - - [03/Sep/2025 22:49:07] "GET /health HTTP/1.1" 200 -
 2025-09-03 22:49:07,074 - apscheduler.executors.default - INFO - Job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-03 22:58:07 CEST)" executed successfully
+2025-09-04 12:17:35,616 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-09-04 12:17:35,616 - apscheduler.scheduler - INFO - Added job "wake_up_app" to job store "default"
+2025-09-04 12:17:35,616 - apscheduler.scheduler - INFO - Scheduler started
+2025-09-04 12:17:35,631 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.2.73:5000
+2025-09-04 12:17:35,631 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-09-04 12:17:35,656 - werkzeug - INFO -  * Restarting with watchdog (fsevents)
+2025-09-04 12:17:35,947 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-09-04 12:17:35,948 - apscheduler.scheduler - INFO - Added job "wake_up_app" to job store "default"
+2025-09-04 12:17:35,948 - apscheduler.scheduler - INFO - Scheduler started
+2025-09-04 12:17:35,952 - werkzeug - WARNING -  * Debugger is active!
+2025-09-04 12:17:35,960 - werkzeug - INFO -  * Debugger PIN: 237-707-018
+2025-09-04 12:31:48,235 - werkzeug - INFO - 127.0.0.1 - - [04/Sep/2025 12:31:48] "OPTIONS /api/config/twelvelabs HTTP/1.1" 200 -
+2025-09-04 12:31:49,118 - werkzeug - INFO - 127.0.0.1 - - [04/Sep/2025 12:31:49] "POST /api/config/twelvelabs HTTP/1.1" 200 -
+2025-09-04 12:31:49,127 - werkzeug - INFO - 127.0.0.1 - - [04/Sep/2025 12:31:49] "OPTIONS /api/videos HTTP/1.1" 200 -
+2025-09-04 12:31:49,701 - werkzeug - INFO - 127.0.0.1 - - [04/Sep/2025 12:31:49] "POST /api/videos HTTP/1.1" 200 -
+2025-09-04 12:32:09,143 - werkzeug - INFO - 127.0.0.1 - - [04/Sep/2025 12:32:09] "OPTIONS /api/workflow HTTP/1.1" 200 -
+2025-09-04 12:32:09,151 - __main__ - INFO - === WORKFLOW REQUEST START ===
+2025-09-04 12:32:09,155 - __main__ - INFO - Request data: {
+  "twelvelabs_api_key": "tlk_0ZBSDQ10EJJGS728AC05F3CNWFND",
+  "index_id": "689df72e4427a7b96b7a2cb8",
+  "video_id": "689df76cb1ba49c5144b7eca",
+  "analysis_prompt": "Please provide a comprehensive analysis of this video content. Include:\n\n1. **Content Overview**: What is happening in the video? Describe the main events, actions, and scenes.\n2. **Key Elements**: Identify important objects, people, locations, activities, and interactions.\n3. **Context & Setting**: What is the environment, time period, or context of the video?\n4. **Narrative Flow**: How does the story or sequence of events unfold?\n5. **Notable Details**: Highlight any significant details, patterns, or unique aspects.\n6. **Technical Aspects**: Note video quality, camera work, editing, or production elements if relevant.\n\nUser's Specific Query: Please do research about it\n\nPlease ensure your analysis addresses the user's specific question while providing comprehensive coverage of the video content.",
+  "research_query": "Please do research about it"
+}
+2025-09-04 12:32:09,155 - __main__ - INFO - Parameters extracted:
+2025-09-04 12:32:09,155 - __main__ - INFO -   - Index ID: 689df72e4427a7b96b7a2cb8
+2025-09-04 12:32:09,155 - __main__ - INFO -   - Video ID: 689df76cb1ba49c5144b7eca
+2025-09-04 12:32:09,156 - __main__ - INFO -   - Analysis Prompt: Please provide a comprehensive analysis of this video content. Include:
+
+1. **Content Overview**: What is happening in the video? Describe the main events, actions, and scenes.
+2. **Key Elements**: Identify important objects, people, locations, activities, and interactions.
+3. **Context & Setting**: What is the environment, time period, or context of the video?
+4. **Narrative Flow**: How does the story or sequence of events unfold?
+5. **Notable Details**: Highlight any significant details, patterns, or unique aspects.
+6. **Technical Aspects**: Note video quality, camera work, editing, or production elements if relevant.
+
+User's Specific Query: Please do research about it
+
+Please ensure your analysis addresses the user's specific question while providing comprehensive coverage of the video content.
+2025-09-04 12:32:09,156 - __main__ - INFO -   - Research Query: Please do research about it
+2025-09-04 12:32:09,156 - __main__ - INFO - Step 1: Getting video details from TwelveLabs...
+2025-09-04 12:32:09,777 - __main__ - INFO - Video details retrieved successfully: {
+  "_id": "689df76cb1ba49c5144b7eca",
+  "created_at": "2025-08-14T14:49:17Z",
+  "system_metadata": {
+    "duration": 128.05805,
+    "filename": "Olympics 3.mp4",
+    "fps": 30,
+    "height": 360,
+    "size": 10289757,
+    "width": 640
+  },
+  "hls": {
+    "video_url": "https://deuqpmn4rs7j5.cloudfront.net/67ca0ec8d29800ecabf27d70/689df76cb1ba49c5144b7eca/stream/79db76d4-493c-4f5f-899d-ea6aa9fd77e8.m3u8",
+    "thumbnail_urls": [
+      "https://deuqpmn4rs7j5.cloudfront.net/67ca0ec8d29800ecabf27d70/689df76cb1ba49c5144b7eca/thumbnails/79db76d4-493c-4f5f-899d-ea6aa9fd77e8.0000001.jpg"
+    ],
+    "status": "COMPLETE",
+    "updated_at": "2025-08-14T14:49:46.316Z"
+  }
+}
+2025-09-04 12:32:09,777 - __main__ - INFO - Step 2: Analyzing video content...
+2025-09-04 12:32:24,997 - httpx - INFO - HTTP Request: POST https://api.twelvelabs.io/v1.3/analyze "HTTP/1.1 200 OK"
+2025-09-04 12:32:25,002 - __main__ - INFO - Video analysis completed: "The video captures the Women's Singles Gold Medal Match in table tennis at the Paris 2024 Olympics between Chen Meng and Sun Yingsha, both from China. The match is a rematch of the Tokyo 2020 final, and it takes place in a large indoor stadium filled with enthusiastic spectators waving flags and banners.\n\n**Key Elements**:\n- **People**: Chen Meng, Sun Yingsha, and their coaches.\n- **Locations**: The table tennis court marked \"PARIS 2024\" and the stadium.\n- **Activities**: The match itself, with rapid exchanges of shots, and the medal ceremony.\n- **Interactions**: The players acknowledge the cheering crowd, adjust their equipment, and engage in intense rallies.\n\n**Context & Setting**:\nThe video is set in a modern Olympic stadium during the Paris 2024 Games. The atmosphere is highly charged with national pride and excitement, as the spectators are actively engaged in supporting the players.\n\n**Narrative Flow**:\nThe video begins with an introduction of the match and the players, followed by the players entering the court and preparing for the game. The match itself is fast-paced, with Chen Meng taking an early lead and maintaining control throughout. Despite Sun Yingsha's strong efforts, Chen Meng ultimately secures the gold medal. The video concludes with the medal ceremony, where Chen Meng receives the gold, Sun Yingsha the silver, and Hina Hayata of Japan the bronze.\n\n**Notable Details**:\n- The graphic overlay at the beginning provides information about the match and the players' world rankings.\n- The crowd's enthusiasm is evident throughout the video, with loud cheering and clapping.\n- Chen Meng's celebration after winning the match, including hugging his coach and raising his arms in triumph, is a significant emotional moment.\n- The final medal ceremony on the podium showcases the national pride and joy of the athletes.\n\n**Technical Aspects**:\nThe video quality is clear, with good camera work that captures both the action on the court and the reactions of the crowd. The editing is smooth, transitioning between wide shots of the stadium and close-ups of the players during the match. The production elements, such as the graphic overlays and the audio of the crowd, enhance the overall viewing experience."
+2025-09-04 12:32:25,003 - __main__ - INFO - Step 3: Conducting deep research using Sonar...
+2025-09-04 12:32:25,003 - __main__ - INFO - Enhanced research query created: "\nBased on this video analysis: The video captures the Women's Singles Gold Medal Match in table tennis at the Paris 2024 Olympics between Chen Meng and Sun Yingsha, both from China. The match is a rematch of the Tokyo 2020 final, and it takes place in a large indoor stadium filled with enthusiastic spectators waving flags and banners.\n\n**Key Elements**:\n- **People**: Chen Meng, Sun Yingsha, and their coaches.\n- **Locations**: The table tennis court marked \"PARIS 2024\" and the stadium.\n- **Activities**: The match itself, with rapid exchanges of shots, and the medal ceremony.\n- **Interactions**: The players acknowledge the cheering crowd, adjust their equipment, and engage in intense rallies.\n\n**Context & Setting**:\nThe video is set in a modern Olympic stadium during the Paris 2024 Games. The atmosphere is highly charged with national pride and excitement, as the spectators are actively engaged in supporting the players.\n\n**Narrative Flow**:\nThe video begins with an introduction of the match and the players, followed by the players entering the court and preparing for the game. The match itself is fast-paced, with Chen Meng taking an early lead and maintaining control throughout. Despite Sun Yingsha's strong efforts, Chen Meng ultimately secures the gold medal. The video concludes with the medal ceremony, where Chen Meng receives the gold, Sun Yingsha the silver, and Hina Hayata of Japan the bronze.\n\n**Notable Details**:\n- The graphic overlay at the beginning provides information about the match and the players' world rankings.\n- The crowd's enthusiasm is evident throughout the video, with loud cheering and clapping.\n- Chen Meng's celebration after winning the match, including hugging his coach and raising his arms in triumph, is a significant emotional moment.\n- The final medal ceremony on the podium showcases the national pride and joy of the athletes.\n\n**Technical Aspects**:\nThe video quality is clear, with good camera work that captures both the action on the court and the reactions of the crowd. The editing is smooth, transitioning between wide shots of the stadium and close-ups of the players during the match. The production elements, such as the graphic overlays and the audio of the crowd, enhance the overall viewing experience.\n\nPlease research: Please do research about it\n\nProvide comprehensive insights that connect the video content with current trends, developments, and relevant information.\n"
+2025-09-04 12:32:43,639 - __main__ - INFO - Sonar research completed: {
+  "id": "3b57c520-949d-457c-9e30-9e8863fa6440",
+  "model": "sonar",
+  "created": 1756981963,
+  "usage": {
+    "prompt_tokens": 489,
+    "completion_tokens": 615,
+    "total_tokens": 1104,
+    "search_context_size": "low",
+    "cost": {
+      "input_tokens_cost": 0.0,
+      "output_tokens_cost": 0.001,
+      "request_cost": 0.005,
+      "total_cost": 0.006
+    }
+  },
+  "citations": [
+    "https://en.wikipedia.org/wiki/Table_tennis_at_the_2024_Summer_Olympics_%E2%80%93_Men's_singles",
+    "https://en.wikipedia.org/wiki/Table_tennis_at_the_2024_Summer_Olympics",
+    "https://www.ittf.com/tournament/2603/paris-2024-olympic-games/",
+    "https://www.usatt.org/paris-2024",
+    "https://www.worldtabletennis.com/eventInfo?eventId=2603"
+  ],
+  "search_results": [
+    {
+      "title": "Table tennis at the 2024 Summer Olympics \u2013 Men's singles",
+      "url": "https://en.wikipedia.org/wiki/Table_tennis_at_the_2024_Summer_Olympics_%E2%80%93_Men's_singles",
+      "date": "2024-09-12",
+      "last_updated": "2025-04-17",
+      "snippet": "The event took place from 27 July to 4 August 2024 at Paris Expo Porte de Versailles. Table tennis \u2013 men's singles. at the Games of the XXXIII Olympiad. Venue ..."
+    },
+    {
+      "title": "Table tennis at the 2024 Summer Olympics",
+      "url": "https://en.wikipedia.org/wiki/Table_tennis_at_the_2024_Summer_Olympics",
+      "date": "2023-01-28",
+      "last_updated": "2025-09-02",
+      "snippet": "The table tennis tournaments at the 2024 Summer Olympics in Paris ran from 27 July to 10 August at the Paris Expo Porte de Versailles."
+    },
+    {
+      "title": "Paris 2024 Olympic Games - Tournaments",
+      "url": "https://www.ittf.com/tournament/2603/paris-2024-olympic-games/",
+      "date": "2016-08-05",
+      "last_updated": "2025-08-29",
+      "snippet": "Table Tennis Dates: 27 July to 10 August 2024. South Paris Arena 4. Paris, France. The world's elite table tennis stars are set to ..."
+    },
+    {
+      "title": "Paris 2024 Olympic Games",
+      "url": "https://www.usatt.org/paris-2024",
+      "date": "2024-08-07",
+      "last_updated": "2025-06-23",
+      "snippet": "Olympic Table Tennis | July 27 - Auguest 10. Watch Olympic Table Tennis , opens in a new tab \u00b7 Schedule & Results , opens in a new tab \u00b7 Paris 2024: All Things ..."
+    },
+    {
+      "title": "Paris 2024 Olympic Games",
+      "url": "https://www.worldtabletennis.com/eventInfo?eventId=2603",
+      "date": null,
+      "last_updated": null,
+      "snippet": "26 Jul - 11 Aug 2024 ... Paris 2024 Olympic Games ... South Paris Arena 4. Paris, France ... VISIT OLYMPICS.COM ... Men's Singles ... MS ... Women's Singles ... WS ... Mixed ..."
+    }
+  ],
+  "object": "chat.completion",
+  "choices": [
+    {
+      "index": 0,
+      "finish_reason": "stop",
+      "message": {
+        "role": "assistant",
+        "content": "The women's singles gold medal match in table tennis at the Paris 2024 Olympics was a highly anticipated rematch of the Tokyo 2020 final featuring Chen Meng and Sun Yingsha, both top Chinese players. Chen Meng won the gold medal, maintaining control throughout the intense match, while Sun Yingsha earned the silver. The bronze medal was claimed by Hina Hayata from Japan. This event took place at the Paris Expo Porte de Versailles, also called South Paris Arena 4, between 27 July and 10 August 2024, during the Paris 2024 Games, which marked the 10th Olympic appearance of table tennis as a sport[2][3][5].\n\nKey contextual details include:\n\n- **Venue & Atmosphere:** The match happened in a modern Olympic indoor stadium with a large, enthusiastic crowd waving flags and cheering, reflecting strong national pride, especially for the Chinese athletes. The court was marked with \"PARIS 2024,\" and the video captured both gameplay and crowd reactions in high-quality footage[3].\n\n- **Players & Rivalry:** Both Chen Meng and Sun Yingsha are elite players ranked among the world's best, representing China's dominance in Olympic table tennis. Their rivalry continued from the Tokyo 2020 final, which adds a compelling narrative dimension to this match[3][4].\n\n- **Match Dynamics:** Chen Meng took an early lead and sustained control with fast-paced and intense rallies. The video showed technical skill, tactical depth, and emotional moments such as Chen Meng\u2019s celebration hugging her coach and raising her arms, revealing the significance of her victory both personally and nationally[overview].\n\n- **Medal Ceremony:** The conclusion featured the medal ceremony with athletes standing on the podium, highlighting Olympic spirit, national pride, and recognition of their hard-earned achievements[overview].\n\n- **Technical Aspects:** The production used graphic overlays providing player information and rankings, smooth camera transitions between the court and crowd, and ambient audio to enhance viewer immersion, reflecting modern sports broadcast standards that enhance understanding and excitement for viewers[overview].\n\nIn the broader context of table tennis at Paris 2024:\n\n- The table tennis events ran from late July to early August 2024, encompassing singles, doubles, and team events for men and women, held at the Paris Expo Porte de Versailles[2][3][5].\n\n- Equipment used included DHS tables and Double Fish balls, typical of international competition standards, ensuring consistency and fairness in play[3].\n\n- China's continued dominance in Olympic table tennis was evidenced by securing both finals spots in the women's singles, showcasing their depth in talent and rigorous training systems[4].\n\nThis match, and the tournament overall, represent ongoing developments in elite table tennis where China remains a powerhouse, while competitors from Japan and other countries continue to challenge intensively, signaling healthy global competition in the sport at the Olympic level.\n\nIf you would like detailed statistics, player profiles, or match analysis beyond this summary, those can be explored via official Olympic and ITTF sources."
+      },
+      "delta": {
+        "role": "assistant",
+        "content": ""
+      }
+    }
+  ]
+}
+2025-09-04 12:32:43,640 - __main__ - INFO - Adding sources to research result...
+2025-09-04 12:32:43,640 - __main__ - INFO - Sources added to research result: [
+  {
+    "title": "TechCrunch",
+    "url": "https://techcrunch.com",
+    "description": "Technology news and analysis"
+  },
+  {
+    "title": "Gartner Research",
+    "url": "https://gartner.com",
+    "description": "Industry research and insights"
+  },
+  {
+    "title": "McKinsey & Company",
+    "url": "https://mckinsey.com",
+    "description": "Business and technology trends"
+  },
+  {
+    "title": "The Verge",
+    "url": "https://theverge.com",
+    "description": "Technology and culture coverage"
+  },
+  {
+    "title": "MIT Technology Review",
+    "url": "https://technologyreview.com",
+    "description": "In-depth technology analysis"
+  }
+]
+2025-09-04 12:32:43,641 - __main__ - INFO - === WORKFLOW COMPLETED SUCCESSFULLY ===
+2025-09-04 12:32:43,641 - __main__ - INFO - Final response: {
+  "success": true,
+  "workflow": {
+    "video_details": {
+      "_id": "689df76cb1ba49c5144b7eca",
+      "created_at": "2025-08-14T14:49:17Z",
+      "system_metadata": {
+        "duration": 128.05805,
+        "filename": "Olympics 3.mp4",
+        "fps": 30,
+        "height": 360,
+        "size": 10289757,
+        "width": 640
+      },
+      "hls": {
+        "video_url": "https://deuqpmn4rs7j5.cloudfront.net/67ca0ec8d29800ecabf27d70/689df76cb1ba49c5144b7eca/stream/79db76d4-493c-4f5f-899d-ea6aa9fd77e8.m3u8",
+        "thumbnail_urls": [
+          "https://deuqpmn4rs7j5.cloudfront.net/67ca0ec8d29800ecabf27d70/689df76cb1ba49c5144b7eca/thumbnails/79db76d4-493c-4f5f-899d-ea6aa9fd77e8.0000001.jpg"
+        ],
+        "status": "COMPLETE",
+        "updated_at": "2025-08-14T14:49:46.316Z"
+      }
+    },
+    "analysis": "The video captures the Women's Singles Gold Medal Match in table tennis at the Paris 2024 Olympics between Chen Meng and Sun Yingsha, both from China. The match is a rematch of the Tokyo 2020 final, and it takes place in a large indoor stadium filled with enthusiastic spectators waving flags and banners.\n\n**Key Elements**:\n- **People**: Chen Meng, Sun Yingsha, and their coaches.\n- **Locations**: The table tennis court marked \"PARIS 2024\" and the stadium.\n- **Activities**: The match itself, with rapid exchanges of shots, and the medal ceremony.\n- **Interactions**: The players acknowledge the cheering crowd, adjust their equipment, and engage in intense rallies.\n\n**Context & Setting**:\nThe video is set in a modern Olympic stadium during the Paris 2024 Games. The atmosphere is highly charged with national pride and excitement, as the spectators are actively engaged in supporting the players.\n\n**Narrative Flow**:\nThe video begins with an introduction of the match and the players, followed by the players entering the court and preparing for the game. The match itself is fast-paced, with Chen Meng taking an early lead and maintaining control throughout. Despite Sun Yingsha's strong efforts, Chen Meng ultimately secures the gold medal. The video concludes with the medal ceremony, where Chen Meng receives the gold, Sun Yingsha the silver, and Hina Hayata of Japan the bronze.\n\n**Notable Details**:\n- The graphic overlay at the beginning provides information about the match and the players' world rankings.\n- The crowd's enthusiasm is evident throughout the video, with loud cheering and clapping.\n- Chen Meng's celebration after winning the match, including hugging his coach and raising his arms in triumph, is a significant emotional moment.\n- The final medal ceremony on the podium showcases the national pride and joy of the athletes.\n\n**Technical Aspects**:\nThe video quality is clear, with good camera work that captures both the action on the court and the reactions of the crowd. The editing is smooth, transitioning between wide shots of the stadium and close-ups of the players during the match. The production elements, such as the graphic overlays and the audio of the crowd, enhance the overall viewing experience.",
+    "research": {
+      "id": "3b57c520-949d-457c-9e30-9e8863fa6440",
+      "model": "sonar",
+      "created": 1756981963,
+      "usage": {
+        "prompt_tokens": 489,
+        "completion_tokens": 615,
+        "total_tokens": 1104,
+        "search_context_size": "low",
+        "cost": {
+          "input_tokens_cost": 0.0,
+          "output_tokens_cost": 0.001,
+          "request_cost": 0.005,
+          "total_cost": 0.006
+        }
+      },
+      "citations": [
+        "https://en.wikipedia.org/wiki/Table_tennis_at_the_2024_Summer_Olympics_%E2%80%93_Men's_singles",
+        "https://en.wikipedia.org/wiki/Table_tennis_at_the_2024_Summer_Olympics",
+        "https://www.ittf.com/tournament/2603/paris-2024-olympic-games/",
+        "https://www.usatt.org/paris-2024",
+        "https://www.worldtabletennis.com/eventInfo?eventId=2603"
+      ],
+      "search_results": [
+        {
+          "title": "Table tennis at the 2024 Summer Olympics \u2013 Men's singles",
+          "url": "https://en.wikipedia.org/wiki/Table_tennis_at_the_2024_Summer_Olympics_%E2%80%93_Men's_singles",
+          "date": "2024-09-12",
+          "last_updated": "2025-04-17",
+          "snippet": "The event took place from 27 July to 4 August 2024 at Paris Expo Porte de Versailles. Table tennis \u2013 men's singles. at the Games of the XXXIII Olympiad. Venue ..."
+        },
+        {
+          "title": "Table tennis at the 2024 Summer Olympics",
+          "url": "https://en.wikipedia.org/wiki/Table_tennis_at_the_2024_Summer_Olympics",
+          "date": "2023-01-28",
+          "last_updated": "2025-09-02",
+          "snippet": "The table tennis tournaments at the 2024 Summer Olympics in Paris ran from 27 July to 10 August at the Paris Expo Porte de Versailles."
+        },
+        {
+          "title": "Paris 2024 Olympic Games - Tournaments",
+          "url": "https://www.ittf.com/tournament/2603/paris-2024-olympic-games/",
+          "date": "2016-08-05",
+          "last_updated": "2025-08-29",
+          "snippet": "Table Tennis Dates: 27 July to 10 August 2024. South Paris Arena 4. Paris, France. The world's elite table tennis stars are set to ..."
+        },
+        {
+          "title": "Paris 2024 Olympic Games",
+          "url": "https://www.usatt.org/paris-2024",
+          "date": "2024-08-07",
+          "last_updated": "2025-06-23",
+          "snippet": "Olympic Table Tennis | July 27 - Auguest 10. Watch Olympic Table Tennis , opens in a new tab \u00b7 Schedule & Results , opens in a new tab \u00b7 Paris 2024: All Things ..."
+        },
+        {
+          "title": "Paris 2024 Olympic Games",
+          "url": "https://www.worldtabletennis.com/eventInfo?eventId=2603",
+          "date": null,
+          "last_updated": null,
+          "snippet": "26 Jul - 11 Aug 2024 ... Paris 2024 Olympic Games ... South Paris Arena 4. Paris, France ... VISIT OLYMPICS.COM ... Men's Singles ... MS ... Women's Singles ... WS ... Mixed ..."
+        }
+      ],
+      "object": "chat.completion",
+      "choices": [
+        {
+          "index": 0,
+          "finish_reason": "stop",
+          "message": {
+            "role": "assistant",
+            "content": "The women's singles gold medal match in table tennis at the Paris 2024 Olympics was a highly anticipated rematch of the Tokyo 2020 final featuring Chen Meng and Sun Yingsha, both top Chinese players. Chen Meng won the gold medal, maintaining control throughout the intense match, while Sun Yingsha earned the silver. The bronze medal was claimed by Hina Hayata from Japan. This event took place at the Paris Expo Porte de Versailles, also called South Paris Arena 4, between 27 July and 10 August 2024, during the Paris 2024 Games, which marked the 10th Olympic appearance of table tennis as a sport[2][3][5].\n\nKey contextual details include:\n\n- **Venue & Atmosphere:** The match happened in a modern Olympic indoor stadium with a large, enthusiastic crowd waving flags and cheering, reflecting strong national pride, especially for the Chinese athletes. The court was marked with \"PARIS 2024,\" and the video captured both gameplay and crowd reactions in high-quality footage[3].\n\n- **Players & Rivalry:** Both Chen Meng and Sun Yingsha are elite players ranked among the world's best, representing China's dominance in Olympic table tennis. Their rivalry continued from the Tokyo 2020 final, which adds a compelling narrative dimension to this match[3][4].\n\n- **Match Dynamics:** Chen Meng took an early lead and sustained control with fast-paced and intense rallies. The video showed technical skill, tactical depth, and emotional moments such as Chen Meng\u2019s celebration hugging her coach and raising her arms, revealing the significance of her victory both personally and nationally[overview].\n\n- **Medal Ceremony:** The conclusion featured the medal ceremony with athletes standing on the podium, highlighting Olympic spirit, national pride, and recognition of their hard-earned achievements[overview].\n\n- **Technical Aspects:** The production used graphic overlays providing player information and rankings, smooth camera transitions between the court and crowd, and ambient audio to enhance viewer immersion, reflecting modern sports broadcast standards that enhance understanding and excitement for viewers[overview].\n\nIn the broader context of table tennis at Paris 2024:\n\n- The table tennis events ran from late July to early August 2024, encompassing singles, doubles, and team events for men and women, held at the Paris Expo Porte de Versailles[2][3][5].\n\n- Equipment used included DHS tables and Double Fish balls, typical of international competition standards, ensuring consistency and fairness in play[3].\n\n- China's continued dominance in Olympic table tennis was evidenced by securing both finals spots in the women's singles, showcasing their depth in talent and rigorous training systems[4].\n\nThis match, and the tournament overall, represent ongoing developments in elite table tennis where China remains a powerhouse, while competitors from Japan and other countries continue to challenge intensively, signaling healthy global competition in the sport at the Olympic level.\n\nIf you would like detailed statistics, player profiles, or match analysis beyond this summary, those can be explored via official Olympic and ITTF sources."
+          },
+          "delta": {
+            "role": "assistant",
+            "content": ""
+          }
+        }
+      ],
+      "sources": [
+        {
+          "title": "TechCrunch",
+          "url": "https://techcrunch.com",
+          "description": "Technology news and analysis"
+        },
+        {
+          "title": "Gartner Research",
+          "url": "https://gartner.com",
+          "description": "Industry research and insights"
+        },
+        {
+          "title": "McKinsey & Company",
+          "url": "https://mckinsey.com",
+          "description": "Business and technology trends"
+        },
+        {
+          "title": "The Verge",
+          "url": "https://theverge.com",
+          "description": "Technology and culture coverage"
+        },
+        {
+          "title": "MIT Technology Review",
+          "url": "https://technologyreview.com",
+          "description": "In-depth technology analysis"
+        }
+      ]
+    }
+  },
+  "summary": {
+    "video_id": "689df76cb1ba49c5144b7eca",
+    "index_id": "689df72e4427a7b96b7a2cb8",
+    "analysis_prompt": "Please provide a comprehensive analysis of this video content. Include:\n\n1. **Content Overview**: What is happening in the video? Describe the main events, actions, and scenes.\n2. **Key Elements**: Identify important objects, people, locations, activities, and interactions.\n3. **Context & Setting**: What is the environment, time period, or context of the video?\n4. **Narrative Flow**: How does the story or sequence of events unfold?\n5. **Notable Details**: Highlight any significant details, patterns, or unique aspects.\n6. **Technical Aspects**: Note video quality, camera work, editing, or production elements if relevant.\n\nUser's Specific Query: Please do research about it\n\nPlease ensure your analysis addresses the user's specific question while providing comprehensive coverage of the video content.",
+    "research_query": "Please do research about it",
+    "research_status": "completed"
+  }
+}
+2025-09-04 12:32:43,642 - werkzeug - INFO - 127.0.0.1 - - [04/Sep/2025 12:32:43] "POST /api/workflow HTTP/1.1" 200 -
+2025-09-04 13:55:31,241 - werkzeug - INFO - 127.0.0.1 - - [04/Sep/2025 13:55:31] "OPTIONS /api/config/twelvelabs HTTP/1.1" 200 -
+2025-09-04 13:55:31,929 - werkzeug - INFO - 127.0.0.1 - - [04/Sep/2025 13:55:31] "POST /api/config/twelvelabs HTTP/1.1" 200 -
+2025-09-04 13:55:31,937 - werkzeug - INFO - 127.0.0.1 - - [04/Sep/2025 13:55:31] "OPTIONS /api/videos HTTP/1.1" 200 -
+2025-09-04 13:55:32,611 - werkzeug - INFO - 127.0.0.1 - - [04/Sep/2025 13:55:32] "POST /api/videos HTTP/1.1" 200 -
+2025-09-04 13:57:31,881 - apscheduler.executors.default - WARNING - Run time of job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-04 14:05:35 CEST)" was missed by 0:00:56.265255
+2025-09-04 13:57:32,208 - apscheduler.executors.default - WARNING - Run time of job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-04 14:05:35 CEST)" was missed by 0:00:56.260996
+2025-09-04 13:59:29,180 - werkzeug - INFO - 127.0.0.1 - - [04/Sep/2025 13:59:29] "OPTIONS /api/config/twelvelabs HTTP/1.1" 200 -
+2025-09-04 13:59:29,808 - werkzeug - INFO - 127.0.0.1 - - [04/Sep/2025 13:59:29] "POST /api/config/twelvelabs HTTP/1.1" 200 -
+2025-09-04 13:59:29,816 - werkzeug - INFO - 127.0.0.1 - - [04/Sep/2025 13:59:29] "OPTIONS /api/videos HTTP/1.1" 200 -
+2025-09-04 13:59:30,415 - werkzeug - INFO - 127.0.0.1 - - [04/Sep/2025 13:59:30] "POST /api/videos HTTP/1.1" 200 -
+2025-09-04 14:05:35,624 - apscheduler.executors.default - INFO - Running job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-04 14:14:35 CEST)" (scheduled at 2025-09-04 14:05:35.616163+02:00)
+2025-09-04 14:05:35,652 - werkzeug - INFO - 127.0.0.1 - - [04/Sep/2025 14:05:35] "GET /health HTTP/1.1" 200 -
+2025-09-04 14:05:35,653 - apscheduler.executors.default - INFO - Job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-04 14:14:35 CEST)" executed successfully
+2025-09-04 14:05:35,953 - apscheduler.executors.default - INFO - Running job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-04 14:14:35 CEST)" (scheduled at 2025-09-04 14:05:35.947724+02:00)
+2025-09-04 14:05:35,961 - werkzeug - INFO - 127.0.0.1 - - [04/Sep/2025 14:05:35] "GET /health HTTP/1.1" 200 -
+2025-09-04 14:05:35,963 - apscheduler.executors.default - INFO - Job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-04 14:14:35 CEST)" executed successfully
+2025-09-04 14:14:35,620 - apscheduler.executors.default - INFO - Running job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-04 14:23:35 CEST)" (scheduled at 2025-09-04 14:14:35.616163+02:00)
+2025-09-04 14:14:35,631 - werkzeug - INFO - 127.0.0.1 - - [04/Sep/2025 14:14:35] "GET /health HTTP/1.1" 200 -
+2025-09-04 14:14:35,632 - apscheduler.executors.default - INFO - Job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-04 14:23:35 CEST)" executed successfully
+2025-09-04 14:14:35,949 - apscheduler.executors.default - INFO - Running job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-04 14:23:35 CEST)" (scheduled at 2025-09-04 14:14:35.947724+02:00)
+2025-09-04 14:14:35,958 - werkzeug - INFO - 127.0.0.1 - - [04/Sep/2025 14:14:35] "GET /health HTTP/1.1" 200 -
+2025-09-04 14:14:35,960 - apscheduler.executors.default - INFO - Job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-04 14:23:35 CEST)" executed successfully
+2025-09-04 14:23:35,628 - apscheduler.executors.default - INFO - Running job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-04 14:32:35 CEST)" (scheduled at 2025-09-04 14:23:35.616163+02:00)
+2025-09-04 14:23:35,643 - werkzeug - INFO - 127.0.0.1 - - [04/Sep/2025 14:23:35] "GET /health HTTP/1.1" 200 -
+2025-09-04 14:23:35,644 - apscheduler.executors.default - INFO - Job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-04 14:32:35 CEST)" executed successfully
+2025-09-04 14:23:35,952 - apscheduler.executors.default - INFO - Running job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-04 14:32:35 CEST)" (scheduled at 2025-09-04 14:23:35.947724+02:00)
+2025-09-04 14:23:35,959 - werkzeug - INFO - 127.0.0.1 - - [04/Sep/2025 14:23:35] "GET /health HTTP/1.1" 200 -
+2025-09-04 14:23:35,959 - apscheduler.executors.default - INFO - Job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-04 14:32:35 CEST)" executed successfully
+2025-09-04 14:32:35,621 - apscheduler.executors.default - INFO - Running job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-04 14:41:35 CEST)" (scheduled at 2025-09-04 14:32:35.616163+02:00)
+2025-09-04 14:32:35,633 - werkzeug - INFO - 127.0.0.1 - - [04/Sep/2025 14:32:35] "GET /health HTTP/1.1" 200 -
+2025-09-04 14:32:35,635 - apscheduler.executors.default - INFO - Job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-04 14:41:35 CEST)" executed successfully
+2025-09-04 14:32:35,952 - apscheduler.executors.default - INFO - Running job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-04 14:41:35 CEST)" (scheduled at 2025-09-04 14:32:35.947724+02:00)
+2025-09-04 14:32:35,960 - werkzeug - INFO - 127.0.0.1 - - [04/Sep/2025 14:32:35] "GET /health HTTP/1.1" 200 -
+2025-09-04 14:32:35,961 - apscheduler.executors.default - INFO - Job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-04 14:41:35 CEST)" executed successfully
+2025-09-04 14:35:40,041 - werkzeug - INFO - 127.0.0.1 - - [04/Sep/2025 14:35:40] "OPTIONS /api/config/twelvelabs HTTP/1.1" 200 -
+2025-09-04 14:35:40,761 - werkzeug - INFO - 127.0.0.1 - - [04/Sep/2025 14:35:40] "POST /api/config/twelvelabs HTTP/1.1" 200 -
+2025-09-04 14:35:40,771 - werkzeug - INFO - 127.0.0.1 - - [04/Sep/2025 14:35:40] "OPTIONS /api/videos HTTP/1.1" 200 -
+2025-09-04 14:35:41,395 - werkzeug - INFO - 127.0.0.1 - - [04/Sep/2025 14:35:41] "POST /api/videos HTTP/1.1" 200 -
+2025-09-04 14:48:38,613 - apscheduler.executors.default - WARNING - Run time of job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-04 14:50:35 CEST)" was missed by 0:07:02.996948
+2025-09-04 14:48:38,946 - apscheduler.executors.default - WARNING - Run time of job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-04 14:50:35 CEST)" was missed by 0:07:02.999171
+2025-09-04 14:49:10,487 - werkzeug - INFO - 127.0.0.1 - - [04/Sep/2025 14:49:10] "OPTIONS /api/config/twelvelabs HTTP/1.1" 200 -
+2025-09-04 14:49:11,227 - werkzeug - INFO - 127.0.0.1 - - [04/Sep/2025 14:49:11] "POST /api/config/twelvelabs HTTP/1.1" 200 -
+2025-09-04 14:49:11,237 - werkzeug - INFO - 127.0.0.1 - - [04/Sep/2025 14:49:11] "OPTIONS /api/videos HTTP/1.1" 200 -
+2025-09-04 14:49:11,842 - werkzeug - INFO - 127.0.0.1 - - [04/Sep/2025 14:49:11] "POST /api/videos HTTP/1.1" 200 -
+2025-09-04 14:49:31,592 - werkzeug - INFO - 127.0.0.1 - - [04/Sep/2025 14:49:31] "OPTIONS /api/config/twelvelabs HTTP/1.1" 200 -
+2025-09-04 14:49:32,225 - werkzeug - INFO - 127.0.0.1 - - [04/Sep/2025 14:49:32] "POST /api/config/twelvelabs HTTP/1.1" 200 -
+2025-09-04 14:49:32,236 - werkzeug - INFO - 127.0.0.1 - - [04/Sep/2025 14:49:32] "OPTIONS /api/videos HTTP/1.1" 200 -
+2025-09-04 14:49:32,868 - werkzeug - INFO - 127.0.0.1 - - [04/Sep/2025 14:49:32] "POST /api/videos HTTP/1.1" 200 -
+2025-09-04 14:50:35,625 - apscheduler.executors.default - INFO - Running job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-04 14:59:35 CEST)" (scheduled at 2025-09-04 14:50:35.616163+02:00)
+2025-09-04 14:50:35,638 - werkzeug - INFO - 127.0.0.1 - - [04/Sep/2025 14:50:35] "GET /health HTTP/1.1" 200 -
+2025-09-04 14:50:35,639 - apscheduler.executors.default - INFO - Job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-04 14:59:35 CEST)" executed successfully
+2025-09-04 14:50:35,955 - apscheduler.executors.default - INFO - Running job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-04 14:59:35 CEST)" (scheduled at 2025-09-04 14:50:35.947724+02:00)
+2025-09-04 14:50:35,963 - werkzeug - INFO - 127.0.0.1 - - [04/Sep/2025 14:50:35] "GET /health HTTP/1.1" 200 -
+2025-09-04 14:50:35,964 - apscheduler.executors.default - INFO - Job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-04 14:59:35 CEST)" executed successfully
+2025-09-04 14:52:40,153 - werkzeug - INFO - 127.0.0.1 - - [04/Sep/2025 14:52:40] "OPTIONS /api/config/twelvelabs HTTP/1.1" 200 -
+2025-09-04 14:52:40,832 - werkzeug - INFO - 127.0.0.1 - - [04/Sep/2025 14:52:40] "POST /api/config/twelvelabs HTTP/1.1" 200 -
+2025-09-04 14:52:40,844 - werkzeug - INFO - 127.0.0.1 - - [04/Sep/2025 14:52:40] "OPTIONS /api/videos HTTP/1.1" 200 -
+2025-09-04 14:52:41,488 - werkzeug - INFO - 127.0.0.1 - - [04/Sep/2025 14:52:41] "POST /api/videos HTTP/1.1" 200 -
+2025-09-04 14:53:58,292 - werkzeug - INFO - 127.0.0.1 - - [04/Sep/2025 14:53:58] "OPTIONS /api/config/twelvelabs HTTP/1.1" 200 -
+2025-09-04 14:53:58,944 - werkzeug - INFO - 127.0.0.1 - - [04/Sep/2025 14:53:58] "POST /api/config/twelvelabs HTTP/1.1" 200 -
+2025-09-04 14:53:58,953 - werkzeug - INFO - 127.0.0.1 - - [04/Sep/2025 14:53:58] "OPTIONS /api/videos HTTP/1.1" 200 -
+2025-09-04 14:53:59,586 - werkzeug - INFO - 127.0.0.1 - - [04/Sep/2025 14:53:59] "POST /api/videos HTTP/1.1" 200 -
+2025-09-04 16:27:14,092 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-09-04 16:27:14,092 - apscheduler.scheduler - INFO - Added job "wake_up_app" to job store "default"
+2025-09-04 16:27:14,092 - apscheduler.scheduler - INFO - Scheduler started
+2025-09-04 16:27:14,102 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.2.73:5000
+2025-09-04 16:27:14,102 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-09-04 16:27:14,106 - werkzeug - INFO -  * Restarting with watchdog (fsevents)
+2025-09-04 16:27:14,383 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-09-04 16:27:14,384 - apscheduler.scheduler - INFO - Added job "wake_up_app" to job store "default"
+2025-09-04 16:27:14,384 - apscheduler.scheduler - INFO - Scheduler started
+2025-09-04 16:27:14,387 - werkzeug - WARNING -  * Debugger is active!
+2025-09-04 16:27:14,393 - werkzeug - INFO -  * Debugger PIN: 237-707-018
+2025-09-04 16:28:05,673 - werkzeug - INFO - 127.0.0.1 - - [04/Sep/2025 16:28:05] "OPTIONS /api/config/twelvelabs HTTP/1.1" 200 -
+2025-09-04 16:28:06,506 - werkzeug - INFO - 127.0.0.1 - - [04/Sep/2025 16:28:06] "POST /api/config/twelvelabs HTTP/1.1" 200 -
+2025-09-04 16:28:06,512 - werkzeug - INFO - 127.0.0.1 - - [04/Sep/2025 16:28:06] "OPTIONS /api/videos HTTP/1.1" 200 -
+2025-09-04 16:28:07,150 - werkzeug - INFO - 127.0.0.1 - - [04/Sep/2025 16:28:07] "POST /api/videos HTTP/1.1" 200 -
+2025-09-04 16:28:22,249 - werkzeug - INFO - 127.0.0.1 - - [04/Sep/2025 16:28:22] "OPTIONS /api/workflow HTTP/1.1" 200 -
+2025-09-04 16:28:22,251 - __main__ - INFO - === WORKFLOW REQUEST START ===
+2025-09-04 16:28:22,251 - __main__ - INFO - Request data: {
+  "twelvelabs_api_key": "tlk_0ZBSDQ10EJJGS728AC05F3CNWFND",
+  "index_id": "689df72e4427a7b96b7a2cb8",
+  "video_id": "689df76cb1ba49c5144b7eca",
+  "analysis_prompt": "Please provide a comprehensive analysis of this video content. Include:\n\n1. **Content Overview**: What is happening in the video? Describe the main events, actions, and scenes.\n2. **Key Elements**: Identify important objects, people, locations, activities, and interactions.\n3. **Context & Setting**: What is the environment, time period, or context of the video?\n4. **Narrative Flow**: How does the story or sequence of events unfold?\n5. **Notable Details**: Highlight any significant details, patterns, or unique aspects.\n6. **Technical Aspects**: Note video quality, camera work, editing, or production elements if relevant.\n\nUser's Specific Query: Research about the game play\n\nPlease ensure your analysis addresses the user's specific question while providing comprehensive coverage of the video content.",
+  "research_query": "Research about the game play"
+}
+2025-09-04 16:28:22,251 - __main__ - INFO - Parameters extracted:
+2025-09-04 16:28:22,252 - __main__ - INFO -   - Index ID: 689df72e4427a7b96b7a2cb8
+2025-09-04 16:28:22,252 - __main__ - INFO -   - Video ID: 689df76cb1ba49c5144b7eca
+2025-09-04 16:28:22,252 - __main__ - INFO -   - Analysis Prompt: Please provide a comprehensive analysis of this video content. Include:
+
+1. **Content Overview**: What is happening in the video? Describe the main events, actions, and scenes.
+2. **Key Elements**: Identify important objects, people, locations, activities, and interactions.
+3. **Context & Setting**: What is the environment, time period, or context of the video?
+4. **Narrative Flow**: How does the story or sequence of events unfold?
+5. **Notable Details**: Highlight any significant details, patterns, or unique aspects.
+6. **Technical Aspects**: Note video quality, camera work, editing, or production elements if relevant.
+
+User's Specific Query: Research about the game play
+
+Please ensure your analysis addresses the user's specific question while providing comprehensive coverage of the video content.
+2025-09-04 16:28:22,252 - __main__ - INFO -   - Research Query: Research about the game play
+2025-09-04 16:28:22,252 - __main__ - INFO - Step 1: Getting video details from TwelveLabs...
+2025-09-04 16:28:22,873 - __main__ - INFO - Video details retrieved successfully: {
+  "_id": "689df76cb1ba49c5144b7eca",
+  "created_at": "2025-08-14T14:49:17Z",
+  "system_metadata": {
+    "duration": 128.05805,
+    "filename": "Olympics 3.mp4",
+    "fps": 30,
+    "height": 360,
+    "size": 10289757,
+    "width": 640
+  },
+  "hls": {
+    "video_url": "https://deuqpmn4rs7j5.cloudfront.net/67ca0ec8d29800ecabf27d70/689df76cb1ba49c5144b7eca/stream/79db76d4-493c-4f5f-899d-ea6aa9fd77e8.m3u8",
+    "thumbnail_urls": [
+      "https://deuqpmn4rs7j5.cloudfront.net/67ca0ec8d29800ecabf27d70/689df76cb1ba49c5144b7eca/thumbnails/79db76d4-493c-4f5f-899d-ea6aa9fd77e8.0000001.jpg"
+    ],
+    "status": "COMPLETE",
+    "updated_at": "2025-08-14T14:49:46.316Z"
+  }
+}
+2025-09-04 16:28:22,874 - __main__ - INFO - Step 2: Analyzing video content...
+2025-09-04 16:28:37,208 - httpx - INFO - HTTP Request: POST https://api.twelvelabs.io/v1.3/analyze "HTTP/1.1 200 OK"
+2025-09-04 16:28:37,217 - __main__ - INFO - Video analysis completed: "The video showcases a table tennis match between Chen Meng and Sun Yingsha during the Women's Singles Gold Medal Match at the Paris 2024 Olympics. The match is highly competitive, with both players demonstrating exceptional skill and precision. The gameplay is characterized by rapid exchanges of shots, intense rallies, and strategic play.\n\n**Key Elements**:\n- **People**: Chen Meng and Sun Yingsha, both from China.\n- **Location**: The South Paris Arena.\n- **Activities**: Table tennis match, medal ceremony.\n- **Interactions**: Players competing against each other, coaches providing towels, audience cheering.\n\n**Context & Setting**:\nThe video is set in a large indoor stadium filled with spectators, creating a vibrant and energetic atmosphere. The event is part of the Paris 2024 Olympic Games, specifically the Women's Singles Gold Medal Match in table tennis.\n\n**Narrative Flow**:\nThe video begins with an overview of the match setup and the players' entrances. It then transitions into the gameplay, highlighting key moments such as Chen Meng scoring points and celebrating victories. The match concludes with Chen Meng winning the gold medal, followed by the medal ceremony where all three medalists are presented with their respective medals.\n\n**Notable Details**:\n- The match is a rematch of the Tokyo 2020 final.\n- Sun Yingsha was aiming for a Grand Slam, having already won the World Championships and the World Cup.\n- Chen Meng won the second game, handing Sun her first game loss of the tournament.\n- The fifth game was particularly intense, with both players pushing each other to the limits.\n- Chen Meng ultimately secured her second consecutive Olympic gold medal, displaying exceptional precision and mental toughness.\n\n**Technical Aspects**:\nThe video quality is clear, with dynamic camera angles that capture the action from various perspectives. The editing effectively highlights key moments, such as the final point and the celebration, creating a compelling narrative flow.\n\nIn summary, the gameplay in the video is fast-paced and highly competitive, with both players showcasing their skills and determination. Chen Meng's victory is a testament to her mastery of the sport, and the video captures the excitement and intensity of the match and its conclusion."
+2025-09-04 16:28:37,218 - __main__ - INFO - Step 3: Conducting deep research using Sonar...
+2025-09-04 16:28:37,218 - __main__ - INFO - Enhanced research query created: "\nBased on this video analysis: The video showcases a table tennis match between Chen Meng and Sun Yingsha during the Women's Singles Gold Medal Match at the Paris 2024 Olympics. The match is highly competitive, with both players demonstrating exceptional skill and precision. The gameplay is characterized by rapid exchanges of shots, intense rallies, and strategic play.\n\n**Key Elements**:\n- **People**: Chen Meng and Sun Yingsha, both from China.\n- **Location**: The South Paris Arena.\n- **Activities**: Table tennis match, medal ceremony.\n- **Interactions**: Players competing against each other, coaches providing towels, audience cheering.\n\n**Context & Setting**:\nThe video is set in a large indoor stadium filled with spectators, creating a vibrant and energetic atmosphere. The event is part of the Paris 2024 Olympic Games, specifically the Women's Singles Gold Medal Match in table tennis.\n\n**Narrative Flow**:\nThe video begins with an overview of the match setup and the players' entrances. It then transitions into the gameplay, highlighting key moments such as Chen Meng scoring points and celebrating victories. The match concludes with Chen Meng winning the gold medal, followed by the medal ceremony where all three medalists are presented with their respective medals.\n\n**Notable Details**:\n- The match is a rematch of the Tokyo 2020 final.\n- Sun Yingsha was aiming for a Grand Slam, having already won the World Championships and the World Cup.\n- Chen Meng won the second game, handing Sun her first game loss of the tournament.\n- The fifth game was particularly intense, with both players pushing each other to the limits.\n- Chen Meng ultimately secured her second consecutive Olympic gold medal, displaying exceptional precision and mental toughness.\n\n**Technical Aspects**:\nThe video quality is clear, with dynamic camera angles that capture the action from various perspectives. The editing effectively highlights key moments, such as the final point and the celebration, creating a compelling narrative flow.\n\nIn summary, the gameplay in the video is fast-paced and highly competitive, with both players showcasing their skills and determination. Chen Meng's victory is a testament to her mastery of the sport, and the video captures the excitement and intensity of the match and its conclusion.\n\nPlease research: Research about the game play\n\nProvide comprehensive insights that connect the video content with current trends, developments, and relevant information.\n"
+2025-09-04 16:28:51,353 - __main__ - INFO - Sonar research completed: {
+  "id": "c8bc40fa-0733-44cb-a1e5-84fc7df8d028",
+  "model": "sonar",
+  "created": 1756996131,
+  "usage": {
+    "prompt_tokens": 473,
+    "completion_tokens": 639,
+    "total_tokens": 1112,
+    "search_context_size": "low",
+    "cost": {
+      "input_tokens_cost": 0.0,
+      "output_tokens_cost": 0.001,
+      "request_cost": 0.005,
+      "total_cost": 0.006
+    }
+  },
+  "citations": [
+    "https://www.nbcolympics.com/news/chinas-chen-meng-wins-womens-singles-table-tennis-gold-teammate-sun-yingsha-takes-silver",
+    "https://www.ittf.com/2025/08/03/one-year-ago-chen-meng-became-back-to-back-olympic-champion-in-paris/",
+    "https://www.youtube.com/watch?v=E7NZ2CZRLOE",
+    "https://factcheck.afp.com/doc.afp.com.36CZ8RC",
+    "https://www.worldtabletennis.com/description?artId=4080"
+  ],
+  "search_results": [
+    {
+      "title": "China's Chen Meng wins women's singles table tennis ...",
+      "url": "https://www.nbcolympics.com/news/chinas-chen-meng-wins-womens-singles-table-tennis-gold-teammate-sun-yingsha-takes-silver",
+      "date": "2024-08-03",
+      "last_updated": "2025-08-30",
+      "snippet": "History repeated itself for China's defending champion Chen Meng when she beat teammate Sun Yingsha 4-2 to win the women's singles table tennis gold medal."
+    },
+    {
+      "title": "One Year Ago: Chen Meng Became Back-to-Back Olympic ...",
+      "url": "https://www.ittf.com/2025/08/03/one-year-ago-chen-meng-became-back-to-back-olympic-champion-in-paris/",
+      "date": "2025-08-03",
+      "last_updated": "2025-08-30",
+      "snippet": "For Chen Meng, 10 August 2024 was the day she joined table tennis royalty \u2013 a back-to-back Olympic champion whose legacy will inspire ..."
+    },
+    {
+      "title": "Chen Meng wins BACK-TO-BACK table tennis golds in a ...",
+      "url": "https://www.youtube.com/watch?v=E7NZ2CZRLOE",
+      "date": "2024-08-03",
+      "last_updated": "2025-08-30",
+      "snippet": "China's Chen Meng successfully defended her gold medal in table tennis by defeating her teammate Sun Yingsha to become the third woman in ..."
+    },
+    {
+      "title": "Chinese table tennis champion did not slam Olympic ...",
+      "url": "https://factcheck.afp.com/doc.afp.com.36CZ8RC",
+      "date": "2024-08-13",
+      "last_updated": "2025-09-03",
+      "snippet": "Chinese table tennis Olympic champion Chen Meng did not complain of unfair treatment by the audience after she beat teammate Sun Yingsha and took gold in the ..."
+    },
+    {
+      "title": "WTT",
+      "url": "https://www.worldtabletennis.com/description?artId=4080",
+      "date": null,
+      "last_updated": null,
+      "snippet": "China's Chen Meng celebrated back-to-back Women's Singles Olympic gold medals today at Paris 2024. The Tokyo 2020 champion was once again on top of the Olympic ..."
+    }
+  ],
+  "object": "chat.completion",
+  "choices": [
+    {
+      "index": 0,
+      "finish_reason": "stop",
+      "message": {
+        "role": "assistant",
+        "content": "The gameplay in the Chen Meng vs. Sun Yingsha Women's Singles Gold Medal match at the Paris 2024 Olympics was a high-intensity, strategic, and skillful display of top-level table tennis, reflecting current trends in elite competition emphasizing speed, precision, and mental toughness.\n\nKey insights connecting the video content with broader developments include:\n\n- **Competitive Dynamics and Skill Level**: The match showcased rapid, precise exchanges and intense rallies that highlighted both players' elite skills. Sun Yingsha, world No. 1 and aiming for a Grand Slam by having already won the World Championships and World Cup, started strong, winning the first game handily 11-4. Chen Meng, the defending Olympic champion and fourth-ranked player, responded with tactical adjustments, winning two games by controlling pace and precision (11-7, 11-4). The fluctuating momentum illustrates modern table tennis at the highest level as a mental and physical battle where experience and adaptability are decisive[1][2].\n\n- **Psychological Resilience and Tactical Variation**: Chen Meng\u2019s comeback after losing the opening game exemplified championship mentality\u2014a key current trend emphasizing psychological resilience under pressure. Despite being behind and facing a strong opponent who had not lost a game in the tournament until then, Chen stayed calm and leveraged angles, spin variation, and placement to disrupt Sun\u2019s game rhythm. The pivotal fifth game (11-9), critical for momentum, reflected the intense tactical battle and was one of the year\u2019s most memorable displays of Olympic-level tennis[2].\n\n- **Gameplay Style and Modern Table Tennis Trends**: The match featured rapid-fire rallies, fast drives, and sharp placement, mirroring recent developments where offensive play and quick transitions dominate. Both players' use of topspin loops mixed with quick counters and subtle use of the soft push shot reflect how the sport increasingly blends power with touch and placement. The use of dynamic camera angles in the video also underlines a growing interest in analyzing and broadcasting table tennis from multiple perspectives to highlight such technical details[2][3].\n\n- **Historical and Legacy Context**: Chen Meng\u2019s victory secured her back-to-back Olympic gold medals, making her only the third woman in history to do so, joining legends Deng Yaping and Zhang Yining. This match thus serves as a milestone for Chinese dominance and continuity in women\u2019s table tennis, showcasing a pipeline of talent and mental fortitude aligned with national training methodologies focused on long-term athlete development and innovation[1][2].\n\n- **Audience and Social Impact**: The video and related commentary also highlight the intense fan engagement and social media response to the match, including controversies around athlete treatment and fan behavior. This reflects continuing challenges in modern sports regarding athlete mental health, social media pressures, and the relationship between competitors and audiences in high-stake global events[4].\n\nIn summary, the Chen Meng vs. Sun Yingsha Paris 2024 match epitomizes current table tennis gameplay trends centered on **speed, precision, mental resilience**, and **strategic versatility**, framed by a narrative of legacy and national pride that continues to define elite-level competition in the sport[1][2][3][4]."
+      },
+      "delta": {
+        "role": "assistant",
+        "content": ""
+      }
+    }
+  ]
+}
+2025-09-04 16:28:51,354 - __main__ - INFO - Adding sources to research result...
+2025-09-04 16:28:51,354 - __main__ - INFO - Sources added to research result: [
+  {
+    "title": "TechCrunch",
+    "url": "https://techcrunch.com",
+    "description": "Technology news and analysis"
+  },
+  {
+    "title": "Gartner Research",
+    "url": "https://gartner.com",
+    "description": "Industry research and insights"
+  },
+  {
+    "title": "McKinsey & Company",
+    "url": "https://mckinsey.com",
+    "description": "Business and technology trends"
+  },
+  {
+    "title": "The Verge",
+    "url": "https://theverge.com",
+    "description": "Technology and culture coverage"
+  },
+  {
+    "title": "MIT Technology Review",
+    "url": "https://technologyreview.com",
+    "description": "In-depth technology analysis"
+  }
+]
+2025-09-04 16:28:51,354 - __main__ - INFO - === WORKFLOW COMPLETED SUCCESSFULLY ===
+2025-09-04 16:28:51,355 - __main__ - INFO - Final response: {
+  "success": true,
+  "workflow": {
+    "video_details": {
+      "_id": "689df76cb1ba49c5144b7eca",
+      "created_at": "2025-08-14T14:49:17Z",
+      "system_metadata": {
+        "duration": 128.05805,
+        "filename": "Olympics 3.mp4",
+        "fps": 30,
+        "height": 360,
+        "size": 10289757,
+        "width": 640
+      },
+      "hls": {
+        "video_url": "https://deuqpmn4rs7j5.cloudfront.net/67ca0ec8d29800ecabf27d70/689df76cb1ba49c5144b7eca/stream/79db76d4-493c-4f5f-899d-ea6aa9fd77e8.m3u8",
+        "thumbnail_urls": [
+          "https://deuqpmn4rs7j5.cloudfront.net/67ca0ec8d29800ecabf27d70/689df76cb1ba49c5144b7eca/thumbnails/79db76d4-493c-4f5f-899d-ea6aa9fd77e8.0000001.jpg"
+        ],
+        "status": "COMPLETE",
+        "updated_at": "2025-08-14T14:49:46.316Z"
+      }
+    },
+    "analysis": "The video showcases a table tennis match between Chen Meng and Sun Yingsha during the Women's Singles Gold Medal Match at the Paris 2024 Olympics. The match is highly competitive, with both players demonstrating exceptional skill and precision. The gameplay is characterized by rapid exchanges of shots, intense rallies, and strategic play.\n\n**Key Elements**:\n- **People**: Chen Meng and Sun Yingsha, both from China.\n- **Location**: The South Paris Arena.\n- **Activities**: Table tennis match, medal ceremony.\n- **Interactions**: Players competing against each other, coaches providing towels, audience cheering.\n\n**Context & Setting**:\nThe video is set in a large indoor stadium filled with spectators, creating a vibrant and energetic atmosphere. The event is part of the Paris 2024 Olympic Games, specifically the Women's Singles Gold Medal Match in table tennis.\n\n**Narrative Flow**:\nThe video begins with an overview of the match setup and the players' entrances. It then transitions into the gameplay, highlighting key moments such as Chen Meng scoring points and celebrating victories. The match concludes with Chen Meng winning the gold medal, followed by the medal ceremony where all three medalists are presented with their respective medals.\n\n**Notable Details**:\n- The match is a rematch of the Tokyo 2020 final.\n- Sun Yingsha was aiming for a Grand Slam, having already won the World Championships and the World Cup.\n- Chen Meng won the second game, handing Sun her first game loss of the tournament.\n- The fifth game was particularly intense, with both players pushing each other to the limits.\n- Chen Meng ultimately secured her second consecutive Olympic gold medal, displaying exceptional precision and mental toughness.\n\n**Technical Aspects**:\nThe video quality is clear, with dynamic camera angles that capture the action from various perspectives. The editing effectively highlights key moments, such as the final point and the celebration, creating a compelling narrative flow.\n\nIn summary, the gameplay in the video is fast-paced and highly competitive, with both players showcasing their skills and determination. Chen Meng's victory is a testament to her mastery of the sport, and the video captures the excitement and intensity of the match and its conclusion.",
+    "research": {
+      "id": "c8bc40fa-0733-44cb-a1e5-84fc7df8d028",
+      "model": "sonar",
+      "created": 1756996131,
+      "usage": {
+        "prompt_tokens": 473,
+        "completion_tokens": 639,
+        "total_tokens": 1112,
+        "search_context_size": "low",
+        "cost": {
+          "input_tokens_cost": 0.0,
+          "output_tokens_cost": 0.001,
+          "request_cost": 0.005,
+          "total_cost": 0.006
+        }
+      },
+      "citations": [
+        "https://www.nbcolympics.com/news/chinas-chen-meng-wins-womens-singles-table-tennis-gold-teammate-sun-yingsha-takes-silver",
+        "https://www.ittf.com/2025/08/03/one-year-ago-chen-meng-became-back-to-back-olympic-champion-in-paris/",
+        "https://www.youtube.com/watch?v=E7NZ2CZRLOE",
+        "https://factcheck.afp.com/doc.afp.com.36CZ8RC",
+        "https://www.worldtabletennis.com/description?artId=4080"
+      ],
+      "search_results": [
+        {
+          "title": "China's Chen Meng wins women's singles table tennis ...",
+          "url": "https://www.nbcolympics.com/news/chinas-chen-meng-wins-womens-singles-table-tennis-gold-teammate-sun-yingsha-takes-silver",
+          "date": "2024-08-03",
+          "last_updated": "2025-08-30",
+          "snippet": "History repeated itself for China's defending champion Chen Meng when she beat teammate Sun Yingsha 4-2 to win the women's singles table tennis gold medal."
+        },
+        {
+          "title": "One Year Ago: Chen Meng Became Back-to-Back Olympic ...",
+          "url": "https://www.ittf.com/2025/08/03/one-year-ago-chen-meng-became-back-to-back-olympic-champion-in-paris/",
+          "date": "2025-08-03",
+          "last_updated": "2025-08-30",
+          "snippet": "For Chen Meng, 10 August 2024 was the day she joined table tennis royalty \u2013 a back-to-back Olympic champion whose legacy will inspire ..."
+        },
+        {
+          "title": "Chen Meng wins BACK-TO-BACK table tennis golds in a ...",
+          "url": "https://www.youtube.com/watch?v=E7NZ2CZRLOE",
+          "date": "2024-08-03",
+          "last_updated": "2025-08-30",
+          "snippet": "China's Chen Meng successfully defended her gold medal in table tennis by defeating her teammate Sun Yingsha to become the third woman in ..."
+        },
+        {
+          "title": "Chinese table tennis champion did not slam Olympic ...",
+          "url": "https://factcheck.afp.com/doc.afp.com.36CZ8RC",
+          "date": "2024-08-13",
+          "last_updated": "2025-09-03",
+          "snippet": "Chinese table tennis Olympic champion Chen Meng did not complain of unfair treatment by the audience after she beat teammate Sun Yingsha and took gold in the ..."
+        },
+        {
+          "title": "WTT",
+          "url": "https://www.worldtabletennis.com/description?artId=4080",
+          "date": null,
+          "last_updated": null,
+          "snippet": "China's Chen Meng celebrated back-to-back Women's Singles Olympic gold medals today at Paris 2024. The Tokyo 2020 champion was once again on top of the Olympic ..."
+        }
+      ],
+      "object": "chat.completion",
+      "choices": [
+        {
+          "index": 0,
+          "finish_reason": "stop",
+          "message": {
+            "role": "assistant",
+            "content": "The gameplay in the Chen Meng vs. Sun Yingsha Women's Singles Gold Medal match at the Paris 2024 Olympics was a high-intensity, strategic, and skillful display of top-level table tennis, reflecting current trends in elite competition emphasizing speed, precision, and mental toughness.\n\nKey insights connecting the video content with broader developments include:\n\n- **Competitive Dynamics and Skill Level**: The match showcased rapid, precise exchanges and intense rallies that highlighted both players' elite skills. Sun Yingsha, world No. 1 and aiming for a Grand Slam by having already won the World Championships and World Cup, started strong, winning the first game handily 11-4. Chen Meng, the defending Olympic champion and fourth-ranked player, responded with tactical adjustments, winning two games by controlling pace and precision (11-7, 11-4). The fluctuating momentum illustrates modern table tennis at the highest level as a mental and physical battle where experience and adaptability are decisive[1][2].\n\n- **Psychological Resilience and Tactical Variation**: Chen Meng\u2019s comeback after losing the opening game exemplified championship mentality\u2014a key current trend emphasizing psychological resilience under pressure. Despite being behind and facing a strong opponent who had not lost a game in the tournament until then, Chen stayed calm and leveraged angles, spin variation, and placement to disrupt Sun\u2019s game rhythm. The pivotal fifth game (11-9), critical for momentum, reflected the intense tactical battle and was one of the year\u2019s most memorable displays of Olympic-level tennis[2].\n\n- **Gameplay Style and Modern Table Tennis Trends**: The match featured rapid-fire rallies, fast drives, and sharp placement, mirroring recent developments where offensive play and quick transitions dominate. Both players' use of topspin loops mixed with quick counters and subtle use of the soft push shot reflect how the sport increasingly blends power with touch and placement. The use of dynamic camera angles in the video also underlines a growing interest in analyzing and broadcasting table tennis from multiple perspectives to highlight such technical details[2][3].\n\n- **Historical and Legacy Context**: Chen Meng\u2019s victory secured her back-to-back Olympic gold medals, making her only the third woman in history to do so, joining legends Deng Yaping and Zhang Yining. This match thus serves as a milestone for Chinese dominance and continuity in women\u2019s table tennis, showcasing a pipeline of talent and mental fortitude aligned with national training methodologies focused on long-term athlete development and innovation[1][2].\n\n- **Audience and Social Impact**: The video and related commentary also highlight the intense fan engagement and social media response to the match, including controversies around athlete treatment and fan behavior. This reflects continuing challenges in modern sports regarding athlete mental health, social media pressures, and the relationship between competitors and audiences in high-stake global events[4].\n\nIn summary, the Chen Meng vs. Sun Yingsha Paris 2024 match epitomizes current table tennis gameplay trends centered on **speed, precision, mental resilience**, and **strategic versatility**, framed by a narrative of legacy and national pride that continues to define elite-level competition in the sport[1][2][3][4]."
+          },
+          "delta": {
+            "role": "assistant",
+            "content": ""
+          }
+        }
+      ],
+      "sources": [
+        {
+          "title": "TechCrunch",
+          "url": "https://techcrunch.com",
+          "description": "Technology news and analysis"
+        },
+        {
+          "title": "Gartner Research",
+          "url": "https://gartner.com",
+          "description": "Industry research and insights"
+        },
+        {
+          "title": "McKinsey & Company",
+          "url": "https://mckinsey.com",
+          "description": "Business and technology trends"
+        },
+        {
+          "title": "The Verge",
+          "url": "https://theverge.com",
+          "description": "Technology and culture coverage"
+        },
+        {
+          "title": "MIT Technology Review",
+          "url": "https://technologyreview.com",
+          "description": "In-depth technology analysis"
+        }
+      ]
+    }
+  },
+  "summary": {
+    "video_id": "689df76cb1ba49c5144b7eca",
+    "index_id": "689df72e4427a7b96b7a2cb8",
+    "analysis_prompt": "Please provide a comprehensive analysis of this video content. Include:\n\n1. **Content Overview**: What is happening in the video? Describe the main events, actions, and scenes.\n2. **Key Elements**: Identify important objects, people, locations, activities, and interactions.\n3. **Context & Setting**: What is the environment, time period, or context of the video?\n4. **Narrative Flow**: How does the story or sequence of events unfold?\n5. **Notable Details**: Highlight any significant details, patterns, or unique aspects.\n6. **Technical Aspects**: Note video quality, camera work, editing, or production elements if relevant.\n\nUser's Specific Query: Research about the game play\n\nPlease ensure your analysis addresses the user's specific question while providing comprehensive coverage of the video content.",
+    "research_query": "Research about the game play",
+    "research_status": "completed"
+  }
+}
+2025-09-04 16:28:51,356 - werkzeug - INFO - 127.0.0.1 - - [04/Sep/2025 16:28:51] "POST /api/workflow HTTP/1.1" 200 -
+2025-09-04 16:36:14,097 - apscheduler.executors.default - INFO - Running job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-04 16:45:14 CEST)" (scheduled at 2025-09-04 16:36:14.091951+02:00)
+2025-09-04 16:36:14,120 - werkzeug - INFO - 127.0.0.1 - - [04/Sep/2025 16:36:14] "GET /health HTTP/1.1" 200 -
+2025-09-04 16:36:14,121 - apscheduler.executors.default - INFO - Job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-04 16:45:14 CEST)" executed successfully
+2025-09-04 16:36:14,387 - apscheduler.executors.default - INFO - Running job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-04 16:45:14 CEST)" (scheduled at 2025-09-04 16:36:14.383706+02:00)
+2025-09-04 16:36:14,395 - werkzeug - INFO - 127.0.0.1 - - [04/Sep/2025 16:36:14] "GET /health HTTP/1.1" 200 -
+2025-09-04 16:36:14,396 - apscheduler.executors.default - INFO - Job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-04 16:45:14 CEST)" executed successfully
+2025-09-04 16:39:57,780 - werkzeug - INFO - 127.0.0.1 - - [04/Sep/2025 16:39:57] "OPTIONS /api/sonar/research HTTP/1.1" 200 -
+2025-09-04 16:40:12,739 - werkzeug - INFO - 127.0.0.1 - - [04/Sep/2025 16:40:12] "POST /api/sonar/research HTTP/1.1" 200 -
+2025-09-04 16:45:14,098 - apscheduler.executors.default - INFO - Running job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-04 16:54:14 CEST)" (scheduled at 2025-09-04 16:45:14.091951+02:00)
+2025-09-04 16:45:14,116 - werkzeug - INFO - 127.0.0.1 - - [04/Sep/2025 16:45:14] "GET /health HTTP/1.1" 200 -
+2025-09-04 16:45:14,117 - apscheduler.executors.default - INFO - Job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-04 16:54:14 CEST)" executed successfully
+2025-09-04 16:45:14,384 - apscheduler.executors.default - INFO - Running job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-04 16:54:14 CEST)" (scheduled at 2025-09-04 16:45:14.383706+02:00)
+2025-09-04 16:45:14,394 - werkzeug - INFO - 127.0.0.1 - - [04/Sep/2025 16:45:14] "GET /health HTTP/1.1" 200 -
+2025-09-04 16:45:14,395 - apscheduler.executors.default - INFO - Job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-04 16:54:14 CEST)" executed successfully
+2025-09-04 16:49:46,358 - werkzeug - INFO - 127.0.0.1 - - [04/Sep/2025 16:49:46] "OPTIONS /api/videos HTTP/1.1" 200 -
+2025-09-04 16:49:47,031 - werkzeug - INFO - 127.0.0.1 - - [04/Sep/2025 16:49:47] "POST /api/videos HTTP/1.1" 200 -
+2025-09-04 22:47:54,089 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-09-04 22:47:54,089 - apscheduler.scheduler - INFO - Added job "wake_up_app" to job store "default"
+2025-09-04 22:47:54,089 - apscheduler.scheduler - INFO - Scheduler started
+2025-09-04 22:47:54,099 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.2.73:5000
+2025-09-04 22:47:54,099 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-09-04 22:47:54,104 - werkzeug - INFO -  * Restarting with watchdog (fsevents)
+2025-09-04 22:47:54,368 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-09-04 22:47:54,368 - apscheduler.scheduler - INFO - Added job "wake_up_app" to job store "default"
+2025-09-04 22:47:54,368 - apscheduler.scheduler - INFO - Scheduler started
+2025-09-04 22:47:54,372 - werkzeug - WARNING -  * Debugger is active!
+2025-09-04 22:47:54,378 - werkzeug - INFO -  * Debugger PIN: 237-707-018
+2025-09-04 22:48:02,297 - werkzeug - INFO - 127.0.0.1 - - [04/Sep/2025 22:48:02] "OPTIONS /api/config/twelvelabs HTTP/1.1" 200 -
+2025-09-04 22:48:03,084 - werkzeug - INFO - 127.0.0.1 - - [04/Sep/2025 22:48:03] "POST /api/config/twelvelabs HTTP/1.1" 200 -
+2025-09-04 22:48:03,096 - werkzeug - INFO - 127.0.0.1 - - [04/Sep/2025 22:48:03] "OPTIONS /api/videos HTTP/1.1" 200 -
+2025-09-04 22:48:03,706 - werkzeug - INFO - 127.0.0.1 - - [04/Sep/2025 22:48:03] "POST /api/videos HTTP/1.1" 200 -
+2025-09-04 22:51:48,235 - werkzeug - INFO - 127.0.0.1 - - [04/Sep/2025 22:51:48] "OPTIONS /api/workflow HTTP/1.1" 200 -
+2025-09-04 22:51:48,239 - __main__ - INFO - === WORKFLOW REQUEST START ===
+2025-09-04 22:51:48,239 - __main__ - INFO - Request data: {
+  "twelvelabs_api_key": "tlk_0ZBSDQ10EJJGS728AC05F3CNWFND",
+  "index_id": "689df72e4427a7b96b7a2cb8",
+  "video_id": "689df76cb1ba49c5144b7eca",
+  "analysis_prompt": "Please provide a comprehensive analysis of this video content. Include:\n\n1. **Content Overview**: What is happening in the video? Describe the main events, actions, and scenes.\n2. **Key Elements**: Identify important objects, people, locations, activities, and interactions.\n3. **Context & Setting**: What is the environment, time period, or context of the video?\n4. **Narrative Flow**: How does the story or sequence of events unfold?\n5. **Notable Details**: Highlight any significant details, patterns, or unique aspects.\n6. **Technical Aspects**: Note video quality, camera work, editing, or production elements if relevant.\n\nUser's Specific Query: Please do research about it\n\nPlease ensure your analysis addresses the user's specific question while providing comprehensive coverage of the video content.",
+  "research_query": "Please do research about it"
+}
+2025-09-04 22:51:48,239 - __main__ - INFO - Parameters extracted:
+2025-09-04 22:51:48,240 - __main__ - INFO -   - Index ID: 689df72e4427a7b96b7a2cb8
+2025-09-04 22:51:48,240 - __main__ - INFO -   - Video ID: 689df76cb1ba49c5144b7eca
+2025-09-04 22:51:48,240 - __main__ - INFO -   - Analysis Prompt: Please provide a comprehensive analysis of this video content. Include:
+
+1. **Content Overview**: What is happening in the video? Describe the main events, actions, and scenes.
+2. **Key Elements**: Identify important objects, people, locations, activities, and interactions.
+3. **Context & Setting**: What is the environment, time period, or context of the video?
+4. **Narrative Flow**: How does the story or sequence of events unfold?
+5. **Notable Details**: Highlight any significant details, patterns, or unique aspects.
+6. **Technical Aspects**: Note video quality, camera work, editing, or production elements if relevant.
+
+User's Specific Query: Please do research about it
+
+Please ensure your analysis addresses the user's specific question while providing comprehensive coverage of the video content.
+2025-09-04 22:51:48,240 - __main__ - INFO -   - Research Query: Please do research about it
+2025-09-04 22:51:48,240 - __main__ - INFO - Step 1: Getting video details from TwelveLabs...
+2025-09-04 22:51:48,892 - __main__ - INFO - Video details retrieved successfully: {
+  "_id": "689df76cb1ba49c5144b7eca",
+  "created_at": "2025-08-14T14:49:17Z",
+  "system_metadata": {
+    "duration": 128.05805,
+    "filename": "Olympics 3.mp4",
+    "fps": 30,
+    "height": 360,
+    "size": 10289757,
+    "width": 640
+  },
+  "hls": {
+    "video_url": "https://deuqpmn4rs7j5.cloudfront.net/67ca0ec8d29800ecabf27d70/689df76cb1ba49c5144b7eca/stream/79db76d4-493c-4f5f-899d-ea6aa9fd77e8.m3u8",
+    "thumbnail_urls": [
+      "https://deuqpmn4rs7j5.cloudfront.net/67ca0ec8d29800ecabf27d70/689df76cb1ba49c5144b7eca/thumbnails/79db76d4-493c-4f5f-899d-ea6aa9fd77e8.0000001.jpg"
+    ],
+    "status": "COMPLETE",
+    "updated_at": "2025-08-14T14:49:46.316Z"
+  }
+}
+2025-09-04 22:51:48,892 - __main__ - INFO - Step 2: Analyzing video content...
+2025-09-04 22:52:03,740 - httpx - INFO - HTTP Request: POST https://api.twelvelabs.io/v1.3/analyze "HTTP/1.1 200 OK"
+2025-09-04 22:52:03,748 - __main__ - INFO - Video analysis completed: "The video captures the Women's Singles Gold Medal Match in table tennis at the Paris 2024 Olympics between Chen Meng and Sun Yingsha, both from China. The match is a rematch of the Tokyo 2020 final and is set in a vibrant stadium filled with enthusiastic spectators.\n\n**Key Elements**:\n- **People**: Chen Meng and Sun Yingsha, the two competitors, and their coaches.\n- **Locations**: The table tennis court marked \"PARIS 2024\" and the stadium.\n- **Activities**: The intense table tennis match, with rapid exchanges of shots.\n- **Interactions**: The athletes acknowledge the crowd, adjust their equipment, and engage in competitive rallies.\n\n**Context & Setting**:\nThe video is set in a large indoor stadium during the Paris 2024 Olympics. The environment is filled with a festive atmosphere, with fans waving flags and banners to support the players.\n\n**Narrative Flow**:\nThe video opens with a top-down view of the table tennis court and transitions to a wide shot of the stadium. Both athletes enter the court and prepare for the match. The match begins with quick exchanges, and Chen Meng takes the lead, winning several points consecutively. Despite some close calls, Chen Meng maintains control and ultimately secures the gold medal. The video concludes with the award ceremony, where Chen Meng receives the gold medal, Sun Yingsha the silver, and Hina Hayata of Japan the bronze.\n\n**Notable Details**:\n- The match is a high-stakes event, with both players demonstrating exceptional skill and precision.\n- The crowd's enthusiasm is palpable, with fans cheering loudly and holding up signs and flags.\n- Chen Meng's victory is celebrated with a triumphant hug from her coach and tears of joy.\n\n**Technical Aspects**:\nThe video quality is clear, with smooth camera work that captures both the action on the court and the reactions of the crowd. The editing is well-paced, providing a comprehensive view of the match and the emotional climax of Chen Meng's win."
+2025-09-04 22:52:03,748 - __main__ - INFO - Step 3: Conducting deep research using Sonar...
+2025-09-04 22:52:03,749 - __main__ - INFO - Enhanced research query created: "\nBased on this video analysis: The video captures the Women's Singles Gold Medal Match in table tennis at the Paris 2024 Olympics between Chen Meng and Sun Yingsha, both from China. The match is a rematch of the Tokyo 2020 final and is set in a vibrant stadium filled with enthusiastic spectators.\n\n**Key Elements**:\n- **People**: Chen Meng and Sun Yingsha, the two competitors, and their coaches.\n- **Locations**: The table tennis court marked \"PARIS 2024\" and the stadium.\n- **Activities**: The intense table tennis match, with rapid exchanges of shots.\n- **Interactions**: The athletes acknowledge the crowd, adjust their equipment, and engage in competitive rallies.\n\n**Context & Setting**:\nThe video is set in a large indoor stadium during the Paris 2024 Olympics. The environment is filled with a festive atmosphere, with fans waving flags and banners to support the players.\n\n**Narrative Flow**:\nThe video opens with a top-down view of the table tennis court and transitions to a wide shot of the stadium. Both athletes enter the court and prepare for the match. The match begins with quick exchanges, and Chen Meng takes the lead, winning several points consecutively. Despite some close calls, Chen Meng maintains control and ultimately secures the gold medal. The video concludes with the award ceremony, where Chen Meng receives the gold medal, Sun Yingsha the silver, and Hina Hayata of Japan the bronze.\n\n**Notable Details**:\n- The match is a high-stakes event, with both players demonstrating exceptional skill and precision.\n- The crowd's enthusiasm is palpable, with fans cheering loudly and holding up signs and flags.\n- Chen Meng's victory is celebrated with a triumphant hug from her coach and tears of joy.\n\n**Technical Aspects**:\nThe video quality is clear, with smooth camera work that captures both the action on the court and the reactions of the crowd. The editing is well-paced, providing a comprehensive view of the match and the emotional climax of Chen Meng's win.\n\nPlease research: Please do research about it\n\nProvide comprehensive insights that connect the video content with current trends, developments, and relevant information.\n"
+2025-09-04 22:52:14,794 - __main__ - INFO - Sonar research completed: {
+  "id": "7fdd9b64-fadf-4492-a67f-aeab6f10b415",
+  "model": "sonar",
+  "created": 1757019134,
+  "usage": {
+    "prompt_tokens": 445,
+    "completion_tokens": 615,
+    "total_tokens": 1060,
+    "search_context_size": "low",
+    "cost": {
+      "input_tokens_cost": 0.0,
+      "output_tokens_cost": 0.001,
+      "request_cost": 0.005,
+      "total_cost": 0.006
+    }
+  },
+  "citations": [
+    "https://www.ittf.com/2025/08/03/one-year-ago-chen-meng-became-back-to-back-olympic-champion-in-paris/",
+    "https://www.youtube.com/watch?v=E7NZ2CZRLOE",
+    "https://factcheck.afp.com/doc.afp.com.36CZ8RC",
+    "https://www.worldtabletennis.com/description?artId=4080",
+    "https://www.youtube.com/watch?v=MO3ES7S7lRc"
+  ],
+  "search_results": [
+    {
+      "title": "One Year Ago: Chen Meng Became Back-to-Back Olympic ...",
+      "url": "https://www.ittf.com/2025/08/03/one-year-ago-chen-meng-became-back-to-back-olympic-champion-in-paris/",
+      "date": "2025-08-03",
+      "last_updated": "2025-08-30",
+      "snippet": "For Chen Meng, 10 August 2024 was the day she joined table tennis royalty \u2013 a back-to-back Olympic champion whose legacy will inspire ..."
+    },
+    {
+      "title": "Chen Meng wins BACK-TO-BACK table tennis golds in a ...",
+      "url": "https://www.youtube.com/watch?v=E7NZ2CZRLOE",
+      "date": "2024-08-03",
+      "last_updated": "2025-08-30",
+      "snippet": "China's Chen Meng successfully defended her gold medal in table tennis by defeating her teammate Sun Yingsha to become the third woman in ..."
+    },
+    {
+      "title": "Chinese table tennis champion did not slam Olympic ...",
+      "url": "https://factcheck.afp.com/doc.afp.com.36CZ8RC",
+      "date": "2024-08-13",
+      "last_updated": "2025-09-03",
+      "snippet": "Chinese table tennis Olympic champion Chen Meng did not complain of unfair treatment by the audience after she beat teammate Sun Yingsha and took gold in the ..."
+    },
+    {
+      "title": "WTT",
+      "url": "https://www.worldtabletennis.com/description?artId=4080",
+      "date": null,
+      "last_updated": null,
+      "snippet": "China's Chen Meng celebrated back-to-back Women's Singles Olympic gold medals today at Paris 2024. The Tokyo 2020 champion was once again on top of the Olympic ..."
+    },
+    {
+      "title": "Chen Meng vs Sun Yingsha Paris2024 Final highlights # ...",
+      "url": "https://www.youtube.com/watch?v=MO3ES7S7lRc",
+      "date": "2024-11-08",
+      "last_updated": "2025-08-30",
+      "snippet": "Chen Meng wins BACK-TO-BACK table tennis golds in a high-energy match | Paris Olympics | NBC Sports"
+    }
+  ],
+  "object": "chat.completion",
+  "choices": [
+    {
+      "index": 0,
+      "finish_reason": "stop",
+      "message": {
+        "role": "assistant",
+        "content": "The video you described depicts the **Women's Singles Gold Medal Match at the Paris 2024 Olympics** between Chen Meng and Sun Yingsha, both from China. This match was a high-stakes rematch of the Tokyo 2020 Olympic final, and Chen Meng successfully defended her Olympic title by defeating Sun Yingsha 4-2 in games, with scores 4-11, 11-7, 11-4, 9-11, 11-9, 11-6[1][2][4].\n\n**Key insights connecting the video to current developments:**\n\n- **Historic Achievement:** Chen Meng became only the third woman in table tennis history to win back-to-back Olympic singles gold medals, joining legends Deng Yaping and Zhang Yining, which solidifies her place among the sport\u2019s all-time greats[1][4]. This rare feat highlights the sustained dominance of Chinese athletes in table tennis on the Olympic stage.\n\n- **Match Dynamics:** The match featured intense momentum swings and showcased the highest level of skill and mental toughness. After losing the first game decisively, Chen Meng fought back with strong tactical adjustments and precision to dominate the middle games. Her resilience in the fifth game, won 11-9 under pressure, was pivotal and showcased championship mentality[1].\n\n- **Athlete Profiles and Rivalry:** Both players are top-ranked Chinese athletes with a fierce but respectful rivalry. Sun Yingsha, the world No. 1, has been dominant in recent years but was unable to clinch the elusive Olympic singles gold, underscoring the depth of competition within the Chinese national team[1][2]. The camaraderie and rivalry between these teammates illustrate the intense intra-national competition that propels Chinese dominance.\n\n- **Audience and Social Context:** The crowd atmosphere was highly energetic and festive, amplifying the event's importance. However, the post-match period included some online controversy and fan tensions, particularly with Sun's fanbase expressing disappointment and some hostile reactions toward Chen Meng, who later clarified she did not complain about the audience during post-match interviews[3].\n\n- **Technical and Production Aspects:** The clear and smooth video production captures not only the fast exchanges typical of elite table tennis but also emotional reactions, including Chen Meng\u2019s tearful celebration and acknowledgement of her coach. This adds a rich emotional layer to the sporting narrative[Video description].\n\n- **Broader Impact:** Chen Meng\u2019s victory continues to elevate the global profile of women's table tennis, inspiring emerging players and reinforcing the sport\u2019s status as a cornerstone Olympic discipline. It also sustains China\u2019s legacy as the dominant force in table tennis, converging historical excellence with cutting-edge modern competition[1][4].\n\nIn summary, the Paris 2024 Women's Singles final was a defining moment consolidating Chen Meng's legacy with back-to-back Olympic golds in a match that combined technical mastery, psychological strength, and emotional intensity, set against the backdrop of China\u2019s table tennis supremacy and passionate spectator engagement[1][2][4]."
+      },
+      "delta": {
+        "role": "assistant",
+        "content": ""
+      }
+    }
+  ]
+}
+2025-09-04 22:52:14,795 - __main__ - INFO - Adding sources to research result...
+2025-09-04 22:52:14,795 - __main__ - INFO - Sources added to research result: [
+  {
+    "title": "TechCrunch",
+    "url": "https://techcrunch.com",
+    "description": "Technology news and analysis"
+  },
+  {
+    "title": "Gartner Research",
+    "url": "https://gartner.com",
+    "description": "Industry research and insights"
+  },
+  {
+    "title": "McKinsey & Company",
+    "url": "https://mckinsey.com",
+    "description": "Business and technology trends"
+  },
+  {
+    "title": "The Verge",
+    "url": "https://theverge.com",
+    "description": "Technology and culture coverage"
+  },
+  {
+    "title": "MIT Technology Review",
+    "url": "https://technologyreview.com",
+    "description": "In-depth technology analysis"
+  }
+]
+2025-09-04 22:52:14,795 - __main__ - INFO - === WORKFLOW COMPLETED SUCCESSFULLY ===
+2025-09-04 22:52:14,796 - __main__ - INFO - Final response: {
+  "success": true,
+  "workflow": {
+    "video_details": {
+      "_id": "689df76cb1ba49c5144b7eca",
+      "created_at": "2025-08-14T14:49:17Z",
+      "system_metadata": {
+        "duration": 128.05805,
+        "filename": "Olympics 3.mp4",
+        "fps": 30,
+        "height": 360,
+        "size": 10289757,
+        "width": 640
+      },
+      "hls": {
+        "video_url": "https://deuqpmn4rs7j5.cloudfront.net/67ca0ec8d29800ecabf27d70/689df76cb1ba49c5144b7eca/stream/79db76d4-493c-4f5f-899d-ea6aa9fd77e8.m3u8",
+        "thumbnail_urls": [
+          "https://deuqpmn4rs7j5.cloudfront.net/67ca0ec8d29800ecabf27d70/689df76cb1ba49c5144b7eca/thumbnails/79db76d4-493c-4f5f-899d-ea6aa9fd77e8.0000001.jpg"
+        ],
+        "status": "COMPLETE",
+        "updated_at": "2025-08-14T14:49:46.316Z"
+      }
+    },
+    "analysis": "The video captures the Women's Singles Gold Medal Match in table tennis at the Paris 2024 Olympics between Chen Meng and Sun Yingsha, both from China. The match is a rematch of the Tokyo 2020 final and is set in a vibrant stadium filled with enthusiastic spectators.\n\n**Key Elements**:\n- **People**: Chen Meng and Sun Yingsha, the two competitors, and their coaches.\n- **Locations**: The table tennis court marked \"PARIS 2024\" and the stadium.\n- **Activities**: The intense table tennis match, with rapid exchanges of shots.\n- **Interactions**: The athletes acknowledge the crowd, adjust their equipment, and engage in competitive rallies.\n\n**Context & Setting**:\nThe video is set in a large indoor stadium during the Paris 2024 Olympics. The environment is filled with a festive atmosphere, with fans waving flags and banners to support the players.\n\n**Narrative Flow**:\nThe video opens with a top-down view of the table tennis court and transitions to a wide shot of the stadium. Both athletes enter the court and prepare for the match. The match begins with quick exchanges, and Chen Meng takes the lead, winning several points consecutively. Despite some close calls, Chen Meng maintains control and ultimately secures the gold medal. The video concludes with the award ceremony, where Chen Meng receives the gold medal, Sun Yingsha the silver, and Hina Hayata of Japan the bronze.\n\n**Notable Details**:\n- The match is a high-stakes event, with both players demonstrating exceptional skill and precision.\n- The crowd's enthusiasm is palpable, with fans cheering loudly and holding up signs and flags.\n- Chen Meng's victory is celebrated with a triumphant hug from her coach and tears of joy.\n\n**Technical Aspects**:\nThe video quality is clear, with smooth camera work that captures both the action on the court and the reactions of the crowd. The editing is well-paced, providing a comprehensive view of the match and the emotional climax of Chen Meng's win.",
+    "research": {
+      "id": "7fdd9b64-fadf-4492-a67f-aeab6f10b415",
+      "model": "sonar",
+      "created": 1757019134,
+      "usage": {
+        "prompt_tokens": 445,
+        "completion_tokens": 615,
+        "total_tokens": 1060,
+        "search_context_size": "low",
+        "cost": {
+          "input_tokens_cost": 0.0,
+          "output_tokens_cost": 0.001,
+          "request_cost": 0.005,
+          "total_cost": 0.006
+        }
+      },
+      "citations": [
+        "https://www.ittf.com/2025/08/03/one-year-ago-chen-meng-became-back-to-back-olympic-champion-in-paris/",
+        "https://www.youtube.com/watch?v=E7NZ2CZRLOE",
+        "https://factcheck.afp.com/doc.afp.com.36CZ8RC",
+        "https://www.worldtabletennis.com/description?artId=4080",
+        "https://www.youtube.com/watch?v=MO3ES7S7lRc"
+      ],
+      "search_results": [
+        {
+          "title": "One Year Ago: Chen Meng Became Back-to-Back Olympic ...",
+          "url": "https://www.ittf.com/2025/08/03/one-year-ago-chen-meng-became-back-to-back-olympic-champion-in-paris/",
+          "date": "2025-08-03",
+          "last_updated": "2025-08-30",
+          "snippet": "For Chen Meng, 10 August 2024 was the day she joined table tennis royalty \u2013 a back-to-back Olympic champion whose legacy will inspire ..."
+        },
+        {
+          "title": "Chen Meng wins BACK-TO-BACK table tennis golds in a ...",
+          "url": "https://www.youtube.com/watch?v=E7NZ2CZRLOE",
+          "date": "2024-08-03",
+          "last_updated": "2025-08-30",
+          "snippet": "China's Chen Meng successfully defended her gold medal in table tennis by defeating her teammate Sun Yingsha to become the third woman in ..."
+        },
+        {
+          "title": "Chinese table tennis champion did not slam Olympic ...",
+          "url": "https://factcheck.afp.com/doc.afp.com.36CZ8RC",
+          "date": "2024-08-13",
+          "last_updated": "2025-09-03",
+          "snippet": "Chinese table tennis Olympic champion Chen Meng did not complain of unfair treatment by the audience after she beat teammate Sun Yingsha and took gold in the ..."
+        },
+        {
+          "title": "WTT",
+          "url": "https://www.worldtabletennis.com/description?artId=4080",
+          "date": null,
+          "last_updated": null,
+          "snippet": "China's Chen Meng celebrated back-to-back Women's Singles Olympic gold medals today at Paris 2024. The Tokyo 2020 champion was once again on top of the Olympic ..."
+        },
+        {
+          "title": "Chen Meng vs Sun Yingsha Paris2024 Final highlights # ...",
+          "url": "https://www.youtube.com/watch?v=MO3ES7S7lRc",
+          "date": "2024-11-08",
+          "last_updated": "2025-08-30",
+          "snippet": "Chen Meng wins BACK-TO-BACK table tennis golds in a high-energy match | Paris Olympics | NBC Sports"
+        }
+      ],
+      "object": "chat.completion",
+      "choices": [
+        {
+          "index": 0,
+          "finish_reason": "stop",
+          "message": {
+            "role": "assistant",
+            "content": "The video you described depicts the **Women's Singles Gold Medal Match at the Paris 2024 Olympics** between Chen Meng and Sun Yingsha, both from China. This match was a high-stakes rematch of the Tokyo 2020 Olympic final, and Chen Meng successfully defended her Olympic title by defeating Sun Yingsha 4-2 in games, with scores 4-11, 11-7, 11-4, 9-11, 11-9, 11-6[1][2][4].\n\n**Key insights connecting the video to current developments:**\n\n- **Historic Achievement:** Chen Meng became only the third woman in table tennis history to win back-to-back Olympic singles gold medals, joining legends Deng Yaping and Zhang Yining, which solidifies her place among the sport\u2019s all-time greats[1][4]. This rare feat highlights the sustained dominance of Chinese athletes in table tennis on the Olympic stage.\n\n- **Match Dynamics:** The match featured intense momentum swings and showcased the highest level of skill and mental toughness. After losing the first game decisively, Chen Meng fought back with strong tactical adjustments and precision to dominate the middle games. Her resilience in the fifth game, won 11-9 under pressure, was pivotal and showcased championship mentality[1].\n\n- **Athlete Profiles and Rivalry:** Both players are top-ranked Chinese athletes with a fierce but respectful rivalry. Sun Yingsha, the world No. 1, has been dominant in recent years but was unable to clinch the elusive Olympic singles gold, underscoring the depth of competition within the Chinese national team[1][2]. The camaraderie and rivalry between these teammates illustrate the intense intra-national competition that propels Chinese dominance.\n\n- **Audience and Social Context:** The crowd atmosphere was highly energetic and festive, amplifying the event's importance. However, the post-match period included some online controversy and fan tensions, particularly with Sun's fanbase expressing disappointment and some hostile reactions toward Chen Meng, who later clarified she did not complain about the audience during post-match interviews[3].\n\n- **Technical and Production Aspects:** The clear and smooth video production captures not only the fast exchanges typical of elite table tennis but also emotional reactions, including Chen Meng\u2019s tearful celebration and acknowledgement of her coach. This adds a rich emotional layer to the sporting narrative[Video description].\n\n- **Broader Impact:** Chen Meng\u2019s victory continues to elevate the global profile of women's table tennis, inspiring emerging players and reinforcing the sport\u2019s status as a cornerstone Olympic discipline. It also sustains China\u2019s legacy as the dominant force in table tennis, converging historical excellence with cutting-edge modern competition[1][4].\n\nIn summary, the Paris 2024 Women's Singles final was a defining moment consolidating Chen Meng's legacy with back-to-back Olympic golds in a match that combined technical mastery, psychological strength, and emotional intensity, set against the backdrop of China\u2019s table tennis supremacy and passionate spectator engagement[1][2][4]."
+          },
+          "delta": {
+            "role": "assistant",
+            "content": ""
+          }
+        }
+      ],
+      "sources": [
+        {
+          "title": "TechCrunch",
+          "url": "https://techcrunch.com",
+          "description": "Technology news and analysis"
+        },
+        {
+          "title": "Gartner Research",
+          "url": "https://gartner.com",
+          "description": "Industry research and insights"
+        },
+        {
+          "title": "McKinsey & Company",
+          "url": "https://mckinsey.com",
+          "description": "Business and technology trends"
+        },
+        {
+          "title": "The Verge",
+          "url": "https://theverge.com",
+          "description": "Technology and culture coverage"
+        },
+        {
+          "title": "MIT Technology Review",
+          "url": "https://technologyreview.com",
+          "description": "In-depth technology analysis"
+        }
+      ]
+    }
+  },
+  "summary": {
+    "video_id": "689df76cb1ba49c5144b7eca",
+    "index_id": "689df72e4427a7b96b7a2cb8",
+    "analysis_prompt": "Please provide a comprehensive analysis of this video content. Include:\n\n1. **Content Overview**: What is happening in the video? Describe the main events, actions, and scenes.\n2. **Key Elements**: Identify important objects, people, locations, activities, and interactions.\n3. **Context & Setting**: What is the environment, time period, or context of the video?\n4. **Narrative Flow**: How does the story or sequence of events unfold?\n5. **Notable Details**: Highlight any significant details, patterns, or unique aspects.\n6. **Technical Aspects**: Note video quality, camera work, editing, or production elements if relevant.\n\nUser's Specific Query: Please do research about it\n\nPlease ensure your analysis addresses the user's specific question while providing comprehensive coverage of the video content.",
+    "research_query": "Please do research about it",
+    "research_status": "completed"
+  }
+}
+2025-09-04 22:52:14,798 - werkzeug - INFO - 127.0.0.1 - - [04/Sep/2025 22:52:14] "POST /api/workflow HTTP/1.1" 200 -

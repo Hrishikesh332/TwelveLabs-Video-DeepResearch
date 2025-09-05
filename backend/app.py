@@ -100,10 +100,10 @@ def test_endpoint():
 def set_twelvelabs_config():
     try:
         data = request.get_json()
-        api_key = data.get('api_key')
+        api_key = data.get('api_key') or app.config['TWELVELABS_API_KEY']
         
-        if not api_key:
-            return jsonify({'success': False, 'error': 'API key is required'}), 400
+        if not api_key or api_key == '':
+            return jsonify({'success': False, 'error': 'TwelveLabs API key is required. Please connect your API key in the UI or set TWELVELABS_API_KEY in environment variables.'}), 400
         
         # Test the API key by trying to fetch indexes
         service = TwelveLabsService(api_key=api_key)
@@ -156,10 +156,11 @@ def get_twelvelabs_config():
 @app.route('/api/config/twelvelabs', methods=['DELETE'])
 def clear_twelvelabs_config():
     try:
-        app.config['TWELVELABS_API_KEY'] = ''
+        # Restore the environment variable value instead of clearing it
+        app.config['TWELVELABS_API_KEY'] = os.environ.get('TWELVELABS_API_KEY', '')
         return jsonify({
             'success': True,
-            'message': 'TwelveLabs API key cleared successfully'
+            'message': 'TwelveLabs API key cleared and restored to environment default'
         })
             
     except Exception as e:
@@ -174,10 +175,10 @@ def clear_twelvelabs_config():
 def get_indexes():
     try:
         data = request.get_json()
-        api_key = data.get('api_key')
+        api_key = data.get('api_key') or app.config['TWELVELABS_API_KEY']
         
-        if not api_key:
-            return jsonify({'success': False, 'error': 'API key is required'}), 400
+        if not api_key or api_key == '':
+            return jsonify({'success': False, 'error': 'TwelveLabs API key is required. Please connect your API key in the UI or set TWELVELABS_API_KEY in environment variables.'}), 400
         
         # Create service with provided API key
         service = TwelveLabsService(api_key=api_key)
@@ -195,11 +196,11 @@ def get_indexes():
 def get_videos():
     try:
         data = request.get_json()
-        api_key = data.get('api_key')
+        api_key = data.get('api_key') or app.config['TWELVELABS_API_KEY']
         index_id = data.get('index_id')
         
-        if not api_key:
-            return jsonify({'success': False, 'error': 'API key is required'}), 400
+        if not api_key or api_key == '':
+            return jsonify({'success': False, 'error': 'TwelveLabs API key is required. Please connect your API key in the UI or set TWELVELABS_API_KEY in environment variables.'}), 400
         
         if not index_id:
             return jsonify({'success': False, 'error': 'Index ID is required'}), 400
@@ -220,10 +221,10 @@ def get_videos():
 def get_video_details(index_id, video_id):
     try:
         data = request.get_json()
-        api_key = data.get('api_key')
+        api_key = data.get('api_key') or app.config['TWELVELABS_API_KEY']
         
-        if not api_key:
-            return jsonify({'success': False, 'error': 'API key is required'}), 400
+        if not api_key or api_key == '':
+            return jsonify({'success': False, 'error': 'TwelveLabs API key is required. Please connect your API key in the UI or set TWELVELABS_API_KEY in environment variables.'}), 400
         
         # Create service with provided API key
         service = TwelveLabsService(api_key=api_key)
@@ -244,11 +245,11 @@ def get_video_details(index_id, video_id):
 def analyze_video(video_id):
     try:
         data = request.get_json()
-        api_key = data.get('api_key')
+        api_key = data.get('api_key') or app.config['TWELVELABS_API_KEY']
         prompt = data.get('prompt')
         
-        if not api_key:
-            return jsonify({'success': False, 'error': 'API key is required'}), 400
+        if not api_key or api_key == '':
+            return jsonify({'success': False, 'error': 'TwelveLabs API key is required. Please connect your API key in the UI or set TWELVELABS_API_KEY in environment variables.'}), 400
         
         if not prompt:
             return jsonify({'success': False, 'error': 'Prompt is required'}), 400
@@ -269,11 +270,11 @@ def analyze_video(video_id):
 def sonar_research():
     try:
         data = request.get_json()
-        api_key = data.get('api_key') or app.config['PERPLEXITY_API_KEY']
+        api_key = data.get('api_key') or app.config['TWELVELABS_API_KEY'] or app.config['PERPLEXITY_API_KEY']
         query = data.get('query')
         
-        if not api_key:
-            return jsonify({'success': False, 'error': 'API key is required'}), 400
+        if not api_key or api_key == '':
+            return jsonify({'success': False, 'error': 'TwelveLabs API key is required. Please connect your API key in the UI or set TWELVELABS_API_KEY in environment variables.'}), 400
         
         if not query:
             return jsonify({'success': False, 'error': 'Query is required'}), 400
@@ -298,11 +299,11 @@ def sonar_research_stream():
 
     try:
         data = request.get_json()
-        api_key = data.get('api_key') or app.config['PERPLEXITY_API_KEY']
+        api_key = data.get('api_key') or app.config['TWELVELABS_API_KEY'] or app.config['PERPLEXITY_API_KEY']
         query = data.get('query')
         
-        if not api_key:
-            return jsonify({'success': False, 'error': 'API key is required'}), 400
+        if not api_key or api_key == '':
+            return jsonify({'success': False, 'error': 'TwelveLabs API key is required. Please connect your API key in the UI or set TWELVELABS_API_KEY in environment variables.'}), 400
         
         if not query:
             return jsonify({'success': False, 'error': 'Query is required'}), 400
@@ -327,7 +328,7 @@ def complete_workflow():
         logger.info(f"=== WORKFLOW REQUEST START ===")
         logger.info(f"Request data: {json.dumps(data, indent=2)}")
         
-        twelvelabs_api_key = data.get('twelvelabs_api_key')
+        twelvelabs_api_key = data.get('twelvelabs_api_key') or app.config['TWELVELABS_API_KEY']
         index_id = data.get('index_id')
         video_id = data.get('video_id')
         analysis_prompt = data.get('analysis_prompt', 'Describe what happens in this video')
@@ -340,9 +341,9 @@ def complete_workflow():
         logger.info(f"  - Research Query: {research_query}")
         
         # Validate required parameters
-        if not twelvelabs_api_key:
+        if not twelvelabs_api_key or twelvelabs_api_key == '':
             logger.error("Missing TwelveLabs API key")
-            return jsonify({'success': False, 'error': 'TwelveLabs API key is required'}), 400
+            return jsonify({'success': False, 'error': 'TwelveLabs API key is required. Please connect your API key in the UI or set TWELVELABS_API_KEY in environment variables.'}), 400
         
         if not index_id:
             logger.error("Missing Index ID")
@@ -471,11 +472,11 @@ def workflow_steps():
     try:
         data = request.get_json()
         step = data.get('step')
-        twelvelabs_api_key = data.get('twelvelabs_api_key')
+        twelvelabs_api_key = data.get('twelvelabs_api_key') or app.config['TWELVELABS_API_KEY']
         
         # Only require TwelveLabs API key for steps that need it
         if step in ['get_indexes', 'get_videos', 'analyze_video'] and not twelvelabs_api_key:
-            return jsonify({'success': False, 'error': 'TwelveLabs API key is required'}), 400
+            return jsonify({'success': False, 'error': 'TwelveLabs API key is required. Please connect your API key in the UI or set TWELVELABS_API_KEY in environment variables.'}), 400
         
         if step in ['get_indexes', 'get_videos', 'analyze_video']:
             twelvelabs_service = TwelveLabsService(api_key=twelvelabs_api_key)
@@ -601,7 +602,7 @@ def streaming_workflow():
         logger.info(f"=== STREAMING WORKFLOW REQUEST START ===")
         logger.info(f"Request data: {json.dumps(data, indent=2)}")
         
-        twelvelabs_api_key = data.get('twelvelabs_api_key')
+        twelvelabs_api_key = data.get('twelvelabs_api_key') or app.config['TWELVELABS_API_KEY']
         index_id = data.get('index_id')
         video_id = data.get('video_id')
         analysis_prompt = data.get('analysis_prompt', 'Describe what happens in this video')
@@ -613,9 +614,9 @@ def streaming_workflow():
         logger.info(f"  - Analysis Prompt: {analysis_prompt}")
         logger.info(f"  - Research Query: {research_query}")
         
-        if not twelvelabs_api_key:
+        if not twelvelabs_api_key or twelvelabs_api_key == '':
             logger.error("Missing TwelveLabs API key in streaming workflow")
-            return jsonify({'success': False, 'error': 'TwelveLabs API key is required'}), 400
+            return jsonify({'success': False, 'error': 'TwelveLabs API key is required. Please connect your API key in the UI or set TWELVELABS_API_KEY in environment variables.'}), 400
         
         if not research_query:
             logger.error("Missing Research Query in streaming workflow")

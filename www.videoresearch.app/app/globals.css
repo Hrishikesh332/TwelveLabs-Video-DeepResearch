@@ -129,3 +129,36 @@ body {
   outline: 2px solid #60E21B;
   outline-offset: 2px;
 }
+
+
+/* Custom slider styles for video player */
+.slider::-webkit-slider-thumb {
+  appearance: none;
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+  background: #60E21B;
+  cursor: pointer;
+  border: 2px solid #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.slider::-moz-range-thumb {
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+  background: #60E21B;
+  cursor: pointer;
+  border: 2px solid #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.slider::-webkit-slider-thumb:hover {
+  background: #4CAF50;
+  transform: scale(1.1);
+}
+
+.slider::-moz-range-thumb:hover {
+  background: #4CAF50;
+  transform: scale(1.1);
+}

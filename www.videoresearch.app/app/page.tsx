@@ -1,4 +1,5 @@
 "use client"
+import InlineVideoPlayer from "@/components/InlineVideoPlayer"
 
 import { useState, useEffect } from "react"
 import { Button } from "@/components/ui/button"
@@ -69,6 +70,10 @@ function SourceIcon({ url, title }: { url: string; title: string }) {
               setIconUrl(faviconUrl)
               setIsLoading(false)
             }
+
+
+
+
             img.onerror = () => {
               // Continue to next URL
             }
@@ -137,8 +142,8 @@ function VideoThumbnail({ src, alt, className = "w-8 h-8" }: { src?: string; alt
 
   if (!src || imageError) {
     return (
-      <div className={`${className} bg-[#D3D1CF] rounded flex items-center justify-center flex-shrink-0`}>
-        <Video className="w-4 h-4 text-[#D3D1CF]" />
+      <div className={`${className} bg-gray-200 rounded flex items-center justify-center flex-shrink-0`}>
+        <Video className="w-4 h-4 text-gray-500" />
       </div>
     )
   }
@@ -181,11 +186,11 @@ export default function DeepResearchLanding() {
       content: (
         <div className="text-center">
           <div className="mb-6">
-            <div className="w-full h-64 bg-gray-100 rounded-lg border-2 border-dashed border-[#D3D1CF] flex items-center justify-center">
+            <div className="w-full h-64 bg-gray-100 rounded-lg border-2 border-dashed border-gray-300 flex items-center justify-center">
               <div className="text-center">
                 <div className="text-4xl mb-2">🎬</div>
-                <p className="text-[#1D1C1B]">GIF Demo Area</p>
-                <p className="text-sm text-[#D3D1CF]">Video Deep Research in Action</p>
+                <p className="text-gray-600">GIF Demo Area</p>
+                <p className="text-sm text-gray-500">Video Deep Research in Action</p>
               </div>
             </div>
           </div>
@@ -202,11 +207,11 @@ export default function DeepResearchLanding() {
       content: (
         <div className="text-center">
           <div className="mb-6">
-            <div className="w-full h-64 bg-gray-100 rounded-lg border-2 border-dashed border-[#D3D1CF] flex items-center justify-center">
+            <div className="w-full h-64 bg-gray-100 rounded-lg border-2 border-dashed border-gray-300 flex items-center justify-center">
               <div className="text-center">
                 <div className="text-4xl mb-2">🔑</div>
-                <p className="text-[#1D1C1B]">GIF Tutorial Area</p>
-                <p className="text-sm text-[#D3D1CF]">How to Connect API Key</p>
+                <p className="text-gray-600">GIF Tutorial Area</p>
+                <p className="text-sm text-gray-500">How to Connect API Key</p>
               </div>
             </div>
           </div>
@@ -223,11 +228,11 @@ export default function DeepResearchLanding() {
       content: (
         <div className="text-center">
           <div className="mb-6">
-            <div className="w-full h-64 bg-gray-100 rounded-lg border-2 border-dashed border-[#D3D1CF] flex items-center justify-center">
+            <div className="w-full h-64 bg-gray-100 rounded-lg border-2 border-dashed border-gray-300 flex items-center justify-center">
               <div className="text-center">
                 <div className="text-4xl mb-2">📚</div>
-                <p className="text-[#1D1C1B]">GIF Demo Area</p>
-                <p className="text-sm text-[#D3D1CF]">Real-time Source Generation</p>
+                <p className="text-gray-600">GIF Demo Area</p>
+                <p className="text-sm text-gray-500">Real-time Source Generation</p>
               </div>
             </div>
           </div>
@@ -262,6 +267,7 @@ export default function DeepResearchLanding() {
   const [apiKey, setApiKey] = useState("")
   const [isConnecting, setIsConnecting] = useState(false)
   const [isConnected, setIsConnected] = useState(false)
+  const [isUsingEnvKey, setIsUsingEnvKey] = useState(false)
   const [justConnected, setJustConnected] = useState(false)
 
   const [indexes, setIndexes] = useState<IndexItem[]>([])
@@ -312,6 +318,34 @@ export default function DeepResearchLanding() {
     type: 'info' | 'progress' | 'complete' | 'error'
   }>>([])
 
+  // Auto-load data from environment API key on component mount
+  useEffect(() => {
+    const loadDataFromEnv = async () => {
+      try {
+        const res = await fetch(`${API_BASE_URL}/api/indexes`, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({}),
+        })
+        if (res.ok) {
+          const data = await res.json()
+          if (data?.success && Array.isArray(data.indexes)) {
+            setIndexes(data.indexes)
+            setIsConnected(true)
+            setIsUsingEnvKey(true)  // Mark as using environment key
+            if (data.indexes.length > 0) {
+              const firstId = data.indexes[0].id
+              setSelectedIndex(firstId)
+              await handleIndexChange(firstId)
+            }
+          }
+        }
+      } catch (error) {
+        console.log("No environment API key available")
+      }
+    }
+    loadDataFromEnv()
+  }, [])
   function handleConnect(e?: React.FormEvent) {
     e?.preventDefault?.()
     
@@ -351,6 +385,7 @@ export default function DeepResearchLanding() {
         
         setIndexes(returnedIndexes)
         setIsConnected(true)
+        setIsUsingEnvKey(false)  // Mark as using UI key, not environment key
         setIsApiModalOpen(false)
         setJustConnected(true)
         setTimeout(() => setJustConnected(false), 1200)
@@ -371,6 +406,89 @@ export default function DeepResearchLanding() {
     })()
   }
 
+  async function handleUseDefault() {
+    try {
+      // Clear the backend API key first
+      const res = await fetch(`${API_BASE_URL}/api/config/twelvelabs`, {
+        method: 'DELETE',
+        headers: { 'Content-Type': 'application/json' }
+      })
+      
+      // Clear frontend state regardless of backend response
+      setIsConnected(false)
+      setIsUsingEnvKey(false)
+      setApiKey('')
+      setIndexes([])
+      setVideos([])
+      setSelectedIndex('')
+      setSelectedVideo('')
+      setSelectedVideoThumbnail(null)
+      setSelectedVideoUrl(null)
+      
+      // Always open the modal to let user connect a new key
+      setIsApiModalOpen(true)
+      toast({ title: 'Disconnected', description: 'API key disconnected. Please connect a new key.' })
+      
+    } catch (error) {
+      console.error('Error disconnecting:', error)
+      // Fallback: just clear frontend state and open modal
+      setIsConnected(false)
+      setIsUsingEnvKey(false)
+      setApiKey('')
+      setIndexes([])
+      setVideos([])
+      setSelectedIndex('')
+      setSelectedVideo('')
+      setSelectedVideoThumbnail(null)
+      setSelectedVideoUrl(null)
+      setIsApiModalOpen(true)
+      toast({ title: 'Disconnected', description: 'API key disconnected successfully.' })
+    }
+  }
+
+  async function switchToEnvironmentKey() {
+    try {
+      // Clear the backend API key first
+      const res = await fetch(`${API_BASE_URL}/api/config/twelvelabs`, {
+        method: 'DELETE',
+        headers: { 'Content-Type': 'application/json' }
+      })
+      
+      // Reload from environment API key
+      const envRes = await fetch(`${API_BASE_URL}/api/indexes`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({})
+      })
+      
+      if (envRes.ok) {
+        const data = await envRes.json()
+        if (data?.success && Array.isArray(data.indexes)) {
+          setIndexes(data.indexes)
+          setIsConnected(true)
+          setIsUsingEnvKey(true)  // Mark as using environment key
+          setApiKey('')
+          if (data.indexes.length > 0) {
+            const firstId = data.indexes[0].id
+            setSelectedIndex(firstId)
+            await handleIndexChange(firstId)
+          }
+          setIsApiModalOpen(false)
+          toast({ title: 'Switched to Default', description: 'Now using environment API key.' })
+          return
+        }
+      }
+      
+      // If environment key doesn't work, show error
+      toast({ title: 'Error', description: 'Environment API key not available.' })
+      
+    } catch (error) {
+      console.error('Error switching to environment key:', error)
+      toast({ title: 'Error', description: 'Failed to switch to environment key.' })
+    }
+  }
+
+
   async function handleIndexChange(indexId: string) {
     setSelectedIndex(indexId)
     setSelectedVideo("")
@@ -384,7 +502,7 @@ export default function DeepResearchLanding() {
       const res = await fetch(`${API_BASE_URL}/api/videos`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ api_key: apiKey, index_id: indexId }),
+        body: JSON.stringify({ api_key: isConnected ? undefined : apiKey, index_id: indexId }),
       })
 
       if (!res.ok) {
@@ -500,7 +618,7 @@ User's Specific Query: ${prompt.trim()}
 Please ensure your analysis addresses the user's specific question while providing comprehensive coverage of the video content.`
       
       const payload = {
-        twelvelabs_api_key: apiKey,
+        twelvelabs_api_key: isConnected ? undefined : apiKey,
         index_id: selectedIndex,
         video_id: selectedVideo,
         analysis_prompt: generalizedAnalysisPrompt,
@@ -744,7 +862,7 @@ Please provide a comprehensive answer that builds upon the previous research and
           // Merge with existing sources, avoiding duplicates
           setSources(prev => {
             const existingUrls = new Set(prev.map(s => s.url))
-            const uniqueNewSources = newSources.filter((s: any) => !existingUrls.has(s.url))
+            const uniqueNewSources = newSources.filter(s => !existingUrls.has(s.url))
             return [...prev, ...uniqueNewSources]
           })
         }
@@ -787,16 +905,16 @@ Please provide a comprehensive answer that builds upon the previous research and
   // If research has started, show only the chat interface
   if (researchStarted) {
     return (
-      <div className="min-h-screen bg-[#F4F3F3] flex flex-col">
+      <div className="min-h-screen bg-white flex flex-col">
         <Toaster />
 
         {/* Header */}
-        <header className="border-b border-[#D3D1CF] bg-[#F4F3F3] flex-shrink-0">
+        <header className="border-b border-gray-100 bg-white flex-shrink-0">
           <div className="container mx-auto px-6 py-4">
             <div className="flex items-center justify-between">
-              <div className="flex flex-row justify-start items-center gap-2">
+              <div className="flex items-center space-x-2">
                 <Logo />
-                <span className="text-xl font-semibold text-[#1D1C1B]">Video Deep Research</span>
+                <span className="text-xl font-semibold text-gray-900">Video Deep Research</span>
               </div>
               <div className="flex items-center space-x-3">
                 <Button
@@ -806,7 +924,7 @@ Please provide a comprehensive answer that builds upon the previous research and
                   }}
                   variant="outline"
                   size="sm"
-                  className="text-[#1D1C1B] border-[#D3D1CF] bg-[#F4F3F3] hover:bg-[#E9E8E7] hover:border-[#D3D1CF] hover:text-[#1D1C1B] shadow-sm transition-all duration-200 font-medium"
+                  className="text-gray-700 border-gray-300 bg-white hover:bg-gray-50 hover:border-gray-400 hover:text-gray-900 shadow-sm transition-all duration-200 font-medium"
                 >
                   <ArrowLeft className="w-4 h-4 mr-2" />
                   Back to Search
@@ -817,11 +935,11 @@ Please provide a comprehensive answer that builds upon the previous research and
         </header>
 
         {/* Main Content Area */}
-        <div className="flex-1 flex overflow-hidden flex-1">
+        <div className="flex-1 flex overflow-hidden">
           {/* Chat Content */}
-          <div className="flex-1 flex flex-col overflow-hidden h-screen">
+          <div className="flex-1 flex flex-col overflow-hidden">
             {/* Chat Messages - Scrollable Area */}
-            <div className="flex-1 overflow-y-auto p-6 pb-32">
+            <div className="flex-1 overflow-y-auto p-6">
               <div className="max-w-4xl mx-auto space-y-6">
                 {/* Chat Messages */}
                 {chatMessages.map((message, index) => (
@@ -829,7 +947,7 @@ Please provide a comprehensive answer that builds upon the previous research and
                     {/* User Message */}
                     {message.type === 'user' && (
                       <div className="flex justify-end mb-6">
-                        <div className="max-w-5xl px-6 py-4 rounded-2xl bg-[#1D1C1B] text-white rounded-br-sm">
+                        <div className="max-w-5xl px-6 py-4 rounded-2xl bg-gray-900 text-white rounded-br-sm">
                           {/* Video Thumbnail - Show when available */}
                           {selectedVideoThumbnail && (
                             <div className="mb-3 flex items-center space-x-3">
@@ -851,10 +969,10 @@ Please provide a comprehensive answer that builds upon the previous research and
                     {/* Show sources right after user message and before assistant response */}
                     {message.type === 'user' && sources.length > 0 && sources.some(source => source.isReal) && (
                       <div className="mb-8">
-                        <h3 className="text-lg font-semibold text-[#1D1C1B] mb-4">Research Sources</h3>
+                        <h3 className="text-lg font-semibold text-gray-900 mb-4">Research Sources</h3>
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                           {sources.filter(source => source.isReal).map((source, sourceIndex) => (
-                            <div key={sourceIndex} className="bg-[#F4F3F3] border border-[#D3D1CF] rounded-lg p-4 shadow-sm hover:shadow-md transition-shadow">
+                            <div key={sourceIndex} className="bg-white border border-gray-200 rounded-lg p-4 shadow-sm hover:shadow-md transition-shadow">
                               <div className="flex items-start space-x-3">
                                 <SourceIcon url={source.url} title={source.title} />
                                 <div className="flex-1 min-w-0">
@@ -862,12 +980,12 @@ Please provide a comprehensive answer that builds upon the previous research and
                                     href={source.url} 
                                     target="_blank" 
                                     rel="noopener noreferrer"
-                                    className="text-sm font-medium text-[#1D1C1B] hover:text-blue-600 transition-colors line-clamp-2"
+                                    className="text-sm font-medium text-gray-900 hover:text-blue-600 transition-colors line-clamp-2"
                                   >
                                     {source.title}
                                   </a>
-                                  <p className="text-xs text-[#1D1C1B] mt-1 line-clamp-2">{source.description}</p>
-                                  <span className="inline-block bg-[#60E21B] text-[#1D1C1B] px-2 py-1 rounded-full text-xs mt-2">
+                                  <p className="text-xs text-gray-600 mt-1 line-clamp-2">{source.description}</p>
+                                  <span className="inline-block bg-green-100 text-green-800 px-2 py-1 rounded-full text-xs mt-2">
                                     Real Source
                                   </span>
                                 </div>
@@ -881,7 +999,7 @@ Please provide a comprehensive answer that builds upon the previous research and
                     {/* Assistant Message */}
                     {message.type === 'assistant' && (
                       <div className="w-full mb-6">
-                        <div className="w-full text-[#1D1C1B] px-6 py-6 border-t border-b border-[#D3D1CF]">
+                        <div className="w-full text-gray-900 px-6 py-6 border-t border-b border-gray-200">
                           <div className="prose prose-lg max-w-none">
                             <ReactMarkdown remarkPlugins={[remarkGfm]}>
                               {message.content}
@@ -896,10 +1014,10 @@ Please provide a comprehensive answer that builds upon the previous research and
                 {/* Loading Message for Follow-up Questions */}
                 {isSendingMessage && (
                   <div className="w-full mb-6">
-                    <div className="w-full text-[#1D1C1B] px-6 py-6 border-t border-b border-[#D3D1CF]">
+                    <div className="w-full text-gray-900 px-6 py-6 border-t border-b border-gray-200">
                       <div className="flex items-center space-x-3">
-                        <Loader2 className="w-6 h-6 text-[#1D1C1B] animate-spin" />
-                        <span className="text-[#1D1C1B]">Searching for the references please...</span>
+                        <Loader2 className="w-6 h-6 text-gray-900 animate-spin" />
+                        <span className="text-gray-600">Searching for the references please...</span>
                       </div>
                     </div>
                   </div>
@@ -907,9 +1025,9 @@ Please provide a comprehensive answer that builds upon the previous research and
 
                 {/* Progress Bar - Show only during research */}
                 {isResearching && (
-                  <div className="bg-[#F4F3F3] border border-[#D3D1CF] rounded-lg p-6 shadow-sm">
+                  <div className="bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
                     <div className="flex items-center justify-between mb-3">
-                      <span className="text-lg font-medium text-[#1D1C1B]">
+                      <span className="text-lg font-medium text-gray-900">
                         {(() => {
                           const currentStep = researchSteps.find(step => step.status === 'in-progress');
                           const completedSteps = researchSteps.filter(step => step.status === 'completed').length;
@@ -937,9 +1055,9 @@ Please provide a comprehensive answer that builds upon the previous research and
                       </div>
                     </div>
                     
-                    <div className="w-full bg-[#D3D1CF] rounded-full h-2 relative overflow-hidden">
+                    <div className="w-full bg-gray-200 rounded-full h-2 relative overflow-hidden">
                       <div 
-                        className="h-2 bg-[#1D1C1B] rounded-full transition-all duration-500 ease-out"
+                        className="h-2 bg-gray-600 rounded-full transition-all duration-500 ease-out"
                         style={{
                           width: `${(() => {
                             const completedSteps = researchSteps.filter(step => step.status === 'completed').length;
@@ -963,15 +1081,15 @@ Please provide a comprehensive answer that builds upon the previous research and
             </div>
 
             {/* Chat Input Area - Always Visible at Bottom */}
-            <div className="border-t border-[#D3D1CF] bg-[#F4F3F3] p-4 flex-shrink-0 fixed bottom-0 left-0 right-80 z-10">
+            <div className="border-t border-gray-200 bg-white p-4 flex-shrink-0">
               <div className="max-w-4xl mx-auto">
-                <div className="flex items-center space-x-3">
+                <div className="flex items-end space-x-3">
                   <div className="flex-1">
                     <textarea
                       value={chatInput}
                       onChange={(e) => setChatInput(e.target.value)}
                       placeholder={isSendingMessage ? "Processing your question..." : "Ask a follow-up question about the research..."}
-                      className="w-full px-4 py-3 border border-[#D3D1CF] rounded-2xl resize-none focus:outline-none focus:ring-2 focus:ring-gray-900 focus:border-transparent h-12 overflow-y-hidden"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-2xl resize-none focus:outline-none focus:ring-2 focus:ring-gray-900 focus:border-transparent"
                       rows={1}
                       onKeyDown={(e) => {
                         if (e.key === 'Enter' && !e.shiftKey) {
@@ -984,7 +1102,7 @@ Please provide a comprehensive answer that builds upon the previous research and
                   <Button
                     onClick={handleSendMessage}
                     disabled={!chatInput.trim() || isSendingMessage}
-                    className="bg-[#1D1C1B] hover:bg-[#1D1C1B] text-white px-4 py-3 rounded-2xl disabled:opacity-50 disabled:cursor-not-allowed h-12"
+                    className="bg-gray-900 hover:bg-gray-800 text-white px-4 py-3 rounded-2xl disabled:opacity-50 disabled:cursor-not-allowed"
                   >
                     {isSendingMessage ? (
                       <Loader2 className="w-4 h-4 animate-spin" />
@@ -998,10 +1116,10 @@ Please provide a comprehensive answer that builds upon the previous research and
           </div>
 
           {/* Activity Sidebar - Always Visible During Research */}
-          <div className="w-80 border-l border-[#D3D1CF] bg-[#E9E8E7] shadow-lg flex-shrink-0">
-            <div className="p-6 flex-1 pb-4">
+          <div className="w-80 border-l border-gray-200 bg-gray-50 shadow-lg flex-shrink-0">
+            <div className="p-6 h-full overflow-y-auto">
               <div className="flex items-center justify-between mb-6">
-                <h3 className="text-lg font-semibold text-[#1D1C1B]">Research Mode</h3>
+                <h3 className="text-lg font-semibold text-gray-900">Research Mode</h3>
               </div>
 
               {/* Tabs */}
@@ -1010,8 +1128,8 @@ Please provide a comprehensive answer that builds upon the previous research and
                   onClick={() => setActiveTab('activity')}
                   className={`px-3 py-2 text-sm font-medium rounded-md transition-colors ${
                     activeTab === 'activity' 
-                      ? 'bg-[#1D1C1B] text-white' 
-                      : 'text-[#1D1C1B] hover:text-[#1D1C1B] hover:bg-[#E9E8E7]'
+                      ? 'bg-gray-900 text-white' 
+                      : 'text-gray-600 hover:text-gray-900 hover:bg-gray-100'
                   }`}
                 >
                   Activity
@@ -1020,8 +1138,8 @@ Please provide a comprehensive answer that builds upon the previous research and
                   onClick={() => setActiveTab('sources')}
                   className={`px-3 py-2 text-sm font-medium rounded-md transition-colors ${
                     activeTab === 'sources' 
-                      ? 'bg-[#1D1C1B] text-white' 
-                      : 'text-[#1D1C1B] hover:text-[#1D1C1B] hover:bg-[#E9E8E7]'
+                      ? 'bg-gray-900 text-white' 
+                      : 'text-gray-600 hover:text-gray-900 hover:bg-gray-100'
                   }`}
                 >
                   Sources
@@ -1033,10 +1151,10 @@ Please provide a comprehensive answer that builds upon the previous research and
                 <div className="space-y-4">
                   {activityLogs.map((log, index) => (
                     <div key={index} className="flex items-start space-x-3">
-                      <div className="w-2 h-2 bg-[#1D1C1B] rounded-full mt-2 flex-shrink-0" />
+                      <div className="w-2 h-2 bg-gray-900 rounded-full mt-2 flex-shrink-0" />
                       <div className="flex-1 min-w-0">
-                        <p className="text-sm text-[#1D1C1B]">{log.message}</p>
-                        <p className="text-xs mt-1">
+                        <p className="text-sm text-gray-700">{log.message}</p>
+                        <p className="text-xs text-gray-500 mt-1">
                           {log.timestamp.toLocaleTimeString()}
                         </p>
                       </div>
@@ -1047,7 +1165,7 @@ Please provide a comprehensive answer that builds upon the previous research and
                 <div className="space-y-4">
                   {sources.length > 0 && sources.some(source => source.isReal) ? (
                     sources.filter(source => source.isReal).map((source, index) => (
-                      <div key={index} className="bg-[#F4F3F3] border border-[#D3D1CF] rounded-lg p-3">
+                      <div key={index} className="bg-white border border-gray-200 rounded-lg p-3">
                         <div className="flex items-start space-x-3">
                           <SourceIcon url={source.url} title={source.title} />
                           <div className="flex-1 min-w-0">
@@ -1055,17 +1173,17 @@ Please provide a comprehensive answer that builds upon the previous research and
                               href={source.url} 
                               target="_blank" 
                               rel="noopener noreferrer"
-                              className="text-sm font-medium text-[#1D1C1B] hover:text-blue-600 transition-colors line-clamp-2 block"
+                              className="text-sm font-medium text-gray-900 hover:text-blue-600 transition-colors line-clamp-2 block"
                             >
                               {source.title}
                             </a>
-                            <p className="text-xs text-[#1D1C1B] mt-1 line-clamp-2">{source.description}</p>
+                            <p className="text-xs text-gray-600 mt-1 line-clamp-2">{source.description}</p>
                           </div>
                         </div>
                       </div>
                     ))
                   ) : (
-                    <p className="text-sm text-[#D3D1CF] text-center py-4">No sources available yet</p>
+                    <p className="text-sm text-gray-500 text-center py-4">No sources available yet</p>
                   )}
                 </div>
               )}
@@ -1078,23 +1196,23 @@ Please provide a comprehensive answer that builds upon the previous research and
 
   // Landing page interface (only shown when research hasn't started)
   return (
-    <div className="min-h-screen bg-[#F4F3F3]">
+    <div className="min-h-screen bg-white">
       <Toaster />
 
       {/* Header */}
-      <header className="border-b border-[#D3D1CF]">
+      <header className="border-b border-gray-100">
         <div className="container mx-auto px-6 py-4">
           <div className="flex items-center justify-between">
-            <div className="flex flex-row justify-start items-center gap-2">
+            <div className="flex items-center space-x-2">
               <Logo />
-              <span className="text-xl font-semibold text-[#1D1C1B]">Video Deep Research</span>
+              <span className="text-xl font-semibold text-gray-900">Video Deep Research</span>
             </div>
             <div className="flex items-center gap-3">
               <Button
                 onClick={() => setIsInfoModalOpen(true)}
                 variant="outline"
                 size="sm"
-                className="text-[#1D1C1B] border-[#D3D1CF] bg-transparent hover:bg-[#E9E8E7]"
+                className="text-gray-600 border-gray-200 bg-transparent hover:bg-gray-50"
               >
                 <Info className="w-4 h-4" />
               </Button>
@@ -1103,13 +1221,13 @@ Please provide a comprehensive answer that builds upon the previous research and
                 onClick={() => setIsBlogModalOpen(true)}
                 variant="outline"
                 size="sm"
-                className="text-[#1D1C1B] border-[#D3D1CF] bg-transparent hover:bg-[#E9E8E7]"
+                className="text-gray-600 border-gray-200 bg-transparent hover:bg-gray-50"
               >
                 <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M21 5c-1.11-.35-2.33-.5-3.5-.5-1.95 0-4.05.4-5.5 1.5-1.45-1.1-3.55-1.5-5.5-1.5S2.45 4.9 1 6v14.65c0 .25.25.5.5.5.1 0 .15-.05.25-.05C3.1 20.45 5.05 20 6.5 20c1.95 0 4.05.4 5.5 1.5 1.35-.85 3.8-1.5 5.5-1.5 1.65 0 3.35.3 4.75 1.05.1.05.15.05.25.05.25 0 .5-.25.5-.5V6c-.6-.45-1.25-.75-2-1zm0 13.5c-1.1-.35-2.3-.5-3.5-.5-1.7 0-4.15.65-5.5 1.5V8c1.35-.85 3.8-1.5 5.5-1.5 1.2 0 2.4.15 3.5.5v11.5z"/>
                 </svg>
               </Button>
-              <Button variant="outline" size="sm" className="text-[#1D1C1B] border-[#D3D1CF] bg-transparent">
+              <Button variant="outline" size="sm" className="text-gray-600 border-gray-200 bg-transparent">
                 <Github className="w-4 h-4" />
               </Button>
             </div>
@@ -1124,23 +1242,23 @@ Please provide a comprehensive answer that builds upon the previous research and
           <div className="flex justify-center mb-12">
             <button 
               onClick={() => setIsInfoModalOpen(true)}
-              className="inline-flex items-center px-4 py-2 bg-[#E9E8E7] border border-[#D3D1CF] rounded-full text-sm text-[#1D1C1B] hover:bg-[#E9E8E7] hover:border-[#D3D1CF] transition-colors cursor-pointer"
+              className="inline-flex items-center px-4 py-2 bg-gray-50 border border-gray-200 rounded-full text-sm text-gray-700 hover:bg-gray-100 hover:border-gray-300 transition-colors cursor-pointer"
             >
-              <span className="bg-[#1D1C1B] text-white px-2 py-1 rounded-full text-xs font-medium mr-3">New</span>
+              <span className="bg-gray-900 text-white px-2 py-1 rounded-full text-xs font-medium mr-3">New</span>
               AI-powered research from video content
             </button>
           </div>
 
           {/* Hero */}
           <div className="text-center mb-12">
-            <h1 className="text-5xl md:text-6xl font-bold text-[#1D1C1B] mb-4 leading-tight">
+            <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-4 leading-tight">
               What can I research for you?
             </h1>
           </div>
 
           {/* Main input card */}
           <div className="max-w-3xl mx-auto mb-16">
-            <Card className="border border-[#D3D1CF] rounded-2xl p-0 shadow-sm hover:shadow-md transition-shadow">
+            <Card className="border border-gray-200 rounded-2xl p-0 shadow-sm hover:shadow-md transition-shadow">
               <div className="space-y-4 p-6">
                 {/* Toolbar: dropdowns + connect button */}
                 <div className="flex items-center justify-between mb-2">
@@ -1182,9 +1300,9 @@ Please provide a comprehensive answer that builds upon the previous research and
                                 : "Select Video"
                         }>
                           {selectedVideo && videos.find(v => v.id === selectedVideo) && (
-                            <div className="flex flex-row justify-start items-center gap-2">
+                            <div className="flex items-center space-x-2">
                               <VideoThumbnail 
-                                src={selectedVideoThumbnail || undefined} 
+                                src={selectedVideoThumbnail} 
                                 alt="Selected video thumbnail" 
                                 className="w-6 h-6"
                               />
@@ -1215,7 +1333,7 @@ Please provide a comprehensive answer that builds upon the previous research and
                                 />
                                 <div className="flex-1 min-w-0">
                                   <div className="text-sm font-medium truncate">{v.name}</div>
-                                  <div className="text-xs">
+                                  <div className="text-xs text-gray-500">
                                     {Math.round(v.duration / 60)}m {Math.round(v.duration % 60)}s
                                   </div>
                                 </div>
@@ -1232,20 +1350,24 @@ Please provide a comprehensive answer that builds upon the previous research and
                     <Button
                       variant="ghost"
                       size="sm"
-                      className="text-[#1D1C1B] p-3 h-9 w-48 gap-2 rounded-[14.4px] isolate relative shadow-inner border border-black/10" style={{ background: "linear-gradient(270deg, #60E21B -2.61%, #D3D1CF 70.51%)" }}
-                      onClick={() => setIsApiModalOpen(true)}
+                      className="text-black p-3 h-9 w-48" style={{
+                        background: "linear-gradient(270deg, #60E21B -2.61%, #D3D1CF 70.51%)",
+                        boxShadow: "inset 0px 0px 0px 1px rgba(0, 0, 0, 0.1)",
+                        borderRadius: "14.4px"
+                      }}
+                      onClick={() => isUsingEnvKey ? handleUseDefault() : setIsApiModalOpen(true)}
                     >
-                      <div className="flex flex-row justify-start items-center gap-2">
-                        <Check className="w-4 h-4 text-[#1D1C1B]" />
-                        <span>Connected</span>
+                      <div className="flex items-center space-x-2">
+                        <Check className="w-4 h-4 text-black" />
+                        <span className="text-black font-medium">{isUsingEnvKey ? "Disconnect Default" : "Connected"}</span>
                       </div>
                     </Button>
                   ) : (
                     <Button
                       variant="outline"
                       size="sm"
-                      className="text-xs text-[#1D1C1B] border-[#D3D1CF] bg-transparent hover:bg-[#E9E8E7]"
-                      onClick={() => setIsApiModalOpen(true)}
+                      className="text-xs text-gray-600 border-gray-200 bg-transparent hover:bg-gray-50"
+                      onClick={() => isUsingEnvKey ? handleUseDefault() : setIsApiModalOpen(true)}
                     >
                       Connect TwelveLabs API Key
                     </Button>
@@ -1254,55 +1376,26 @@ Please provide a comprehensive answer that builds upon the previous research and
 
                 {/* Text input */}
                 <div className="relative">
-                  {/* Video Thumbnail Display - Always show when video is selected */}
-                  {selectedVideoThumbnail && (
-                    <div className="mb-6 p-6 bg-[#E9E8E7] rounded-lg border border-[#D3D1CF]">
-                      <div className="flex items-start space-x-4">
-                        <VideoThumbnail 
-                          src={selectedVideoThumbnail || undefined} 
-                          alt="Video thumbnail" 
-                          className="w-32 h-32"
-                        />
-                        <div className="flex-1">
-                          <h4 className="text-lg font-semibold text-[#1D1C1B] mb-2">
-                            {videos.find(v => v.id === selectedVideo)?.name || 'Selected Video'}
-                          </h4>
-                          <div className="space-y-2 text-sm text-[#1D1C1B]">
-                            <p>
-                              <span className="font-medium">Duration:</span> {Math.round((videos.find(v => v.id === selectedVideo)?.duration || 0) / 60)}m {Math.round((videos.find(v => v.id === selectedVideo)?.duration || 0) % 60)}s
-                            </p>
-                            <p>
-                              <span className="font-medium">FPS:</span> {
-                                (() => {
-                                  const video = videos.find(v => v.id === selectedVideo);
-                                  return video?.fps && video.fps > 0 ? video.fps : 'N/A';
-                                })()
-                              }
-                            </p>
-                            <p>
-                              <span className="font-medium">File Size:</span> {
-                                (() => {
-                                  const video = videos.find(v => v.id === selectedVideo);
-                                  if (video?.size && video.size > 0) {
-                                    return `${Math.round(video.size / (1024 * 1024))} MB`;
-                                  }
-                                  return 'N/A';
-                                })()
-                              }
-                            </p>
-                          </div>
-                        </div>
-                      </div>
+                  {/* Video Player Display - Always show when video is selected */}
+                  {selectedVideoUrl && (
+                    <div className="mb-6">
+                      
+                      <InlineVideoPlayer
+                        duration={videos.find(v => v.id === selectedVideo)?.duration}
+                        videoUrl={selectedVideoUrl}
+                        thumbnailUrl={selectedVideoThumbnail || undefined}
+                        title={videos.find(v => v.id === selectedVideo)?.name}
+                        className="max-w-3xl"
+                      />
                     </div>
-                  )}
-                  
+                  )}                  
                   <textarea
                     placeholder={
                       !isConnected 
                         ? "Connect your API key to start researching from videos..." 
                         : "Describe what you want to research from your video..."
                     }
-                    className="w-full min-h-[120px] p-4 text-lg border-0 resize-none focus:outline-none placeholder-[#D3D1CF] bg-transparent"
+                    className="w-full min-h-[120px] p-4 text-lg border-0 resize-none focus:outline-none placeholder-gray-400 bg-transparent"
                     rows={4}
                     value={prompt}
                     onChange={(e) => setPrompt(e.target.value)}
@@ -1311,23 +1404,23 @@ Please provide a comprehensive answer that builds upon the previous research and
                 </div>
 
                 {/* Bottom toolbar */}
-                <div className="flex items-center justify-between pt-4 border-t border-[#D3D1CF]">
+                <div className="flex items-center justify-between pt-4 border-t border-gray-100">
                   <div className="flex items-center space-x-3">
                     <Button 
                       variant="outline" 
                       size="sm" 
-                      className="text-[#D3D1CF] hover:text-[#1D1C1B] hover:bg-[#E9E8E7]"
+                      className="text-gray-500 hover:text-gray-700 hover:bg-gray-50"
                       onClick={() => setIsUploadVideoModalOpen(true)}
                     >
                       <Video className="w-4 h-4 mr-2" />
                       Upload Video
                     </Button>
-                    <span className="text-xs">MP4, MOV, AVI up to 500MB</span>
+                    <span className="text-xs text-gray-400">MP4, MOV, AVI up to 500MB</span>
                   </div>
                   <Button
                     onClick={handleStartResearch}
                     disabled={!canStartResearch || isResearching}
-                    className="bg-[#1D1C1B] hover:bg-[#1D1C1B] text-white px-4 h-8 disabled:opacity-50 disabled:cursor-not-allowed"
+                    className="bg-gray-900 hover:bg-gray-800 text-white px-4 h-8 disabled:opacity-50 disabled:cursor-not-allowed"
                   >
                     {!isConnected ? (
                       "Connect API Key to Start"
@@ -1348,29 +1441,29 @@ Please provide a comprehensive answer that builds upon the previous research and
       </main>
 
       {/* Footer */}
-      <footer className="border-t border-[#D3D1CF] py-8 mt-16 relative">
+      <footer className="border-t border-gray-100 py-8 mt-16 relative">
         <div className="max-w-4xl mx-auto px-6">
           <div className="flex flex-col md:flex-row items-center">
-            <div className="flex flex-row justify-start items-center gap-2 mb-4 md:mb-0 md:absolute md:left-6">
-              <span className="text-[#D3D1CF] text-sm">Powered by</span>
-              <span className="font-semibold text-[#1D1C1B]">TwelveLabs</span>
+            <div className="flex items-center space-x-2 mb-4 md:mb-0 md:absolute md:left-6">
+              <span className="text-gray-500 text-sm">Powered by</span>
+              <span className="font-semibold text-gray-900">TwelveLabs</span>
             </div>
-            <div className="flex flex-row justify-start items-center gap-2 md:absolute md:right-2">
+            <div className="flex items-center space-x-2 md:absolute md:right-2">
               {/* Globe/Web Logo */}
               <div className="w-7 h-7 flex items-center justify-center">
-                <svg className="w-4 h-4 text-[#1D1C1B]" fill="currentColor" viewBox="0 0 24 24">
+                <svg className="w-4 h-4 text-gray-700" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.94-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
                 </svg>
               </div>
               {/* Discord Logo */}
               <div className="w-7 h-7 flex items-center justify-center">
-                <svg className="w-4 h-4 text-[#1D1C1B]" fill="currentColor" viewBox="0 0 24 24">
+                <svg className="w-4 h-4 text-gray-700" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515a.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0a12.64 12.64 0 0 0-.617-1.25a.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057a19.9 19.9 0 0 0 5.993 3.03a.078.078 0 0 0 .084-.028a14.09 14.09 0 0 0 1.226-1.994a.076.076 0 0 0-.041-.106a13.107 13.107 0 0 1-1.872-.892a.077.077 0 0 1-.008-.128a10.2 10.2 0 0 0 .372-.292a.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127a12.299 12.299 0 0 1-1.873.892a.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028a19.839 19.839 0 0 0 6.002-3.03a.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419c0-1.333.956-2.419 2.157-2.419c1.21 0 2.176 1.096 2.157 2.42c0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419c0-1.333.955-2.419 2.157-2.419c1.21 0 2.176 1.096 2.157 2.42c0 1.333-.946 2.418-2.157 2.418z"/>
                 </svg>
               </div>
               {/* New Twitter/X Logo */}
               <div className="w-7 h-7 flex items-center justify-center">
-                <svg className="w-4 h-4 text-[#1D1C1B]" fill="currentColor" viewBox="0 0 24 24">
+                <svg className="w-4 h-4 text-gray-700" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
                 </svg>
               </div>
@@ -1381,7 +1474,7 @@ Please provide a comprehensive answer that builds upon the previous research and
 
       {/* API Key Modal */}
       <Dialog open={isApiModalOpen} onOpenChange={setIsApiModalOpen}>
-        <DialogContent className="sm:max-w-md bg-[#E9E8E7] opacity-100 backdrop-blur-none">
+        <DialogContent className="sm:max-w-md">
           <DialogHeader>
             <DialogTitle>
               {isConnected ? 'TwelveLabs API Configuration' : 'Connect TwelveLabs API'}
@@ -1396,12 +1489,12 @@ Please provide a comprehensive answer that builds upon the previous research and
           <div className="space-y-4">
             {isConnected ? (
               <div className="space-y-4">
-                <div className="p-4 bg-[#E9E8E7] border border-[#D3D1CF] rounded-lg">
-                  <div className="flex flex-row justify-start items-center gap-2">
-                    <Check className="w-6 h-6 text-[#1D1C1B]" />
-                    <span className="text-[#1D1C1B] font-medium">API Key Connected</span>
+                <div className="p-4 bg-gray-50 border border-gray-200 rounded-lg">
+                  <div className="flex items-center space-x-2">
+                    <Check className="w-6 h-6 text-gray-900" />
+                    <span className="text-gray-900 font-medium">API Key Connected</span>
                   </div>
-                  <p className="text-sm text-[#1D1C1B] mt-2">
+                  <p className="text-sm text-gray-700 mt-2">
                     Your TwelveLabs API key is successfully configured and working.
                   </p>
                 </div>
@@ -1409,9 +1502,21 @@ Please provide a comprehensive answer that builds upon the previous research and
                   <Button
                     variant="outline"
                     onClick={() => setIsApiModalOpen(false)}
-                    className="border-[#D3D1CF] text-[#1D1C1B] hover:bg-[#E9E8E7] hover:border-[#D3D1CF]"
+                    className="border-gray-300 text-gray-700 hover:bg-gray-50 hover:border-gray-400"
                   >
                     Close
+                  </Button>
+                  <Button
+                    variant="outline"
+                    onClick={switchToEnvironmentKey}
+                    className="border-gray-300 text-gray-700 hover:bg-gray-50 hover:border-gray-400"
+                    style={{
+                      background: "linear-gradient(270deg, #60E21B -2.61%, #D3D1CF 70.51%)",
+                      boxShadow: "inset 0px 0px 0px 1px rgba(0, 0, 0, 0.1)",
+                      borderRadius: "14.4px"
+                    }}
+                  >
+                    Default
                   </Button>
                   <Button
                     variant="outline"
@@ -1427,7 +1532,7 @@ Please provide a comprehensive answer that builds upon the previous research and
                       toast({ title: "Disconnected", description: "TwelveLabs API key has been disconnected." })
                       // Don't close modal - let it show the connection form
                     }}
-                    className="bg-[#1D1C1B] text-white border-[#1D1C1B] hover:bg-[#1D1C1B] hover:border-[#1D1C1B]"
+                    className="bg-gray-900 text-white border-gray-900 hover:bg-gray-800 hover:border-gray-800"
                   >
                     Disconnect
                   </Button>
@@ -1436,7 +1541,7 @@ Please provide a comprehensive answer that builds upon the previous research and
             ) : (
               <>
                 <div className="space-y-2">
-                  <label htmlFor="api-key" className="text-sm font-medium text-[#1D1C1B]">
+                  <label htmlFor="api-key" className="text-sm font-medium text-gray-700">
                     API Key
                   </label>
                   <Input
@@ -1456,9 +1561,21 @@ Please provide a comprehensive answer that builds upon the previous research and
                     Cancel
                   </Button>
                   <Button
+                    variant="outline"
+                    onClick={switchToEnvironmentKey}
+                    className="border-gray-300 text-gray-700 hover:bg-gray-50 hover:border-gray-400"
+                    style={{
+                      background: "linear-gradient(270deg, #60E21B -2.61%, #D3D1CF 70.51%)",
+                      boxShadow: "inset 0px 0px 0px 1px rgba(0, 0, 0, 0.1)",
+                      borderRadius: "14.4px"
+                    }}
+                  >
+                    Default
+                  </Button>
+                  <Button
                     onClick={handleConnect}
                     disabled={isConnecting || !apiKey.trim()}
-                    className="bg-[#1D1C1B] hover:bg-[#1D1C1B] text-white"
+                    className="bg-gray-900 hover:bg-gray-800 text-white"
                   >
                     {isConnecting ? (
                       <>
@@ -1478,7 +1595,7 @@ Please provide a comprehensive answer that builds upon the previous research and
 
       {/* Coming Soon Modal */}
       <Dialog open={isComingSoonOpen} onOpenChange={setIsComingSoonOpen}>
-        <DialogContent className="sm:max-w-md bg-[#E9E8E7] opacity-100 backdrop-blur-none">
+        <DialogContent className="sm:max-w-md">
           <DialogHeader>
             <DialogTitle>Coming Soon!</DialogTitle>
             <DialogDescription>
@@ -1495,7 +1612,7 @@ Please provide a comprehensive answer that builds upon the previous research and
 
       {/* Upload Video Modal */}
       <Dialog open={isUploadVideoModalOpen} onOpenChange={setIsUploadVideoModalOpen}>
-        <DialogContent className="sm:max-w-md bg-[#E9E8E7] opacity-100 backdrop-blur-none">
+        <DialogContent className="sm:max-w-md">
           <DialogHeader>
             <DialogTitle>Upload Video - Coming Soon!</DialogTitle>
             <DialogDescription>
@@ -1512,15 +1629,15 @@ Please provide a comprehensive answer that builds upon the previous research and
 
       {/* Info Modal */}
       <Dialog open={isInfoModalOpen} onOpenChange={setIsInfoModalOpen}>
-        <DialogContent className="sm:max-w-2xl w-[600px] h-[600px] flex flex-col p-[35px] overflow-hidden !rounded-[58px] border-2 border-black bg-transparent shadow-none" showCloseButton={false} style={{ 
+        <DialogContent className="sm:max-w-2xl w-[600px] h-[600px] flex flex-col p-0 overflow-hidden !rounded-[58px] border-2 border-black bg-transparent shadow-none" style={{ 
           backgroundImage: 'url(/card.png)', 
           backgroundSize: 'cover', 
           backgroundPosition: 'center'
         }}>
-          <div className="flex-1 relative">
+          <div className="flex-1 overflow-hidden relative">
             {/* Content */}
-            <div className="relative z-10 flex-1 flex flex-col">
-              <DialogHeader className="px-2 pt-2 pb-1 relative">
+            <div className="relative z-10 h-full flex flex-col">
+              <DialogHeader className="px-6 pt-6 pb-4 relative">
                 {/* Close Button */}
                 <button
                   onClick={() => setIsInfoModalOpen(false)}
@@ -1543,21 +1660,21 @@ Please provide a comprehensive answer that builds upon the previous research and
               </DialogHeader>
               
               {/* Content Area with Bigger GIF */}
-              <div className="flex-1 flex flex-col px-2 pb-1">
-                <div className="flex-1">
+              <div className="flex-1 overflow-hidden px-6 pb-4">
+                <div className="h-full overflow-y-auto">
                   {infoSteps[currentInfoStep].content}
                 </div>
               </div>
               
               {/* Navigation Footer */}
-              <div className="px-2 pb-2">
+              <div className="px-6 pb-6">
                 <div className="flex items-center justify-between">
                   <Button
                     onClick={prevStep}
                     disabled={currentInfoStep === 0}
                     variant="outline"
                     size="sm"
-                    className="text-black border-[#D3D1CF] hover:bg-[#E9E8E7] disabled:opacity-50 rounded-full transition-colors"
+                    className="text-black border-gray-300 hover:bg-gray-50 disabled:opacity-50 rounded-full transition-colors"
                   >
                     <ArrowLeft className="w-4 h-4 mr-2" />
                     Previous
@@ -1581,7 +1698,7 @@ Please provide a comprehensive answer that builds upon the previous research and
                   <Button
                     onClick={currentInfoStep === infoSteps.length - 1 ? closeModal : nextStep}
                     size="sm"
-                    className="bg-black text-white hover:bg-[#1D1C1B] rounded-full transition-colors"
+                    className="bg-black text-white hover:bg-gray-800 rounded-full transition-colors"
                   >
                     {currentInfoStep === infoSteps.length - 1 ? (
                       'Get Started'
@@ -1601,24 +1718,24 @@ Please provide a comprehensive answer that builds upon the previous research and
 
       {/* Blog Modal */}
       <Dialog open={isBlogModalOpen} onOpenChange={setIsBlogModalOpen}>
-        <DialogContent className="sm:max-w-md bg-[#E9E8E7] opacity-100 backdrop-blur-none">
+        <DialogContent className="sm:max-w-md">
           <DialogHeader>
-            <DialogTitle className="text-center text-xl font-semibold text-[#1D1C1B]">
+            <DialogTitle className="text-center text-xl font-semibold text-gray-900">
               Coming Soon!
             </DialogTitle>
           </DialogHeader>
           <div className="text-center py-6">
             <div className="mb-4">
-              <svg className="w-16 h-16 mx-auto text-[#D3D1CF]" fill="currentColor" viewBox="0 0 24 24">
+              <svg className="w-16 h-16 mx-auto text-gray-400" fill="currentColor" viewBox="0 0 24 24">
                 <path d="M21 5c-1.11-.35-2.33-.5-3.5-.5-1.95 0-4.05.4-5.5 1.5-1.45-1.1-3.55-1.5-5.5-1.5S2.45 4.9 1 6v14.65c0 .25.25.5.5.5.1 0 .15-.05.25-.05C3.1 20.45 5.05 20 6.5 20c1.95 0 4.05.4 5.5 1.5 1.35-.85 3.8-1.5 5.5-1.5 1.65 0 3.35.3 4.75 1.05.1.05.15.05.25.05.25 0 .5-.25.5-.5V6c-.6-.45-1.25-.75-2-1zm0 13.5c-1.1-.35-2.3-.5-3.5-.5-1.7 0-4.15.65-5.5 1.5V8c1.35-.85 3.8-1.5 5.5-1.5 1.2 0 2.4.15 3.5.5v11.5z"/>
               </svg>
             </div>
-            <p className="text-[#1D1C1B] mb-6">
+            <p className="text-gray-600 mb-6">
               We're working on bringing you insightful technical content about building video deep research.
             </p>
             <Button 
               onClick={() => setIsBlogModalOpen(false)}
-              className="w-full bg-[#1D1C1B] text-white hover:bg-[#1D1C1B]"
+              className="w-full bg-gray-900 text-white hover:bg-gray-800"
             >
               Got it!
             </Button>

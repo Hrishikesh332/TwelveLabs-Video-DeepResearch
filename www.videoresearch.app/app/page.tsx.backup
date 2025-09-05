@@ -1,4 +1,5 @@
 "use client"
+import InlineVideoPlayer from "@/components/InlineVideoPlayer"
 
 import { useState, useEffect } from "react"
 import { Button } from "@/components/ui/button"
@@ -312,6 +313,33 @@ export default function DeepResearchLanding() {
     type: 'info' | 'progress' | 'complete' | 'error'
   }>>([])
 
+  // Auto-load data from environment API key on component mount
+  useEffect(() => {
+    const loadDataFromEnv = async () => {
+      try {
+        const res = await fetch(`${API_BASE_URL}/api/indexes`, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({}),
+        })
+        if (res.ok) {
+          const data = await res.json()
+          if (data?.success && Array.isArray(data.indexes)) {
+            setIndexes(data.indexes)
+            setIsConnected(true)
+            if (data.indexes.length > 0) {
+              const firstId = data.indexes[0].id
+              setSelectedIndex(firstId)
+              await handleIndexChange(firstId)
+            }
+          }
+        }
+      } catch (error) {
+        console.log("No environment API key available")
+      }
+    }
+    loadDataFromEnv()
+  }, [])
   function handleConnect(e?: React.FormEvent) {
     e?.preventDefault?.()
     
@@ -384,7 +412,7 @@ export default function DeepResearchLanding() {
       const res = await fetch(`${API_BASE_URL}/api/videos`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ api_key: apiKey, index_id: indexId }),
+        body: JSON.stringify({ api_key: isConnected ? undefined : apiKey, index_id: indexId }),
       })
 
       if (!res.ok) {
@@ -500,7 +528,7 @@ User's Specific Query: ${prompt.trim()}
 Please ensure your analysis addresses the user's specific question while providing comprehensive coverage of the video content.`
       
       const payload = {
-        twelvelabs_api_key: apiKey,
+        twelvelabs_api_key: isConnected ? undefined : apiKey,
         index_id: selectedIndex,
         video_id: selectedVideo,
         analysis_prompt: generalizedAnalysisPrompt,
@@ -1232,12 +1260,16 @@ Please provide a comprehensive answer that builds upon the previous research and
                     <Button
                       variant="ghost"
                       size="sm"
-                      className="text-green-600 hover:text-green-700 hover:bg-green-50 p-0 h-auto"
+                      className="text-black p-3 h-9 w-48" style={{
+                        background: "linear-gradient(270deg, #60E21B -2.61%, #D3D1CF 70.51%)",
+                        boxShadow: "inset 0px 0px 0px 1px rgba(0, 0, 0, 0.1)",
+                        borderRadius: "14.4px"
+                      }}
                       onClick={() => setIsApiModalOpen(true)}
                     >
                       <div className="flex items-center space-x-2">
-                        <Check className="w-4 h-4" />
-                        <span>Connected</span>
+                        <Check className="w-4 h-4 text-black" />
+                        <span className="text-black font-medium">Connected</span>
                       </div>
                     </Button>
                   ) : (
@@ -1254,48 +1286,19 @@ Please provide a comprehensive answer that builds upon the previous research and
 
                 {/* Text input */}
                 <div className="relative">
-                  {/* Video Thumbnail Display - Always show when video is selected */}
-                  {selectedVideoThumbnail && (
-                    <div className="mb-6 p-6 bg-gray-50 rounded-lg border border-gray-200">
-                      <div className="flex items-start space-x-4">
-                        <VideoThumbnail 
-                          src={selectedVideoThumbnail} 
-                          alt="Video thumbnail" 
-                          className="w-32 h-32"
-                        />
-                        <div className="flex-1">
-                          <h4 className="text-lg font-semibold text-gray-900 mb-2">
-                            {videos.find(v => v.id === selectedVideo)?.name || 'Selected Video'}
-                          </h4>
-                          <div className="space-y-2 text-sm text-gray-600">
-                            <p>
-                              <span className="font-medium">Duration:</span> {Math.round((videos.find(v => v.id === selectedVideo)?.duration || 0) / 60)}m {Math.round((videos.find(v => v.id === selectedVideo)?.duration || 0) % 60)}s
-                            </p>
-                            <p>
-                              <span className="font-medium">FPS:</span> {
-                                (() => {
-                                  const video = videos.find(v => v.id === selectedVideo);
-                                  return video?.fps && video.fps > 0 ? video.fps : 'N/A';
-                                })()
-                              }
-                            </p>
-                            <p>
-                              <span className="font-medium">File Size:</span> {
-                                (() => {
-                                  const video = videos.find(v => v.id === selectedVideo);
-                                  if (video?.size && video.size > 0) {
-                                    return `${Math.round(video.size / (1024 * 1024))} MB`;
-                                  }
-                                  return 'N/A';
-                                })()
-                              }
-                            </p>
-                          </div>
-                        </div>
-                      </div>
+                  {/* Video Player Display - Always show when video is selected */}
+                  {selectedVideoUrl && (
+                    <div className="mb-6">
+                      
+                      <InlineVideoPlayer
+                        duration={videos.find(v => v.id === selectedVideo)?.duration}
+                        videoUrl={selectedVideoUrl}
+                        thumbnailUrl={selectedVideoThumbnail || undefined}
+                        title={videos.find(v => v.id === selectedVideo)?.name}
+                        className="max-w-3xl"
+                      />
                     </div>
-                  )}
-                  
+                  )}                  
                   <textarea
                     placeholder={
                       !isConnected 

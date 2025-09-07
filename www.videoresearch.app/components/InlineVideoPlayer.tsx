@@ -40,16 +40,58 @@ export default function InlineVideoPlayer({
     )
   }
 
+  // Common container styling for both thumbnail and video player to ensure consistent modal size
+  const containerClasses = `p-0 overflow-hidden bg-[#E9E8E7] border border-[#D3D1CF] rounded-[58px] transition-all duration-200 ${className}`
+  const innerContainerClasses = "relative aspect-[21/9] bg-black rounded-[58px] overflow-hidden"
+  
+  // Ensure consistent dimensions and prevent layout shifts
+  const containerStyle = {
+    aspectRatio: '21 / 9',
+    width: '100%',
+    height: 'auto'
+  }
+
   if (showThumbnail && !isPlaying) {
     return (
-      <Card className={`p-0 overflow-hidden bg-[#E9E8E7] border border-[#D3D1CF] rounded-[58px] ${className}`}>
-        <div className="relative aspect-[21/9] bg-black rounded-[58px]">
+      <Card 
+        className={containerClasses} 
+        style={containerStyle}
+        onKeyDown={(e) => {
+          e.preventDefault()
+          e.stopPropagation()
+        }}
+        onKeyUp={(e) => {
+          e.preventDefault()
+          e.stopPropagation()
+        }}
+        onKeyPress={(e) => {
+          e.preventDefault()
+          e.stopPropagation()
+        }}
+        tabIndex={-1}
+      >
+        <div 
+          className={innerContainerClasses}
+          onKeyDown={(e) => {
+            e.preventDefault()
+            e.stopPropagation()
+          }}
+          onKeyUp={(e) => {
+            e.preventDefault()
+            e.stopPropagation()
+          }}
+          onKeyPress={(e) => {
+            e.preventDefault()
+            e.stopPropagation()
+          }}
+          tabIndex={-1}
+        >
           {/* Thumbnail */}
           {thumbnailUrl && (
             <img
               src={thumbnailUrl}
               alt={title || "Video thumbnail"}
-              className="w-full h-full object-cover"
+              className="w-full h-full object-cover rounded-[58px]"
             />
           )}
           
@@ -86,9 +128,40 @@ export default function InlineVideoPlayer({
   }
 
   return (
-    <Card className={`p-0 overflow-hidden bg-[#E9E8E7] border border-[#D3D1CF] rounded-[58px] ${className}`}>
-      <div className="relative aspect-[21/9] bg-black rounded-[58px]">
-        {/* Duration Tag for Video Player */}
+    <Card 
+      className={containerClasses} 
+      style={containerStyle}
+      onKeyDown={(e) => {
+        e.preventDefault()
+        e.stopPropagation()
+      }}
+      onKeyUp={(e) => {
+        e.preventDefault()
+        e.stopPropagation()
+      }}
+      onKeyPress={(e) => {
+        e.preventDefault()
+        e.stopPropagation()
+      }}
+      tabIndex={-1}
+    >
+      <div 
+        className={innerContainerClasses}
+        onKeyDown={(e) => {
+          e.preventDefault()
+          e.stopPropagation()
+        }}
+        onKeyUp={(e) => {
+          e.preventDefault()
+          e.stopPropagation()
+        }}
+        onKeyPress={(e) => {
+          e.preventDefault()
+          e.stopPropagation()
+        }}
+        tabIndex={-1}
+      >
+        {/* Duration Tag for Video Player - Identical positioning */}
         {duration && (
           <div className="absolute top-3 right-3 z-10">
             <span className="bg-black/70 text-white text-xs px-2 py-1 rounded-md backdrop-blur-sm">
@@ -102,7 +175,7 @@ export default function InlineVideoPlayer({
           title={title}
           autoPlay={!preventAutoPlay && (autoPlay || isPlaying)}
           preventAutoPlay={preventAutoPlay}
-          className="aspect-[21/9]"
+          className="w-full h-full"
           onError={(error) => console.error("Video error:", error)}
           onLoadStart={() => console.log("Video loading started")}
           onLoadComplete={() => console.log("Video loading completed")}

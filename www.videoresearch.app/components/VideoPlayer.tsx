@@ -40,6 +40,19 @@ export default function VideoPlayer({
   const videoRef = useRef<HTMLVideoElement>(null)
   const hlsRef = useRef<Hls | null>(null)
   const controlsTimeoutRef = useRef<NodeJS.Timeout | null>(null)
+  const loadingTimeoutRef = useRef<NodeJS.Timeout | null>(null)
+  
+  // Use refs to store callbacks to prevent useEffect re-runs
+  const onErrorRef = useRef(onError)
+  const onLoadStartRef = useRef(onLoadStart)
+  const onLoadCompleteRef = useRef(onLoadComplete)
+  
+  // Update refs when callbacks change
+  useEffect(() => {
+    onErrorRef.current = onError
+    onLoadStartRef.current = onLoadStart
+    onLoadCompleteRef.current = onLoadComplete
+  }, [onError, onLoadStart, onLoadComplete])
 
   // Initialize video player
   useEffect(() => {
@@ -59,16 +72,36 @@ export default function VideoPlayer({
       return
     }
 
+    // Check if the video format is likely supported
+    const isHLSUrl = videoUrl.includes('.m3u8') || videoUrl.includes('/hls/') || videoUrl.includes('manifest')
+    const isDirectVideo = /\.(mp4|webm|ogg|mov|avi)(\?.*)?$/i.test(videoUrl)
+    
+    if (!isHLSUrl && !isDirectVideo && !videoUrl.includes('blob:') && !videoUrl.includes('data:')) {
+      console.warn("Potentially unsupported video format:", videoUrl)
+    }
+
     setIsLoading(true)
     setError(null)
-    onLoadStart?.()
+    onLoadStartRef.current?.()
+
+    // Set a loading timeout (30 seconds)
+    if (loadingTimeoutRef.current) {
+      clearTimeout(loadingTimeoutRef.current)
+    }
+    loadingTimeoutRef.current = setTimeout(() => {
+      if (isLoading) {
+        setIsLoading(false)
+        setError('Video loading timed out. The video may be too large or the connection is slow.')
+        console.warn('Video loading timeout for:', videoUrl)
+      }
+    }, 30000)
 
     // Check if HLS is supported natively (Safari)
-    if (video.canPlayType('application/vnd.apple.mpegurl')) {
+    if (video.canPlayType('application/vnd.apple.mpegurl') && isHLSUrl) {
       console.log("Using native HLS support (Safari)", videoUrl)
       video.src = videoUrl
       video.load()
-    } else if (Hls.isSupported()) {
+    } else if (Hls.isSupported() && isHLSUrl) {
       console.log("Using HLS.js for HLS support", videoUrl)
       
       // Clean up existing HLS instance
@@ -93,7 +126,7 @@ export default function VideoPlayer({
       hlsRef.current.on(Hls.Events.MANIFEST_PARSED, () => {
         console.log("HLS manifest loaded successfully")
         setIsLoading(false)
-        onLoadComplete?.()
+        onLoadCompleteRef.current?.()
         
         if (autoPlay) {
           video.play().catch(e => {
@@ -167,20 +200,59 @@ export default function VideoPlayer({
         }
       })
     } else {
-      console.log("HLS is not supported, trying direct source", videoUrl)
+      console.log("Loading direct video source", videoUrl)
+      
+      // For direct video files, check if the browser can play the format
+      if (isDirectVideo) {
+        const extension = videoUrl.split('.').pop()?.split('?')[0]?.toLowerCase()
+        let canPlay = ''
+        
+        switch (extension) {
+          case 'mp4':
+            canPlay = video.canPlayType('video/mp4')
+            break
+          case 'webm':
+            canPlay = video.canPlayType('video/webm')
+            break
+          case 'ogg':
+            canPlay = video.canPlayType('video/ogg')
+            break
+          case 'mov':
+            canPlay = video.canPlayType('video/quicktime')
+            break
+          default:
+            canPlay = 'maybe' // Let the browser try
+        }
+        
+        if (canPlay === '') {
+          console.warn(`Browser cannot play ${extension} format`)
+          setError(`This video format (${extension?.toUpperCase()}) is not supported by your browser.`)
+          setIsLoading(false)
+          return
+        }
+        
+        console.log(`Browser support for ${extension}:`, canPlay)
+      }
+      
       video.src = videoUrl
       video.load()
     }
 
     // Video event listeners
     const handleLoadedData = () => {
+      if (loadingTimeoutRef.current) {
+        clearTimeout(loadingTimeoutRef.current)
+      }
       setIsLoading(false)
-      onLoadComplete?.()
+      onLoadCompleteRef.current?.()
     }
     
     const handleCanPlay = () => {
+      if (loadingTimeoutRef.current) {
+        clearTimeout(loadingTimeoutRef.current)
+      }
       setIsLoading(false)
-      onLoadComplete?.()
+      onLoadCompleteRef.current?.()
     }
     
     const isHLSStream = (url: string) => {
@@ -188,14 +260,58 @@ export default function VideoPlayer({
   }
 
   const handleError = (e: Event) => {
-      const target = e.target as HTMLVideoElement
-      if (target.error) {
-        const errorMessage = `Video error: ${target.error.message}`
-        setError(errorMessage)
-        onError?.(errorMessage)
+    const target = e.target as HTMLVideoElement
+    if (target.error) {
+      let errorMessage = 'Video playback failed'
+      let userFriendlyMessage = 'Unable to play video'
+      
+      // Clear loading timeout since we have an error
+      if (loadingTimeoutRef.current) {
+        clearTimeout(loadingTimeoutRef.current)
       }
-      setIsLoading(false)
+      
+      // Provide more specific error messages based on error code
+      switch (target.error.code) {
+        case MediaError.MEDIA_ERR_ABORTED:
+          errorMessage = 'Video playback was aborted'
+          userFriendlyMessage = 'Video loading was interrupted. Please try again.'
+          break
+        case MediaError.MEDIA_ERR_NETWORK:
+          errorMessage = 'Network error while loading video'
+          userFriendlyMessage = 'Network error. Please check your connection and try again.'
+          break
+        case MediaError.MEDIA_ERR_DECODE:
+          errorMessage = 'Video decoding error'
+          userFriendlyMessage = 'This video cannot be decoded. The file may be corrupted or use an unsupported codec.'
+          break
+        case MediaError.MEDIA_ERR_SRC_NOT_SUPPORTED:
+          errorMessage = 'Video format not supported'
+          userFriendlyMessage = 'This video format is not supported by your browser. Please try a different video.'
+          break
+        default:
+          // Handle specific format errors
+          if (target.error.message && target.error.message.includes('Format error')) {
+            errorMessage = 'Video format error'
+            userFriendlyMessage = 'This video format is not compatible with your browser. Try using MP4, WebM, or another supported format.'
+          } else {
+            errorMessage = `Video error: ${target.error.message || 'Unknown error'}`
+            userFriendlyMessage = 'Video playback failed. The video may be corrupted or in an unsupported format.'
+          }
+      }
+      
+      console.warn('Video error details:', {
+        code: target.error.code,
+        message: target.error.message,
+        videoUrl: videoUrl,
+        isHLS: videoUrl.includes('.m3u8'),
+        userAgent: navigator.userAgent
+      })
+      
+      setError(userFriendlyMessage)
+      onErrorRef.current?.(errorMessage)
     }
+    setIsLoading(false)
+  }
     
     const handleTimeUpdate = () => {
       setCurrentTime(video.currentTime)
@@ -222,6 +338,11 @@ export default function VideoPlayer({
     video.addEventListener('volumechange', handleVolumeChange)
 
     return () => {
+      // Clean up timeouts
+      if (loadingTimeoutRef.current) {
+        clearTimeout(loadingTimeoutRef.current)
+      }
+      
       // Clean up HLS instance safely
       if (hlsRef.current) {
         try {
@@ -248,7 +369,63 @@ export default function VideoPlayer({
         }
       }
     }
-  }, [videoUrl, autoPlay, onError, onLoadStart, onLoadComplete])
+  }, [videoUrl, autoPlay])
+
+  // Add global keyboard event prevention specifically for this video element
+  useEffect(() => {
+    const video = videoRef.current
+    if (!video) return
+
+    const preventVideoKeyboardEvents = (e: KeyboardEvent) => {
+      // Only prevent events if the video element is the target or if no input elements are focused
+      const activeElement = document.activeElement
+      const isInputFocused = activeElement && (
+        activeElement.tagName === 'INPUT' || 
+        activeElement.tagName === 'TEXTAREA' || 
+        (activeElement as HTMLElement).contentEditable === 'true'
+      )
+
+      // Don't prevent events if user is typing in an input/textarea
+      if (isInputFocused) {
+        return
+      }
+
+      // Prevent specific keys that commonly control videos
+      const videoControlKeys = [
+        ' ', // Space bar
+        'Enter',
+        'ArrowLeft',
+        'ArrowRight', 
+        'ArrowUp',
+        'ArrowDown',
+        'k', // Play/pause
+        'm', // Mute
+        'f', // Fullscreen
+        'j', // Rewind
+        'l', // Fast forward
+        '0', '1', '2', '3', '4', '5', '6', '7', '8', '9' // Seek to percentage
+      ]
+
+      if (videoControlKeys.includes(e.key)) {
+        console.log('Preventing video control key:', e.key, 'target:', e.target)
+        e.preventDefault()
+        e.stopPropagation()
+        e.stopImmediatePropagation()
+        return false
+      }
+    }
+
+    // Add event listeners at the document level to catch all keyboard events
+    document.addEventListener('keydown', preventVideoKeyboardEvents, true)
+    document.addEventListener('keyup', preventVideoKeyboardEvents, true)
+    document.addEventListener('keypress', preventVideoKeyboardEvents, true)
+
+    return () => {
+      document.removeEventListener('keydown', preventVideoKeyboardEvents, true)
+      document.removeEventListener('keyup', preventVideoKeyboardEvents, true)
+      document.removeEventListener('keypress', preventVideoKeyboardEvents, true)
+    }
+  }, [])
 
   // Control visibility timeout
   const resetControlsTimeout = () => {
@@ -338,7 +515,7 @@ export default function VideoPlayer({
   // Add error boundary for the component
   if (error && error.includes('Invalid video URL')) {
     return (
-      <div className={`relative overflow-hidden ${className}`} style={{ aspectRatio: '21/9' }}>
+      <div className={`relative overflow-hidden ${className}`}>
         <div className="absolute inset-0 bg-red-900 bg-opacity-50 flex items-center justify-center z-20 rounded-[58px]">
           <div className="text-white text-center p-4">
             <div className="mb-3 text-sm">Invalid video URL provided</div>
@@ -354,7 +531,25 @@ export default function VideoPlayer({
       className={`relative overflow-hidden group ${className}`}
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
-      style={{ aspectRatio: '21/9' }} // Ensure consistent aspect ratio
+      onKeyDown={(e) => {
+        // Prevent ALL keyboard events from affecting the video player
+        // This includes common video control keys like Space, Enter, Arrow keys, etc.
+        e.preventDefault()
+        e.stopPropagation()
+        e.nativeEvent.stopImmediatePropagation()
+      }}
+      onKeyUp={(e) => {
+        e.preventDefault()
+        e.stopPropagation()
+        e.nativeEvent.stopImmediatePropagation()
+      }}
+      onKeyPress={(e) => {
+        e.preventDefault()
+        e.stopPropagation()
+        e.nativeEvent.stopImmediatePropagation()
+      }}
+      tabIndex={-1}
+      style={{ outline: 'none' }}
     >
       {/* Video Element */}
       <video tabIndex={-1}
@@ -364,14 +559,46 @@ export default function VideoPlayer({
         preload="metadata"
         playsInline
         crossOrigin="anonymous"
-        onKeyDown={preventAutoPlay ? (e) => e.stopPropagation() : undefined}
-        onKeyUp={preventAutoPlay ? (e) => e.stopPropagation() : undefined}
-        onKeyPress={preventAutoPlay ? (e) => e.stopPropagation() : undefined}
-        onFocus={preventAutoPlay ? (e) => e.stopPropagation() : undefined}
-        onBlur={preventAutoPlay ? (e) => e.stopPropagation() : undefined}
-        onMouseDown={preventAutoPlay ? (e) => e.stopPropagation() : undefined}
-        onMouseUp={preventAutoPlay ? (e) => e.stopPropagation() : undefined}
-        onClick={preventAutoPlay ? (e) => e.stopPropagation() : undefined}
+        controls={false}
+        disablePictureInPicture={true}
+        disableRemotePlayback={true}
+        onKeyDown={(e) => {
+          e.preventDefault()
+          e.stopPropagation()
+          e.nativeEvent.stopImmediatePropagation()
+          return false
+        }}
+        onKeyUp={(e) => {
+          e.preventDefault()
+          e.stopPropagation()
+          e.nativeEvent.stopImmediatePropagation()
+          return false
+        }}
+        onKeyPress={(e) => {
+          e.preventDefault()
+          e.stopPropagation()
+          e.nativeEvent.stopImmediatePropagation()
+          return false
+        }}
+        onInput={(e) => {
+          e.preventDefault()
+          e.stopPropagation()
+          e.nativeEvent.stopImmediatePropagation()
+          return false
+        }}
+        onFocus={(e) => {
+          e.preventDefault()
+          e.stopPropagation()
+          ;(e.target as HTMLVideoElement).blur() // Immediately blur to prevent focus
+          return false
+        }}
+        onBlur={(e) => {
+          e.stopPropagation()
+        }}
+        onMouseDown={(e) => e.stopPropagation()}
+        onMouseUp={(e) => e.stopPropagation()}
+        onClick={(e) => e.stopPropagation()}
+        style={{ outline: 'none' }} // Remove focus outline
       >
         Your browser does not support the video tag.
       </video>
@@ -389,19 +616,32 @@ export default function VideoPlayer({
       {/* Error Overlay */}
       {error && (
         <div className="absolute inset-0 bg-red-900 bg-opacity-50 flex items-center justify-center z-20 rounded-[58px]">
-          <div className="text-white text-center p-4">
-            <div className="mb-3 text-sm">{error}</div>
-            <button 
-              onClick={() => {
-                setError(null)
-                if (videoRef.current) {
-                  videoRef.current.load()
-                }
-              }}
-              className="px-4 py-2 bg-white text-red-900 rounded text-sm hover:bg-gray-100 transition-colors"
-            >
-              Retry
-            </button>
+          <div className="text-white text-center p-4 max-w-md">
+            <div className="mb-2">
+              <svg className="w-12 h-12 mx-auto mb-2 text-red-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+            </div>
+            <div className="mb-3 text-sm font-medium">{error}</div>
+            <div className="flex flex-col space-y-2">
+              <button 
+                onClick={() => {
+                  setError(null)
+                  setIsLoading(true)
+                  if (videoRef.current) {
+                    videoRef.current.load()
+                  }
+                }}
+                className="px-4 py-2 bg-white text-red-900 rounded text-sm hover:bg-gray-100 transition-colors font-medium"
+              >
+                Try Again
+              </button>
+              {videoUrl.includes('.m3u8') && (
+                <div className="text-xs text-red-200 mt-2">
+                  This appears to be an HLS stream. Make sure your browser supports it or try a different video format.
+                </div>
+              )}
+            </div>
           </div>
         </div>
       )}

@@ -13600,3 +13600,359 @@ Please ensure your analysis addresses the user's specific question while providi
   }
 }
 2025-09-07 04:32:02,574 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 04:32:02] "POST /api/workflow HTTP/1.1" 200 -
+2025-09-07 04:36:20,493 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 04:36:20] "OPTIONS /api/indexes HTTP/1.1" 200 -
+2025-09-07 04:36:21,131 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 04:36:21] "POST /api/indexes HTTP/1.1" 200 -
+2025-09-07 04:36:21,134 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 04:36:21] "OPTIONS /api/videos HTTP/1.1" 200 -
+2025-09-07 04:36:21,732 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 04:36:21] "POST /api/videos HTTP/1.1" 200 -
+2025-09-07 04:36:23,567 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 04:36:23] "POST /api/videos HTTP/1.1" 200 -
+2025-09-07 04:36:29,584 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 04:36:29] "OPTIONS /api/videos HTTP/1.1" 200 -
+2025-09-07 04:36:30,186 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 04:36:30] "POST /api/videos HTTP/1.1" 200 -
+2025-09-07 04:36:47,938 - apscheduler.executors.default - WARNING - Run time of job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-07 04:38:49 CEST)" was missed by 0:06:58.668414
+2025-09-07 04:36:48,246 - apscheduler.executors.default - WARNING - Run time of job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-07 04:38:49 CEST)" was missed by 0:06:58.672957
+2025-09-07 04:38:12,484 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 04:38:12] "OPTIONS /api/indexes HTTP/1.1" 200 -
+2025-09-07 04:38:13,116 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 04:38:13] "POST /api/indexes HTTP/1.1" 200 -
+2025-09-07 04:38:13,159 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 04:38:13] "OPTIONS /api/videos HTTP/1.1" 200 -
+2025-09-07 04:38:13,764 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 04:38:13] "POST /api/videos HTTP/1.1" 200 -
+2025-09-07 04:38:15,990 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 04:38:15] "POST /api/videos HTTP/1.1" 200 -
+2025-09-07 04:38:21,158 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 04:38:21] "OPTIONS /api/videos HTTP/1.1" 200 -
+2025-09-07 04:38:21,759 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 04:38:21] "POST /api/videos HTTP/1.1" 200 -
+2025-09-07 04:38:49,277 - apscheduler.executors.default - INFO - Running job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-07 04:47:49 CEST)" (scheduled at 2025-09-07 04:38:49.270038+02:00)
+2025-09-07 04:38:49,285 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 04:38:49] "GET /health HTTP/1.1" 200 -
+2025-09-07 04:38:49,287 - apscheduler.executors.default - INFO - Job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-07 04:47:49 CEST)" executed successfully
+2025-09-07 04:38:49,578 - apscheduler.executors.default - INFO - Running job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-07 04:47:49 CEST)" (scheduled at 2025-09-07 04:38:49.573342+02:00)
+2025-09-07 04:38:49,589 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 04:38:49] "GET /health HTTP/1.1" 200 -
+2025-09-07 04:38:49,590 - apscheduler.executors.default - INFO - Job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-07 04:47:49 CEST)" executed successfully
+2025-09-07 04:41:40,848 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 04:41:40] "OPTIONS /api/videos HTTP/1.1" 200 -
+2025-09-07 04:41:41,450 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 04:41:41] "POST /api/videos HTTP/1.1" 200 -
+2025-09-07 04:47:49,270 - apscheduler.executors.default - INFO - Running job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-07 04:56:49 CEST)" (scheduled at 2025-09-07 04:47:49.270038+02:00)
+2025-09-07 04:47:49,276 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 04:47:49] "GET /health HTTP/1.1" 200 -
+2025-09-07 04:47:49,277 - apscheduler.executors.default - INFO - Job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-07 04:56:49 CEST)" executed successfully
+2025-09-07 04:47:49,573 - apscheduler.executors.default - INFO - Running job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-07 04:56:49 CEST)" (scheduled at 2025-09-07 04:47:49.573342+02:00)
+2025-09-07 04:47:49,576 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 04:47:49] "GET /health HTTP/1.1" 200 -
+2025-09-07 04:47:49,576 - apscheduler.executors.default - INFO - Job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-07 04:56:49 CEST)" executed successfully
+2025-09-07 04:49:28,625 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 04:49:28] "OPTIONS /api/indexes HTTP/1.1" 200 -
+2025-09-07 04:49:29,251 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 04:49:29] "POST /api/indexes HTTP/1.1" 200 -
+2025-09-07 04:49:29,254 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 04:49:29] "OPTIONS /api/videos HTTP/1.1" 200 -
+2025-09-07 04:49:29,851 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 04:49:29] "POST /api/videos HTTP/1.1" 200 -
+2025-09-07 04:49:31,641 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 04:49:31] "POST /api/videos HTTP/1.1" 200 -
+2025-09-07 04:53:35,724 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 04:53:35] "OPTIONS /api/indexes HTTP/1.1" 200 -
+2025-09-07 04:53:36,350 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 04:53:36] "POST /api/indexes HTTP/1.1" 200 -
+2025-09-07 04:53:36,352 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 04:53:36] "OPTIONS /api/videos HTTP/1.1" 200 -
+2025-09-07 04:53:36,948 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 04:53:36] "POST /api/videos HTTP/1.1" 200 -
+2025-09-07 04:53:38,876 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 04:53:38] "POST /api/videos HTTP/1.1" 200 -
+2025-09-07 04:56:49,307 - apscheduler.executors.default - INFO - Running job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-07 05:05:49 CEST)" (scheduled at 2025-09-07 04:56:49.270038+02:00)
+2025-09-07 04:56:49,313 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 04:56:49] "GET /health HTTP/1.1" 200 -
+2025-09-07 04:56:49,314 - apscheduler.executors.default - INFO - Job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-07 05:05:49 CEST)" executed successfully
+2025-09-07 04:56:49,612 - apscheduler.executors.default - INFO - Running job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-07 05:05:49 CEST)" (scheduled at 2025-09-07 04:56:49.573342+02:00)
+2025-09-07 04:56:49,615 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 04:56:49] "GET /health HTTP/1.1" 200 -
+2025-09-07 04:56:49,615 - apscheduler.executors.default - INFO - Job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-07 05:05:49 CEST)" executed successfully
+2025-09-07 04:57:00,086 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 04:57:00] "OPTIONS /api/workflow HTTP/1.1" 200 -
+2025-09-07 04:57:00,087 - __main__ - INFO - === WORKFLOW REQUEST START ===
+2025-09-07 04:57:00,087 - __main__ - INFO - Request data: {
+  "index_id": "6893518408a37aa08793c4fe",
+  "video_id": "68bce2fa30049231acbe7051",
+  "analysis_prompt": "Please provide a comprehensive analysis of this video content. Include:\n\n1. **Content Overview**: What is happening in the video? Describe the main events, actions, and scenes.\n2. **Key Elements**: Identify important objects, people, locations, activities, and interactions.\n3. **Context & Setting**: What is the environment, time period, or context of the video?\n4. **Narrative Flow**: How does the story or sequence of events unfold?\n5. **Notable Details**: Highlight any significant details, patterns, or unique aspects.\n6. **Technical Aspects**: Note video quality, camera work, editing, or production elements if relevant.\n\nUser's Specific Query: Please make sure to get me the points of this match\n\nPlease ensure your analysis addresses the user's specific question while providing comprehensive coverage of the video content.",
+  "research_query": "Please make sure to get me the points of this match"
+}
+2025-09-07 04:57:00,087 - __main__ - INFO - Parameters extracted:
+2025-09-07 04:57:00,087 - __main__ - INFO -   - Index ID: 6893518408a37aa08793c4fe
+2025-09-07 04:57:00,087 - __main__ - INFO -   - Video ID: 68bce2fa30049231acbe7051
+2025-09-07 04:57:00,087 - __main__ - INFO -   - Analysis Prompt: Please provide a comprehensive analysis of this video content. Include:
+
+1. **Content Overview**: What is happening in the video? Describe the main events, actions, and scenes.
+2. **Key Elements**: Identify important objects, people, locations, activities, and interactions.
+3. **Context & Setting**: What is the environment, time period, or context of the video?
+4. **Narrative Flow**: How does the story or sequence of events unfold?
+5. **Notable Details**: Highlight any significant details, patterns, or unique aspects.
+6. **Technical Aspects**: Note video quality, camera work, editing, or production elements if relevant.
+
+User's Specific Query: Please make sure to get me the points of this match
+
+Please ensure your analysis addresses the user's specific question while providing comprehensive coverage of the video content.
+2025-09-07 04:57:00,087 - __main__ - INFO -   - Research Query: Please make sure to get me the points of this match
+2025-09-07 04:57:00,087 - __main__ - INFO - Step 1: Getting video details from TwelveLabs...
+2025-09-07 04:57:00,715 - __main__ - INFO - Video details retrieved successfully: {
+  "_id": "68bce2fa30049231acbe7051",
+  "created_at": "2025-09-07T01:42:18Z",
+  "system_metadata": {
+    "duration": 156.061315,
+    "filename": "tmp_apzp7wy",
+    "fps": 30,
+    "height": 360,
+    "size": 14225563,
+    "width": 640
+  },
+  "hls": {
+    "video_url": "https://deuqpmn4rs7j5.cloudfront.net/6633a646e06d1c2c0212c7df/68bce2fa30049231acbe7051/stream/ff42afee-4673-4a2a-a05b-14c330c78244.m3u8",
+    "thumbnail_urls": [
+      "https://deuqpmn4rs7j5.cloudfront.net/6633a646e06d1c2c0212c7df/68bce2fa30049231acbe7051/thumbnails/ff42afee-4673-4a2a-a05b-14c330c78244.0000001.jpg"
+    ],
+    "status": "COMPLETE",
+    "updated_at": "2025-09-07T01:43:01.44Z"
+  }
+}
+2025-09-07 04:57:00,715 - __main__ - INFO - Step 2: Analyzing video content...
+2025-09-07 04:57:14,039 - httpx - INFO - HTTP Request: POST https://api.twelvelabs.io/v1.3/analyze "HTTP/1.1 200 OK"
+2025-09-07 04:57:14,040 - __main__ - INFO - Video analysis completed: "The video captures the gold medal match in men's volleyball at the Paris 2024 Olympics between France and Poland. The match is a best-of-five sets encounter, with France, the defending Olympic champions, taking on Poland, the world's top-ranked team. The main events include intense rallies, strategic plays, and decisive moments leading to the final score.\n\n**Key Elements**:\n- **Teams**: France (in blue) and Poland (in white).\n- **Players**: John Patrie and Irvin Ngapet for France are highlighted.\n- **Activities**: Volleyball gameplay, including spikes, blocks, and rallies.\n- **Interactions**: Celebrations and high-fives among players and coaches, as well as reactions from the audience.\n\n**Context & Setting**:\n- The video is set in a volleyball court during the Paris 2024 Olympics.\n- The environment is highly competitive with a large audience present, including fans with face paint and flags.\n\n**Narrative Flow**:\n- The match begins with France leading in the opening set.\n- Poland gains momentum in the third set but France fights back.\n- The final set is particularly intense, with France securing the gold medal after overcoming several match points.\n\n**Notable Details**:\n- The score is 3-2 in favor of France.\n- Poland last won gold in 1976.\n- France becomes the first country to repeat as men's Olympic volleyball champions since the United States in 1988.\n- The United States of America wins the bronze medal.\n\n**Technical Aspects**:\n- The video quality is high, with clear visuals of the gameplay and audience reactions.\n- Camera work includes wide shots of the court and close-ups of players and fans.\n- Editing is smooth, capturing the flow of the match and key moments effectively.\n\n**Points of the Match**:\n- The final score of the match is 3-2 in favor of France, with France securing the gold medal."
+2025-09-07 04:57:14,040 - __main__ - INFO - Step 3: Conducting deep research using Sonar...
+2025-09-07 04:57:14,040 - __main__ - INFO - Enhanced research query created: "\nBased on this video analysis: The video captures the gold medal match in men's volleyball at the Paris 2024 Olympics between France and Poland. The match is a best-of-five sets encounter, with France, the defending Olympic champions, taking on Poland, the world's top-ranked team. The main events include intense rallies, strategic plays, and decisive moments leading to the final score.\n\n**Key Elements**:\n- **Teams**: France (in blue) and Poland (in white).\n- **Players**: John Patrie and Irvin Ngapet for France are highlighted.\n- **Activities**: Volleyball gameplay, including spikes, blocks, and rallies.\n- **Interactions**: Celebrations and high-fives among players and coaches, as well as reactions from the audience.\n\n**Context & Setting**:\n- The video is set in a volleyball court during the Paris 2024 Olympics.\n- The environment is highly competitive with a large audience present, including fans with face paint and flags.\n\n**Narrative Flow**:\n- The match begins with France leading in the opening set.\n- Poland gains momentum in the third set but France fights back.\n- The final set is particularly intense, with France securing the gold medal after overcoming several match points.\n\n**Notable Details**:\n- The score is 3-2 in favor of France.\n- Poland last won gold in 1976.\n- France becomes the first country to repeat as men's Olympic volleyball champions since the United States in 1988.\n- The United States of America wins the bronze medal.\n\n**Technical Aspects**:\n- The video quality is high, with clear visuals of the gameplay and audience reactions.\n- Camera work includes wide shots of the court and close-ups of players and fans.\n- Editing is smooth, capturing the flow of the match and key moments effectively.\n\n**Points of the Match**:\n- The final score of the match is 3-2 in favor of France, with France securing the gold medal.\n\nPlease research: Please make sure to get me the points of this match\n\nProvide comprehensive insights that connect the video content with current trends, developments, and relevant information.\n"
+2025-09-07 04:57:21,730 - __main__ - INFO - Sonar research completed: {
+  "id": "07cf2475-abdb-4d47-a7bf-04153bd48738",
+  "model": "sonar",
+  "created": 1757213841,
+  "usage": {
+    "prompt_tokens": 432,
+    "completion_tokens": 382,
+    "total_tokens": 814,
+    "search_context_size": "low",
+    "cost": {
+      "input_tokens_cost": 0.0,
+      "output_tokens_cost": 0.0,
+      "request_cost": 0.005,
+      "total_cost": 0.006
+    }
+  },
+  "citations": [
+    "https://en.volleyballworld.com/volleyball/competitions/volleyball-olympic-games-paris-2024/schedule/19086/",
+    "https://www.espn.com/olympics/story/_/id/40805739/france-tops-no-1-poland-defend-men-volleyball-olympic-title",
+    "https://www.youtube.com/watch?v=JO6axiO1owk",
+    "https://www.youtube.com/watch?v=IxvuM2N0qpU",
+    "https://www.youtube.com/watch?v=fsr8KRDoOUI"
+  ],
+  "search_results": [
+    {
+      "title": "France-Poland Men Volleyball Olympic Games Paris 2024 10.08.2024",
+      "url": "https://en.volleyballworld.com/volleyball/competitions/volleyball-olympic-games-paris-2024/schedule/19086/",
+      "date": "2024-08-10",
+      "last_updated": "2025-07-20",
+      "snippet": "France-Poland Men Volleyball Olympic Games Paris 2024 10.08.2024 ... Results ... Gold Medal - Final Round - Men #26 ... 2024 ... 11:00 ... UTC ... 13:00."
+    },
+    {
+      "title": "France tops No. 1 Poland to defend men's volleyball Olympic title",
+      "url": "https://www.espn.com/olympics/story/_/id/40805739/france-tops-no-1-poland-defend-men-volleyball-olympic-title",
+      "date": "2024-08-10",
+      "last_updated": "2024-08-10",
+      "snippet": "France defended its Olympic title in men's volleyball, beating top-ranked Poland in front of a raucous, standing-room-only crowd in Paris."
+    },
+    {
+      "title": "France beat Poland to win gold medal in men's volleyball - YouTube",
+      "url": "https://www.youtube.com/watch?v=JO6axiO1owk",
+      "date": "2024-08-10",
+      "last_updated": "2025-07-30",
+      "snippet": "Re-live ALL the incredible #Paris2024 action: \u27a1 https://oly.ch/P24Replays Defending Olympic champions France beat world no. 1 Poland in ..."
+    },
+    {
+      "title": "Volleyball France - Poland FULL Match 2024 Paris Olympics Final",
+      "url": "https://www.youtube.com/watch?v=IxvuM2N0qpU",
+      "date": "2025-01-13",
+      "last_updated": "2025-07-30",
+      "snippet": "Full Volleyball Gold Medal Match between France and Poland from 10.08.2024 at the Paris Olympics. You can find some amazing volleyball ..."
+    },
+    {
+      "title": "Men's Volleyball Final | Paris Champions - YouTube",
+      "url": "https://www.youtube.com/watch?v=fsr8KRDoOUI",
+      "date": "2024-08-15",
+      "last_updated": "2025-07-27",
+      "snippet": "... Men's Volleyball Final between Team France and Team Poland at the #Paris2024 Olympic Games. France Poland USA ..."
+    }
+  ],
+  "object": "chat.completion",
+  "choices": [
+    {
+      "index": 0,
+      "finish_reason": "stop",
+      "message": {
+        "role": "assistant",
+        "content": "The match points (set scores) of the gold medal men's volleyball final at Paris 2024 between France and Poland were:\n\n- Set 1: France 25 \u2013 Poland 19  \n- Set 2: France 25 \u2013 Poland 20  \n- Set 3: France 25 \u2013 Poland 23  \n\nFrance won the match in straight sets (3-0), successfully defending their Olympic title against the world No. 1 Poland[2][3][4].\n\nRegarding the query statement describing a 3-2 match result and a final set, the actual official results indicate it was a **3-0 finish** for France, not 3-2. France dominated the final, leading from the start and closing each set with increasing difficulty but ultimately winning without conceding a set[2][3][4].\n\nAdditional relevant details based on official sources and video highlights:\n\n- Jean Patry was the top scorer with 17 points, showcasing powerful hitting and an efficient attack[2].  \n- Earvin N'Gapeth contributed key defensive plays and versatile scoring, including spectacular rallies and service aces[2][4].  \n- France became the first men's volleyball team to win back-to-back Olympic golds since the USA in 1988[2][3].  \n- Poland, the top-ranked team and last gold medalists in 1976, took silver.  \n- The USA captured the bronze medal in this Olympic event[2].\n\nThe match featured high-intensity rallies, strategic plays, and strong crowd support at the South Paris Arena, highlighting a high-quality volleyball display from both teams[2][3][4].\n\nThus, while the user's video description references a 3-2 set outcome and a more prolonged battle, the authoritative Paris 2024 volleyball results confirm the final score was a commanding 3-0 victory for France with the points above."
+      },
+      "delta": {
+        "role": "assistant",
+        "content": ""
+      }
+    }
+  ]
+}
+2025-09-07 04:57:21,730 - __main__ - INFO - Adding sources to research result...
+2025-09-07 04:57:21,730 - __main__ - INFO - Sources added to research result: [
+  {
+    "title": "TechCrunch",
+    "url": "https://techcrunch.com",
+    "description": "Technology news and analysis"
+  },
+  {
+    "title": "Gartner Research",
+    "url": "https://gartner.com",
+    "description": "Industry research and insights"
+  },
+  {
+    "title": "McKinsey & Company",
+    "url": "https://mckinsey.com",
+    "description": "Business and technology trends"
+  },
+  {
+    "title": "The Verge",
+    "url": "https://theverge.com",
+    "description": "Technology and culture coverage"
+  },
+  {
+    "title": "MIT Technology Review",
+    "url": "https://technologyreview.com",
+    "description": "In-depth technology analysis"
+  }
+]
+2025-09-07 04:57:21,730 - __main__ - INFO - === WORKFLOW COMPLETED SUCCESSFULLY ===
+2025-09-07 04:57:21,730 - __main__ - INFO - Final response: {
+  "success": true,
+  "workflow": {
+    "video_details": {
+      "_id": "68bce2fa30049231acbe7051",
+      "created_at": "2025-09-07T01:42:18Z",
+      "system_metadata": {
+        "duration": 156.061315,
+        "filename": "tmp_apzp7wy",
+        "fps": 30,
+        "height": 360,
+        "size": 14225563,
+        "width": 640
+      },
+      "hls": {
+        "video_url": "https://deuqpmn4rs7j5.cloudfront.net/6633a646e06d1c2c0212c7df/68bce2fa30049231acbe7051/stream/ff42afee-4673-4a2a-a05b-14c330c78244.m3u8",
+        "thumbnail_urls": [
+          "https://deuqpmn4rs7j5.cloudfront.net/6633a646e06d1c2c0212c7df/68bce2fa30049231acbe7051/thumbnails/ff42afee-4673-4a2a-a05b-14c330c78244.0000001.jpg"
+        ],
+        "status": "COMPLETE",
+        "updated_at": "2025-09-07T01:43:01.44Z"
+      }
+    },
+    "analysis": "The video captures the gold medal match in men's volleyball at the Paris 2024 Olympics between France and Poland. The match is a best-of-five sets encounter, with France, the defending Olympic champions, taking on Poland, the world's top-ranked team. The main events include intense rallies, strategic plays, and decisive moments leading to the final score.\n\n**Key Elements**:\n- **Teams**: France (in blue) and Poland (in white).\n- **Players**: John Patrie and Irvin Ngapet for France are highlighted.\n- **Activities**: Volleyball gameplay, including spikes, blocks, and rallies.\n- **Interactions**: Celebrations and high-fives among players and coaches, as well as reactions from the audience.\n\n**Context & Setting**:\n- The video is set in a volleyball court during the Paris 2024 Olympics.\n- The environment is highly competitive with a large audience present, including fans with face paint and flags.\n\n**Narrative Flow**:\n- The match begins with France leading in the opening set.\n- Poland gains momentum in the third set but France fights back.\n- The final set is particularly intense, with France securing the gold medal after overcoming several match points.\n\n**Notable Details**:\n- The score is 3-2 in favor of France.\n- Poland last won gold in 1976.\n- France becomes the first country to repeat as men's Olympic volleyball champions since the United States in 1988.\n- The United States of America wins the bronze medal.\n\n**Technical Aspects**:\n- The video quality is high, with clear visuals of the gameplay and audience reactions.\n- Camera work includes wide shots of the court and close-ups of players and fans.\n- Editing is smooth, capturing the flow of the match and key moments effectively.\n\n**Points of the Match**:\n- The final score of the match is 3-2 in favor of France, with France securing the gold medal.",
+    "research": {
+      "id": "07cf2475-abdb-4d47-a7bf-04153bd48738",
+      "model": "sonar",
+      "created": 1757213841,
+      "usage": {
+        "prompt_tokens": 432,
+        "completion_tokens": 382,
+        "total_tokens": 814,
+        "search_context_size": "low",
+        "cost": {
+          "input_tokens_cost": 0.0,
+          "output_tokens_cost": 0.0,
+          "request_cost": 0.005,
+          "total_cost": 0.006
+        }
+      },
+      "citations": [
+        "https://en.volleyballworld.com/volleyball/competitions/volleyball-olympic-games-paris-2024/schedule/19086/",
+        "https://www.espn.com/olympics/story/_/id/40805739/france-tops-no-1-poland-defend-men-volleyball-olympic-title",
+        "https://www.youtube.com/watch?v=JO6axiO1owk",
+        "https://www.youtube.com/watch?v=IxvuM2N0qpU",
+        "https://www.youtube.com/watch?v=fsr8KRDoOUI"
+      ],
+      "search_results": [
+        {
+          "title": "France-Poland Men Volleyball Olympic Games Paris 2024 10.08.2024",
+          "url": "https://en.volleyballworld.com/volleyball/competitions/volleyball-olympic-games-paris-2024/schedule/19086/",
+          "date": "2024-08-10",
+          "last_updated": "2025-07-20",
+          "snippet": "France-Poland Men Volleyball Olympic Games Paris 2024 10.08.2024 ... Results ... Gold Medal - Final Round - Men #26 ... 2024 ... 11:00 ... UTC ... 13:00."
+        },
+        {
+          "title": "France tops No. 1 Poland to defend men's volleyball Olympic title",
+          "url": "https://www.espn.com/olympics/story/_/id/40805739/france-tops-no-1-poland-defend-men-volleyball-olympic-title",
+          "date": "2024-08-10",
+          "last_updated": "2024-08-10",
+          "snippet": "France defended its Olympic title in men's volleyball, beating top-ranked Poland in front of a raucous, standing-room-only crowd in Paris."
+        },
+        {
+          "title": "France beat Poland to win gold medal in men's volleyball - YouTube",
+          "url": "https://www.youtube.com/watch?v=JO6axiO1owk",
+          "date": "2024-08-10",
+          "last_updated": "2025-07-30",
+          "snippet": "Re-live ALL the incredible #Paris2024 action: \u27a1 https://oly.ch/P24Replays Defending Olympic champions France beat world no. 1 Poland in ..."
+        },
+        {
+          "title": "Volleyball France - Poland FULL Match 2024 Paris Olympics Final",
+          "url": "https://www.youtube.com/watch?v=IxvuM2N0qpU",
+          "date": "2025-01-13",
+          "last_updated": "2025-07-30",
+          "snippet": "Full Volleyball Gold Medal Match between France and Poland from 10.08.2024 at the Paris Olympics. You can find some amazing volleyball ..."
+        },
+        {
+          "title": "Men's Volleyball Final | Paris Champions - YouTube",
+          "url": "https://www.youtube.com/watch?v=fsr8KRDoOUI",
+          "date": "2024-08-15",
+          "last_updated": "2025-07-27",
+          "snippet": "... Men's Volleyball Final between Team France and Team Poland at the #Paris2024 Olympic Games. France Poland USA ..."
+        }
+      ],
+      "object": "chat.completion",
+      "choices": [
+        {
+          "index": 0,
+          "finish_reason": "stop",
+          "message": {
+            "role": "assistant",
+            "content": "The match points (set scores) of the gold medal men's volleyball final at Paris 2024 between France and Poland were:\n\n- Set 1: France 25 \u2013 Poland 19  \n- Set 2: France 25 \u2013 Poland 20  \n- Set 3: France 25 \u2013 Poland 23  \n\nFrance won the match in straight sets (3-0), successfully defending their Olympic title against the world No. 1 Poland[2][3][4].\n\nRegarding the query statement describing a 3-2 match result and a final set, the actual official results indicate it was a **3-0 finish** for France, not 3-2. France dominated the final, leading from the start and closing each set with increasing difficulty but ultimately winning without conceding a set[2][3][4].\n\nAdditional relevant details based on official sources and video highlights:\n\n- Jean Patry was the top scorer with 17 points, showcasing powerful hitting and an efficient attack[2].  \n- Earvin N'Gapeth contributed key defensive plays and versatile scoring, including spectacular rallies and service aces[2][4].  \n- France became the first men's volleyball team to win back-to-back Olympic golds since the USA in 1988[2][3].  \n- Poland, the top-ranked team and last gold medalists in 1976, took silver.  \n- The USA captured the bronze medal in this Olympic event[2].\n\nThe match featured high-intensity rallies, strategic plays, and strong crowd support at the South Paris Arena, highlighting a high-quality volleyball display from both teams[2][3][4].\n\nThus, while the user's video description references a 3-2 set outcome and a more prolonged battle, the authoritative Paris 2024 volleyball results confirm the final score was a commanding 3-0 victory for France with the points above."
+          },
+          "delta": {
+            "role": "assistant",
+            "content": ""
+          }
+        }
+      ],
+      "sources": [
+        {
+          "title": "TechCrunch",
+          "url": "https://techcrunch.com",
+          "description": "Technology news and analysis"
+        },
+        {
+          "title": "Gartner Research",
+          "url": "https://gartner.com",
+          "description": "Industry research and insights"
+        },
+        {
+          "title": "McKinsey & Company",
+          "url": "https://mckinsey.com",
+          "description": "Business and technology trends"
+        },
+        {
+          "title": "The Verge",
+          "url": "https://theverge.com",
+          "description": "Technology and culture coverage"
+        },
+        {
+          "title": "MIT Technology Review",
+          "url": "https://technologyreview.com",
+          "description": "In-depth technology analysis"
+        }
+      ]
+    }
+  },
+  "summary": {
+    "video_id": "68bce2fa30049231acbe7051",
+    "index_id": "6893518408a37aa08793c4fe",
+    "analysis_prompt": "Please provide a comprehensive analysis of this video content. Include:\n\n1. **Content Overview**: What is happening in the video? Describe the main events, actions, and scenes.\n2. **Key Elements**: Identify important objects, people, locations, activities, and interactions.\n3. **Context & Setting**: What is the environment, time period, or context of the video?\n4. **Narrative Flow**: How does the story or sequence of events unfold?\n5. **Notable Details**: Highlight any significant details, patterns, or unique aspects.\n6. **Technical Aspects**: Note video quality, camera work, editing, or production elements if relevant.\n\nUser's Specific Query: Please make sure to get me the points of this match\n\nPlease ensure your analysis addresses the user's specific question while providing comprehensive coverage of the video content.",
+    "research_query": "Please make sure to get me the points of this match",
+    "research_status": "completed"
+  }
+}
+2025-09-07 04:57:21,731 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 04:57:21] "POST /api/workflow HTTP/1.1" 200 -
+2025-09-07 04:57:35,764 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 04:57:35] "OPTIONS /api/config/twelvelabs HTTP/1.1" 200 -
+2025-09-07 04:57:35,765 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 04:57:35] "DELETE /api/config/twelvelabs HTTP/1.1" 200 -
+2025-09-07 04:57:55,093 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 04:57:55] "OPTIONS /api/config/twelvelabs HTTP/1.1" 200 -
+2025-09-07 04:57:55,668 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 04:57:55] "POST /api/config/twelvelabs HTTP/1.1" 200 -
+2025-09-07 04:57:55,675 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 04:57:55] "OPTIONS /api/videos HTTP/1.1" 200 -
+2025-09-07 04:57:56,247 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 04:57:56] "POST /api/videos HTTP/1.1" 200 -
+2025-09-07 04:58:02,164 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 04:58:02] "OPTIONS /api/config/twelvelabs HTTP/1.1" 200 -
+2025-09-07 04:58:02,165 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 04:58:02] "DELETE /api/config/twelvelabs HTTP/1.1" 200 -
+2025-09-07 04:58:02,167 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 04:58:02] "OPTIONS /api/indexes HTTP/1.1" 200 -
+2025-09-07 04:58:02,776 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 04:58:02] "POST /api/indexes HTTP/1.1" 200 -
+2025-09-07 04:58:02,781 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 04:58:02] "OPTIONS /api/videos HTTP/1.1" 200 -
+2025-09-07 04:58:03,193 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 04:58:03] "DELETE /api/config/twelvelabs HTTP/1.1" 200 -
+2025-09-07 04:58:03,380 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 04:58:03] "POST /api/videos HTTP/1.1" 200 -
+2025-09-07 04:58:03,796 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 04:58:03] "POST /api/indexes HTTP/1.1" 200 -
+2025-09-07 04:58:04,387 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 04:58:04] "POST /api/videos HTTP/1.1" 200 -
+2025-09-07 04:58:06,563 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 04:58:06] "DELETE /api/config/twelvelabs HTTP/1.1" 200 -
+2025-09-07 04:58:07,188 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 04:58:07] "POST /api/indexes HTTP/1.1" 200 -
+2025-09-07 04:58:07,791 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 04:58:07] "POST /api/videos HTTP/1.1" 200 -

@@ -44,7 +44,20 @@ export default function VideoPlayer({
   // Initialize video player
   useEffect(() => {
     const video = videoRef.current
-    if (!video || !videoUrl) return
+    if (!video || !videoUrl) {
+      console.log("Video element or URL not available")
+      return
+    }
+
+    // Validate video URL
+    try {
+      new URL(videoUrl)
+    } catch (e) {
+      console.error("Invalid video URL:", videoUrl)
+      setError('Invalid video URL provided')
+      setIsLoading(false)
+      return
+    }
 
     setIsLoading(true)
     setError(null)
@@ -91,22 +104,61 @@ export default function VideoPlayer({
       })
       
       hlsRef.current.on(Hls.Events.ERROR, (event, data) => {
-        if (data.type !== Hls.ErrorTypes.MEDIA_ERROR || data.details !== "bufferStalledError") {
-            console.error("HLS error:", data)
-          }
+        // Filter out non-critical buffer stall errors that are common and usually self-recover
+        const isBufferStallError = data.details === "bufferStalledError" || 
+                                   data.details === "bufferSeekOverHole" ||
+                                   data.details === "bufferNudgeOnStall"
+        
+        // Only log meaningful errors, avoid empty objects and buffer stalls
+        if (data && Object.keys(data).length > 0 && !isBufferStallError) {
+          console.warn("HLS warning:", {
+            type: data.type,
+            details: data.details,
+            fatal: data.fatal,
+            reason: data.reason || 'Unknown'
+          })
+        }
+        
+        // Only handle fatal errors
         if (data.fatal) {
+          console.error("HLS fatal error:", {
+            type: data.type,
+            details: data.details,
+            reason: data.reason || 'Unknown'
+          })
+          
           switch (data.type) {
             case Hls.ErrorTypes.NETWORK_ERROR:
               console.log("Network error, trying to recover...")
-              hlsRef.current?.startLoad()
+              try {
+                hlsRef.current?.startLoad()
+              } catch (e) {
+                console.log("Recovery failed, falling back to direct video")
+                setError('Network error. Trying direct video...')
+                video.src = videoUrl
+                video.load()
+              }
               break
             case Hls.ErrorTypes.MEDIA_ERROR:
               console.log("Media error, trying to recover...")
-              hlsRef.current?.recoverMediaError()
+              try {
+                hlsRef.current?.recoverMediaError()
+              } catch (e) {
+                console.log("Media recovery failed, falling back to direct video")
+                setError('Media error. Trying direct video...')
+                video.src = videoUrl
+                video.load()
+              }
               break
             default:
               console.log("Fatal error, destroying HLS instance")
-              hlsRef.current?.destroy()
+              if (hlsRef.current) {
+                try {
+                  hlsRef.current.destroy()
+                } catch (e) {
+                  console.log("Error destroying HLS instance:", e)
+                }
+              }
               setError('HLS playback failed. Trying direct video...')
               video.src = videoUrl
               video.load()
@@ -116,7 +168,6 @@ export default function VideoPlayer({
       })
     } else {
       console.log("HLS is not supported, trying direct source", videoUrl)
-      console.log("HLS is not supported, trying direct source")
       video.src = videoUrl
       video.load()
     }
@@ -171,17 +222,31 @@ export default function VideoPlayer({
     video.addEventListener('volumechange', handleVolumeChange)
 
     return () => {
+      // Clean up HLS instance safely
       if (hlsRef.current) {
-        hlsRef.current.destroy()
+        try {
+          hlsRef.current.destroy()
+          hlsRef.current = null
+        } catch (e) {
+          console.log("Error cleaning up HLS instance:", e)
+        }
       }
-      video.removeEventListener('loadeddata', handleLoadedData)
-      video.removeEventListener('canplay', handleCanPlay)
-      video.removeEventListener('error', handleError)
-      video.removeEventListener('timeupdate', handleTimeUpdate)
-      video.removeEventListener('durationchange', handleDurationChange)
-      video.removeEventListener('play', handlePlay)
-      video.removeEventListener('pause', handlePause)
-      video.removeEventListener('volumechange', handleVolumeChange)
+      
+      // Clean up video event listeners safely
+      if (video) {
+        try {
+          video.removeEventListener('loadeddata', handleLoadedData)
+          video.removeEventListener('canplay', handleCanPlay)
+          video.removeEventListener('error', handleError)
+          video.removeEventListener('timeupdate', handleTimeUpdate)
+          video.removeEventListener('durationchange', handleDurationChange)
+          video.removeEventListener('play', handlePlay)
+          video.removeEventListener('pause', handlePause)
+          video.removeEventListener('volumechange', handleVolumeChange)
+        } catch (e) {
+          console.log("Error cleaning up video event listeners:", e)
+        }
+      }
     }
   }, [videoUrl, autoPlay, onError, onLoadStart, onLoadComplete])
 
@@ -219,7 +284,6 @@ export default function VideoPlayer({
     if (video.paused) {
       video.play()
     } else {
-      console.log("HLS is not supported, trying direct source", videoUrl)
       video.pause()
     }
   }
@@ -258,7 +322,6 @@ export default function VideoPlayer({
       video.requestFullscreen()
       setIsFullscreen(true)
     } else {
-      console.log("HLS is not supported, trying direct source", videoUrl)
       document.exitFullscreen()
       setIsFullscreen(false)
     }
@@ -272,11 +335,26 @@ export default function VideoPlayer({
 
   const progressPercentage = duration > 0 ? (currentTime / duration) * 100 : 0
 
+  // Add error boundary for the component
+  if (error && error.includes('Invalid video URL')) {
+    return (
+      <div className={`relative overflow-hidden ${className}`} style={{ aspectRatio: '21/9' }}>
+        <div className="absolute inset-0 bg-red-900 bg-opacity-50 flex items-center justify-center z-20 rounded-[58px]">
+          <div className="text-white text-center p-4">
+            <div className="mb-3 text-sm">Invalid video URL provided</div>
+            <div className="text-xs text-gray-300">Please check the video URL and try again</div>
+          </div>
+        </div>
+      </div>
+    )
+  }
+
   return (
     <div 
       className={`relative overflow-hidden group ${className}`}
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
+      style={{ aspectRatio: '21/9' }} // Ensure consistent aspect ratio
     >
       {/* Video Element */}
       <video tabIndex={-1}
@@ -300,7 +378,7 @@ export default function VideoPlayer({
 
       {/* Loading Overlay */}
       {isLoading && (
-        <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center z-20">
+        <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center z-20 rounded-[58px]">
           <div className="flex flex-col items-center space-y-3">
             <Loader2 className="w-8 h-8 text-white animate-spin" />
             <div className="text-white text-sm">Loading video...</div>
@@ -310,7 +388,7 @@ export default function VideoPlayer({
 
       {/* Error Overlay */}
       {error && (
-        <div className="absolute inset-0 bg-red-900 bg-opacity-50 flex items-center justify-center z-20">
+        <div className="absolute inset-0 bg-red-900 bg-opacity-50 flex items-center justify-center z-20 rounded-[58px]">
           <div className="text-white text-center p-4">
             <div className="mb-3 text-sm">{error}</div>
             <button 
@@ -329,7 +407,7 @@ export default function VideoPlayer({
       )}
 
       {/* Video Controls Overlay */}
-      <div className={`absolute inset-0 z-10 transition-opacity duration-300 ${
+      <div className={`absolute inset-0 z-10 transition-opacity duration-300 rounded-[58px] ${
         showControls ? 'opacity-100' : 'opacity-0'
       }`}>
         {/* Top Gradient */}

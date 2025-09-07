@@ -57,6 +57,7 @@ CORS(app, resources={
 # Default configuration
 app.config['TWELVELABS_API_KEY'] = os.environ.get('TWELVELABS_API_KEY', '')
 app.config['PERPLEXITY_API_KEY'] = os.environ.get('PERPLEXITY', '')
+app.config['TWELVELABS_DEFAULT_INDEX_ID'] = os.environ.get('TWELVELABS_INDEX_ID', '')
 
 @app.route('/')
 def index():
@@ -214,6 +215,45 @@ def get_videos():
             'videos': videos
         })
         
+    except Exception as e:
+        return jsonify({'success': False, 'error': str(e)}), 500
+
+@app.route('/api/upload', methods=['POST'])
+def upload_video():
+    try:
+
+        api_key = app.config.get('TWELVELABS_API_KEY')
+        default_index_id = app.config.get('TWELVELABS_DEFAULT_INDEX_ID')
+        if not api_key:
+            return jsonify({'success': False, 'error': 'TwelveLabs API key not configured in environment'}), 400
+        if not default_index_id:
+            return jsonify({'success': False, 'error': 'Default index id not configured in environment (TWELVELABS_INDEX_ID)'}), 400
+        
+        if 'file' not in request.files:
+            return jsonify({'success': False, 'error': 'No file uploaded'}), 400
+        upload_file = request.files['file']
+        if not upload_file or upload_file.filename == '':
+            return jsonify({'success': False, 'error': 'Invalid file'}), 400
+        
+        import tempfile
+        tmp_file = tempfile.NamedTemporaryFile(delete=False)
+        tmp_file_path = tmp_file.name
+        tmp_file.close()
+        upload_file.save(tmp_file_path)
+        
+        try:
+            service = TwelveLabsService(api_key=api_key)
+            result = service.upload_video_file(index_id=default_index_id, file_path=tmp_file_path)
+        finally:
+            try:
+                os.remove(tmp_file_path)
+            except Exception:
+                pass
+        
+        if 'error' in result:
+            return jsonify({'success': False, 'error': result['error'], 'task': result.get('task')}), 400
+        
+        return jsonify({'success': True, 'video_id': result.get('video_id'), 'status': result.get('status')})
     except Exception as e:
         return jsonify({'success': False, 'error': str(e)}), 500
 

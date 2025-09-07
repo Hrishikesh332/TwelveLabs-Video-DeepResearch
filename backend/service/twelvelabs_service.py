@@ -156,4 +156,58 @@ class TwelveLabsService:
                 return None
         except Exception as e:
             print(f"[DEBUG] Exception getting thumbnail: {str(e)}", file=sys.stderr)
-            return None 
+            return None
+
+    def upload_video_file(self, index_id: str, file_path: str, timeout_seconds: int = 900):
+
+        try:
+            if not self.api_key:
+                return {"error": "Missing TwelveLabs API key"}
+            if not index_id:
+                return {"error": "Missing index_id"}
+            if not os.path.exists(file_path):
+                return {"error": f"File not found: {file_path}"}
+
+            tasks_url = "https://api.twelvelabs.io/v1.3/tasks"
+            headers = {
+                "x-api-key": self.api_key
+            }
+
+            # Create upload task
+            with open(file_path, "rb") as f:
+                files = {
+                    "video_file": (os.path.basename(file_path), f)
+                }
+                data = {
+                    "index_id": index_id
+                }
+                resp = requests.post(tasks_url, headers=headers, files=files, data=data)
+
+            if resp.status_code not in (200, 201):
+                return {"error": f"Failed to create upload task: {resp.status_code} {resp.text}"}
+
+            resp_json = resp.json() if resp.text else {}
+            task_id = resp_json.get("id") or resp_json.get("task_id") or resp_json.get("_id")
+            if not task_id:
+                return {"error": f"No task id returned: {resp_json}"}
+
+            # Poll task until ready
+            import time
+            start_time = time.time()
+            while time.time() - start_time < timeout_seconds:
+                r = requests.get(f"{tasks_url}/{task_id}", headers=headers)
+                if r.status_code != 200:
+                    time.sleep(2)
+                    continue
+                task = r.json() if r.text else {}
+                status = task.get("status")
+                if status in ("ready", "completed"):
+                    video_id = task.get("video_id") or (task.get("data") or {}).get("video_id")
+                    return {"status": status, "video_id": video_id, "task": task}
+                if status in ("failed", "error"):
+                    return {"error": f"Indexing failed with status {status}", "task": task}
+                time.sleep(2)
+
+            return {"error": "Upload timed out"}
+        except Exception as e:
+            return {"error": str(e)} 

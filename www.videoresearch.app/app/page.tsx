@@ -317,6 +317,10 @@ export default function DeepResearchLanding() {
     timestamp: Date
     type: 'info' | 'progress' | 'complete' | 'error'
   }>>([])
+  const [uploadFile, setUploadFile] = useState<File | null>(null)
+  const [isUploading, setIsUploading] = useState(false)
+  const [uploadStep, setUploadStep] = useState<0 | 1>(0)
+  const [isSettingUpDefault, setIsSettingUpDefault] = useState(false)
 
   // Auto-load data from environment API key on component mount
   useEffect(() => {
@@ -861,8 +865,8 @@ Please provide a comprehensive answer that builds upon the previous research and
           
           // Merge with existing sources, avoiding duplicates
           setSources(prev => {
-            const existingUrls = new Set(prev.map(s => s.url))
-            const uniqueNewSources = newSources.filter(s => !existingUrls.has(s.url))
+            const existingUrls = new Set(prev.map((s: { url: string }) => s.url))
+            const uniqueNewSources = newSources.filter((s: { url: string }) => !existingUrls.has(s.url))
             return [...prev, ...uniqueNewSources]
           })
         }
@@ -900,6 +904,70 @@ Please provide a comprehensive answer that builds upon the previous research and
     const selectedVideoData = videos.find(v => v.id === videoId)
     setSelectedVideoThumbnail(selectedVideoData?.thumbnail_url || null)
     setSelectedVideoUrl(selectedVideoData?.video_url || null)
+  }
+
+  function getVideoDuration(file: File): Promise<number> {
+    return new Promise((resolve, reject) => {
+      try {
+        const url = URL.createObjectURL(file)
+        const video = document.createElement('video')
+        video.preload = 'metadata'
+        video.onloadedmetadata = () => {
+          URL.revokeObjectURL(url)
+          resolve(Number(video.duration || 0))
+        }
+        video.onerror = () => {
+          URL.revokeObjectURL(url)
+          reject(new Error('Could not read video metadata'))
+        }
+        video.src = url
+      } catch (e) {
+        reject(e)
+      }
+    })
+  }
+
+  async function handleUploadVideo() {
+    if (!uploadFile) {
+      toast({ title: 'No file selected', description: 'Please choose a video file to upload.' })
+      return
+    }
+    // Validate duration 5s–5m before uploading
+    try {
+      const durationSec = await getVideoDuration(uploadFile)
+      if (durationSec < 5 || durationSec > 300) {
+        toast({ title: 'Invalid duration', description: 'Video must be between 5 seconds and 5 minutes.' })
+        return
+      }
+    } catch {
+      toast({ title: 'Error', description: 'Could not read video duration.' })
+      return
+    }
+    setIsUploading(true)
+    try {
+      const formData = new FormData()
+      formData.append('file', uploadFile)
+      const res = await fetch(`${API_BASE_URL}/api/upload`, {
+        method: 'POST',
+        body: formData
+      })
+      const data = await res.json().catch(() => ({} as any))
+      if (!res.ok || !data?.success) {
+        const msg = data?.error || `Upload failed with status ${res.status}`
+        throw new Error(msg)
+      }
+      toast({ title: 'Upload complete', description: `Video uploaded. ID: ${data.video_id}` })
+      // Reset UI to environment key usage
+      await switchToEnvironmentKey()
+      setIsUploadVideoModalOpen(false)
+      setUploadFile(null)
+      setUploadStep(0)
+    } catch (err: unknown) {
+      const message = err instanceof Error ? err.message : 'Failed to upload video'
+      toast({ title: 'Upload failed', description: message })
+    } finally {
+      setIsUploading(false)
+    }
   }
 
   // If research has started, show only the chat interface
@@ -1302,7 +1370,7 @@ Please provide a comprehensive answer that builds upon the previous research and
                           {selectedVideo && videos.find(v => v.id === selectedVideo) && (
                             <div className="flex items-center space-x-2">
                               <VideoThumbnail 
-                                src={selectedVideoThumbnail} 
+                                src={selectedVideoThumbnail || undefined} 
                                 alt="Selected video thumbnail" 
                                 className="w-6 h-6"
                               />
@@ -1474,7 +1542,7 @@ Please provide a comprehensive answer that builds upon the previous research and
 
       {/* API Key Modal */}
       <Dialog open={isApiModalOpen} onOpenChange={setIsApiModalOpen}>
-        <DialogContent className="sm:max-w-md">
+        <DialogContent className="sm:max-w-md !rounded-[58px]">
           <DialogHeader>
             <DialogTitle>
               {isConnected ? 'TwelveLabs API Configuration' : 'Connect TwelveLabs API'}
@@ -1595,7 +1663,7 @@ Please provide a comprehensive answer that builds upon the previous research and
 
       {/* Coming Soon Modal */}
       <Dialog open={isComingSoonOpen} onOpenChange={setIsComingSoonOpen}>
-        <DialogContent className="sm:max-w-md">
+        <DialogContent className="sm:max-w-md !rounded-[58px]">
           <DialogHeader>
             <DialogTitle>Coming Soon!</DialogTitle>
             <DialogDescription>
@@ -1611,18 +1679,193 @@ Please provide a comprehensive answer that builds upon the previous research and
       </Dialog>
 
       {/* Upload Video Modal */}
-      <Dialog open={isUploadVideoModalOpen} onOpenChange={setIsUploadVideoModalOpen}>
-        <DialogContent className="sm:max-w-md">
-          <DialogHeader>
-            <DialogTitle>Upload Video - Coming Soon!</DialogTitle>
-            <DialogDescription>
-              Video upload functionality is currently under development. You'll be able to upload your own videos for analysis soon!
-            </DialogDescription>
-          </DialogHeader>
-          <div className="flex justify-end">
-            <Button onClick={() => setIsUploadVideoModalOpen(false)}>
-              Got it
-            </Button>
+      <Dialog open={isUploadVideoModalOpen} onOpenChange={(open) => { 
+        setIsUploadVideoModalOpen(open); 
+        if (!open) {
+          setUploadFile(null);
+          setUploadStep(0);
+          setIsSettingUpDefault(false);
+        }
+      }}>
+        <DialogContent className="w-[800px] h-[350px] !rounded-[58px] border-2 border-black bg-transparent shadow-none p-0 overflow-hidden [&>button]:hidden" style={{ 
+          backgroundImage: 'url(/card.png)', 
+          backgroundSize: 'cover', 
+          backgroundPosition: 'center'
+        }}>
+          <div className="relative z-10 h-full flex flex-col px-8 py-6">
+            <DialogHeader className="text-center relative">
+              {/* Close Button */}
+              <button
+                onClick={() => {
+                  setIsUploadVideoModalOpen(false);
+                  setUploadFile(null);
+                  setUploadStep(0);
+                  setIsSettingUpDefault(false);
+                }}
+                className="absolute top-0 right-0 w-9 h-9 flex items-center justify-center text-black rounded-full hover:bg-white/20 transition-colors"
+              >
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
+              
+              <DialogTitle className="text-black text-xl font-semibold">Upload Video</DialogTitle>
+              <DialogDescription className="text-black text-sm mt-1">
+                {uploadStep === 0 
+                  ? "Choose your API configuration method for video upload and analysis."
+                  : ""
+                }
+              </DialogDescription>
+            </DialogHeader>
+          
+          <div className="flex-1 flex flex-col justify-center">
+          {uploadStep === 0 ? (
+            // Step 1: API Configuration Selection
+            <div className="space-y-4">
+              <div className="space-y-3">
+                <div className="border rounded-lg p-4 bg-white/80 border-gray-300">
+                  <div className="flex items-center space-x-4">
+                    <div className="w-5 h-5 rounded-full bg-green-500 flex items-center justify-center">
+                      <Check className="w-3 h-3 text-white" />
+                    </div>
+                    <div className="flex-1">
+                      <h4 className="font-semibold text-gray-900 text-base">Default (Environment API Key)</h4>
+                      <p className="text-sm text-gray-700 mt-2">
+                        Use the pre-configured TwelveLabs API key from environment settings. 
+                        Recommended for seamless experience.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div className="flex justify-center pt-2">
+                <Button
+                  onClick={async () => {
+                    setIsSettingUpDefault(true);
+                    try {
+                      await switchToEnvironmentKey();
+                      setUploadStep(1);
+                    } finally {
+                      setIsSettingUpDefault(false);
+                    }
+                  }}
+                  disabled={isSettingUpDefault}
+                  className="bg-gray-900 hover:bg-gray-800 text-white px-12 py-3 text-base"
+                  style={{
+                    background: isSettingUpDefault 
+                      ? "linear-gradient(270deg, #9CA3AF -2.61%, #D1D5DB 70.51%)" 
+                      : "linear-gradient(270deg, #60E21B -2.61%, #D3D1CF 70.51%)",
+                    boxShadow: "inset 0px 0px 0px 1px rgba(0, 0, 0, 0.1)",
+                    borderRadius: "14.4px",
+                    color: "#000",
+                    opacity: isSettingUpDefault ? 0.7 : 1
+                  }}
+                >
+                  {isSettingUpDefault ? (
+                    <>
+                      <Loader2 className="w-4 h-4 mr-2 animate-spin" />
+                      Setting up...
+                    </>
+                  ) : (
+                    'Default'
+                  )}
+                </Button>
+              </div>
+            </div>
+          ) : (
+            // Step 2: File Upload with Drag & Drop
+            <div className="space-y-3">
+              <div className="space-y-2">
+                <div 
+                  className="border-2 border-dashed border-gray-300 rounded-2xl p-6 text-center bg-white/20 hover:bg-white/30 transition-colors cursor-pointer"
+                  onClick={() => document.getElementById('upload-video')?.click()}
+                  onDragOver={(e) => {
+                    e.preventDefault();
+                    e.currentTarget.classList.add('border-blue-400', 'bg-blue-50/30');
+                  }}
+                  onDragLeave={(e) => {
+                    e.preventDefault();
+                    e.currentTarget.classList.remove('border-blue-400', 'bg-blue-50/30');
+                  }}
+                  onDrop={(e) => {
+                    e.preventDefault();
+                    e.currentTarget.classList.remove('border-blue-400', 'bg-blue-50/30');
+                    const files = e.dataTransfer.files;
+                    if (files && files[0]) {
+                      setUploadFile(files[0]);
+                    }
+                  }}
+                >
+                  <div className="flex flex-col items-center space-y-2">
+                    <div className="w-10 h-10 rounded-full border-2 border-black flex items-center justify-center">
+                      <Plus className="w-5 h-5 text-black" />
+                    </div>
+                    <div>
+                      <p className="text-base font-medium text-black mb-1">
+                        {uploadFile ? uploadFile.name : 'Drop videos or browse files'}
+                      </p>
+                      {uploadFile && (
+                        <p className="text-xs text-gray-600">
+                          Size: {(uploadFile.size / (1024 * 1024)).toFixed(1)} MB
+                        </p>
+                      )}
+                    </div>
+                  </div>
+                  <input
+                    id="upload-video"
+                    type="file"
+                    accept="video/*"
+                    onChange={(e) => setUploadFile(e.target.files && e.target.files[0] ? e.target.files[0] : null)}
+                    className="hidden"
+                  />
+                </div>
+                
+                  <div className="text-center">
+                    <p className="text-[10px] text-black mb-1">
+                      Supported videos according to Pegasus model
+                    </p>
+                    <div className="flex justify-center gap-1.5">
+                      <span className="px-2 py-0.5 bg-white/60 rounded-full text-[9px] font-medium text-black border">
+                        4SEC-5MIN [Upload on Playground for more]
+                      </span>
+                      <span className="px-2 py-0.5 bg-white/60 rounded-full text-[9px] font-medium text-black border">
+                        AUDIO REQUIRED
+                      </span>
+                      <span className="px-2 py-0.5 bg-white/60 rounded-full text-[9px] font-medium text-black border">
+                        RESOLUTION 360P-4K
+                      </span>
+                    </div>
+                  </div>
+              </div>
+              
+              <div className="flex justify-end space-x-3 pt-1">
+                <Button
+                  variant="outline"
+                  onClick={() => setUploadStep(0)}
+                  className="border-gray-400 text-black hover:bg-white/50 hover:border-gray-500 px-6 py-2"
+                  disabled={isUploading}
+                >
+                  Back
+                </Button>
+                <Button
+                  onClick={handleUploadVideo}
+                  disabled={!uploadFile || isUploading}
+                  className="bg-black hover:bg-gray-800 text-white px-6 py-2"
+                >
+                  {isUploading ? (
+                    <>
+                      <Loader2 className="w-4 h-4 mr-2 animate-spin" />
+                      Uploading...
+                    </>
+                  ) : (
+                    'Upload'
+                  )}
+                </Button>
+              </div>
+            </div>
+          )}
+          </div>
           </div>
         </DialogContent>
       </Dialog>
@@ -1718,7 +1961,7 @@ Please provide a comprehensive answer that builds upon the previous research and
 
       {/* Blog Modal */}
       <Dialog open={isBlogModalOpen} onOpenChange={setIsBlogModalOpen}>
-        <DialogContent className="sm:max-w-md">
+        <DialogContent className="sm:max-w-md !rounded-[58px]">
           <DialogHeader>
             <DialogTitle className="text-center text-xl font-semibold text-gray-900">
               Coming Soon!

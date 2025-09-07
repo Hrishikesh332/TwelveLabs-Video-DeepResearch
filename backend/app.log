@@ -11632,3 +11632,1591 @@ Please ensure your analysis addresses the user's specific question while providi
   }
 }
 2025-09-05 15:15:47,769 - werkzeug - INFO - 127.0.0.1 - - [05/Sep/2025 15:15:47] "POST /api/workflow HTTP/1.1" 200 -
+2025-09-05 15:22:11,525 - apscheduler.executors.default - INFO - Running job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-05 15:31:11 CEST)" (scheduled at 2025-09-05 15:22:11.516410+02:00)
+2025-09-05 15:22:11,536 - werkzeug - INFO - 127.0.0.1 - - [05/Sep/2025 15:22:11] "GET /health HTTP/1.1" 200 -
+2025-09-05 15:22:11,538 - apscheduler.executors.default - INFO - Job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-05 15:31:11 CEST)" executed successfully
+2025-09-05 15:22:11,860 - apscheduler.executors.default - INFO - Running job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-05 15:31:11 CEST)" (scheduled at 2025-09-05 15:22:11.853236+02:00)
+2025-09-05 15:22:11,868 - werkzeug - INFO - 127.0.0.1 - - [05/Sep/2025 15:22:11] "GET /health HTTP/1.1" 200 -
+2025-09-05 15:22:11,869 - apscheduler.executors.default - INFO - Job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-05 15:31:11 CEST)" executed successfully
+2025-09-05 15:29:49,150 - werkzeug - INFO - 127.0.0.1 - - [05/Sep/2025 15:29:49] "OPTIONS /api/indexes HTTP/1.1" 200 -
+2025-09-05 15:29:49,817 - werkzeug - INFO - 127.0.0.1 - - [05/Sep/2025 15:29:49] "POST /api/indexes HTTP/1.1" 200 -
+2025-09-05 15:29:49,825 - werkzeug - INFO - 127.0.0.1 - - [05/Sep/2025 15:29:49] "OPTIONS /api/videos HTTP/1.1" 200 -
+2025-09-05 15:29:50,460 - werkzeug - INFO - 127.0.0.1 - - [05/Sep/2025 15:29:50] "POST /api/videos HTTP/1.1" 200 -
+2025-09-05 15:30:26,288 - werkzeug - INFO - 127.0.0.1 - - [05/Sep/2025 15:30:26] "OPTIONS /api/config/twelvelabs HTTP/1.1" 200 -
+2025-09-05 15:30:26,292 - werkzeug - INFO - 127.0.0.1 - - [05/Sep/2025 15:30:26] "DELETE /api/config/twelvelabs HTTP/1.1" 200 -
+2025-09-05 15:30:35,550 - werkzeug - INFO - 127.0.0.1 - - [05/Sep/2025 15:30:35] "OPTIONS /api/config/twelvelabs HTTP/1.1" 200 -
+2025-09-05 15:30:36,179 - werkzeug - INFO - 127.0.0.1 - - [05/Sep/2025 15:30:36] "POST /api/config/twelvelabs HTTP/1.1" 200 -
+2025-09-05 15:30:36,188 - werkzeug - INFO - 127.0.0.1 - - [05/Sep/2025 15:30:36] "OPTIONS /api/videos HTTP/1.1" 200 -
+2025-09-05 15:30:36,825 - werkzeug - INFO - 127.0.0.1 - - [05/Sep/2025 15:30:36] "POST /api/videos HTTP/1.1" 200 -
+2025-09-05 15:30:41,277 - werkzeug - INFO - 127.0.0.1 - - [05/Sep/2025 15:30:41] "OPTIONS /api/config/twelvelabs HTTP/1.1" 200 -
+2025-09-05 15:30:41,279 - werkzeug - INFO - 127.0.0.1 - - [05/Sep/2025 15:30:41] "DELETE /api/config/twelvelabs HTTP/1.1" 200 -
+2025-09-05 15:30:41,283 - werkzeug - INFO - 127.0.0.1 - - [05/Sep/2025 15:30:41] "OPTIONS /api/indexes HTTP/1.1" 200 -
+2025-09-05 15:30:41,887 - werkzeug - INFO - 127.0.0.1 - - [05/Sep/2025 15:30:41] "POST /api/indexes HTTP/1.1" 200 -
+2025-09-05 15:30:41,891 - werkzeug - INFO - 127.0.0.1 - - [05/Sep/2025 15:30:41] "OPTIONS /api/videos HTTP/1.1" 200 -
+2025-09-05 15:30:42,309 - werkzeug - INFO - 127.0.0.1 - - [05/Sep/2025 15:30:42] "DELETE /api/config/twelvelabs HTTP/1.1" 200 -
+2025-09-05 15:30:42,485 - werkzeug - INFO - 127.0.0.1 - - [05/Sep/2025 15:30:42] "POST /api/videos HTTP/1.1" 200 -
+2025-09-05 15:30:42,538 - werkzeug - INFO - 127.0.0.1 - - [05/Sep/2025 15:30:42] "DELETE /api/config/twelvelabs HTTP/1.1" 200 -
+2025-09-05 15:30:42,939 - werkzeug - INFO - 127.0.0.1 - - [05/Sep/2025 15:30:42] "POST /api/indexes HTTP/1.1" 200 -
+2025-09-05 15:30:43,168 - werkzeug - INFO - 127.0.0.1 - - [05/Sep/2025 15:30:43] "POST /api/indexes HTTP/1.1" 200 -
+2025-09-05 15:30:43,574 - werkzeug - INFO - 127.0.0.1 - - [05/Sep/2025 15:30:43] "POST /api/videos HTTP/1.1" 200 -
+2025-09-05 15:30:43,827 - werkzeug - INFO - 127.0.0.1 - - [05/Sep/2025 15:30:43] "POST /api/videos HTTP/1.1" 200 -
+2025-09-05 15:30:45,972 - werkzeug - INFO - 127.0.0.1 - - [05/Sep/2025 15:30:45] "DELETE /api/config/twelvelabs HTTP/1.1" 200 -
+2025-09-05 15:30:47,668 - werkzeug - INFO - 127.0.0.1 - - [05/Sep/2025 15:30:47] "OPTIONS /api/config/twelvelabs HTTP/1.1" 200 -
+2025-09-05 15:30:47,670 - werkzeug - INFO - 127.0.0.1 - - [05/Sep/2025 15:30:47] "DELETE /api/config/twelvelabs HTTP/1.1" 200 -
+2025-09-05 15:30:47,674 - werkzeug - INFO - 127.0.0.1 - - [05/Sep/2025 15:30:47] "OPTIONS /api/indexes HTTP/1.1" 200 -
+2025-09-05 15:30:48,307 - werkzeug - INFO - 127.0.0.1 - - [05/Sep/2025 15:30:48] "POST /api/indexes HTTP/1.1" 200 -
+2025-09-05 15:30:48,316 - werkzeug - INFO - 127.0.0.1 - - [05/Sep/2025 15:30:48] "OPTIONS /api/videos HTTP/1.1" 200 -
+2025-09-05 15:30:48,952 - werkzeug - INFO - 127.0.0.1 - - [05/Sep/2025 15:30:48] "POST /api/videos HTTP/1.1" 200 -
+2025-09-05 15:31:11,522 - apscheduler.executors.default - INFO - Running job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-05 15:40:11 CEST)" (scheduled at 2025-09-05 15:31:11.516410+02:00)
+2025-09-05 15:31:11,530 - werkzeug - INFO - 127.0.0.1 - - [05/Sep/2025 15:31:11] "GET /health HTTP/1.1" 200 -
+2025-09-05 15:31:11,532 - apscheduler.executors.default - INFO - Job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-05 15:40:11 CEST)" executed successfully
+2025-09-05 15:31:11,858 - apscheduler.executors.default - INFO - Running job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-05 15:40:11 CEST)" (scheduled at 2025-09-05 15:31:11.853236+02:00)
+2025-09-05 15:31:11,864 - werkzeug - INFO - 127.0.0.1 - - [05/Sep/2025 15:31:11] "GET /health HTTP/1.1" 200 -
+2025-09-05 15:31:11,866 - apscheduler.executors.default - INFO - Job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-05 15:40:11 CEST)" executed successfully
+2025-09-05 15:33:30,161 - werkzeug - INFO - 127.0.0.1 - - [05/Sep/2025 15:33:30] "OPTIONS /api/indexes HTTP/1.1" 200 -
+2025-09-05 15:33:30,818 - werkzeug - INFO - 127.0.0.1 - - [05/Sep/2025 15:33:30] "POST /api/indexes HTTP/1.1" 200 -
+2025-09-05 15:33:30,823 - werkzeug - INFO - 127.0.0.1 - - [05/Sep/2025 15:33:30] "OPTIONS /api/videos HTTP/1.1" 200 -
+2025-09-05 15:33:31,451 - werkzeug - INFO - 127.0.0.1 - - [05/Sep/2025 15:33:31] "POST /api/videos HTTP/1.1" 200 -
+2025-09-05 15:33:38,379 - werkzeug - INFO - 127.0.0.1 - - [05/Sep/2025 15:33:38] "OPTIONS /api/videos HTTP/1.1" 200 -
+2025-09-05 15:33:38,986 - werkzeug - INFO - 127.0.0.1 - - [05/Sep/2025 15:33:38] "POST /api/videos HTTP/1.1" 200 -
+2025-09-05 15:40:11,524 - apscheduler.executors.default - INFO - Running job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-05 15:49:11 CEST)" (scheduled at 2025-09-05 15:40:11.516410+02:00)
+2025-09-05 15:40:11,537 - werkzeug - INFO - 127.0.0.1 - - [05/Sep/2025 15:40:11] "GET /health HTTP/1.1" 200 -
+2025-09-05 15:40:11,539 - apscheduler.executors.default - INFO - Job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-05 15:49:11 CEST)" executed successfully
+2025-09-05 15:40:11,858 - apscheduler.executors.default - INFO - Running job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-05 15:49:11 CEST)" (scheduled at 2025-09-05 15:40:11.853236+02:00)
+2025-09-05 15:40:11,865 - werkzeug - INFO - 127.0.0.1 - - [05/Sep/2025 15:40:11] "GET /health HTTP/1.1" 200 -
+2025-09-05 15:40:11,867 - apscheduler.executors.default - INFO - Job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-05 15:49:11 CEST)" executed successfully
+2025-09-05 15:49:11,546 - apscheduler.executors.default - INFO - Running job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-05 15:58:11 CEST)" (scheduled at 2025-09-05 15:49:11.516410+02:00)
+2025-09-05 15:49:11,564 - werkzeug - INFO - 127.0.0.1 - - [05/Sep/2025 15:49:11] "GET /health HTTP/1.1" 200 -
+2025-09-05 15:49:11,565 - apscheduler.executors.default - INFO - Job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-05 15:58:11 CEST)" executed successfully
+2025-09-05 15:49:11,875 - apscheduler.executors.default - INFO - Running job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-05 15:58:11 CEST)" (scheduled at 2025-09-05 15:49:11.853236+02:00)
+2025-09-05 15:49:11,883 - werkzeug - INFO - 127.0.0.1 - - [05/Sep/2025 15:49:11] "GET /health HTTP/1.1" 200 -
+2025-09-05 15:49:11,885 - apscheduler.executors.default - INFO - Job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-05 15:58:11 CEST)" executed successfully
+2025-09-05 15:58:11,528 - apscheduler.executors.default - INFO - Running job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-05 16:07:11 CEST)" (scheduled at 2025-09-05 15:58:11.516410+02:00)
+2025-09-05 15:58:11,544 - werkzeug - INFO - 127.0.0.1 - - [05/Sep/2025 15:58:11] "GET /health HTTP/1.1" 200 -
+2025-09-05 15:58:11,546 - apscheduler.executors.default - INFO - Job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-05 16:07:11 CEST)" executed successfully
+2025-09-05 15:58:11,863 - apscheduler.executors.default - INFO - Running job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-05 16:07:11 CEST)" (scheduled at 2025-09-05 15:58:11.853236+02:00)
+2025-09-05 15:58:11,872 - werkzeug - INFO - 127.0.0.1 - - [05/Sep/2025 15:58:11] "GET /health HTTP/1.1" 200 -
+2025-09-05 15:58:11,874 - apscheduler.executors.default - INFO - Job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-05 16:07:11 CEST)" executed successfully
+2025-09-05 16:07:11,531 - apscheduler.executors.default - INFO - Running job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-05 16:16:11 CEST)" (scheduled at 2025-09-05 16:07:11.516410+02:00)
+2025-09-05 16:07:11,547 - werkzeug - INFO - 127.0.0.1 - - [05/Sep/2025 16:07:11] "GET /health HTTP/1.1" 200 -
+2025-09-05 16:07:11,549 - apscheduler.executors.default - INFO - Job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-05 16:16:11 CEST)" executed successfully
+2025-09-05 16:07:11,863 - apscheduler.executors.default - INFO - Running job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-05 16:16:11 CEST)" (scheduled at 2025-09-05 16:07:11.853236+02:00)
+2025-09-05 16:07:11,873 - werkzeug - INFO - 127.0.0.1 - - [05/Sep/2025 16:07:11] "GET /health HTTP/1.1" 200 -
+2025-09-05 16:07:11,874 - apscheduler.executors.default - INFO - Job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-05 16:16:11 CEST)" executed successfully
+2025-09-05 16:16:11,533 - apscheduler.executors.default - INFO - Running job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-05 16:25:11 CEST)" (scheduled at 2025-09-05 16:16:11.516410+02:00)
+2025-09-05 16:16:11,550 - werkzeug - INFO - 127.0.0.1 - - [05/Sep/2025 16:16:11] "GET /health HTTP/1.1" 200 -
+2025-09-05 16:16:11,551 - apscheduler.executors.default - INFO - Job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-05 16:25:11 CEST)" executed successfully
+2025-09-05 16:16:11,867 - apscheduler.executors.default - INFO - Running job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-05 16:25:11 CEST)" (scheduled at 2025-09-05 16:16:11.853236+02:00)
+2025-09-05 16:16:11,875 - werkzeug - INFO - 127.0.0.1 - - [05/Sep/2025 16:16:11] "GET /health HTTP/1.1" 200 -
+2025-09-05 16:16:11,876 - apscheduler.executors.default - INFO - Job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-05 16:25:11 CEST)" executed successfully
+2025-09-05 16:25:11,528 - apscheduler.executors.default - INFO - Running job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-05 16:34:11 CEST)" (scheduled at 2025-09-05 16:25:11.516410+02:00)
+2025-09-05 16:25:11,539 - werkzeug - INFO - 127.0.0.1 - - [05/Sep/2025 16:25:11] "GET /health HTTP/1.1" 200 -
+2025-09-05 16:25:11,541 - apscheduler.executors.default - INFO - Job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-05 16:34:11 CEST)" executed successfully
+2025-09-05 16:25:11,858 - apscheduler.executors.default - INFO - Running job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-05 16:34:11 CEST)" (scheduled at 2025-09-05 16:25:11.853236+02:00)
+2025-09-05 16:25:11,863 - werkzeug - INFO - 127.0.0.1 - - [05/Sep/2025 16:25:11] "GET /health HTTP/1.1" 200 -
+2025-09-05 16:25:11,864 - apscheduler.executors.default - INFO - Job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-05 16:34:11 CEST)" executed successfully
+2025-09-05 16:34:11,534 - apscheduler.executors.default - INFO - Running job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-05 16:43:11 CEST)" (scheduled at 2025-09-05 16:34:11.516410+02:00)
+2025-09-05 16:34:11,550 - werkzeug - INFO - 127.0.0.1 - - [05/Sep/2025 16:34:11] "GET /health HTTP/1.1" 200 -
+2025-09-05 16:34:11,552 - apscheduler.executors.default - INFO - Job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-05 16:43:11 CEST)" executed successfully
+2025-09-05 16:34:11,873 - apscheduler.executors.default - INFO - Running job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-05 16:43:11 CEST)" (scheduled at 2025-09-05 16:34:11.853236+02:00)
+2025-09-05 16:34:11,882 - werkzeug - INFO - 127.0.0.1 - - [05/Sep/2025 16:34:11] "GET /health HTTP/1.1" 200 -
+2025-09-05 16:34:11,883 - apscheduler.executors.default - INFO - Job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-05 16:43:11 CEST)" executed successfully
+2025-09-05 16:43:11,529 - apscheduler.executors.default - INFO - Running job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-05 16:52:11 CEST)" (scheduled at 2025-09-05 16:43:11.516410+02:00)
+2025-09-05 16:43:11,544 - werkzeug - INFO - 127.0.0.1 - - [05/Sep/2025 16:43:11] "GET /health HTTP/1.1" 200 -
+2025-09-05 16:43:11,546 - apscheduler.executors.default - INFO - Job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-05 16:52:11 CEST)" executed successfully
+2025-09-05 16:43:11,864 - apscheduler.executors.default - INFO - Running job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-05 16:52:11 CEST)" (scheduled at 2025-09-05 16:43:11.853236+02:00)
+2025-09-05 16:43:11,871 - werkzeug - INFO - 127.0.0.1 - - [05/Sep/2025 16:43:11] "GET /health HTTP/1.1" 200 -
+2025-09-05 16:43:11,873 - apscheduler.executors.default - INFO - Job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-05 16:52:11 CEST)" executed successfully
+2025-09-05 16:52:11,525 - apscheduler.executors.default - INFO - Running job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-05 17:01:11 CEST)" (scheduled at 2025-09-05 16:52:11.516410+02:00)
+2025-09-05 16:52:11,541 - werkzeug - INFO - 127.0.0.1 - - [05/Sep/2025 16:52:11] "GET /health HTTP/1.1" 200 -
+2025-09-05 16:52:11,543 - apscheduler.executors.default - INFO - Job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-05 17:01:11 CEST)" executed successfully
+2025-09-05 16:52:11,862 - apscheduler.executors.default - INFO - Running job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-05 17:01:11 CEST)" (scheduled at 2025-09-05 16:52:11.853236+02:00)
+2025-09-05 16:52:11,869 - werkzeug - INFO - 127.0.0.1 - - [05/Sep/2025 16:52:11] "GET /health HTTP/1.1" 200 -
+2025-09-05 16:52:11,870 - apscheduler.executors.default - INFO - Job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-05 17:01:11 CEST)" executed successfully
+2025-09-05 18:01:27,946 - apscheduler.executors.default - WARNING - Run time of job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-05 18:04:11 CEST)" was missed by 0:06:16.429929
+2025-09-05 18:01:28,285 - apscheduler.executors.default - WARNING - Run time of job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-05 18:04:11 CEST)" was missed by 0:06:16.432456
+2025-09-05 18:24:23,168 - apscheduler.executors.default - WARNING - Run time of job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-05 18:31:11 CEST)" was missed by 0:02:11.652154
+2025-09-05 18:24:23,502 - apscheduler.executors.default - WARNING - Run time of job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-05 18:31:11 CEST)" was missed by 0:02:11.649253
+2025-09-05 18:31:11,523 - apscheduler.executors.default - INFO - Running job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-05 18:40:11 CEST)" (scheduled at 2025-09-05 18:31:11.516410+02:00)
+2025-09-05 18:31:11,540 - werkzeug - INFO - 127.0.0.1 - - [05/Sep/2025 18:31:11] "GET /health HTTP/1.1" 200 -
+2025-09-05 18:31:11,541 - apscheduler.executors.default - INFO - Job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-05 18:40:11 CEST)" executed successfully
+2025-09-05 18:31:11,860 - apscheduler.executors.default - INFO - Running job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-05 18:40:11 CEST)" (scheduled at 2025-09-05 18:31:11.853236+02:00)
+2025-09-05 18:31:11,870 - werkzeug - INFO - 127.0.0.1 - - [05/Sep/2025 18:31:11] "GET /health HTTP/1.1" 200 -
+2025-09-05 18:31:11,872 - apscheduler.executors.default - INFO - Job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-05 18:40:11 CEST)" executed successfully
+2025-09-05 18:40:11,525 - apscheduler.executors.default - INFO - Running job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-05 18:49:11 CEST)" (scheduled at 2025-09-05 18:40:11.516410+02:00)
+2025-09-05 18:40:11,532 - werkzeug - INFO - 127.0.0.1 - - [05/Sep/2025 18:40:11] "GET /health HTTP/1.1" 200 -
+2025-09-05 18:40:11,532 - apscheduler.executors.default - INFO - Job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-05 18:49:11 CEST)" executed successfully
+2025-09-05 18:40:11,862 - apscheduler.executors.default - INFO - Running job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-05 18:49:11 CEST)" (scheduled at 2025-09-05 18:40:11.853236+02:00)
+2025-09-05 18:40:11,878 - werkzeug - INFO - 127.0.0.1 - - [05/Sep/2025 18:40:11] "GET /health HTTP/1.1" 200 -
+2025-09-05 18:40:11,879 - apscheduler.executors.default - INFO - Job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-05 18:49:11 CEST)" executed successfully
+2025-09-05 19:03:35,130 - apscheduler.executors.default - WARNING - Run time of job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-05 19:07:11 CEST)" was missed by 0:05:23.613543
+2025-09-05 19:03:35,470 - apscheduler.executors.default - WARNING - Run time of job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-05 19:07:11 CEST)" was missed by 0:05:23.617525
+2025-09-05 19:07:11,522 - apscheduler.executors.default - INFO - Running job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-05 19:16:11 CEST)" (scheduled at 2025-09-05 19:07:11.516410+02:00)
+2025-09-05 19:07:11,536 - werkzeug - INFO - 127.0.0.1 - - [05/Sep/2025 19:07:11] "GET /health HTTP/1.1" 200 -
+2025-09-05 19:07:11,539 - apscheduler.executors.default - INFO - Job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-05 19:16:11 CEST)" executed successfully
+2025-09-05 19:07:11,860 - apscheduler.executors.default - INFO - Running job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-05 19:16:11 CEST)" (scheduled at 2025-09-05 19:07:11.853236+02:00)
+2025-09-05 19:07:11,879 - werkzeug - INFO - 127.0.0.1 - - [05/Sep/2025 19:07:11] "GET /health HTTP/1.1" 200 -
+2025-09-05 19:07:11,880 - apscheduler.executors.default - INFO - Job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-05 19:16:11 CEST)" executed successfully
+2025-09-05 19:16:11,519 - apscheduler.executors.default - INFO - Running job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-05 19:25:11 CEST)" (scheduled at 2025-09-05 19:16:11.516410+02:00)
+2025-09-05 19:16:11,534 - werkzeug - INFO - 127.0.0.1 - - [05/Sep/2025 19:16:11] "GET /health HTTP/1.1" 200 -
+2025-09-05 19:16:11,536 - apscheduler.executors.default - INFO - Job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-05 19:25:11 CEST)" executed successfully
+2025-09-05 19:16:11,858 - apscheduler.executors.default - INFO - Running job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-05 19:25:11 CEST)" (scheduled at 2025-09-05 19:16:11.853236+02:00)
+2025-09-05 19:16:11,869 - werkzeug - INFO - 127.0.0.1 - - [05/Sep/2025 19:16:11] "GET /health HTTP/1.1" 200 -
+2025-09-05 19:16:11,871 - apscheduler.executors.default - INFO - Job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-05 19:25:11 CEST)" executed successfully
+2025-09-05 19:27:41,135 - apscheduler.executors.default - WARNING - Run time of job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-05 19:34:11 CEST)" was missed by 0:02:29.619066
+2025-09-05 19:27:41,470 - apscheduler.executors.default - WARNING - Run time of job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-05 19:34:11 CEST)" was missed by 0:02:29.617058
+2025-09-05 19:34:11,521 - apscheduler.executors.default - INFO - Running job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-05 19:43:11 CEST)" (scheduled at 2025-09-05 19:34:11.516410+02:00)
+2025-09-05 19:34:11,539 - werkzeug - INFO - 127.0.0.1 - - [05/Sep/2025 19:34:11] "GET /health HTTP/1.1" 200 -
+2025-09-05 19:34:11,541 - apscheduler.executors.default - INFO - Job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-05 19:43:11 CEST)" executed successfully
+2025-09-05 19:34:11,857 - apscheduler.executors.default - INFO - Running job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-05 19:43:11 CEST)" (scheduled at 2025-09-05 19:34:11.853236+02:00)
+2025-09-05 19:34:11,865 - werkzeug - INFO - 127.0.0.1 - - [05/Sep/2025 19:34:11] "GET /health HTTP/1.1" 200 -
+2025-09-05 19:34:11,867 - apscheduler.executors.default - INFO - Job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-05 19:43:11 CEST)" executed successfully
+2025-09-06 00:59:56,188 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-09-06 00:59:56,189 - apscheduler.scheduler - INFO - Added job "wake_up_app" to job store "default"
+2025-09-06 00:59:56,189 - apscheduler.scheduler - INFO - Scheduler started
+2025-09-06 00:59:56,192 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 9
+2025-09-06 00:59:56,192 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 12
+2025-09-06 00:59:56,204 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.2.73:5000
+2025-09-06 00:59:56,204 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-09-06 00:59:56,209 - werkzeug - INFO -  * Restarting with watchdog (fsevents)
+2025-09-06 00:59:56,479 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-09-06 00:59:56,479 - apscheduler.scheduler - INFO - Added job "wake_up_app" to job store "default"
+2025-09-06 00:59:56,479 - apscheduler.scheduler - INFO - Scheduler started
+2025-09-06 00:59:56,482 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 9
+2025-09-06 00:59:56,482 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 12
+2025-09-06 00:59:56,483 - werkzeug - WARNING -  * Debugger is active!
+2025-09-06 00:59:56,489 - werkzeug - INFO -  * Debugger PIN: 237-707-018
+2025-09-06 01:01:01,714 - werkzeug - INFO - 127.0.0.1 - - [06/Sep/2025 01:01:01] "OPTIONS /api/indexes HTTP/1.1" 200 -
+2025-09-06 01:01:02,477 - werkzeug - INFO - 127.0.0.1 - - [06/Sep/2025 01:01:02] "POST /api/indexes HTTP/1.1" 200 -
+2025-09-06 01:01:02,480 - werkzeug - INFO - 127.0.0.1 - - [06/Sep/2025 01:01:02] "OPTIONS /api/videos HTTP/1.1" 200 -
+2025-09-06 01:01:03,090 - werkzeug - INFO - 127.0.0.1 - - [06/Sep/2025 01:01:03] "POST /api/videos HTTP/1.1" 200 -
+2025-09-06 01:07:30,903 - werkzeug - INFO - 127.0.0.1 - - [06/Sep/2025 01:07:30] "OPTIONS /api/indexes HTTP/1.1" 200 -
+2025-09-06 01:07:31,639 - werkzeug - INFO - 127.0.0.1 - - [06/Sep/2025 01:07:31] "POST /api/indexes HTTP/1.1" 200 -
+2025-09-06 01:07:31,644 - werkzeug - INFO - 127.0.0.1 - - [06/Sep/2025 01:07:31] "OPTIONS /api/videos HTTP/1.1" 200 -
+2025-09-06 01:07:32,237 - werkzeug - INFO - 127.0.0.1 - - [06/Sep/2025 01:07:32] "POST /api/videos HTTP/1.1" 200 -
+2025-09-06 01:07:34,934 - werkzeug - INFO - 127.0.0.1 - - [06/Sep/2025 01:07:34] "POST /api/videos HTTP/1.1" 200 -
+2025-09-06 01:07:44,346 - werkzeug - INFO - 127.0.0.1 - - [06/Sep/2025 01:07:44] "OPTIONS /api/workflow HTTP/1.1" 200 -
+2025-09-06 01:07:44,349 - __main__ - INFO - === WORKFLOW REQUEST START ===
+2025-09-06 01:07:44,349 - __main__ - INFO - Request data: {
+  "index_id": "689227dd2f1f2c050e0b851e",
+  "video_id": "68938fc108a37aa08793d8aa",
+  "analysis_prompt": "Please provide a comprehensive analysis of this video content. Include:\n\n1. **Content Overview**: What is happening in the video? Describe the main events, actions, and scenes.\n2. **Key Elements**: Identify important objects, people, locations, activities, and interactions.\n3. **Context & Setting**: What is the environment, time period, or context of the video?\n4. **Narrative Flow**: How does the story or sequence of events unfold?\n5. **Notable Details**: Highlight any significant details, patterns, or unique aspects.\n6. **Technical Aspects**: Note video quality, camera work, editing, or production elements if relevant.\n\nUser's Specific Query: Research about it\n\nPlease ensure your analysis addresses the user's specific question while providing comprehensive coverage of the video content.",
+  "research_query": "Research about it"
+}
+2025-09-06 01:07:44,349 - __main__ - INFO - Parameters extracted:
+2025-09-06 01:07:44,350 - __main__ - INFO -   - Index ID: 689227dd2f1f2c050e0b851e
+2025-09-06 01:07:44,350 - __main__ - INFO -   - Video ID: 68938fc108a37aa08793d8aa
+2025-09-06 01:07:44,350 - __main__ - INFO -   - Analysis Prompt: Please provide a comprehensive analysis of this video content. Include:
+
+1. **Content Overview**: What is happening in the video? Describe the main events, actions, and scenes.
+2. **Key Elements**: Identify important objects, people, locations, activities, and interactions.
+3. **Context & Setting**: What is the environment, time period, or context of the video?
+4. **Narrative Flow**: How does the story or sequence of events unfold?
+5. **Notable Details**: Highlight any significant details, patterns, or unique aspects.
+6. **Technical Aspects**: Note video quality, camera work, editing, or production elements if relevant.
+
+User's Specific Query: Research about it
+
+Please ensure your analysis addresses the user's specific question while providing comprehensive coverage of the video content.
+2025-09-06 01:07:44,350 - __main__ - INFO -   - Research Query: Research about it
+2025-09-06 01:07:44,350 - __main__ - INFO - Step 1: Getting video details from TwelveLabs...
+2025-09-06 01:07:44,986 - __main__ - INFO - Video details retrieved successfully: {
+  "_id": "68938fc108a37aa08793d8aa",
+  "created_at": "2025-08-06T17:24:17Z",
+  "system_metadata": {
+    "duration": 120.000726,
+    "filename": "2-Minute Neuroscience\uff1a Electroencephalography (EEG)_tZcKT4l_JZk.mp4",
+    "fps": 30,
+    "height": 360,
+    "size": 3358684,
+    "width": 640
+  },
+  "hls": {
+    "video_url": "https://deuqpmn4rs7j5.cloudfront.net/6633a646e06d1c2c0212c7df/68938fc108a37aa08793d8aa/stream/d9518b6a-5ed6-4ddc-ad48-f76bc86142f3.m3u8",
+    "thumbnail_urls": [
+      "https://deuqpmn4rs7j5.cloudfront.net/6633a646e06d1c2c0212c7df/68938fc108a37aa08793d8aa/thumbnails/d9518b6a-5ed6-4ddc-ad48-f76bc86142f3.0000001.jpg"
+    ],
+    "status": "COMPLETE",
+    "updated_at": "2025-08-07T01:26:01.045Z"
+  }
+}
+2025-09-06 01:07:44,987 - __main__ - INFO - Step 2: Analyzing video content...
+2025-09-06 01:07:59,463 - httpx - INFO - HTTP Request: POST https://api.twelvelabs.io/v1.3/analyze "HTTP/1.1 200 OK"
+2025-09-06 01:07:59,470 - __main__ - INFO - Video analysis completed: "The video provides an educational overview of electroencephalography (EEG), a technique used to measure the electrical activity of the brain. It begins by introducing the term \"EEG\" and then transitions to a diagram of a human head with electrodes placed on the scalp, illustrating how EEG measures brain activity. The video explains that EEG primarily detects the activity of large groups of neurons and measures postsynaptic potentials rather than action potentials. It also showcases an EEG graph to demonstrate how the technique can be used to measure brain activity during specific events or spontaneously.\n\nKey elements in the video include the whiteboard where \"EEG\" is written, the diagram of the human head with electrodes, and the EEG graph. The video does not feature any specific people or locations but focuses on the technical aspects of EEG.\n\nThe context and setting of the video are educational, likely aimed at students or individuals interested in neuroscience. The video is presented in a straightforward manner, with clear visuals and concise explanations, suggesting a classroom or tutorial environment.\n\nThe narrative flow is logical and structured. It starts with the introduction of EEG, moves to a detailed explanation of how it works, and then discusses its applications and limitations. The video uses visual aids effectively to enhance understanding and maintain viewer engagement.\n\nNotable details include the explanation that EEG measures the activity of large groups of neurons rather than individual neurons, and it primarily records postsynaptic potentials. The video also highlights the advantages of EEG, such as its relatively low cost and the ability to measure brain activity on the order of milliseconds, while also noting its limitations, such as poor spatial precision and difficulty in recording from deeper brain structures.\n\nIn terms of technical aspects, the video quality is clear, with well-defined visuals and a consistent presentation style. The camera work is simple, focusing on the whiteboard and diagrams, and the editing is straightforward, allowing for a smooth transition between different points of the explanation."
+2025-09-06 01:07:59,471 - __main__ - INFO - Step 3: Conducting deep research using Sonar...
+2025-09-06 01:07:59,471 - __main__ - INFO - Enhanced research query created: "\nBased on this video analysis: The video provides an educational overview of electroencephalography (EEG), a technique used to measure the electrical activity of the brain. It begins by introducing the term \"EEG\" and then transitions to a diagram of a human head with electrodes placed on the scalp, illustrating how EEG measures brain activity. The video explains that EEG primarily detects the activity of large groups of neurons and measures postsynaptic potentials rather than action potentials. It also showcases an EEG graph to demonstrate how the technique can be used to measure brain activity during specific events or spontaneously.\n\nKey elements in the video include the whiteboard where \"EEG\" is written, the diagram of the human head with electrodes, and the EEG graph. The video does not feature any specific people or locations but focuses on the technical aspects of EEG.\n\nThe context and setting of the video are educational, likely aimed at students or individuals interested in neuroscience. The video is presented in a straightforward manner, with clear visuals and concise explanations, suggesting a classroom or tutorial environment.\n\nThe narrative flow is logical and structured. It starts with the introduction of EEG, moves to a detailed explanation of how it works, and then discusses its applications and limitations. The video uses visual aids effectively to enhance understanding and maintain viewer engagement.\n\nNotable details include the explanation that EEG measures the activity of large groups of neurons rather than individual neurons, and it primarily records postsynaptic potentials. The video also highlights the advantages of EEG, such as its relatively low cost and the ability to measure brain activity on the order of milliseconds, while also noting its limitations, such as poor spatial precision and difficulty in recording from deeper brain structures.\n\nIn terms of technical aspects, the video quality is clear, with well-defined visuals and a consistent presentation style. The camera work is simple, focusing on the whiteboard and diagrams, and the editing is straightforward, allowing for a smooth transition between different points of the explanation.\n\nPlease research: Research about it\n\nProvide comprehensive insights that connect the video content with current trends, developments, and relevant information.\n"
+2025-09-06 01:08:08,499 - __main__ - INFO - Sonar research completed: {
+  "id": "338ad8dd-aa55-4d5e-8857-752e9ef7fe28",
+  "model": "sonar",
+  "created": 1757113688,
+  "usage": {
+    "prompt_tokens": 415,
+    "completion_tokens": 530,
+    "total_tokens": 945,
+    "search_context_size": "low",
+    "cost": {
+      "input_tokens_cost": 0.0,
+      "output_tokens_cost": 0.001,
+      "request_cost": 0.005,
+      "total_cost": 0.006
+    }
+  },
+  "citations": [
+    "https://tstelemed.com/eeg-basics/",
+    "https://www.jove.com/v/5420/eeg-eeg-signal-origin-even-related-potentials-cognition",
+    "https://www.youtube.com/watch?v=tZcKT4l_JZk",
+    "https://www.cureepilepsy.org/webinars/the-abcs-of-eegs-an-evolving-tool-for-epilepsy-diagnosis/",
+    "https://www.youtube.com/watch?v=FpdyFMNEZRM"
+  ],
+  "search_results": [
+    {
+      "title": "EEG Basics | TeleSpecialists, LLC",
+      "url": "https://tstelemed.com/eeg-basics/",
+      "date": "2024-01-29",
+      "last_updated": "2025-05-04",
+      "snippet": "William Dotson describes the basic principles of electroencephalogram (EEG), proper usage of filters, and operation of basic EEG equipment."
+    },
+    {
+      "title": "Electro-encephalography (EEG) - JoVE",
+      "url": "https://www.jove.com/v/5420/eeg-eeg-signal-origin-even-related-potentials-cognition",
+      "date": "2023-04-30",
+      "last_updated": "2025-07-25",
+      "snippet": "In this video, we will briefly explain how EEG signals are generated, how EEG is applied to cognitive research, the standard method of EEG ..."
+    },
+    {
+      "title": "2-Minute Neuroscience: Electroencephalography (EEG) - YouTube",
+      "url": "https://www.youtube.com/watch?v=tZcKT4l_JZk",
+      "date": "2019-11-04",
+      "last_updated": "2025-08-30",
+      "snippet": "Missing: educational script"
+    },
+    {
+      "title": "The ABCs of EEGs: An Evolving Tool for Epilepsy Diagnosis",
+      "url": "https://www.cureepilepsy.org/webinars/the-abcs-of-eegs-an-evolving-tool-for-epilepsy-diagnosis/",
+      "date": "2020-02-10",
+      "last_updated": "2025-02-07",
+      "snippet": "This webinar discusses how epilepsy patients have benefited from advances in EEG technology and the role of the EEG and other neuroimaging tools."
+    },
+    {
+      "title": "Understanding EEG: A Practical Guide for Patients and Families",
+      "url": "https://www.youtube.com/watch?v=FpdyFMNEZRM",
+      "date": "2023-05-30",
+      "last_updated": "2025-07-01",
+      "snippet": "Description: Electroencephalography, or EEG, is an important tool in epilepsy diagnosis and management. Kerri Neville, M.D., will help to ..."
+    }
+  ],
+  "object": "chat.completion",
+  "choices": [
+    {
+      "index": 0,
+      "finish_reason": "stop",
+      "message": {
+        "role": "assistant",
+        "content": "The video overview of electroencephalography (EEG) accurately reflects the fundamentals and current understanding of EEG as a noninvasive method to measure brain electrical activity, specifically postsynaptic potentials from large populations of cortical neurons. EEG remains a widely used tool for both research and clinical applications due to its high temporal resolution, relatively low cost, and portability, despite inherent limitations such as low spatial resolution and inability to detect deep brain activity effectively[2][3].\n\n**Key Technical and Scientific Insights:**\n\n- **Signal Origin:** EEG measures summed postsynaptic potentials primarily from pyramidal neurons in the cerebral cortex. These neurons generate dipoles due to ionic currents in dendrites and soma, which EEG electrodes detect as voltage changes on the scalp[2].\n\n- **Applications:** EEG is extensively used for studying cognitive processes (like event-related potentials), diagnosing neurological disorders such as epilepsy, and monitoring sleep disorders. Its ability to capture brain activity at millisecond precision makes it essential for understanding dynamic brain states and responses to stimuli[3][4].\n\n- **Advantages and Limitations:** The video\u2019s emphasis on EEG\u2019s strengths\u2014low cost, portability, and temporal precision\u2014is well supported. Advances in EEG technology have improved signal detection and mobility, enabling long-term monitoring and better seizure localization in epilepsy care[4]. However, poor spatial resolution limits precise brain region localization, and deep brain structures remain largely inaccessible by scalp EEG[3].\n\n- **Technological Developments:** Recent trends include improved filtering and signal processing techniques, integration with other neuroimaging modalities, and advances in electrode design increasing comfort and signal quality[1][4]. Machine learning methods are also being applied to EEG data analysis to enhance diagnostic accuracy and brain-computer interface applications.\n\n**Contextualizing the Video in Current Research and Clinical Trends:**\n\n- The video\u2019s educational focus on EEG basics fits with ongoing efforts to train healthcare providers and researchers in EEG interpretation and usage, supported by accredited programs like those described by telemedicine organizations[1].\n\n- EEG remains an evolving tool, particularly in epilepsy diagnosis and management, where newer EEG variants and long-term monitoring help better characterize seizure types and guide treatment[4][5].\n\n- Research increasingly leverages EEG\u2019s rapid time-scale resolution for cognitive neuroscience, studying brain dynamics noninvasively during tasks or resting states. The video\u2019s explanation aligns well with this expanded role[2].\n\nOverall, the video provides a clear, accurate foundation in EEG principles that matches current scientific consensus and clinical practices. Increasing integration with computational advances and multimodal imaging promises to enhance EEG\u2019s diagnostic and research power in the near future."
+      },
+      "delta": {
+        "role": "assistant",
+        "content": ""
+      }
+    }
+  ]
+}
+2025-09-06 01:08:08,500 - __main__ - INFO - Adding sources to research result...
+2025-09-06 01:08:08,500 - __main__ - INFO - Sources added to research result: [
+  {
+    "title": "TechCrunch",
+    "url": "https://techcrunch.com",
+    "description": "Technology news and analysis"
+  },
+  {
+    "title": "Gartner Research",
+    "url": "https://gartner.com",
+    "description": "Industry research and insights"
+  },
+  {
+    "title": "McKinsey & Company",
+    "url": "https://mckinsey.com",
+    "description": "Business and technology trends"
+  },
+  {
+    "title": "The Verge",
+    "url": "https://theverge.com",
+    "description": "Technology and culture coverage"
+  },
+  {
+    "title": "MIT Technology Review",
+    "url": "https://technologyreview.com",
+    "description": "In-depth technology analysis"
+  }
+]
+2025-09-06 01:08:08,501 - __main__ - INFO - === WORKFLOW COMPLETED SUCCESSFULLY ===
+2025-09-06 01:08:08,501 - __main__ - INFO - Final response: {
+  "success": true,
+  "workflow": {
+    "video_details": {
+      "_id": "68938fc108a37aa08793d8aa",
+      "created_at": "2025-08-06T17:24:17Z",
+      "system_metadata": {
+        "duration": 120.000726,
+        "filename": "2-Minute Neuroscience\uff1a Electroencephalography (EEG)_tZcKT4l_JZk.mp4",
+        "fps": 30,
+        "height": 360,
+        "size": 3358684,
+        "width": 640
+      },
+      "hls": {
+        "video_url": "https://deuqpmn4rs7j5.cloudfront.net/6633a646e06d1c2c0212c7df/68938fc108a37aa08793d8aa/stream/d9518b6a-5ed6-4ddc-ad48-f76bc86142f3.m3u8",
+        "thumbnail_urls": [
+          "https://deuqpmn4rs7j5.cloudfront.net/6633a646e06d1c2c0212c7df/68938fc108a37aa08793d8aa/thumbnails/d9518b6a-5ed6-4ddc-ad48-f76bc86142f3.0000001.jpg"
+        ],
+        "status": "COMPLETE",
+        "updated_at": "2025-08-07T01:26:01.045Z"
+      }
+    },
+    "analysis": "The video provides an educational overview of electroencephalography (EEG), a technique used to measure the electrical activity of the brain. It begins by introducing the term \"EEG\" and then transitions to a diagram of a human head with electrodes placed on the scalp, illustrating how EEG measures brain activity. The video explains that EEG primarily detects the activity of large groups of neurons and measures postsynaptic potentials rather than action potentials. It also showcases an EEG graph to demonstrate how the technique can be used to measure brain activity during specific events or spontaneously.\n\nKey elements in the video include the whiteboard where \"EEG\" is written, the diagram of the human head with electrodes, and the EEG graph. The video does not feature any specific people or locations but focuses on the technical aspects of EEG.\n\nThe context and setting of the video are educational, likely aimed at students or individuals interested in neuroscience. The video is presented in a straightforward manner, with clear visuals and concise explanations, suggesting a classroom or tutorial environment.\n\nThe narrative flow is logical and structured. It starts with the introduction of EEG, moves to a detailed explanation of how it works, and then discusses its applications and limitations. The video uses visual aids effectively to enhance understanding and maintain viewer engagement.\n\nNotable details include the explanation that EEG measures the activity of large groups of neurons rather than individual neurons, and it primarily records postsynaptic potentials. The video also highlights the advantages of EEG, such as its relatively low cost and the ability to measure brain activity on the order of milliseconds, while also noting its limitations, such as poor spatial precision and difficulty in recording from deeper brain structures.\n\nIn terms of technical aspects, the video quality is clear, with well-defined visuals and a consistent presentation style. The camera work is simple, focusing on the whiteboard and diagrams, and the editing is straightforward, allowing for a smooth transition between different points of the explanation.",
+    "research": {
+      "id": "338ad8dd-aa55-4d5e-8857-752e9ef7fe28",
+      "model": "sonar",
+      "created": 1757113688,
+      "usage": {
+        "prompt_tokens": 415,
+        "completion_tokens": 530,
+        "total_tokens": 945,
+        "search_context_size": "low",
+        "cost": {
+          "input_tokens_cost": 0.0,
+          "output_tokens_cost": 0.001,
+          "request_cost": 0.005,
+          "total_cost": 0.006
+        }
+      },
+      "citations": [
+        "https://tstelemed.com/eeg-basics/",
+        "https://www.jove.com/v/5420/eeg-eeg-signal-origin-even-related-potentials-cognition",
+        "https://www.youtube.com/watch?v=tZcKT4l_JZk",
+        "https://www.cureepilepsy.org/webinars/the-abcs-of-eegs-an-evolving-tool-for-epilepsy-diagnosis/",
+        "https://www.youtube.com/watch?v=FpdyFMNEZRM"
+      ],
+      "search_results": [
+        {
+          "title": "EEG Basics | TeleSpecialists, LLC",
+          "url": "https://tstelemed.com/eeg-basics/",
+          "date": "2024-01-29",
+          "last_updated": "2025-05-04",
+          "snippet": "William Dotson describes the basic principles of electroencephalogram (EEG), proper usage of filters, and operation of basic EEG equipment."
+        },
+        {
+          "title": "Electro-encephalography (EEG) - JoVE",
+          "url": "https://www.jove.com/v/5420/eeg-eeg-signal-origin-even-related-potentials-cognition",
+          "date": "2023-04-30",
+          "last_updated": "2025-07-25",
+          "snippet": "In this video, we will briefly explain how EEG signals are generated, how EEG is applied to cognitive research, the standard method of EEG ..."
+        },
+        {
+          "title": "2-Minute Neuroscience: Electroencephalography (EEG) - YouTube",
+          "url": "https://www.youtube.com/watch?v=tZcKT4l_JZk",
+          "date": "2019-11-04",
+          "last_updated": "2025-08-30",
+          "snippet": "Missing: educational script"
+        },
+        {
+          "title": "The ABCs of EEGs: An Evolving Tool for Epilepsy Diagnosis",
+          "url": "https://www.cureepilepsy.org/webinars/the-abcs-of-eegs-an-evolving-tool-for-epilepsy-diagnosis/",
+          "date": "2020-02-10",
+          "last_updated": "2025-02-07",
+          "snippet": "This webinar discusses how epilepsy patients have benefited from advances in EEG technology and the role of the EEG and other neuroimaging tools."
+        },
+        {
+          "title": "Understanding EEG: A Practical Guide for Patients and Families",
+          "url": "https://www.youtube.com/watch?v=FpdyFMNEZRM",
+          "date": "2023-05-30",
+          "last_updated": "2025-07-01",
+          "snippet": "Description: Electroencephalography, or EEG, is an important tool in epilepsy diagnosis and management. Kerri Neville, M.D., will help to ..."
+        }
+      ],
+      "object": "chat.completion",
+      "choices": [
+        {
+          "index": 0,
+          "finish_reason": "stop",
+          "message": {
+            "role": "assistant",
+            "content": "The video overview of electroencephalography (EEG) accurately reflects the fundamentals and current understanding of EEG as a noninvasive method to measure brain electrical activity, specifically postsynaptic potentials from large populations of cortical neurons. EEG remains a widely used tool for both research and clinical applications due to its high temporal resolution, relatively low cost, and portability, despite inherent limitations such as low spatial resolution and inability to detect deep brain activity effectively[2][3].\n\n**Key Technical and Scientific Insights:**\n\n- **Signal Origin:** EEG measures summed postsynaptic potentials primarily from pyramidal neurons in the cerebral cortex. These neurons generate dipoles due to ionic currents in dendrites and soma, which EEG electrodes detect as voltage changes on the scalp[2].\n\n- **Applications:** EEG is extensively used for studying cognitive processes (like event-related potentials), diagnosing neurological disorders such as epilepsy, and monitoring sleep disorders. Its ability to capture brain activity at millisecond precision makes it essential for understanding dynamic brain states and responses to stimuli[3][4].\n\n- **Advantages and Limitations:** The video\u2019s emphasis on EEG\u2019s strengths\u2014low cost, portability, and temporal precision\u2014is well supported. Advances in EEG technology have improved signal detection and mobility, enabling long-term monitoring and better seizure localization in epilepsy care[4]. However, poor spatial resolution limits precise brain region localization, and deep brain structures remain largely inaccessible by scalp EEG[3].\n\n- **Technological Developments:** Recent trends include improved filtering and signal processing techniques, integration with other neuroimaging modalities, and advances in electrode design increasing comfort and signal quality[1][4]. Machine learning methods are also being applied to EEG data analysis to enhance diagnostic accuracy and brain-computer interface applications.\n\n**Contextualizing the Video in Current Research and Clinical Trends:**\n\n- The video\u2019s educational focus on EEG basics fits with ongoing efforts to train healthcare providers and researchers in EEG interpretation and usage, supported by accredited programs like those described by telemedicine organizations[1].\n\n- EEG remains an evolving tool, particularly in epilepsy diagnosis and management, where newer EEG variants and long-term monitoring help better characterize seizure types and guide treatment[4][5].\n\n- Research increasingly leverages EEG\u2019s rapid time-scale resolution for cognitive neuroscience, studying brain dynamics noninvasively during tasks or resting states. The video\u2019s explanation aligns well with this expanded role[2].\n\nOverall, the video provides a clear, accurate foundation in EEG principles that matches current scientific consensus and clinical practices. Increasing integration with computational advances and multimodal imaging promises to enhance EEG\u2019s diagnostic and research power in the near future."
+          },
+          "delta": {
+            "role": "assistant",
+            "content": ""
+          }
+        }
+      ],
+      "sources": [
+        {
+          "title": "TechCrunch",
+          "url": "https://techcrunch.com",
+          "description": "Technology news and analysis"
+        },
+        {
+          "title": "Gartner Research",
+          "url": "https://gartner.com",
+          "description": "Industry research and insights"
+        },
+        {
+          "title": "McKinsey & Company",
+          "url": "https://mckinsey.com",
+          "description": "Business and technology trends"
+        },
+        {
+          "title": "The Verge",
+          "url": "https://theverge.com",
+          "description": "Technology and culture coverage"
+        },
+        {
+          "title": "MIT Technology Review",
+          "url": "https://technologyreview.com",
+          "description": "In-depth technology analysis"
+        }
+      ]
+    }
+  },
+  "summary": {
+    "video_id": "68938fc108a37aa08793d8aa",
+    "index_id": "689227dd2f1f2c050e0b851e",
+    "analysis_prompt": "Please provide a comprehensive analysis of this video content. Include:\n\n1. **Content Overview**: What is happening in the video? Describe the main events, actions, and scenes.\n2. **Key Elements**: Identify important objects, people, locations, activities, and interactions.\n3. **Context & Setting**: What is the environment, time period, or context of the video?\n4. **Narrative Flow**: How does the story or sequence of events unfold?\n5. **Notable Details**: Highlight any significant details, patterns, or unique aspects.\n6. **Technical Aspects**: Note video quality, camera work, editing, or production elements if relevant.\n\nUser's Specific Query: Research about it\n\nPlease ensure your analysis addresses the user's specific question while providing comprehensive coverage of the video content.",
+    "research_query": "Research about it",
+    "research_status": "completed"
+  }
+}
+2025-09-06 01:08:08,502 - werkzeug - INFO - 127.0.0.1 - - [06/Sep/2025 01:08:08] "POST /api/workflow HTTP/1.1" 200 -
+2025-09-06 01:08:21,880 - werkzeug - INFO -  * Detected change in '/Users/hrishikesh/Desktop/Video DeepResearch/TwelveLabs-Video-DeepResearch/backend/service/twelvelabs_service.py', reloading
+2025-09-06 01:08:22,657 - werkzeug - INFO -  * Restarting with watchdog (fsevents)
+2025-09-06 01:08:23,072 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-09-06 01:08:23,072 - apscheduler.scheduler - INFO - Added job "wake_up_app" to job store "default"
+2025-09-06 01:08:23,072 - apscheduler.scheduler - INFO - Scheduler started
+2025-09-06 01:08:23,075 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 9
+2025-09-06 01:08:23,076 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 12
+2025-09-06 01:08:23,078 - werkzeug - WARNING -  * Debugger is active!
+2025-09-06 01:08:23,082 - werkzeug - INFO -  * Debugger PIN: 237-707-018
+2025-09-06 01:08:33,890 - werkzeug - INFO -  * Detected change in '/Users/hrishikesh/Desktop/Video DeepResearch/TwelveLabs-Video-DeepResearch/backend/app.py', reloading
+2025-09-06 01:08:34,193 - werkzeug - INFO -  * Restarting with watchdog (fsevents)
+2025-09-06 01:08:34,463 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-09-06 01:08:34,463 - apscheduler.scheduler - INFO - Added job "wake_up_app" to job store "default"
+2025-09-06 01:08:34,463 - apscheduler.scheduler - INFO - Scheduler started
+2025-09-06 01:08:34,466 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 9
+2025-09-06 01:08:34,466 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 12
+2025-09-06 01:08:34,467 - werkzeug - WARNING -  * Debugger is active!
+2025-09-06 01:08:34,470 - werkzeug - INFO -  * Debugger PIN: 237-707-018
+2025-09-06 01:08:56,105 - werkzeug - INFO - 127.0.0.1 - - [06/Sep/2025 01:08:56] "OPTIONS /api/indexes HTTP/1.1" 200 -
+2025-09-06 01:08:56,206 - apscheduler.executors.default - INFO - Running job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-06 01:08:56 CEST)" (scheduled at 2025-09-06 01:08:56.188880+02:00)
+2025-09-06 01:08:56,218 - werkzeug - INFO - 127.0.0.1 - - [06/Sep/2025 01:08:56] "GET /health HTTP/1.1" 200 -
+2025-09-06 01:08:56,218 - apscheduler.executors.default - INFO - Job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-06 01:17:56 CEST)" executed successfully
+2025-09-06 01:08:56,836 - werkzeug - INFO - 127.0.0.1 - - [06/Sep/2025 01:08:56] "POST /api/indexes HTTP/1.1" 200 -
+2025-09-06 01:08:56,845 - werkzeug - INFO - 127.0.0.1 - - [06/Sep/2025 01:08:56] "OPTIONS /api/videos HTTP/1.1" 200 -
+2025-09-06 01:08:57,429 - werkzeug - INFO - 127.0.0.1 - - [06/Sep/2025 01:08:57] "POST /api/videos HTTP/1.1" 200 -
+2025-09-06 01:13:21,840 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-09-06 01:13:21,841 - apscheduler.scheduler - INFO - Added job "wake_up_app" to job store "default"
+2025-09-06 01:13:21,841 - apscheduler.scheduler - INFO - Scheduler started
+2025-09-06 01:13:21,843 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 10
+2025-09-06 01:13:21,843 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 13
+2025-09-06 01:13:21,849 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.2.73:5000
+2025-09-06 01:13:21,849 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-09-06 01:13:21,853 - werkzeug - INFO -  * Restarting with watchdog (fsevents)
+2025-09-06 01:13:22,140 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-09-06 01:13:22,140 - apscheduler.scheduler - INFO - Added job "wake_up_app" to job store "default"
+2025-09-06 01:13:22,140 - apscheduler.scheduler - INFO - Scheduler started
+2025-09-06 01:13:22,143 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 10
+2025-09-06 01:13:22,143 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 13
+2025-09-06 01:13:22,144 - werkzeug - WARNING -  * Debugger is active!
+2025-09-06 01:13:22,150 - werkzeug - INFO -  * Debugger PIN: 237-707-018
+2025-09-06 01:14:59,611 - werkzeug - INFO - 127.0.0.1 - - [06/Sep/2025 01:14:59] "POST /api/upload HTTP/1.1" 200 -
+2025-09-06 01:14:59,621 - werkzeug - INFO - 127.0.0.1 - - [06/Sep/2025 01:14:59] "OPTIONS /api/config/twelvelabs HTTP/1.1" 200 -
+2025-09-06 01:14:59,623 - werkzeug - INFO - 127.0.0.1 - - [06/Sep/2025 01:14:59] "DELETE /api/config/twelvelabs HTTP/1.1" 200 -
+2025-09-06 01:14:59,661 - werkzeug - INFO - 127.0.0.1 - - [06/Sep/2025 01:14:59] "OPTIONS /api/indexes HTTP/1.1" 200 -
+2025-09-06 01:15:00,271 - werkzeug - INFO - 127.0.0.1 - - [06/Sep/2025 01:15:00] "POST /api/indexes HTTP/1.1" 200 -
+2025-09-06 01:15:00,279 - werkzeug - INFO - 127.0.0.1 - - [06/Sep/2025 01:15:00] "OPTIONS /api/videos HTTP/1.1" 200 -
+2025-09-06 01:15:00,897 - werkzeug - INFO - 127.0.0.1 - - [06/Sep/2025 01:15:00] "POST /api/videos HTTP/1.1" 200 -
+2025-09-06 01:15:22,669 - werkzeug - INFO - 127.0.0.1 - - [06/Sep/2025 01:15:22] "OPTIONS /api/workflow HTTP/1.1" 200 -
+2025-09-06 01:15:22,673 - __main__ - INFO - === WORKFLOW REQUEST START ===
+2025-09-06 01:15:22,674 - __main__ - INFO - Request data: {
+  "index_id": "689a3d3dd5a8be35908ad91b",
+  "video_id": "68bb6eb630049231acbe026d",
+  "analysis_prompt": "Please provide a comprehensive analysis of this video content. Include:\n\n1. **Content Overview**: What is happening in the video? Describe the main events, actions, and scenes.\n2. **Key Elements**: Identify important objects, people, locations, activities, and interactions.\n3. **Context & Setting**: What is the environment, time period, or context of the video?\n4. **Narrative Flow**: How does the story or sequence of events unfold?\n5. **Notable Details**: Highlight any significant details, patterns, or unique aspects.\n6. **Technical Aspects**: Note video quality, camera work, editing, or production elements if relevant.\n\nUser's Specific Query: Research about it\n\nPlease ensure your analysis addresses the user's specific question while providing comprehensive coverage of the video content.",
+  "research_query": "Research about it"
+}
+2025-09-06 01:15:22,674 - __main__ - INFO - Parameters extracted:
+2025-09-06 01:15:22,674 - __main__ - INFO -   - Index ID: 689a3d3dd5a8be35908ad91b
+2025-09-06 01:15:22,674 - __main__ - INFO -   - Video ID: 68bb6eb630049231acbe026d
+2025-09-06 01:15:22,674 - __main__ - INFO -   - Analysis Prompt: Please provide a comprehensive analysis of this video content. Include:
+
+1. **Content Overview**: What is happening in the video? Describe the main events, actions, and scenes.
+2. **Key Elements**: Identify important objects, people, locations, activities, and interactions.
+3. **Context & Setting**: What is the environment, time period, or context of the video?
+4. **Narrative Flow**: How does the story or sequence of events unfold?
+5. **Notable Details**: Highlight any significant details, patterns, or unique aspects.
+6. **Technical Aspects**: Note video quality, camera work, editing, or production elements if relevant.
+
+User's Specific Query: Research about it
+
+Please ensure your analysis addresses the user's specific question while providing comprehensive coverage of the video content.
+2025-09-06 01:15:22,674 - __main__ - INFO -   - Research Query: Research about it
+2025-09-06 01:15:22,674 - __main__ - INFO - Step 1: Getting video details from TwelveLabs...
+2025-09-06 01:15:23,318 - __main__ - INFO - Video details retrieved successfully: {
+  "_id": "68bb6eb630049231acbe026d",
+  "created_at": "2025-09-05T23:13:58Z",
+  "system_metadata": {
+    "duration": 126.061134,
+    "filename": "tmp4p_q9ydl",
+    "fps": 30,
+    "height": 360,
+    "size": 11009883,
+    "width": 640
+  },
+  "hls": {
+    "video_url": "https://deuqpmn4rs7j5.cloudfront.net/6633a646e06d1c2c0212c7df/68bb6eb630049231acbe026d/stream/23734e3e-919b-4915-af63-800db05d0e77.m3u8",
+    "thumbnail_urls": [
+      "https://deuqpmn4rs7j5.cloudfront.net/6633a646e06d1c2c0212c7df/68bb6eb630049231acbe026d/thumbnails/23734e3e-919b-4915-af63-800db05d0e77.0000001.jpg"
+    ],
+    "status": "COMPLETE",
+    "updated_at": "2025-09-05T23:14:48.492Z"
+  }
+}
+2025-09-06 01:15:23,319 - __main__ - INFO - Step 2: Analyzing video content...
+2025-09-06 01:15:23,892 - httpx - INFO - HTTP Request: POST https://api.twelvelabs.io/v1.3/analyze "HTTP/1.1 400 Bad Request"
+2025-09-06 01:15:23,896 - __main__ - ERROR - Video analysis failed: headers: {'date': 'Fri, 05 Sep 2025 23:15:23 GMT', 'content-type': 'application/json; charset=UTF-8', 'content-length': '117', 'connection': 'keep-alive', 'content-encoding': 'gzip', 'tl-report': 'backend', 'vary': 'Accept-Encoding', 'x-ratelimit-limit': '50', 'x-ratelimit-remaining': '46', 'x-ratelimit-reset': '1757161977', 'x-ratelimit-used': '4', 'x-trace-id': '6778269638928040329', 'strict-transport-security': 'max-age=31536000; includeSubDomains'}, status_code: 400, body: {'code': 'index_not_supported_for_generate', 'message': 'The index does not support generate. Please use another index.'}
+2025-09-06 01:15:23,896 - werkzeug - INFO - 127.0.0.1 - - [06/Sep/2025 01:15:23] "[35m[1mPOST /api/workflow HTTP/1.1[0m" 500 -
+2025-09-06 01:16:19,582 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-09-06 01:16:19,582 - apscheduler.scheduler - INFO - Added job "wake_up_app" to job store "default"
+2025-09-06 01:16:19,582 - apscheduler.scheduler - INFO - Scheduler started
+2025-09-06 01:16:19,585 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 10
+2025-09-06 01:16:19,585 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 13
+2025-09-06 01:16:19,591 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.2.73:5000
+2025-09-06 01:16:19,591 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-09-06 01:16:19,595 - werkzeug - INFO -  * Restarting with watchdog (fsevents)
+2025-09-06 01:16:19,870 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-09-06 01:16:19,870 - apscheduler.scheduler - INFO - Added job "wake_up_app" to job store "default"
+2025-09-06 01:16:19,870 - apscheduler.scheduler - INFO - Scheduler started
+2025-09-06 01:16:19,873 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 10
+2025-09-06 01:16:19,873 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 13
+2025-09-06 01:16:19,874 - werkzeug - WARNING -  * Debugger is active!
+2025-09-06 01:16:19,879 - werkzeug - INFO -  * Debugger PIN: 237-707-018
+2025-09-06 01:16:31,597 - werkzeug - INFO - 127.0.0.1 - - [06/Sep/2025 01:16:31] "OPTIONS /api/indexes HTTP/1.1" 200 -
+2025-09-06 01:16:32,367 - werkzeug - INFO - 127.0.0.1 - - [06/Sep/2025 01:16:32] "POST /api/indexes HTTP/1.1" 200 -
+2025-09-06 01:16:32,370 - werkzeug - INFO - 127.0.0.1 - - [06/Sep/2025 01:16:32] "OPTIONS /api/videos HTTP/1.1" 200 -
+2025-09-06 01:16:32,992 - werkzeug - INFO - 127.0.0.1 - - [06/Sep/2025 01:16:32] "POST /api/videos HTTP/1.1" 200 -
+2025-09-06 01:17:49,157 - werkzeug - INFO - 127.0.0.1 - - [06/Sep/2025 01:17:49] "POST /api/upload HTTP/1.1" 200 -
+2025-09-06 01:17:49,168 - werkzeug - INFO - 127.0.0.1 - - [06/Sep/2025 01:17:49] "OPTIONS /api/config/twelvelabs HTTP/1.1" 200 -
+2025-09-06 01:17:49,171 - werkzeug - INFO - 127.0.0.1 - - [06/Sep/2025 01:17:49] "DELETE /api/config/twelvelabs HTTP/1.1" 200 -
+2025-09-06 01:17:49,214 - werkzeug - INFO - 127.0.0.1 - - [06/Sep/2025 01:17:49] "OPTIONS /api/indexes HTTP/1.1" 200 -
+2025-09-06 01:17:49,832 - werkzeug - INFO - 127.0.0.1 - - [06/Sep/2025 01:17:49] "POST /api/indexes HTTP/1.1" 200 -
+2025-09-06 01:17:49,840 - werkzeug - INFO - 127.0.0.1 - - [06/Sep/2025 01:17:49] "OPTIONS /api/videos HTTP/1.1" 200 -
+2025-09-06 01:17:50,460 - werkzeug - INFO - 127.0.0.1 - - [06/Sep/2025 01:17:50] "POST /api/videos HTTP/1.1" 200 -
+2025-09-06 01:18:14,087 - werkzeug - INFO - 127.0.0.1 - - [06/Sep/2025 01:18:14] "OPTIONS /api/workflow HTTP/1.1" 200 -
+2025-09-06 01:18:14,091 - __main__ - INFO - === WORKFLOW REQUEST START ===
+2025-09-06 01:18:14,091 - __main__ - INFO - Request data: {
+  "index_id": "6893518408a37aa08793c4fe",
+  "video_id": "68bb6f6db54c49bd5d250e57",
+  "analysis_prompt": "Please provide a comprehensive analysis of this video content. Include:\n\n1. **Content Overview**: What is happening in the video? Describe the main events, actions, and scenes.\n2. **Key Elements**: Identify important objects, people, locations, activities, and interactions.\n3. **Context & Setting**: What is the environment, time period, or context of the video?\n4. **Narrative Flow**: How does the story or sequence of events unfold?\n5. **Notable Details**: Highlight any significant details, patterns, or unique aspects.\n6. **Technical Aspects**: Note video quality, camera work, editing, or production elements if relevant.\n\nUser's Specific Query: Please do research abou it\n\nPlease ensure your analysis addresses the user's specific question while providing comprehensive coverage of the video content.",
+  "research_query": "Please do research abou it"
+}
+2025-09-06 01:18:14,092 - __main__ - INFO - Parameters extracted:
+2025-09-06 01:18:14,092 - __main__ - INFO -   - Index ID: 6893518408a37aa08793c4fe
+2025-09-06 01:18:14,092 - __main__ - INFO -   - Video ID: 68bb6f6db54c49bd5d250e57
+2025-09-06 01:18:14,092 - __main__ - INFO -   - Analysis Prompt: Please provide a comprehensive analysis of this video content. Include:
+
+1. **Content Overview**: What is happening in the video? Describe the main events, actions, and scenes.
+2. **Key Elements**: Identify important objects, people, locations, activities, and interactions.
+3. **Context & Setting**: What is the environment, time period, or context of the video?
+4. **Narrative Flow**: How does the story or sequence of events unfold?
+5. **Notable Details**: Highlight any significant details, patterns, or unique aspects.
+6. **Technical Aspects**: Note video quality, camera work, editing, or production elements if relevant.
+
+User's Specific Query: Please do research abou it
+
+Please ensure your analysis addresses the user's specific question while providing comprehensive coverage of the video content.
+2025-09-06 01:18:14,092 - __main__ - INFO -   - Research Query: Please do research abou it
+2025-09-06 01:18:14,092 - __main__ - INFO - Step 1: Getting video details from TwelveLabs...
+2025-09-06 01:18:14,716 - __main__ - INFO - Video details retrieved successfully: {
+  "_id": "68bb6f6db54c49bd5d250e57",
+  "created_at": "2025-09-05T23:17:01Z",
+  "system_metadata": {
+    "duration": 133.05034,
+    "filename": "tmpvpw51wf8",
+    "fps": 30,
+    "height": 360,
+    "size": 10752835,
+    "width": 640
+  },
+  "hls": {
+    "video_url": "https://deuqpmn4rs7j5.cloudfront.net/6633a646e06d1c2c0212c7df/68bb6f6db54c49bd5d250e57/stream/899f11e5-8aaa-489b-89cd-f59f7b1c20e4.m3u8",
+    "thumbnail_urls": [
+      "https://deuqpmn4rs7j5.cloudfront.net/6633a646e06d1c2c0212c7df/68bb6f6db54c49bd5d250e57/thumbnails/899f11e5-8aaa-489b-89cd-f59f7b1c20e4.0000001.jpg"
+    ],
+    "status": "COMPLETE",
+    "updated_at": "2025-09-05T23:17:35.547Z"
+  }
+}
+2025-09-06 01:18:14,716 - __main__ - INFO - Step 2: Analyzing video content...
+2025-09-06 01:18:29,093 - httpx - INFO - HTTP Request: POST https://api.twelvelabs.io/v1.3/analyze "HTTP/1.1 200 OK"
+2025-09-06 01:18:29,098 - __main__ - INFO - Video analysis completed: "The video captures a badminton gold medal match between the Chinese team (Chen Su-hui and Huang Ya-cheng) and the Korean team (Kim Won-ho and Zhong Na-un) at the Paris 2024 Olympics. The match is held in the Port de la Chapelle Arena, where the atmosphere is electric with cheering fans and intense competition. The Chinese team, who were silver medalists in the previous Olympic Games, aims to secure the gold medal.\n\n**Content Overview**: The video opens with a wide shot of the badminton court, showing the two teams and the referees. It then transitions to scenes of the Chinese players entering the arena through a corridor filled with enthusiastic supporters. The Korean players also make their way onto the court. The match begins with the Chinese team quickly establishing a lead, and the score progresses through several rallies. The Chinese team maintains their dominance, leading to a final score of 21-8 in the first game and 21-7 in the second game. The video concludes with the award ceremony where the Chinese team receives their gold medals, and the Korean team receives silver medals. Japan is mentioned as the bronze medalist.\n\n**Key Elements**: The main elements include the Chinese and Korean badminton teams, the spectators, the arena, and the medals. The Chinese team is dressed in red uniforms, while the Korean team wears blue. The referees and coaches are also present, along with the packed crowd waving flags.\n\n**Context & Setting**: The video is set in the Port de la Chapelle Arena during the Paris 2024 Olympics. The environment is highly charged with excitement and national pride, as evidenced by the cheering crowd and the waving of national flags.\n\n**Narrative Flow**: The video starts with the setup of the match, showing the teams and the arena. It then moves to the match itself, highlighting the Chinese team's strong performance and the Korean team's occasional moments of success. The narrative builds up to the final score and the subsequent celebration and award ceremony.\n\n**Notable Details**: The Chinese team's dominance is evident from the early stages of the match, with the score quickly moving in their favor. The crowd's enthusiasm and the coaches' reactions add to the intensity of the match. The final score and the celebratory moments of the Chinese team receiving their medals are particularly significant.\n\n**Technical Aspects**: The video quality is clear, with well-chosen camera angles that capture the action on the court and the reactions of the crowd. The editing is smooth, transitioning seamlessly between the match and the award ceremony. The production elements effectively convey the excitement and importance of the event."
+2025-09-06 01:18:29,099 - __main__ - INFO - Step 3: Conducting deep research using Sonar...
+2025-09-06 01:18:29,099 - __main__ - INFO - Enhanced research query created: "\nBased on this video analysis: The video captures a badminton gold medal match between the Chinese team (Chen Su-hui and Huang Ya-cheng) and the Korean team (Kim Won-ho and Zhong Na-un) at the Paris 2024 Olympics. The match is held in the Port de la Chapelle Arena, where the atmosphere is electric with cheering fans and intense competition. The Chinese team, who were silver medalists in the previous Olympic Games, aims to secure the gold medal.\n\n**Content Overview**: The video opens with a wide shot of the badminton court, showing the two teams and the referees. It then transitions to scenes of the Chinese players entering the arena through a corridor filled with enthusiastic supporters. The Korean players also make their way onto the court. The match begins with the Chinese team quickly establishing a lead, and the score progresses through several rallies. The Chinese team maintains their dominance, leading to a final score of 21-8 in the first game and 21-7 in the second game. The video concludes with the award ceremony where the Chinese team receives their gold medals, and the Korean team receives silver medals. Japan is mentioned as the bronze medalist.\n\n**Key Elements**: The main elements include the Chinese and Korean badminton teams, the spectators, the arena, and the medals. The Chinese team is dressed in red uniforms, while the Korean team wears blue. The referees and coaches are also present, along with the packed crowd waving flags.\n\n**Context & Setting**: The video is set in the Port de la Chapelle Arena during the Paris 2024 Olympics. The environment is highly charged with excitement and national pride, as evidenced by the cheering crowd and the waving of national flags.\n\n**Narrative Flow**: The video starts with the setup of the match, showing the teams and the arena. It then moves to the match itself, highlighting the Chinese team's strong performance and the Korean team's occasional moments of success. The narrative builds up to the final score and the subsequent celebration and award ceremony.\n\n**Notable Details**: The Chinese team's dominance is evident from the early stages of the match, with the score quickly moving in their favor. The crowd's enthusiasm and the coaches' reactions add to the intensity of the match. The final score and the celebratory moments of the Chinese team receiving their medals are particularly significant.\n\n**Technical Aspects**: The video quality is clear, with well-chosen camera angles that capture the action on the court and the reactions of the crowd. The editing is smooth, transitioning seamlessly between the match and the award ceremony. The production elements effectively convey the excitement and importance of the event.\n\nPlease research: Please do research abou it\n\nProvide comprehensive insights that connect the video content with current trends, developments, and relevant information.\n"
+2025-09-06 01:18:36,979 - __main__ - INFO - Sonar research completed: {
+  "id": "ee2f932d-60ab-4c88-b963-361c88052476",
+  "model": "sonar",
+  "created": 1757114316,
+  "usage": {
+    "prompt_tokens": 566,
+    "completion_tokens": 535,
+    "total_tokens": 1101,
+    "search_context_size": "low",
+    "cost": {
+      "input_tokens_cost": 0.001,
+      "output_tokens_cost": 0.001,
+      "request_cost": 0.005,
+      "total_cost": 0.006
+    }
+  },
+  "citations": [
+    "https://www.youtube.com/watch?v=yzU0WngfJCU",
+    "https://www.youtube.com/watch?v=OtgMP_6Y19w",
+    "https://en.wikipedia.org/wiki/Badminton_at_the_2024_Summer_Olympics",
+    "https://www.youtube.com/watch?v=jsG9swdBk4s",
+    "https://olympics.bwfbadminton.com/results/4752/paris-2024-olympic-games-badminton-competition/podium"
+  ],
+  "search_results": [
+    {
+      "title": "Viktor Axelsen defends Olympic men's badminton singles title",
+      "url": "https://www.youtube.com/watch?v=yzU0WngfJCU",
+      "date": "2024-08-06",
+      "last_updated": "2025-08-09",
+      "snippet": "... in the gold medal match of the men's badminton singles at the Paris 2024 Olympics. Viktor Axelsen is now the second player after Lin Dan to win ..."
+    },
+    {
+      "title": "EVERY Badminton Gold Medal Point at #Paris2024",
+      "url": "https://www.youtube.com/watch?v=OtgMP_6Y19w",
+      "date": "2024-08-30",
+      "last_updated": "2025-07-27",
+      "snippet": "/watch Five badminton competitions were held at the 2024 Olympic Games in Paris ... Women's Doubles Badminton Gold Medal Match| Tokyo Replays."
+    },
+    {
+      "title": "Badminton at the 2024 Summer Olympics",
+      "url": "https://en.wikipedia.org/wiki/Badminton_at_the_2024_Summer_Olympics",
+      "date": "2023-01-22",
+      "last_updated": "2025-08-15",
+      "snippet": "The badminton tournaments at the 2024 Summer Olympics in Paris ran from 27 July to 5 August at Porte de La Chapelle Arena."
+    },
+    {
+      "title": "Men's Singles Badminton FULL FINAL\ud83c\udff8 | Paris Replays",
+      "url": "https://www.youtube.com/watch?v=jsG9swdBk4s",
+      "date": "2024-10-10",
+      "last_updated": "2025-07-30",
+      "snippet": "Re-live ALL the incredible #Paris2024 action: \u27a1\ufe0f https://oly.ch/P24Replays Watch the Men's Singles Badminton Final of the Olympic Games 2024 ..."
+    },
+    {
+      "title": "Results | Paris 2024 Olympic Games Badminton Competition",
+      "url": "https://olympics.bwfbadminton.com/results/4752/paris-2024-olympic-games-badminton-competition/podium",
+      "date": "2024-08-05",
+      "last_updated": "2025-02-13",
+      "snippet": "TOURNAMENT WINNERS 2024 ; GOLD. LEE Yang \u00b7 WANG Chi-Lin ; SILVER. LIANG Wei Keng \u00b7 WANG Chang ; BRONZE. Aaron CHIA \u00b7 SOH Wooi Yik."
+    }
+  ],
+  "object": "chat.completion",
+  "choices": [
+    {
+      "index": 0,
+      "finish_reason": "stop",
+      "message": {
+        "role": "assistant",
+        "content": "The video showing the badminton gold medal match between the Chinese team (Chen Su-hui and Huang Ya-cheng) and the Korean team (Kim Won-ho and Jeong Na-eun) at the Paris 2024 Olympics is consistent with the actual event of the **mixed doubles badminton final**, where **China\u2019s Zheng Siwei and Huang Yaqiong won the gold medal**, defeating the Korean pair **Kim Won-ho and Jeong Na-eun**, who took silver. Japan won the bronze in this event[2][3].\n\nKey points linking the video analysis and the Paris 2024 badminton results:\n\n- The venue, **Porte de la Chapelle Arena**, hosted all badminton matches at Paris 2024[3].\n- The Chinese team wearing red uniforms and Korean team in blue matches official team colors and Olympic attire standards.\n- The Chinese pair's strong dominance with final game scores resembling the video\u2019s example (such as 21-8, 21-7) fits the narrative of China\u2019s commanding victory in mixed doubles.\n- According to official results, China took **2 gold medals** in badminton, including the mixed doubles event[3]. \n- The crowd\u2019s excitement and national pride reflected in the video aligns with reports of enthusiastic support and intense competition at Paris 2024[3].\n\nAdditional relevant context about overall badminton at Paris 2024 includes:\n\n- Five badminton events were held: men\u2019s singles, women\u2019s singles, men\u2019s doubles, women\u2019s doubles, and mixed doubles[2][3].\n- Notable champions: Viktor Axelsen (Denmark) won men\u2019s singles, An Se-young (Korea) won women\u2019s singles, Chen Qingchen and Jia Yifan (China) won women\u2019s doubles, and Zheng Siwei/Huang Yaqiong (China) the mixed doubles gold[2][3].\n- South Korea won 1 gold (women\u2019s singles), 1 silver (mixed doubles), and Japan earned two bronzes, highlighting the competitive badminton landscape[3].\n- The venue and production quality at Paris 2024 were praised for excellent lighting, camera work, and crowd atmosphere, which enhances the viewing experience as described in the video\u2019s technical aspects[2][3].\n\nIn summary, the video analysis depicts the mixed doubles final between China and Korea correctly reflecting the actual Olympic results at Paris 2024, where China secured gold over Korea in a dominant fashion at the Porte de la Chapelle Arena amidst a vibrant and colorful Olympic badminton event[2][3]."
+      },
+      "delta": {
+        "role": "assistant",
+        "content": ""
+      }
+    }
+  ]
+}
+2025-09-06 01:18:36,980 - __main__ - INFO - Adding sources to research result...
+2025-09-06 01:18:36,981 - __main__ - INFO - Sources added to research result: [
+  {
+    "title": "TechCrunch",
+    "url": "https://techcrunch.com",
+    "description": "Technology news and analysis"
+  },
+  {
+    "title": "Gartner Research",
+    "url": "https://gartner.com",
+    "description": "Industry research and insights"
+  },
+  {
+    "title": "McKinsey & Company",
+    "url": "https://mckinsey.com",
+    "description": "Business and technology trends"
+  },
+  {
+    "title": "The Verge",
+    "url": "https://theverge.com",
+    "description": "Technology and culture coverage"
+  },
+  {
+    "title": "MIT Technology Review",
+    "url": "https://technologyreview.com",
+    "description": "In-depth technology analysis"
+  }
+]
+2025-09-06 01:18:36,981 - __main__ - INFO - === WORKFLOW COMPLETED SUCCESSFULLY ===
+2025-09-06 01:18:36,981 - __main__ - INFO - Final response: {
+  "success": true,
+  "workflow": {
+    "video_details": {
+      "_id": "68bb6f6db54c49bd5d250e57",
+      "created_at": "2025-09-05T23:17:01Z",
+      "system_metadata": {
+        "duration": 133.05034,
+        "filename": "tmpvpw51wf8",
+        "fps": 30,
+        "height": 360,
+        "size": 10752835,
+        "width": 640
+      },
+      "hls": {
+        "video_url": "https://deuqpmn4rs7j5.cloudfront.net/6633a646e06d1c2c0212c7df/68bb6f6db54c49bd5d250e57/stream/899f11e5-8aaa-489b-89cd-f59f7b1c20e4.m3u8",
+        "thumbnail_urls": [
+          "https://deuqpmn4rs7j5.cloudfront.net/6633a646e06d1c2c0212c7df/68bb6f6db54c49bd5d250e57/thumbnails/899f11e5-8aaa-489b-89cd-f59f7b1c20e4.0000001.jpg"
+        ],
+        "status": "COMPLETE",
+        "updated_at": "2025-09-05T23:17:35.547Z"
+      }
+    },
+    "analysis": "The video captures a badminton gold medal match between the Chinese team (Chen Su-hui and Huang Ya-cheng) and the Korean team (Kim Won-ho and Zhong Na-un) at the Paris 2024 Olympics. The match is held in the Port de la Chapelle Arena, where the atmosphere is electric with cheering fans and intense competition. The Chinese team, who were silver medalists in the previous Olympic Games, aims to secure the gold medal.\n\n**Content Overview**: The video opens with a wide shot of the badminton court, showing the two teams and the referees. It then transitions to scenes of the Chinese players entering the arena through a corridor filled with enthusiastic supporters. The Korean players also make their way onto the court. The match begins with the Chinese team quickly establishing a lead, and the score progresses through several rallies. The Chinese team maintains their dominance, leading to a final score of 21-8 in the first game and 21-7 in the second game. The video concludes with the award ceremony where the Chinese team receives their gold medals, and the Korean team receives silver medals. Japan is mentioned as the bronze medalist.\n\n**Key Elements**: The main elements include the Chinese and Korean badminton teams, the spectators, the arena, and the medals. The Chinese team is dressed in red uniforms, while the Korean team wears blue. The referees and coaches are also present, along with the packed crowd waving flags.\n\n**Context & Setting**: The video is set in the Port de la Chapelle Arena during the Paris 2024 Olympics. The environment is highly charged with excitement and national pride, as evidenced by the cheering crowd and the waving of national flags.\n\n**Narrative Flow**: The video starts with the setup of the match, showing the teams and the arena. It then moves to the match itself, highlighting the Chinese team's strong performance and the Korean team's occasional moments of success. The narrative builds up to the final score and the subsequent celebration and award ceremony.\n\n**Notable Details**: The Chinese team's dominance is evident from the early stages of the match, with the score quickly moving in their favor. The crowd's enthusiasm and the coaches' reactions add to the intensity of the match. The final score and the celebratory moments of the Chinese team receiving their medals are particularly significant.\n\n**Technical Aspects**: The video quality is clear, with well-chosen camera angles that capture the action on the court and the reactions of the crowd. The editing is smooth, transitioning seamlessly between the match and the award ceremony. The production elements effectively convey the excitement and importance of the event.",
+    "research": {
+      "id": "ee2f932d-60ab-4c88-b963-361c88052476",
+      "model": "sonar",
+      "created": 1757114316,
+      "usage": {
+        "prompt_tokens": 566,
+        "completion_tokens": 535,
+        "total_tokens": 1101,
+        "search_context_size": "low",
+        "cost": {
+          "input_tokens_cost": 0.001,
+          "output_tokens_cost": 0.001,
+          "request_cost": 0.005,
+          "total_cost": 0.006
+        }
+      },
+      "citations": [
+        "https://www.youtube.com/watch?v=yzU0WngfJCU",
+        "https://www.youtube.com/watch?v=OtgMP_6Y19w",
+        "https://en.wikipedia.org/wiki/Badminton_at_the_2024_Summer_Olympics",
+        "https://www.youtube.com/watch?v=jsG9swdBk4s",
+        "https://olympics.bwfbadminton.com/results/4752/paris-2024-olympic-games-badminton-competition/podium"
+      ],
+      "search_results": [
+        {
+          "title": "Viktor Axelsen defends Olympic men's badminton singles title",
+          "url": "https://www.youtube.com/watch?v=yzU0WngfJCU",
+          "date": "2024-08-06",
+          "last_updated": "2025-08-09",
+          "snippet": "... in the gold medal match of the men's badminton singles at the Paris 2024 Olympics. Viktor Axelsen is now the second player after Lin Dan to win ..."
+        },
+        {
+          "title": "EVERY Badminton Gold Medal Point at #Paris2024",
+          "url": "https://www.youtube.com/watch?v=OtgMP_6Y19w",
+          "date": "2024-08-30",
+          "last_updated": "2025-07-27",
+          "snippet": "/watch Five badminton competitions were held at the 2024 Olympic Games in Paris ... Women's Doubles Badminton Gold Medal Match| Tokyo Replays."
+        },
+        {
+          "title": "Badminton at the 2024 Summer Olympics",
+          "url": "https://en.wikipedia.org/wiki/Badminton_at_the_2024_Summer_Olympics",
+          "date": "2023-01-22",
+          "last_updated": "2025-08-15",
+          "snippet": "The badminton tournaments at the 2024 Summer Olympics in Paris ran from 27 July to 5 August at Porte de La Chapelle Arena."
+        },
+        {
+          "title": "Men's Singles Badminton FULL FINAL\ud83c\udff8 | Paris Replays",
+          "url": "https://www.youtube.com/watch?v=jsG9swdBk4s",
+          "date": "2024-10-10",
+          "last_updated": "2025-07-30",
+          "snippet": "Re-live ALL the incredible #Paris2024 action: \u27a1\ufe0f https://oly.ch/P24Replays Watch the Men's Singles Badminton Final of the Olympic Games 2024 ..."
+        },
+        {
+          "title": "Results | Paris 2024 Olympic Games Badminton Competition",
+          "url": "https://olympics.bwfbadminton.com/results/4752/paris-2024-olympic-games-badminton-competition/podium",
+          "date": "2024-08-05",
+          "last_updated": "2025-02-13",
+          "snippet": "TOURNAMENT WINNERS 2024 ; GOLD. LEE Yang \u00b7 WANG Chi-Lin ; SILVER. LIANG Wei Keng \u00b7 WANG Chang ; BRONZE. Aaron CHIA \u00b7 SOH Wooi Yik."
+        }
+      ],
+      "object": "chat.completion",
+      "choices": [
+        {
+          "index": 0,
+          "finish_reason": "stop",
+          "message": {
+            "role": "assistant",
+            "content": "The video showing the badminton gold medal match between the Chinese team (Chen Su-hui and Huang Ya-cheng) and the Korean team (Kim Won-ho and Jeong Na-eun) at the Paris 2024 Olympics is consistent with the actual event of the **mixed doubles badminton final**, where **China\u2019s Zheng Siwei and Huang Yaqiong won the gold medal**, defeating the Korean pair **Kim Won-ho and Jeong Na-eun**, who took silver. Japan won the bronze in this event[2][3].\n\nKey points linking the video analysis and the Paris 2024 badminton results:\n\n- The venue, **Porte de la Chapelle Arena**, hosted all badminton matches at Paris 2024[3].\n- The Chinese team wearing red uniforms and Korean team in blue matches official team colors and Olympic attire standards.\n- The Chinese pair's strong dominance with final game scores resembling the video\u2019s example (such as 21-8, 21-7) fits the narrative of China\u2019s commanding victory in mixed doubles.\n- According to official results, China took **2 gold medals** in badminton, including the mixed doubles event[3]. \n- The crowd\u2019s excitement and national pride reflected in the video aligns with reports of enthusiastic support and intense competition at Paris 2024[3].\n\nAdditional relevant context about overall badminton at Paris 2024 includes:\n\n- Five badminton events were held: men\u2019s singles, women\u2019s singles, men\u2019s doubles, women\u2019s doubles, and mixed doubles[2][3].\n- Notable champions: Viktor Axelsen (Denmark) won men\u2019s singles, An Se-young (Korea) won women\u2019s singles, Chen Qingchen and Jia Yifan (China) won women\u2019s doubles, and Zheng Siwei/Huang Yaqiong (China) the mixed doubles gold[2][3].\n- South Korea won 1 gold (women\u2019s singles), 1 silver (mixed doubles), and Japan earned two bronzes, highlighting the competitive badminton landscape[3].\n- The venue and production quality at Paris 2024 were praised for excellent lighting, camera work, and crowd atmosphere, which enhances the viewing experience as described in the video\u2019s technical aspects[2][3].\n\nIn summary, the video analysis depicts the mixed doubles final between China and Korea correctly reflecting the actual Olympic results at Paris 2024, where China secured gold over Korea in a dominant fashion at the Porte de la Chapelle Arena amidst a vibrant and colorful Olympic badminton event[2][3]."
+          },
+          "delta": {
+            "role": "assistant",
+            "content": ""
+          }
+        }
+      ],
+      "sources": [
+        {
+          "title": "TechCrunch",
+          "url": "https://techcrunch.com",
+          "description": "Technology news and analysis"
+        },
+        {
+          "title": "Gartner Research",
+          "url": "https://gartner.com",
+          "description": "Industry research and insights"
+        },
+        {
+          "title": "McKinsey & Company",
+          "url": "https://mckinsey.com",
+          "description": "Business and technology trends"
+        },
+        {
+          "title": "The Verge",
+          "url": "https://theverge.com",
+          "description": "Technology and culture coverage"
+        },
+        {
+          "title": "MIT Technology Review",
+          "url": "https://technologyreview.com",
+          "description": "In-depth technology analysis"
+        }
+      ]
+    }
+  },
+  "summary": {
+    "video_id": "68bb6f6db54c49bd5d250e57",
+    "index_id": "6893518408a37aa08793c4fe",
+    "analysis_prompt": "Please provide a comprehensive analysis of this video content. Include:\n\n1. **Content Overview**: What is happening in the video? Describe the main events, actions, and scenes.\n2. **Key Elements**: Identify important objects, people, locations, activities, and interactions.\n3. **Context & Setting**: What is the environment, time period, or context of the video?\n4. **Narrative Flow**: How does the story or sequence of events unfold?\n5. **Notable Details**: Highlight any significant details, patterns, or unique aspects.\n6. **Technical Aspects**: Note video quality, camera work, editing, or production elements if relevant.\n\nUser's Specific Query: Please do research abou it\n\nPlease ensure your analysis addresses the user's specific question while providing comprehensive coverage of the video content.",
+    "research_query": "Please do research abou it",
+    "research_status": "completed"
+  }
+}
+2025-09-06 01:18:36,983 - werkzeug - INFO - 127.0.0.1 - - [06/Sep/2025 01:18:36] "POST /api/workflow HTTP/1.1" 200 -
+2025-09-06 01:18:58,713 - werkzeug - INFO - 127.0.0.1 - - [06/Sep/2025 01:18:58] "OPTIONS /api/config/twelvelabs HTTP/1.1" 200 -
+2025-09-06 01:18:58,716 - werkzeug - INFO - 127.0.0.1 - - [06/Sep/2025 01:18:58] "DELETE /api/config/twelvelabs HTTP/1.1" 200 -
+2025-09-06 01:19:09,670 - werkzeug - INFO - 127.0.0.1 - - [06/Sep/2025 01:19:09] "OPTIONS /api/config/twelvelabs HTTP/1.1" 200 -
+2025-09-06 01:19:10,306 - werkzeug - INFO - 127.0.0.1 - - [06/Sep/2025 01:19:10] "POST /api/config/twelvelabs HTTP/1.1" 200 -
+2025-09-06 01:19:10,315 - werkzeug - INFO - 127.0.0.1 - - [06/Sep/2025 01:19:10] "OPTIONS /api/videos HTTP/1.1" 200 -
+2025-09-06 01:19:10,928 - werkzeug - INFO - 127.0.0.1 - - [06/Sep/2025 01:19:10] "POST /api/videos HTTP/1.1" 200 -
+2025-09-06 01:19:32,376 - werkzeug - INFO - 127.0.0.1 - - [06/Sep/2025 01:19:32] "[31m[1mPOST /api/upload HTTP/1.1[0m" 400 -
+2025-09-06 01:29:14,856 - apscheduler.executors.default - WARNING - Run time of job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-06 01:34:19 CEST)" was missed by 0:03:55.274069
+2025-09-06 01:29:15,143 - apscheduler.executors.default - WARNING - Run time of job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-06 01:34:19 CEST)" was missed by 0:03:55.273192
+2025-09-06 01:34:19,592 - apscheduler.executors.default - INFO - Running job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-06 01:43:19 CEST)" (scheduled at 2025-09-06 01:34:19.582262+02:00)
+2025-09-06 01:34:19,622 - werkzeug - INFO - 127.0.0.1 - - [06/Sep/2025 01:34:19] "GET /health HTTP/1.1" 200 -
+2025-09-06 01:34:19,623 - apscheduler.executors.default - INFO - Job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-06 01:43:19 CEST)" executed successfully
+2025-09-06 01:34:19,872 - apscheduler.executors.default - INFO - Running job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-06 01:43:19 CEST)" (scheduled at 2025-09-06 01:34:19.870091+02:00)
+2025-09-06 01:34:19,877 - werkzeug - INFO - 127.0.0.1 - - [06/Sep/2025 01:34:19] "GET /health HTTP/1.1" 200 -
+2025-09-06 01:34:19,878 - apscheduler.executors.default - INFO - Job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-06 01:43:19 CEST)" executed successfully
+2025-09-06 01:38:20,676 - werkzeug - INFO - 127.0.0.1 - - [06/Sep/2025 01:38:20] "OPTIONS /api/indexes HTTP/1.1" 200 -
+2025-09-06 01:38:21,336 - werkzeug - INFO - 127.0.0.1 - - [06/Sep/2025 01:38:21] "POST /api/indexes HTTP/1.1" 200 -
+2025-09-06 01:38:21,388 - werkzeug - INFO - 127.0.0.1 - - [06/Sep/2025 01:38:21] "OPTIONS /api/videos HTTP/1.1" 200 -
+2025-09-06 01:38:22,003 - werkzeug - INFO - 127.0.0.1 - - [06/Sep/2025 01:38:22] "POST /api/videos HTTP/1.1" 200 -
+2025-09-06 01:38:41,722 - werkzeug - INFO - 127.0.0.1 - - [06/Sep/2025 01:38:41] "[31m[1mPOST /api/upload HTTP/1.1[0m" 400 -
+2025-09-06 01:38:45,453 - werkzeug - INFO - 127.0.0.1 - - [06/Sep/2025 01:38:45] "OPTIONS /api/config/twelvelabs HTTP/1.1" 200 -
+2025-09-06 01:38:45,455 - werkzeug - INFO - 127.0.0.1 - - [06/Sep/2025 01:38:45] "DELETE /api/config/twelvelabs HTTP/1.1" 200 -
+2025-09-06 01:38:47,113 - werkzeug - INFO - 127.0.0.1 - - [06/Sep/2025 01:38:47] "DELETE /api/config/twelvelabs HTTP/1.1" 200 -
+2025-09-06 01:38:47,116 - werkzeug - INFO - 127.0.0.1 - - [06/Sep/2025 01:38:47] "OPTIONS /api/indexes HTTP/1.1" 200 -
+2025-09-06 01:38:47,762 - werkzeug - INFO - 127.0.0.1 - - [06/Sep/2025 01:38:47] "POST /api/indexes HTTP/1.1" 200 -
+2025-09-06 01:38:47,766 - werkzeug - INFO - 127.0.0.1 - - [06/Sep/2025 01:38:47] "OPTIONS /api/videos HTTP/1.1" 200 -
+2025-09-06 01:38:48,027 - werkzeug - INFO - 127.0.0.1 - - [06/Sep/2025 01:38:48] "DELETE /api/config/twelvelabs HTTP/1.1" 200 -
+2025-09-06 01:38:48,441 - werkzeug - INFO - 127.0.0.1 - - [06/Sep/2025 01:38:48] "POST /api/videos HTTP/1.1" 200 -
+2025-09-06 01:38:48,708 - werkzeug - INFO - 127.0.0.1 - - [06/Sep/2025 01:38:48] "POST /api/indexes HTTP/1.1" 200 -
+2025-09-06 01:38:49,424 - werkzeug - INFO - 127.0.0.1 - - [06/Sep/2025 01:38:49] "POST /api/videos HTTP/1.1" 200 -
+2025-09-06 01:42:03,385 - werkzeug - INFO -  * Detected change in '/Users/hrishikesh/Desktop/Video DeepResearch/TwelveLabs-Video-DeepResearch/backend/service/twelvelabs_service.py', reloading
+2025-09-06 01:42:03,498 - werkzeug - INFO -  * Detected change in '/Users/hrishikesh/Desktop/Video DeepResearch/TwelveLabs-Video-DeepResearch/backend/app.py', reloading
+2025-09-06 01:42:03,499 - werkzeug - INFO -  * Detected change in '/Users/hrishikesh/Desktop/Video DeepResearch/TwelveLabs-Video-DeepResearch/backend/service/twelvelabs_service.py', reloading
+2025-09-06 01:42:03,510 - werkzeug - INFO -  * Detected change in '/Users/hrishikesh/Desktop/Video DeepResearch/TwelveLabs-Video-DeepResearch/backend/service/twelvelabs_service.py', reloading
+2025-09-06 01:42:03,525 - werkzeug - INFO -  * Detected change in '/Users/hrishikesh/Desktop/Video DeepResearch/TwelveLabs-Video-DeepResearch/backend/app.py', reloading
+2025-09-06 01:42:03,770 - werkzeug - INFO -  * Restarting with watchdog (fsevents)
+2025-09-06 01:42:04,471 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-09-06 01:42:04,471 - apscheduler.scheduler - INFO - Added job "wake_up_app" to job store "default"
+2025-09-06 01:42:04,471 - apscheduler.scheduler - INFO - Scheduler started
+2025-09-06 01:42:04,474 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 10
+2025-09-06 01:42:04,474 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 13
+2025-09-06 01:42:04,477 - werkzeug - WARNING -  * Debugger is active!
+2025-09-06 01:42:04,482 - werkzeug - INFO -  * Debugger PIN: 237-707-018
+2025-09-06 01:43:19,589 - apscheduler.executors.default - INFO - Running job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-06 01:52:19 CEST)" (scheduled at 2025-09-06 01:43:19.582262+02:00)
+2025-09-06 01:43:19,600 - werkzeug - INFO - 127.0.0.1 - - [06/Sep/2025 01:43:19] "GET /health HTTP/1.1" 200 -
+2025-09-06 01:43:19,601 - apscheduler.executors.default - INFO - Job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-06 01:52:19 CEST)" executed successfully
+2025-09-06 01:44:07,120 - werkzeug - INFO - 127.0.0.1 - - [06/Sep/2025 01:44:07] "OPTIONS /api/indexes HTTP/1.1" 200 -
+2025-09-06 01:44:07,884 - werkzeug - INFO - 127.0.0.1 - - [06/Sep/2025 01:44:07] "POST /api/indexes HTTP/1.1" 200 -
+2025-09-06 01:44:07,892 - werkzeug - INFO - 127.0.0.1 - - [06/Sep/2025 01:44:07] "OPTIONS /api/videos HTTP/1.1" 200 -
+2025-09-06 01:44:08,510 - werkzeug - INFO - 127.0.0.1 - - [06/Sep/2025 01:44:08] "POST /api/videos HTTP/1.1" 200 -
+2025-09-06 01:44:20,652 - werkzeug - INFO - 127.0.0.1 - - [06/Sep/2025 01:44:20] "OPTIONS /api/config/twelvelabs HTTP/1.1" 200 -
+2025-09-06 01:44:20,656 - werkzeug - INFO - 127.0.0.1 - - [06/Sep/2025 01:44:20] "DELETE /api/config/twelvelabs HTTP/1.1" 200 -
+2025-09-06 01:44:23,982 - werkzeug - INFO - 127.0.0.1 - - [06/Sep/2025 01:44:23] "POST /api/config/twelvelabs HTTP/1.1" 200 -
+2025-09-06 01:44:23,992 - werkzeug - INFO - 127.0.0.1 - - [06/Sep/2025 01:44:23] "OPTIONS /api/videos HTTP/1.1" 200 -
+2025-09-06 01:44:24,617 - werkzeug - INFO - 127.0.0.1 - - [06/Sep/2025 01:44:24] "POST /api/videos HTTP/1.1" 200 -
+2025-09-06 01:44:37,274 - werkzeug - INFO - 127.0.0.1 - - [06/Sep/2025 01:44:37] "OPTIONS /api/config/twelvelabs HTTP/1.1" 200 -
+2025-09-06 01:44:37,277 - werkzeug - INFO - 127.0.0.1 - - [06/Sep/2025 01:44:37] "DELETE /api/config/twelvelabs HTTP/1.1" 200 -
+2025-09-06 01:44:37,281 - werkzeug - INFO - 127.0.0.1 - - [06/Sep/2025 01:44:37] "OPTIONS /api/indexes HTTP/1.1" 200 -
+2025-09-06 01:44:37,913 - werkzeug - INFO - 127.0.0.1 - - [06/Sep/2025 01:44:37] "POST /api/indexes HTTP/1.1" 200 -
+2025-09-06 01:44:37,927 - werkzeug - INFO - 127.0.0.1 - - [06/Sep/2025 01:44:37] "OPTIONS /api/videos HTTP/1.1" 200 -
+2025-09-06 01:44:38,546 - werkzeug - INFO - 127.0.0.1 - - [06/Sep/2025 01:44:38] "POST /api/videos HTTP/1.1" 200 -
+2025-09-06 01:44:41,089 - werkzeug - INFO - 127.0.0.1 - - [06/Sep/2025 01:44:41] "DELETE /api/config/twelvelabs HTTP/1.1" 200 -
+2025-09-06 01:44:42,928 - werkzeug - INFO - 127.0.0.1 - - [06/Sep/2025 01:44:42] "OPTIONS /api/config/twelvelabs HTTP/1.1" 200 -
+2025-09-06 01:44:43,524 - werkzeug - INFO - 127.0.0.1 - - [06/Sep/2025 01:44:43] "POST /api/config/twelvelabs HTTP/1.1" 200 -
+2025-09-06 01:44:43,535 - werkzeug - INFO - 127.0.0.1 - - [06/Sep/2025 01:44:43] "OPTIONS /api/videos HTTP/1.1" 200 -
+2025-09-06 01:44:44,137 - werkzeug - INFO - 127.0.0.1 - - [06/Sep/2025 01:44:44] "POST /api/videos HTTP/1.1" 200 -
+2025-09-06 01:46:03,126 - werkzeug - INFO - 127.0.0.1 - - [06/Sep/2025 01:46:03] "OPTIONS /api/indexes HTTP/1.1" 200 -
+2025-09-06 01:46:03,918 - werkzeug - INFO - 127.0.0.1 - - [06/Sep/2025 01:46:03] "POST /api/indexes HTTP/1.1" 200 -
+2025-09-06 01:46:03,921 - werkzeug - INFO - 127.0.0.1 - - [06/Sep/2025 01:46:03] "OPTIONS /api/videos HTTP/1.1" 200 -
+2025-09-06 01:46:04,531 - werkzeug - INFO - 127.0.0.1 - - [06/Sep/2025 01:46:04] "POST /api/videos HTTP/1.1" 200 -
+2025-09-06 01:46:07,532 - werkzeug - INFO - 127.0.0.1 - - [06/Sep/2025 01:46:07] "OPTIONS /api/config/twelvelabs HTTP/1.1" 200 -
+2025-09-06 01:46:07,533 - werkzeug - INFO - 127.0.0.1 - - [06/Sep/2025 01:46:07] "DELETE /api/config/twelvelabs HTTP/1.1" 200 -
+2025-09-06 01:46:08,723 - werkzeug - INFO - 127.0.0.1 - - [06/Sep/2025 01:46:08] "DELETE /api/config/twelvelabs HTTP/1.1" 200 -
+2025-09-06 01:46:08,728 - werkzeug - INFO - 127.0.0.1 - - [06/Sep/2025 01:46:08] "OPTIONS /api/indexes HTTP/1.1" 200 -
+2025-09-06 01:46:09,561 - werkzeug - INFO - 127.0.0.1 - - [06/Sep/2025 01:46:09] "POST /api/indexes HTTP/1.1" 200 -
+2025-09-06 01:46:09,566 - werkzeug - INFO - 127.0.0.1 - - [06/Sep/2025 01:46:09] "OPTIONS /api/videos HTTP/1.1" 200 -
+2025-09-06 01:46:10,292 - werkzeug - INFO - 127.0.0.1 - - [06/Sep/2025 01:46:10] "POST /api/videos HTTP/1.1" 200 -
+2025-09-06 01:46:24,357 - werkzeug - INFO - 127.0.0.1 - - [06/Sep/2025 01:46:24] "OPTIONS /api/config/twelvelabs HTTP/1.1" 200 -
+2025-09-06 01:46:24,364 - werkzeug - INFO - 127.0.0.1 - - [06/Sep/2025 01:46:24] "DELETE /api/config/twelvelabs HTTP/1.1" 200 -
+2025-09-06 01:46:27,221 - werkzeug - INFO - 127.0.0.1 - - [06/Sep/2025 01:46:27] "POST /api/config/twelvelabs HTTP/1.1" 200 -
+2025-09-06 01:46:27,230 - werkzeug - INFO - 127.0.0.1 - - [06/Sep/2025 01:46:27] "OPTIONS /api/videos HTTP/1.1" 200 -
+2025-09-06 01:46:27,818 - werkzeug - INFO - 127.0.0.1 - - [06/Sep/2025 01:46:27] "POST /api/videos HTTP/1.1" 200 -
+2025-09-06 01:49:07,575 - werkzeug - INFO - 127.0.0.1 - - [06/Sep/2025 01:49:07] "OPTIONS /api/indexes HTTP/1.1" 200 -
+2025-09-06 01:49:08,723 - werkzeug - INFO - 127.0.0.1 - - [06/Sep/2025 01:49:08] "POST /api/indexes HTTP/1.1" 200 -
+2025-09-06 01:49:08,750 - werkzeug - INFO - 127.0.0.1 - - [06/Sep/2025 01:49:08] "OPTIONS /api/videos HTTP/1.1" 200 -
+2025-09-06 01:49:09,566 - werkzeug - INFO - 127.0.0.1 - - [06/Sep/2025 01:49:09] "POST /api/videos HTTP/1.1" 200 -
+2025-09-07 02:22:28,663 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-09-07 02:22:28,664 - apscheduler.scheduler - INFO - Added job "wake_up_app" to job store "default"
+2025-09-07 02:22:28,664 - apscheduler.scheduler - INFO - Scheduler started
+2025-09-07 02:22:28,667 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 10
+2025-09-07 02:22:28,668 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 13
+2025-09-07 02:22:28,676 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.2.73:5000
+2025-09-07 02:22:28,676 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-09-07 02:22:28,694 - werkzeug - INFO -  * Restarting with watchdog (fsevents)
+2025-09-07 02:22:28,954 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-09-07 02:22:28,955 - apscheduler.scheduler - INFO - Added job "wake_up_app" to job store "default"
+2025-09-07 02:22:28,955 - apscheduler.scheduler - INFO - Scheduler started
+2025-09-07 02:22:28,957 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 10
+2025-09-07 02:22:28,957 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 13
+2025-09-07 02:22:28,958 - werkzeug - WARNING -  * Debugger is active!
+2025-09-07 02:22:28,965 - werkzeug - INFO -  * Debugger PIN: 237-707-018
+2025-09-07 02:22:32,779 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 02:22:32] "OPTIONS /api/indexes HTTP/1.1" 200 -
+2025-09-07 02:22:33,538 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 02:22:33] "POST /api/indexes HTTP/1.1" 200 -
+2025-09-07 02:22:33,542 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 02:22:33] "OPTIONS /api/videos HTTP/1.1" 200 -
+2025-09-07 02:22:34,147 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 02:22:34] "POST /api/videos HTTP/1.1" 200 -
+2025-09-07 02:22:53,645 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 02:22:53] "OPTIONS /api/config/twelvelabs HTTP/1.1" 200 -
+2025-09-07 02:22:53,648 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 02:22:53] "DELETE /api/config/twelvelabs HTTP/1.1" 200 -
+2025-09-07 02:22:56,530 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 02:22:56] "POST /api/config/twelvelabs HTTP/1.1" 200 -
+2025-09-07 02:22:56,539 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 02:22:56] "OPTIONS /api/videos HTTP/1.1" 200 -
+2025-09-07 02:22:57,168 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 02:22:57] "POST /api/videos HTTP/1.1" 200 -
+2025-09-07 02:28:18,587 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 02:28:18] "OPTIONS /api/indexes HTTP/1.1" 200 -
+2025-09-07 02:28:19,222 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 02:28:19] "POST /api/indexes HTTP/1.1" 200 -
+2025-09-07 02:28:19,229 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 02:28:19] "OPTIONS /api/videos HTTP/1.1" 200 -
+2025-09-07 02:28:19,837 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 02:28:19] "POST /api/videos HTTP/1.1" 200 -
+2025-09-07 02:29:09,442 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 02:29:09] "OPTIONS /api/config/twelvelabs HTTP/1.1" 200 -
+2025-09-07 02:29:09,445 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 02:29:09] "DELETE /api/config/twelvelabs HTTP/1.1" 200 -
+2025-09-07 02:29:09,466 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 02:29:09] "OPTIONS /api/indexes HTTP/1.1" 200 -
+2025-09-07 02:29:10,081 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 02:29:10] "POST /api/indexes HTTP/1.1" 200 -
+2025-09-07 02:29:10,092 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 02:29:10] "OPTIONS /api/videos HTTP/1.1" 200 -
+2025-09-07 02:29:10,715 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 02:29:10] "POST /api/videos HTTP/1.1" 200 -
+2025-09-07 02:29:16,077 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 02:29:16] "OPTIONS /api/config/twelvelabs HTTP/1.1" 200 -
+2025-09-07 02:29:16,079 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 02:29:16] "DELETE /api/config/twelvelabs HTTP/1.1" 200 -
+2025-09-07 02:29:16,122 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 02:29:16] "OPTIONS /api/indexes HTTP/1.1" 200 -
+2025-09-07 02:29:16,739 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 02:29:16] "POST /api/indexes HTTP/1.1" 200 -
+2025-09-07 02:29:16,747 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 02:29:16] "OPTIONS /api/videos HTTP/1.1" 200 -
+2025-09-07 02:29:17,377 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 02:29:17] "POST /api/videos HTTP/1.1" 200 -
+2025-09-07 02:29:28,645 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 02:29:28] "OPTIONS /api/config/twelvelabs HTTP/1.1" 200 -
+2025-09-07 02:29:28,646 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 02:29:28] "DELETE /api/config/twelvelabs HTTP/1.1" 200 -
+2025-09-07 02:29:30,683 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 02:29:30] "POST /api/config/twelvelabs HTTP/1.1" 200 -
+2025-09-07 02:29:30,691 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 02:29:30] "OPTIONS /api/videos HTTP/1.1" 200 -
+2025-09-07 02:29:31,295 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 02:29:31] "POST /api/videos HTTP/1.1" 200 -
+2025-09-07 02:29:33,303 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 02:29:33] "DELETE /api/config/twelvelabs HTTP/1.1" 200 -
+2025-09-07 02:29:33,307 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 02:29:33] "OPTIONS /api/indexes HTTP/1.1" 200 -
+2025-09-07 02:29:33,908 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 02:29:33] "POST /api/indexes HTTP/1.1" 200 -
+2025-09-07 02:29:34,150 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 02:29:34] "OPTIONS /api/config/twelvelabs HTTP/1.1" 200 -
+2025-09-07 02:29:34,151 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 02:29:34] "DELETE /api/config/twelvelabs HTTP/1.1" 200 -
+2025-09-07 02:29:34,495 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 02:29:34] "POST /api/videos HTTP/1.1" 200 -
+2025-09-07 02:29:34,742 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 02:29:34] "POST /api/indexes HTTP/1.1" 200 -
+2025-09-07 02:29:35,336 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 02:29:35] "POST /api/videos HTTP/1.1" 200 -
+2025-09-07 02:49:44,157 - apscheduler.executors.default - WARNING - Run time of job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-07 02:58:28 CEST)" was missed by 0:00:15.493814
+2025-09-07 02:49:44,443 - apscheduler.executors.default - WARNING - Run time of job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-07 02:58:28 CEST)" was missed by 0:00:15.488114
+2025-09-07 02:50:52,701 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 02:50:52] "OPTIONS /api/config/twelvelabs HTTP/1.1" 200 -
+2025-09-07 02:50:52,703 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 02:50:52] "DELETE /api/config/twelvelabs HTTP/1.1" 200 -
+2025-09-07 02:50:52,736 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 02:50:52] "OPTIONS /api/indexes HTTP/1.1" 200 -
+2025-09-07 02:50:53,395 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 02:50:53] "POST /api/indexes HTTP/1.1" 200 -
+2025-09-07 02:50:53,404 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 02:50:53] "OPTIONS /api/videos HTTP/1.1" 200 -
+2025-09-07 02:50:54,033 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 02:50:54] "POST /api/videos HTTP/1.1" 200 -
+2025-09-07 02:53:02,843 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 02:53:02] "OPTIONS /api/config/twelvelabs HTTP/1.1" 200 -
+2025-09-07 02:53:02,846 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 02:53:02] "DELETE /api/config/twelvelabs HTTP/1.1" 200 -
+2025-09-07 02:53:02,880 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 02:53:02] "OPTIONS /api/indexes HTTP/1.1" 200 -
+2025-09-07 02:53:03,533 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 02:53:03] "POST /api/indexes HTTP/1.1" 200 -
+2025-09-07 02:53:03,540 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 02:53:03] "OPTIONS /api/videos HTTP/1.1" 200 -
+2025-09-07 02:53:04,159 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 02:53:04] "POST /api/videos HTTP/1.1" 200 -
+2025-09-07 02:53:08,596 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 02:53:08] "OPTIONS /api/indexes HTTP/1.1" 200 -
+2025-09-07 02:53:09,210 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 02:53:09] "POST /api/indexes HTTP/1.1" 200 -
+2025-09-07 02:53:09,214 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 02:53:09] "OPTIONS /api/videos HTTP/1.1" 200 -
+2025-09-07 02:53:09,836 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 02:53:09] "POST /api/videos HTTP/1.1" 200 -
+2025-09-07 02:53:13,137 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 02:53:13] "OPTIONS /api/config/twelvelabs HTTP/1.1" 200 -
+2025-09-07 02:53:13,139 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 02:53:13] "DELETE /api/config/twelvelabs HTTP/1.1" 200 -
+2025-09-07 02:53:13,800 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 02:53:13] "POST /api/indexes HTTP/1.1" 200 -
+2025-09-07 02:53:14,424 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 02:53:14] "POST /api/videos HTTP/1.1" 200 -
+2025-09-07 02:55:01,807 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 02:55:01] "OPTIONS /api/indexes HTTP/1.1" 200 -
+2025-09-07 02:55:02,528 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 02:55:02] "POST /api/indexes HTTP/1.1" 200 -
+2025-09-07 02:55:02,531 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 02:55:02] "OPTIONS /api/videos HTTP/1.1" 200 -
+2025-09-07 02:55:03,126 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 02:55:03] "POST /api/videos HTTP/1.1" 200 -
+2025-09-07 02:56:05,551 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 02:56:05] "OPTIONS /api/config/twelvelabs HTTP/1.1" 200 -
+2025-09-07 02:56:05,555 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 02:56:05] "DELETE /api/config/twelvelabs HTTP/1.1" 200 -
+2025-09-07 02:56:05,590 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 02:56:05] "OPTIONS /api/indexes HTTP/1.1" 200 -
+2025-09-07 02:56:06,185 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 02:56:06] "POST /api/indexes HTTP/1.1" 200 -
+2025-09-07 02:56:06,193 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 02:56:06] "OPTIONS /api/videos HTTP/1.1" 200 -
+2025-09-07 02:56:06,793 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 02:56:06] "POST /api/videos HTTP/1.1" 200 -
+2025-09-07 02:58:12,298 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 02:58:12] "OPTIONS /api/config/twelvelabs HTTP/1.1" 200 -
+2025-09-07 02:58:12,303 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 02:58:12] "DELETE /api/config/twelvelabs HTTP/1.1" 200 -
+2025-09-07 02:58:12,332 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 02:58:12] "OPTIONS /api/indexes HTTP/1.1" 200 -
+2025-09-07 02:58:12,966 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 02:58:12] "POST /api/indexes HTTP/1.1" 200 -
+2025-09-07 02:58:12,973 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 02:58:12] "OPTIONS /api/videos HTTP/1.1" 200 -
+2025-09-07 02:58:13,571 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 02:58:13] "POST /api/videos HTTP/1.1" 200 -
+2025-09-07 02:58:28,677 - apscheduler.executors.default - INFO - Running job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-07 03:07:28 CEST)" (scheduled at 2025-09-07 02:58:28.663700+02:00)
+2025-09-07 02:58:28,709 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 02:58:28] "GET /health HTTP/1.1" 200 -
+2025-09-07 02:58:28,710 - apscheduler.executors.default - INFO - Job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-07 03:07:28 CEST)" executed successfully
+2025-09-07 02:58:28,966 - apscheduler.executors.default - INFO - Running job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-07 03:07:28 CEST)" (scheduled at 2025-09-07 02:58:28.954741+02:00)
+2025-09-07 02:58:28,970 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 02:58:28] "GET /health HTTP/1.1" 200 -
+2025-09-07 02:58:28,970 - apscheduler.executors.default - INFO - Job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-07 03:07:28 CEST)" executed successfully
+2025-09-07 03:01:07,522 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 03:01:07] "OPTIONS /api/config/twelvelabs HTTP/1.1" 200 -
+2025-09-07 03:01:07,526 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 03:01:07] "DELETE /api/config/twelvelabs HTTP/1.1" 200 -
+2025-09-07 03:01:07,546 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 03:01:07] "OPTIONS /api/indexes HTTP/1.1" 200 -
+2025-09-07 03:01:08,176 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 03:01:08] "POST /api/indexes HTTP/1.1" 200 -
+2025-09-07 03:01:08,186 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 03:01:08] "OPTIONS /api/videos HTTP/1.1" 200 -
+2025-09-07 03:01:08,789 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 03:01:08] "POST /api/videos HTTP/1.1" 200 -
+2025-09-07 03:04:06,354 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 03:04:06] "OPTIONS /api/config/twelvelabs HTTP/1.1" 200 -
+2025-09-07 03:04:06,358 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 03:04:06] "DELETE /api/config/twelvelabs HTTP/1.1" 200 -
+2025-09-07 03:04:06,378 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 03:04:06] "OPTIONS /api/indexes HTTP/1.1" 200 -
+2025-09-07 03:04:07,031 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 03:04:07] "POST /api/indexes HTTP/1.1" 200 -
+2025-09-07 03:04:07,040 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 03:04:07] "OPTIONS /api/videos HTTP/1.1" 200 -
+2025-09-07 03:04:07,661 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 03:04:07] "POST /api/videos HTTP/1.1" 200 -
+2025-09-07 03:05:47,828 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 03:05:47] "OPTIONS /api/config/twelvelabs HTTP/1.1" 200 -
+2025-09-07 03:05:47,833 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 03:05:47] "DELETE /api/config/twelvelabs HTTP/1.1" 200 -
+2025-09-07 03:05:47,865 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 03:05:47] "OPTIONS /api/indexes HTTP/1.1" 200 -
+2025-09-07 03:05:48,495 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 03:05:48] "POST /api/indexes HTTP/1.1" 200 -
+2025-09-07 03:05:48,504 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 03:05:48] "OPTIONS /api/videos HTTP/1.1" 200 -
+2025-09-07 03:05:49,128 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 03:05:49] "POST /api/videos HTTP/1.1" 200 -
+2025-09-07 03:05:52,291 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 03:05:52] "DELETE /api/config/twelvelabs HTTP/1.1" 200 -
+2025-09-07 03:05:52,944 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 03:05:52] "POST /api/indexes HTTP/1.1" 200 -
+2025-09-07 03:05:53,567 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 03:05:53] "POST /api/videos HTTP/1.1" 200 -
+2025-09-07 03:07:28,670 - apscheduler.executors.default - INFO - Running job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-07 03:16:28 CEST)" (scheduled at 2025-09-07 03:07:28.663700+02:00)
+2025-09-07 03:07:28,684 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 03:07:28] "GET /health HTTP/1.1" 200 -
+2025-09-07 03:07:28,686 - apscheduler.executors.default - INFO - Job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-07 03:16:28 CEST)" executed successfully
+2025-09-07 03:07:28,958 - apscheduler.executors.default - INFO - Running job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-07 03:16:28 CEST)" (scheduled at 2025-09-07 03:07:28.954741+02:00)
+2025-09-07 03:07:28,970 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 03:07:28] "GET /health HTTP/1.1" 200 -
+2025-09-07 03:07:28,971 - apscheduler.executors.default - INFO - Job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-07 03:16:28 CEST)" executed successfully
+2025-09-07 03:08:55,103 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 03:08:55] "OPTIONS /api/config/twelvelabs HTTP/1.1" 200 -
+2025-09-07 03:08:55,107 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 03:08:55] "DELETE /api/config/twelvelabs HTTP/1.1" 200 -
+2025-09-07 03:08:55,133 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 03:08:55] "OPTIONS /api/indexes HTTP/1.1" 200 -
+2025-09-07 03:08:55,763 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 03:08:55] "POST /api/indexes HTTP/1.1" 200 -
+2025-09-07 03:08:55,771 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 03:08:55] "OPTIONS /api/videos HTTP/1.1" 200 -
+2025-09-07 03:08:56,386 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 03:08:56] "POST /api/videos HTTP/1.1" 200 -
+2025-09-07 03:11:57,299 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 03:11:57] "OPTIONS /api/config/twelvelabs HTTP/1.1" 200 -
+2025-09-07 03:11:57,304 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 03:11:57] "DELETE /api/config/twelvelabs HTTP/1.1" 200 -
+2025-09-07 03:11:57,334 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 03:11:57] "OPTIONS /api/indexes HTTP/1.1" 200 -
+2025-09-07 03:11:57,973 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 03:11:57] "POST /api/indexes HTTP/1.1" 200 -
+2025-09-07 03:11:57,981 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 03:11:57] "OPTIONS /api/videos HTTP/1.1" 200 -
+2025-09-07 03:11:58,595 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 03:11:58] "POST /api/videos HTTP/1.1" 200 -
+2025-09-07 03:12:39,368 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 03:12:39] "OPTIONS /api/indexes HTTP/1.1" 200 -
+2025-09-07 03:12:39,989 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 03:12:39] "POST /api/indexes HTTP/1.1" 200 -
+2025-09-07 03:12:39,993 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 03:12:39] "OPTIONS /api/videos HTTP/1.1" 200 -
+2025-09-07 03:12:40,599 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 03:12:40] "POST /api/videos HTTP/1.1" 200 -
+2025-09-07 03:12:58,163 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 03:12:58] "OPTIONS /api/config/twelvelabs HTTP/1.1" 200 -
+2025-09-07 03:12:58,167 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 03:12:58] "DELETE /api/config/twelvelabs HTTP/1.1" 200 -
+2025-09-07 03:12:58,181 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 03:12:58] "OPTIONS /api/indexes HTTP/1.1" 200 -
+2025-09-07 03:12:58,790 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 03:12:58] "POST /api/indexes HTTP/1.1" 200 -
+2025-09-07 03:12:58,796 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 03:12:58] "OPTIONS /api/videos HTTP/1.1" 200 -
+2025-09-07 03:12:59,381 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 03:12:59] "POST /api/videos HTTP/1.1" 200 -
+2025-09-07 03:13:18,484 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 03:13:18] "OPTIONS /api/config/twelvelabs HTTP/1.1" 200 -
+2025-09-07 03:13:18,488 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 03:13:18] "DELETE /api/config/twelvelabs HTTP/1.1" 200 -
+2025-09-07 03:13:18,497 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 03:13:18] "OPTIONS /api/indexes HTTP/1.1" 200 -
+2025-09-07 03:13:19,142 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 03:13:19] "POST /api/indexes HTTP/1.1" 200 -
+2025-09-07 03:13:19,154 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 03:13:19] "OPTIONS /api/videos HTTP/1.1" 200 -
+2025-09-07 03:13:19,781 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 03:13:19] "POST /api/videos HTTP/1.1" 200 -
+2025-09-07 03:14:42,661 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 03:14:42] "OPTIONS /api/config/twelvelabs HTTP/1.1" 200 -
+2025-09-07 03:14:42,668 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 03:14:42] "DELETE /api/config/twelvelabs HTTP/1.1" 200 -
+2025-09-07 03:14:42,682 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 03:14:42] "OPTIONS /api/indexes HTTP/1.1" 200 -
+2025-09-07 03:14:43,337 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 03:14:43] "POST /api/indexes HTTP/1.1" 200 -
+2025-09-07 03:14:43,346 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 03:14:43] "OPTIONS /api/videos HTTP/1.1" 200 -
+2025-09-07 03:14:43,962 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 03:14:43] "POST /api/videos HTTP/1.1" 200 -
+2025-09-07 03:16:28,678 - apscheduler.executors.default - INFO - Running job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-07 03:25:28 CEST)" (scheduled at 2025-09-07 03:16:28.663700+02:00)
+2025-09-07 03:16:28,695 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 03:16:28] "GET /health HTTP/1.1" 200 -
+2025-09-07 03:16:28,697 - apscheduler.executors.default - INFO - Job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-07 03:25:28 CEST)" executed successfully
+2025-09-07 03:16:28,967 - apscheduler.executors.default - INFO - Running job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-07 03:25:28 CEST)" (scheduled at 2025-09-07 03:16:28.954741+02:00)
+2025-09-07 03:16:28,974 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 03:16:28] "GET /health HTTP/1.1" 200 -
+2025-09-07 03:16:28,976 - apscheduler.executors.default - INFO - Job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-07 03:25:28 CEST)" executed successfully
+2025-09-07 03:17:55,100 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 03:17:55] "OPTIONS /api/config/twelvelabs HTTP/1.1" 200 -
+2025-09-07 03:17:55,102 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 03:17:55] "DELETE /api/config/twelvelabs HTTP/1.1" 200 -
+2025-09-07 03:17:55,110 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 03:17:55] "OPTIONS /api/indexes HTTP/1.1" 200 -
+2025-09-07 03:17:55,759 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 03:17:55] "POST /api/indexes HTTP/1.1" 200 -
+2025-09-07 03:17:55,765 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 03:17:55] "OPTIONS /api/videos HTTP/1.1" 200 -
+2025-09-07 03:17:56,392 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 03:17:56] "POST /api/videos HTTP/1.1" 200 -
+2025-09-07 03:18:02,365 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 03:18:02] "OPTIONS /api/config/twelvelabs HTTP/1.1" 200 -
+2025-09-07 03:18:02,367 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 03:18:02] "DELETE /api/config/twelvelabs HTTP/1.1" 200 -
+2025-09-07 03:18:02,392 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 03:18:02] "OPTIONS /api/indexes HTTP/1.1" 200 -
+2025-09-07 03:18:03,018 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 03:18:03] "POST /api/indexes HTTP/1.1" 200 -
+2025-09-07 03:18:03,028 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 03:18:03] "OPTIONS /api/videos HTTP/1.1" 200 -
+2025-09-07 03:18:03,651 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 03:18:03] "POST /api/videos HTTP/1.1" 200 -
+2025-09-07 03:18:08,337 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 03:18:08] "OPTIONS /api/indexes HTTP/1.1" 200 -
+2025-09-07 03:18:08,935 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 03:18:08] "POST /api/indexes HTTP/1.1" 200 -
+2025-09-07 03:18:08,943 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 03:18:08] "OPTIONS /api/videos HTTP/1.1" 200 -
+2025-09-07 03:18:09,529 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 03:18:09] "POST /api/videos HTTP/1.1" 200 -
+2025-09-07 03:18:10,100 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 03:18:10] "OPTIONS /api/config/twelvelabs HTTP/1.1" 200 -
+2025-09-07 03:18:10,103 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 03:18:10] "DELETE /api/config/twelvelabs HTTP/1.1" 200 -
+2025-09-07 03:18:10,738 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 03:18:10] "POST /api/indexes HTTP/1.1" 200 -
+2025-09-07 03:18:11,357 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 03:18:11] "POST /api/videos HTTP/1.1" 200 -
+2025-09-07 03:18:44,505 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 03:18:44] "OPTIONS /api/config/twelvelabs HTTP/1.1" 200 -
+2025-09-07 03:18:44,509 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 03:18:44] "DELETE /api/config/twelvelabs HTTP/1.1" 200 -
+2025-09-07 03:18:44,539 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 03:18:44] "OPTIONS /api/indexes HTTP/1.1" 200 -
+2025-09-07 03:18:45,171 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 03:18:45] "POST /api/indexes HTTP/1.1" 200 -
+2025-09-07 03:18:45,178 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 03:18:45] "OPTIONS /api/videos HTTP/1.1" 200 -
+2025-09-07 03:18:45,804 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 03:18:45] "POST /api/videos HTTP/1.1" 200 -
+2025-09-07 03:18:59,039 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 03:18:59] "OPTIONS /api/config/twelvelabs HTTP/1.1" 200 -
+2025-09-07 03:18:59,043 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 03:18:59] "DELETE /api/config/twelvelabs HTTP/1.1" 200 -
+2025-09-07 03:18:59,071 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 03:18:59] "OPTIONS /api/indexes HTTP/1.1" 200 -
+2025-09-07 03:18:59,705 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 03:18:59] "POST /api/indexes HTTP/1.1" 200 -
+2025-09-07 03:18:59,709 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 03:18:59] "OPTIONS /api/videos HTTP/1.1" 200 -
+2025-09-07 03:19:00,334 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 03:19:00] "POST /api/videos HTTP/1.1" 200 -
+2025-09-07 03:20:56,536 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 03:20:56] "OPTIONS /api/config/twelvelabs HTTP/1.1" 200 -
+2025-09-07 03:20:56,540 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 03:20:56] "DELETE /api/config/twelvelabs HTTP/1.1" 200 -
+2025-09-07 03:20:56,561 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 03:20:56] "OPTIONS /api/indexes HTTP/1.1" 200 -
+2025-09-07 03:20:57,209 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 03:20:57] "POST /api/indexes HTTP/1.1" 200 -
+2025-09-07 03:20:57,217 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 03:20:57] "OPTIONS /api/videos HTTP/1.1" 200 -
+2025-09-07 03:20:57,842 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 03:20:57] "POST /api/videos HTTP/1.1" 200 -
+2025-09-07 03:21:15,031 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 03:21:15] "OPTIONS /api/config/twelvelabs HTTP/1.1" 200 -
+2025-09-07 03:21:15,034 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 03:21:15] "DELETE /api/config/twelvelabs HTTP/1.1" 200 -
+2025-09-07 03:21:15,063 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 03:21:15] "OPTIONS /api/indexes HTTP/1.1" 200 -
+2025-09-07 03:21:15,702 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 03:21:15] "POST /api/indexes HTTP/1.1" 200 -
+2025-09-07 03:21:15,711 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 03:21:15] "OPTIONS /api/videos HTTP/1.1" 200 -
+2025-09-07 03:21:16,331 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 03:21:16] "POST /api/videos HTTP/1.1" 200 -
+2025-09-07 03:24:26,282 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 03:24:26] "OPTIONS /api/config/twelvelabs HTTP/1.1" 200 -
+2025-09-07 03:24:26,286 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 03:24:26] "DELETE /api/config/twelvelabs HTTP/1.1" 200 -
+2025-09-07 03:24:26,302 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 03:24:26] "OPTIONS /api/indexes HTTP/1.1" 200 -
+2025-09-07 03:24:26,921 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 03:24:26] "POST /api/indexes HTTP/1.1" 200 -
+2025-09-07 03:24:26,929 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 03:24:26] "OPTIONS /api/videos HTTP/1.1" 200 -
+2025-09-07 03:24:27,519 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 03:24:27] "POST /api/videos HTTP/1.1" 200 -
+2025-09-07 03:25:24,670 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 03:25:24] "OPTIONS /api/config/twelvelabs HTTP/1.1" 200 -
+2025-09-07 03:25:24,674 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 03:25:24] "DELETE /api/config/twelvelabs HTTP/1.1" 200 -
+2025-09-07 03:25:24,690 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 03:25:24] "OPTIONS /api/indexes HTTP/1.1" 200 -
+2025-09-07 03:25:25,311 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 03:25:25] "POST /api/indexes HTTP/1.1" 200 -
+2025-09-07 03:25:25,322 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 03:25:25] "OPTIONS /api/videos HTTP/1.1" 200 -
+2025-09-07 03:25:25,988 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 03:25:25] "POST /api/videos HTTP/1.1" 200 -
+2025-09-07 03:25:28,688 - apscheduler.executors.default - INFO - Running job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-07 03:34:28 CEST)" (scheduled at 2025-09-07 03:25:28.663700+02:00)
+2025-09-07 03:25:28,707 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 03:25:28] "GET /health HTTP/1.1" 200 -
+2025-09-07 03:25:28,710 - apscheduler.executors.default - INFO - Job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-07 03:34:28 CEST)" executed successfully
+2025-09-07 03:25:28,958 - apscheduler.executors.default - INFO - Running job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-07 03:34:28 CEST)" (scheduled at 2025-09-07 03:25:28.954741+02:00)
+2025-09-07 03:25:28,966 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 03:25:28] "GET /health HTTP/1.1" 200 -
+2025-09-07 03:25:28,968 - apscheduler.executors.default - INFO - Job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-07 03:34:28 CEST)" executed successfully
+2025-09-07 03:32:26,132 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 03:32:26] "OPTIONS /api/config/twelvelabs HTTP/1.1" 200 -
+2025-09-07 03:32:26,135 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 03:32:26] "DELETE /api/config/twelvelabs HTTP/1.1" 200 -
+2025-09-07 03:32:26,147 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 03:32:26] "OPTIONS /api/indexes HTTP/1.1" 200 -
+2025-09-07 03:32:26,780 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 03:32:26] "POST /api/indexes HTTP/1.1" 200 -
+2025-09-07 03:32:26,785 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 03:32:26] "OPTIONS /api/videos HTTP/1.1" 200 -
+2025-09-07 03:32:27,384 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 03:32:27] "POST /api/videos HTTP/1.1" 200 -
+2025-09-07 03:34:28,676 - apscheduler.executors.default - INFO - Running job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-07 03:43:28 CEST)" (scheduled at 2025-09-07 03:34:28.663700+02:00)
+2025-09-07 03:34:28,705 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 03:34:28] "GET /health HTTP/1.1" 200 -
+2025-09-07 03:34:28,706 - apscheduler.executors.default - INFO - Job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-07 03:43:28 CEST)" executed successfully
+2025-09-07 03:34:28,966 - apscheduler.executors.default - INFO - Running job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-07 03:43:28 CEST)" (scheduled at 2025-09-07 03:34:28.954741+02:00)
+2025-09-07 03:34:29,011 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 03:34:29] "GET /health HTTP/1.1" 200 -
+2025-09-07 03:34:29,011 - apscheduler.executors.default - INFO - Job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-07 03:43:28 CEST)" executed successfully
+2025-09-07 03:34:32,734 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 03:34:32] "OPTIONS /api/config/twelvelabs HTTP/1.1" 200 -
+2025-09-07 03:34:32,735 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 03:34:32] "DELETE /api/config/twelvelabs HTTP/1.1" 200 -
+2025-09-07 03:34:32,753 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 03:34:32] "OPTIONS /api/indexes HTTP/1.1" 200 -
+2025-09-07 03:34:33,380 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 03:34:33] "POST /api/indexes HTTP/1.1" 200 -
+2025-09-07 03:34:33,386 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 03:34:33] "OPTIONS /api/videos HTTP/1.1" 200 -
+2025-09-07 03:34:33,977 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 03:34:33] "POST /api/videos HTTP/1.1" 200 -
+2025-09-07 03:36:35,423 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 03:36:35] "OPTIONS /api/indexes HTTP/1.1" 200 -
+2025-09-07 03:36:36,277 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 03:36:36] "POST /api/indexes HTTP/1.1" 200 -
+2025-09-07 03:36:36,279 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 03:36:36] "OPTIONS /api/videos HTTP/1.1" 200 -
+2025-09-07 03:36:36,877 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 03:36:36] "POST /api/videos HTTP/1.1" 200 -
+2025-09-07 03:36:42,510 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 03:36:42] "OPTIONS /api/config/twelvelabs HTTP/1.1" 200 -
+2025-09-07 03:36:42,513 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 03:36:42] "DELETE /api/config/twelvelabs HTTP/1.1" 200 -
+2025-09-07 03:36:42,529 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 03:36:42] "OPTIONS /api/indexes HTTP/1.1" 200 -
+2025-09-07 03:36:43,128 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 03:36:43] "POST /api/indexes HTTP/1.1" 200 -
+2025-09-07 03:36:43,133 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 03:36:43] "OPTIONS /api/videos HTTP/1.1" 200 -
+2025-09-07 03:36:43,723 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 03:36:43] "POST /api/videos HTTP/1.1" 200 -
+2025-09-07 03:37:00,189 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 03:37:00] "OPTIONS /api/config/twelvelabs HTTP/1.1" 200 -
+2025-09-07 03:37:00,192 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 03:37:00] "DELETE /api/config/twelvelabs HTTP/1.1" 200 -
+2025-09-07 03:37:00,214 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 03:37:00] "OPTIONS /api/indexes HTTP/1.1" 200 -
+2025-09-07 03:37:00,799 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 03:37:00] "POST /api/indexes HTTP/1.1" 200 -
+2025-09-07 03:37:00,805 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 03:37:00] "OPTIONS /api/videos HTTP/1.1" 200 -
+2025-09-07 03:37:01,379 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 03:37:01] "POST /api/videos HTTP/1.1" 200 -
+2025-09-07 03:38:32,128 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 03:38:32] "OPTIONS /api/config/twelvelabs HTTP/1.1" 200 -
+2025-09-07 03:38:32,130 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 03:38:32] "DELETE /api/config/twelvelabs HTTP/1.1" 200 -
+2025-09-07 03:38:32,142 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 03:38:32] "OPTIONS /api/indexes HTTP/1.1" 200 -
+2025-09-07 03:38:32,780 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 03:38:32] "POST /api/indexes HTTP/1.1" 200 -
+2025-09-07 03:38:32,786 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 03:38:32] "OPTIONS /api/videos HTTP/1.1" 200 -
+2025-09-07 03:38:33,382 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 03:38:33] "POST /api/videos HTTP/1.1" 200 -
+2025-09-07 03:40:42,793 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 03:40:42] "OPTIONS /api/indexes HTTP/1.1" 200 -
+2025-09-07 03:40:43,398 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 03:40:43] "POST /api/indexes HTTP/1.1" 200 -
+2025-09-07 03:40:43,448 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 03:40:43] "OPTIONS /api/videos HTTP/1.1" 200 -
+2025-09-07 03:40:44,019 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 03:40:44] "POST /api/videos HTTP/1.1" 200 -
+2025-09-07 03:41:14,708 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 03:41:14] "OPTIONS /api/config/twelvelabs HTTP/1.1" 200 -
+2025-09-07 03:41:14,709 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 03:41:14] "DELETE /api/config/twelvelabs HTTP/1.1" 200 -
+2025-09-07 03:41:14,729 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 03:41:14] "OPTIONS /api/indexes HTTP/1.1" 200 -
+2025-09-07 03:41:15,337 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 03:41:15] "POST /api/indexes HTTP/1.1" 200 -
+2025-09-07 03:41:15,344 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 03:41:15] "OPTIONS /api/videos HTTP/1.1" 200 -
+2025-09-07 03:41:15,943 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 03:41:15] "POST /api/videos HTTP/1.1" 200 -
+2025-09-07 03:41:28,048 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 03:41:28] "OPTIONS /api/config/twelvelabs HTTP/1.1" 200 -
+2025-09-07 03:41:28,049 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 03:41:28] "DELETE /api/config/twelvelabs HTTP/1.1" 200 -
+2025-09-07 03:41:28,066 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 03:41:28] "OPTIONS /api/indexes HTTP/1.1" 200 -
+2025-09-07 03:41:28,662 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 03:41:28] "POST /api/indexes HTTP/1.1" 200 -
+2025-09-07 03:41:28,667 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 03:41:28] "OPTIONS /api/videos HTTP/1.1" 200 -
+2025-09-07 03:41:29,254 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 03:41:29] "POST /api/videos HTTP/1.1" 200 -
+2025-09-07 03:41:47,671 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 03:41:47] "OPTIONS /api/config/twelvelabs HTTP/1.1" 200 -
+2025-09-07 03:41:47,673 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 03:41:47] "DELETE /api/config/twelvelabs HTTP/1.1" 200 -
+2025-09-07 03:41:47,691 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 03:41:47] "OPTIONS /api/indexes HTTP/1.1" 200 -
+2025-09-07 03:41:48,301 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 03:41:48] "POST /api/indexes HTTP/1.1" 200 -
+2025-09-07 03:41:48,306 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 03:41:48] "OPTIONS /api/videos HTTP/1.1" 200 -
+2025-09-07 03:41:48,877 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 03:41:48] "POST /api/videos HTTP/1.1" 200 -
+2025-09-07 03:43:11,705 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 03:43:11] "POST /api/upload HTTP/1.1" 200 -
+2025-09-07 03:43:11,712 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 03:43:11] "OPTIONS /api/config/twelvelabs HTTP/1.1" 200 -
+2025-09-07 03:43:11,714 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 03:43:11] "DELETE /api/config/twelvelabs HTTP/1.1" 200 -
+2025-09-07 03:43:11,743 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 03:43:11] "OPTIONS /api/indexes HTTP/1.1" 200 -
+2025-09-07 03:43:12,501 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 03:43:12] "POST /api/indexes HTTP/1.1" 200 -
+2025-09-07 03:43:12,505 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 03:43:12] "OPTIONS /api/videos HTTP/1.1" 200 -
+2025-09-07 03:43:13,109 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 03:43:13] "POST /api/videos HTTP/1.1" 200 -
+2025-09-07 03:43:19,964 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 03:43:19] "OPTIONS /api/videos HTTP/1.1" 200 -
+2025-09-07 03:43:20,568 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 03:43:20] "POST /api/videos HTTP/1.1" 200 -
+2025-09-07 03:43:22,974 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 03:43:22] "POST /api/videos HTTP/1.1" 200 -
+2025-09-07 03:43:28,672 - apscheduler.executors.default - INFO - Running job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-07 03:52:28 CEST)" (scheduled at 2025-09-07 03:43:28.663700+02:00)
+2025-09-07 03:43:28,675 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 03:43:28] "GET /health HTTP/1.1" 200 -
+2025-09-07 03:43:28,676 - apscheduler.executors.default - INFO - Job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-07 03:52:28 CEST)" executed successfully
+2025-09-07 03:43:28,959 - apscheduler.executors.default - INFO - Running job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-07 03:52:28 CEST)" (scheduled at 2025-09-07 03:43:28.954741+02:00)
+2025-09-07 03:43:28,961 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 03:43:28] "GET /health HTTP/1.1" 200 -
+2025-09-07 03:43:28,962 - apscheduler.executors.default - INFO - Job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-07 03:52:28 CEST)" executed successfully
+2025-09-07 03:43:55,800 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 03:43:55] "OPTIONS /api/workflow HTTP/1.1" 200 -
+2025-09-07 03:43:55,802 - __main__ - INFO - === WORKFLOW REQUEST START ===
+2025-09-07 03:43:55,802 - __main__ - INFO - Request data: {
+  "index_id": "6893518408a37aa08793c4fe",
+  "video_id": "68bce2fa30049231acbe7051",
+  "analysis_prompt": "Please provide a comprehensive analysis of this video content. Include:\n\n1. **Content Overview**: What is happening in the video? Describe the main events, actions, and scenes.\n2. **Key Elements**: Identify important objects, people, locations, activities, and interactions.\n3. **Context & Setting**: What is the environment, time period, or context of the video?\n4. **Narrative Flow**: How does the story or sequence of events unfold?\n5. **Notable Details**: Highlight any significant details, patterns, or unique aspects.\n6. **Technical Aspects**: Note video quality, camera work, editing, or production elements if relevant.\n\nUser's Specific Query: please do research about it\n\nPlease ensure your analysis addresses the user's specific question while providing comprehensive coverage of the video content.",
+  "research_query": "please do research about it"
+}
+2025-09-07 03:43:55,802 - __main__ - INFO - Parameters extracted:
+2025-09-07 03:43:55,802 - __main__ - INFO -   - Index ID: 6893518408a37aa08793c4fe
+2025-09-07 03:43:55,802 - __main__ - INFO -   - Video ID: 68bce2fa30049231acbe7051
+2025-09-07 03:43:55,802 - __main__ - INFO -   - Analysis Prompt: Please provide a comprehensive analysis of this video content. Include:
+
+1. **Content Overview**: What is happening in the video? Describe the main events, actions, and scenes.
+2. **Key Elements**: Identify important objects, people, locations, activities, and interactions.
+3. **Context & Setting**: What is the environment, time period, or context of the video?
+4. **Narrative Flow**: How does the story or sequence of events unfold?
+5. **Notable Details**: Highlight any significant details, patterns, or unique aspects.
+6. **Technical Aspects**: Note video quality, camera work, editing, or production elements if relevant.
+
+User's Specific Query: please do research about it
+
+Please ensure your analysis addresses the user's specific question while providing comprehensive coverage of the video content.
+2025-09-07 03:43:55,802 - __main__ - INFO -   - Research Query: please do research about it
+2025-09-07 03:43:55,802 - __main__ - INFO - Step 1: Getting video details from TwelveLabs...
+2025-09-07 03:43:56,386 - __main__ - INFO - Video details retrieved successfully: {
+  "_id": "68bce2fa30049231acbe7051",
+  "created_at": "2025-09-07T01:42:18Z",
+  "system_metadata": {
+    "duration": 156.061315,
+    "filename": "tmp_apzp7wy",
+    "fps": 30,
+    "height": 360,
+    "size": 14225563,
+    "width": 640
+  },
+  "hls": {
+    "video_url": "https://deuqpmn4rs7j5.cloudfront.net/6633a646e06d1c2c0212c7df/68bce2fa30049231acbe7051/stream/ff42afee-4673-4a2a-a05b-14c330c78244.m3u8",
+    "thumbnail_urls": [
+      "https://deuqpmn4rs7j5.cloudfront.net/6633a646e06d1c2c0212c7df/68bce2fa30049231acbe7051/thumbnails/ff42afee-4673-4a2a-a05b-14c330c78244.0000001.jpg"
+    ],
+    "status": "COMPLETE",
+    "updated_at": "2025-09-07T01:43:01.44Z"
+  }
+}
+2025-09-07 03:43:56,387 - __main__ - INFO - Step 2: Analyzing video content...
+2025-09-07 03:44:10,865 - httpx - INFO - HTTP Request: POST https://api.twelvelabs.io/v1.3/analyze "HTTP/1.1 200 OK"
+2025-09-07 03:44:10,877 - __main__ - INFO - Video analysis completed: "The video captures the Men's Volleyball Gold Medal Match at the Paris 2024 Olympic Games between France and Poland. The match is intense, with both teams displaying exceptional skill and determination. Early in the video, France celebrates a point, and the game continues with both teams rallying back and forth. Midway through, Poland gains momentum, leading to a series of successful spikes and celebrations from their fans. However, France manages to secure a crucial block and maintain their lead. Towards the end, Poland fights off several match points but ultimately, France clinches the gold medal with a decisive spike.\n\n**Key Elements**:\n- **Objects**: Volleyball, nets, scoreboards, and medals.\n- **People**: French and Polish volleyball players, coaches, and fans.\n- **Locations**: Volleyball court at the Paris 2024 Olympic Games venue.\n- **Activities**: Volleyball match, scoring points, and celebrating victories.\n- **Interactions**: Players interacting with each other and coaches, fans cheering and reacting to the game.\n\n**Context & Setting**:\nThe video is set during the Paris 2024 Olympic Games, specifically in the volleyball arena where the gold medal match is taking place. The environment is highly competitive and charged with excitement, with both teams and their fans showing intense emotions.\n\n**Narrative Flow**:\nThe video begins with a wide shot of the court and an overview of the match situation. It then transitions to close-ups of players and fans celebrating and reacting to the game. The narrative follows the ups and downs of the match, highlighting key moments such as set points and successful plays. The video concludes with the medal ceremony, where the French team receives gold medals and the Polish team receives silver.\n\n**Notable Details**:\n- The French team is the defending Olympic champions.\n- Poland is the number one ranked team in the world.\n- France wins the match 3-2, becoming the first country to repeat as men's Olympic volleyball champions since the United States in 1988.\n- The Polish team's last gold medal was in 1976.\n- The United States of America won the bronze medal.\n\n**Technical Aspects**:\nThe video quality is high, with clear visuals and audio. The camera work is dynamic, switching between wide shots of the court and close-ups of players and fans. The editing is smooth, capturing the excitement and emotion of the event effectively."
+2025-09-07 03:44:10,877 - __main__ - INFO - Step 3: Conducting deep research using Sonar...
+2025-09-07 03:44:10,877 - __main__ - INFO - Enhanced research query created: "\nBased on this video analysis: The video captures the Men's Volleyball Gold Medal Match at the Paris 2024 Olympic Games between France and Poland. The match is intense, with both teams displaying exceptional skill and determination. Early in the video, France celebrates a point, and the game continues with both teams rallying back and forth. Midway through, Poland gains momentum, leading to a series of successful spikes and celebrations from their fans. However, France manages to secure a crucial block and maintain their lead. Towards the end, Poland fights off several match points but ultimately, France clinches the gold medal with a decisive spike.\n\n**Key Elements**:\n- **Objects**: Volleyball, nets, scoreboards, and medals.\n- **People**: French and Polish volleyball players, coaches, and fans.\n- **Locations**: Volleyball court at the Paris 2024 Olympic Games venue.\n- **Activities**: Volleyball match, scoring points, and celebrating victories.\n- **Interactions**: Players interacting with each other and coaches, fans cheering and reacting to the game.\n\n**Context & Setting**:\nThe video is set during the Paris 2024 Olympic Games, specifically in the volleyball arena where the gold medal match is taking place. The environment is highly competitive and charged with excitement, with both teams and their fans showing intense emotions.\n\n**Narrative Flow**:\nThe video begins with a wide shot of the court and an overview of the match situation. It then transitions to close-ups of players and fans celebrating and reacting to the game. The narrative follows the ups and downs of the match, highlighting key moments such as set points and successful plays. The video concludes with the medal ceremony, where the French team receives gold medals and the Polish team receives silver.\n\n**Notable Details**:\n- The French team is the defending Olympic champions.\n- Poland is the number one ranked team in the world.\n- France wins the match 3-2, becoming the first country to repeat as men's Olympic volleyball champions since the United States in 1988.\n- The Polish team's last gold medal was in 1976.\n- The United States of America won the bronze medal.\n\n**Technical Aspects**:\nThe video quality is high, with clear visuals and audio. The camera work is dynamic, switching between wide shots of the court and close-ups of players and fans. The editing is smooth, capturing the excitement and emotion of the event effectively.\n\nPlease research: please do research about it\n\nProvide comprehensive insights that connect the video content with current trends, developments, and relevant information.\n"
+2025-09-07 03:44:19,316 - __main__ - INFO - Sonar research completed: {
+  "id": "d5c8b07b-ac7a-4bab-860d-019ba4c121b7",
+  "model": "sonar",
+  "created": 1757209459,
+  "usage": {
+    "prompt_tokens": 516,
+    "completion_tokens": 596,
+    "total_tokens": 1112,
+    "search_context_size": "low",
+    "cost": {
+      "input_tokens_cost": 0.001,
+      "output_tokens_cost": 0.001,
+      "request_cost": 0.005,
+      "total_cost": 0.006
+    }
+  },
+  "citations": [
+    "https://www.espn.com/olympics/story/_/id/40805739/france-tops-no-1-poland-defend-men-volleyball-olympic-title",
+    "https://en.volleyballworld.com/volleyball/competitions/volleyball-olympic-games-paris-2024/schedule/19086/",
+    "https://www.youtube.com/watch?v=XG90PCBKKXw",
+    "https://www.youtube.com/watch?v=JO6axiO1owk",
+    "https://www.youtube.com/watch?v=IxvuM2N0qpU"
+  ],
+  "search_results": [
+    {
+      "title": "France tops No. 1 Poland for men's volleyball title",
+      "url": "https://www.espn.com/olympics/story/_/id/40805739/france-tops-no-1-poland-defend-men-volleyball-olympic-title",
+      "date": "2024-08-10",
+      "last_updated": "2024-08-10",
+      "snippet": "France defended its Olympic title in men's volleyball, beating top-ranked Poland in front of a raucous, standing-room-only crowd in Paris."
+    },
+    {
+      "title": "France-Poland Men Volleyball Olympic Games Paris 2024 ...",
+      "url": "https://en.volleyballworld.com/volleyball/competitions/volleyball-olympic-games-paris-2024/schedule/19086/",
+      "date": "2024-08-10",
+      "last_updated": "2025-07-20",
+      "snippet": "France-Poland Men Volleyball Olympic Games Paris 2024 10.08.2024. Results. Gold Medal - Final Round - Men #26. 2024. 11:00. (UTC). 13:00. (Local ..."
+    },
+    {
+      "title": "France overpowers Poland for men's volleyball gold medal ...",
+      "url": "https://www.youtube.com/watch?v=XG90PCBKKXw",
+      "date": "2024-08-10",
+      "last_updated": "2025-07-21",
+      "snippet": "The men's volleyball tournament concluded Saturday in Paris as the French cruised to an incredible three-set win over Poland \u2014 the ..."
+    },
+    {
+      "title": "France beat Poland to win gold medal in men's volleyball",
+      "url": "https://www.youtube.com/watch?v=JO6axiO1owk",
+      "date": "2024-08-10",
+      "last_updated": "2025-07-30",
+      "snippet": "#Paris2024 action: \u27a1\ufe0f ; https://oly.ch/P24Replays Defending Olympic champions France beat world no. 1 Poland in straight sets (25-19, 25-20, 25-23) ..."
+    },
+    {
+      "title": "Poland FULL Match 2024 Paris Olympics Final",
+      "url": "https://www.youtube.com/watch?v=IxvuM2N0qpU",
+      "date": "2025-02-09",
+      "last_updated": "2025-07-30",
+      "snippet": "... Leon and many others. France Volleyball won the entire gold medal match and Paris Olympic Games. France - Poland 3:0 (25-19,25-20,25-23) France ..."
+    }
+  ],
+  "object": "chat.completion",
+  "choices": [
+    {
+      "index": 0,
+      "finish_reason": "stop",
+      "message": {
+        "role": "assistant",
+        "content": "The Men's Volleyball Gold Medal Match at the Paris 2024 Olympic Games featured a highly anticipated showdown between the host nation France, the defending Olympic champions, and the world\u2019s top-ranked team, Poland. Contrary to the video analysis suggesting a 3-2 close match, France won convincingly in straight sets 3-0 (25-19, 25-20, 25-23), successfully defending their Olympic title on home soil\u2014a feat that had not been accomplished since the USA in 1988[1][2][4].\n\n**Key insights and developments:**\n\n- **Match outcome and significance:** France\u2019s straight-sets victory underscores their dominance and resilience, especially against a top-ranked Poland squad that had been seeking its first Olympic gold since 1976[1][4]. The win made France the first men\u2019s volleyball team to repeat as Olympic champions since the United States did in 1988[4].\n\n- **French team highlights:** The victory was powered by standout performances from players like Jean Patry, who led with 17 points, alongside Barth\u00e9l\u00e9my Chinenyeze and Earvin N'Gapeth, whose hustle and spectacular plays, including diving saves and a blind over-the-head point, energized the crowd and team spirit[1][5]. The French service game was especially effective, tallying eight aces and disrupting Poland\u2019s rhythm, which proved a key tactical advantage[1][3].\n\n- **Poland\u2019s efforts:** Despite being the world number one and exhibiting moments of strong offense and blocking, Poland was unable to overcome the French team\u2019s collective play and strategic serving. The Polish team, featuring stars like Wilfredo Leon and Bartosz Kurek, fought hard but ultimately fell short at the final hurdle[1][5].\n\n- **Atmosphere and audience:** The event was held at the Paris volleyball arena filled to standing-room capacity, with an electric and supportive French crowd creating a charged atmosphere. The home advantage was palpable and energized the French team throughout[1][3].\n\n- **Broader context:** This result highlights the rising competitiveness and parity in international men\u2019s volleyball, with France establishing a new benchmark for consistency at the highest level. Poland remains a formidable powerhouse, and the USA secured the bronze medal, continuing their strong Olympic volleyball tradition[1][4].\n\n- **Technical production of the event:** The video coverage employed dynamic camera work, smoothly editing between wide court views and close-ups of players and fan reactions. This enhanced the emotional narrative of the climb, struggle, and eventual triumph for France[3][4].\n\n**In summary**, the actual Paris 2024 Olympic men\u2019s volleyball gold medal match concluded with France achieving a straight-sets victory over Poland, not a 3-2 win. France\u2019s blend of power, tactical serving, and passionate home support enabled them to repeat as champions and cement their place among the elite in volleyball history[1][4]."
+      },
+      "delta": {
+        "role": "assistant",
+        "content": ""
+      }
+    }
+  ]
+}
+2025-09-07 03:44:19,316 - __main__ - INFO - Adding sources to research result...
+2025-09-07 03:44:19,316 - __main__ - INFO - Sources added to research result: [
+  {
+    "title": "TechCrunch",
+    "url": "https://techcrunch.com",
+    "description": "Technology news and analysis"
+  },
+  {
+    "title": "Gartner Research",
+    "url": "https://gartner.com",
+    "description": "Industry research and insights"
+  },
+  {
+    "title": "McKinsey & Company",
+    "url": "https://mckinsey.com",
+    "description": "Business and technology trends"
+  },
+  {
+    "title": "The Verge",
+    "url": "https://theverge.com",
+    "description": "Technology and culture coverage"
+  },
+  {
+    "title": "MIT Technology Review",
+    "url": "https://technologyreview.com",
+    "description": "In-depth technology analysis"
+  }
+]
+2025-09-07 03:44:19,317 - __main__ - INFO - === WORKFLOW COMPLETED SUCCESSFULLY ===
+2025-09-07 03:44:19,317 - __main__ - INFO - Final response: {
+  "success": true,
+  "workflow": {
+    "video_details": {
+      "_id": "68bce2fa30049231acbe7051",
+      "created_at": "2025-09-07T01:42:18Z",
+      "system_metadata": {
+        "duration": 156.061315,
+        "filename": "tmp_apzp7wy",
+        "fps": 30,
+        "height": 360,
+        "size": 14225563,
+        "width": 640
+      },
+      "hls": {
+        "video_url": "https://deuqpmn4rs7j5.cloudfront.net/6633a646e06d1c2c0212c7df/68bce2fa30049231acbe7051/stream/ff42afee-4673-4a2a-a05b-14c330c78244.m3u8",
+        "thumbnail_urls": [
+          "https://deuqpmn4rs7j5.cloudfront.net/6633a646e06d1c2c0212c7df/68bce2fa30049231acbe7051/thumbnails/ff42afee-4673-4a2a-a05b-14c330c78244.0000001.jpg"
+        ],
+        "status": "COMPLETE",
+        "updated_at": "2025-09-07T01:43:01.44Z"
+      }
+    },
+    "analysis": "The video captures the Men's Volleyball Gold Medal Match at the Paris 2024 Olympic Games between France and Poland. The match is intense, with both teams displaying exceptional skill and determination. Early in the video, France celebrates a point, and the game continues with both teams rallying back and forth. Midway through, Poland gains momentum, leading to a series of successful spikes and celebrations from their fans. However, France manages to secure a crucial block and maintain their lead. Towards the end, Poland fights off several match points but ultimately, France clinches the gold medal with a decisive spike.\n\n**Key Elements**:\n- **Objects**: Volleyball, nets, scoreboards, and medals.\n- **People**: French and Polish volleyball players, coaches, and fans.\n- **Locations**: Volleyball court at the Paris 2024 Olympic Games venue.\n- **Activities**: Volleyball match, scoring points, and celebrating victories.\n- **Interactions**: Players interacting with each other and coaches, fans cheering and reacting to the game.\n\n**Context & Setting**:\nThe video is set during the Paris 2024 Olympic Games, specifically in the volleyball arena where the gold medal match is taking place. The environment is highly competitive and charged with excitement, with both teams and their fans showing intense emotions.\n\n**Narrative Flow**:\nThe video begins with a wide shot of the court and an overview of the match situation. It then transitions to close-ups of players and fans celebrating and reacting to the game. The narrative follows the ups and downs of the match, highlighting key moments such as set points and successful plays. The video concludes with the medal ceremony, where the French team receives gold medals and the Polish team receives silver.\n\n**Notable Details**:\n- The French team is the defending Olympic champions.\n- Poland is the number one ranked team in the world.\n- France wins the match 3-2, becoming the first country to repeat as men's Olympic volleyball champions since the United States in 1988.\n- The Polish team's last gold medal was in 1976.\n- The United States of America won the bronze medal.\n\n**Technical Aspects**:\nThe video quality is high, with clear visuals and audio. The camera work is dynamic, switching between wide shots of the court and close-ups of players and fans. The editing is smooth, capturing the excitement and emotion of the event effectively.",
+    "research": {
+      "id": "d5c8b07b-ac7a-4bab-860d-019ba4c121b7",
+      "model": "sonar",
+      "created": 1757209459,
+      "usage": {
+        "prompt_tokens": 516,
+        "completion_tokens": 596,
+        "total_tokens": 1112,
+        "search_context_size": "low",
+        "cost": {
+          "input_tokens_cost": 0.001,
+          "output_tokens_cost": 0.001,
+          "request_cost": 0.005,
+          "total_cost": 0.006
+        }
+      },
+      "citations": [
+        "https://www.espn.com/olympics/story/_/id/40805739/france-tops-no-1-poland-defend-men-volleyball-olympic-title",
+        "https://en.volleyballworld.com/volleyball/competitions/volleyball-olympic-games-paris-2024/schedule/19086/",
+        "https://www.youtube.com/watch?v=XG90PCBKKXw",
+        "https://www.youtube.com/watch?v=JO6axiO1owk",
+        "https://www.youtube.com/watch?v=IxvuM2N0qpU"
+      ],
+      "search_results": [
+        {
+          "title": "France tops No. 1 Poland for men's volleyball title",
+          "url": "https://www.espn.com/olympics/story/_/id/40805739/france-tops-no-1-poland-defend-men-volleyball-olympic-title",
+          "date": "2024-08-10",
+          "last_updated": "2024-08-10",
+          "snippet": "France defended its Olympic title in men's volleyball, beating top-ranked Poland in front of a raucous, standing-room-only crowd in Paris."
+        },
+        {
+          "title": "France-Poland Men Volleyball Olympic Games Paris 2024 ...",
+          "url": "https://en.volleyballworld.com/volleyball/competitions/volleyball-olympic-games-paris-2024/schedule/19086/",
+          "date": "2024-08-10",
+          "last_updated": "2025-07-20",
+          "snippet": "France-Poland Men Volleyball Olympic Games Paris 2024 10.08.2024. Results. Gold Medal - Final Round - Men #26. 2024. 11:00. (UTC). 13:00. (Local ..."
+        },
+        {
+          "title": "France overpowers Poland for men's volleyball gold medal ...",
+          "url": "https://www.youtube.com/watch?v=XG90PCBKKXw",
+          "date": "2024-08-10",
+          "last_updated": "2025-07-21",
+          "snippet": "The men's volleyball tournament concluded Saturday in Paris as the French cruised to an incredible three-set win over Poland \u2014 the ..."
+        },
+        {
+          "title": "France beat Poland to win gold medal in men's volleyball",
+          "url": "https://www.youtube.com/watch?v=JO6axiO1owk",
+          "date": "2024-08-10",
+          "last_updated": "2025-07-30",
+          "snippet": "#Paris2024 action: \u27a1\ufe0f ; https://oly.ch/P24Replays Defending Olympic champions France beat world no. 1 Poland in straight sets (25-19, 25-20, 25-23) ..."
+        },
+        {
+          "title": "Poland FULL Match 2024 Paris Olympics Final",
+          "url": "https://www.youtube.com/watch?v=IxvuM2N0qpU",
+          "date": "2025-02-09",
+          "last_updated": "2025-07-30",
+          "snippet": "... Leon and many others. France Volleyball won the entire gold medal match and Paris Olympic Games. France - Poland 3:0 (25-19,25-20,25-23) France ..."
+        }
+      ],
+      "object": "chat.completion",
+      "choices": [
+        {
+          "index": 0,
+          "finish_reason": "stop",
+          "message": {
+            "role": "assistant",
+            "content": "The Men's Volleyball Gold Medal Match at the Paris 2024 Olympic Games featured a highly anticipated showdown between the host nation France, the defending Olympic champions, and the world\u2019s top-ranked team, Poland. Contrary to the video analysis suggesting a 3-2 close match, France won convincingly in straight sets 3-0 (25-19, 25-20, 25-23), successfully defending their Olympic title on home soil\u2014a feat that had not been accomplished since the USA in 1988[1][2][4].\n\n**Key insights and developments:**\n\n- **Match outcome and significance:** France\u2019s straight-sets victory underscores their dominance and resilience, especially against a top-ranked Poland squad that had been seeking its first Olympic gold since 1976[1][4]. The win made France the first men\u2019s volleyball team to repeat as Olympic champions since the United States did in 1988[4].\n\n- **French team highlights:** The victory was powered by standout performances from players like Jean Patry, who led with 17 points, alongside Barth\u00e9l\u00e9my Chinenyeze and Earvin N'Gapeth, whose hustle and spectacular plays, including diving saves and a blind over-the-head point, energized the crowd and team spirit[1][5]. The French service game was especially effective, tallying eight aces and disrupting Poland\u2019s rhythm, which proved a key tactical advantage[1][3].\n\n- **Poland\u2019s efforts:** Despite being the world number one and exhibiting moments of strong offense and blocking, Poland was unable to overcome the French team\u2019s collective play and strategic serving. The Polish team, featuring stars like Wilfredo Leon and Bartosz Kurek, fought hard but ultimately fell short at the final hurdle[1][5].\n\n- **Atmosphere and audience:** The event was held at the Paris volleyball arena filled to standing-room capacity, with an electric and supportive French crowd creating a charged atmosphere. The home advantage was palpable and energized the French team throughout[1][3].\n\n- **Broader context:** This result highlights the rising competitiveness and parity in international men\u2019s volleyball, with France establishing a new benchmark for consistency at the highest level. Poland remains a formidable powerhouse, and the USA secured the bronze medal, continuing their strong Olympic volleyball tradition[1][4].\n\n- **Technical production of the event:** The video coverage employed dynamic camera work, smoothly editing between wide court views and close-ups of players and fan reactions. This enhanced the emotional narrative of the climb, struggle, and eventual triumph for France[3][4].\n\n**In summary**, the actual Paris 2024 Olympic men\u2019s volleyball gold medal match concluded with France achieving a straight-sets victory over Poland, not a 3-2 win. France\u2019s blend of power, tactical serving, and passionate home support enabled them to repeat as champions and cement their place among the elite in volleyball history[1][4]."
+          },
+          "delta": {
+            "role": "assistant",
+            "content": ""
+          }
+        }
+      ],
+      "sources": [
+        {
+          "title": "TechCrunch",
+          "url": "https://techcrunch.com",
+          "description": "Technology news and analysis"
+        },
+        {
+          "title": "Gartner Research",
+          "url": "https://gartner.com",
+          "description": "Industry research and insights"
+        },
+        {
+          "title": "McKinsey & Company",
+          "url": "https://mckinsey.com",
+          "description": "Business and technology trends"
+        },
+        {
+          "title": "The Verge",
+          "url": "https://theverge.com",
+          "description": "Technology and culture coverage"
+        },
+        {
+          "title": "MIT Technology Review",
+          "url": "https://technologyreview.com",
+          "description": "In-depth technology analysis"
+        }
+      ]
+    }
+  },
+  "summary": {
+    "video_id": "68bce2fa30049231acbe7051",
+    "index_id": "6893518408a37aa08793c4fe",
+    "analysis_prompt": "Please provide a comprehensive analysis of this video content. Include:\n\n1. **Content Overview**: What is happening in the video? Describe the main events, actions, and scenes.\n2. **Key Elements**: Identify important objects, people, locations, activities, and interactions.\n3. **Context & Setting**: What is the environment, time period, or context of the video?\n4. **Narrative Flow**: How does the story or sequence of events unfold?\n5. **Notable Details**: Highlight any significant details, patterns, or unique aspects.\n6. **Technical Aspects**: Note video quality, camera work, editing, or production elements if relevant.\n\nUser's Specific Query: please do research about it\n\nPlease ensure your analysis addresses the user's specific question while providing comprehensive coverage of the video content.",
+    "research_query": "please do research about it",
+    "research_status": "completed"
+  }
+}
+2025-09-07 03:44:19,317 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 03:44:19] "POST /api/workflow HTTP/1.1" 200 -
+2025-09-07 03:44:29,348 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 03:44:29] "OPTIONS /api/config/twelvelabs HTTP/1.1" 200 -
+2025-09-07 03:44:29,349 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 03:44:29] "DELETE /api/config/twelvelabs HTTP/1.1" 200 -
+2025-09-07 03:44:33,230 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 03:44:33] "DELETE /api/config/twelvelabs HTTP/1.1" 200 -
+2025-09-07 03:44:33,234 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 03:44:33] "OPTIONS /api/indexes HTTP/1.1" 200 -
+2025-09-07 03:44:33,848 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 03:44:33] "POST /api/indexes HTTP/1.1" 200 -
+2025-09-07 03:44:33,854 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 03:44:33] "OPTIONS /api/videos HTTP/1.1" 200 -
+2025-09-07 03:44:34,444 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 03:44:34] "POST /api/videos HTTP/1.1" 200 -
+2025-09-07 03:45:04,939 - werkzeug - INFO -  * Detected change in '/Users/hrishikesh/Desktop/Video DeepResearch/TwelveLabs-Video-DeepResearch/backend/service/twelvelabs_service.py', reloading
+2025-09-07 03:45:05,670 - werkzeug - INFO -  * Restarting with watchdog (fsevents)
+2025-09-07 03:45:06,223 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-09-07 03:45:06,224 - apscheduler.scheduler - INFO - Added job "wake_up_app" to job store "default"
+2025-09-07 03:45:06,224 - apscheduler.scheduler - INFO - Scheduler started
+2025-09-07 03:45:06,227 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 10
+2025-09-07 03:45:06,227 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 13
+2025-09-07 03:45:06,230 - werkzeug - WARNING -  * Debugger is active!
+2025-09-07 03:45:06,237 - werkzeug - INFO -  * Debugger PIN: 237-707-018
+2025-09-07 03:45:18,002 - werkzeug - INFO -  * Detected change in '/Users/hrishikesh/Desktop/Video DeepResearch/TwelveLabs-Video-DeepResearch/backend/app.py', reloading
+2025-09-07 03:45:18,328 - werkzeug - INFO -  * Restarting with watchdog (fsevents)
+2025-09-07 03:45:18,668 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-09-07 03:45:18,668 - apscheduler.scheduler - INFO - Added job "wake_up_app" to job store "default"
+2025-09-07 03:45:18,668 - apscheduler.scheduler - INFO - Scheduler started
+2025-09-07 03:45:18,671 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 10
+2025-09-07 03:45:18,672 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 13
+2025-09-07 03:45:18,673 - werkzeug - WARNING -  * Debugger is active!
+2025-09-07 03:45:18,677 - werkzeug - INFO -  * Debugger PIN: 237-707-018

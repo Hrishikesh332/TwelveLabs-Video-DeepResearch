@@ -241,14 +241,23 @@ def upload_video():
         tmp_file.close()
         upload_file.save(tmp_file_path)
         
+        logger.info(f"Temporary file created: {tmp_file_path}")
+        
         try:
             service = TwelveLabsService(api_key=api_key)
+            logger.info("Starting video upload and indexing...")
             result = service.upload_video_file(index_id=default_index_id, file_path=tmp_file_path)
+            logger.info(f"Upload and indexing completed with result: {result}")
         finally:
+            # Clean up temporary file after indexing is complete (or failed)
             try:
-                os.remove(tmp_file_path)
-            except Exception:
-                pass
+                if os.path.exists(tmp_file_path):
+                    os.remove(tmp_file_path)
+                    logger.info(f"Temporary file deleted: {tmp_file_path}")
+                else:
+                    logger.warning(f"Temporary file not found for deletion: {tmp_file_path}")
+            except Exception as e:
+                logger.error(f"Failed to delete temporary file {tmp_file_path}: {str(e)}")
         
         if 'error' in result:
             return jsonify({'success': False, 'error': result['error'], 'task': result.get('task')}), 400

@@ -13220,3 +13220,6 @@ Please ensure your analysis addresses the user's specific question while providi
 2025-09-07 03:45:18,672 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 13
 2025-09-07 03:45:18,673 - werkzeug - WARNING -  * Debugger is active!
 2025-09-07 03:45:18,677 - werkzeug - INFO -  * Debugger PIN: 237-707-018
+2025-09-07 03:49:08,486 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-09-07 03:49:08,487 - apscheduler.scheduler - INFO - Added job "wake_up_app" to job store "default"
+2025-09-07 03:49:08,487 - apscheduler.scheduler - INFO - Scheduler started

@@ -160,6 +160,7 @@ class TwelveLabsService:
 
     def upload_video_file(self, index_id: str, file_path: str, timeout_seconds: int = 900):
 
+        import sys
         try:
             if not self.api_key:
                 return {"error": "Missing TwelveLabs API key"}
@@ -167,6 +168,8 @@ class TwelveLabsService:
                 return {"error": "Missing index_id"}
             if not os.path.exists(file_path):
                 return {"error": f"File not found: {file_path}"}
+            
+            print(f"[DEBUG] Starting upload for file: {file_path}", file=sys.stderr)
 
             tasks_url = "https://api.twelvelabs.io/v1.3/tasks"
             headers = {
@@ -194,6 +197,8 @@ class TwelveLabsService:
             # Poll task until ready
             import time
             start_time = time.time()
+            print(f"[DEBUG] Starting to poll task {task_id} for completion...", file=sys.stderr)
+            
             while time.time() - start_time < timeout_seconds:
                 r = requests.get(f"{tasks_url}/{task_id}", headers=headers)
                 if r.status_code != 200:
@@ -201,13 +206,18 @@ class TwelveLabsService:
                     continue
                 task = r.json() if r.text else {}
                 status = task.get("status")
+                print(f"[DEBUG] Task {task_id} status: {status}", file=sys.stderr)
+                
                 if status in ("ready", "completed"):
                     video_id = task.get("video_id") or (task.get("data") or {}).get("video_id")
+                    print(f"[DEBUG] Indexing completed successfully! Video ID: {video_id}", file=sys.stderr)
                     return {"status": status, "video_id": video_id, "task": task}
                 if status in ("failed", "error"):
+                    print(f"[DEBUG] Indexing failed with status: {status}", file=sys.stderr)
                     return {"error": f"Indexing failed with status {status}", "task": task}
                 time.sleep(2)
 
+            print(f"[DEBUG] Upload timed out after {timeout_seconds} seconds", file=sys.stderr)
             return {"error": "Upload timed out"}
         except Exception as e:
             return {"error": str(e)} 

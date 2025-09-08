@@ -1,3 +1,6 @@
 .env
 etc/secrets
 API_CURL_DOCS.md
+
+app.log
+pycache/

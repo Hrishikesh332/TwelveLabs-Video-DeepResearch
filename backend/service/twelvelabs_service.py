@@ -14,7 +14,6 @@ class TwelveLabsService:
     def get_indexes(self):
         try:
             print("Fetching indexes...")
-            # Use direct HTTP request
             if not self.api_key:
                 print("No API key available")
                 return []
@@ -44,7 +43,6 @@ class TwelveLabsService:
     
     def get_videos(self, index_id):
         try:
-            # Use direct HTTP request to get videos
             if not self.api_key:
                 print("No API key available")
                 return []

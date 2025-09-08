@@ -40,6 +40,16 @@ type VideoItem = {
   size?: number;
 }
 
+type Source = {
+  title: string
+  url: string
+  description: string
+  isReal: boolean
+  timestamp: Date
+  queryContext?: string
+  messageId?: string
+}
+
 const API_BASE_URL = "http://localhost:5000"
 
 // Component to display website favicon/OG image
@@ -292,7 +302,7 @@ export default function DeepResearchLanding() {
   const [streamingContent, setStreamingContent] = useState("")
   const [currentStep, setCurrentStep] = useState("")
   const [currentStepDetail, setCurrentStepDetail] = useState("")
-  const [sources, setSources] = useState<Array<{title: string, url: string, description: string, isReal: boolean}>>([])
+  const [sources, setSources] = useState<Source[]>([])
   
   // Research context for follow-up questions
   const [researchContext, setResearchContext] = useState<{
@@ -309,6 +319,7 @@ export default function DeepResearchLanding() {
     type: 'user' | 'assistant'
     content: string
     timestamp: Date
+    sources?: Source[]
   }>>([])
   const [isSendingMessage, setIsSendingMessage] = useState(false)
   const [showActivitySidebar, setShowActivitySidebar] = useState(false)
@@ -546,33 +557,17 @@ export default function DeepResearchLanding() {
   }
 
   // Function to extract real sources from API response
-  function extractRealSources(data: any): Array<{title: string, url: string, description: string, isReal: boolean}> {
-    if (!data.workflow?.research) return []
+  function extractRealSources(data: any): Source[] {
+    if (!data?.sources) return []
     
-    const research = data.workflow.research
-    
-    // First try to get sources from search_results (real sources from Sonar)
-    if (research.search_results && Array.isArray(research.search_results)) {
-      return research.search_results.map((result: any) => ({
-        title: result.title || 'Untitled',
-        url: result.url || '#',
-        description: result.snippet || 'No description available',
-        isReal: true
-      }))
-    }
-    
-    // Fallback to citations if available
-    if (research.citations && Array.isArray(research.citations)) {
-      return research.citations.map((citation: string, index: number) => ({
-        title: `Source ${index + 1}`,
-        url: citation,
-        description: 'Citation from research',
-        isReal: true
-      }))
-    }
-    
-    // If no real sources, return empty array
-    return []
+    // Map the search results to our source format
+    return data.sources.map((result: any) => ({
+      title: result.title || 'Untitled',
+      url: result.url || '#',
+      description: result.snippet || result.description || 'No description available',
+      isReal: true,
+      timestamp: new Date()
+    }))
   }
 
   async function handleStartResearch() {
@@ -596,47 +591,17 @@ export default function DeepResearchLanding() {
     }])
     
     // Add initial activity log
-    addActivityLog(`Starting research on: ${prompt}. I will provide you with up-to-date and reputable sources.`, 'info')
-    
-    // Initialize steps
-    const initialSteps = [
-      { step: 'video_details', status: 'pending' as const, message: 'Fetching video details', timestamp: new Date() },
-      { step: 'analysis', status: 'pending' as const, message: 'Analyzing video content', timestamp: new Date() },
-      { step: 'research', status: 'pending' as const, message: 'Conducting deep research', timestamp: new Date() }
-    ]
-    setResearchSteps(initialSteps)
+    addActivityLog(`Starting research on: ${prompt}`, 'info')
     
     try {
-      // Create a generalized analysis prompt that covers comprehensive video understanding
-      const generalizedAnalysisPrompt = `Please provide a comprehensive analysis of this video content. Include:
-
-1. **Content Overview**: What is happening in the video? Describe the main events, actions, and scenes.
-2. **Key Elements**: Identify important objects, people, locations, activities, and interactions.
-3. **Context & Setting**: What is the environment, time period, or context of the video?
-4. **Narrative Flow**: How does the story or sequence of events unfold?
-5. **Notable Details**: Highlight any significant details, patterns, or unique aspects.
-6. **Technical Aspects**: Note video quality, camera work, editing, or production elements if relevant.
-
-User's Specific Query: ${prompt.trim()}
-
-Please ensure your analysis addresses the user's specific question while providing comprehensive coverage of the video content.`
-      
       const payload = {
         twelvelabs_api_key: isConnected ? undefined : apiKey,
         index_id: selectedIndex,
         video_id: selectedVideo,
-        analysis_prompt: generalizedAnalysisPrompt,
+        analysis_prompt: prompt.trim(),
         research_query: prompt.trim()
       }
-      
-      // Update first step to in-progress
-      setResearchSteps(prev => prev.map((step, idx) => 
-        idx === 0 ? { ...step, status: 'in-progress' } : step
-      ))
-      setCurrentStep('Fetching video details')
-      setCurrentStepDetail('Getting video information...')
-      addActivityLog('Fetching video details...', 'progress')
-      
+
       const response = await fetch(`${API_CONFIG.BASE_URL}${API_CONFIG.ENDPOINTS.RESEARCH.WORKFLOW}`, {
         method: 'POST',
         headers: {
@@ -644,97 +609,139 @@ Please ensure your analysis addresses the user's specific question while providi
         },
         body: JSON.stringify(payload)
       })
-      
-      if (!response.ok) {
-        let errorMessage = `HTTP error! status: ${response.status}`
-        try {
-          const errorText = await response.text()
-          
-          try {
-            const errorData = JSON.parse(errorText)
-            errorMessage = errorData.error || errorData.message || errorMessage
-          } catch {
-            if (errorText && errorText.length < 200) {
-              errorMessage = errorText
-            }
-          }
-        } catch (e) {
-          console.log("Could not read error response body:", e)
-        }
-        
-        throw new Error(errorMessage)
-      }
-      
-      // Handle JSON response
-      const data = await response.json()
 
-      
-      if (data.success && data.workflow) {
-        // Update video details step
-        setResearchSteps(prev => prev.map((step, idx) => 
-          idx === 0 ? { ...step, status: 'completed', message: 'Video details retrieved' } : 
-          idx === 1 ? { ...step, status: 'in-progress' } : step
-        ))
-        setCurrentStep('Analyzing video content')
-        setCurrentStepDetail('Processing video data...')
-        addActivityLog('Video details retrieved successfully', 'progress')
-        
-        // Simulate analysis progress
-        setTimeout(() => {
-          setResearchSteps(prev => prev.map((step, idx) => 
-            idx === 1 ? { ...step, status: 'completed', message: 'Video analysis completed' } : 
-            idx === 2 ? { ...step, status: 'in-progress' } : step
-          ))
-          setCurrentStep('Conducting deep research')
-          setCurrentStepDetail('Searching for information...')
-          addActivityLog('Video analysis completed', 'progress')
-          
-          // Complete research step
-          setTimeout(() => {
-            setResearchSteps(prev => prev.map((step, idx) => 
-              idx === 2 ? { ...step, status: 'completed', message: 'Research completed successfully' } : step
-            ))
-            setCurrentStep('')
-            setCurrentStepDetail('')
-            addActivityLog('Research completed successfully!', 'complete')
-            
-            // Set the research content
-            let researchContent = ""
-            if (data.workflow.research && data.workflow.research.choices && data.workflow.research.choices[0]) {
-              researchContent = data.workflow.research.choices[0].message.content
-            } else if (data.workflow.analysis) {
-              researchContent = data.workflow.analysis
-            }
-            
-            setStreamingContent(researchContent)
-            
-            // Store research context for follow-up questions
-            setResearchContext({
-              twelvelabsAnalysis: data.workflow.analysis || '',
-              sonarResponse: researchContent,
-              videoDetails: data.workflow.video_details || {},
-              originalQuery: prompt.trim()
-            })
-            
-            // Add assistant message to chat with unique ID
-            setChatMessages(prev => [...prev, {
-              id: `assistant-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`,
-              type: 'assistant',
-              content: researchContent,
-              timestamp: new Date()
-            }])
-            
-            // Extract and set real sources from API response
-            const realSources = extractRealSources(data)
-            if (realSources.length > 0) {
-              setSources(realSources)
-            }
-          }, 1000)
-        }, 1000)
-      } else {
-        throw new Error(data.error || 'Research failed')
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`)
       }
-    
+
+      const reader = response.body?.getReader()
+      if (!reader) {
+        throw new Error('No response reader available')
+      }
+
+      let finalData: any = null
+      
+      while (true) {
+        const { done, value } = await reader.read()
+        if (done) break
+
+        // Convert the chunk to text
+        const chunk = new TextDecoder().decode(value)
+        const lines = chunk.split('\n').filter(line => line.trim())
+
+        for (const line of lines) {
+          try {
+            const data = JSON.parse(line)
+            
+            switch (data.type) {
+              case 'progress':
+                setResearchSteps(prev => {
+                  const newSteps = [...prev]
+                  const stepIndex = newSteps.findIndex(s => s.step === data.step)
+                  if (stepIndex >= 0) {
+                    newSteps[stepIndex] = {
+                      ...newSteps[stepIndex],
+                      status: 'in-progress',
+                      message: data.message
+                    }
+                  } else {
+                    newSteps.push({
+                      step: data.step,
+                      status: 'in-progress',
+                      message: data.message,
+                      timestamp: new Date()
+                    })
+                  }
+                  return newSteps
+                })
+                setCurrentStep(data.message)
+                addActivityLog(data.step === 'video_details' ? 'Loading video information' :
+                              data.step === 'analysis' ? 'Processing video content' :
+                              'Researching insights', 'progress')
+                break
+
+              case 'data':
+                setResearchSteps(prev => {
+                  const newSteps = [...prev]
+                  const stepIndex = newSteps.findIndex(s => s.step === data.step)
+                  if (stepIndex >= 0) {
+                    newSteps[stepIndex] = {
+                      ...newSteps[stepIndex],
+                      status: 'completed',
+                      message: `${data.step} completed`
+                    }
+                  }
+                  return newSteps
+                })
+                addActivityLog(data.step === 'video_details' ? 'Video information ready' :
+                              data.step === 'analysis' ? 'Video analysis complete' :
+                              'Research phase complete', 'complete')
+                break
+
+              case 'complete':
+                const responseData = data.data
+                finalData = responseData
+                setResearchSteps(prev => prev.map(step => ({
+                  ...step,
+                  status: 'completed'
+                })))
+                addActivityLog('Research completed', 'complete')
+
+                // Set the research content
+                if (responseData.research) {
+                  const researchContent = responseData.research.choices?.[0]?.message?.content || responseData.research
+                  setStreamingContent(researchContent)
+                  
+                  // Generate message ID
+                  const messageId = `assistant-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`
+                  
+                  // Get sources from research results
+                  let initialSources: Source[] = []
+                  if (responseData.research.search_results && Array.isArray(responseData.research.search_results)) {
+                    initialSources = responseData.research.search_results.map((result: any) => ({
+                      title: result.title || 'Untitled',
+                      url: result.url || '#',
+                      description: result.snippet || result.description || 'No description available',
+                      isReal: true,
+                      timestamp: new Date(),
+                      queryContext: 'Initial Research',
+                      messageId
+                    }))
+                  }
+                  
+                  // Add message with its sources
+                  setChatMessages(prev => [...prev, {
+                    id: messageId,
+                    type: 'assistant',
+                    content: researchContent,
+                    timestamp: new Date(),
+                    sources: initialSources
+                  }])
+
+                  // Log source discovery
+                  if (initialSources.length > 0) {
+                    addActivityLog(`Found ${initialSources.length} initial sources`, 'complete')
+                  }
+
+                  // Store research context
+                  setResearchContext({
+                    twelvelabsAnalysis: responseData.analysis || '',
+                    sonarResponse: researchContent,
+                    videoDetails: responseData.video_details || {},
+                    originalQuery: prompt.trim()
+                  })
+                }
+                break
+
+              case 'error':
+                throw new Error(data.message)
+            }
+          } catch (e) {
+            console.error('Error parsing stream chunk:', e)
+          }
+        }
+      }
+
     } catch (error) {
       const errorMessage = error instanceof Error ? error.message : 'Research failed'
       
@@ -795,33 +802,21 @@ ${userMessage}
 Please provide a comprehensive answer that builds upon the previous research and video analysis, incorporating any new insights or connections that might be relevant to this follow-up question.
 `
       
-      // Send to Sonar API
+      // Send to Sonar API with API key
       const response = await fetch(`${API_CONFIG.BASE_URL}${API_CONFIG.ENDPOINTS.RESEARCH.SONAR}`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-          query: enhancedQuery
+          query: enhancedQuery,
+          api_key: isConnected ? undefined : apiKey // Include API key if using custom key
         })
       })
       
       if (!response.ok) {
-        let errorMessage = `HTTP error! status: ${response.status}`
-        try {
-          const errorText = await response.text()
-          try {
-            const errorData = JSON.parse(errorText)
-            errorMessage = errorData.error || errorData.message || errorMessage
-          } catch {
-            if (errorText && errorText.length < 200) {
-              errorMessage = errorText
-            }
-          }
-        } catch (e) {
-          console.log("Could not read error response body:", e)
-        }
-        throw new Error(errorMessage)
+        const errorData = await response.json().catch(() => ({}))
+        throw new Error(errorData.error || `HTTP error! status: ${response.status}`)
       }
       
       const data = await response.json()
@@ -836,8 +831,6 @@ Please provide a comprehensive answer that builds upon the previous research and
           responseContent = data.research.content
         } else if (typeof data.research === 'string') {
           responseContent = data.research
-        } else {
-          responseContent = "I've analyzed your follow-up question based on the research context. Here's what I found..."
         }
         
         // Update research context with new response
@@ -847,29 +840,37 @@ Please provide a comprehensive answer that builds upon the previous research and
         } : null)
         
         // Add assistant response to chat
-        setChatMessages(prev => [...prev, {
-          id: `assistant-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`,
-          type: 'assistant',
-          content: responseContent,
-          timestamp: new Date()
-        }])
+        const messageId = `assistant-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`
         
-        // Extract and update sources if available
+        // Handle new sources from follow-up query
+        let querySpecificSources: Source[] = []
         if (data.research.search_results && Array.isArray(data.research.search_results)) {
-          const newSources = data.research.search_results.map((result: any) => ({
+          querySpecificSources = data.research.search_results.map((result: any) => ({
             title: result.title || 'Untitled',
             url: result.url || '#',
-            description: result.snippet || 'No description available',
-            isReal: true
+            description: result.snippet || result.description || 'No description available',
+            isReal: true,
+            timestamp: new Date(),
+            queryContext: userMessage,
+            messageId // Link sources to specific message
           }))
-          
-          // Merge with existing sources, avoiding duplicates
-          setSources(prev => {
-            const existingUrls = new Set(prev.map((s: { url: string }) => s.url))
-            const uniqueNewSources = newSources.filter((s: { url: string }) => !existingUrls.has(s.url))
-            return [...prev, ...uniqueNewSources]
-          })
         }
+        
+        // Add message with its specific sources
+        setChatMessages(prev => [...prev, {
+          id: messageId,
+          type: 'assistant',
+          content: responseContent,
+          timestamp: new Date(),
+          sources: querySpecificSources
+        }])
+        
+        // Log source discovery
+        if (querySpecificSources.length > 0) {
+          addActivityLog(`Found ${querySpecificSources.length} sources for "${userMessage}"`, 'complete')
+        }
+        
+        addActivityLog('Follow-up research completed', 'complete')
         
       } else {
         throw new Error(data.error || 'Failed to get response from research API')
@@ -886,6 +887,8 @@ Please provide a comprehensive answer that builds upon the previous research and
         content: `I apologize, but I encountered an error while processing your question: "${errorMessage}". Please try again or rephrase your question.`,
         timestamp: new Date()
       }])
+      
+      addActivityLog(`Error: ${errorMessage}`, 'error')
       
       toast({
         title: "Error",
@@ -1034,39 +1037,47 @@ Please provide a comprehensive answer that builds upon the previous research and
                       </div>
                     )}
 
-                    {/* Show sources right after user message and before assistant response */}
-                    {message.type === 'user' && sources.length > 0 && sources.some(source => source.isReal) && (
-                      <div className="mb-8">
-                        <h3 className="text-lg font-semibold text-gray-900 mb-4">Research Sources</h3>
-                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                          {sources.filter(source => source.isReal).map((source, sourceIndex) => (
-                            <div key={sourceIndex} className="bg-white border border-gray-200 rounded-lg p-4 shadow-sm hover:shadow-md transition-shadow">
-                              <div className="flex items-start space-x-3">
-                                <SourceIcon url={source.url} title={source.title} />
-                                <div className="flex-1 min-w-0">
-                                  <a 
-                                    href={source.url} 
-                                    target="_blank" 
-                                    rel="noopener noreferrer"
-                                    className="text-sm font-medium text-gray-900 hover:text-blue-600 transition-colors line-clamp-2"
-                                  >
-                                    {source.title}
-                                  </a>
-                                  <p className="text-xs text-gray-600 mt-1 line-clamp-2">{source.description}</p>
-                                  <span className="inline-block bg-green-100 text-green-800 px-2 py-1 rounded-full text-xs mt-2">
-                                    Real Source
-                                  </span>
-                                </div>
-                              </div>
-                            </div>
-                          ))}
-                        </div>
-                      </div>
-                    )}
-
-                    {/* Assistant Message */}
+                    {/* Assistant Message with Sources */}
                     {message.type === 'assistant' && (
                       <div className="w-full mb-6">
+                        {/* Show sources above the response */}
+                        {message.sources && message.sources.length > 0 && (
+                          <div className="mb-4">
+                            <div className="px-6">
+                              <h3 className="text-sm font-medium text-gray-900 mb-3 flex items-center">
+                                <BookOpen className="w-4 h-4 mr-2" />
+                                {message.sources.length} Sources Found
+                              </h3>
+                              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                                {message.sources.map((source, sourceIndex) => (
+                                  <div 
+                                    key={`${source.url}-${sourceIndex}`}
+                                    className="bg-white rounded-lg border border-black p-3 hover:bg-gray-50 transition-colors"
+                                  >
+                                    <div className="flex items-start space-x-3">
+                                      <SourceIcon url={source.url} title={source.title} />
+                                      <div className="flex-1 min-w-0">
+                                        <a 
+                                          href={source.url} 
+                                          target="_blank" 
+                                          rel="noopener noreferrer"
+                                          className="text-sm font-medium text-gray-900 hover:text-blue-600 transition-colors line-clamp-2"
+                                        >
+                                          {source.title}
+                                        </a>
+                                        <p className="text-xs text-gray-600 mt-1 line-clamp-2">
+                                          {source.description}
+                                        </p>
+                                      </div>
+                                    </div>
+                                  </div>
+                                ))}
+                              </div>
+                            </div>
+                          </div>
+                        )}
+                        
+                        {/* Response content */}
                         <div className="w-full text-gray-900 px-6 py-6 border-t border-b border-gray-200">
                           <div className="prose prose-lg max-w-none">
                             <ReactMarkdown remarkPlugins={[remarkGfm]}>
@@ -1226,12 +1237,9 @@ Please provide a comprehensive answer that builds upon the previous research and
                   <div className="p-4 space-y-4">
                     {activityLogs.map((log, index) => (
                       <div key={index} className="flex items-start space-x-3 hover:bg-gray-50 p-2 rounded-lg transition-colors">
-                        <div className={`w-2 h-2 rounded-full mt-2 flex-shrink-0 ${
-                          log.type === 'complete' ? 'bg-green-500' :
-                          log.type === 'error' ? 'bg-red-500' :
-                          log.type === 'progress' ? 'bg-blue-500' :
-                          'bg-gray-500'
-                        }`} />
+                        <div className="mt-1 flex-shrink-0">
+                          <Check className="w-4 h-4 text-black" />
+                        </div>
                         <div className="flex-1 min-w-0">
                           <p className="text-sm text-gray-700">{log.message}</p>
                           <p className="text-xs text-gray-500 mt-1">
@@ -1245,41 +1253,80 @@ Please provide a comprehensive answer that builds upon the previous research and
                         <svg className="w-12 h-12 mx-auto mb-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                         </svg>
-                        <p className="text-sm">No activity logs yet</p>
+                        <p className="text-sm">No activity yet</p>
                       </div>
                     )}
                   </div>
                 ) : (
                   <div className="p-4 space-y-4">
-                    {sources.length > 0 && sources.some(source => source.isReal) ? (
-                      sources.filter(source => source.isReal).map((source, index) => (
-                        <div key={index} className="bg-white hover:bg-gray-50 border border-gray-200 rounded-lg p-4 transition-all duration-200 group">
-                          <div className="flex items-start space-x-4">
-                            <SourceIcon url={source.url} title={source.title} />
-                            <div className="flex-1 min-w-0">
-                              <a 
-                                href={source.url} 
-                                target="_blank" 
-                                rel="noopener noreferrer"
-                                className="text-sm font-medium text-gray-900 hover:text-blue-600 transition-colors line-clamp-2 block group-hover:text-blue-600"
-                              >
-                                {source.title}
-                              </a>
-                              <p className="text-xs text-gray-600 mt-2 line-clamp-2">{source.description}</p>
-                            </div>
-                          </div>
+                    {chatMessages.some(msg => msg.type === 'assistant' && msg.sources && msg.sources.length > 0) ? (
+                      <>
+                        <div className="mb-4">
+                          <h3 className="text-sm font-medium text-gray-900">
+                            Research Sources
+                          </h3>
+                          <p className="text-xs text-gray-500 mt-1">
+                            All sources found during research
+                          </p>
                         </div>
-                      ))
+                        
+                        {/* Group sources by query */}
+                        {chatMessages
+                          .filter(msg => msg.type === 'assistant' && msg.sources && msg.sources.length > 0)
+                          .map((message, msgIndex) => (
+                            <div key={message.id} className="mb-6">
+                              <div className="mb-2">
+                                <h4 className="text-sm font-medium text-gray-700">
+                                  {msgIndex === 0 ? 'Initial Research' : 'Follow-up'}
+                                </h4>
+                                <p className="text-xs text-gray-500">
+                                  {message.sources!.length} sources
+                                </p>
+                              </div>
+                              
+                              <div className="space-y-3">
+                                {message.sources!.map((source, sourceIndex) => (
+                                  <div 
+                                    key={`${source.url}-${sourceIndex}`} 
+                                    className="bg-white hover:bg-gray-50 border border-gray-200 rounded-lg p-4 transition-all duration-200 group"
+                                  >
+                                    <div className="flex items-start space-x-4">
+                                      <SourceIcon url={source.url} title={source.title} />
+                                      <div className="flex-1 min-w-0">
+                                        <a 
+                                          href={source.url} 
+                                          target="_blank" 
+                                          rel="noopener noreferrer"
+                                          className="text-sm font-medium text-gray-900 hover:text-blue-600 transition-colors line-clamp-2 block group-hover:text-blue-600"
+                                        >
+                                          {source.title}
+                                        </a>
+                                        <p className="text-xs text-gray-600 mt-2 line-clamp-2">
+                                          {source.description}
+                                        </p>
+                                        <div className="flex items-center mt-2 space-x-2">
+                                          <span className="text-xs text-gray-500">
+                                            {source.timestamp.toLocaleString()}
+                                          </span>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                ))}
+                              </div>
+                            </div>
+                          ))}
+                      </>
                     ) : (
                       <div className="text-center py-8 text-gray-500">
                         <svg className="w-12 h-12 mx-auto mb-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
-                        </svg>
-                        <p className="text-sm">No sources available yet</p>
-                      </div>
-                    )}
-                  </div>
-                )}
+        </svg>
+        <p className="text-sm">No sources available yet</p>
+      </div>
+    )}
+  </div>
+)}
               </div>
             </div>
           </div>

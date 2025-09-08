@@ -319,21 +319,28 @@ def analyze_video(video_id):
 def sonar_research():
     try:
         data = request.get_json()
-        api_key = data.get('api_key') or app.config['TWELVELABS_API_KEY'] or app.config['PERPLEXITY_API_KEY']
+        api_key = data.get('api_key') or app.config.get('PERPLEXITY_API_KEY')
         query = data.get('query')
         
-        if not api_key or api_key == '':
-            return jsonify({'success': False, 'error': 'TwelveLabs API key is required. Please connect your API key in the UI or set TWELVELABS_API_KEY in environment variables.'}), 400
+        if not api_key:
+            return jsonify({
+                'success': False, 
+                'error': 'API key is required. Please check your environment configuration.'
+            }), 401
         
         if not query:
             return jsonify({'success': False, 'error': 'Query is required'}), 400
         
-        # Create service with provided API key or from environment
+        # Create service with provided API key
         service = SonarService(api_key=api_key)
         result = service.deep_research(query)
         
-        if 'error' in result:
-            return jsonify({'success': False, 'error': result['error']}), 500
+        if isinstance(result, dict) and 'error' in result:
+            logger.error(f"Sonar research error: {result['error']}")
+            return jsonify({
+                'success': False, 
+                'error': result['error']
+            }), 500
         
         return jsonify({
             'success': True,
@@ -341,37 +348,53 @@ def sonar_research():
         })
         
     except Exception as e:
-        return jsonify({'success': False, 'error': str(e)}), 500
+        logger.error(f"Error in sonar research: {str(e)}")
+        return jsonify({
+            'success': False, 
+            'error': f"Research failed: {str(e)}"
+        }), 500
 
 @app.route('/api/sonar/research/stream', methods=['POST'])
 def sonar_research_stream():
-
     try:
         data = request.get_json()
-        api_key = data.get('api_key') or app.config['TWELVELABS_API_KEY'] or app.config['PERPLEXITY_API_KEY']
+        api_key = data.get('api_key') or app.config.get('PERPLEXITY_API_KEY')
         query = data.get('query')
         
-        if not api_key or api_key == '':
-            return jsonify({'success': False, 'error': 'TwelveLabs API key is required. Please connect your API key in the UI or set TWELVELABS_API_KEY in environment variables.'}), 400
+        if not api_key:
+            return jsonify({
+                'success': False, 
+                'error': 'API key is required. Please check your environment configuration.'
+            }), 401
         
         if not query:
             return jsonify({'success': False, 'error': 'Query is required'}), 400
         
-        # Create service with provided API key or from environment
+        # Create service with provided API key
         service = SonarService(api_key=api_key)
         
         def generate():
-            for chunk in service.deep_research_stream(query):
-                yield chunk
+            try:
+                for chunk in service.deep_research_stream(query):
+                    yield chunk
+            except Exception as e:
+                logger.error(f"Error in streaming research: {str(e)}")
+                yield json.dumps({
+                    'type': 'error',
+                    'message': str(e)
+                }) + '\n'
         
-        return Response(generate(), mimetype='text/plain')
+        return Response(generate(), mimetype='text/event-stream')
         
     except Exception as e:
-        return jsonify({'success': False, 'error': str(e)}), 500
+        logger.error(f"Error setting up research stream: {str(e)}")
+        return jsonify({
+            'success': False, 
+            'error': f"Research stream failed: {str(e)}"
+        }), 500
 
 @app.route('/api/workflow', methods=['POST'])
 def complete_workflow():
-    
     try:
         data = request.get_json()
         logger.info(f"=== WORKFLOW REQUEST START ===")
@@ -382,136 +405,121 @@ def complete_workflow():
         video_id = data.get('video_id')
         analysis_prompt = data.get('analysis_prompt', 'Describe what happens in this video')
         research_query = data.get('research_query')
-        
-        logger.info(f"Parameters extracted:")
-        logger.info(f"  - Index ID: {index_id}")
-        logger.info(f"  - Video ID: {video_id}")
-        logger.info(f"  - Analysis Prompt: {analysis_prompt}")
-        logger.info(f"  - Research Query: {research_query}")
-        
-        # Validate required parameters
-        if not twelvelabs_api_key or twelvelabs_api_key == '':
-            logger.error("Missing TwelveLabs API key")
-            return jsonify({'success': False, 'error': 'TwelveLabs API key is required. Please connect your API key in the UI or set TWELVELABS_API_KEY in environment variables.'}), 400
-        
-        if not index_id:
-            logger.error("Missing Index ID")
-            return jsonify({'success': False, 'error': 'Index ID is required'}), 400
-        
-        if not video_id:
-            logger.error("Missing Video ID")
-            return jsonify({'success': False, 'error': 'Video ID is required'}), 400
-        
-        if not research_query:
-            logger.error("Missing Research Query")
-            return jsonify({'success': False, 'error': 'Research query is required'}), 400
-        
-        # Step 1 - Get video details from TwelveLabs
-        logger.info("Step 1: Getting video details from TwelveLabs...")
-        twelvelabs_service = TwelveLabsService(api_key=twelvelabs_api_key)
-        video_details = twelvelabs_service.get_video_details(index_id, video_id)
-        
-        if not video_details:
-            logger.error("Failed to retrieve video details")
-            return jsonify({'success': False, 'error': 'Could not retrieve video details'}), 400
-        
-        logger.info(f"Video details retrieved successfully: {json.dumps(video_details, indent=2)}")
-        
-        # Step 2 - Analyze the video
-        logger.info("Step 2: Analyzing video content...")
-        try:
-            analysis_result = twelvelabs_service.analyze_video(video_id, analysis_prompt)
-            logger.info(f"Video analysis completed: {json.dumps(analysis_result, indent=2)}")
-        except Exception as e:
-            logger.error(f"Video analysis failed: {str(e)}")
-            return jsonify({'success': False, 'error': f'Video analysis failed: {str(e)}'}), 500
-        
-        # Step 3 - Conduct deep research using Sonar with TwelveLabs analysis
-        logger.info("Step 3: Conducting deep research using Sonar...")
-        research_result = None
-        if research_query and analysis_result:
+
+        def generate():
+            # Initial validation
+            if not twelvelabs_api_key:
+                yield json.dumps({
+                    'type': 'error',
+                    'message': 'TwelveLabs API key is required'
+                }) + '\n'
+                return
+
+            if not index_id or not video_id:
+                yield json.dumps({
+                    'type': 'error',
+                    'message': 'Index ID and Video ID are required'
+                }) + '\n'
+                return
+
+            if not research_query:
+                yield json.dumps({
+                    'type': 'error',
+                    'message': 'Research query is required'
+                }) + '\n'
+                return
+
             try:
-                sonar_service = SonarService()
+                # Step 1: Get video details
+                yield json.dumps({
+                    'type': 'progress',
+                    'step': 'video_details',
+                    'message': 'Fetching video details...',
+                    'progress': 0
+                }) + '\n'
+
+                twelvelabs_service = TwelveLabsService(api_key=twelvelabs_api_key)
+                video_details = twelvelabs_service.get_video_details(index_id, video_id)
+
+                if not video_details:
+                    yield json.dumps({
+                        'type': 'error',
+                        'message': 'Could not retrieve video details'
+                    }) + '\n'
+                    return
+
+                yield json.dumps({
+                    'type': 'data',
+                    'step': 'video_details',
+                    'data': video_details,
+                    'progress': 33
+                }) + '\n'
+
+                # Step 2: Analyze video
+                yield json.dumps({
+                    'type': 'progress',
+                    'step': 'analysis',
+                    'message': 'Analyzing video content...',
+                    'progress': 33
+                }) + '\n'
+
+                analysis_result = twelvelabs_service.analyze_video(video_id, analysis_prompt)
                 
-                # Create enhanced research query that includes the video analysis
+                yield json.dumps({
+                    'type': 'data',
+                    'step': 'analysis',
+                    'data': analysis_result,
+                    'progress': 66
+                }) + '\n'
+
+                # Step 3: Research with context
+                yield json.dumps({
+                    'type': 'progress',
+                    'step': 'research',
+                    'message': 'Conducting deep research...',
+                    'progress': 66
+                }) + '\n'
+
+                # Create enhanced research query
                 enhanced_query = f"""
 Based on this video analysis: {analysis_result}
 
 Please research: {research_query}
 
-Provide comprehensive insights that connect the video content with current trends, developments, and relevant information.
+Provide comprehensive insights
 """
                 
-                logger.info(f"Enhanced research query created: {json.dumps(enhanced_query, indent=2)}")
-                
-                research_result = sonar_service.deep_research(enhanced_query, timeout=60)  # Reduced timeout for Render
-                logger.info(f"Sonar research completed: {json.dumps(research_result, indent=2)}")
-                
-                if 'error' in research_result:
-                    # Log error but don't fail the entire workflow
-                    logger.error(f"Sonar research failed: {research_result['error']}")
-                    research_result = {'error': research_result['error'], 'note': 'Research step failed but workflow continued'}
-            except Exception as e:
-                logger.error(f"Sonar research exception: {e}")
-                research_result = {'error': str(e), 'note': 'Research step failed but workflow continued'}
+                sonar_service = SonarService()
+                research_result = sonar_service.deep_research(enhanced_query, timeout=60)
 
-        # Add sources to research result
-        logger.info("Adding sources to research result...")
-        if research_result and 'error' not in research_result:
-            # Add default sources to the research result
-            research_result['sources'] = [
-                {
-                    'title': 'TechCrunch',
-                    'url': 'https://techcrunch.com',
-                    'description': 'Technology news and analysis'
-                },
-                {
-                    'title': 'Gartner Research',
-                    'url': 'https://gartner.com',
-                    'description': 'Industry research and insights'
-                },
-                {
-                    'title': 'McKinsey & Company',
-                    'url': 'https://mckinsey.com',
-                    'description': 'Business and technology trends'
-                },
-                {
-                    'title': 'The Verge',
-                    'url': 'https://theverge.com',
-                    'description': 'Technology and culture coverage'
-                },
-                {
-                    'title': 'MIT Technology Review',
-                    'url': 'https://technologyreview.com',
-                    'description': 'In-depth technology analysis'
-                }
-            ]
-            logger.info(f"Sources added to research result: {json.dumps(research_result['sources'], indent=2)}")
-        else:
-            logger.warning("No sources added - research result has error or is None")
-        
-        # Prepare final response
-        final_response = {
-            'success': True,
-            'workflow': {
-                'video_details': video_details,
-                'analysis': analysis_result,
-                'research': research_result
-            },
-            'summary': {
-                'video_id': video_id,
-                'index_id': index_id,
-                'analysis_prompt': analysis_prompt,
-                'research_query': research_query,
-                'research_status': 'completed' if research_result and 'error' not in research_result else 'failed'
-            }
-        }
-        
-        logger.info("=== WORKFLOW COMPLETED SUCCESSFULLY ===")
-        logger.info(f"Final response: {json.dumps(final_response, indent=2)}")
-        
-        return jsonify(final_response)
-        
+                if 'error' in research_result:
+                    yield json.dumps({
+                        'type': 'error',
+                        'message': f'Research failed: {research_result["error"]}'
+                    }) + '\n'
+                    return
+
+                # Send final result with actual search results
+                yield json.dumps({
+                    'type': 'complete',
+                    'data': {
+                        'video_details': video_details,
+                        'analysis': analysis_result,
+                        'research': research_result,
+                        'sources': research_result.get('search_results', [])  # Use actual search results
+                    },
+                    'progress': 100
+                }) + '\n'
+
+            except Exception as e:
+                logger.error(f"Error in workflow: {str(e)}")
+                yield json.dumps({
+                    'type': 'error',
+                    'message': str(e)
+                }) + '\n'
+
+        return Response(generate(), mimetype='text/event-stream')
+
     except Exception as e:
         return jsonify({'success': False, 'error': str(e)}), 500
 

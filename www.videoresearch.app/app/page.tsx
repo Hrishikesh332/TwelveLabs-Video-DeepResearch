@@ -25,6 +25,7 @@ import { Video, Github, Check, Loader2, Plus, X, Send, ArrowLeft, Info, BookOpen
 import ReactMarkdown from 'react-markdown'
 import remarkGfm from 'remark-gfm'
 import { Label } from "@/components/ui/label"
+import { API_CONFIG, APP_CONFIG, ERROR_MESSAGES, validateApiKey, validateVideoFile, formatDuration, formatFileSize } from "@/lib/config"
 
 type IndexItem = { id: string; name: string }
 type VideoItem = { 
@@ -371,7 +372,7 @@ export default function DeepResearchLanding() {
     
     ;(async () => {
       try {
-        const res = await fetch(`${API_BASE_URL}/api/config/twelvelabs`, {
+        const res = await fetch(`${API_CONFIG.BASE_URL}${API_CONFIG.ENDPOINTS.TWELVELABS.CONFIG}`, {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({ api_key: apiKey }),
@@ -413,7 +414,7 @@ export default function DeepResearchLanding() {
   async function handleUseDefault() {
     try {
       // Clear the backend API key first
-      const res = await fetch(`${API_BASE_URL}/api/config/twelvelabs`, {
+      const res = await fetch(`${API_CONFIG.BASE_URL}${API_CONFIG.ENDPOINTS.TWELVELABS.CONFIG}`, {
         method: 'DELETE',
         headers: { 'Content-Type': 'application/json' }
       })
@@ -453,13 +454,13 @@ export default function DeepResearchLanding() {
   async function switchToEnvironmentKey() {
     try {
       // Clear the backend API key first
-      const res = await fetch(`${API_BASE_URL}/api/config/twelvelabs`, {
+      const res = await fetch(`${API_CONFIG.BASE_URL}${API_CONFIG.ENDPOINTS.TWELVELABS.CONFIG}`, {
         method: 'DELETE',
         headers: { 'Content-Type': 'application/json' }
       })
       
       // Reload from environment API key
-      const envRes = await fetch(`${API_BASE_URL}/api/indexes`, {
+      const envRes = await fetch(`${API_CONFIG.BASE_URL}${API_CONFIG.ENDPOINTS.TWELVELABS.INDEXES}`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({})
@@ -492,7 +493,6 @@ export default function DeepResearchLanding() {
     }
   }
 
-
   async function handleIndexChange(indexId: string) {
     setSelectedIndex(indexId)
     setSelectedVideo("")
@@ -503,7 +503,7 @@ export default function DeepResearchLanding() {
 
     setIsLoadingVideos(true)
     try {
-      const res = await fetch(`${API_BASE_URL}/api/videos`, {
+      const res = await fetch(`${API_CONFIG.BASE_URL}${API_CONFIG.ENDPOINTS.TWELVELABS.VIDEOS}`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ api_key: isConnected ? undefined : apiKey, index_id: indexId }),
@@ -637,7 +637,7 @@ Please ensure your analysis addresses the user's specific question while providi
       setCurrentStepDetail('Getting video information...')
       addActivityLog('Fetching video details...', 'progress')
       
-      const response = await fetch(`${API_BASE_URL}/api/workflow`, {
+      const response = await fetch(`${API_CONFIG.BASE_URL}${API_CONFIG.ENDPOINTS.RESEARCH.WORKFLOW}`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -796,7 +796,7 @@ Please provide a comprehensive answer that builds upon the previous research and
 `
       
       // Send to Sonar API
-      const response = await fetch(`${API_BASE_URL}/api/sonar/research`, {
+      const response = await fetch(`${API_CONFIG.BASE_URL}${API_CONFIG.ENDPOINTS.RESEARCH.SONAR}`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -935,8 +935,8 @@ Please provide a comprehensive answer that builds upon the previous research and
     // Validate duration 5s–5m before uploading
     try {
       const durationSec = await getVideoDuration(uploadFile)
-      if (durationSec < 5 || durationSec > 300) {
-        toast({ title: 'Invalid duration', description: 'Video must be between 5 seconds and 5 minutes.' })
+      if (durationSec < APP_CONFIG.VIDEO_DURATION.MIN || durationSec > APP_CONFIG.VIDEO_DURATION.MAX) {
+        toast({ title: 'Invalid duration', description: ERROR_MESSAGES.INVALID_DURATION })
         return
       }
     } catch {
@@ -947,7 +947,7 @@ Please provide a comprehensive answer that builds upon the previous research and
     try {
       const formData = new FormData()
       formData.append('file', uploadFile)
-      const res = await fetch(`${API_BASE_URL}/api/upload`, {
+      const res = await fetch(`${API_CONFIG.BASE_URL}${API_CONFIG.ENDPOINTS.TWELVELABS.UPLOAD}`, {
         method: 'POST',
         body: formData
       })
@@ -1191,70 +1191,96 @@ Please provide a comprehensive answer that builds upon the previous research and
               </div>
 
               {/* Tabs */}
-              <div className="flex space-x-1 mb-6">
+              <div className="flex space-x-2 mb-6 bg-gray-100 p-1 rounded-lg">
                 <button
                   onClick={() => setActiveTab('activity')}
-                  className={`px-3 py-2 text-sm font-medium rounded-md transition-colors ${
+                  className={`flex-1 px-4 py-2.5 text-sm font-medium rounded-md transition-all duration-200 flex items-center justify-center gap-2 ${
                     activeTab === 'activity' 
-                      ? 'bg-gray-900 text-white' 
-                      : 'text-gray-600 hover:text-gray-900 hover:bg-gray-100'
+                      ? 'bg-white text-gray-900 shadow-sm border border-gray-200' 
+                      : 'text-gray-600 hover:text-gray-900 hover:bg-white/50'
                   }`}
                 >
+                  <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                  </svg>
                   Activity
                 </button>
                 <button
                   onClick={() => setActiveTab('sources')}
-                  className={`px-3 py-2 text-sm font-medium rounded-md transition-colors ${
+                  className={`flex-1 px-4 py-2.5 text-sm font-medium rounded-md transition-all duration-200 flex items-center justify-center gap-2 ${
                     activeTab === 'sources' 
-                      ? 'bg-gray-900 text-white' 
-                      : 'text-gray-600 hover:text-gray-900 hover:bg-gray-100'
+                      ? 'bg-white text-gray-900 shadow-sm border border-gray-200' 
+                      : 'text-gray-600 hover:text-gray-900 hover:bg-white/50'
                   }`}
                 >
+                  <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                  </svg>
                   Sources
                 </button>
               </div>
 
               {/* Tab Content */}
-              {activeTab === 'activity' ? (
-                <div className="space-y-4">
-                  {activityLogs.map((log, index) => (
-                    <div key={index} className="flex items-start space-x-3">
-                      <div className="w-2 h-2 bg-gray-900 rounded-full mt-2 flex-shrink-0" />
-                      <div className="flex-1 min-w-0">
-                        <p className="text-sm text-gray-700">{log.message}</p>
-                        <p className="text-xs text-gray-500 mt-1">
-                          {log.timestamp.toLocaleTimeString()}
-                        </p>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              ) : (
-                <div className="space-y-4">
-                  {sources.length > 0 && sources.some(source => source.isReal) ? (
-                    sources.filter(source => source.isReal).map((source, index) => (
-                      <div key={index} className="bg-white border border-gray-200 rounded-lg p-3">
-                        <div className="flex items-start space-x-3">
-                          <SourceIcon url={source.url} title={source.title} />
-                          <div className="flex-1 min-w-0">
-                            <a 
-                              href={source.url} 
-                              target="_blank" 
-                              rel="noopener noreferrer"
-                              className="text-sm font-medium text-gray-900 hover:text-blue-600 transition-colors line-clamp-2 block"
-                            >
-                              {source.title}
-                            </a>
-                            <p className="text-xs text-gray-600 mt-1 line-clamp-2">{source.description}</p>
-                          </div>
+              <div className="bg-white rounded-lg border border-gray-200 shadow-sm">
+                {activeTab === 'activity' ? (
+                  <div className="p-4 space-y-4">
+                    {activityLogs.map((log, index) => (
+                      <div key={index} className="flex items-start space-x-3 hover:bg-gray-50 p-2 rounded-lg transition-colors">
+                        <div className={`w-2 h-2 rounded-full mt-2 flex-shrink-0 ${
+                          log.type === 'complete' ? 'bg-green-500' :
+                          log.type === 'error' ? 'bg-red-500' :
+                          log.type === 'progress' ? 'bg-blue-500' :
+                          'bg-gray-500'
+                        }`} />
+                        <div className="flex-1 min-w-0">
+                          <p className="text-sm text-gray-700">{log.message}</p>
+                          <p className="text-xs text-gray-500 mt-1">
+                            {log.timestamp.toLocaleTimeString()}
+                          </p>
                         </div>
                       </div>
-                    ))
-                  ) : (
-                    <p className="text-sm text-gray-500 text-center py-4">No sources available yet</p>
-                  )}
-                </div>
-              )}
+                    ))}
+                    {activityLogs.length === 0 && (
+                      <div className="text-center py-8 text-gray-500">
+                        <svg className="w-12 h-12 mx-auto mb-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                        </svg>
+                        <p className="text-sm">No activity logs yet</p>
+                      </div>
+                    )}
+                  </div>
+                ) : (
+                  <div className="p-4 space-y-4">
+                    {sources.length > 0 && sources.some(source => source.isReal) ? (
+                      sources.filter(source => source.isReal).map((source, index) => (
+                        <div key={index} className="bg-white hover:bg-gray-50 border border-gray-200 rounded-lg p-4 transition-all duration-200 group">
+                          <div className="flex items-start space-x-4">
+                            <SourceIcon url={source.url} title={source.title} />
+                            <div className="flex-1 min-w-0">
+                              <a 
+                                href={source.url} 
+                                target="_blank" 
+                                rel="noopener noreferrer"
+                                className="text-sm font-medium text-gray-900 hover:text-blue-600 transition-colors line-clamp-2 block group-hover:text-blue-600"
+                              >
+                                {source.title}
+                              </a>
+                              <p className="text-xs text-gray-600 mt-2 line-clamp-2">{source.description}</p>
+                            </div>
+                          </div>
+                        </div>
+                      ))
+                    ) : (
+                      <div className="text-center py-8 text-gray-500">
+                        <svg className="w-12 h-12 mx-auto mb-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                        </svg>
+                        <p className="text-sm">No sources available yet</p>
+                      </div>
+                    )}
+                  </div>
+                )}
+              </div>
             </div>
           </div>
         </div>
@@ -1264,7 +1290,7 @@ Please provide a comprehensive answer that builds upon the previous research and
 
   // Landing page interface (only shown when research hasn't started)
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white flex flex-col">
       <Toaster />
 
       {/* Header */}
@@ -1304,7 +1330,7 @@ Please provide a comprehensive answer that builds upon the previous research and
       </header>
 
       {/* Main */}
-      <main className="container mx-auto px-6 py-16">
+      <main className="container mx-auto px-6 py-16 flex-1">
         <div className="max-w-4xl mx-auto">
           {/* Badge */}
           <div className="flex justify-center mb-12">
@@ -1509,28 +1535,28 @@ Please provide a comprehensive answer that builds upon the previous research and
       </main>
 
       {/* Footer */}
-      <footer className="border-t border-gray-100 py-8 mt-16 relative">
-        <div className="max-w-4xl mx-auto px-6">
-          <div className="flex flex-col md:flex-row items-center">
-            <div className="flex items-center space-x-2 mb-4 md:mb-0 md:absolute md:left-6">
+      <footer className="border-t border-gray-100 bg-white mt-auto w-full">
+        <div className="container mx-auto h-[72px] flex items-center">
+          <div className="w-full max-w-7xl mx-auto px-6 flex items-center justify-between">
+            <div className="flex items-center space-x-2 -ml-6">
               <span className="text-gray-500 text-sm">Powered by</span>
               <span className="font-semibold text-gray-900">TwelveLabs</span>
             </div>
-            <div className="flex items-center space-x-2 md:absolute md:right-2">
+            <div className="flex items-center space-x-2 -mr-6">
               {/* Globe/Web Logo */}
-              <div className="w-7 h-7 flex items-center justify-center">
+              <div className="w-8 h-8 flex items-center justify-center hover:bg-gray-100 rounded-full transition-colors">
                 <svg className="w-4 h-4 text-gray-700" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.94-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
                 </svg>
               </div>
               {/* Discord Logo */}
-              <div className="w-7 h-7 flex items-center justify-center">
+              <div className="w-8 h-8 flex items-center justify-center hover:bg-gray-100 rounded-full transition-colors">
                 <svg className="w-4 h-4 text-gray-700" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515a.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0a12.64 12.64 0 0 0-.617-1.25a.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057a19.9 19.9 0 0 0 5.993 3.03a.078.078 0 0 0 .084-.028a14.09 14.09 0 0 0 1.226-1.994a.076.076 0 0 0-.041-.106a13.107 13.107 0 0 1-1.872-.892a.077.077 0 0 1-.008-.128a10.2 10.2 0 0 0 .372-.292a.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127a12.299 12.299 0 0 1-1.873.892a.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028a19.839 19.839 0 0 0 6.002-3.03a.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419c0-1.333.956-2.419 2.157-2.419c1.21 0 2.176 1.096 2.157 2.42c0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419c0-1.333.955-2.419 2.157-2.419c1.21 0 2.176 1.096 2.157 2.42c0 1.333-.946 2.418-2.157 2.418z"/>
                 </svg>
               </div>
               {/* New Twitter/X Logo */}
-              <div className="w-7 h-7 flex items-center justify-center">
+              <div className="w-8 h-8 flex items-center justify-center hover:bg-gray-100 rounded-full transition-colors">
                 <svg className="w-4 h-4 text-gray-700" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
                 </svg>

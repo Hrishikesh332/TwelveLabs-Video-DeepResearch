@@ -150,7 +150,7 @@ export default function VideoPlayer({
             fatal: data.fatal,
             reason: data.reason || 'Unknown'
           })
-        }
+          }
         
         // Only handle fatal errors
         if (data.fatal) {
@@ -164,7 +164,7 @@ export default function VideoPlayer({
             case Hls.ErrorTypes.NETWORK_ERROR:
               console.log("Network error, trying to recover...")
               try {
-                hlsRef.current?.startLoad()
+              hlsRef.current?.startLoad()
               } catch (e) {
                 console.log("Recovery failed, falling back to direct video")
                 setError('Network error. Trying direct video...')
@@ -175,7 +175,7 @@ export default function VideoPlayer({
             case Hls.ErrorTypes.MEDIA_ERROR:
               console.log("Media error, trying to recover...")
               try {
-                hlsRef.current?.recoverMediaError()
+              hlsRef.current?.recoverMediaError()
               } catch (e) {
                 console.log("Media recovery failed, falling back to direct video")
                 setError('Media error. Trying direct video...')
@@ -260,8 +260,8 @@ export default function VideoPlayer({
   }
 
   const handleError = (e: Event) => {
-    const target = e.target as HTMLVideoElement
-    if (target.error) {
+      const target = e.target as HTMLVideoElement
+      if (target.error) {
       let errorMessage = 'Video playback failed'
       let userFriendlyMessage = 'Unable to play video'
       
@@ -309,9 +309,9 @@ export default function VideoPlayer({
       
       setError(userFriendlyMessage)
       onErrorRef.current?.(errorMessage)
+      }
+      setIsLoading(false)
     }
-    setIsLoading(false)
-  }
     
     const handleTimeUpdate = () => {
       setCurrentTime(video.currentTime)
@@ -346,7 +346,7 @@ export default function VideoPlayer({
       // Clean up HLS instance safely
       if (hlsRef.current) {
         try {
-          hlsRef.current.destroy()
+        hlsRef.current.destroy()
           hlsRef.current = null
         } catch (e) {
           console.log("Error cleaning up HLS instance:", e)
@@ -356,14 +356,14 @@ export default function VideoPlayer({
       // Clean up video event listeners safely
       if (video) {
         try {
-          video.removeEventListener('loadeddata', handleLoadedData)
-          video.removeEventListener('canplay', handleCanPlay)
-          video.removeEventListener('error', handleError)
-          video.removeEventListener('timeupdate', handleTimeUpdate)
-          video.removeEventListener('durationchange', handleDurationChange)
-          video.removeEventListener('play', handlePlay)
-          video.removeEventListener('pause', handlePause)
-          video.removeEventListener('volumechange', handleVolumeChange)
+      video.removeEventListener('loadeddata', handleLoadedData)
+      video.removeEventListener('canplay', handleCanPlay)
+      video.removeEventListener('error', handleError)
+      video.removeEventListener('timeupdate', handleTimeUpdate)
+      video.removeEventListener('durationchange', handleDurationChange)
+      video.removeEventListener('play', handlePlay)
+      video.removeEventListener('pause', handlePause)
+      video.removeEventListener('volumechange', handleVolumeChange)
         } catch (e) {
           console.log("Error cleaning up video event listeners:", e)
         }
@@ -624,18 +624,18 @@ export default function VideoPlayer({
             </div>
             <div className="mb-3 text-sm font-medium">{error}</div>
             <div className="flex flex-col space-y-2">
-              <button 
-                onClick={() => {
-                  setError(null)
+            <button 
+              onClick={() => {
+                setError(null)
                   setIsLoading(true)
-                  if (videoRef.current) {
-                    videoRef.current.load()
-                  }
-                }}
+                if (videoRef.current) {
+                  videoRef.current.load()
+                }
+              }}
                 className="px-4 py-2 bg-white text-red-900 rounded text-sm hover:bg-gray-100 transition-colors font-medium"
-              >
+            >
                 Try Again
-              </button>
+            </button>
               {videoUrl.includes('.m3u8') && (
                 <div className="text-xs text-red-200 mt-2">
                   This appears to be an HLS stream. Make sure your browser supports it or try a different video format.

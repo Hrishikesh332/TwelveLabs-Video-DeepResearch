@@ -13956,3 +13956,1332 @@ Please ensure your analysis addresses the user's specific question while providi
 2025-09-07 04:58:06,563 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 04:58:06] "DELETE /api/config/twelvelabs HTTP/1.1" 200 -
 2025-09-07 04:58:07,188 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 04:58:07] "POST /api/indexes HTTP/1.1" 200 -
 2025-09-07 04:58:07,791 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 04:58:07] "POST /api/videos HTTP/1.1" 200 -
+2025-09-07 12:33:33,668 - apscheduler.executors.default - WARNING - Run time of job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-07 12:35:49 CEST)" was missed by 0:06:44.398399
+2025-09-07 12:33:33,971 - apscheduler.executors.default - WARNING - Run time of job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-07 12:35:49 CEST)" was missed by 0:06:44.397800
+2025-09-07 12:51:48,607 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 12:51:48] "OPTIONS /api/indexes HTTP/1.1" 200 -
+2025-09-07 12:51:49,649 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 12:51:49] "POST /api/indexes HTTP/1.1" 200 -
+2025-09-07 12:51:49,982 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 12:51:49] "OPTIONS /api/videos HTTP/1.1" 200 -
+2025-09-07 12:51:50,911 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 12:51:50] "POST /api/videos HTTP/1.1" 200 -
+2025-09-07 12:52:03,603 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 12:52:03] "OPTIONS /api/videos HTTP/1.1" 200 -
+2025-09-07 12:52:04,212 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 12:52:04] "POST /api/videos HTTP/1.1" 200 -
+2025-09-07 12:52:26,643 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 12:52:26] "OPTIONS /api/config/twelvelabs HTTP/1.1" 200 -
+2025-09-07 12:52:26,644 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 12:52:26] "DELETE /api/config/twelvelabs HTTP/1.1" 200 -
+2025-09-07 12:52:37,480 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 12:52:37] "OPTIONS /api/config/twelvelabs HTTP/1.1" 200 -
+2025-09-07 12:52:37,481 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 12:52:37] "DELETE /api/config/twelvelabs HTTP/1.1" 200 -
+2025-09-07 12:52:37,485 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 12:52:37] "OPTIONS /api/indexes HTTP/1.1" 200 -
+2025-09-07 12:52:38,065 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 12:52:38] "POST /api/indexes HTTP/1.1" 200 -
+2025-09-07 12:52:38,073 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 12:52:38] "OPTIONS /api/videos HTTP/1.1" 200 -
+2025-09-07 12:52:38,651 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 12:52:38] "POST /api/videos HTTP/1.1" 200 -
+2025-09-07 12:52:46,994 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 12:52:46] "OPTIONS /api/config/twelvelabs HTTP/1.1" 200 -
+2025-09-07 12:52:46,995 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 12:52:46] "DELETE /api/config/twelvelabs HTTP/1.1" 200 -
+2025-09-07 12:52:47,020 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 12:52:47] "OPTIONS /api/indexes HTTP/1.1" 200 -
+2025-09-07 12:52:47,631 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 12:52:47] "POST /api/indexes HTTP/1.1" 200 -
+2025-09-07 12:52:47,637 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 12:52:47] "OPTIONS /api/videos HTTP/1.1" 200 -
+2025-09-07 12:52:48,234 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 12:52:48] "POST /api/videos HTTP/1.1" 200 -
+2025-09-07 12:53:00,412 - apscheduler.executors.default - WARNING - Run time of job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-07 12:53:49 CEST)" was missed by 0:08:11.142552
+2025-09-07 12:53:00,714 - apscheduler.executors.default - WARNING - Run time of job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-07 12:53:49 CEST)" was missed by 0:08:11.141452
+2025-09-07 12:53:11,450 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 12:53:11] "OPTIONS /api/videos HTTP/1.1" 200 -
+2025-09-07 12:53:12,073 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 12:53:12] "POST /api/videos HTTP/1.1" 200 -
+2025-09-07 12:53:22,812 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 12:53:22] "OPTIONS /api/workflow HTTP/1.1" 200 -
+2025-09-07 12:53:22,825 - __main__ - INFO - === WORKFLOW REQUEST START ===
+2025-09-07 12:53:22,826 - __main__ - INFO - Request data: {
+  "index_id": "6893518408a37aa08793c4fe",
+  "video_id": "68bce2fa30049231acbe7051",
+  "analysis_prompt": "Please provide a comprehensive analysis of this video content. Include:\n\n1. **Content Overview**: What is happening in the video? Describe the main events, actions, and scenes.\n2. **Key Elements**: Identify important objects, people, locations, activities, and interactions.\n3. **Context & Setting**: What is the environment, time period, or context of the video?\n4. **Narrative Flow**: How does the story or sequence of events unfold?\n5. **Notable Details**: Highlight any significant details, patterns, or unique aspects.\n6. **Technical Aspects**: Note video quality, camera work, editing, or production elements if relevant.\n\nUser's Specific Query: research about this match\n\nPlease ensure your analysis addresses the user's specific question while providing comprehensive coverage of the video content.",
+  "research_query": "research about this match"
+}
+2025-09-07 12:53:22,830 - __main__ - INFO - Parameters extracted:
+2025-09-07 12:53:22,834 - __main__ - INFO -   - Index ID: 6893518408a37aa08793c4fe
+2025-09-07 12:53:22,839 - __main__ - INFO -   - Video ID: 68bce2fa30049231acbe7051
+2025-09-07 12:53:22,839 - __main__ - INFO -   - Analysis Prompt: Please provide a comprehensive analysis of this video content. Include:
+
+1. **Content Overview**: What is happening in the video? Describe the main events, actions, and scenes.
+2. **Key Elements**: Identify important objects, people, locations, activities, and interactions.
+3. **Context & Setting**: What is the environment, time period, or context of the video?
+4. **Narrative Flow**: How does the story or sequence of events unfold?
+5. **Notable Details**: Highlight any significant details, patterns, or unique aspects.
+6. **Technical Aspects**: Note video quality, camera work, editing, or production elements if relevant.
+
+User's Specific Query: research about this match
+
+Please ensure your analysis addresses the user's specific question while providing comprehensive coverage of the video content.
+2025-09-07 12:53:22,839 - __main__ - INFO -   - Research Query: research about this match
+2025-09-07 12:53:22,840 - __main__ - INFO - Step 1: Getting video details from TwelveLabs...
+2025-09-07 12:53:23,511 - __main__ - INFO - Video details retrieved successfully: {
+  "_id": "68bce2fa30049231acbe7051",
+  "created_at": "2025-09-07T01:42:18Z",
+  "system_metadata": {
+    "duration": 156.061315,
+    "filename": "tmp_apzp7wy",
+    "fps": 30,
+    "height": 360,
+    "size": 14225563,
+    "width": 640
+  },
+  "hls": {
+    "video_url": "https://deuqpmn4rs7j5.cloudfront.net/6633a646e06d1c2c0212c7df/68bce2fa30049231acbe7051/stream/ff42afee-4673-4a2a-a05b-14c330c78244.m3u8",
+    "thumbnail_urls": [
+      "https://deuqpmn4rs7j5.cloudfront.net/6633a646e06d1c2c0212c7df/68bce2fa30049231acbe7051/thumbnails/ff42afee-4673-4a2a-a05b-14c330c78244.0000001.jpg"
+    ],
+    "status": "COMPLETE",
+    "updated_at": "2025-09-07T01:43:01.44Z"
+  }
+}
+2025-09-07 12:53:23,511 - __main__ - INFO - Step 2: Analyzing video content...
+2025-09-07 12:53:40,873 - httpx - INFO - HTTP Request: POST https://api.twelvelabs.io/v1.3/analyze "HTTP/1.1 200 OK"
+2025-09-07 12:53:40,874 - __main__ - INFO - Video analysis completed: "The video captures a highly competitive gold medal match in men's volleyball at the Paris 2024 Olympics between France and Poland. The match is part of a best-of-five sets encounter, with France, the defending Olympic champions, taking on Poland, the world's top-ranked team. The main events include intense rallies, strategic plays, and decisive moments that lead to France securing the gold medal.\n\n**Key Elements**: The video prominently features the French and Polish volleyball teams, with key players like John Patrie and Irvin Ngapet from France, and a Polish player with jersey number 14. The coach of the French team is also seen interacting with his players. The audience, including fans from both countries, is a significant element, with reactions ranging from jubilation to disappointment.\n\n**Context & Setting**: The match takes place in a large indoor stadium during the Olympic Games, with a graphic overlay indicating the match is the Men's Volleyball Gold Medal Match. The environment is highly charged, with the crowd adding to the excitement and intensity of the event.\n\n**Narrative Flow**: The video begins with France leading 2-1 in the match. It then follows the progression of the game, highlighting key moments such as successful plays, missed attacks, and celebrations from both teams. The narrative builds towards France's victory, culminating in their celebration and the medal ceremony where the French team receives gold medals, Poland receives silver, and the United States of America receives bronze.\n\n**Notable Details**: The video includes close-ups of the players' expressions, capturing the intensity and emotion of the match. The audience's reactions are also highlighted, showing their support and enthusiasm. The final scenes show the medal ceremony, with the French team receiving gold medals and the Polish team receiving silver. The video also captures the moment when Poland fights off four consecutive match points, showcasing their resilience.\n\n**Technical Aspects**: The video quality is high, with clear shots of the players and the court. The camera work effectively captures the action and the atmosphere of the stadium. The editing is smooth, maintaining the flow of the match and its key moments.\n\nOverall, the video provides a comprehensive view of the match, showcasing the skill and passion of the players and the excitement of the Olympic event. It addresses the user's specific query by detailing the research about the match, including its progression and the final outcome."
+2025-09-07 12:53:40,874 - __main__ - INFO - Step 3: Conducting deep research using Sonar...
+2025-09-07 12:53:40,874 - __main__ - INFO - Enhanced research query created: "\nBased on this video analysis: The video captures a highly competitive gold medal match in men's volleyball at the Paris 2024 Olympics between France and Poland. The match is part of a best-of-five sets encounter, with France, the defending Olympic champions, taking on Poland, the world's top-ranked team. The main events include intense rallies, strategic plays, and decisive moments that lead to France securing the gold medal.\n\n**Key Elements**: The video prominently features the French and Polish volleyball teams, with key players like John Patrie and Irvin Ngapet from France, and a Polish player with jersey number 14. The coach of the French team is also seen interacting with his players. The audience, including fans from both countries, is a significant element, with reactions ranging from jubilation to disappointment.\n\n**Context & Setting**: The match takes place in a large indoor stadium during the Olympic Games, with a graphic overlay indicating the match is the Men's Volleyball Gold Medal Match. The environment is highly charged, with the crowd adding to the excitement and intensity of the event.\n\n**Narrative Flow**: The video begins with France leading 2-1 in the match. It then follows the progression of the game, highlighting key moments such as successful plays, missed attacks, and celebrations from both teams. The narrative builds towards France's victory, culminating in their celebration and the medal ceremony where the French team receives gold medals, Poland receives silver, and the United States of America receives bronze.\n\n**Notable Details**: The video includes close-ups of the players' expressions, capturing the intensity and emotion of the match. The audience's reactions are also highlighted, showing their support and enthusiasm. The final scenes show the medal ceremony, with the French team receiving gold medals and the Polish team receiving silver. The video also captures the moment when Poland fights off four consecutive match points, showcasing their resilience.\n\n**Technical Aspects**: The video quality is high, with clear shots of the players and the court. The camera work effectively captures the action and the atmosphere of the stadium. The editing is smooth, maintaining the flow of the match and its key moments.\n\nOverall, the video provides a comprehensive view of the match, showcasing the skill and passion of the players and the excitement of the Olympic event. It addresses the user's specific query by detailing the research about the match, including its progression and the final outcome.\n\nPlease research: research about this match\n\nProvide comprehensive insights that connect the video content with current trends, developments, and relevant information.\n"
+2025-09-07 12:53:49,275 - apscheduler.executors.default - INFO - Running job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-07 13:02:49 CEST)" (scheduled at 2025-09-07 12:53:49.270038+02:00)
+2025-09-07 12:53:49,279 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 12:53:49] "GET /health HTTP/1.1" 200 -
+2025-09-07 12:53:49,280 - apscheduler.executors.default - INFO - Job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-07 13:02:49 CEST)" executed successfully
+2025-09-07 12:53:49,578 - apscheduler.executors.default - INFO - Running job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-07 13:02:49 CEST)" (scheduled at 2025-09-07 12:53:49.573342+02:00)
+2025-09-07 12:53:49,580 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 12:53:49] "GET /health HTTP/1.1" 200 -
+2025-09-07 12:53:49,581 - apscheduler.executors.default - INFO - Job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-07 13:02:49 CEST)" executed successfully
+2025-09-07 12:53:50,381 - __main__ - INFO - Sonar research completed: {
+  "id": "8e86dbe0-c03b-407b-b61d-ffe8729444e9",
+  "model": "sonar",
+  "created": 1757242430,
+  "usage": {
+    "prompt_tokens": 508,
+    "completion_tokens": 517,
+    "total_tokens": 1025,
+    "search_context_size": "low",
+    "cost": {
+      "input_tokens_cost": 0.001,
+      "output_tokens_cost": 0.001,
+      "request_cost": 0.005,
+      "total_cost": 0.006
+    }
+  },
+  "citations": [
+    "https://www.nbcolympics.com/news/france-rides-home-crowd-second-straight-olympic-gold-medal-mens-volleyball",
+    "https://en.volleyballworld.com/volleyball/competitions/volleyball-olympic-games-paris-2024/schedule/19086/",
+    "https://www.espn.com/olympics/story/_/id/40805739/france-tops-no-1-poland-defend-men-volleyball-olympic-title",
+    "https://www.youtube.com/watch?v=JO6axiO1owk",
+    "https://www.youtube.com/watch?v=IxvuM2N0qpU"
+  ],
+  "search_results": [
+    {
+      "title": "France rides home crowd to second straight Olympic gold ...",
+      "url": "https://www.nbcolympics.com/news/france-rides-home-crowd-second-straight-olympic-gold-medal-mens-volleyball",
+      "date": "2024-08-10",
+      "last_updated": "2024-08-10",
+      "snippet": "The men's volleyball tournament concluded Saturday in Paris as the French cruised to an incredible three-set win over Poland \u2014 the top-ranked ..."
+    },
+    {
+      "title": "France-Poland Men Volleyball Olympic Games Paris 2024 ...",
+      "url": "https://en.volleyballworld.com/volleyball/competitions/volleyball-olympic-games-paris-2024/schedule/19086/",
+      "date": "2024-08-10",
+      "last_updated": "2025-07-20",
+      "snippet": "France-Poland Men Volleyball Olympic Games Paris 2024 10.08.2024 ... Results ... Gold Medal - Final Round - Men #26 ... 2024 ... 11:00 ... UTC ... 13:00."
+    },
+    {
+      "title": "France tops No. 1 Poland for men's volleyball title",
+      "url": "https://www.espn.com/olympics/story/_/id/40805739/france-tops-no-1-poland-defend-men-volleyball-olympic-title",
+      "date": "2024-08-10",
+      "last_updated": "2024-08-10",
+      "snippet": "France defended its Olympic title in men's volleyball, beating top-ranked Poland in front of a raucous, standing-room-only crowd in Paris."
+    },
+    {
+      "title": "France beat Poland to win gold medal in men's volleyball",
+      "url": "https://www.youtube.com/watch?v=JO6axiO1owk",
+      "date": "2024-08-10",
+      "last_updated": "2025-07-30",
+      "snippet": "1 Poland in straight sets (25-19, 25-20, 25-23) in the gold medal match of the men's volleyball event at the Paris 2024 Olympics. The hosts ..."
+    },
+    {
+      "title": "Poland FULL Match 2024 Paris Olympics Final",
+      "url": "https://www.youtube.com/watch?v=IxvuM2N0qpU",
+      "date": "2025-02-09",
+      "last_updated": "2025-07-30",
+      "snippet": "Full Volleyball Gold Medal Match between France and Poland from 10.08.2024 at the Paris Olympics. You can find some amazing volleyball ..."
+    }
+  ],
+  "object": "chat.completion",
+  "choices": [
+    {
+      "index": 0,
+      "finish_reason": "stop",
+      "message": {
+        "role": "assistant",
+        "content": "The men's volleyball gold medal match at the Paris 2024 Olympics featured a highly competitive showdown between defending Olympic champions France and the world\u2019s top-ranked Poland. France won decisively in straight sets, 3-0 (25-19, 25-20, 25-23), achieving their second consecutive Olympic gold medal and becoming the first men's team since the USA (1984-1988) to repeat as Olympic champions[1][3][4].\n\nKey aspects of the match included:\n\n- **Dominant Performance by France:** France exhibited superior tactical and physical execution, led by standout players such as Jean Patry, who scored a match-high 17 points, and Earvin N\u2019Gapeth, known for spectacular defensive saves and creative plays that energized the home crowd[3][5].\n\n- **Poland\u2019s Resilience:** Despite losing in straight sets, Poland showcased remarkable resilience, notably fighting off four consecutive match points. They had reached the final after overcoming years of Olympic quarterfinal exits, representing a significant milestone even in defeat[1][4].\n\n- **Home Crowd Impact:** The match took place at South Paris Arena with a passionate French crowd creating an electric atmosphere that visibly boosted the French team\u2019s performance and morale. The audience\u2019s emotional reactions\u2014from jubilant French fans to the disappointed Polish supporters\u2014were integral to the event\u2019s charged ambiance[1][3].\n\n- **Match Progression:** Although France entered the match with a 2-1 lead in overall Olympic final head-to-head encounters, the video analysis mentioning a \"2-1\" lead referred to the match\u2019s set progression in the narrative buildup. France maintained control through aggressive serving (8 aces), strong blocking, and efficient attacks by Barth\u00e9l\u00e9my Chinenyeze and others[3][5].\n\n- **Historic Context:** France\u2019s back-to-back Olympic victories mark a modern volleyball milestone. Poland\u2019s world No. 1 ranking and recent world championships underscored the high stakes and intensity of the final[1][3].\n\n- **Technical Quality and Presentation:** The broadcast and video analysis highlighted excellent camera work and editing, capturing technical plays, player emotions, and the crowd\u2019s dynamic reactions that enriched viewer experience and narrative flow.\n\nOverall, this match is a landmark event reflecting current trends in volleyball emphasizing athleticism, strategic serving pressure, and energetic home environments influencing elite competition outcomes in major international tournaments[1][3][5]. It also symbolizes France\u2019s reaffirmed dominance on the Olympic stage and Poland\u2019s significant strides to reassert itself as a global volleyball powerhouse."
+      },
+      "delta": {
+        "role": "assistant",
+        "content": ""
+      }
+    }
+  ]
+}
+2025-09-07 12:53:50,381 - __main__ - INFO - Adding sources to research result...
+2025-09-07 12:53:50,381 - __main__ - INFO - Sources added to research result: [
+  {
+    "title": "TechCrunch",
+    "url": "https://techcrunch.com",
+    "description": "Technology news and analysis"
+  },
+  {
+    "title": "Gartner Research",
+    "url": "https://gartner.com",
+    "description": "Industry research and insights"
+  },
+  {
+    "title": "McKinsey & Company",
+    "url": "https://mckinsey.com",
+    "description": "Business and technology trends"
+  },
+  {
+    "title": "The Verge",
+    "url": "https://theverge.com",
+    "description": "Technology and culture coverage"
+  },
+  {
+    "title": "MIT Technology Review",
+    "url": "https://technologyreview.com",
+    "description": "In-depth technology analysis"
+  }
+]
+2025-09-07 12:53:50,381 - __main__ - INFO - === WORKFLOW COMPLETED SUCCESSFULLY ===
+2025-09-07 12:53:50,382 - __main__ - INFO - Final response: {
+  "success": true,
+  "workflow": {
+    "video_details": {
+      "_id": "68bce2fa30049231acbe7051",
+      "created_at": "2025-09-07T01:42:18Z",
+      "system_metadata": {
+        "duration": 156.061315,
+        "filename": "tmp_apzp7wy",
+        "fps": 30,
+        "height": 360,
+        "size": 14225563,
+        "width": 640
+      },
+      "hls": {
+        "video_url": "https://deuqpmn4rs7j5.cloudfront.net/6633a646e06d1c2c0212c7df/68bce2fa30049231acbe7051/stream/ff42afee-4673-4a2a-a05b-14c330c78244.m3u8",
+        "thumbnail_urls": [
+          "https://deuqpmn4rs7j5.cloudfront.net/6633a646e06d1c2c0212c7df/68bce2fa30049231acbe7051/thumbnails/ff42afee-4673-4a2a-a05b-14c330c78244.0000001.jpg"
+        ],
+        "status": "COMPLETE",
+        "updated_at": "2025-09-07T01:43:01.44Z"
+      }
+    },
+    "analysis": "The video captures a highly competitive gold medal match in men's volleyball at the Paris 2024 Olympics between France and Poland. The match is part of a best-of-five sets encounter, with France, the defending Olympic champions, taking on Poland, the world's top-ranked team. The main events include intense rallies, strategic plays, and decisive moments that lead to France securing the gold medal.\n\n**Key Elements**: The video prominently features the French and Polish volleyball teams, with key players like John Patrie and Irvin Ngapet from France, and a Polish player with jersey number 14. The coach of the French team is also seen interacting with his players. The audience, including fans from both countries, is a significant element, with reactions ranging from jubilation to disappointment.\n\n**Context & Setting**: The match takes place in a large indoor stadium during the Olympic Games, with a graphic overlay indicating the match is the Men's Volleyball Gold Medal Match. The environment is highly charged, with the crowd adding to the excitement and intensity of the event.\n\n**Narrative Flow**: The video begins with France leading 2-1 in the match. It then follows the progression of the game, highlighting key moments such as successful plays, missed attacks, and celebrations from both teams. The narrative builds towards France's victory, culminating in their celebration and the medal ceremony where the French team receives gold medals, Poland receives silver, and the United States of America receives bronze.\n\n**Notable Details**: The video includes close-ups of the players' expressions, capturing the intensity and emotion of the match. The audience's reactions are also highlighted, showing their support and enthusiasm. The final scenes show the medal ceremony, with the French team receiving gold medals and the Polish team receiving silver. The video also captures the moment when Poland fights off four consecutive match points, showcasing their resilience.\n\n**Technical Aspects**: The video quality is high, with clear shots of the players and the court. The camera work effectively captures the action and the atmosphere of the stadium. The editing is smooth, maintaining the flow of the match and its key moments.\n\nOverall, the video provides a comprehensive view of the match, showcasing the skill and passion of the players and the excitement of the Olympic event. It addresses the user's specific query by detailing the research about the match, including its progression and the final outcome.",
+    "research": {
+      "id": "8e86dbe0-c03b-407b-b61d-ffe8729444e9",
+      "model": "sonar",
+      "created": 1757242430,
+      "usage": {
+        "prompt_tokens": 508,
+        "completion_tokens": 517,
+        "total_tokens": 1025,
+        "search_context_size": "low",
+        "cost": {
+          "input_tokens_cost": 0.001,
+          "output_tokens_cost": 0.001,
+          "request_cost": 0.005,
+          "total_cost": 0.006
+        }
+      },
+      "citations": [
+        "https://www.nbcolympics.com/news/france-rides-home-crowd-second-straight-olympic-gold-medal-mens-volleyball",
+        "https://en.volleyballworld.com/volleyball/competitions/volleyball-olympic-games-paris-2024/schedule/19086/",
+        "https://www.espn.com/olympics/story/_/id/40805739/france-tops-no-1-poland-defend-men-volleyball-olympic-title",
+        "https://www.youtube.com/watch?v=JO6axiO1owk",
+        "https://www.youtube.com/watch?v=IxvuM2N0qpU"
+      ],
+      "search_results": [
+        {
+          "title": "France rides home crowd to second straight Olympic gold ...",
+          "url": "https://www.nbcolympics.com/news/france-rides-home-crowd-second-straight-olympic-gold-medal-mens-volleyball",
+          "date": "2024-08-10",
+          "last_updated": "2024-08-10",
+          "snippet": "The men's volleyball tournament concluded Saturday in Paris as the French cruised to an incredible three-set win over Poland \u2014 the top-ranked ..."
+        },
+        {
+          "title": "France-Poland Men Volleyball Olympic Games Paris 2024 ...",
+          "url": "https://en.volleyballworld.com/volleyball/competitions/volleyball-olympic-games-paris-2024/schedule/19086/",
+          "date": "2024-08-10",
+          "last_updated": "2025-07-20",
+          "snippet": "France-Poland Men Volleyball Olympic Games Paris 2024 10.08.2024 ... Results ... Gold Medal - Final Round - Men #26 ... 2024 ... 11:00 ... UTC ... 13:00."
+        },
+        {
+          "title": "France tops No. 1 Poland for men's volleyball title",
+          "url": "https://www.espn.com/olympics/story/_/id/40805739/france-tops-no-1-poland-defend-men-volleyball-olympic-title",
+          "date": "2024-08-10",
+          "last_updated": "2024-08-10",
+          "snippet": "France defended its Olympic title in men's volleyball, beating top-ranked Poland in front of a raucous, standing-room-only crowd in Paris."
+        },
+        {
+          "title": "France beat Poland to win gold medal in men's volleyball",
+          "url": "https://www.youtube.com/watch?v=JO6axiO1owk",
+          "date": "2024-08-10",
+          "last_updated": "2025-07-30",
+          "snippet": "1 Poland in straight sets (25-19, 25-20, 25-23) in the gold medal match of the men's volleyball event at the Paris 2024 Olympics. The hosts ..."
+        },
+        {
+          "title": "Poland FULL Match 2024 Paris Olympics Final",
+          "url": "https://www.youtube.com/watch?v=IxvuM2N0qpU",
+          "date": "2025-02-09",
+          "last_updated": "2025-07-30",
+          "snippet": "Full Volleyball Gold Medal Match between France and Poland from 10.08.2024 at the Paris Olympics. You can find some amazing volleyball ..."
+        }
+      ],
+      "object": "chat.completion",
+      "choices": [
+        {
+          "index": 0,
+          "finish_reason": "stop",
+          "message": {
+            "role": "assistant",
+            "content": "The men's volleyball gold medal match at the Paris 2024 Olympics featured a highly competitive showdown between defending Olympic champions France and the world\u2019s top-ranked Poland. France won decisively in straight sets, 3-0 (25-19, 25-20, 25-23), achieving their second consecutive Olympic gold medal and becoming the first men's team since the USA (1984-1988) to repeat as Olympic champions[1][3][4].\n\nKey aspects of the match included:\n\n- **Dominant Performance by France:** France exhibited superior tactical and physical execution, led by standout players such as Jean Patry, who scored a match-high 17 points, and Earvin N\u2019Gapeth, known for spectacular defensive saves and creative plays that energized the home crowd[3][5].\n\n- **Poland\u2019s Resilience:** Despite losing in straight sets, Poland showcased remarkable resilience, notably fighting off four consecutive match points. They had reached the final after overcoming years of Olympic quarterfinal exits, representing a significant milestone even in defeat[1][4].\n\n- **Home Crowd Impact:** The match took place at South Paris Arena with a passionate French crowd creating an electric atmosphere that visibly boosted the French team\u2019s performance and morale. The audience\u2019s emotional reactions\u2014from jubilant French fans to the disappointed Polish supporters\u2014were integral to the event\u2019s charged ambiance[1][3].\n\n- **Match Progression:** Although France entered the match with a 2-1 lead in overall Olympic final head-to-head encounters, the video analysis mentioning a \"2-1\" lead referred to the match\u2019s set progression in the narrative buildup. France maintained control through aggressive serving (8 aces), strong blocking, and efficient attacks by Barth\u00e9l\u00e9my Chinenyeze and others[3][5].\n\n- **Historic Context:** France\u2019s back-to-back Olympic victories mark a modern volleyball milestone. Poland\u2019s world No. 1 ranking and recent world championships underscored the high stakes and intensity of the final[1][3].\n\n- **Technical Quality and Presentation:** The broadcast and video analysis highlighted excellent camera work and editing, capturing technical plays, player emotions, and the crowd\u2019s dynamic reactions that enriched viewer experience and narrative flow.\n\nOverall, this match is a landmark event reflecting current trends in volleyball emphasizing athleticism, strategic serving pressure, and energetic home environments influencing elite competition outcomes in major international tournaments[1][3][5]. It also symbolizes France\u2019s reaffirmed dominance on the Olympic stage and Poland\u2019s significant strides to reassert itself as a global volleyball powerhouse."
+          },
+          "delta": {
+            "role": "assistant",
+            "content": ""
+          }
+        }
+      ],
+      "sources": [
+        {
+          "title": "TechCrunch",
+          "url": "https://techcrunch.com",
+          "description": "Technology news and analysis"
+        },
+        {
+          "title": "Gartner Research",
+          "url": "https://gartner.com",
+          "description": "Industry research and insights"
+        },
+        {
+          "title": "McKinsey & Company",
+          "url": "https://mckinsey.com",
+          "description": "Business and technology trends"
+        },
+        {
+          "title": "The Verge",
+          "url": "https://theverge.com",
+          "description": "Technology and culture coverage"
+        },
+        {
+          "title": "MIT Technology Review",
+          "url": "https://technologyreview.com",
+          "description": "In-depth technology analysis"
+        }
+      ]
+    }
+  },
+  "summary": {
+    "video_id": "68bce2fa30049231acbe7051",
+    "index_id": "6893518408a37aa08793c4fe",
+    "analysis_prompt": "Please provide a comprehensive analysis of this video content. Include:\n\n1. **Content Overview**: What is happening in the video? Describe the main events, actions, and scenes.\n2. **Key Elements**: Identify important objects, people, locations, activities, and interactions.\n3. **Context & Setting**: What is the environment, time period, or context of the video?\n4. **Narrative Flow**: How does the story or sequence of events unfold?\n5. **Notable Details**: Highlight any significant details, patterns, or unique aspects.\n6. **Technical Aspects**: Note video quality, camera work, editing, or production elements if relevant.\n\nUser's Specific Query: research about this match\n\nPlease ensure your analysis addresses the user's specific question while providing comprehensive coverage of the video content.",
+    "research_query": "research about this match",
+    "research_status": "completed"
+  }
+}
+2025-09-07 12:53:50,382 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 12:53:50] "POST /api/workflow HTTP/1.1" 200 -
+2025-09-07 12:55:16,452 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 12:55:16] "OPTIONS /api/videos HTTP/1.1" 200 -
+2025-09-07 12:55:17,066 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 12:55:17] "POST /api/videos HTTP/1.1" 200 -
+2025-09-07 13:18:38,811 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 13:18:38] "OPTIONS /api/config/twelvelabs HTTP/1.1" 200 -
+2025-09-07 13:18:38,813 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 13:18:38] "DELETE /api/config/twelvelabs HTTP/1.1" 200 -
+2025-09-07 13:18:38,818 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 13:18:38] "OPTIONS /api/indexes HTTP/1.1" 200 -
+2025-09-07 13:18:39,459 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 13:18:39] "POST /api/indexes HTTP/1.1" 200 -
+2025-09-07 13:18:39,468 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 13:18:39] "OPTIONS /api/videos HTTP/1.1" 200 -
+2025-09-07 13:18:40,084 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 13:18:40] "POST /api/videos HTTP/1.1" 200 -
+2025-09-07 13:18:58,457 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 13:18:58] "OPTIONS /api/videos HTTP/1.1" 200 -
+2025-09-07 13:18:59,077 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 13:18:59] "POST /api/videos HTTP/1.1" 200 -
+2025-09-07 13:19:12,626 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 13:19:12] "OPTIONS /api/videos HTTP/1.1" 200 -
+2025-09-07 13:19:13,233 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 13:19:13] "POST /api/videos HTTP/1.1" 200 -
+2025-09-07 13:19:27,602 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 13:19:27] "OPTIONS /api/videos HTTP/1.1" 200 -
+2025-09-07 13:19:28,216 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 13:19:28] "POST /api/videos HTTP/1.1" 200 -
+2025-09-07 13:25:55,005 - apscheduler.executors.default - WARNING - Run time of job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-07 13:29:49 CEST)" was missed by 0:05:05.735180
+2025-09-07 13:25:55,307 - apscheduler.executors.default - WARNING - Run time of job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-07 13:29:49 CEST)" was missed by 0:05:05.733850
+2025-09-07 13:53:46,141 - apscheduler.executors.default - WARNING - Run time of job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-07 13:56:49 CEST)" was missed by 0:05:56.871473
+2025-09-07 13:53:46,454 - apscheduler.executors.default - WARNING - Run time of job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-07 13:56:49 CEST)" was missed by 0:05:56.881099
+2025-09-07 13:56:49,272 - apscheduler.executors.default - INFO - Running job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-07 14:05:49 CEST)" (scheduled at 2025-09-07 13:56:49.270038+02:00)
+2025-09-07 13:56:49,278 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 13:56:49] "GET /health HTTP/1.1" 200 -
+2025-09-07 13:56:49,279 - apscheduler.executors.default - INFO - Job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-07 14:05:49 CEST)" executed successfully
+2025-09-07 13:56:49,574 - apscheduler.executors.default - INFO - Running job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-07 14:05:49 CEST)" (scheduled at 2025-09-07 13:56:49.573342+02:00)
+2025-09-07 13:56:49,578 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 13:56:49] "GET /health HTTP/1.1" 200 -
+2025-09-07 13:56:49,579 - apscheduler.executors.default - INFO - Job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-07 14:05:49 CEST)" executed successfully
+2025-09-07 15:45:28,779 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-09-07 15:45:28,780 - apscheduler.scheduler - INFO - Added job "wake_up_app" to job store "default"
+2025-09-07 15:45:28,780 - apscheduler.scheduler - INFO - Scheduler started
+2025-09-07 15:45:28,784 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 10
+2025-09-07 15:45:28,784 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 13
+2025-09-07 15:45:28,792 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.2.73:5000
+2025-09-07 15:45:28,792 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-09-07 15:45:28,817 - werkzeug - INFO -  * Restarting with watchdog (fsevents)
+2025-09-07 15:45:29,167 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-09-07 15:45:29,167 - apscheduler.scheduler - INFO - Added job "wake_up_app" to job store "default"
+2025-09-07 15:45:29,167 - apscheduler.scheduler - INFO - Scheduler started
+2025-09-07 15:45:29,170 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 10
+2025-09-07 15:45:29,170 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 13
+2025-09-07 15:45:29,171 - werkzeug - WARNING -  * Debugger is active!
+2025-09-07 15:45:29,178 - werkzeug - INFO -  * Debugger PIN: 237-707-018
+2025-09-07 16:08:45,174 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 16:08:45] "OPTIONS /api/indexes HTTP/1.1" 200 -
+2025-09-07 16:08:46,022 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 16:08:46] "POST /api/indexes HTTP/1.1" 200 -
+2025-09-07 16:08:46,025 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 16:08:46] "OPTIONS /api/videos HTTP/1.1" 200 -
+2025-09-07 16:08:46,615 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 16:08:46] "POST /api/videos HTTP/1.1" 200 -
+2025-09-07 16:08:49,424 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 16:08:49] "POST /api/videos HTTP/1.1" 200 -
+2025-09-07 16:08:59,528 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 16:08:59] "OPTIONS /api/workflow HTTP/1.1" 200 -
+2025-09-07 16:08:59,531 - __main__ - INFO - === WORKFLOW REQUEST START ===
+2025-09-07 16:08:59,531 - __main__ - INFO - Request data: {
+  "index_id": "6893518408a37aa08793c4fe",
+  "video_id": "68bce2fa30049231acbe7051",
+  "analysis_prompt": "Please provide a comprehensive analysis of this video content. Include:\n\n1. **Content Overview**: What is happening in the video? Describe the main events, actions, and scenes.\n2. **Key Elements**: Identify important objects, people, locations, activities, and interactions.\n3. **Context & Setting**: What is the environment, time period, or context of the video?\n4. **Narrative Flow**: How does the story or sequence of events unfold?\n5. **Notable Details**: Highlight any significant details, patterns, or unique aspects.\n6. **Technical Aspects**: Note video quality, camera work, editing, or production elements if relevant.\n\nUser's Specific Query: Could you please research about it\n\nPlease ensure your analysis addresses the user's specific question while providing comprehensive coverage of the video content.",
+  "research_query": "Could you please research about it"
+}
+2025-09-07 16:08:59,531 - __main__ - INFO - Parameters extracted:
+2025-09-07 16:08:59,531 - __main__ - INFO -   - Index ID: 6893518408a37aa08793c4fe
+2025-09-07 16:08:59,531 - __main__ - INFO -   - Video ID: 68bce2fa30049231acbe7051
+2025-09-07 16:08:59,532 - __main__ - INFO -   - Analysis Prompt: Please provide a comprehensive analysis of this video content. Include:
+
+1. **Content Overview**: What is happening in the video? Describe the main events, actions, and scenes.
+2. **Key Elements**: Identify important objects, people, locations, activities, and interactions.
+3. **Context & Setting**: What is the environment, time period, or context of the video?
+4. **Narrative Flow**: How does the story or sequence of events unfold?
+5. **Notable Details**: Highlight any significant details, patterns, or unique aspects.
+6. **Technical Aspects**: Note video quality, camera work, editing, or production elements if relevant.
+
+User's Specific Query: Could you please research about it
+
+Please ensure your analysis addresses the user's specific question while providing comprehensive coverage of the video content.
+2025-09-07 16:08:59,532 - __main__ - INFO -   - Research Query: Could you please research about it
+2025-09-07 16:08:59,532 - __main__ - INFO - Step 1: Getting video details from TwelveLabs...
+2025-09-07 16:09:00,186 - __main__ - INFO - Video details retrieved successfully: {
+  "_id": "68bce2fa30049231acbe7051",
+  "created_at": "2025-09-07T01:42:18Z",
+  "system_metadata": {
+    "duration": 156.061315,
+    "filename": "tmp_apzp7wy",
+    "fps": 30,
+    "height": 360,
+    "size": 14225563,
+    "width": 640
+  },
+  "hls": {
+    "video_url": "https://deuqpmn4rs7j5.cloudfront.net/6633a646e06d1c2c0212c7df/68bce2fa30049231acbe7051/stream/ff42afee-4673-4a2a-a05b-14c330c78244.m3u8",
+    "thumbnail_urls": [
+      "https://deuqpmn4rs7j5.cloudfront.net/6633a646e06d1c2c0212c7df/68bce2fa30049231acbe7051/thumbnails/ff42afee-4673-4a2a-a05b-14c330c78244.0000001.jpg"
+    ],
+    "status": "COMPLETE",
+    "updated_at": "2025-09-07T01:43:01.44Z"
+  }
+}
+2025-09-07 16:09:00,186 - __main__ - INFO - Step 2: Analyzing video content...
+2025-09-07 16:09:19,024 - httpx - INFO - HTTP Request: POST https://api.twelvelabs.io/v1.3/analyze "HTTP/1.1 200 OK"
+2025-09-07 16:09:19,030 - __main__ - INFO - Video analysis completed: "The video captures the Men's Volleyball Gold Medal Match at the Paris 2024 Olympics between France and Poland. The match is intense, with both teams displaying exceptional skill and determination. The French team, wearing blue uniforms, is seen celebrating their victory, while the Polish team, in red, shows signs of disappointment. The video includes various scenes of gameplay, audience reactions, and the medal ceremony.\n\n**Content Overview**: The video begins with a wide shot of the volleyball court, showing the French and Polish teams in action. The scoreboard indicates that Poland is leading with a score of 2-1. The camera then focuses on individual players, capturing their expressions and interactions. The match progresses with dynamic plays, including serves, spikes, and blocks. The French team eventually wins the match, leading to jubilant celebrations among the players and fans.\n\n**Key Elements**: The key elements include the French and Polish volleyball teams, the scoreboard, the audience, and the medal ceremony. Notable individuals include the French player with jersey number 17 and the Polish player with jersey number 14. The setting is a large indoor stadium filled with spectators, creating an electrifying atmosphere.\n\n**Context & Setting**: The video takes place during the Paris 2024 Olympics, specifically in the Men's Volleyball Gold Medal Match. The environment is a packed stadium with enthusiastic fans cheering for their respective teams. The time period is the summer of 2024, as indicated by the Olympic branding.\n\n**Narrative Flow**: The narrative unfolds with the match itself, showcasing the competitive spirit and athleticism of the players. The tension builds as the score remains close, culminating in France's victory. The video then transitions to the celebration and the medal ceremony, where the French team receives their gold medals, the Polish team receives silver medals, and the United States of America receives bronze medals.\n\n**Notable Details**: Significant details include the emotional reactions of the players and fans, the strategic plays during the match, and the vibrant atmosphere of the stadium. The video also highlights the diversity of the audience, with fans from different countries supporting their teams. A man with glasses and face paint appears disappointed, while a Polish fan sticks out his tongue playfully.\n\n**Technical Aspects**: The video quality is high, with clear shots of the players and the court. The camera work effectively captures the intensity of the match and the excitement of the crowd. The editing is smooth, maintaining the flow of the narrative and emphasizing key moments.\n\nOverall, the video provides a captivating glimpse into the high-stakes world of Olympic volleyball, showcasing the passion and dedication of the athletes and fans alike."
+2025-09-07 16:09:19,031 - __main__ - INFO - Step 3: Conducting deep research using Sonar...
+2025-09-07 16:09:19,032 - __main__ - INFO - Enhanced research query created: "\nBased on this video analysis: The video captures the Men's Volleyball Gold Medal Match at the Paris 2024 Olympics between France and Poland. The match is intense, with both teams displaying exceptional skill and determination. The French team, wearing blue uniforms, is seen celebrating their victory, while the Polish team, in red, shows signs of disappointment. The video includes various scenes of gameplay, audience reactions, and the medal ceremony.\n\n**Content Overview**: The video begins with a wide shot of the volleyball court, showing the French and Polish teams in action. The scoreboard indicates that Poland is leading with a score of 2-1. The camera then focuses on individual players, capturing their expressions and interactions. The match progresses with dynamic plays, including serves, spikes, and blocks. The French team eventually wins the match, leading to jubilant celebrations among the players and fans.\n\n**Key Elements**: The key elements include the French and Polish volleyball teams, the scoreboard, the audience, and the medal ceremony. Notable individuals include the French player with jersey number 17 and the Polish player with jersey number 14. The setting is a large indoor stadium filled with spectators, creating an electrifying atmosphere.\n\n**Context & Setting**: The video takes place during the Paris 2024 Olympics, specifically in the Men's Volleyball Gold Medal Match. The environment is a packed stadium with enthusiastic fans cheering for their respective teams. The time period is the summer of 2024, as indicated by the Olympic branding.\n\n**Narrative Flow**: The narrative unfolds with the match itself, showcasing the competitive spirit and athleticism of the players. The tension builds as the score remains close, culminating in France's victory. The video then transitions to the celebration and the medal ceremony, where the French team receives their gold medals, the Polish team receives silver medals, and the United States of America receives bronze medals.\n\n**Notable Details**: Significant details include the emotional reactions of the players and fans, the strategic plays during the match, and the vibrant atmosphere of the stadium. The video also highlights the diversity of the audience, with fans from different countries supporting their teams. A man with glasses and face paint appears disappointed, while a Polish fan sticks out his tongue playfully.\n\n**Technical Aspects**: The video quality is high, with clear shots of the players and the court. The camera work effectively captures the intensity of the match and the excitement of the crowd. The editing is smooth, maintaining the flow of the narrative and emphasizing key moments.\n\nOverall, the video provides a captivating glimpse into the high-stakes world of Olympic volleyball, showcasing the passion and dedication of the athletes and fans alike.\n\nPlease research: Could you please research about it\n\nProvide comprehensive insights that connect the video content with current trends, developments, and relevant information.\n"
+2025-09-07 16:09:30,569 - __main__ - INFO - Sonar research completed: {
+  "id": "b396d3a3-5b8d-425b-a36d-00e449afd5a1",
+  "model": "sonar",
+  "created": 1757254170,
+  "usage": {
+    "prompt_tokens": 563,
+    "completion_tokens": 574,
+    "total_tokens": 1137,
+    "search_context_size": "low",
+    "cost": {
+      "input_tokens_cost": 0.001,
+      "output_tokens_cost": 0.001,
+      "request_cost": 0.005,
+      "total_cost": 0.006
+    }
+  },
+  "citations": [
+    "https://www.nbcolympics.com/news/france-rides-home-crowd-second-straight-olympic-gold-medal-mens-volleyball",
+    "https://www.espn.com/olympics/story/_/id/40805739/france-tops-no-1-poland-defend-men-volleyball-olympic-title",
+    "https://en.volleyballworld.com/volleyball/competitions/volleyball-olympic-games-paris-2024/schedule/19086/",
+    "https://www.youtube.com/watch?v=XG90PCBKKXw",
+    "https://www.youtube.com/watch?v=JO6axiO1owk"
+  ],
+  "search_results": [
+    {
+      "title": "France rides home crowd to second straight Olympic gold ...",
+      "url": "https://www.nbcolympics.com/news/france-rides-home-crowd-second-straight-olympic-gold-medal-mens-volleyball",
+      "date": "2024-08-10",
+      "last_updated": "2024-08-10",
+      "snippet": "France rides home crowd to second straight Olympic gold medal in men's volleyball \u00b7 Set 1 \u2014 France 25, Poland 19 \u00b7 Set 2 \u2014 France 25, Poland 20."
+    },
+    {
+      "title": "France tops No. 1 Poland for men's volleyball title",
+      "url": "https://www.espn.com/olympics/story/_/id/40805739/france-tops-no-1-poland-defend-men-volleyball-olympic-title",
+      "date": "2024-08-10",
+      "last_updated": "2024-08-10",
+      "snippet": "France defended its Olympic title in men's volleyball, beating top-ranked Poland in front of a raucous, standing-room-only crowd in Paris."
+    },
+    {
+      "title": "France-Poland Men Volleyball Olympic Games Paris 2024 ...",
+      "url": "https://en.volleyballworld.com/volleyball/competitions/volleyball-olympic-games-paris-2024/schedule/19086/",
+      "date": "2024-08-10",
+      "last_updated": "2025-09-07",
+      "snippet": "France-Poland Men Volleyball Olympic Games Paris 2024 10.08.2024. Results. Gold Medal - Final Round - Men #26. 2024. 11:00. (UTC). 13:00. (Local ..."
+    },
+    {
+      "title": "France overpowers Poland for men's volleyball gold medal ...",
+      "url": "https://www.youtube.com/watch?v=XG90PCBKKXw",
+      "date": "2024-08-10",
+      "last_updated": "2025-07-21",
+      "snippet": "The men's volleyball tournament concluded Saturday in Paris as the French cruised to an incredible three-set win over Poland \u2014 the ..."
+    },
+    {
+      "title": "France beat Poland to win gold medal in men's volleyball",
+      "url": "https://www.youtube.com/watch?v=JO6axiO1owk",
+      "date": "2024-08-10",
+      "last_updated": "2025-07-30",
+      "snippet": "#Paris2024 action: \u27a1\ufe0f ; https://oly.ch/P24Replays Defending Olympic champions France beat world no. 1 Poland in straight sets (25-19, 25-20, 25-23) ..."
+    }
+  ],
+  "object": "chat.completion",
+  "choices": [
+    {
+      "index": 0,
+      "finish_reason": "stop",
+      "message": {
+        "role": "assistant",
+        "content": "The video you described captures the **Men\u2019s Volleyball Gold Medal Match at the Paris 2024 Olympics**, where **France defeated Poland 3-0** to win the gold medal, repeating their victory from the Tokyo 2020 Olympics. This victory makes France the first country to win back-to-back Olympic gold medals in men's volleyball since the United States in 1984 and 1988[1][2][5].\n\nKey insights that connect your video content with the event and broader volleyball context are:\n\n- **Match Outcome and Significance**: France won convincingly in straight sets (25-19, 25-20, 25-23) against the top-ranked Poland team. This ended Poland\u2019s Olympic medal drought since their 1976 gold and was a breakthrough after many quit quarterfinal rounds in previous Olympics[1][3].\n\n- **Host Nation Advantage**: The match took place at South Paris Arena in front of a packed, passionate home crowd waving French flags and creating an electrifying atmosphere. The home support is credited with energizing the French team that played confidently and skillfully throughout the contest[1][2].\n\n- **Player Highlights**: In line with the video\u2019s focus on key players, Jean Patry (France) led with 17 points, including aggressive hitting and serving. Earvin N'Gapeth\u2019s hustle and spectacular plays, including a memorable blind over-the-head point, also stood out. Barth\u00e9l\u00e9my Chinenyeze contributed efficiently in attacks. Poland\u2019s notable players, such as the one wearing jersey number 14, faced the disappointment of a tough loss despite their world number one ranking[2].\n\n- **Style of Play and Strategy**: The French excelled in serving, recording eight aces, which disrupted Poland's offense and rhythm. Their blocking and aggressive offense overwhelmed Poland\u2019s game plan, demonstrating a near-flawless team volleyball display that capitalized on their strengths[2][4].\n\n- **Broader Context**: This victory cements France\u2019s emergence as a dominant force in men\u2019s volleyball, closing a gap on traditional powerhouses like Poland and the USA. It also highlights the sport\u2019s competitive evolution, where tactical serving, dynamic defense, and crowd influence play critical roles[1][2].\n\n- **Audience and Atmosphere**: The video\u2019s details about diverse, emotionally invested fans are reflected in the real event, where crowd energy, visible national pride, and fan interactions added to the drama. The mixed reactions and personal expressions you noted mirror the intensity and global passion surrounding the match[1][2].\n\nThis event marked a memorable chapter in Olympic volleyball history, perfectly captured in the video you analyzed \u2014 showcasing athletic excellence, national pride, and the dramatic narrative that makes Olympic finals compelling.\n\nIf you want more detailed tactical analysis or individual player career highlights relating to this match, I can provide those as well."
+      },
+      "delta": {
+        "role": "assistant",
+        "content": ""
+      }
+    }
+  ]
+}
+2025-09-07 16:09:30,572 - __main__ - INFO - Adding sources to research result...
+2025-09-07 16:09:30,572 - __main__ - INFO - Sources added to research result: [
+  {
+    "title": "TechCrunch",
+    "url": "https://techcrunch.com",
+    "description": "Technology news and analysis"
+  },
+  {
+    "title": "Gartner Research",
+    "url": "https://gartner.com",
+    "description": "Industry research and insights"
+  },
+  {
+    "title": "McKinsey & Company",
+    "url": "https://mckinsey.com",
+    "description": "Business and technology trends"
+  },
+  {
+    "title": "The Verge",
+    "url": "https://theverge.com",
+    "description": "Technology and culture coverage"
+  },
+  {
+    "title": "MIT Technology Review",
+    "url": "https://technologyreview.com",
+    "description": "In-depth technology analysis"
+  }
+]
+2025-09-07 16:09:30,572 - __main__ - INFO - === WORKFLOW COMPLETED SUCCESSFULLY ===
+2025-09-07 16:09:30,573 - __main__ - INFO - Final response: {
+  "success": true,
+  "workflow": {
+    "video_details": {
+      "_id": "68bce2fa30049231acbe7051",
+      "created_at": "2025-09-07T01:42:18Z",
+      "system_metadata": {
+        "duration": 156.061315,
+        "filename": "tmp_apzp7wy",
+        "fps": 30,
+        "height": 360,
+        "size": 14225563,
+        "width": 640
+      },
+      "hls": {
+        "video_url": "https://deuqpmn4rs7j5.cloudfront.net/6633a646e06d1c2c0212c7df/68bce2fa30049231acbe7051/stream/ff42afee-4673-4a2a-a05b-14c330c78244.m3u8",
+        "thumbnail_urls": [
+          "https://deuqpmn4rs7j5.cloudfront.net/6633a646e06d1c2c0212c7df/68bce2fa30049231acbe7051/thumbnails/ff42afee-4673-4a2a-a05b-14c330c78244.0000001.jpg"
+        ],
+        "status": "COMPLETE",
+        "updated_at": "2025-09-07T01:43:01.44Z"
+      }
+    },
+    "analysis": "The video captures the Men's Volleyball Gold Medal Match at the Paris 2024 Olympics between France and Poland. The match is intense, with both teams displaying exceptional skill and determination. The French team, wearing blue uniforms, is seen celebrating their victory, while the Polish team, in red, shows signs of disappointment. The video includes various scenes of gameplay, audience reactions, and the medal ceremony.\n\n**Content Overview**: The video begins with a wide shot of the volleyball court, showing the French and Polish teams in action. The scoreboard indicates that Poland is leading with a score of 2-1. The camera then focuses on individual players, capturing their expressions and interactions. The match progresses with dynamic plays, including serves, spikes, and blocks. The French team eventually wins the match, leading to jubilant celebrations among the players and fans.\n\n**Key Elements**: The key elements include the French and Polish volleyball teams, the scoreboard, the audience, and the medal ceremony. Notable individuals include the French player with jersey number 17 and the Polish player with jersey number 14. The setting is a large indoor stadium filled with spectators, creating an electrifying atmosphere.\n\n**Context & Setting**: The video takes place during the Paris 2024 Olympics, specifically in the Men's Volleyball Gold Medal Match. The environment is a packed stadium with enthusiastic fans cheering for their respective teams. The time period is the summer of 2024, as indicated by the Olympic branding.\n\n**Narrative Flow**: The narrative unfolds with the match itself, showcasing the competitive spirit and athleticism of the players. The tension builds as the score remains close, culminating in France's victory. The video then transitions to the celebration and the medal ceremony, where the French team receives their gold medals, the Polish team receives silver medals, and the United States of America receives bronze medals.\n\n**Notable Details**: Significant details include the emotional reactions of the players and fans, the strategic plays during the match, and the vibrant atmosphere of the stadium. The video also highlights the diversity of the audience, with fans from different countries supporting their teams. A man with glasses and face paint appears disappointed, while a Polish fan sticks out his tongue playfully.\n\n**Technical Aspects**: The video quality is high, with clear shots of the players and the court. The camera work effectively captures the intensity of the match and the excitement of the crowd. The editing is smooth, maintaining the flow of the narrative and emphasizing key moments.\n\nOverall, the video provides a captivating glimpse into the high-stakes world of Olympic volleyball, showcasing the passion and dedication of the athletes and fans alike.",
+    "research": {
+      "id": "b396d3a3-5b8d-425b-a36d-00e449afd5a1",
+      "model": "sonar",
+      "created": 1757254170,
+      "usage": {
+        "prompt_tokens": 563,
+        "completion_tokens": 574,
+        "total_tokens": 1137,
+        "search_context_size": "low",
+        "cost": {
+          "input_tokens_cost": 0.001,
+          "output_tokens_cost": 0.001,
+          "request_cost": 0.005,
+          "total_cost": 0.006
+        }
+      },
+      "citations": [
+        "https://www.nbcolympics.com/news/france-rides-home-crowd-second-straight-olympic-gold-medal-mens-volleyball",
+        "https://www.espn.com/olympics/story/_/id/40805739/france-tops-no-1-poland-defend-men-volleyball-olympic-title",
+        "https://en.volleyballworld.com/volleyball/competitions/volleyball-olympic-games-paris-2024/schedule/19086/",
+        "https://www.youtube.com/watch?v=XG90PCBKKXw",
+        "https://www.youtube.com/watch?v=JO6axiO1owk"
+      ],
+      "search_results": [
+        {
+          "title": "France rides home crowd to second straight Olympic gold ...",
+          "url": "https://www.nbcolympics.com/news/france-rides-home-crowd-second-straight-olympic-gold-medal-mens-volleyball",
+          "date": "2024-08-10",
+          "last_updated": "2024-08-10",
+          "snippet": "France rides home crowd to second straight Olympic gold medal in men's volleyball \u00b7 Set 1 \u2014 France 25, Poland 19 \u00b7 Set 2 \u2014 France 25, Poland 20."
+        },
+        {
+          "title": "France tops No. 1 Poland for men's volleyball title",
+          "url": "https://www.espn.com/olympics/story/_/id/40805739/france-tops-no-1-poland-defend-men-volleyball-olympic-title",
+          "date": "2024-08-10",
+          "last_updated": "2024-08-10",
+          "snippet": "France defended its Olympic title in men's volleyball, beating top-ranked Poland in front of a raucous, standing-room-only crowd in Paris."
+        },
+        {
+          "title": "France-Poland Men Volleyball Olympic Games Paris 2024 ...",
+          "url": "https://en.volleyballworld.com/volleyball/competitions/volleyball-olympic-games-paris-2024/schedule/19086/",
+          "date": "2024-08-10",
+          "last_updated": "2025-09-07",
+          "snippet": "France-Poland Men Volleyball Olympic Games Paris 2024 10.08.2024. Results. Gold Medal - Final Round - Men #26. 2024. 11:00. (UTC). 13:00. (Local ..."
+        },
+        {
+          "title": "France overpowers Poland for men's volleyball gold medal ...",
+          "url": "https://www.youtube.com/watch?v=XG90PCBKKXw",
+          "date": "2024-08-10",
+          "last_updated": "2025-07-21",
+          "snippet": "The men's volleyball tournament concluded Saturday in Paris as the French cruised to an incredible three-set win over Poland \u2014 the ..."
+        },
+        {
+          "title": "France beat Poland to win gold medal in men's volleyball",
+          "url": "https://www.youtube.com/watch?v=JO6axiO1owk",
+          "date": "2024-08-10",
+          "last_updated": "2025-07-30",
+          "snippet": "#Paris2024 action: \u27a1\ufe0f ; https://oly.ch/P24Replays Defending Olympic champions France beat world no. 1 Poland in straight sets (25-19, 25-20, 25-23) ..."
+        }
+      ],
+      "object": "chat.completion",
+      "choices": [
+        {
+          "index": 0,
+          "finish_reason": "stop",
+          "message": {
+            "role": "assistant",
+            "content": "The video you described captures the **Men\u2019s Volleyball Gold Medal Match at the Paris 2024 Olympics**, where **France defeated Poland 3-0** to win the gold medal, repeating their victory from the Tokyo 2020 Olympics. This victory makes France the first country to win back-to-back Olympic gold medals in men's volleyball since the United States in 1984 and 1988[1][2][5].\n\nKey insights that connect your video content with the event and broader volleyball context are:\n\n- **Match Outcome and Significance**: France won convincingly in straight sets (25-19, 25-20, 25-23) against the top-ranked Poland team. This ended Poland\u2019s Olympic medal drought since their 1976 gold and was a breakthrough after many quit quarterfinal rounds in previous Olympics[1][3].\n\n- **Host Nation Advantage**: The match took place at South Paris Arena in front of a packed, passionate home crowd waving French flags and creating an electrifying atmosphere. The home support is credited with energizing the French team that played confidently and skillfully throughout the contest[1][2].\n\n- **Player Highlights**: In line with the video\u2019s focus on key players, Jean Patry (France) led with 17 points, including aggressive hitting and serving. Earvin N'Gapeth\u2019s hustle and spectacular plays, including a memorable blind over-the-head point, also stood out. Barth\u00e9l\u00e9my Chinenyeze contributed efficiently in attacks. Poland\u2019s notable players, such as the one wearing jersey number 14, faced the disappointment of a tough loss despite their world number one ranking[2].\n\n- **Style of Play and Strategy**: The French excelled in serving, recording eight aces, which disrupted Poland's offense and rhythm. Their blocking and aggressive offense overwhelmed Poland\u2019s game plan, demonstrating a near-flawless team volleyball display that capitalized on their strengths[2][4].\n\n- **Broader Context**: This victory cements France\u2019s emergence as a dominant force in men\u2019s volleyball, closing a gap on traditional powerhouses like Poland and the USA. It also highlights the sport\u2019s competitive evolution, where tactical serving, dynamic defense, and crowd influence play critical roles[1][2].\n\n- **Audience and Atmosphere**: The video\u2019s details about diverse, emotionally invested fans are reflected in the real event, where crowd energy, visible national pride, and fan interactions added to the drama. The mixed reactions and personal expressions you noted mirror the intensity and global passion surrounding the match[1][2].\n\nThis event marked a memorable chapter in Olympic volleyball history, perfectly captured in the video you analyzed \u2014 showcasing athletic excellence, national pride, and the dramatic narrative that makes Olympic finals compelling.\n\nIf you want more detailed tactical analysis or individual player career highlights relating to this match, I can provide those as well."
+          },
+          "delta": {
+            "role": "assistant",
+            "content": ""
+          }
+        }
+      ],
+      "sources": [
+        {
+          "title": "TechCrunch",
+          "url": "https://techcrunch.com",
+          "description": "Technology news and analysis"
+        },
+        {
+          "title": "Gartner Research",
+          "url": "https://gartner.com",
+          "description": "Industry research and insights"
+        },
+        {
+          "title": "McKinsey & Company",
+          "url": "https://mckinsey.com",
+          "description": "Business and technology trends"
+        },
+        {
+          "title": "The Verge",
+          "url": "https://theverge.com",
+          "description": "Technology and culture coverage"
+        },
+        {
+          "title": "MIT Technology Review",
+          "url": "https://technologyreview.com",
+          "description": "In-depth technology analysis"
+        }
+      ]
+    }
+  },
+  "summary": {
+    "video_id": "68bce2fa30049231acbe7051",
+    "index_id": "6893518408a37aa08793c4fe",
+    "analysis_prompt": "Please provide a comprehensive analysis of this video content. Include:\n\n1. **Content Overview**: What is happening in the video? Describe the main events, actions, and scenes.\n2. **Key Elements**: Identify important objects, people, locations, activities, and interactions.\n3. **Context & Setting**: What is the environment, time period, or context of the video?\n4. **Narrative Flow**: How does the story or sequence of events unfold?\n5. **Notable Details**: Highlight any significant details, patterns, or unique aspects.\n6. **Technical Aspects**: Note video quality, camera work, editing, or production elements if relevant.\n\nUser's Specific Query: Could you please research about it\n\nPlease ensure your analysis addresses the user's specific question while providing comprehensive coverage of the video content.",
+    "research_query": "Could you please research about it",
+    "research_status": "completed"
+  }
+}
+2025-09-07 16:09:30,574 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 16:09:30] "POST /api/workflow HTTP/1.1" 200 -
+2025-09-07 16:11:53,937 - apscheduler.executors.default - WARNING - Run time of job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-07 16:12:28 CEST)" was missed by 0:08:25.157655
+2025-09-07 16:11:54,322 - apscheduler.executors.default - WARNING - Run time of job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-07 16:12:29 CEST)" was missed by 0:08:25.155133
+2025-09-07 16:12:28,784 - apscheduler.executors.default - INFO - Running job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-07 16:21:28 CEST)" (scheduled at 2025-09-07 16:12:28.779444+02:00)
+2025-09-07 16:12:28,803 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 16:12:28] "GET /health HTTP/1.1" 200 -
+2025-09-07 16:12:28,804 - apscheduler.executors.default - INFO - Job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-07 16:21:28 CEST)" executed successfully
+2025-09-07 16:12:29,172 - apscheduler.executors.default - INFO - Running job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-07 16:21:29 CEST)" (scheduled at 2025-09-07 16:12:29.167127+02:00)
+2025-09-07 16:12:29,177 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 16:12:29] "GET /health HTTP/1.1" 200 -
+2025-09-07 16:12:29,178 - apscheduler.executors.default - INFO - Job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-07 16:21:29 CEST)" executed successfully
+2025-09-07 16:16:05,961 - werkzeug - INFO -  * Detected change in '/Users/hrishikesh/Desktop/Video DeepResearch/TwelveLabs-Video-DeepResearch/backend/app.py', reloading
+2025-09-07 16:16:06,034 - werkzeug - INFO -  * Restarting with watchdog (fsevents)
+2025-09-07 16:16:06,398 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-09-07 16:16:06,398 - apscheduler.scheduler - INFO - Added job "wake_up_app" to job store "default"
+2025-09-07 16:16:06,398 - apscheduler.scheduler - INFO - Scheduler started
+2025-09-07 16:16:06,401 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 10
+2025-09-07 16:16:06,402 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 13
+2025-09-07 16:16:06,404 - werkzeug - WARNING -  * Debugger is active!
+2025-09-07 16:16:06,410 - werkzeug - INFO -  * Debugger PIN: 237-707-018
+2025-09-07 16:18:26,972 - werkzeug - INFO -  * Detected change in '/Users/hrishikesh/Desktop/Video DeepResearch/TwelveLabs-Video-DeepResearch/backend/app.py', reloading
+2025-09-07 16:18:27,207 - werkzeug - INFO -  * Restarting with watchdog (fsevents)
+2025-09-07 16:18:27,787 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-09-07 16:18:27,788 - apscheduler.scheduler - INFO - Added job "wake_up_app" to job store "default"
+2025-09-07 16:18:27,788 - apscheduler.scheduler - INFO - Scheduler started
+2025-09-07 16:18:27,791 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 10
+2025-09-07 16:18:27,791 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 13
+2025-09-07 16:18:27,794 - werkzeug - WARNING -  * Debugger is active!
+2025-09-07 16:18:27,799 - werkzeug - INFO -  * Debugger PIN: 237-707-018
+2025-09-07 16:18:35,063 - werkzeug - INFO -  * Detected change in '/Users/hrishikesh/Desktop/Video DeepResearch/TwelveLabs-Video-DeepResearch/backend/app.py', reloading
+2025-09-07 16:18:35,534 - werkzeug - INFO -  * Detected change in '/Users/hrishikesh/Desktop/Video DeepResearch/TwelveLabs-Video-DeepResearch/backend/app.py', reloading
+2025-09-07 16:18:35,954 - werkzeug - INFO -  * Restarting with watchdog (fsevents)
+2025-09-07 16:18:36,370 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-09-07 16:18:36,370 - apscheduler.scheduler - INFO - Added job "wake_up_app" to job store "default"
+2025-09-07 16:18:36,370 - apscheduler.scheduler - INFO - Scheduler started
+2025-09-07 16:18:36,373 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 10
+2025-09-07 16:18:36,373 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 13
+2025-09-07 16:18:36,376 - werkzeug - WARNING -  * Debugger is active!
+2025-09-07 16:18:36,384 - werkzeug - INFO -  * Debugger PIN: 237-707-018
+2025-09-07 16:19:00,446 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-09-07 16:19:00,447 - apscheduler.scheduler - INFO - Added job "wake_up_app" to job store "default"
+2025-09-07 16:19:00,447 - apscheduler.scheduler - INFO - Scheduler started
+2025-09-07 16:19:00,450 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 10
+2025-09-07 16:19:00,450 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 13
+2025-09-07 17:42:09,874 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-09-07 17:42:09,874 - apscheduler.scheduler - INFO - Added job "wake_up_app" to job store "default"
+2025-09-07 17:42:09,874 - apscheduler.scheduler - INFO - Scheduler started
+2025-09-07 17:42:09,877 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 10
+2025-09-07 17:42:09,877 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 13
+2025-09-07 17:42:09,884 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.2.73:5000
+2025-09-07 17:42:09,884 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-09-07 17:42:09,888 - werkzeug - INFO -  * Restarting with watchdog (fsevents)
+2025-09-07 17:42:10,204 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-09-07 17:42:10,204 - apscheduler.scheduler - INFO - Added job "wake_up_app" to job store "default"
+2025-09-07 17:42:10,204 - apscheduler.scheduler - INFO - Scheduler started
+2025-09-07 17:42:10,207 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 10
+2025-09-07 17:42:10,207 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 13
+2025-09-07 17:42:10,208 - werkzeug - WARNING -  * Debugger is active!
+2025-09-07 17:42:10,213 - werkzeug - INFO -  * Debugger PIN: 237-707-018
+2025-09-07 17:42:18,203 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 17:42:18] "OPTIONS /api/indexes HTTP/1.1" 200 -
+2025-09-07 17:42:18,922 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 17:42:18] "POST /api/indexes HTTP/1.1" 200 -
+2025-09-07 17:42:18,932 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 17:42:18] "OPTIONS /api/videos HTTP/1.1" 200 -
+2025-09-07 17:42:19,523 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 17:42:19] "POST /api/videos HTTP/1.1" 200 -
+2025-09-07 17:42:22,384 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 17:42:22] "POST /api/videos HTTP/1.1" 200 -
+2025-09-07 17:42:34,132 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 17:42:34] "OPTIONS /api/workflow/stream HTTP/1.1" 200 -
+2025-09-07 17:42:34,134 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 17:42:34] "POST /api/workflow/stream HTTP/1.1" 200 -
+2025-09-07 17:42:34,172 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 17:42:34] "[31m[1mGET /api/workflow/stream HTTP/1.1[0m" 405 -
+2025-09-07 17:43:16,635 - werkzeug - INFO -  * Detected change in '/Users/hrishikesh/Desktop/Video DeepResearch/TwelveLabs-Video-DeepResearch/backend/app.py', reloading
+2025-09-07 17:43:17,680 - werkzeug - INFO -  * Restarting with watchdog (fsevents)
+2025-09-07 17:43:18,062 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-09-07 17:43:18,063 - apscheduler.scheduler - INFO - Added job "wake_up_app" to job store "default"
+2025-09-07 17:43:18,063 - apscheduler.scheduler - INFO - Scheduler started
+2025-09-07 17:43:18,066 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 10
+2025-09-07 17:43:18,066 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 13
+2025-09-07 17:43:18,068 - werkzeug - WARNING -  * Debugger is active!
+2025-09-07 17:43:18,072 - werkzeug - INFO -  * Debugger PIN: 237-707-018
+2025-09-07 17:44:03,613 - werkzeug - INFO -  * Detected change in '/Users/hrishikesh/Desktop/Video DeepResearch/TwelveLabs-Video-DeepResearch/backend/app.py', reloading
+2025-09-07 17:44:04,429 - werkzeug - INFO -  * Restarting with watchdog (fsevents)
+2025-09-07 17:44:04,865 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-09-07 17:44:04,865 - apscheduler.scheduler - INFO - Added job "wake_up_app" to job store "default"
+2025-09-07 17:44:04,865 - apscheduler.scheduler - INFO - Scheduler started
+2025-09-07 17:44:04,868 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 10
+2025-09-07 17:44:04,868 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 13
+2025-09-07 17:44:04,870 - werkzeug - WARNING -  * Debugger is active!
+2025-09-07 17:44:04,874 - werkzeug - INFO -  * Debugger PIN: 237-707-018
+2025-09-07 18:04:55,679 - apscheduler.executors.default - WARNING - Run time of job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-07 18:09:09 CEST)" was missed by 0:04:45.805241
+2025-09-07 18:05:08,010 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-09-07 18:05:08,010 - apscheduler.scheduler - INFO - Added job "wake_up_app" to job store "default"
+2025-09-07 18:05:08,010 - apscheduler.scheduler - INFO - Scheduler started
+2025-09-07 18:05:08,013 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 10
+2025-09-07 18:05:08,013 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 13
+2025-09-07 18:05:08,020 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.2.73:5001
+2025-09-07 18:05:08,020 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-09-07 18:05:08,024 - werkzeug - INFO -  * Restarting with watchdog (fsevents)
+2025-09-07 18:05:08,329 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-09-07 18:05:08,329 - apscheduler.scheduler - INFO - Added job "wake_up_app" to job store "default"
+2025-09-07 18:05:08,329 - apscheduler.scheduler - INFO - Scheduler started
+2025-09-07 18:05:08,332 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 10
+2025-09-07 18:05:08,332 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 13
+2025-09-07 18:05:08,333 - werkzeug - WARNING -  * Debugger is active!
+2025-09-07 18:05:08,339 - werkzeug - INFO -  * Debugger PIN: 237-707-018
+2025-09-07 21:38:16,017 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-09-07 21:38:16,018 - apscheduler.scheduler - INFO - Added job "wake_up_app" to job store "default"
+2025-09-07 21:38:16,018 - apscheduler.scheduler - INFO - Scheduler started
+2025-09-07 21:38:16,021 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 10
+2025-09-07 21:38:16,021 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 13
+2025-09-07 21:38:16,028 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.2.73:5001
+2025-09-07 21:38:16,028 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-09-07 21:38:16,033 - werkzeug - INFO -  * Restarting with watchdog (fsevents)
+2025-09-07 21:38:16,320 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-09-07 21:38:16,321 - apscheduler.scheduler - INFO - Added job "wake_up_app" to job store "default"
+2025-09-07 21:38:16,321 - apscheduler.scheduler - INFO - Scheduler started
+2025-09-07 21:38:16,324 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 10
+2025-09-07 21:38:16,324 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 13
+2025-09-07 21:38:16,325 - werkzeug - WARNING -  * Debugger is active!
+2025-09-07 21:38:16,331 - werkzeug - INFO -  * Debugger PIN: 237-707-018
+2025-09-07 21:38:28,066 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 21:38:28] "OPTIONS /api/indexes HTTP/1.1" 200 -
+2025-09-07 21:38:28,820 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 21:38:28] "POST /api/indexes HTTP/1.1" 200 -
+2025-09-07 21:38:28,824 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 21:38:28] "OPTIONS /api/videos HTTP/1.1" 200 -
+2025-09-07 21:38:29,411 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 21:38:29] "POST /api/videos HTTP/1.1" 200 -
+2025-09-07 21:38:30,662 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 21:38:30] "POST /api/videos HTTP/1.1" 200 -
+2025-09-07 21:38:40,726 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 21:38:40] "OPTIONS /api/workflow/stream HTTP/1.1" 200 -
+2025-09-07 21:38:40,729 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 21:38:40] "POST /api/workflow/stream HTTP/1.1" 200 -
+2025-09-07 21:38:40,762 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 21:38:40] "[31m[1mGET /api/workflow/stream HTTP/1.1[0m" 405 -
+2025-09-07 21:47:16,059 - apscheduler.executors.default - INFO - Running job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-07 21:56:16 CEST)" (scheduled at 2025-09-07 21:47:16.017150+02:00)
+2025-09-07 21:47:16,103 - apscheduler.executors.default - INFO - Job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-07 21:56:16 CEST)" executed successfully
+2025-09-07 21:47:16,333 - apscheduler.executors.default - INFO - Running job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-07 21:56:16 CEST)" (scheduled at 2025-09-07 21:47:16.320888+02:00)
+2025-09-07 21:47:16,341 - apscheduler.executors.default - INFO - Job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-07 21:56:16 CEST)" executed successfully
+2025-09-07 21:56:16,027 - apscheduler.executors.default - INFO - Running job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-07 22:05:16 CEST)" (scheduled at 2025-09-07 21:56:16.017150+02:00)
+2025-09-07 21:56:16,036 - apscheduler.executors.default - INFO - Job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-07 22:05:16 CEST)" executed successfully
+2025-09-07 21:56:16,329 - apscheduler.executors.default - INFO - Running job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-07 22:05:16 CEST)" (scheduled at 2025-09-07 21:56:16.320888+02:00)
+2025-09-07 21:56:16,336 - apscheduler.executors.default - INFO - Job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-07 22:05:16 CEST)" executed successfully
+2025-09-07 22:05:16,018 - apscheduler.executors.default - INFO - Running job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-07 22:14:16 CEST)" (scheduled at 2025-09-07 22:05:16.017150+02:00)
+2025-09-07 22:05:16,028 - apscheduler.executors.default - INFO - Job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-07 22:14:16 CEST)" executed successfully
+2025-09-07 22:05:16,322 - apscheduler.executors.default - INFO - Running job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-07 22:14:16 CEST)" (scheduled at 2025-09-07 22:05:16.320888+02:00)
+2025-09-07 22:05:16,327 - apscheduler.executors.default - INFO - Job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-07 22:14:16 CEST)" executed successfully
+2025-09-07 22:05:45,868 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-09-07 22:05:45,895 - apscheduler.scheduler - INFO - Added job "wake_up_app" to job store "default"
+2025-09-07 22:05:45,895 - apscheduler.scheduler - INFO - Scheduler started
+2025-09-07 22:05:45,899 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 10
+2025-09-07 22:05:45,899 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 13
+2025-09-07 22:05:45,918 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.2.73:5001
+2025-09-07 22:05:45,928 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-09-07 22:05:45,934 - werkzeug - INFO -  * Restarting with watchdog (fsevents)
+2025-09-07 22:05:46,253 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-09-07 22:05:46,253 - apscheduler.scheduler - INFO - Added job "wake_up_app" to job store "default"
+2025-09-07 22:05:46,253 - apscheduler.scheduler - INFO - Scheduler started
+2025-09-07 22:05:46,257 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 10
+2025-09-07 22:05:46,257 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 13
+2025-09-07 22:05:46,258 - werkzeug - WARNING -  * Debugger is active!
+2025-09-07 22:05:46,266 - werkzeug - INFO -  * Debugger PIN: 237-707-018
+2025-09-07 22:08:21,344 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 22:08:21] "OPTIONS /api/indexes HTTP/1.1" 200 -
+2025-09-07 22:08:22,104 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 22:08:22] "POST /api/indexes HTTP/1.1" 200 -
+2025-09-07 22:08:22,108 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 22:08:22] "OPTIONS /api/videos HTTP/1.1" 200 -
+2025-09-07 22:08:22,721 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 22:08:22] "POST /api/videos HTTP/1.1" 200 -
+2025-09-07 22:12:41,967 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 22:12:41] "OPTIONS /api/indexes HTTP/1.1" 200 -
+2025-09-07 22:12:42,642 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 22:12:42] "POST /api/indexes HTTP/1.1" 200 -
+2025-09-07 22:12:42,664 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 22:12:42] "OPTIONS /api/videos HTTP/1.1" 200 -
+2025-09-07 22:12:43,271 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 22:12:43] "POST /api/videos HTTP/1.1" 200 -
+2025-09-07 22:12:48,564 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 22:12:48] "OPTIONS /api/videos HTTP/1.1" 200 -
+2025-09-07 22:12:49,204 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 22:12:49] "POST /api/videos HTTP/1.1" 200 -
+2025-09-07 22:12:55,992 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 22:12:55] "OPTIONS /api/workflow/stream HTTP/1.1" 200 -
+2025-09-07 22:12:55,994 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 22:12:55] "POST /api/workflow/stream HTTP/1.1" 200 -
+2025-09-07 22:15:58,446 - werkzeug - INFO -  * Detected change in '/Users/hrishikesh/Desktop/Video DeepResearch/TwelveLabs-Video-DeepResearch/backend/app.py', reloading
+2025-09-07 22:15:58,572 - werkzeug - INFO -  * Restarting with watchdog (fsevents)
+2025-09-07 22:15:59,112 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-09-07 22:15:59,112 - apscheduler.scheduler - INFO - Added job "wake_up_app" to job store "default"
+2025-09-07 22:15:59,112 - apscheduler.scheduler - INFO - Scheduler started
+2025-09-07 22:15:59,115 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 10
+2025-09-07 22:15:59,116 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 13
+2025-09-07 22:15:59,119 - werkzeug - WARNING -  * Debugger is active!
+2025-09-07 22:15:59,125 - werkzeug - INFO -  * Debugger PIN: 237-707-018
+2025-09-07 22:16:44,006 - apscheduler.executors.default - WARNING - Run time of job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-07 22:23:45 CEST)" was missed by 0:01:58.137783
+2025-09-07 22:17:34,160 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 22:17:34] "OPTIONS /api/indexes HTTP/1.1" 200 -
+2025-09-07 22:17:34,872 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 22:17:34] "POST /api/indexes HTTP/1.1" 200 -
+2025-09-07 22:17:34,959 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 22:17:34] "OPTIONS /api/videos HTTP/1.1" 200 -
+2025-09-07 22:17:35,563 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 22:17:35] "POST /api/videos HTTP/1.1" 200 -
+2025-09-07 22:17:37,785 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 22:17:37] "POST /api/videos HTTP/1.1" 200 -
+2025-09-07 22:17:42,750 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 22:17:42] "OPTIONS /api/workflow/stream HTTP/1.1" 200 -
+2025-09-07 22:18:33,211 - werkzeug - INFO -  * Detected change in '/Users/hrishikesh/Desktop/Video DeepResearch/TwelveLabs-Video-DeepResearch/backend/app.py', reloading
+2025-09-07 22:18:34,328 - werkzeug - INFO -  * Restarting with watchdog (fsevents)
+2025-09-07 22:18:34,799 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-09-07 22:18:34,800 - apscheduler.scheduler - INFO - Added job "wake_up_app" to job store "default"
+2025-09-07 22:18:34,800 - apscheduler.scheduler - INFO - Scheduler started
+2025-09-07 22:18:34,803 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 10
+2025-09-07 22:18:34,803 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 13
+2025-09-07 22:18:34,805 - werkzeug - WARNING -  * Debugger is active!
+2025-09-07 22:18:34,809 - werkzeug - INFO -  * Debugger PIN: 237-707-018
+2025-09-07 22:19:02,076 - werkzeug - INFO -  * Detected change in '/Users/hrishikesh/Desktop/Video DeepResearch/TwelveLabs-Video-DeepResearch/backend/app.py', reloading
+2025-09-07 22:19:02,641 - werkzeug - INFO -  * Detected change in '/Users/hrishikesh/Desktop/Video DeepResearch/TwelveLabs-Video-DeepResearch/backend/app.py', reloading
+2025-09-07 22:19:03,005 - werkzeug - INFO -  * Restarting with watchdog (fsevents)
+2025-09-07 22:19:03,407 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-09-07 22:19:03,408 - apscheduler.scheduler - INFO - Added job "wake_up_app" to job store "default"
+2025-09-07 22:19:03,408 - apscheduler.scheduler - INFO - Scheduler started
+2025-09-07 22:19:03,411 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 10
+2025-09-07 22:19:03,411 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 13
+2025-09-07 22:19:03,413 - werkzeug - WARNING -  * Debugger is active!
+2025-09-07 22:19:03,417 - werkzeug - INFO -  * Debugger PIN: 237-707-018
+2025-09-07 22:19:24,471 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-09-07 22:19:24,471 - apscheduler.scheduler - INFO - Added job "wake_up_app" to job store "default"
+2025-09-07 22:19:24,471 - apscheduler.scheduler - INFO - Scheduler started
+2025-09-07 22:19:24,474 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 10
+2025-09-07 22:19:24,474 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 13
+2025-09-07 22:19:24,480 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.2.73:5001
+2025-09-07 22:19:24,480 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-09-07 22:19:24,484 - werkzeug - INFO -  * Restarting with watchdog (fsevents)
+2025-09-07 22:19:24,758 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-09-07 22:19:24,758 - apscheduler.scheduler - INFO - Added job "wake_up_app" to job store "default"
+2025-09-07 22:19:24,758 - apscheduler.scheduler - INFO - Scheduler started
+2025-09-07 22:19:24,761 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 10
+2025-09-07 22:19:24,761 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 13
+2025-09-07 22:19:24,762 - werkzeug - WARNING -  * Debugger is active!
+2025-09-07 22:19:24,767 - werkzeug - INFO -  * Debugger PIN: 237-707-018
+2025-09-07 22:19:35,321 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 22:19:35] "OPTIONS /api/indexes HTTP/1.1" 200 -
+2025-09-07 22:19:42,699 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 22:19:42] "OPTIONS /api/indexes HTTP/1.1" 200 -
+2025-09-07 22:20:00,940 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 22:20:00] "OPTIONS /api/config/twelvelabs HTTP/1.1" 200 -
+2025-09-07 22:20:01,852 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 22:20:01] "OPTIONS /api/config/twelvelabs HTTP/1.1" 200 -
+2025-09-07 22:20:13,265 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-09-07 22:20:13,265 - apscheduler.scheduler - INFO - Added job "wake_up_app" to job store "default"
+2025-09-07 22:20:13,265 - apscheduler.scheduler - INFO - Scheduler started
+2025-09-07 22:20:13,268 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 10
+2025-09-07 22:20:13,269 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 13
+2025-09-07 22:20:13,276 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.2.73:5001
+2025-09-07 22:20:13,276 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-09-07 22:20:13,280 - werkzeug - INFO -  * Restarting with watchdog (fsevents)
+2025-09-07 22:20:13,567 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-09-07 22:20:13,568 - apscheduler.scheduler - INFO - Added job "wake_up_app" to job store "default"
+2025-09-07 22:20:13,568 - apscheduler.scheduler - INFO - Scheduler started
+2025-09-07 22:20:13,571 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 10
+2025-09-07 22:20:13,571 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 13
+2025-09-07 22:20:13,572 - werkzeug - WARNING -  * Debugger is active!
+2025-09-07 22:20:13,577 - werkzeug - INFO -  * Debugger PIN: 237-707-018
+2025-09-07 22:21:08,134 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 22:21:08] "OPTIONS /api/indexes HTTP/1.1" 200 -
+2025-09-07 22:21:16,235 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 22:21:16] "OPTIONS /api/indexes HTTP/1.1" 200 -
+2025-09-07 22:21:18,625 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 22:21:18] "OPTIONS /api/indexes HTTP/1.1" 200 -
+2025-09-07 22:21:33,633 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 22:21:33] "OPTIONS /api/indexes HTTP/1.1" 200 -
+2025-09-07 22:21:41,719 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 22:21:41] "OPTIONS /api/indexes HTTP/1.1" 200 -
+2025-09-07 22:21:44,796 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 22:21:44] "OPTIONS /api/indexes HTTP/1.1" 200 -
+2025-09-07 22:21:51,304 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 22:21:51] "OPTIONS /api/indexes HTTP/1.1" 200 -
+2025-09-07 22:22:16,308 - werkzeug - INFO -  * Detected change in '/Users/hrishikesh/Desktop/Video DeepResearch/TwelveLabs-Video-DeepResearch/backend/app.py', reloading
+2025-09-07 22:22:17,302 - werkzeug - INFO -  * Restarting with watchdog (fsevents)
+2025-09-07 22:22:17,836 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-09-07 22:22:17,837 - apscheduler.scheduler - INFO - Added job "wake_up_app" to job store "default"
+2025-09-07 22:22:17,837 - apscheduler.scheduler - INFO - Scheduler started
+2025-09-07 22:22:17,841 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 10
+2025-09-07 22:22:17,841 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 13
+2025-09-07 22:22:17,844 - werkzeug - WARNING -  * Debugger is active!
+2025-09-07 22:22:17,852 - werkzeug - INFO -  * Debugger PIN: 237-707-018
+2025-09-07 22:22:37,164 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 22:22:37] "OPTIONS /api/indexes HTTP/1.1" 200 -
+2025-09-07 22:22:37,900 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 22:22:37] "POST /api/indexes HTTP/1.1" 200 -
+2025-09-07 22:22:37,902 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 22:22:37] "OPTIONS /api/videos HTTP/1.1" 200 -
+2025-09-07 22:22:38,516 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 22:22:38] "POST /api/videos HTTP/1.1" 200 -
+2025-09-07 22:23:23,028 - werkzeug - INFO -  * Detected change in '/Users/hrishikesh/Desktop/Video DeepResearch/TwelveLabs-Video-DeepResearch/backend/app.py', reloading
+2025-09-07 22:23:23,186 - werkzeug - INFO -  * Restarting with watchdog (fsevents)
+2025-09-07 22:23:23,944 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-09-07 22:23:23,944 - apscheduler.scheduler - INFO - Added job "wake_up_app" to job store "default"
+2025-09-07 22:23:23,944 - apscheduler.scheduler - INFO - Scheduler started
+2025-09-07 22:23:23,948 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 10
+2025-09-07 22:23:23,948 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 13
+2025-09-07 22:23:23,950 - werkzeug - WARNING -  * Debugger is active!
+2025-09-07 22:23:23,955 - werkzeug - INFO -  * Debugger PIN: 237-707-018
+2025-09-07 22:25:33,393 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-09-07 22:25:33,394 - apscheduler.scheduler - INFO - Added job "wake_up_app" to job store "default"
+2025-09-07 22:25:33,394 - apscheduler.scheduler - INFO - Scheduler started
+2025-09-07 22:25:33,397 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 10
+2025-09-07 22:25:33,397 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 13
+2025-09-07 22:25:33,403 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.2.73:5000
+2025-09-07 22:25:33,403 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-09-07 22:25:33,408 - werkzeug - INFO -  * Restarting with watchdog (fsevents)
+2025-09-07 22:25:33,690 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-09-07 22:25:33,691 - apscheduler.scheduler - INFO - Added job "wake_up_app" to job store "default"
+2025-09-07 22:25:33,691 - apscheduler.scheduler - INFO - Scheduler started
+2025-09-07 22:25:33,694 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 10
+2025-09-07 22:25:33,694 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 13
+2025-09-07 22:25:33,695 - werkzeug - WARNING -  * Debugger is active!
+2025-09-07 22:25:33,701 - werkzeug - INFO -  * Debugger PIN: 237-707-018
+2025-09-07 22:26:00,556 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-09-07 22:26:00,556 - apscheduler.scheduler - INFO - Added job "wake_up_app" to job store "default"
+2025-09-07 22:26:00,556 - apscheduler.scheduler - INFO - Scheduler started
+2025-09-07 22:26:00,559 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 10
+2025-09-07 22:26:00,559 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 13
+2025-09-07 22:30:18,169 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 22:30:18] "OPTIONS /api/indexes HTTP/1.1" 200 -
+2025-09-07 22:30:18,904 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 22:30:18] "POST /api/indexes HTTP/1.1" 200 -
+2025-09-07 22:30:18,908 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 22:30:18] "OPTIONS /api/videos HTTP/1.1" 200 -
+2025-09-07 22:30:19,564 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 22:30:19] "POST /api/videos HTTP/1.1" 200 -
+2025-09-07 22:30:29,105 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 22:30:29] "OPTIONS /api/videos HTTP/1.1" 200 -
+2025-09-07 22:30:29,739 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 22:30:29] "POST /api/videos HTTP/1.1" 200 -
+2025-09-07 22:30:42,573 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 22:30:42] "OPTIONS /api/workflow HTTP/1.1" 200 -
+2025-09-07 22:30:42,576 - __main__ - INFO - === WORKFLOW REQUEST START ===
+2025-09-07 22:30:42,580 - __main__ - INFO - Request data: {
+  "index_id": "6893518408a37aa08793c4fe",
+  "video_id": "68bce2fa30049231acbe7051",
+  "analysis_prompt": "Please provide a comprehensive analysis of this video content. Include:\n\n1. **Content Overview**: What is happening in the video? Describe the main events, actions, and scenes.\n2. **Key Elements**: Identify important objects, people, locations, activities, and interactions.\n3. **Context & Setting**: What is the environment, time period, or context of the video?\n4. **Narrative Flow**: How does the story or sequence of events unfold?\n5. **Notable Details**: Highlight any significant details, patterns, or unique aspects.\n6. **Technical Aspects**: Note video quality, camera work, editing, or production elements if relevant.\n\nUser's Specific Query: Research about it please\n\nPlease ensure your analysis addresses the user's specific question while providing comprehensive coverage of the video content.",
+  "research_query": "Research about it please"
+}
+2025-09-07 22:30:42,581 - __main__ - INFO - Parameters extracted:
+2025-09-07 22:30:42,581 - __main__ - INFO -   - Index ID: 6893518408a37aa08793c4fe
+2025-09-07 22:30:42,581 - __main__ - INFO -   - Video ID: 68bce2fa30049231acbe7051
+2025-09-07 22:30:42,581 - __main__ - INFO -   - Analysis Prompt: Please provide a comprehensive analysis of this video content. Include:
+
+1. **Content Overview**: What is happening in the video? Describe the main events, actions, and scenes.
+2. **Key Elements**: Identify important objects, people, locations, activities, and interactions.
+3. **Context & Setting**: What is the environment, time period, or context of the video?
+4. **Narrative Flow**: How does the story or sequence of events unfold?
+5. **Notable Details**: Highlight any significant details, patterns, or unique aspects.
+6. **Technical Aspects**: Note video quality, camera work, editing, or production elements if relevant.
+
+User's Specific Query: Research about it please
+
+Please ensure your analysis addresses the user's specific question while providing comprehensive coverage of the video content.
+2025-09-07 22:30:42,581 - __main__ - INFO -   - Research Query: Research about it please
+2025-09-07 22:30:42,581 - __main__ - INFO - Step 1: Getting video details from TwelveLabs...
+2025-09-07 22:30:43,191 - __main__ - INFO - Video details retrieved successfully: {
+  "_id": "68bce2fa30049231acbe7051",
+  "created_at": "2025-09-07T01:42:18Z",
+  "system_metadata": {
+    "duration": 156.061315,
+    "filename": "tmp_apzp7wy",
+    "fps": 30,
+    "height": 360,
+    "size": 14225563,
+    "width": 640
+  },
+  "hls": {
+    "video_url": "https://deuqpmn4rs7j5.cloudfront.net/6633a646e06d1c2c0212c7df/68bce2fa30049231acbe7051/stream/ff42afee-4673-4a2a-a05b-14c330c78244.m3u8",
+    "thumbnail_urls": [
+      "https://deuqpmn4rs7j5.cloudfront.net/6633a646e06d1c2c0212c7df/68bce2fa30049231acbe7051/thumbnails/ff42afee-4673-4a2a-a05b-14c330c78244.0000001.jpg"
+    ],
+    "status": "COMPLETE",
+    "updated_at": "2025-09-07T01:43:01.44Z"
+  }
+}
+2025-09-07 22:30:43,191 - __main__ - INFO - Step 2: Analyzing video content...
+2025-09-07 22:30:57,470 - httpx - INFO - HTTP Request: POST https://api.twelvelabs.io/v1.3/analyze "HTTP/1.1 200 OK"
+2025-09-07 22:30:57,477 - __main__ - INFO - Video analysis completed: "The video captures the gold medal match in men's volleyball at the Paris 2024 Olympic Games between France and Poland. The match is intense, with both teams demonstrating exceptional skill and determination. Early in the video, France is seen scoring points and celebrating with high-fives and cheers. Midway through, Poland gains momentum, outscoring France and prompting a strong comeback. However, France ultimately secures the gold medal with a decisive final spike, leading to jubilant celebrations among the players and fans.\n\n**Key Elements**:\n- **People**: French and Polish volleyball players, coaches, and spectators.\n- **Locations**: An indoor stadium with a volleyball court.\n- **Activities**: Volleyball match, scoring points, and celebrations.\n- **Interactions**: Players rallying, blocking, and spiking the ball; fans cheering and reacting emotionally.\n\n**Context & Setting**:\nThe setting is a large indoor stadium during the Paris 2024 Olympic Games, with a vibrant atmosphere created by the enthusiastic crowd. The match is between France, the defending Olympic champions, and Poland, the world's top-ranked team.\n\n**Narrative Flow**:\nThe video begins with a wide shot of the court and a graphic overlay showing the match details. It then transitions to close-ups of players and fans, capturing the emotional highs and lows of the game. The narrative builds tension as Poland fights back, but France ultimately clinches the gold medal. The video concludes with medal ceremonies, where France, Poland, and the United States are seen receiving their respective medals.\n\n**Notable Details**:\n- Emotional reactions from both players and fans, including high-fives, cheering, and face-painting.\n- Strategic plays and defensive maneuvers by both teams.\n- The final moments of the match, where France secures victory with a powerful spike.\n- The medal ceremony, with France triumphantly displaying their gold medals.\n\n**Technical Aspects**:\nThe video quality is high, with dynamic camera work that captures the action from various angles. The editing is smooth, seamlessly transitioning between gameplay, fan reactions, and the medal ceremony. The production elements effectively convey the excitement and significance of the Olympic event."
+2025-09-07 22:30:57,478 - __main__ - INFO - Step 3: Conducting deep research using Sonar...
+2025-09-07 22:30:57,478 - __main__ - INFO - Enhanced research query created: "\nBased on this video analysis: The video captures the gold medal match in men's volleyball at the Paris 2024 Olympic Games between France and Poland. The match is intense, with both teams demonstrating exceptional skill and determination. Early in the video, France is seen scoring points and celebrating with high-fives and cheers. Midway through, Poland gains momentum, outscoring France and prompting a strong comeback. However, France ultimately secures the gold medal with a decisive final spike, leading to jubilant celebrations among the players and fans.\n\n**Key Elements**:\n- **People**: French and Polish volleyball players, coaches, and spectators.\n- **Locations**: An indoor stadium with a volleyball court.\n- **Activities**: Volleyball match, scoring points, and celebrations.\n- **Interactions**: Players rallying, blocking, and spiking the ball; fans cheering and reacting emotionally.\n\n**Context & Setting**:\nThe setting is a large indoor stadium during the Paris 2024 Olympic Games, with a vibrant atmosphere created by the enthusiastic crowd. The match is between France, the defending Olympic champions, and Poland, the world's top-ranked team.\n\n**Narrative Flow**:\nThe video begins with a wide shot of the court and a graphic overlay showing the match details. It then transitions to close-ups of players and fans, capturing the emotional highs and lows of the game. The narrative builds tension as Poland fights back, but France ultimately clinches the gold medal. The video concludes with medal ceremonies, where France, Poland, and the United States are seen receiving their respective medals.\n\n**Notable Details**:\n- Emotional reactions from both players and fans, including high-fives, cheering, and face-painting.\n- Strategic plays and defensive maneuvers by both teams.\n- The final moments of the match, where France secures victory with a powerful spike.\n- The medal ceremony, with France triumphantly displaying their gold medals.\n\n**Technical Aspects**:\nThe video quality is high, with dynamic camera work that captures the action from various angles. The editing is smooth, seamlessly transitioning between gameplay, fan reactions, and the medal ceremony. The production elements effectively convey the excitement and significance of the Olympic event.\n\nPlease research: Research about it please\n\nProvide comprehensive insights that connect the video content with current trends, developments, and relevant information.\n"
+2025-09-07 22:31:05,277 - __main__ - INFO - Sonar research completed: {
+  "id": "55c00c61-454f-4e19-8625-861d07fb06ce",
+  "model": "sonar",
+  "created": 1757277065,
+  "usage": {
+    "prompt_tokens": 467,
+    "completion_tokens": 373,
+    "total_tokens": 840,
+    "search_context_size": "low",
+    "cost": {
+      "input_tokens_cost": 0.0,
+      "output_tokens_cost": 0.0,
+      "request_cost": 0.005,
+      "total_cost": 0.006
+    }
+  },
+  "citations": [
+    "https://www.nbcolympics.com/news/olympic-volleyball-paris-2024-biggest-stories-replays-medal-results-top-athletes-new-records",
+    "https://www.youtube.com/watch?v=JO6axiO1owk",
+    "https://en.wikipedia.org/wiki/Volleyball_at_the_2024_Summer_Olympics_%E2%80%93_Men's_tournament",
+    "https://en.volleyballworld.com/volleyball/competitions/volleyball-olympic-games-paris-2024/",
+    "https://en.wikipedia.org/wiki/Volleyball_at_the_2024_Summer_Olympics_%E2%80%93_Women's_tournament"
+  ],
+  "search_results": [
+    {
+      "title": "Olympic volleyball at Paris 2024: Biggest stories, replays, medal ...",
+      "url": "https://www.nbcolympics.com/news/olympic-volleyball-paris-2024-biggest-stories-replays-medal-results-top-athletes-new-records",
+      "date": "2024-08-11",
+      "last_updated": "2025-09-07",
+      "snippet": "Gold: France Silver: Poland Bronze: United States. GOLD MEDAL MATCH REPLAY \u00b7 BRONZE MEDAL MATCH REPLAY. Men's Tournament Best Games Highlights."
+    },
+    {
+      "title": "France beat Poland to win gold medal in men's volleyball - YouTube",
+      "url": "https://www.youtube.com/watch?v=JO6axiO1owk",
+      "date": "2024-08-10",
+      "last_updated": "2025-07-30",
+      "snippet": "Re-live ALL the incredible #Paris2024 action: \u27a1 https://oly.ch/P24Replays Defending Olympic champions France beat world no."
+    },
+    {
+      "title": "Volleyball at the 2024 Summer Olympics \u2013 Men's tournament",
+      "url": "https://en.wikipedia.org/wiki/Volleyball_at_the_2024_Summer_Olympics_%E2%80%93_Men's_tournament",
+      "date": "2023-07-21",
+      "last_updated": "2025-06-09",
+      "snippet": "France won its second straight title by defeating Poland (3\u20130) in the gold medal match. The United States defeated Italy (3\u20130) in the bronze medal match."
+    },
+    {
+      "title": "Volleyball Olympic Games Paris 2024",
+      "url": "https://en.volleyballworld.com/volleyball/competitions/volleyball-olympic-games-paris-2024/",
+      "date": "2024-07-27",
+      "last_updated": "2025-08-29",
+      "snippet": "... Gold medal. Also, the match between Team USA and Team Brazil, with the USA defeating Brazil to qualify for the final round. Key Players Who Shined in Paris 2024."
+    },
+    {
+      "title": "Volleyball at the 2024 Summer Olympics \u2013 Women's tournament",
+      "url": "https://en.wikipedia.org/wiki/Volleyball_at_the_2024_Summer_Olympics_%E2%80%93_Women's_tournament",
+      "date": "2023-07-21",
+      "last_updated": "2025-06-08",
+      "snippet": "It was held in Paris, France from 28 July to 11 August 2024. This ... 9.5 Gold medal match. 10 Final standing; 11 Medalists; 12 Awards; 13 Statistics ..."
+    }
+  ],
+  "object": "chat.completion",
+  "choices": [
+    {
+      "index": 0,
+      "finish_reason": "stop",
+      "message": {
+        "role": "assistant",
+        "content": "The men's volleyball gold medal match at the Paris 2024 Olympics featured defending champions France versus the world no. 1 team, Poland. France won decisively in straight sets (25-19, 25-20, 25-23), securing their second consecutive Olympic gold medal, a historic achievement as the first repeat champions in men's volleyball since the USA in 1988[2][3]. The match was held in a vibrant indoor stadium atmosphere with enthusiastic home crowd support that energized the French team throughout[1].\n\nPoland had staged a remarkable comeback in the semifinals against the United States despite injuries, demonstrating resilience, but France's skill, cohesion, and strategic play ultimately prevailed in the final[1]. The match was marked by intense rallies, strong defensive blocks, and dynamic spikes, encapsulating high-level volleyball and heightened emotions from players and fans alike. France\u2019s final winning spike prompted jubilant celebrations, both on court and among spectators[Video Analysis,1].\n\nThe event was part of the 16th Olympic men's volleyball tournament, run by the FIVB and IOC, notable for allowing teams to include one non-competing alternate athlete for the first time in Olympic volleyball history[3]. The final medal standings were France (gold), Poland (silver), and the United States (bronze), which defeated Italy in the bronze medal match[1][3][4].\n\nTechnically, the video capturing this match benefits from high-quality production with dynamic camera work offering multiple angles to capture gameplay, fan reactions, and post-match ceremonies, effectively conveying the significance and drama of the Olympic final[Video Analysis].\n\nThis victory cements France's status as a dominant volleyball power, matching historical precedents and reflecting current global competitive trends where strategic depth, mental toughness, and home advantage significantly influence outcomes in Olympic volleyball[1][3]."
+      },
+      "delta": {
+        "role": "assistant",
+        "content": ""
+      }
+    }
+  ]
+}
+2025-09-07 22:31:05,278 - __main__ - INFO - Adding sources to research result...
+2025-09-07 22:31:05,278 - __main__ - INFO - Sources added to research result: [
+  {
+    "title": "TechCrunch",
+    "url": "https://techcrunch.com",
+    "description": "Technology news and analysis"
+  },
+  {
+    "title": "Gartner Research",
+    "url": "https://gartner.com",
+    "description": "Industry research and insights"
+  },
+  {
+    "title": "McKinsey & Company",
+    "url": "https://mckinsey.com",
+    "description": "Business and technology trends"
+  },
+  {
+    "title": "The Verge",
+    "url": "https://theverge.com",
+    "description": "Technology and culture coverage"
+  },
+  {
+    "title": "MIT Technology Review",
+    "url": "https://technologyreview.com",
+    "description": "In-depth technology analysis"
+  }
+]
+2025-09-07 22:31:05,278 - __main__ - INFO - === WORKFLOW COMPLETED SUCCESSFULLY ===
+2025-09-07 22:31:05,279 - __main__ - INFO - Final response: {
+  "success": true,
+  "workflow": {
+    "video_details": {
+      "_id": "68bce2fa30049231acbe7051",
+      "created_at": "2025-09-07T01:42:18Z",
+      "system_metadata": {
+        "duration": 156.061315,
+        "filename": "tmp_apzp7wy",
+        "fps": 30,
+        "height": 360,
+        "size": 14225563,
+        "width": 640
+      },
+      "hls": {
+        "video_url": "https://deuqpmn4rs7j5.cloudfront.net/6633a646e06d1c2c0212c7df/68bce2fa30049231acbe7051/stream/ff42afee-4673-4a2a-a05b-14c330c78244.m3u8",
+        "thumbnail_urls": [
+          "https://deuqpmn4rs7j5.cloudfront.net/6633a646e06d1c2c0212c7df/68bce2fa30049231acbe7051/thumbnails/ff42afee-4673-4a2a-a05b-14c330c78244.0000001.jpg"
+        ],
+        "status": "COMPLETE",
+        "updated_at": "2025-09-07T01:43:01.44Z"
+      }
+    },
+    "analysis": "The video captures the gold medal match in men's volleyball at the Paris 2024 Olympic Games between France and Poland. The match is intense, with both teams demonstrating exceptional skill and determination. Early in the video, France is seen scoring points and celebrating with high-fives and cheers. Midway through, Poland gains momentum, outscoring France and prompting a strong comeback. However, France ultimately secures the gold medal with a decisive final spike, leading to jubilant celebrations among the players and fans.\n\n**Key Elements**:\n- **People**: French and Polish volleyball players, coaches, and spectators.\n- **Locations**: An indoor stadium with a volleyball court.\n- **Activities**: Volleyball match, scoring points, and celebrations.\n- **Interactions**: Players rallying, blocking, and spiking the ball; fans cheering and reacting emotionally.\n\n**Context & Setting**:\nThe setting is a large indoor stadium during the Paris 2024 Olympic Games, with a vibrant atmosphere created by the enthusiastic crowd. The match is between France, the defending Olympic champions, and Poland, the world's top-ranked team.\n\n**Narrative Flow**:\nThe video begins with a wide shot of the court and a graphic overlay showing the match details. It then transitions to close-ups of players and fans, capturing the emotional highs and lows of the game. The narrative builds tension as Poland fights back, but France ultimately clinches the gold medal. The video concludes with medal ceremonies, where France, Poland, and the United States are seen receiving their respective medals.\n\n**Notable Details**:\n- Emotional reactions from both players and fans, including high-fives, cheering, and face-painting.\n- Strategic plays and defensive maneuvers by both teams.\n- The final moments of the match, where France secures victory with a powerful spike.\n- The medal ceremony, with France triumphantly displaying their gold medals.\n\n**Technical Aspects**:\nThe video quality is high, with dynamic camera work that captures the action from various angles. The editing is smooth, seamlessly transitioning between gameplay, fan reactions, and the medal ceremony. The production elements effectively convey the excitement and significance of the Olympic event.",
+    "research": {
+      "id": "55c00c61-454f-4e19-8625-861d07fb06ce",
+      "model": "sonar",
+      "created": 1757277065,
+      "usage": {
+        "prompt_tokens": 467,
+        "completion_tokens": 373,
+        "total_tokens": 840,
+        "search_context_size": "low",
+        "cost": {
+          "input_tokens_cost": 0.0,
+          "output_tokens_cost": 0.0,
+          "request_cost": 0.005,
+          "total_cost": 0.006
+        }
+      },
+      "citations": [
+        "https://www.nbcolympics.com/news/olympic-volleyball-paris-2024-biggest-stories-replays-medal-results-top-athletes-new-records",
+        "https://www.youtube.com/watch?v=JO6axiO1owk",
+        "https://en.wikipedia.org/wiki/Volleyball_at_the_2024_Summer_Olympics_%E2%80%93_Men's_tournament",
+        "https://en.volleyballworld.com/volleyball/competitions/volleyball-olympic-games-paris-2024/",
+        "https://en.wikipedia.org/wiki/Volleyball_at_the_2024_Summer_Olympics_%E2%80%93_Women's_tournament"
+      ],
+      "search_results": [
+        {
+          "title": "Olympic volleyball at Paris 2024: Biggest stories, replays, medal ...",
+          "url": "https://www.nbcolympics.com/news/olympic-volleyball-paris-2024-biggest-stories-replays-medal-results-top-athletes-new-records",
+          "date": "2024-08-11",
+          "last_updated": "2025-09-07",
+          "snippet": "Gold: France Silver: Poland Bronze: United States. GOLD MEDAL MATCH REPLAY \u00b7 BRONZE MEDAL MATCH REPLAY. Men's Tournament Best Games Highlights."
+        },
+        {
+          "title": "France beat Poland to win gold medal in men's volleyball - YouTube",
+          "url": "https://www.youtube.com/watch?v=JO6axiO1owk",
+          "date": "2024-08-10",
+          "last_updated": "2025-07-30",
+          "snippet": "Re-live ALL the incredible #Paris2024 action: \u27a1 https://oly.ch/P24Replays Defending Olympic champions France beat world no."
+        },
+        {
+          "title": "Volleyball at the 2024 Summer Olympics \u2013 Men's tournament",
+          "url": "https://en.wikipedia.org/wiki/Volleyball_at_the_2024_Summer_Olympics_%E2%80%93_Men's_tournament",
+          "date": "2023-07-21",
+          "last_updated": "2025-06-09",
+          "snippet": "France won its second straight title by defeating Poland (3\u20130) in the gold medal match. The United States defeated Italy (3\u20130) in the bronze medal match."
+        },
+        {
+          "title": "Volleyball Olympic Games Paris 2024",
+          "url": "https://en.volleyballworld.com/volleyball/competitions/volleyball-olympic-games-paris-2024/",
+          "date": "2024-07-27",
+          "last_updated": "2025-08-29",
+          "snippet": "... Gold medal. Also, the match between Team USA and Team Brazil, with the USA defeating Brazil to qualify for the final round. Key Players Who Shined in Paris 2024."
+        },
+        {
+          "title": "Volleyball at the 2024 Summer Olympics \u2013 Women's tournament",
+          "url": "https://en.wikipedia.org/wiki/Volleyball_at_the_2024_Summer_Olympics_%E2%80%93_Women's_tournament",
+          "date": "2023-07-21",
+          "last_updated": "2025-06-08",
+          "snippet": "It was held in Paris, France from 28 July to 11 August 2024. This ... 9.5 Gold medal match. 10 Final standing; 11 Medalists; 12 Awards; 13 Statistics ..."
+        }
+      ],
+      "object": "chat.completion",
+      "choices": [
+        {
+          "index": 0,
+          "finish_reason": "stop",
+          "message": {
+            "role": "assistant",
+            "content": "The men's volleyball gold medal match at the Paris 2024 Olympics featured defending champions France versus the world no. 1 team, Poland. France won decisively in straight sets (25-19, 25-20, 25-23), securing their second consecutive Olympic gold medal, a historic achievement as the first repeat champions in men's volleyball since the USA in 1988[2][3]. The match was held in a vibrant indoor stadium atmosphere with enthusiastic home crowd support that energized the French team throughout[1].\n\nPoland had staged a remarkable comeback in the semifinals against the United States despite injuries, demonstrating resilience, but France's skill, cohesion, and strategic play ultimately prevailed in the final[1]. The match was marked by intense rallies, strong defensive blocks, and dynamic spikes, encapsulating high-level volleyball and heightened emotions from players and fans alike. France\u2019s final winning spike prompted jubilant celebrations, both on court and among spectators[Video Analysis,1].\n\nThe event was part of the 16th Olympic men's volleyball tournament, run by the FIVB and IOC, notable for allowing teams to include one non-competing alternate athlete for the first time in Olympic volleyball history[3]. The final medal standings were France (gold), Poland (silver), and the United States (bronze), which defeated Italy in the bronze medal match[1][3][4].\n\nTechnically, the video capturing this match benefits from high-quality production with dynamic camera work offering multiple angles to capture gameplay, fan reactions, and post-match ceremonies, effectively conveying the significance and drama of the Olympic final[Video Analysis].\n\nThis victory cements France's status as a dominant volleyball power, matching historical precedents and reflecting current global competitive trends where strategic depth, mental toughness, and home advantage significantly influence outcomes in Olympic volleyball[1][3]."
+          },
+          "delta": {
+            "role": "assistant",
+            "content": ""
+          }
+        }
+      ],
+      "sources": [
+        {
+          "title": "TechCrunch",
+          "url": "https://techcrunch.com",
+          "description": "Technology news and analysis"
+        },
+        {
+          "title": "Gartner Research",
+          "url": "https://gartner.com",
+          "description": "Industry research and insights"
+        },
+        {
+          "title": "McKinsey & Company",
+          "url": "https://mckinsey.com",
+          "description": "Business and technology trends"
+        },
+        {
+          "title": "The Verge",
+          "url": "https://theverge.com",
+          "description": "Technology and culture coverage"
+        },
+        {
+          "title": "MIT Technology Review",
+          "url": "https://technologyreview.com",
+          "description": "In-depth technology analysis"
+        }
+      ]
+    }
+  },
+  "summary": {
+    "video_id": "68bce2fa30049231acbe7051",
+    "index_id": "6893518408a37aa08793c4fe",
+    "analysis_prompt": "Please provide a comprehensive analysis of this video content. Include:\n\n1. **Content Overview**: What is happening in the video? Describe the main events, actions, and scenes.\n2. **Key Elements**: Identify important objects, people, locations, activities, and interactions.\n3. **Context & Setting**: What is the environment, time period, or context of the video?\n4. **Narrative Flow**: How does the story or sequence of events unfold?\n5. **Notable Details**: Highlight any significant details, patterns, or unique aspects.\n6. **Technical Aspects**: Note video quality, camera work, editing, or production elements if relevant.\n\nUser's Specific Query: Research about it please\n\nPlease ensure your analysis addresses the user's specific question while providing comprehensive coverage of the video content.",
+    "research_query": "Research about it please",
+    "research_status": "completed"
+  }
+}
+2025-09-07 22:31:05,280 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 22:31:05] "POST /api/workflow HTTP/1.1" 200 -
+2025-09-07 22:31:16,307 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 22:31:16] "OPTIONS /api/videos HTTP/1.1" 200 -
+2025-09-07 22:31:16,929 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 22:31:16] "POST /api/videos HTTP/1.1" 200 -
+2025-09-07 22:33:47,126 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 22:33:47] "OPTIONS /api/videos HTTP/1.1" 200 -
+2025-09-07 22:33:47,756 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 22:33:47] "POST /api/videos HTTP/1.1" 200 -
+2025-09-07 22:34:33,408 - apscheduler.executors.default - INFO - Running job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-07 22:43:33 CEST)" (scheduled at 2025-09-07 22:34:33.393691+02:00)
+2025-09-07 22:34:33,422 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 22:34:33] "GET /health HTTP/1.1" 200 -
+2025-09-07 22:34:33,423 - apscheduler.executors.default - INFO - Job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-07 22:43:33 CEST)" executed successfully
+2025-09-07 22:34:33,702 - apscheduler.executors.default - INFO - Running job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-07 22:43:33 CEST)" (scheduled at 2025-09-07 22:34:33.690828+02:00)
+2025-09-07 22:34:33,706 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 22:34:33] "GET /health HTTP/1.1" 200 -
+2025-09-07 22:34:33,707 - apscheduler.executors.default - INFO - Job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-07 22:43:33 CEST)" executed successfully
+2025-09-07 22:35:42,641 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 22:35:42] "OPTIONS /api/videos HTTP/1.1" 200 -
+2025-09-07 22:35:43,262 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 22:35:43] "POST /api/videos HTTP/1.1" 200 -
+2025-09-07 22:35:46,384 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 22:35:46] "POST /api/videos HTTP/1.1" 200 -
+2025-09-07 22:38:50,268 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 22:38:50] "OPTIONS /api/indexes HTTP/1.1" 200 -
+2025-09-07 22:38:50,933 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 22:38:50] "POST /api/indexes HTTP/1.1" 200 -
+2025-09-07 22:38:50,935 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 22:38:50] "OPTIONS /api/videos HTTP/1.1" 200 -
+2025-09-07 22:38:51,547 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 22:38:51] "POST /api/videos HTTP/1.1" 200 -
+2025-09-07 22:41:07,550 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 22:41:07] "OPTIONS /api/videos HTTP/1.1" 200 -
+2025-09-07 22:41:08,206 - werkzeug - INFO - 127.0.0.1 - - [07/Sep/2025 22:41:08] "POST /api/videos HTTP/1.1" 200 -
+2025-09-08 00:35:10,947 - apscheduler.executors.default - WARNING - Run time of job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-08 00:40:33 CEST)" was missed by 0:03:37.553330
+2025-09-08 00:35:11,245 - apscheduler.executors.default - WARNING - Run time of job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-08 00:40:33 CEST)" was missed by 0:03:37.554578
+2025-09-08 00:38:54,464 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 00:38:54] "OPTIONS /api/config/twelvelabs HTTP/1.1" 200 -
+2025-09-08 00:38:54,467 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 00:38:54] "DELETE /api/config/twelvelabs HTTP/1.1" 200 -
+2025-09-08 00:38:54,504 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 00:38:54] "OPTIONS /api/indexes HTTP/1.1" 200 -
+2025-09-08 00:38:55,157 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 00:38:55] "POST /api/indexes HTTP/1.1" 200 -
+2025-09-08 00:38:55,166 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 00:38:55] "OPTIONS /api/videos HTTP/1.1" 200 -
+2025-09-08 00:38:55,764 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 00:38:55] "POST /api/videos HTTP/1.1" 200 -
+2025-09-08 00:40:33,403 - apscheduler.executors.default - INFO - Running job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-08 00:49:33 CEST)" (scheduled at 2025-09-08 00:40:33.393691+02:00)
+2025-09-08 00:40:33,418 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 00:40:33] "GET /health HTTP/1.1" 200 -
+2025-09-08 00:40:33,420 - apscheduler.executors.default - INFO - Job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-08 00:49:33 CEST)" executed successfully
+2025-09-08 00:40:33,695 - apscheduler.executors.default - INFO - Running job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-08 00:49:33 CEST)" (scheduled at 2025-09-08 00:40:33.690828+02:00)
+2025-09-08 00:40:33,700 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 00:40:33] "GET /health HTTP/1.1" 200 -
+2025-09-08 00:40:33,701 - apscheduler.executors.default - INFO - Job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-08 00:49:33 CEST)" executed successfully
+2025-09-08 08:44:32,789 - apscheduler.executors.default - WARNING - Run time of job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-08 08:46:33 CEST)" was missed by 0:06:59.396015
+2025-09-08 08:44:33,087 - apscheduler.executors.default - WARNING - Run time of job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-08 08:46:33 CEST)" was missed by 0:06:59.396536
+2025-09-08 11:28:24,190 - apscheduler.executors.default - WARNING - Run time of job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-08 11:28:33 CEST)" was missed by 0:08:50.796291
+2025-09-08 11:28:24,485 - apscheduler.executors.default - WARNING - Run time of job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-08 11:28:33 CEST)" was missed by 0:08:50.794968
+2025-09-08 11:55:09,641 - apscheduler.executors.default - WARNING - Run time of job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-08 11:55:33 CEST)" was missed by 0:08:36.248071
+2025-09-08 11:55:09,938 - apscheduler.executors.default - WARNING - Run time of job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-08 11:55:33 CEST)" was missed by 0:08:36.247177
+2025-09-08 12:49:13,615 - apscheduler.executors.default - WARNING - Run time of job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-08 12:49:33 CEST)" was missed by 0:08:40.221533
+2025-09-08 12:49:13,915 - apscheduler.executors.default - WARNING - Run time of job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-08 12:49:33 CEST)" was missed by 0:08:40.224760
+2025-09-08 12:49:33,412 - apscheduler.executors.default - INFO - Running job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-08 12:58:33 CEST)" (scheduled at 2025-09-08 12:49:33.393691+02:00)
+2025-09-08 12:49:33,423 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 12:49:33] "GET /health HTTP/1.1" 200 -
+2025-09-08 12:49:33,425 - apscheduler.executors.default - INFO - Job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-08 12:58:33 CEST)" executed successfully
+2025-09-08 12:49:33,704 - apscheduler.executors.default - INFO - Running job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-08 12:58:33 CEST)" (scheduled at 2025-09-08 12:49:33.690828+02:00)
+2025-09-08 12:49:33,708 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 12:49:33] "GET /health HTTP/1.1" 200 -
+2025-09-08 12:49:33,709 - apscheduler.executors.default - INFO - Job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-08 12:58:33 CEST)" executed successfully
+2025-09-08 17:08:42,146 - apscheduler.executors.default - WARNING - Run time of job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-08 17:10:33 CEST)" was missed by 0:07:08.752682
+2025-09-08 17:08:42,439 - apscheduler.executors.default - WARNING - Run time of job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-08 17:10:33 CEST)" was missed by 0:07:08.748342
+2025-09-08 17:10:33,399 - apscheduler.executors.default - INFO - Running job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-08 17:19:33 CEST)" (scheduled at 2025-09-08 17:10:33.393691+02:00)
+2025-09-08 17:10:33,412 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 17:10:33] "GET /health HTTP/1.1" 200 -
+2025-09-08 17:10:33,413 - apscheduler.executors.default - INFO - Job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-08 17:19:33 CEST)" executed successfully
+2025-09-08 17:10:33,695 - apscheduler.executors.default - INFO - Running job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-08 17:19:33 CEST)" (scheduled at 2025-09-08 17:10:33.690828+02:00)
+2025-09-08 17:10:33,705 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 17:10:33] "GET /health HTTP/1.1" 200 -
+2025-09-08 17:10:33,707 - apscheduler.executors.default - INFO - Job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-08 17:19:33 CEST)" executed successfully
+2025-09-08 17:23:55,063 - apscheduler.executors.default - WARNING - Run time of job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-08 17:28:33 CEST)" was missed by 0:04:21.669850
+2025-09-08 17:23:55,359 - apscheduler.executors.default - WARNING - Run time of job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-08 17:28:33 CEST)" was missed by 0:04:21.669007
+2025-09-08 17:28:33,401 - apscheduler.executors.default - INFO - Running job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-08 17:37:33 CEST)" (scheduled at 2025-09-08 17:28:33.393691+02:00)
+2025-09-08 17:28:33,413 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 17:28:33] "GET /health HTTP/1.1" 200 -
+2025-09-08 17:28:33,415 - apscheduler.executors.default - INFO - Job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-08 17:37:33 CEST)" executed successfully
+2025-09-08 17:28:33,697 - apscheduler.executors.default - INFO - Running job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-08 17:37:33 CEST)" (scheduled at 2025-09-08 17:28:33.690828+02:00)
+2025-09-08 17:28:33,705 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 17:28:33] "GET /health HTTP/1.1" 200 -
+2025-09-08 17:28:33,706 - apscheduler.executors.default - INFO - Job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-08 17:37:33 CEST)" executed successfully
+2025-09-08 17:29:19,474 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 17:29:19] "OPTIONS /api/indexes HTTP/1.1" 200 -
+2025-09-08 17:29:20,126 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 17:29:20] "POST /api/indexes HTTP/1.1" 200 -
+2025-09-08 17:29:20,132 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 17:29:20] "OPTIONS /api/videos HTTP/1.1" 200 -
+2025-09-08 17:29:20,726 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 17:29:20] "POST /api/videos HTTP/1.1" 200 -
+2025-09-08 17:29:26,330 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 17:29:26] "OPTIONS /api/videos HTTP/1.1" 200 -
+2025-09-08 17:29:26,962 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 17:29:26] "POST /api/videos HTTP/1.1" 200 -

@@ -372,3 +372,201 @@
 2025-09-08 21:11:22,944 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 13
 2025-09-08 21:11:22,945 - werkzeug - WARNING -  * Debugger is active!
 2025-09-08 21:11:22,950 - werkzeug - INFO -  * Debugger PIN: 237-707-018
+2025-09-08 22:09:04,684 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-09-08 22:09:04,684 - apscheduler.scheduler - INFO - Added job "wake_up_app" to job store "default"
+2025-09-08 22:09:04,684 - apscheduler.scheduler - INFO - Scheduler started
+2025-09-08 22:09:04,688 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 10
+2025-09-08 22:09:04,688 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 13
+2025-09-08 22:09:04,698 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.2.73:5000
+2025-09-08 22:09:04,698 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-09-08 22:09:04,703 - werkzeug - INFO -  * Restarting with watchdog (fsevents)
+2025-09-08 22:09:05,010 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-09-08 22:09:05,010 - apscheduler.scheduler - INFO - Added job "wake_up_app" to job store "default"
+2025-09-08 22:09:05,010 - apscheduler.scheduler - INFO - Scheduler started
+2025-09-08 22:09:05,012 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 10
+2025-09-08 22:09:05,013 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 13
+2025-09-08 22:09:05,014 - werkzeug - WARNING -  * Debugger is active!
+2025-09-08 22:09:05,020 - werkzeug - INFO -  * Debugger PIN: 237-707-018
+2025-09-08 22:09:59,882 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-09-08 22:09:59,883 - apscheduler.scheduler - INFO - Added job "wake_up_app" to job store "default"
+2025-09-08 22:09:59,883 - apscheduler.scheduler - INFO - Scheduler started
+2025-09-08 22:09:59,885 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 10
+2025-09-08 22:09:59,885 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 13
+2025-09-08 22:09:59,892 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.2.73:5000
+2025-09-08 22:09:59,892 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-09-08 22:09:59,896 - werkzeug - INFO -  * Restarting with watchdog (fsevents)
+2025-09-08 22:10:00,221 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-09-08 22:10:00,222 - apscheduler.scheduler - INFO - Added job "wake_up_app" to job store "default"
+2025-09-08 22:10:00,222 - apscheduler.scheduler - INFO - Scheduler started
+2025-09-08 22:10:00,224 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 10
+2025-09-08 22:10:00,224 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 13
+2025-09-08 22:10:00,226 - werkzeug - WARNING -  * Debugger is active!
+2025-09-08 22:10:00,233 - werkzeug - INFO -  * Debugger PIN: 237-707-018
+2025-09-08 22:10:11,490 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 22:10:11] "OPTIONS /api/indexes HTTP/1.1" 200 -
+2025-09-08 22:10:12,273 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 22:10:12] "POST /api/indexes HTTP/1.1" 200 -
+2025-09-08 22:10:12,276 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 22:10:12] "OPTIONS /api/videos HTTP/1.1" 200 -
+2025-09-08 22:10:12,894 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 22:10:12] "POST /api/videos HTTP/1.1" 200 -
+2025-09-08 22:10:19,383 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 22:10:19] "OPTIONS /api/config/twelvelabs HTTP/1.1" 200 -
+2025-09-08 22:10:19,386 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 22:10:19] "DELETE /api/config/twelvelabs HTTP/1.1" 200 -
+2025-09-08 22:10:21,346 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 22:10:21] "POST /api/config/twelvelabs HTTP/1.1" 200 -
+2025-09-08 22:10:21,355 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 22:10:21] "OPTIONS /api/videos HTTP/1.1" 200 -
+2025-09-08 22:10:21,990 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 22:10:21] "POST /api/videos HTTP/1.1" 200 -
+2025-09-08 22:10:23,298 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 22:10:23] "DELETE /api/config/twelvelabs HTTP/1.1" 200 -
+2025-09-08 22:10:23,302 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 22:10:23] "OPTIONS /api/indexes HTTP/1.1" 200 -
+2025-09-08 22:10:23,304 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 22:10:23] "[31m[1mPOST /api/indexes HTTP/1.1[0m" 400 -
+2025-09-08 22:10:24,862 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 22:10:24] "OPTIONS /api/config/twelvelabs HTTP/1.1" 200 -
+2025-09-08 22:10:24,865 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 22:10:24] "DELETE /api/config/twelvelabs HTTP/1.1" 200 -
+2025-09-08 22:10:24,869 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 22:10:24] "[31m[1mPOST /api/indexes HTTP/1.1[0m" 400 -
+2025-09-08 22:10:25,077 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 22:10:25] "DELETE /api/config/twelvelabs HTTP/1.1" 200 -
+2025-09-08 22:10:25,088 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 22:10:25] "[31m[1mPOST /api/indexes HTTP/1.1[0m" 400 -
+2025-09-08 22:10:25,257 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 22:10:25] "DELETE /api/config/twelvelabs HTTP/1.1" 200 -
+2025-09-08 22:10:25,288 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 22:10:25] "[31m[1mPOST /api/indexes HTTP/1.1[0m" 400 -
+2025-09-08 22:10:25,438 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 22:10:25] "DELETE /api/config/twelvelabs HTTP/1.1" 200 -
+2025-09-08 22:10:25,456 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 22:10:25] "[31m[1mPOST /api/indexes HTTP/1.1[0m" 400 -
+2025-09-08 22:10:25,609 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 22:10:25] "DELETE /api/config/twelvelabs HTTP/1.1" 200 -
+2025-09-08 22:10:25,622 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 22:10:25] "[31m[1mPOST /api/indexes HTTP/1.1[0m" 400 -
+2025-09-08 22:10:25,777 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 22:10:25] "DELETE /api/config/twelvelabs HTTP/1.1" 200 -
+2025-09-08 22:10:25,791 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 22:10:25] "[31m[1mPOST /api/indexes HTTP/1.1[0m" 400 -
+2025-09-08 22:10:25,952 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 22:10:25] "DELETE /api/config/twelvelabs HTTP/1.1" 200 -
+2025-09-08 22:10:25,957 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 22:10:25] "[31m[1mPOST /api/indexes HTTP/1.1[0m" 400 -
+2025-09-08 22:10:26,124 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 22:10:26] "DELETE /api/config/twelvelabs HTTP/1.1" 200 -
+2025-09-08 22:10:26,156 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 22:10:26] "[31m[1mPOST /api/indexes HTTP/1.1[0m" 400 -
+2025-09-08 22:10:26,294 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 22:10:26] "DELETE /api/config/twelvelabs HTTP/1.1" 200 -
+2025-09-08 22:10:26,322 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 22:10:26] "[31m[1mPOST /api/indexes HTTP/1.1[0m" 400 -
+2025-09-08 22:10:26,481 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 22:10:26] "DELETE /api/config/twelvelabs HTTP/1.1" 200 -
+2025-09-08 22:10:26,488 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 22:10:26] "[31m[1mPOST /api/indexes HTTP/1.1[0m" 400 -
+2025-09-08 22:10:26,651 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 22:10:26] "DELETE /api/config/twelvelabs HTTP/1.1" 200 -
+2025-09-08 22:10:26,656 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 22:10:26] "[31m[1mPOST /api/indexes HTTP/1.1[0m" 400 -
+2025-09-08 22:10:26,811 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 22:10:26] "DELETE /api/config/twelvelabs HTTP/1.1" 200 -
+2025-09-08 22:10:26,824 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 22:10:26] "[31m[1mPOST /api/indexes HTTP/1.1[0m" 400 -
+2025-09-08 22:10:26,991 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 22:10:26] "DELETE /api/config/twelvelabs HTTP/1.1" 200 -
+2025-09-08 22:10:26,995 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 22:10:26] "[31m[1mPOST /api/indexes HTTP/1.1[0m" 400 -
+2025-09-08 22:10:56,857 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 22:10:56] "OPTIONS /api/config/twelvelabs HTTP/1.1" 200 -
+2025-09-08 22:10:56,861 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 22:10:56] "DELETE /api/config/twelvelabs HTTP/1.1" 200 -
+2025-09-08 22:10:56,869 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 22:10:56] "OPTIONS /api/indexes HTTP/1.1" 200 -
+2025-09-08 22:10:56,871 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 22:10:56] "[31m[1mPOST /api/indexes HTTP/1.1[0m" 400 -
+2025-09-08 22:11:05,517 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 22:11:05] "OPTIONS /api/workflow HTTP/1.1" 200 -
+2025-09-08 22:11:05,521 - routes.api_routes - INFO - === WORKFLOW REQUEST START ===
+2025-09-08 22:11:05,521 - routes.api_routes - INFO - Request data: {
+  "index_id": "689df72e4427a7b96b7a2cb8",
+  "video_id": "689df76cb1ba49c5144b7eca",
+  "analysis_prompt": "Research about it",
+  "research_query": "Research about it"
+}
+2025-09-08 22:11:05,522 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 22:11:05] "POST /api/workflow HTTP/1.1" 200 -
+2025-09-08 22:11:10,411 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 22:11:10] "OPTIONS /api/indexes HTTP/1.1" 200 -
+2025-09-08 22:11:10,413 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 22:11:10] "[31m[1mPOST /api/indexes HTTP/1.1[0m" 400 -
+2025-09-08 22:11:20,648 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-09-08 22:11:20,649 - apscheduler.scheduler - INFO - Added job "wake_up_app" to job store "default"
+2025-09-08 22:11:20,649 - apscheduler.scheduler - INFO - Scheduler started
+2025-09-08 22:11:20,651 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 10
+2025-09-08 22:11:20,651 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 13
+2025-09-08 22:11:20,657 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.2.73:5000
+2025-09-08 22:11:20,657 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-09-08 22:11:20,662 - werkzeug - INFO -  * Restarting with watchdog (fsevents)
+2025-09-08 22:11:20,948 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-09-08 22:11:20,949 - apscheduler.scheduler - INFO - Added job "wake_up_app" to job store "default"
+2025-09-08 22:11:20,949 - apscheduler.scheduler - INFO - Scheduler started
+2025-09-08 22:11:20,951 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 10
+2025-09-08 22:11:20,951 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 13
+2025-09-08 22:11:20,952 - werkzeug - WARNING -  * Debugger is active!
+2025-09-08 22:11:20,959 - werkzeug - INFO -  * Debugger PIN: 237-707-018
+2025-09-08 22:11:25,768 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 22:11:25] "OPTIONS /api/indexes HTTP/1.1" 200 -
+2025-09-08 22:11:26,599 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 22:11:26] "POST /api/indexes HTTP/1.1" 200 -
+2025-09-08 22:11:26,605 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 22:11:26] "OPTIONS /api/videos HTTP/1.1" 200 -
+2025-09-08 22:11:27,220 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 22:11:27] "POST /api/videos HTTP/1.1" 200 -
+2025-09-08 22:11:29,849 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 22:11:29] "POST /api/videos HTTP/1.1" 200 -
+2025-09-08 22:11:34,956 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 22:11:34] "OPTIONS /api/workflow HTTP/1.1" 200 -
+2025-09-08 22:11:34,959 - routes.api_routes - INFO - === WORKFLOW REQUEST START ===
+2025-09-08 22:11:34,959 - routes.api_routes - INFO - Request data: {
+  "index_id": "6893518408a37aa08793c4fe",
+  "video_id": "68bce2fa30049231acbe7051",
+  "analysis_prompt": "Research about it",
+  "research_query": "Research about it"
+}
+2025-09-08 22:11:34,960 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 22:11:34] "POST /api/workflow HTTP/1.1" 200 -
+2025-09-08 22:11:45,843 - httpx - INFO - HTTP Request: POST https://api.twelvelabs.io/v1.3/analyze "HTTP/1.1 200 OK"
+2025-09-08 22:12:05,312 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 22:12:05] "OPTIONS /api/config/twelvelabs HTTP/1.1" 200 -
+2025-09-08 22:12:05,316 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 22:12:05] "DELETE /api/config/twelvelabs HTTP/1.1" 200 -
+2025-09-08 22:12:09,258 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 22:12:09] "POST /api/config/twelvelabs HTTP/1.1" 200 -
+2025-09-08 22:12:09,264 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 22:12:09] "OPTIONS /api/videos HTTP/1.1" 200 -
+2025-09-08 22:12:09,890 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 22:12:09] "POST /api/videos HTTP/1.1" 200 -
+2025-09-08 22:12:16,727 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 22:12:16] "OPTIONS /api/config/twelvelabs HTTP/1.1" 200 -
+2025-09-08 22:12:16,730 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 22:12:16] "DELETE /api/config/twelvelabs HTTP/1.1" 200 -
+2025-09-08 22:12:16,766 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 22:12:16] "OPTIONS /api/indexes HTTP/1.1" 200 -
+2025-09-08 22:12:16,769 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 22:12:16] "[31m[1mPOST /api/indexes HTTP/1.1[0m" 400 -
+2025-09-08 22:12:24,085 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 22:12:24] "OPTIONS /api/config/twelvelabs HTTP/1.1" 200 -
+2025-09-08 22:12:24,087 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 22:12:24] "DELETE /api/config/twelvelabs HTTP/1.1" 200 -
+2025-09-08 22:12:24,092 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 22:12:24] "OPTIONS /api/indexes HTTP/1.1" 200 -
+2025-09-08 22:12:24,094 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 22:12:24] "[31m[1mPOST /api/indexes HTTP/1.1[0m" 400 -
+2025-09-08 22:12:29,711 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 22:12:29] "OPTIONS /api/workflow HTTP/1.1" 200 -
+2025-09-08 22:12:29,714 - routes.api_routes - INFO - === WORKFLOW REQUEST START ===
+2025-09-08 22:12:29,714 - routes.api_routes - INFO - Request data: {
+  "index_id": "689df72e4427a7b96b7a2cb8",
+  "video_id": "689df76cb1ba49c5144b7eca",
+  "analysis_prompt": "Research about it",
+  "research_query": "Research about it"
+}
+2025-09-08 22:12:29,714 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 22:12:29] "POST /api/workflow HTTP/1.1" 200 -
+2025-09-08 22:12:59,797 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 22:12:59] "OPTIONS /api/config/twelvelabs HTTP/1.1" 200 -
+2025-09-08 22:13:00,510 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 22:13:00] "POST /api/config/twelvelabs HTTP/1.1" 200 -
+2025-09-08 22:13:00,518 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 22:13:00] "OPTIONS /api/videos HTTP/1.1" 200 -
+2025-09-08 22:13:01,165 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 22:13:01] "POST /api/videos HTTP/1.1" 200 -
+2025-09-08 22:13:02,845 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 22:13:02] "OPTIONS /api/workflow HTTP/1.1" 200 -
+2025-09-08 22:13:02,847 - routes.api_routes - INFO - === WORKFLOW REQUEST START ===
+2025-09-08 22:13:02,848 - routes.api_routes - INFO - Request data: {
+  "index_id": "689df72e4427a7b96b7a2cb8",
+  "video_id": "689df76cb1ba49c5144b7eca",
+  "analysis_prompt": "Research about it",
+  "research_query": "Research about it"
+}
+2025-09-08 22:13:02,848 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 22:13:02] "POST /api/workflow HTTP/1.1" 200 -
+2025-09-08 22:13:15,479 - httpx - INFO - HTTP Request: POST https://api.twelvelabs.io/v1.3/analyze "HTTP/1.1 200 OK"
+2025-09-08 22:13:34,031 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 22:13:34] "OPTIONS /api/config/twelvelabs HTTP/1.1" 200 -
+2025-09-08 22:13:34,034 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 22:13:34] "DELETE /api/config/twelvelabs HTTP/1.1" 200 -
+2025-09-08 22:13:34,039 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 22:13:34] "OPTIONS /api/indexes HTTP/1.1" 200 -
+2025-09-08 22:13:34,042 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 22:13:34] "[31m[1mPOST /api/indexes HTTP/1.1[0m" 400 -
+2025-09-08 22:13:36,803 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 22:13:36] "DELETE /api/config/twelvelabs HTTP/1.1" 200 -
+2025-09-08 22:13:36,841 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 22:13:36] "[31m[1mPOST /api/indexes HTTP/1.1[0m" 400 -
+2025-09-08 22:15:41,590 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-09-08 22:15:41,591 - apscheduler.scheduler - INFO - Added job "wake_up_app" to job store "default"
+2025-09-08 22:15:41,591 - apscheduler.scheduler - INFO - Scheduler started
+2025-09-08 22:15:41,593 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 10
+2025-09-08 22:15:41,593 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 13
+2025-09-08 22:15:41,600 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.2.73:5000
+2025-09-08 22:15:41,600 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-09-08 22:15:41,605 - werkzeug - INFO -  * Restarting with watchdog (fsevents)
+2025-09-08 22:15:41,911 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-09-08 22:15:41,912 - apscheduler.scheduler - INFO - Added job "wake_up_app" to job store "default"
+2025-09-08 22:15:41,912 - apscheduler.scheduler - INFO - Scheduler started
+2025-09-08 22:15:41,914 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 10
+2025-09-08 22:15:41,914 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 13
+2025-09-08 22:15:41,915 - werkzeug - WARNING -  * Debugger is active!
+2025-09-08 22:15:41,922 - werkzeug - INFO -  * Debugger PIN: 237-707-018
+2025-09-08 22:15:49,934 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 22:15:49] "OPTIONS /api/indexes HTTP/1.1" 200 -
+2025-09-08 22:15:50,665 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 22:15:50] "POST /api/indexes HTTP/1.1" 200 -
+2025-09-08 22:15:50,752 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 22:15:50] "OPTIONS /api/videos HTTP/1.1" 200 -
+2025-09-08 22:15:51,340 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 22:15:51] "POST /api/videos HTTP/1.1" 200 -
+2025-09-08 22:15:52,764 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 22:15:52] "POST /api/videos HTTP/1.1" 200 -
+2025-09-08 22:15:59,539 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 22:15:59] "OPTIONS /api/workflow HTTP/1.1" 200 -
+2025-09-08 22:15:59,541 - routes.api_routes - INFO - === WORKFLOW REQUEST START ===
+2025-09-08 22:15:59,541 - routes.api_routes - INFO - Request data: {
+  "index_id": "6893518408a37aa08793c4fe",
+  "video_id": "68bce2fa30049231acbe7051",
+  "analysis_prompt": "Research about it",
+  "research_query": "Research about it"
+}
+2025-09-08 22:15:59,541 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 22:15:59] "POST /api/workflow HTTP/1.1" 200 -
+2025-09-08 22:16:08,992 - httpx - INFO - HTTP Request: POST https://api.twelvelabs.io/v1.3/analyze "HTTP/1.1 200 OK"

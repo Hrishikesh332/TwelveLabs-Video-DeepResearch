@@ -566,16 +566,7 @@ export default function DeepResearchLanding() {
 
   async function switchToEnvironmentKey() {
     try {
-      // First clear any custom API key from the backend
-      await fetch(`${API_CONFIG.BASE_URL}${API_CONFIG.ENDPOINTS.TWELVELABS.CONFIG}`, {
-        method: 'DELETE',
-        headers: { 'Content-Type': 'application/json' }
-      })
-
-      // Clear the custom API key from UI
-      setApiKey('')
-
-      // Now load data using environment key - exactly like initial load
+      // Just make the same API call as initial load - this will use backend's env key
       const res = await fetch(`${API_CONFIG.BASE_URL}${API_CONFIG.ENDPOINTS.TWELVELABS.INDEXES}`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -589,6 +580,7 @@ export default function DeepResearchLanding() {
           setIndexes(data.indexes)
           setIsConnected(true)
           setIsUsingEnvKey(true)
+          setApiKey('')
           setIsApiModalOpen(false)
           
           if (data.indexes.length > 0) {
@@ -602,6 +594,7 @@ export default function DeepResearchLanding() {
       console.log("No environment API key available")
     }
   }
+
   async function handleIndexChange(indexId: string) {
     setSelectedIndex(indexId)
     setSelectedVideo("")
@@ -1592,7 +1585,7 @@ Please provide a comprehensive answer that builds upon the previous research and
                         boxShadow: "inset 0px 0px 0px 1px rgba(0, 0, 0, 0.1)",
                         borderRadius: "14.4px"
                       }}
-                      onClick={() => setIsApiModalOpen(true)}
+                      onClick={() => isUsingEnvKey ? handleUseDefault() : setIsApiModalOpen(true)}
                     >
                       <div className="flex items-center space-x-2">
                         <Check className="w-4 h-4 text-black" />
@@ -1604,7 +1597,7 @@ Please provide a comprehensive answer that builds upon the previous research and
                       variant="outline"
                       size="sm"
                       className="text-xs text-gray-600 border-gray-200 bg-transparent hover:bg-gray-50"
-                      onClick={() => setIsApiModalOpen(true)}
+                      onClick={() => isUsingEnvKey ? handleUseDefault() : setIsApiModalOpen(true)}
                     >
                       Connect TwelveLabs API Key
                     </Button>

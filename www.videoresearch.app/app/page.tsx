@@ -1,7 +1,7 @@
 "use client"
 import InlineVideoPlayer from "@/components/InlineVideoPlayer"
 
-import { useState, useEffect } from "react"
+import { useState, useEffect, useRef } from "react"
 import { Button } from "@/components/ui/button"
 import { Card } from "@/components/ui/card"
 import {
@@ -180,6 +180,43 @@ function Logo({ className = "w-12 h-12" }: { className?: string }) {
     />
   )
 }
+
+// Inside the DeepResearchLanding component, before the return statement
+const AnimatedGif = ({ className }: { className?: string }) => {
+  const imgRef = useRef<HTMLImageElement>(null);
+
+  useEffect(() => {
+    const reloadGif = () => {
+      if (imgRef.current) {
+        imgRef.current.src = '/Twelve Labs.gif?' + Date.now();
+      }
+    };
+
+    // Initial load
+    reloadGif();
+
+    // Set up interval for continuous reloading
+    const interval = setInterval(reloadGif, 3000);
+
+    return () => clearInterval(interval);
+  }, []);
+
+  return (
+    <img 
+      ref={imgRef}
+      alt="TwelveLabs"
+      className={`w-8 h-8 object-contain ${className || ''}`}
+      style={{
+        opacity: 0,
+        transition: 'opacity 0.2s ease-in'
+      }}
+      onLoad={(e) => {
+        const img = e.target as HTMLImageElement;
+        img.style.opacity = '1';
+      }}
+    />
+  );
+};
 
 export default function DeepResearchLanding() {
   const { toast } = useToast()
@@ -562,8 +599,8 @@ export default function DeepResearchLanding() {
     
     // Map the search results to our source format
     return data.sources.map((result: any) => ({
-      title: result.title || 'Untitled',
-      url: result.url || '#',
+        title: result.title || 'Untitled',
+        url: result.url || '#',
       description: result.snippet || result.description || 'No description available',
       isReal: true,
       timestamp: new Date()
@@ -601,7 +638,7 @@ export default function DeepResearchLanding() {
         analysis_prompt: prompt.trim(),
         research_query: prompt.trim()
       }
-
+      
       const response = await fetch(`${API_CONFIG.BASE_URL}${API_CONFIG.ENDPOINTS.RESEARCH.WORKFLOW}`, {
         method: 'POST',
         headers: {
@@ -609,7 +646,7 @@ export default function DeepResearchLanding() {
         },
         body: JSON.stringify(payload)
       })
-
+      
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`)
       }
@@ -690,8 +727,8 @@ export default function DeepResearchLanding() {
                 // Set the research content
                 if (responseData.research) {
                   const researchContent = responseData.research.choices?.[0]?.message?.content || responseData.research
-                  setStreamingContent(researchContent)
-                  
+            setStreamingContent(researchContent)
+            
                   // Generate message ID
                   const messageId = `assistant-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`
                   
@@ -710,10 +747,10 @@ export default function DeepResearchLanding() {
                   }
                   
                   // Add message with its sources
-                  setChatMessages(prev => [...prev, {
+            setChatMessages(prev => [...prev, {
                     id: messageId,
-                    type: 'assistant',
-                    content: researchContent,
+              type: 'assistant',
+              content: researchContent,
                     timestamp: new Date(),
                     sources: initialSources
                   }])
@@ -741,7 +778,7 @@ export default function DeepResearchLanding() {
           }
         }
       }
-
+    
     } catch (error) {
       const errorMessage = error instanceof Error ? error.message : 'Research failed'
       
@@ -980,8 +1017,8 @@ Please provide a comprehensive answer that builds upon the previous research and
         <Toaster />
 
         {/* Header */}
-        <header className="border-b border-gray-100 bg-white flex-shrink-0">
-          <div className="container mx-auto px-6 py-4">
+        <header className="fixed top-0 left-0 right-0 border-b border-gray-100 bg-white z-50">
+          <div className="max-w-[1600px] mx-auto px-6 py-4">
             <div className="flex items-center justify-between">
               <div className="flex items-center space-x-2">
                 <Logo />
@@ -991,7 +1028,7 @@ Please provide a comprehensive answer that builds upon the previous research and
                 <Button
                   onClick={() => {
                     setResearchStarted(false)
-                    setResearchContext(null) // Clear research context when going back
+                    setResearchContext(null)
                   }}
                   variant="outline"
                   size="sm"
@@ -1005,13 +1042,13 @@ Please provide a comprehensive answer that builds upon the previous research and
           </div>
         </header>
 
-        {/* Main Content Area */}
-        <div className="flex-1 flex overflow-hidden">
+        {/* Main Content Area - Add top padding to account for fixed header */}
+        <div className="flex-1 flex overflow-hidden relative pt-[72px]">
           {/* Chat Content */}
-          <div className="flex-1 flex flex-col overflow-hidden">
+          <div className="flex-1 flex flex-col overflow-hidden pr-80">
             {/* Chat Messages - Scrollable Area */}
-            <div className="flex-1 overflow-y-auto p-6">
-              <div className="max-w-4xl mx-auto space-y-6">
+            <div className="flex-1 overflow-y-auto pb-24">
+              <div className="max-w-4xl mx-auto space-y-6 p-6">
                 {/* Chat Messages */}
                 {chatMessages.map((message, index) => (
                   <div key={message.id}>
@@ -1054,29 +1091,29 @@ Please provide a comprehensive answer that builds upon the previous research and
                                     key={`${source.url}-${sourceIndex}`}
                                     className="bg-white rounded-lg border border-black p-3 hover:bg-gray-50 transition-colors"
                                   >
-                                    <div className="flex items-start space-x-3">
-                                      <SourceIcon url={source.url} title={source.title} />
-                                      <div className="flex-1 min-w-0">
-                                        <a 
-                                          href={source.url} 
-                                          target="_blank" 
-                                          rel="noopener noreferrer"
-                                          className="text-sm font-medium text-gray-900 hover:text-blue-600 transition-colors line-clamp-2"
-                                        >
-                                          {source.title}
-                                        </a>
+                              <div className="flex items-start space-x-3">
+                                <SourceIcon url={source.url} title={source.title} />
+                                <div className="flex-1 min-w-0">
+                                  <a 
+                                    href={source.url} 
+                                    target="_blank" 
+                                    rel="noopener noreferrer"
+                                    className="text-sm font-medium text-gray-900 hover:text-blue-600 transition-colors line-clamp-2"
+                                  >
+                                    {source.title}
+                                  </a>
                                         <p className="text-xs text-gray-600 mt-1 line-clamp-2">
                                           {source.description}
                                         </p>
-                                      </div>
-                                    </div>
-                                  </div>
-                                ))}
+                                </div>
                               </div>
                             </div>
-                          </div>
-                        )}
-                        
+                          ))}
+                              </div>
+                        </div>
+                      </div>
+                    )}
+
                         {/* Response content */}
                         <div className="w-full text-gray-900 px-6 py-6 border-t border-b border-gray-200">
                           <div className="prose prose-lg max-w-none">
@@ -1124,13 +1161,7 @@ Please provide a comprehensive answer that builds upon the previous research and
                         })()}
                       </span>
                       <div className="w-8 h-8 flex items-center justify-center">
-                        <img 
-                          src="/Twelve Labs.gif" 
-                          alt="TwelveLabs" 
-                          className="w-8 h-8 object-contain"
-                          key={`twelvelabs-gif-${Date.now()}`}
-                          style={{ animation: 'none' }}
-                        />
+                        <AnimatedGif />
                       </div>
                     </div>
                     
@@ -1159,9 +1190,9 @@ Please provide a comprehensive answer that builds upon the previous research and
               </div>
             </div>
 
-            {/* Chat Input Area - Always Visible at Bottom */}
-            <div className="border-t border-gray-200 bg-white p-4 flex-shrink-0">
-              <div className="max-w-4xl mx-auto">
+            {/* Chat Input Area - Fixed at Bottom */}
+            <div className="fixed bottom-0 left-0 right-80 bg-white border-t border-gray-200 z-40">
+              <div className="max-w-4xl mx-auto p-4">
                 <div className="flex items-end space-x-3">
                   <div className="flex-1">
                     <textarea
@@ -1194,15 +1225,16 @@ Please provide a comprehensive answer that builds upon the previous research and
             </div>
           </div>
 
-          {/* Activity Sidebar - Always Visible During Research */}
-          <div className="w-80 border-l border-gray-200 bg-gray-50 shadow-lg flex-shrink-0">
-            <div className="p-6 h-full overflow-y-auto">
-              <div className="flex items-center justify-between mb-6">
+          {/* Activity Sidebar */}
+          <div className="w-80 border-l border-gray-200 bg-gray-50 shadow-lg flex-shrink-0 fixed right-0 top-[72px] bottom-0 overflow-hidden flex flex-col z-40">
+            {/* Sidebar Header */}
+            <div className="p-6 bg-gray-50">
+              <div className="flex items-center justify-between">
                 <h3 className="text-lg font-semibold text-gray-900">Research Mode</h3>
               </div>
 
               {/* Tabs */}
-              <div className="flex space-x-2 mb-6 bg-gray-100 p-1 rounded-lg">
+              <div className="flex space-x-2 mt-4 bg-gray-100 p-1 rounded-lg">
                 <button
                   onClick={() => setActiveTab('activity')}
                   className={`flex-1 px-4 py-2.5 text-sm font-medium rounded-md transition-all duration-200 flex items-center justify-center gap-2 ${
@@ -1230,11 +1262,14 @@ Please provide a comprehensive answer that builds upon the previous research and
                   Sources
                 </button>
               </div>
+            </div>
 
-              {/* Tab Content */}
-              <div className="bg-white rounded-lg border border-gray-200 shadow-sm">
+            {/* Scrollable Content Area */}
+            <div className="flex-1 overflow-y-auto">
+              <div className="p-4">
+                {/* Tab Content */}
                 {activeTab === 'activity' ? (
-                  <div className="p-4 space-y-4">
+                  <div className="space-y-4">
                     {activityLogs.map((log, index) => (
                       <div key={index} className="flex items-start space-x-3 hover:bg-gray-50 p-2 rounded-lg transition-colors">
                         <div className="mt-1 flex-shrink-0">
@@ -1258,7 +1293,7 @@ Please provide a comprehensive answer that builds upon the previous research and
                     )}
                   </div>
                 ) : (
-                  <div className="p-4 space-y-4">
+                  <div className="space-y-4">
                     {chatMessages.some(msg => msg.type === 'assistant' && msg.sources && msg.sources.length > 0) ? (
                       <>
                         <div className="mb-4">
@@ -1290,17 +1325,17 @@ Please provide a comprehensive answer that builds upon the previous research and
                                     key={`${source.url}-${sourceIndex}`} 
                                     className="bg-white hover:bg-gray-50 border border-gray-200 rounded-lg p-4 transition-all duration-200 group"
                                   >
-                                    <div className="flex items-start space-x-4">
-                                      <SourceIcon url={source.url} title={source.title} />
-                                      <div className="flex-1 min-w-0">
-                                        <a 
-                                          href={source.url} 
-                                          target="_blank" 
-                                          rel="noopener noreferrer"
-                                          className="text-sm font-medium text-gray-900 hover:text-blue-600 transition-colors line-clamp-2 block group-hover:text-blue-600"
-                                        >
-                                          {source.title}
-                                        </a>
+                          <div className="flex items-start space-x-4">
+                            <SourceIcon url={source.url} title={source.title} />
+                            <div className="flex-1 min-w-0">
+                              <a 
+                                href={source.url} 
+                                target="_blank" 
+                                rel="noopener noreferrer"
+                                className="text-sm font-medium text-gray-900 hover:text-blue-600 transition-colors line-clamp-2 block group-hover:text-blue-600"
+                              >
+                                {source.title}
+                              </a>
                                         <p className="text-xs text-gray-600 mt-2 line-clamp-2">
                                           {source.description}
                                         </p>
@@ -1308,9 +1343,9 @@ Please provide a comprehensive answer that builds upon the previous research and
                                           <span className="text-xs text-gray-500">
                                             {source.timestamp.toLocaleString()}
                                           </span>
-                                        </div>
-                                      </div>
-                                    </div>
+                            </div>
+                          </div>
+                        </div>
                                   </div>
                                 ))}
                               </div>
@@ -1321,12 +1356,12 @@ Please provide a comprehensive answer that builds upon the previous research and
                       <div className="text-center py-8 text-gray-500">
                         <svg className="w-12 h-12 mx-auto mb-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
-        </svg>
-        <p className="text-sm">No sources available yet</p>
-      </div>
-    )}
-  </div>
-)}
+                        </svg>
+                        <p className="text-sm">No sources available yet</p>
+                      </div>
+                    )}
+                  </div>
+                )}
               </div>
             </div>
           </div>

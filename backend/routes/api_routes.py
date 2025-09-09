@@ -428,7 +428,7 @@ def register_routes(app):
 """
                     
                     sonar_service = SonarService()
-                    research_result = sonar_service.deep_research(enhanced_query, timeout=60)
+                    research_result = sonar_service.deep_research(enhanced_query, timeout=180)
 
                     if 'error' in research_result:
                         yield json.dumps({

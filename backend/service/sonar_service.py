@@ -10,14 +10,14 @@ class SonarService:
         self.api_key = api_key
         self.base_url = "https://api.perplexity.ai/chat/completions"
     
-    def deep_research(self, query, timeout=60):
+    def deep_research(self, query, timeout=380):
 
         try:
             if not self.api_key:
                 raise ValueError("API key is required")
             
             payload = {
-                "model": "sonar",
+                "model": "sonar-deep-research",
                 "messages": [
                     {"role": "user", "content": query}
                 ]

@@ -1375,3 +1375,475 @@
 }
 2025-09-08 22:54:10,552 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 22:54:10] "POST /api/workflow HTTP/1.1" 200 -
 2025-09-08 22:54:21,203 - httpx - INFO - HTTP Request: POST https://api.twelvelabs.io/v1.3/analyze "HTTP/1.1 200 OK"
+2025-09-08 22:59:35,690 - apscheduler.executors.default - INFO - Running job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-08 23:08:35 CEST)" (scheduled at 2025-09-08 22:59:35.684084+02:00)
+2025-09-08 22:59:35,724 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 22:59:35] "GET /health HTTP/1.1" 200 -
+2025-09-08 22:59:35,725 - apscheduler.executors.default - INFO - Job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-08 23:08:35 CEST)" executed successfully
+2025-09-08 22:59:36,044 - apscheduler.executors.default - INFO - Running job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-08 23:08:36 CEST)" (scheduled at 2025-09-08 22:59:36.038186+02:00)
+2025-09-08 22:59:36,051 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 22:59:36] "GET /health HTTP/1.1" 200 -
+2025-09-08 22:59:36,052 - apscheduler.executors.default - INFO - Job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-08 23:08:36 CEST)" executed successfully
+2025-09-08 23:08:35,708 - apscheduler.executors.default - INFO - Running job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-08 23:17:35 CEST)" (scheduled at 2025-09-08 23:08:35.684084+02:00)
+2025-09-08 23:08:35,723 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 23:08:35] "GET /health HTTP/1.1" 200 -
+2025-09-08 23:08:35,725 - apscheduler.executors.default - INFO - Job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-08 23:17:35 CEST)" executed successfully
+2025-09-08 23:08:36,059 - apscheduler.executors.default - INFO - Running job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-08 23:17:36 CEST)" (scheduled at 2025-09-08 23:08:36.038186+02:00)
+2025-09-08 23:08:36,067 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 23:08:36] "GET /health HTTP/1.1" 200 -
+2025-09-08 23:08:36,068 - apscheduler.executors.default - INFO - Job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-08 23:17:36 CEST)" executed successfully
+2025-09-08 23:17:35,697 - apscheduler.executors.default - INFO - Running job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-08 23:26:35 CEST)" (scheduled at 2025-09-08 23:17:35.684084+02:00)
+2025-09-08 23:17:35,706 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 23:17:35] "GET /health HTTP/1.1" 200 -
+2025-09-08 23:17:35,708 - apscheduler.executors.default - INFO - Job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-08 23:26:35 CEST)" executed successfully
+2025-09-08 23:17:36,046 - apscheduler.executors.default - INFO - Running job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-08 23:26:36 CEST)" (scheduled at 2025-09-08 23:17:36.038186+02:00)
+2025-09-08 23:17:36,052 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 23:17:36] "GET /health HTTP/1.1" 200 -
+2025-09-08 23:17:36,054 - apscheduler.executors.default - INFO - Job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-08 23:26:36 CEST)" executed successfully
+2025-09-08 23:26:35,688 - apscheduler.executors.default - INFO - Running job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-08 23:35:35 CEST)" (scheduled at 2025-09-08 23:26:35.684084+02:00)
+2025-09-08 23:26:35,694 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 23:26:35] "GET /health HTTP/1.1" 200 -
+2025-09-08 23:26:35,696 - apscheduler.executors.default - INFO - Job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-08 23:35:35 CEST)" executed successfully
+2025-09-08 23:26:36,045 - apscheduler.executors.default - INFO - Running job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-08 23:35:36 CEST)" (scheduled at 2025-09-08 23:26:36.038186+02:00)
+2025-09-08 23:26:36,051 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 23:26:36] "GET /health HTTP/1.1" 200 -
+2025-09-08 23:26:36,052 - apscheduler.executors.default - INFO - Job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-08 23:35:36 CEST)" executed successfully
+2025-09-08 23:35:35,692 - apscheduler.executors.default - INFO - Running job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-08 23:44:35 CEST)" (scheduled at 2025-09-08 23:35:35.684084+02:00)
+2025-09-08 23:35:35,707 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 23:35:35] "GET /health HTTP/1.1" 200 -
+2025-09-08 23:35:35,710 - apscheduler.executors.default - INFO - Job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-08 23:44:35 CEST)" executed successfully
+2025-09-08 23:35:36,046 - apscheduler.executors.default - INFO - Running job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-08 23:44:36 CEST)" (scheduled at 2025-09-08 23:35:36.038186+02:00)
+2025-09-08 23:35:36,053 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 23:35:36] "GET /health HTTP/1.1" 200 -
+2025-09-08 23:35:36,055 - apscheduler.executors.default - INFO - Job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-08 23:44:36 CEST)" executed successfully
+2025-09-08 23:44:35,695 - apscheduler.executors.default - INFO - Running job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-08 23:53:35 CEST)" (scheduled at 2025-09-08 23:44:35.684084+02:00)
+2025-09-08 23:44:35,702 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 23:44:35] "GET /health HTTP/1.1" 200 -
+2025-09-08 23:44:35,704 - apscheduler.executors.default - INFO - Job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-08 23:53:35 CEST)" executed successfully
+2025-09-08 23:44:36,043 - apscheduler.executors.default - INFO - Running job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-08 23:53:36 CEST)" (scheduled at 2025-09-08 23:44:36.038186+02:00)
+2025-09-08 23:44:36,049 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 23:44:36] "GET /health HTTP/1.1" 200 -
+2025-09-08 23:44:36,050 - apscheduler.executors.default - INFO - Job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-08 23:53:36 CEST)" executed successfully
+2025-09-08 23:53:35,702 - apscheduler.executors.default - INFO - Running job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-09 00:02:35 CEST)" (scheduled at 2025-09-08 23:53:35.684084+02:00)
+2025-09-08 23:53:35,718 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 23:53:35] "GET /health HTTP/1.1" 200 -
+2025-09-08 23:53:35,721 - apscheduler.executors.default - INFO - Job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-09 00:02:35 CEST)" executed successfully
+2025-09-08 23:53:36,052 - apscheduler.executors.default - INFO - Running job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-09 00:02:36 CEST)" (scheduled at 2025-09-08 23:53:36.038186+02:00)
+2025-09-08 23:53:36,061 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 23:53:36] "GET /health HTTP/1.1" 200 -
+2025-09-08 23:53:36,062 - apscheduler.executors.default - INFO - Job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-09 00:02:36 CEST)" executed successfully
+2025-09-09 00:02:35,694 - apscheduler.executors.default - INFO - Running job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-09 00:11:35 CEST)" (scheduled at 2025-09-09 00:02:35.684084+02:00)
+2025-09-09 00:02:35,702 - werkzeug - INFO - 127.0.0.1 - - [09/Sep/2025 00:02:35] "GET /health HTTP/1.1" 200 -
+2025-09-09 00:02:35,704 - apscheduler.executors.default - INFO - Job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-09 00:11:35 CEST)" executed successfully
+2025-09-09 00:02:36,048 - apscheduler.executors.default - INFO - Running job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-09 00:11:36 CEST)" (scheduled at 2025-09-09 00:02:36.038186+02:00)
+2025-09-09 00:02:36,053 - werkzeug - INFO - 127.0.0.1 - - [09/Sep/2025 00:02:36] "GET /health HTTP/1.1" 200 -
+2025-09-09 00:02:36,054 - apscheduler.executors.default - INFO - Job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-09 00:11:36 CEST)" executed successfully
+2025-09-09 00:11:35,692 - apscheduler.executors.default - INFO - Running job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-09 00:20:35 CEST)" (scheduled at 2025-09-09 00:11:35.684084+02:00)
+2025-09-09 00:11:35,698 - werkzeug - INFO - 127.0.0.1 - - [09/Sep/2025 00:11:35] "GET /health HTTP/1.1" 200 -
+2025-09-09 00:11:35,700 - apscheduler.executors.default - INFO - Job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-09 00:20:35 CEST)" executed successfully
+2025-09-09 00:11:36,044 - apscheduler.executors.default - INFO - Running job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-09 00:20:36 CEST)" (scheduled at 2025-09-09 00:11:36.038186+02:00)
+2025-09-09 00:11:36,050 - werkzeug - INFO - 127.0.0.1 - - [09/Sep/2025 00:11:36] "GET /health HTTP/1.1" 200 -
+2025-09-09 00:11:36,051 - apscheduler.executors.default - INFO - Job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-09 00:20:36 CEST)" executed successfully
+2025-09-09 00:20:35,694 - apscheduler.executors.default - INFO - Running job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-09 00:29:35 CEST)" (scheduled at 2025-09-09 00:20:35.684084+02:00)
+2025-09-09 00:20:35,707 - werkzeug - INFO - 127.0.0.1 - - [09/Sep/2025 00:20:35] "GET /health HTTP/1.1" 200 -
+2025-09-09 00:20:35,710 - apscheduler.executors.default - INFO - Job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-09 00:29:35 CEST)" executed successfully
+2025-09-09 00:20:36,043 - apscheduler.executors.default - INFO - Running job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-09 00:29:36 CEST)" (scheduled at 2025-09-09 00:20:36.038186+02:00)
+2025-09-09 00:20:36,050 - werkzeug - INFO - 127.0.0.1 - - [09/Sep/2025 00:20:36] "GET /health HTTP/1.1" 200 -
+2025-09-09 00:20:36,052 - apscheduler.executors.default - INFO - Job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-09 00:29:36 CEST)" executed successfully
+2025-09-09 00:29:35,685 - apscheduler.executors.default - INFO - Running job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-09 00:38:35 CEST)" (scheduled at 2025-09-09 00:29:35.684084+02:00)
+2025-09-09 00:29:35,693 - werkzeug - INFO - 127.0.0.1 - - [09/Sep/2025 00:29:35] "GET /health HTTP/1.1" 200 -
+2025-09-09 00:29:35,694 - apscheduler.executors.default - INFO - Job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-09 00:38:35 CEST)" executed successfully
+2025-09-09 00:29:36,041 - apscheduler.executors.default - INFO - Running job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-09 00:38:36 CEST)" (scheduled at 2025-09-09 00:29:36.038186+02:00)
+2025-09-09 00:29:36,047 - werkzeug - INFO - 127.0.0.1 - - [09/Sep/2025 00:29:36] "GET /health HTTP/1.1" 200 -
+2025-09-09 00:29:36,048 - apscheduler.executors.default - INFO - Job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-09 00:38:36 CEST)" executed successfully
+2025-09-09 00:38:35,690 - apscheduler.executors.default - INFO - Running job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-09 00:47:35 CEST)" (scheduled at 2025-09-09 00:38:35.684084+02:00)
+2025-09-09 00:38:35,703 - werkzeug - INFO - 127.0.0.1 - - [09/Sep/2025 00:38:35] "GET /health HTTP/1.1" 200 -
+2025-09-09 00:38:35,705 - apscheduler.executors.default - INFO - Job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-09 00:47:35 CEST)" executed successfully
+2025-09-09 00:38:36,042 - apscheduler.executors.default - INFO - Running job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-09 00:47:36 CEST)" (scheduled at 2025-09-09 00:38:36.038186+02:00)
+2025-09-09 00:38:36,049 - werkzeug - INFO - 127.0.0.1 - - [09/Sep/2025 00:38:36] "GET /health HTTP/1.1" 200 -
+2025-09-09 00:38:36,051 - apscheduler.executors.default - INFO - Job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-09 00:47:36 CEST)" executed successfully
+2025-09-09 00:47:35,694 - apscheduler.executors.default - INFO - Running job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-09 00:56:35 CEST)" (scheduled at 2025-09-09 00:47:35.684084+02:00)
+2025-09-09 00:47:35,708 - werkzeug - INFO - 127.0.0.1 - - [09/Sep/2025 00:47:35] "GET /health HTTP/1.1" 200 -
+2025-09-09 00:47:35,710 - apscheduler.executors.default - INFO - Job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-09 00:56:35 CEST)" executed successfully
+2025-09-09 00:47:36,049 - apscheduler.executors.default - INFO - Running job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-09 00:56:36 CEST)" (scheduled at 2025-09-09 00:47:36.038186+02:00)
+2025-09-09 00:47:36,057 - werkzeug - INFO - 127.0.0.1 - - [09/Sep/2025 00:47:36] "GET /health HTTP/1.1" 200 -
+2025-09-09 00:47:36,059 - apscheduler.executors.default - INFO - Job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-09 00:56:36 CEST)" executed successfully
+2025-09-09 00:56:35,688 - apscheduler.executors.default - INFO - Running job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-09 01:05:35 CEST)" (scheduled at 2025-09-09 00:56:35.684084+02:00)
+2025-09-09 00:56:35,697 - werkzeug - INFO - 127.0.0.1 - - [09/Sep/2025 00:56:35] "GET /health HTTP/1.1" 200 -
+2025-09-09 00:56:35,699 - apscheduler.executors.default - INFO - Job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-09 01:05:35 CEST)" executed successfully
+2025-09-09 00:56:36,042 - apscheduler.executors.default - INFO - Running job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-09 01:05:36 CEST)" (scheduled at 2025-09-09 00:56:36.038186+02:00)
+2025-09-09 00:56:36,047 - werkzeug - INFO - 127.0.0.1 - - [09/Sep/2025 00:56:36] "GET /health HTTP/1.1" 200 -
+2025-09-09 00:56:36,049 - apscheduler.executors.default - INFO - Job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-09 01:05:36 CEST)" executed successfully
+2025-09-09 01:05:35,690 - apscheduler.executors.default - INFO - Running job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-09 01:14:35 CEST)" (scheduled at 2025-09-09 01:05:35.684084+02:00)
+2025-09-09 01:05:35,706 - werkzeug - INFO - 127.0.0.1 - - [09/Sep/2025 01:05:35] "GET /health HTTP/1.1" 200 -
+2025-09-09 01:05:35,710 - apscheduler.executors.default - INFO - Job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-09 01:14:35 CEST)" executed successfully
+2025-09-09 01:05:36,042 - apscheduler.executors.default - INFO - Running job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-09 01:14:36 CEST)" (scheduled at 2025-09-09 01:05:36.038186+02:00)
+2025-09-09 01:05:36,049 - werkzeug - INFO - 127.0.0.1 - - [09/Sep/2025 01:05:36] "GET /health HTTP/1.1" 200 -
+2025-09-09 01:05:36,050 - apscheduler.executors.default - INFO - Job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-09 01:14:36 CEST)" executed successfully
+2025-09-09 01:14:35,688 - apscheduler.executors.default - INFO - Running job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-09 01:23:35 CEST)" (scheduled at 2025-09-09 01:14:35.684084+02:00)
+2025-09-09 01:14:35,702 - werkzeug - INFO - 127.0.0.1 - - [09/Sep/2025 01:14:35] "GET /health HTTP/1.1" 200 -
+2025-09-09 01:14:35,704 - apscheduler.executors.default - INFO - Job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-09 01:23:35 CEST)" executed successfully
+2025-09-09 01:14:36,042 - apscheduler.executors.default - INFO - Running job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-09 01:23:36 CEST)" (scheduled at 2025-09-09 01:14:36.038186+02:00)
+2025-09-09 01:14:36,048 - werkzeug - INFO - 127.0.0.1 - - [09/Sep/2025 01:14:36] "GET /health HTTP/1.1" 200 -
+2025-09-09 01:14:36,050 - apscheduler.executors.default - INFO - Job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-09 01:23:36 CEST)" executed successfully
+2025-09-09 01:23:35,692 - apscheduler.executors.default - INFO - Running job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-09 01:32:35 CEST)" (scheduled at 2025-09-09 01:23:35.684084+02:00)
+2025-09-09 01:23:35,706 - werkzeug - INFO - 127.0.0.1 - - [09/Sep/2025 01:23:35] "GET /health HTTP/1.1" 200 -
+2025-09-09 01:23:35,708 - apscheduler.executors.default - INFO - Job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-09 01:32:35 CEST)" executed successfully
+2025-09-09 01:23:36,043 - apscheduler.executors.default - INFO - Running job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-09 01:32:36 CEST)" (scheduled at 2025-09-09 01:23:36.038186+02:00)
+2025-09-09 01:23:36,049 - werkzeug - INFO - 127.0.0.1 - - [09/Sep/2025 01:23:36] "GET /health HTTP/1.1" 200 -
+2025-09-09 01:23:36,051 - apscheduler.executors.default - INFO - Job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-09 01:32:36 CEST)" executed successfully
+2025-09-09 01:32:35,691 - apscheduler.executors.default - INFO - Running job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-09 01:41:35 CEST)" (scheduled at 2025-09-09 01:32:35.684084+02:00)
+2025-09-09 01:32:35,705 - werkzeug - INFO - 127.0.0.1 - - [09/Sep/2025 01:32:35] "GET /health HTTP/1.1" 200 -
+2025-09-09 01:32:35,708 - apscheduler.executors.default - INFO - Job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-09 01:41:35 CEST)" executed successfully
+2025-09-09 01:32:36,042 - apscheduler.executors.default - INFO - Running job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-09 01:41:36 CEST)" (scheduled at 2025-09-09 01:32:36.038186+02:00)
+2025-09-09 01:32:36,049 - werkzeug - INFO - 127.0.0.1 - - [09/Sep/2025 01:32:36] "GET /health HTTP/1.1" 200 -
+2025-09-09 01:32:36,051 - apscheduler.executors.default - INFO - Job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-09 01:41:36 CEST)" executed successfully
+2025-09-09 01:41:35,691 - apscheduler.executors.default - INFO - Running job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-09 01:50:35 CEST)" (scheduled at 2025-09-09 01:41:35.684084+02:00)
+2025-09-09 01:41:35,706 - werkzeug - INFO - 127.0.0.1 - - [09/Sep/2025 01:41:35] "GET /health HTTP/1.1" 200 -
+2025-09-09 01:41:35,709 - apscheduler.executors.default - INFO - Job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-09 01:50:35 CEST)" executed successfully
+2025-09-09 01:41:36,043 - apscheduler.executors.default - INFO - Running job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-09 01:50:36 CEST)" (scheduled at 2025-09-09 01:41:36.038186+02:00)
+2025-09-09 01:41:36,051 - werkzeug - INFO - 127.0.0.1 - - [09/Sep/2025 01:41:36] "GET /health HTTP/1.1" 200 -
+2025-09-09 01:41:36,052 - apscheduler.executors.default - INFO - Job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-09 01:50:36 CEST)" executed successfully
+2025-09-09 01:50:35,688 - apscheduler.executors.default - INFO - Running job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-09 01:59:35 CEST)" (scheduled at 2025-09-09 01:50:35.684084+02:00)
+2025-09-09 01:50:35,708 - werkzeug - INFO - 127.0.0.1 - - [09/Sep/2025 01:50:35] "GET /health HTTP/1.1" 200 -
+2025-09-09 01:50:35,710 - apscheduler.executors.default - INFO - Job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-09 01:59:35 CEST)" executed successfully
+2025-09-09 01:50:36,040 - apscheduler.executors.default - INFO - Running job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-09 01:59:36 CEST)" (scheduled at 2025-09-09 01:50:36.038186+02:00)
+2025-09-09 01:50:36,047 - werkzeug - INFO - 127.0.0.1 - - [09/Sep/2025 01:50:36] "GET /health HTTP/1.1" 200 -
+2025-09-09 01:50:36,049 - apscheduler.executors.default - INFO - Job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-09 01:59:36 CEST)" executed successfully
+2025-09-09 01:59:35,706 - apscheduler.executors.default - INFO - Running job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-09 02:08:35 CEST)" (scheduled at 2025-09-09 01:59:35.684084+02:00)
+2025-09-09 01:59:35,716 - werkzeug - INFO - 127.0.0.1 - - [09/Sep/2025 01:59:35] "GET /health HTTP/1.1" 200 -
+2025-09-09 01:59:35,718 - apscheduler.executors.default - INFO - Job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-09 02:08:35 CEST)" executed successfully
+2025-09-09 01:59:36,061 - apscheduler.executors.default - INFO - Running job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-09 02:08:36 CEST)" (scheduled at 2025-09-09 01:59:36.038186+02:00)
+2025-09-09 01:59:36,068 - werkzeug - INFO - 127.0.0.1 - - [09/Sep/2025 01:59:36] "GET /health HTTP/1.1" 200 -
+2025-09-09 01:59:36,069 - apscheduler.executors.default - INFO - Job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-09 02:08:36 CEST)" executed successfully
+2025-09-09 02:08:35,692 - apscheduler.executors.default - INFO - Running job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-09 02:17:35 CEST)" (scheduled at 2025-09-09 02:08:35.684084+02:00)
+2025-09-09 02:08:35,713 - werkzeug - INFO - 127.0.0.1 - - [09/Sep/2025 02:08:35] "GET /health HTTP/1.1" 200 -
+2025-09-09 02:08:35,715 - apscheduler.executors.default - INFO - Job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-09 02:17:35 CEST)" executed successfully
+2025-09-09 02:08:36,042 - apscheduler.executors.default - INFO - Running job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-09 02:17:36 CEST)" (scheduled at 2025-09-09 02:08:36.038186+02:00)
+2025-09-09 02:08:36,048 - werkzeug - INFO - 127.0.0.1 - - [09/Sep/2025 02:08:36] "GET /health HTTP/1.1" 200 -
+2025-09-09 02:08:36,050 - apscheduler.executors.default - INFO - Job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-09 02:17:36 CEST)" executed successfully
+2025-09-09 02:17:35,690 - apscheduler.executors.default - INFO - Running job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-09 02:26:35 CEST)" (scheduled at 2025-09-09 02:17:35.684084+02:00)
+2025-09-09 02:17:35,701 - werkzeug - INFO - 127.0.0.1 - - [09/Sep/2025 02:17:35] "GET /health HTTP/1.1" 200 -
+2025-09-09 02:17:35,702 - apscheduler.executors.default - INFO - Job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-09 02:26:35 CEST)" executed successfully
+2025-09-09 02:17:36,045 - apscheduler.executors.default - INFO - Running job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-09 02:26:36 CEST)" (scheduled at 2025-09-09 02:17:36.038186+02:00)
+2025-09-09 02:17:36,050 - werkzeug - INFO - 127.0.0.1 - - [09/Sep/2025 02:17:36] "GET /health HTTP/1.1" 200 -
+2025-09-09 02:17:36,051 - apscheduler.executors.default - INFO - Job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-09 02:26:36 CEST)" executed successfully
+2025-09-09 02:26:35,712 - apscheduler.executors.default - INFO - Running job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-09 02:35:35 CEST)" (scheduled at 2025-09-09 02:26:35.684084+02:00)
+2025-09-09 02:26:35,727 - werkzeug - INFO - 127.0.0.1 - - [09/Sep/2025 02:26:35] "GET /health HTTP/1.1" 200 -
+2025-09-09 02:26:35,729 - apscheduler.executors.default - INFO - Job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-09 02:35:35 CEST)" executed successfully
+2025-09-09 02:26:36,061 - apscheduler.executors.default - INFO - Running job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-09 02:35:36 CEST)" (scheduled at 2025-09-09 02:26:36.038186+02:00)
+2025-09-09 02:26:36,069 - werkzeug - INFO - 127.0.0.1 - - [09/Sep/2025 02:26:36] "GET /health HTTP/1.1" 200 -
+2025-09-09 02:26:36,070 - apscheduler.executors.default - INFO - Job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-09 02:35:36 CEST)" executed successfully
+2025-09-09 02:35:35,694 - apscheduler.executors.default - INFO - Running job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-09 02:44:35 CEST)" (scheduled at 2025-09-09 02:35:35.684084+02:00)
+2025-09-09 02:35:35,711 - werkzeug - INFO - 127.0.0.1 - - [09/Sep/2025 02:35:35] "GET /health HTTP/1.1" 200 -
+2025-09-09 02:35:35,715 - apscheduler.executors.default - INFO - Job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-09 02:44:35 CEST)" executed successfully
+2025-09-09 02:35:36,047 - apscheduler.executors.default - INFO - Running job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-09 02:44:36 CEST)" (scheduled at 2025-09-09 02:35:36.038186+02:00)
+2025-09-09 02:35:36,054 - werkzeug - INFO - 127.0.0.1 - - [09/Sep/2025 02:35:36] "GET /health HTTP/1.1" 200 -
+2025-09-09 02:35:36,055 - apscheduler.executors.default - INFO - Job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-09 02:44:36 CEST)" executed successfully
+2025-09-09 02:44:35,697 - apscheduler.executors.default - INFO - Running job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-09 02:53:35 CEST)" (scheduled at 2025-09-09 02:44:35.684084+02:00)
+2025-09-09 02:44:35,715 - werkzeug - INFO - 127.0.0.1 - - [09/Sep/2025 02:44:35] "GET /health HTTP/1.1" 200 -
+2025-09-09 02:44:35,717 - apscheduler.executors.default - INFO - Job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-09 02:53:35 CEST)" executed successfully
+2025-09-09 02:44:36,045 - apscheduler.executors.default - INFO - Running job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-09 02:53:36 CEST)" (scheduled at 2025-09-09 02:44:36.038186+02:00)
+2025-09-09 02:44:36,056 - werkzeug - INFO - 127.0.0.1 - - [09/Sep/2025 02:44:36] "GET /health HTTP/1.1" 200 -
+2025-09-09 02:44:36,057 - apscheduler.executors.default - INFO - Job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-09 02:53:36 CEST)" executed successfully
+2025-09-09 02:53:35,692 - apscheduler.executors.default - INFO - Running job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-09 03:02:35 CEST)" (scheduled at 2025-09-09 02:53:35.684084+02:00)
+2025-09-09 02:53:35,709 - werkzeug - INFO - 127.0.0.1 - - [09/Sep/2025 02:53:35] "GET /health HTTP/1.1" 200 -
+2025-09-09 02:53:35,713 - apscheduler.executors.default - INFO - Job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-09 03:02:35 CEST)" executed successfully
+2025-09-09 02:53:36,048 - apscheduler.executors.default - INFO - Running job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-09 03:02:36 CEST)" (scheduled at 2025-09-09 02:53:36.038186+02:00)
+2025-09-09 02:53:36,055 - werkzeug - INFO - 127.0.0.1 - - [09/Sep/2025 02:53:36] "GET /health HTTP/1.1" 200 -
+2025-09-09 02:53:36,057 - apscheduler.executors.default - INFO - Job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-09 03:02:36 CEST)" executed successfully
+2025-09-09 03:02:37,673 - apscheduler.executors.default - WARNING - Run time of job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-09 03:11:35 CEST)" was missed by 0:00:01.982102
+2025-09-09 03:02:37,687 - apscheduler.executors.default - WARNING - Run time of job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-09 03:11:36 CEST)" was missed by 0:00:01.644989
+2025-09-09 03:11:35,697 - apscheduler.executors.default - INFO - Running job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-09 03:20:35 CEST)" (scheduled at 2025-09-09 03:11:35.684084+02:00)
+2025-09-09 03:11:35,713 - werkzeug - INFO - 127.0.0.1 - - [09/Sep/2025 03:11:35] "GET /health HTTP/1.1" 200 -
+2025-09-09 03:11:35,715 - apscheduler.executors.default - INFO - Job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-09 03:20:35 CEST)" executed successfully
+2025-09-09 03:11:36,044 - apscheduler.executors.default - INFO - Running job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-09 03:20:36 CEST)" (scheduled at 2025-09-09 03:11:36.038186+02:00)
+2025-09-09 03:11:36,051 - werkzeug - INFO - 127.0.0.1 - - [09/Sep/2025 03:11:36] "GET /health HTTP/1.1" 200 -
+2025-09-09 03:11:36,053 - apscheduler.executors.default - INFO - Job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-09 03:20:36 CEST)" executed successfully
+2025-09-09 16:24:37,469 - apscheduler.executors.default - WARNING - Run time of job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-09 16:32:35 CEST)" was missed by 0:01:01.785211
+2025-09-09 16:24:37,819 - apscheduler.executors.default - WARNING - Run time of job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-09 16:32:36 CEST)" was missed by 0:01:01.780882
+2025-09-09 16:32:35,686 - apscheduler.executors.default - INFO - Running job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-09 16:41:35 CEST)" (scheduled at 2025-09-09 16:32:35.684084+02:00)
+2025-09-09 16:32:35,696 - werkzeug - INFO - 127.0.0.1 - - [09/Sep/2025 16:32:35] "GET /health HTTP/1.1" 200 -
+2025-09-09 16:32:35,698 - apscheduler.executors.default - INFO - Job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-09 16:41:35 CEST)" executed successfully
+2025-09-09 16:32:36,039 - apscheduler.executors.default - INFO - Running job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-09 16:41:36 CEST)" (scheduled at 2025-09-09 16:32:36.038186+02:00)
+2025-09-09 16:32:36,046 - werkzeug - INFO - 127.0.0.1 - - [09/Sep/2025 16:32:36] "GET /health HTTP/1.1" 200 -
+2025-09-09 16:32:36,047 - apscheduler.executors.default - INFO - Job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-09 16:41:36 CEST)" executed successfully
+2025-09-09 16:41:35,697 - apscheduler.executors.default - INFO - Running job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-09 16:50:35 CEST)" (scheduled at 2025-09-09 16:41:35.684084+02:00)
+2025-09-09 16:41:35,713 - werkzeug - INFO - 127.0.0.1 - - [09/Sep/2025 16:41:35] "GET /health HTTP/1.1" 200 -
+2025-09-09 16:41:35,715 - apscheduler.executors.default - INFO - Job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-09 16:50:35 CEST)" executed successfully
+2025-09-09 16:41:36,041 - apscheduler.executors.default - INFO - Running job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-09 16:50:36 CEST)" (scheduled at 2025-09-09 16:41:36.038186+02:00)
+2025-09-09 16:41:36,049 - werkzeug - INFO - 127.0.0.1 - - [09/Sep/2025 16:41:36] "GET /health HTTP/1.1" 200 -
+2025-09-09 16:41:36,052 - apscheduler.executors.default - INFO - Job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-09 16:50:36 CEST)" executed successfully
+2025-09-09 16:50:35,687 - apscheduler.executors.default - INFO - Running job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-09 16:59:35 CEST)" (scheduled at 2025-09-09 16:50:35.684084+02:00)
+2025-09-09 16:50:35,701 - werkzeug - INFO - 127.0.0.1 - - [09/Sep/2025 16:50:35] "GET /health HTTP/1.1" 200 -
+2025-09-09 16:50:35,704 - apscheduler.executors.default - INFO - Job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-09 16:59:35 CEST)" executed successfully
+2025-09-09 16:50:36,039 - apscheduler.executors.default - INFO - Running job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-09 16:59:36 CEST)" (scheduled at 2025-09-09 16:50:36.038186+02:00)
+2025-09-09 16:50:36,050 - werkzeug - INFO - 127.0.0.1 - - [09/Sep/2025 16:50:36] "GET /health HTTP/1.1" 200 -
+2025-09-09 16:50:36,051 - apscheduler.executors.default - INFO - Job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-09 16:59:36 CEST)" executed successfully
+2025-09-09 16:59:35,691 - apscheduler.executors.default - INFO - Running job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-09 17:08:35 CEST)" (scheduled at 2025-09-09 16:59:35.684084+02:00)
+2025-09-09 16:59:35,703 - werkzeug - INFO - 127.0.0.1 - - [09/Sep/2025 16:59:35] "GET /health HTTP/1.1" 200 -
+2025-09-09 16:59:35,705 - apscheduler.executors.default - INFO - Job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-09 17:08:35 CEST)" executed successfully
+2025-09-09 16:59:36,044 - apscheduler.executors.default - INFO - Running job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-09 17:08:36 CEST)" (scheduled at 2025-09-09 16:59:36.038186+02:00)
+2025-09-09 16:59:36,054 - werkzeug - INFO - 127.0.0.1 - - [09/Sep/2025 16:59:36] "GET /health HTTP/1.1" 200 -
+2025-09-09 16:59:36,055 - apscheduler.executors.default - INFO - Job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-09 17:08:36 CEST)" executed successfully
+2025-09-09 17:05:04,478 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-09-09 17:05:04,479 - apscheduler.scheduler - INFO - Added job "wake_up_app" to job store "default"
+2025-09-09 17:05:04,479 - apscheduler.scheduler - INFO - Scheduler started
+2025-09-09 17:05:04,481 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 10
+2025-09-09 17:05:04,481 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 13
+2025-09-09 17:05:04,488 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.2.73:5000
+2025-09-09 17:05:04,488 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-09-09 17:05:04,494 - werkzeug - INFO -  * Restarting with watchdog (fsevents)
+2025-09-09 17:05:04,897 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-09-09 17:05:04,897 - apscheduler.scheduler - INFO - Added job "wake_up_app" to job store "default"
+2025-09-09 17:05:04,898 - apscheduler.scheduler - INFO - Scheduler started
+2025-09-09 17:05:04,900 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 10
+2025-09-09 17:05:04,900 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 13
+2025-09-09 17:05:04,901 - werkzeug - WARNING -  * Debugger is active!
+2025-09-09 17:05:04,907 - werkzeug - INFO -  * Debugger PIN: 237-707-018
+2025-09-09 17:05:15,628 - werkzeug - INFO - 127.0.0.1 - - [09/Sep/2025 17:05:15] "OPTIONS /api/indexes HTTP/1.1" 200 -
+2025-09-09 17:05:15,630 - werkzeug - INFO - 127.0.0.1 - - [09/Sep/2025 17:05:15] "OPTIONS /api/indexes HTTP/1.1" 200 -
+2025-09-09 17:05:16,430 - werkzeug - INFO - 127.0.0.1 - - [09/Sep/2025 17:05:16] "POST /api/indexes HTTP/1.1" 200 -
+2025-09-09 17:05:16,431 - werkzeug - INFO - 127.0.0.1 - - [09/Sep/2025 17:05:16] "POST /api/indexes HTTP/1.1" 200 -
+2025-09-09 17:05:16,434 - werkzeug - INFO - 127.0.0.1 - - [09/Sep/2025 17:05:16] "OPTIONS /api/videos HTTP/1.1" 200 -
+2025-09-09 17:05:16,435 - werkzeug - INFO - 127.0.0.1 - - [09/Sep/2025 17:05:16] "OPTIONS /api/videos HTTP/1.1" 200 -
+2025-09-09 17:05:17,037 - werkzeug - INFO - 127.0.0.1 - - [09/Sep/2025 17:05:17] "POST /api/videos HTTP/1.1" 200 -
+2025-09-09 17:05:17,038 - werkzeug - INFO - 127.0.0.1 - - [09/Sep/2025 17:05:17] "POST /api/videos HTTP/1.1" 200 -
+2025-09-09 17:14:04,511 - apscheduler.executors.default - INFO - Running job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-09 17:23:04 CEST)" (scheduled at 2025-09-09 17:14:04.478563+02:00)
+2025-09-09 17:14:04,564 - werkzeug - INFO - 127.0.0.1 - - [09/Sep/2025 17:14:04] "GET /health HTTP/1.1" 200 -
+2025-09-09 17:14:04,565 - apscheduler.executors.default - INFO - Job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-09 17:23:04 CEST)" executed successfully
+2025-09-09 17:14:04,906 - apscheduler.executors.default - INFO - Running job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-09 17:23:04 CEST)" (scheduled at 2025-09-09 17:14:04.897583+02:00)
+2025-09-09 17:14:04,909 - werkzeug - INFO - 127.0.0.1 - - [09/Sep/2025 17:14:04] "GET /health HTTP/1.1" 200 -
+2025-09-09 17:14:04,910 - apscheduler.executors.default - INFO - Job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-09 17:23:04 CEST)" executed successfully
+2025-09-09 17:23:04,484 - apscheduler.executors.default - INFO - Running job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-09 17:32:04 CEST)" (scheduled at 2025-09-09 17:23:04.478563+02:00)
+2025-09-09 17:23:04,492 - werkzeug - INFO - 127.0.0.1 - - [09/Sep/2025 17:23:04] "GET /health HTTP/1.1" 200 -
+2025-09-09 17:23:04,493 - apscheduler.executors.default - INFO - Job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-09 17:32:04 CEST)" executed successfully
+2025-09-09 17:23:04,903 - apscheduler.executors.default - INFO - Running job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-09 17:32:04 CEST)" (scheduled at 2025-09-09 17:23:04.897583+02:00)
+2025-09-09 17:23:04,906 - werkzeug - INFO - 127.0.0.1 - - [09/Sep/2025 17:23:04] "GET /health HTTP/1.1" 200 -
+2025-09-09 17:23:04,907 - apscheduler.executors.default - INFO - Job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-09 17:32:04 CEST)" executed successfully
+2025-09-09 17:56:08,722 - apscheduler.executors.default - WARNING - Run time of job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-09 17:59:04 CEST)" was missed by 0:06:04.243731
+2025-09-09 17:56:09,140 - apscheduler.executors.default - WARNING - Run time of job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-09 17:59:04 CEST)" was missed by 0:06:04.242945
+2025-09-09 18:52:20,722 - apscheduler.executors.default - WARNING - Run time of job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-09 18:53:04 CEST)" was missed by 0:08:16.244178
+2025-09-09 18:52:21,148 - apscheduler.executors.default - WARNING - Run time of job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-09 18:53:04 CEST)" was missed by 0:08:16.250925
+2025-09-09 18:53:04,483 - apscheduler.executors.default - INFO - Running job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-09 19:02:04 CEST)" (scheduled at 2025-09-09 18:53:04.478563+02:00)
+2025-09-09 18:53:04,490 - werkzeug - INFO - 127.0.0.1 - - [09/Sep/2025 18:53:04] "GET /health HTTP/1.1" 200 -
+2025-09-09 18:53:04,491 - apscheduler.executors.default - INFO - Job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-09 19:02:04 CEST)" executed successfully
+2025-09-09 18:53:04,901 - apscheduler.executors.default - INFO - Running job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-09 19:02:04 CEST)" (scheduled at 2025-09-09 18:53:04.897583+02:00)
+2025-09-09 18:53:04,903 - werkzeug - INFO - 127.0.0.1 - - [09/Sep/2025 18:53:04] "GET /health HTTP/1.1" 200 -
+2025-09-09 18:53:04,904 - apscheduler.executors.default - INFO - Job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-09 19:02:04 CEST)" executed successfully
+2025-09-09 18:55:27,304 - werkzeug - INFO - 127.0.0.1 - - [09/Sep/2025 18:55:27] "OPTIONS /api/indexes HTTP/1.1" 200 -
+2025-09-09 18:55:27,305 - werkzeug - INFO - 127.0.0.1 - - [09/Sep/2025 18:55:27] "OPTIONS /api/indexes HTTP/1.1" 200 -
+2025-09-09 18:55:28,067 - werkzeug - INFO - 127.0.0.1 - - [09/Sep/2025 18:55:28] "POST /api/indexes HTTP/1.1" 200 -
+2025-09-09 18:55:28,070 - werkzeug - INFO - 127.0.0.1 - - [09/Sep/2025 18:55:28] "POST /api/indexes HTTP/1.1" 200 -
+2025-09-09 18:55:28,192 - werkzeug - INFO - 127.0.0.1 - - [09/Sep/2025 18:55:28] "OPTIONS /api/videos HTTP/1.1" 200 -
+2025-09-09 18:55:28,199 - werkzeug - INFO - 127.0.0.1 - - [09/Sep/2025 18:55:28] "OPTIONS /api/videos HTTP/1.1" 200 -
+2025-09-09 18:55:28,795 - werkzeug - INFO - 127.0.0.1 - - [09/Sep/2025 18:55:28] "POST /api/videos HTTP/1.1" 200 -
+2025-09-09 18:55:28,796 - werkzeug - INFO - 127.0.0.1 - - [09/Sep/2025 18:55:28] "POST /api/videos HTTP/1.1" 200 -
+2025-09-09 18:56:09,238 - werkzeug - INFO - 127.0.0.1 - - [09/Sep/2025 18:56:09] "OPTIONS /api/indexes HTTP/1.1" 200 -
+2025-09-09 18:56:09,239 - werkzeug - INFO - 127.0.0.1 - - [09/Sep/2025 18:56:09] "OPTIONS /api/indexes HTTP/1.1" 200 -
+2025-09-09 18:56:09,851 - werkzeug - INFO - 127.0.0.1 - - [09/Sep/2025 18:56:09] "POST /api/indexes HTTP/1.1" 200 -
+2025-09-09 18:56:09,851 - werkzeug - INFO - 127.0.0.1 - - [09/Sep/2025 18:56:09] "POST /api/indexes HTTP/1.1" 200 -
+2025-09-09 18:56:09,854 - werkzeug - INFO - 127.0.0.1 - - [09/Sep/2025 18:56:09] "OPTIONS /api/videos HTTP/1.1" 200 -
+2025-09-09 18:56:09,854 - werkzeug - INFO - 127.0.0.1 - - [09/Sep/2025 18:56:09] "OPTIONS /api/videos HTTP/1.1" 200 -
+2025-09-09 18:56:10,451 - werkzeug - INFO - 127.0.0.1 - - [09/Sep/2025 18:56:10] "POST /api/videos HTTP/1.1" 200 -
+2025-09-09 18:56:10,452 - werkzeug - INFO - 127.0.0.1 - - [09/Sep/2025 18:56:10] "POST /api/videos HTTP/1.1" 200 -
+2025-09-09 18:57:05,655 - werkzeug - INFO - 127.0.0.1 - - [09/Sep/2025 18:57:05] "OPTIONS /api/indexes HTTP/1.1" 200 -
+2025-09-09 18:57:05,656 - werkzeug - INFO - 127.0.0.1 - - [09/Sep/2025 18:57:05] "OPTIONS /api/indexes HTTP/1.1" 200 -
+2025-09-09 18:57:06,264 - werkzeug - INFO - 127.0.0.1 - - [09/Sep/2025 18:57:06] "POST /api/indexes HTTP/1.1" 200 -
+2025-09-09 18:57:06,265 - werkzeug - INFO - 127.0.0.1 - - [09/Sep/2025 18:57:06] "POST /api/indexes HTTP/1.1" 200 -
+2025-09-09 18:57:06,268 - werkzeug - INFO - 127.0.0.1 - - [09/Sep/2025 18:57:06] "OPTIONS /api/videos HTTP/1.1" 200 -
+2025-09-09 18:57:06,843 - werkzeug - INFO - 127.0.0.1 - - [09/Sep/2025 18:57:06] "POST /api/videos HTTP/1.1" 200 -
+2025-09-09 18:57:06,863 - werkzeug - INFO - 127.0.0.1 - - [09/Sep/2025 18:57:06] "POST /api/videos HTTP/1.1" 200 -
+2025-09-09 19:02:04,485 - apscheduler.executors.default - INFO - Running job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-09 19:11:04 CEST)" (scheduled at 2025-09-09 19:02:04.478563+02:00)
+2025-09-09 19:02:04,490 - werkzeug - INFO - 127.0.0.1 - - [09/Sep/2025 19:02:04] "GET /health HTTP/1.1" 200 -
+2025-09-09 19:02:04,491 - apscheduler.executors.default - INFO - Job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-09 19:11:04 CEST)" executed successfully
+2025-09-09 19:02:04,904 - apscheduler.executors.default - INFO - Running job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-09 19:11:04 CEST)" (scheduled at 2025-09-09 19:02:04.897583+02:00)
+2025-09-09 19:02:04,907 - werkzeug - INFO - 127.0.0.1 - - [09/Sep/2025 19:02:04] "GET /health HTTP/1.1" 200 -
+2025-09-09 19:02:04,907 - apscheduler.executors.default - INFO - Job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-09 19:11:04 CEST)" executed successfully
+2025-09-09 19:05:16,255 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-09-09 19:05:16,255 - apscheduler.scheduler - INFO - Added job "wake_up_app" to job store "default"
+2025-09-09 19:05:16,255 - apscheduler.scheduler - INFO - Scheduler started
+2025-09-09 19:05:16,257 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 10
+2025-09-09 19:05:16,257 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 13
+2025-09-09 19:05:16,264 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.2.73:5000
+2025-09-09 19:05:16,264 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-09-09 19:05:16,269 - werkzeug - INFO -  * Restarting with watchdog (fsevents)
+2025-09-09 19:05:16,553 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-09-09 19:05:16,553 - apscheduler.scheduler - INFO - Added job "wake_up_app" to job store "default"
+2025-09-09 19:05:16,553 - apscheduler.scheduler - INFO - Scheduler started
+2025-09-09 19:05:16,556 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 10
+2025-09-09 19:05:16,556 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 13
+2025-09-09 19:05:16,557 - werkzeug - WARNING -  * Debugger is active!
+2025-09-09 19:05:16,563 - werkzeug - INFO -  * Debugger PIN: 237-707-018
+2025-09-09 19:14:16,260 - apscheduler.executors.default - INFO - Running job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-09 19:23:16 CEST)" (scheduled at 2025-09-09 19:14:16.254990+02:00)
+2025-09-09 19:14:16,277 - werkzeug - INFO - 127.0.0.1 - - [09/Sep/2025 19:14:16] "GET /health HTTP/1.1" 200 -
+2025-09-09 19:14:16,278 - apscheduler.executors.default - INFO - Job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-09 19:23:16 CEST)" executed successfully
+2025-09-09 19:14:16,559 - apscheduler.executors.default - INFO - Running job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-09 19:23:16 CEST)" (scheduled at 2025-09-09 19:14:16.553590+02:00)
+2025-09-09 19:14:16,566 - werkzeug - INFO - 127.0.0.1 - - [09/Sep/2025 19:14:16] "GET /health HTTP/1.1" 200 -
+2025-09-09 19:14:16,567 - apscheduler.executors.default - INFO - Job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-09 19:23:16 CEST)" executed successfully
+2025-09-09 19:23:16,256 - apscheduler.executors.default - INFO - Running job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-09 19:32:16 CEST)" (scheduled at 2025-09-09 19:23:16.254990+02:00)
+2025-09-09 19:23:16,263 - werkzeug - INFO - 127.0.0.1 - - [09/Sep/2025 19:23:16] "GET /health HTTP/1.1" 200 -
+2025-09-09 19:23:16,264 - apscheduler.executors.default - INFO - Job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-09 19:32:16 CEST)" executed successfully
+2025-09-09 19:23:16,554 - apscheduler.executors.default - INFO - Running job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-09 19:32:16 CEST)" (scheduled at 2025-09-09 19:23:16.553590+02:00)
+2025-09-09 19:23:16,557 - werkzeug - INFO - 127.0.0.1 - - [09/Sep/2025 19:23:16] "GET /health HTTP/1.1" 200 -
+2025-09-09 19:23:16,557 - apscheduler.executors.default - INFO - Job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-09 19:32:16 CEST)" executed successfully
+2025-09-09 19:32:16,261 - apscheduler.executors.default - INFO - Running job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-09 19:41:16 CEST)" (scheduled at 2025-09-09 19:32:16.254990+02:00)
+2025-09-09 19:32:16,267 - werkzeug - INFO - 127.0.0.1 - - [09/Sep/2025 19:32:16] "GET /health HTTP/1.1" 200 -
+2025-09-09 19:32:16,268 - apscheduler.executors.default - INFO - Job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-09 19:41:16 CEST)" executed successfully
+2025-09-09 19:32:16,557 - apscheduler.executors.default - INFO - Running job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-09 19:41:16 CEST)" (scheduled at 2025-09-09 19:32:16.553590+02:00)
+2025-09-09 19:32:16,560 - werkzeug - INFO - 127.0.0.1 - - [09/Sep/2025 19:32:16] "GET /health HTTP/1.1" 200 -
+2025-09-09 19:32:16,560 - apscheduler.executors.default - INFO - Job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-09 19:41:16 CEST)" executed successfully
+2025-09-09 19:41:16,256 - apscheduler.executors.default - INFO - Running job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-09 19:50:16 CEST)" (scheduled at 2025-09-09 19:41:16.254990+02:00)
+2025-09-09 19:41:16,265 - werkzeug - INFO - 127.0.0.1 - - [09/Sep/2025 19:41:16] "GET /health HTTP/1.1" 200 -
+2025-09-09 19:41:16,266 - apscheduler.executors.default - INFO - Job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-09 19:50:16 CEST)" executed successfully
+2025-09-09 19:41:16,555 - apscheduler.executors.default - INFO - Running job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-09 19:50:16 CEST)" (scheduled at 2025-09-09 19:41:16.553590+02:00)
+2025-09-09 19:41:16,559 - werkzeug - INFO - 127.0.0.1 - - [09/Sep/2025 19:41:16] "GET /health HTTP/1.1" 200 -
+2025-09-09 19:41:16,559 - apscheduler.executors.default - INFO - Job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-09 19:50:16 CEST)" executed successfully
+2025-09-09 19:50:16,275 - apscheduler.executors.default - INFO - Running job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-09 19:59:16 CEST)" (scheduled at 2025-09-09 19:50:16.254990+02:00)
+2025-09-09 19:50:16,284 - werkzeug - INFO - 127.0.0.1 - - [09/Sep/2025 19:50:16] "GET /health HTTP/1.1" 200 -
+2025-09-09 19:50:16,285 - apscheduler.executors.default - INFO - Job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-09 19:59:16 CEST)" executed successfully
+2025-09-09 19:50:16,565 - apscheduler.executors.default - INFO - Running job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-09 19:59:16 CEST)" (scheduled at 2025-09-09 19:50:16.553590+02:00)
+2025-09-09 19:50:16,568 - werkzeug - INFO - 127.0.0.1 - - [09/Sep/2025 19:50:16] "GET /health HTTP/1.1" 200 -
+2025-09-09 19:50:16,568 - apscheduler.executors.default - INFO - Job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-09 19:59:16 CEST)" executed successfully
+2025-09-09 19:59:16,269 - apscheduler.executors.default - INFO - Running job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-09 20:08:16 CEST)" (scheduled at 2025-09-09 19:59:16.254990+02:00)
+2025-09-09 19:59:16,294 - werkzeug - INFO - 127.0.0.1 - - [09/Sep/2025 19:59:16] "GET /health HTTP/1.1" 200 -
+2025-09-09 19:59:16,296 - apscheduler.executors.default - INFO - Job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-09 20:08:16 CEST)" executed successfully
+2025-09-09 19:59:16,563 - apscheduler.executors.default - INFO - Running job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-09 20:08:16 CEST)" (scheduled at 2025-09-09 19:59:16.553590+02:00)
+2025-09-09 19:59:16,566 - werkzeug - INFO - 127.0.0.1 - - [09/Sep/2025 19:59:16] "GET /health HTTP/1.1" 200 -
+2025-09-09 19:59:16,566 - apscheduler.executors.default - INFO - Job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-09 20:08:16 CEST)" executed successfully
+2025-09-09 20:08:16,268 - apscheduler.executors.default - INFO - Running job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-09 20:17:16 CEST)" (scheduled at 2025-09-09 20:08:16.254990+02:00)
+2025-09-09 20:08:16,280 - werkzeug - INFO - 127.0.0.1 - - [09/Sep/2025 20:08:16] "GET /health HTTP/1.1" 200 -
+2025-09-09 20:08:16,281 - apscheduler.executors.default - INFO - Job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-09 20:17:16 CEST)" executed successfully
+2025-09-09 20:08:16,556 - apscheduler.executors.default - INFO - Running job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-09 20:17:16 CEST)" (scheduled at 2025-09-09 20:08:16.553590+02:00)
+2025-09-09 20:08:16,559 - werkzeug - INFO - 127.0.0.1 - - [09/Sep/2025 20:08:16] "GET /health HTTP/1.1" 200 -
+2025-09-09 20:08:16,560 - apscheduler.executors.default - INFO - Job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-09 20:17:16 CEST)" executed successfully
+2025-09-09 20:17:16,261 - apscheduler.executors.default - INFO - Running job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-09 20:26:16 CEST)" (scheduled at 2025-09-09 20:17:16.254990+02:00)
+2025-09-09 20:17:16,267 - werkzeug - INFO - 127.0.0.1 - - [09/Sep/2025 20:17:16] "GET /health HTTP/1.1" 200 -
+2025-09-09 20:17:16,268 - apscheduler.executors.default - INFO - Job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-09 20:26:16 CEST)" executed successfully
+2025-09-09 20:17:16,557 - apscheduler.executors.default - INFO - Running job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-09 20:26:16 CEST)" (scheduled at 2025-09-09 20:17:16.553590+02:00)
+2025-09-09 20:17:16,559 - werkzeug - INFO - 127.0.0.1 - - [09/Sep/2025 20:17:16] "GET /health HTTP/1.1" 200 -
+2025-09-09 20:17:16,560 - apscheduler.executors.default - INFO - Job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-09 20:26:16 CEST)" executed successfully
+2025-09-09 20:26:16,259 - apscheduler.executors.default - INFO - Running job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-09 20:35:16 CEST)" (scheduled at 2025-09-09 20:26:16.254990+02:00)
+2025-09-09 20:26:16,264 - werkzeug - INFO - 127.0.0.1 - - [09/Sep/2025 20:26:16] "GET /health HTTP/1.1" 200 -
+2025-09-09 20:26:16,265 - apscheduler.executors.default - INFO - Job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-09 20:35:16 CEST)" executed successfully
+2025-09-09 20:26:16,554 - apscheduler.executors.default - INFO - Running job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-09 20:35:16 CEST)" (scheduled at 2025-09-09 20:26:16.553590+02:00)
+2025-09-09 20:26:16,556 - werkzeug - INFO - 127.0.0.1 - - [09/Sep/2025 20:26:16] "GET /health HTTP/1.1" 200 -
+2025-09-09 20:26:16,557 - apscheduler.executors.default - INFO - Job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-09 20:35:16 CEST)" executed successfully
+2025-09-09 20:35:16,262 - apscheduler.executors.default - INFO - Running job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-09 20:44:16 CEST)" (scheduled at 2025-09-09 20:35:16.254990+02:00)
+2025-09-09 20:35:16,270 - werkzeug - INFO - 127.0.0.1 - - [09/Sep/2025 20:35:16] "GET /health HTTP/1.1" 200 -
+2025-09-09 20:35:16,271 - apscheduler.executors.default - INFO - Job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-09 20:44:16 CEST)" executed successfully
+2025-09-09 20:35:16,560 - apscheduler.executors.default - INFO - Running job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-09 20:44:16 CEST)" (scheduled at 2025-09-09 20:35:16.553590+02:00)
+2025-09-09 20:35:16,563 - werkzeug - INFO - 127.0.0.1 - - [09/Sep/2025 20:35:16] "GET /health HTTP/1.1" 200 -
+2025-09-09 20:35:16,564 - apscheduler.executors.default - INFO - Job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-09 20:44:16 CEST)" executed successfully
+2025-09-09 20:44:16,261 - apscheduler.executors.default - INFO - Running job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-09 20:53:16 CEST)" (scheduled at 2025-09-09 20:44:16.254990+02:00)
+2025-09-09 20:44:16,268 - werkzeug - INFO - 127.0.0.1 - - [09/Sep/2025 20:44:16] "GET /health HTTP/1.1" 200 -
+2025-09-09 20:44:16,269 - apscheduler.executors.default - INFO - Job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-09 20:53:16 CEST)" executed successfully
+2025-09-09 20:44:16,558 - apscheduler.executors.default - INFO - Running job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-09 20:53:16 CEST)" (scheduled at 2025-09-09 20:44:16.553590+02:00)
+2025-09-09 20:44:16,561 - werkzeug - INFO - 127.0.0.1 - - [09/Sep/2025 20:44:16] "GET /health HTTP/1.1" 200 -
+2025-09-09 20:44:16,561 - apscheduler.executors.default - INFO - Job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-09 20:53:16 CEST)" executed successfully
+2025-09-09 20:53:16,263 - apscheduler.executors.default - INFO - Running job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-09 21:02:16 CEST)" (scheduled at 2025-09-09 20:53:16.254990+02:00)
+2025-09-09 20:53:16,269 - werkzeug - INFO - 127.0.0.1 - - [09/Sep/2025 20:53:16] "GET /health HTTP/1.1" 200 -
+2025-09-09 20:53:16,270 - apscheduler.executors.default - INFO - Job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-09 21:02:16 CEST)" executed successfully
+2025-09-09 20:53:16,560 - apscheduler.executors.default - INFO - Running job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-09 21:02:16 CEST)" (scheduled at 2025-09-09 20:53:16.553590+02:00)
+2025-09-09 20:53:16,563 - werkzeug - INFO - 127.0.0.1 - - [09/Sep/2025 20:53:16] "GET /health HTTP/1.1" 200 -
+2025-09-09 20:53:16,564 - apscheduler.executors.default - INFO - Job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-09 21:02:16 CEST)" executed successfully
+2025-09-09 21:02:16,262 - apscheduler.executors.default - INFO - Running job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-09 21:11:16 CEST)" (scheduled at 2025-09-09 21:02:16.254990+02:00)
+2025-09-09 21:02:16,269 - werkzeug - INFO - 127.0.0.1 - - [09/Sep/2025 21:02:16] "GET /health HTTP/1.1" 200 -
+2025-09-09 21:02:16,270 - apscheduler.executors.default - INFO - Job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-09 21:11:16 CEST)" executed successfully
+2025-09-09 21:02:16,560 - apscheduler.executors.default - INFO - Running job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-09 21:11:16 CEST)" (scheduled at 2025-09-09 21:02:16.553590+02:00)
+2025-09-09 21:02:16,563 - werkzeug - INFO - 127.0.0.1 - - [09/Sep/2025 21:02:16] "GET /health HTTP/1.1" 200 -
+2025-09-09 21:02:16,563 - apscheduler.executors.default - INFO - Job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-09 21:11:16 CEST)" executed successfully
+2025-09-09 21:11:16,263 - apscheduler.executors.default - INFO - Running job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-09 21:20:16 CEST)" (scheduled at 2025-09-09 21:11:16.254990+02:00)
+2025-09-09 21:11:16,273 - werkzeug - INFO - 127.0.0.1 - - [09/Sep/2025 21:11:16] "GET /health HTTP/1.1" 200 -
+2025-09-09 21:11:16,274 - apscheduler.executors.default - INFO - Job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-09 21:20:16 CEST)" executed successfully
+2025-09-09 21:11:16,555 - apscheduler.executors.default - INFO - Running job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-09 21:20:16 CEST)" (scheduled at 2025-09-09 21:11:16.553590+02:00)
+2025-09-09 21:11:16,558 - werkzeug - INFO - 127.0.0.1 - - [09/Sep/2025 21:11:16] "GET /health HTTP/1.1" 200 -
+2025-09-09 21:11:16,559 - apscheduler.executors.default - INFO - Job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-09 21:20:16 CEST)" executed successfully
+2025-09-09 21:20:16,255 - apscheduler.executors.default - INFO - Running job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-09 21:29:16 CEST)" (scheduled at 2025-09-09 21:20:16.254990+02:00)
+2025-09-09 21:20:16,262 - werkzeug - INFO - 127.0.0.1 - - [09/Sep/2025 21:20:16] "GET /health HTTP/1.1" 200 -
+2025-09-09 21:20:16,262 - apscheduler.executors.default - INFO - Job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-09 21:29:16 CEST)" executed successfully
+2025-09-09 21:20:16,557 - apscheduler.executors.default - INFO - Running job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-09 21:29:16 CEST)" (scheduled at 2025-09-09 21:20:16.553590+02:00)
+2025-09-09 21:20:16,561 - werkzeug - INFO - 127.0.0.1 - - [09/Sep/2025 21:20:16] "GET /health HTTP/1.1" 200 -
+2025-09-09 21:20:16,561 - apscheduler.executors.default - INFO - Job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-09 21:29:16 CEST)" executed successfully
+2025-09-09 21:29:16,257 - apscheduler.executors.default - INFO - Running job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-09 21:38:16 CEST)" (scheduled at 2025-09-09 21:29:16.254990+02:00)
+2025-09-09 21:29:16,266 - werkzeug - INFO - 127.0.0.1 - - [09/Sep/2025 21:29:16] "GET /health HTTP/1.1" 200 -
+2025-09-09 21:29:16,268 - apscheduler.executors.default - INFO - Job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-09 21:38:16 CEST)" executed successfully
+2025-09-09 21:29:16,555 - apscheduler.executors.default - INFO - Running job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-09 21:38:16 CEST)" (scheduled at 2025-09-09 21:29:16.553590+02:00)
+2025-09-09 21:29:16,558 - werkzeug - INFO - 127.0.0.1 - - [09/Sep/2025 21:29:16] "GET /health HTTP/1.1" 200 -
+2025-09-09 21:29:16,558 - apscheduler.executors.default - INFO - Job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-09 21:38:16 CEST)" executed successfully
+2025-09-09 21:38:16,257 - apscheduler.executors.default - INFO - Running job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-09 21:47:16 CEST)" (scheduled at 2025-09-09 21:38:16.254990+02:00)
+2025-09-09 21:38:16,265 - werkzeug - INFO - 127.0.0.1 - - [09/Sep/2025 21:38:16] "GET /health HTTP/1.1" 200 -
+2025-09-09 21:38:16,266 - apscheduler.executors.default - INFO - Job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-09 21:47:16 CEST)" executed successfully
+2025-09-09 21:38:16,558 - apscheduler.executors.default - INFO - Running job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-09 21:47:16 CEST)" (scheduled at 2025-09-09 21:38:16.553590+02:00)
+2025-09-09 21:38:16,561 - werkzeug - INFO - 127.0.0.1 - - [09/Sep/2025 21:38:16] "GET /health HTTP/1.1" 200 -
+2025-09-09 21:38:16,562 - apscheduler.executors.default - INFO - Job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-09 21:47:16 CEST)" executed successfully
+2025-09-09 21:47:16,264 - apscheduler.executors.default - INFO - Running job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-09 21:56:16 CEST)" (scheduled at 2025-09-09 21:47:16.254990+02:00)
+2025-09-09 21:47:16,277 - werkzeug - INFO - 127.0.0.1 - - [09/Sep/2025 21:47:16] "GET /health HTTP/1.1" 200 -
+2025-09-09 21:47:16,278 - apscheduler.executors.default - INFO - Job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-09 21:56:16 CEST)" executed successfully
+2025-09-09 21:47:16,558 - apscheduler.executors.default - INFO - Running job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-09 21:56:16 CEST)" (scheduled at 2025-09-09 21:47:16.553590+02:00)
+2025-09-09 21:47:16,561 - werkzeug - INFO - 127.0.0.1 - - [09/Sep/2025 21:47:16] "GET /health HTTP/1.1" 200 -
+2025-09-09 21:47:16,561 - apscheduler.executors.default - INFO - Job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-09 21:56:16 CEST)" executed successfully
+2025-09-09 21:51:53,659 - werkzeug - INFO -  * Detected change in '/Users/hrishikesh/Desktop/Video DeepResearch/TwelveLabs-Video-DeepResearch/backend/service/sonar_service.py', reloading
+2025-09-09 21:51:54,610 - werkzeug - INFO -  * Restarting with watchdog (fsevents)
+2025-09-09 21:51:55,223 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-09-09 21:51:55,224 - apscheduler.scheduler - INFO - Added job "wake_up_app" to job store "default"
+2025-09-09 21:51:55,224 - apscheduler.scheduler - INFO - Scheduler started
+2025-09-09 21:51:55,226 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 10
+2025-09-09 21:51:55,226 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 13
+2025-09-09 21:51:55,229 - werkzeug - WARNING -  * Debugger is active!
+2025-09-09 21:51:55,237 - werkzeug - INFO -  * Debugger PIN: 237-707-018
+2025-09-09 21:51:57,184 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-09-09 21:51:57,184 - apscheduler.scheduler - INFO - Added job "wake_up_app" to job store "default"
+2025-09-09 21:51:57,184 - apscheduler.scheduler - INFO - Scheduler started
+2025-09-09 21:51:57,187 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 10
+2025-09-09 21:51:57,187 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 13
+2025-09-09 21:51:57,199 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.2.73:5000
+2025-09-09 21:51:57,199 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-09-09 21:51:57,201 - werkzeug - INFO -  * Restarting with watchdog (fsevents)
+2025-09-09 21:51:57,485 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-09-09 21:51:57,485 - apscheduler.scheduler - INFO - Added job "wake_up_app" to job store "default"
+2025-09-09 21:51:57,485 - apscheduler.scheduler - INFO - Scheduler started
+2025-09-09 21:51:57,488 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 10
+2025-09-09 21:51:57,488 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 13
+2025-09-09 21:51:57,489 - werkzeug - WARNING -  * Debugger is active!
+2025-09-09 21:51:57,493 - werkzeug - INFO -  * Debugger PIN: 237-707-018
+2025-09-09 21:52:33,913 - werkzeug - INFO - 127.0.0.1 - - [09/Sep/2025 21:52:33] "OPTIONS /api/indexes HTTP/1.1" 200 -
+2025-09-09 21:52:33,914 - werkzeug - INFO - 127.0.0.1 - - [09/Sep/2025 21:52:33] "OPTIONS /api/indexes HTTP/1.1" 200 -
+2025-09-09 21:52:34,698 - werkzeug - INFO - 127.0.0.1 - - [09/Sep/2025 21:52:34] "POST /api/indexes HTTP/1.1" 200 -
+2025-09-09 21:52:34,698 - werkzeug - INFO - 127.0.0.1 - - [09/Sep/2025 21:52:34] "POST /api/indexes HTTP/1.1" 200 -
+2025-09-09 21:52:34,702 - werkzeug - INFO - 127.0.0.1 - - [09/Sep/2025 21:52:34] "OPTIONS /api/videos HTTP/1.1" 200 -
+2025-09-09 21:52:34,702 - werkzeug - INFO - 127.0.0.1 - - [09/Sep/2025 21:52:34] "OPTIONS /api/videos HTTP/1.1" 200 -
+2025-09-09 21:52:35,315 - werkzeug - INFO - 127.0.0.1 - - [09/Sep/2025 21:52:35] "POST /api/videos HTTP/1.1" 200 -
+2025-09-09 21:52:35,316 - werkzeug - INFO - 127.0.0.1 - - [09/Sep/2025 21:52:35] "POST /api/videos HTTP/1.1" 200 -
+2025-09-09 21:54:39,146 - werkzeug - INFO - 127.0.0.1 - - [09/Sep/2025 21:54:39] "OPTIONS /api/workflow HTTP/1.1" 200 -
+2025-09-09 21:54:39,151 - routes.api_routes - INFO - === WORKFLOW REQUEST START ===
+2025-09-09 21:54:39,151 - routes.api_routes - INFO - Request data: {
+  "index_id": "689e9b6574950e11a06f2b8a",
+  "video_id": "68c0418e193db0e1c8cdb47c",
+  "analysis_prompt": "Do research and get the citation for this content",
+  "research_query": "Do research and get the citation for this content"
+}
+2025-09-09 21:54:39,152 - werkzeug - INFO - 127.0.0.1 - - [09/Sep/2025 21:54:39] "POST /api/workflow HTTP/1.1" 200 -
+2025-09-09 21:55:03,712 - httpx - INFO - HTTP Request: POST https://api.twelvelabs.io/v1.3/analyze "HTTP/1.1 200 OK"
+2025-09-09 21:58:03,371 - werkzeug - INFO -  * Detected change in '/Users/hrishikesh/Desktop/Video DeepResearch/TwelveLabs-Video-DeepResearch/backend/service/sonar_service.py', reloading
+2025-09-09 21:58:03,374 - werkzeug - INFO -  * Detected change in '/Users/hrishikesh/Desktop/Video DeepResearch/TwelveLabs-Video-DeepResearch/backend/service/sonar_service.py', reloading
+2025-09-09 21:58:03,781 - werkzeug - INFO -  * Restarting with watchdog (fsevents)
+2025-09-09 21:58:05,115 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-09-09 21:58:05,115 - apscheduler.scheduler - INFO - Added job "wake_up_app" to job store "default"
+2025-09-09 21:58:05,115 - apscheduler.scheduler - INFO - Scheduler started
+2025-09-09 21:58:05,118 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 10
+2025-09-09 21:58:05,118 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 13
+2025-09-09 21:58:05,120 - werkzeug - WARNING -  * Debugger is active!
+2025-09-09 21:58:05,126 - werkzeug - INFO -  * Debugger PIN: 237-707-018
+2025-09-09 21:58:05,541 - werkzeug - INFO -  * Detected change in '/Users/hrishikesh/Desktop/Video DeepResearch/TwelveLabs-Video-DeepResearch/backend/service/sonar_service.py', reloading
+2025-09-09 21:58:06,203 - werkzeug - INFO -  * Restarting with watchdog (fsevents)
+2025-09-09 21:58:06,497 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-09-09 21:58:06,497 - apscheduler.scheduler - INFO - Added job "wake_up_app" to job store "default"
+2025-09-09 21:58:06,497 - apscheduler.scheduler - INFO - Scheduler started
+2025-09-09 21:58:06,500 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 10
+2025-09-09 21:58:06,500 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 13
+2025-09-09 21:58:06,501 - werkzeug - WARNING -  * Debugger is active!
+2025-09-09 21:58:06,505 - werkzeug - INFO -  * Debugger PIN: 237-707-018
+2025-09-09 21:58:10,252 - werkzeug - INFO -  * Detected change in '/Users/hrishikesh/Desktop/Video DeepResearch/TwelveLabs-Video-DeepResearch/backend/service/sonar_service.py', reloading
+2025-09-09 21:58:10,598 - werkzeug - INFO -  * Restarting with watchdog (fsevents)
+2025-09-09 21:58:10,964 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-09-09 21:58:10,964 - apscheduler.scheduler - INFO - Added job "wake_up_app" to job store "default"
+2025-09-09 21:58:10,964 - apscheduler.scheduler - INFO - Scheduler started
+2025-09-09 21:58:10,966 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 10
+2025-09-09 21:58:10,966 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 13
+2025-09-09 21:58:10,968 - werkzeug - WARNING -  * Debugger is active!
+2025-09-09 21:58:10,975 - werkzeug - INFO -  * Debugger PIN: 237-707-018

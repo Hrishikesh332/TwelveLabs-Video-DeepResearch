@@ -216,6 +216,20 @@ const AnimatedGif = ({ className }: { className?: string }) => {
   );
 };
 
+// Convert numeric citations like [1], [2] into hyperlinks to the corresponding sources
+function linkifyReferences(markdown: string, sources?: Source[]): string {
+  if (!markdown || !sources || sources.length === 0) return markdown
+  // Replace standalone [n] that are not already links ([n](...))
+  return markdown.replace(/\[(\d+)\](?!\()/g, (match, num) => {
+    const index = parseInt(num, 10) - 1
+    const src = sources[index]
+    if (src && src.url) {
+      return `[\\[${num}\\]](${src.url})`
+    }
+    return match
+  })
+}
+
 export default function DeepResearchLanding() {
   const { toast } = useToast()
 
@@ -440,7 +454,11 @@ export default function DeepResearchLanding() {
             if (data.indexes.length > 0) {
               const firstId = data.indexes[0].id
               setSelectedIndex(firstId)
-              await handleIndexChange(firstId)
+              // Add small delay to ensure state updates are complete
+              setTimeout(async () => {
+                // Pass null API key and true env flag to use environment key
+                await handleIndexChange(firstId, null, true)
+              }, 50)
             }
           }
         }
@@ -496,8 +514,13 @@ export default function DeepResearchLanding() {
 
         if (returnedIndexes.length > 0) {
           const firstId = returnedIndexes[0].id
+
           setSelectedIndex(firstId)
-          await handleIndexChange(firstId)
+          // Add small delay to ensure state updates are complete
+          setTimeout(async () => {
+            // Pass the current API key and env flag to ensure correct API context
+            await handleIndexChange(firstId, apiKey, false)
+          }, 50)
         }
 
         toast({ title: "Connected", description: data?.message || "TwelveLabs API key configured successfully." })
@@ -538,7 +561,11 @@ export default function DeepResearchLanding() {
           if (data.indexes.length > 0) {
             const firstId = data.indexes[0].id
             setSelectedIndex(firstId)
-            await handleIndexChange(firstId)
+            // Add small delay to ensure state updates are complete
+            setTimeout(async () => {
+              // Pass null API key and true env flag to use environment key
+              await handleIndexChange(firstId, null, true)
+            }, 50)
           }
           
           toast({ 
@@ -600,7 +627,11 @@ export default function DeepResearchLanding() {
           if (data.indexes.length > 0) {
             const firstId = data.indexes[0].id
             setSelectedIndex(firstId)
-            await handleIndexChange(firstId)
+            // Add small delay to ensure state updates are complete
+            setTimeout(async () => {
+              // Pass null API key and true env flag to use environment key
+              await handleIndexChange(firstId, null, true)
+            }, 50)
           }
           return true
         }
@@ -616,6 +647,8 @@ export default function DeepResearchLanding() {
   useEffect(() => {
     loadDataFromEnv()
   }, [])
+
+
 
   async function switchToEnvironmentKey() {
     try {
@@ -647,7 +680,11 @@ export default function DeepResearchLanding() {
           if (data.indexes.length > 0) {
             const firstId = data.indexes[0].id
             setSelectedIndex(firstId)
-            await handleIndexChange(firstId)
+            // Add small delay to ensure state updates are complete
+            setTimeout(async () => {
+              // Pass null API key and true env flag to use environment key
+              await handleIndexChange(firstId, null, true)
+            }, 50)
           }
         }
       }
@@ -655,7 +692,7 @@ export default function DeepResearchLanding() {
       console.log("No environment API key available")
     }
   }
-  async function handleIndexChange(indexId: string) {
+  async function handleIndexChange(indexId: string, overrideApiKey?: string | null, overrideUseEnvKey?: boolean) {
     setSelectedIndex(indexId)
     setSelectedVideo("")
     setSelectedVideoThumbnail(null)
@@ -665,10 +702,19 @@ export default function DeepResearchLanding() {
 
     setIsLoadingVideos(true)
     try {
+      // Use override values if provided, otherwise use current state
+      const useEnvKey = overrideUseEnvKey !== undefined ? overrideUseEnvKey : isUsingEnvKey
+      const currentApiKey = overrideApiKey !== undefined ? overrideApiKey : apiKey
+      
+
+      
       const res = await fetch(`${API_CONFIG.BASE_URL}${API_CONFIG.ENDPOINTS.TWELVELABS.VIDEOS}`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ api_key: isConnected ? undefined : apiKey, index_id: indexId }),
+        body: JSON.stringify({ 
+          api_key: useEnvKey ? undefined : currentApiKey, 
+          index_id: indexId 
+        }),
       })
 
       if (!res.ok) {
@@ -677,6 +723,7 @@ export default function DeepResearchLanding() {
       }
 
       const data = await res.json()
+      
       if (data?.success) {
         const videosList = data.videos || []
         setVideos(videosList)
@@ -746,7 +793,7 @@ export default function DeepResearchLanding() {
     
     try {
       const payload = {
-        twelvelabs_api_key: isConnected ? undefined : apiKey,
+        twelvelabs_api_key: isUsingEnvKey ? undefined : apiKey,
         index_id: selectedIndex,
         video_id: selectedVideo,
         analysis_prompt: prompt.trim(),
@@ -934,7 +981,7 @@ export default function DeepResearchLanding() {
         throw new Error("No research context available. Please start a new research session first.")
       }
       
-      // Create enhanced query with full context
+      // Create enhanced query with full context and markdown formatting request
       const enhancedQuery = `
 Based on the following research context, please answer this follow-up question:
 
@@ -950,7 +997,11 @@ ${researchContext.originalQuery}
 FOLLOW-UP QUESTION:
 ${userMessage}
 
-Please provide a comprehensive answer that builds upon the previous research and video analysis, incorporating any new insights or connections that might be relevant to this follow-up question.
+IMPORTANT: Please provide a comprehensive answer using proper markdown formatting including:
+- Use ## for main headings and ### for subheadings
+- If table, then proper mardkown table format
+
+Please provide a comprehensive answer that builds upon the previous research and video analysis, incorporating any new insights or connections that might be relevant to this follow-up question, with clear structure and professional formatting.
 `
       
       // Send to Sonar API with API key
@@ -961,7 +1012,7 @@ Please provide a comprehensive answer that builds upon the previous research and
         },
         body: JSON.stringify({
           query: enhancedQuery,
-          api_key: isConnected ? undefined : apiKey // Include API key if using custom key
+          api_key: isUsingEnvKey ? undefined : apiKey // Include API key if using custom key
         })
       })
       
@@ -1230,9 +1281,119 @@ Please provide a comprehensive answer that builds upon the previous research and
 
                         {/* Response content */}
                         <div className="w-full text-gray-900 px-6 py-6 border-t border-b border-gray-200">
-                          <div className="prose prose-lg max-w-none">
-                            <ReactMarkdown remarkPlugins={[remarkGfm]}>
-                              {message.content}
+                          <div className="prose prose-lg max-w-none prose-headings:text-gray-900 prose-h2:text-xl prose-h2:font-bold prose-h2:mt-8 prose-h2:mb-4 prose-h3:text-lg prose-h3:font-semibold prose-h3:mt-6 prose-h3:mb-3 prose-p:text-gray-800 prose-p:leading-relaxed prose-strong:text-gray-900 prose-strong:font-semibold prose-ul:my-4 prose-li:my-1 prose-blockquote:border-l-4 prose-blockquote:border-blue-500 prose-blockquote:bg-blue-50 prose-blockquote:px-4 prose-blockquote:py-2 prose-blockquote:italic prose-code:bg-gray-100 prose-code:px-1 prose-code:py-0.5 prose-code:rounded prose-code:text-sm prose-a:text-blue-600 prose-a:underline hover:prose-a:text-blue-800 [&_ol>li]:font-semibold [&_ol>li]:text-gray-900 [&_ol>li]:text-[1.05rem] [&_li>p]:m-0 [&_li>p]:inline">
+                            <ReactMarkdown 
+                              remarkPlugins={[remarkGfm]}
+                              components={{
+                                // Custom styling for different elements
+                                h2: ({children}) => (
+                                  <h2 className="text-xl font-bold text-gray-900 mt-8 mb-4 pb-2 border-b border-gray-200">
+                                    {children}
+                                  </h2>
+                                ),
+                                h3: ({children}) => (
+                                  <h3 className="text-lg font-semibold text-gray-900 mt-6 mb-3">
+                                    {children}
+                                  </h3>
+                                ),
+                                blockquote: ({children}) => (
+                                  <blockquote className="border-l-4 border-blue-500 bg-blue-50 px-4 py-3 my-4 italic text-blue-900 rounded-r-md">
+                                    {children}
+                                  </blockquote>
+                                ),
+                                code: ({children, className}) => {
+                                  const isInline = !className;
+                                  if (isInline) {
+                                    return (
+                                      <code className="bg-gray-100 px-2 py-1 rounded text-sm font-mono text-gray-800">
+                                        {children}
+                                      </code>
+                                    );
+                                  }
+                                  return (
+                                    <code className={className}>
+                                      {children}
+                                    </code>
+                                  );
+                                },
+                                pre: ({children}) => (
+                                  <pre className="bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto my-4">
+                                    {children}
+                                  </pre>
+                                ),
+                                ul: ({children}) => (
+                                  <ul className="list-disc list-inside my-4 space-y-2">
+                                    {children}
+                                  </ul>
+                                ),
+                                ol: ({children}) => (
+                                  <ol className="list-decimal list-inside my-4 space-y-2">
+                                    {children}
+                                  </ol>
+                                ),
+                                li: ({children}) => (
+                                  <li className="text-gray-800 leading-relaxed">
+                                    {children}
+                                  </li>
+                                ),
+                                table: ({children}) => (
+                                  <div className="w-full overflow-x-auto my-4">
+                                    <table className="w-full border-collapse text-sm">
+                                      {children}
+                                    </table>
+                                  </div>
+                                ),
+                                thead: ({children}) => (
+                                  <thead className="bg-gray-50">
+                                    {children}
+                                  </thead>
+                                ),
+                                tbody: ({children}) => (
+                                  <tbody className="divide-y divide-gray-200">
+                                    {children}
+                                  </tbody>
+                                ),
+                                tr: ({children}) => (
+                                  <tr className="even:bg-gray-50">
+                                    {children}
+                                  </tr>
+                                ),
+                                th: (props: any) => (
+                                  <th {...props} className={`border border-gray-300 px-3 py-2 text-left font-semibold text-gray-900 ${props.className || ''}`}>
+                                    {props.children}
+                                  </th>
+                                ),
+                                td: (props: any) => (
+                                  <td {...props} className={`border border-gray-200 px-3 py-2 align-top text-gray-800 whitespace-pre-wrap ${props.className || ''}`}>
+                                    {props.children}
+                                  </td>
+                                ),
+                                a: ({children, href}) => (
+                                  <a 
+                                    href={href} 
+                                    target="_blank" 
+                                    rel="noopener noreferrer"
+                                    className="text-blue-600 underline hover:text-blue-800 transition-colors"
+                                  >
+                                    {children}
+                                  </a>
+                                ),
+                                hr: () => (
+                                  <hr className="border-t-2 border-gray-200 my-8" />
+                                ),
+                                strong: ({children}) => (
+                                  <strong className="font-semibold text-gray-900">
+                                    {children}
+                                  </strong>
+                                ),
+                                em: ({children}) => (
+                                  <em className="italic text-gray-700">
+                                    {children}
+                                  </em>
+                                )
+                              }}
+                            >
+                              {linkifyReferences(message.content, message.sources)}
                             </ReactMarkdown>
                           </div>
                         </div>
@@ -1307,7 +1468,7 @@ Please provide a comprehensive answer that builds upon the previous research and
             {/* Chat Input Area - Fixed at Bottom */}
             <div className="fixed bottom-0 left-0 right-80 bg-white border-t border-gray-200 z-40">
               <div className="max-w-4xl mx-auto p-4">
-                <div className="flex items-end space-x-3">
+                <div className="flex items-center space-x-3">
                   <div className="flex-1">
                     <textarea
                       value={chatInput}
@@ -1326,7 +1487,7 @@ Please provide a comprehensive answer that builds upon the previous research and
                   <Button
                     onClick={handleSendMessage}
                     disabled={!chatInput.trim() || isSendingMessage}
-                    className="bg-gray-900 hover:bg-gray-800 text-white px-4 py-3 rounded-2xl disabled:opacity-50 disabled:cursor-not-allowed"
+                    className="bg-gray-900 hover:bg-gray-800 text-white px-4 h-[48px] rounded-2xl disabled:opacity-50 disabled:cursor-not-allowed"
                   >
                     {isSendingMessage ? (
                       <Loader2 className="w-4 h-4 animate-spin" />
@@ -1676,6 +1837,7 @@ Please provide a comprehensive answer that builds upon the previous research and
                     <div className="mb-6">
                       
                       <InlineVideoPlayer
+                        key={selectedVideo || selectedVideoUrl}
                         duration={videos.find(v => v.id === selectedVideo)?.duration}
                         videoUrl={selectedVideoUrl}
                         thumbnailUrl={selectedVideoThumbnail || undefined}

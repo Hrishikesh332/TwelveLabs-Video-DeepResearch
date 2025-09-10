@@ -40,21 +40,20 @@ def register_routes(app):
     def set_twelvelabs_config():
         try:
             data = request.get_json()
-            api_key = data.get('api_key') or app.config['TWELVELABS_API_KEY']
+            api_key = data.get('api_key')
             
             if not api_key or api_key == '':
-                return jsonify({'success': False, 'error': 'TwelveLabs API key is required. Please connect your API key in the UI or set TWELVELABS_API_KEY in environment variables.'}), 400
+                return jsonify({'success': False, 'error': 'TwelveLabs API key is required.'}), 400
             
             # Test the API key by trying to fetch indexes
             service = TwelveLabsService(api_key=api_key)
             test_result = service.get_indexes()
             
             if isinstance(test_result, list):
-                # API key is valid, store it in app config
-                app.config['TWELVELABS_API_KEY'] = api_key
+                # API key is valid, return success without storing it server-side
                 return jsonify({
                     'success': True,
-                    'message': 'TwelveLabs API key configured successfully',
+                    'message': 'TwelveLabs API key validated successfully',
                     'indexes': test_result
                 })
             else:
@@ -66,25 +65,25 @@ def register_routes(app):
         except Exception as e:
             return jsonify({
                 'success': False,
-                'error': f'Error configuring API key: {str(e)}'
+                'error': f'Error validating API key: {str(e)}'
             }), 500
 
     @app.route('/api/config/twelvelabs', methods=['GET'])
     def get_twelvelabs_config():
         try:
-            api_key = app.config.get('TWELVELABS_API_KEY')
-            if api_key:
-                # Mask the API key for security
-                masked_key = f"{api_key[:8]}...{api_key[-4:]}" if len(api_key) > 12 else "***"
+            # Only return environment API key status, not user-specific keys
+            env_api_key = app.config.get('TWELVELABS_API_KEY_ENV')
+            if env_api_key:
                 return jsonify({
                     'success': True,
                     'configured': True,
-                    'api_key': masked_key
+                    'environment_key_available': True
                 })
             else:
                 return jsonify({
                     'success': True,
-                    'configured': False
+                    'configured': False,
+                    'environment_key_available': False
                 })
                 
         except Exception as e:
@@ -96,24 +95,24 @@ def register_routes(app):
     @app.route('/api/config/twelvelabs', methods=['DELETE'])
     def clear_twelvelabs_config():
         try:
-            # Restore the environment variable value instead of clearing it
-            app.config['TWELVELABS_API_KEY'] = app.config.get('TWELVELABS_API_KEY_ENV', '')
+            # This endpoint now just confirms the client should use environment key
             return jsonify({
                 'success': True,
-                'message': 'TwelveLabs API key cleared and restored to environment default'
+                'message': 'Switched to environment API key mode'
             })
                 
         except Exception as e:
             return jsonify({
                 'success': False,
-                'error': f'Error clearing API key configuration: {str(e)}'
+                'error': f'Error switching to environment key: {str(e)}'
             }), 500
 
     @app.route('/api/indexes', methods=['POST'])
     def get_indexes():
         try:
             data = request.get_json()
-            api_key = data.get('api_key') or app.config['TWELVELABS_API_KEY']
+            # Try client API key first, then fall back to environment
+            api_key = data.get('api_key') or app.config.get('TWELVELABS_API_KEY_ENV')
             
             if not api_key or api_key == '':
                 return jsonify({'success': False, 'error': 'TwelveLabs API key is required. Please connect your API key in the UI or set TWELVELABS_API_KEY in environment variables.'}), 400
@@ -134,7 +133,8 @@ def register_routes(app):
     def get_videos():
         try:
             data = request.get_json()
-            api_key = data.get('api_key') or app.config['TWELVELABS_API_KEY']
+            # Try client API key first, then fall back to environment
+            api_key = data.get('api_key') or app.config.get('TWELVELABS_API_KEY_ENV')
             index_id = data.get('index_id')
             
             if not api_key or api_key == '':
@@ -158,7 +158,8 @@ def register_routes(app):
     @app.route('/api/upload', methods=['POST'])
     def upload_video():
         try:
-            api_key = app.config.get('TWELVELABS_API_KEY')
+            # Always use environment API key for uploads to maintain consistency
+            api_key = app.config.get('TWELVELABS_API_KEY_ENV')
             default_index_id = app.config.get('TWELVELABS_DEFAULT_INDEX_ID')
             if not api_key:
                 return jsonify({'success': False, 'error': 'TwelveLabs API key not configured in environment'}), 400
@@ -207,7 +208,8 @@ def register_routes(app):
     def get_video_details(index_id, video_id):
         try:
             data = request.get_json()
-            api_key = data.get('api_key') or app.config['TWELVELABS_API_KEY']
+            # Try client API key first, then fall back to environment
+            api_key = data.get('api_key') or app.config.get('TWELVELABS_API_KEY_ENV')
             
             if not api_key or api_key == '':
                 return jsonify({'success': False, 'error': 'TwelveLabs API key is required. Please connect your API key in the UI or set TWELVELABS_API_KEY in environment variables.'}), 400
@@ -231,7 +233,8 @@ def register_routes(app):
     def analyze_video(video_id):
         try:
             data = request.get_json()
-            api_key = data.get('api_key') or app.config['TWELVELABS_API_KEY']
+            # Try client API key first, then fall back to environment
+            api_key = data.get('api_key') or app.config.get('TWELVELABS_API_KEY_ENV')
             prompt = data.get('prompt')
             
             if not api_key or api_key == '':
@@ -338,7 +341,8 @@ def register_routes(app):
             logger.info(f"=== WORKFLOW REQUEST START ===")
             logger.info(f"Request data: {json.dumps(data, indent=2)}")
             
-            twelvelabs_api_key = data.get('twelvelabs_api_key') or app.config['TWELVELABS_API_KEY']
+            # Try client API key first, then fall back to environment
+            twelvelabs_api_key = data.get('twelvelabs_api_key') or app.config.get('TWELVELABS_API_KEY_ENV')
             index_id = data.get('index_id')
             video_id = data.get('video_id')
             analysis_prompt = data.get('analysis_prompt', 'Describe what happens in this video')
@@ -418,13 +422,17 @@ def register_routes(app):
                         'progress': 66
                     }) + '\n'
 
-                    # Create research query
+                    # Create research query with markdown formatting request
                     enhanced_query = f"""
-                            Based on this video analysis: {analysis_result}
+Based on this video analysis: {analysis_result}
 
-                            Please research: {research_query}
+Please research: {research_query}
 
-                            Provide comprehensive insights
+IMPORTANT: Please provide a comprehensive research response using proper markdown formatting including:
+- Use ## for main headings and ### for subheadings
+- If table, then proper mardkown table format
+
+Provide comprehensive insights with clear structure and professional formatting.
 """
                     
                     sonar_service = SonarService()

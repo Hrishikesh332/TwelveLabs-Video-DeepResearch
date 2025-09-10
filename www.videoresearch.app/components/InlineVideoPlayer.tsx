@@ -5,6 +5,7 @@ import VideoPlayer from "./VideoPlayer"
 import { Button } from "@/components/ui/button"
 import { Card } from "@/components/ui/card"
 import { Play, Video } from "lucide-react"
+import React from "react"
 
 interface InlineVideoPlayerProps {
   videoUrl: string
@@ -28,6 +29,12 @@ export default function InlineVideoPlayer({
   preventAutoPlay = false
 }: InlineVideoPlayerProps) {
   const [isPlaying, setIsPlaying] = useState(false)
+
+  // Reset play state on source change
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  React.useEffect(() => {
+    setIsPlaying(false)
+  }, [videoUrl])
 
   if (!videoUrl) {
     return (

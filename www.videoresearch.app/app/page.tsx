@@ -232,62 +232,115 @@ export default function DeepResearchLanding() {
       content: (
         <div className="text-center">
           <div className="mb-6">
-            <div className="w-full h-64 bg-gray-100 rounded-lg border-2 border-dashed border-gray-300 flex items-center justify-center">
-              <div className="text-center">
-                <div className="text-4xl mb-2">🎬</div>
-                <p className="text-gray-600">GIF Demo Area</p>
-                <p className="text-sm text-gray-500">Video Deep Research in Action</p>
-              </div>
+            <div className="w-full h-64 bg-gray-100 border-2 border-black overflow-hidden" style={{ borderRadius: '58px' }}>
+              <img 
+                src="/1_Demo.gif" 
+                alt="Video Deep Research Demo"
+                className="w-full h-full object-cover"
+                style={{ borderRadius: '56px' }}
+              />
             </div>
           </div>
           <h3 className="text-xl font-semibold text-black mb-3">Welcome to Video Deep Research</h3>
           <p className="text-black text-lg">
-            Experience the power of AI-powered research from video content. 
-            Get up-to-date insights and reliable sources in seconds.
+            Experience the power of TwelveLabs powered research from video content.
+            Get up-to-date insights and reliable sources.
           </p>
         </div>
       )
     },
     {
-      title: "Connect Your API Key",
+      title: "Upload Videos to TwelveLabs",
       content: (
         <div className="text-center">
           <div className="mb-6">
-            <div className="w-full h-64 bg-gray-100 rounded-lg border-2 border-dashed border-gray-300 flex items-center justify-center">
-              <div className="text-center">
-                <div className="text-4xl mb-2">🔑</div>
-                <p className="text-gray-600">GIF Tutorial Area</p>
-                <p className="text-sm text-gray-500">How to Connect API Key</p>
-              </div>
+            <div className="w-full h-64 bg-gray-100 border-2 border-black overflow-hidden" style={{ borderRadius: '58px' }}>
+              <img 
+                src="/2_Upload_Video.gif" 
+                alt="Upload Video to TwelveLabs"
+                className="w-full h-full object-cover"
+                style={{ borderRadius: '56px' }}
+              />
             </div>
           </div>
-          <h3 className="text-xl font-semibold text-black mb-3">Step 1: Connect TwelveLabs API Key</h3>
+          <h3 className="text-xl font-semibold text-black mb-3">Upload Your Videos</h3>
           <p className="text-black text-lg">
-            Start by connecting your TwelveLabs API key to access video analysis capabilities. 
-            This enables the platform to analyze your video content and provide deep insights.
+            You can upload your videos in the TwelveLabs Platform.<br />
+            Access them here with your TwelveLabs API KEY.
           </p>
         </div>
       )
     },
     {
-      title: "Get Up-to-Date Sources",
+      title: "Connect API Key",
       content: (
         <div className="text-center">
           <div className="mb-6">
-            <div className="w-full h-64 bg-gray-100 rounded-lg border-2 border-dashed border-gray-300 flex items-center justify-center">
-              <div className="text-center">
-                <div className="text-4xl mb-2">📚</div>
-                <p className="text-gray-600">GIF Demo Area</p>
-                <p className="text-sm text-gray-500">Real-time Source Generation</p>
-              </div>
+            <div className="w-full h-64 bg-gray-100 border-2 border-black overflow-hidden" style={{ borderRadius: '58px' }}>
+              <img 
+                src="/3_API_Connect.gif" 
+                alt="Connect API Key"
+                className="w-full h-full object-cover"
+                style={{ borderRadius: '56px' }}
+              />
             </div>
           </div>
-          <h3 className="text-xl font-semibold text-black mb-3">Step 2: Access Reliable Sources</h3>
+          <h3 className="text-xl font-semibold text-black mb-3">Connect Your API Key</h3>
           <p className="text-black text-lg">
-            Receive comprehensive research with up-to-date and reputable sources. 
-            Our AI analyzes your video content and provides current, relevant information 
-            backed by credible sources.
+            Experiment with Default Sample videos or connect your own API KEY.
+            Get research insights with your personal video collection.
           </p>
+        </div>
+      )
+    },
+    {
+      title: "Upload & Index Videos",
+      content: (
+        <div className="text-center">
+          <div className="mb-6">
+            <div className="w-full h-64 bg-gray-100 border-2 border-black overflow-hidden" style={{ borderRadius: '58px' }}>
+              <img 
+                src="/4_Indexing.gif" 
+                alt="Video Indexing"
+                className="w-full h-full object-cover"
+                style={{ borderRadius: '56px' }}
+              />
+            </div>
+          </div>
+          <h3 className="text-xl font-semibold text-black mb-3">Upload & Index Videos</h3>
+          <p className="text-black text-lg">
+            Upload video and do Indexing here itself.<br />
+            Works without connecting your API KEY, using default mode.
+          </p>
+        </div>
+      )
+    },
+    {
+      title: "Explore & Experiment",
+      content: (
+        <div className="text-center">
+          <div className="mb-6">
+            <div className="w-full h-64 bg-gray-100 border-2 border-black overflow-hidden" style={{ borderRadius: '58px' }}>
+              <img 
+                src="/5_High_Reasoning.gif" 
+                alt="High Reasoning Research"
+                className="w-full h-full object-cover"
+                style={{ borderRadius: '56px' }}
+              />
+            </div>
+          </div>
+          <h3 className="text-xl font-semibold text-black mb-3">Explore & Experiment</h3>
+                      <p className="text-black text-lg">
+              Check out the <a 
+                href="https://github.com/Hrishikesh332/TwelveLabs-Video-DeepResearch" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-blue-600 hover:text-blue-800 underline font-medium"
+              >
+                GitHub repository
+              </a> and keep experimenting.<br />
+              Discover advanced video understanding capabilities and features.
+            </p>
         </div>
       )
     }

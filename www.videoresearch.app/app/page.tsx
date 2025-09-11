@@ -827,8 +827,19 @@ export default function DeepResearchLanding() {
         const lines = chunk.split('\n').filter(line => line.trim())
 
         for (const line of lines) {
+          // Skip empty lines or lines that don't look like JSON
+          if (!line.trim() || (!line.startsWith('{') && !line.startsWith('['))) {
+            continue
+          }
+          
           try {
             const data = JSON.parse(line)
+            
+            // Validate that we have the expected structure
+            if (!data || typeof data !== 'object' || !data.type) {
+              console.warn('Invalid data structure in stream chunk:', line.substring(0, 100))
+              continue
+            }
             
             switch (data.type) {
               case 'progress':
@@ -932,9 +943,20 @@ export default function DeepResearchLanding() {
 
               case 'error':
                 throw new Error(data.message)
+                
+              default:
+                console.warn('Unknown message type in stream:', data.type)
             }
           } catch (e) {
             console.error('Error parsing stream chunk:', e)
+            console.error('Problematic chunk:', line.substring(0, 200) + (line.length > 200 ? '...' : ''))
+            
+            // If this is a JSON parsing error and we're getting malformed data,
+            // we should probably continue processing other chunks
+            if (e instanceof SyntaxError && e.message.includes('JSON')) {
+              console.warn('JSON parsing failed, skipping malformed chunk')
+              continue
+            }
           }
         }
       }

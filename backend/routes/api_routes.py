@@ -7,6 +7,24 @@ from service.sonar_service import SonarService
 
 logger = logging.getLogger(__name__)
 
+def safe_json_dumps(obj):
+
+    try:
+        json_str = json.dumps(obj, ensure_ascii=False, separators=(',', ':'))
+        # Validate that we can parse it back (double-check)
+        json.loads(json_str)
+        return json_str
+    except (TypeError, ValueError, json.JSONDecodeError) as e:
+        logger.error(f"JSON serialization error: {e}")
+        logger.error(f"Problematic object type: {type(obj)}")
+        logger.error(f"Object keys (if dict): {list(obj.keys()) if isinstance(obj, dict) else 'Not a dict'}")
+        
+        # Return a safe fallback
+        return json.dumps({
+            'type': 'error',
+            'message': f'Failed to serialize response data: {str(e)}'
+        })
+
 def register_routes(app):
     @app.route('/')
     def index():
@@ -350,6 +368,8 @@ def register_routes(app):
 
             def generate():
                 # Initial validation
+                logger.info(f"Starting workflow for video {video_id} in index {index_id}")
+                
                 if not twelvelabs_api_key:
                     yield json.dumps({
                         'type': 'error',
@@ -373,7 +393,7 @@ def register_routes(app):
 
                 try:
                     # Step 1: Get video details
-                    yield json.dumps({
+                    yield safe_json_dumps({
                         'type': 'progress',
                         'step': 'video_details',
                         'message': 'Fetching video details...',
@@ -384,13 +404,13 @@ def register_routes(app):
                     video_details = twelvelabs_service.get_video_details(index_id, video_id)
 
                     if not video_details:
-                        yield json.dumps({
+                        yield safe_json_dumps({
                             'type': 'error',
                             'message': 'Could not retrieve video details'
                         }) + '\n'
                         return
 
-                    yield json.dumps({
+                    yield safe_json_dumps({
                         'type': 'data',
                         'step': 'video_details',
                         'data': video_details,
@@ -398,7 +418,7 @@ def register_routes(app):
                     }) + '\n'
 
                     # Step 2: Analyze video
-                    yield json.dumps({
+                    yield safe_json_dumps({
                         'type': 'progress',
                         'step': 'analysis',
                         'message': 'Analyzing video content...',
@@ -407,7 +427,7 @@ def register_routes(app):
 
                     analysis_result = twelvelabs_service.analyze_video(video_id, analysis_prompt)
                     
-                    yield json.dumps({
+                    yield safe_json_dumps({
                         'type': 'data',
                         'step': 'analysis',
                         'data': analysis_result,
@@ -415,7 +435,7 @@ def register_routes(app):
                     }) + '\n'
 
                     # Step 3: Research with context
-                    yield json.dumps({
+                    yield safe_json_dumps({
                         'type': 'progress',
                         'step': 'research',
                         'message': 'Conducting deep research...',
@@ -439,32 +459,67 @@ Provide comprehensive insights with clear structure and professional formatting.
                     research_result = sonar_service.deep_research(enhanced_query, timeout=180)
 
                     if 'error' in research_result:
-                        yield json.dumps({
+                        yield safe_json_dumps({
                             'type': 'error',
                             'message': f'Research failed: {research_result["error"]}'
                         }) + '\n'
                         return
 
-                    # Send final result with actual search results
-                    yield json.dumps({
-                        'type': 'complete',
-                        'data': {
-                            'video_details': video_details,
-                            'analysis': analysis_result,
-                            'research': research_result,
-                            'sources': research_result.get('search_results', [])  
-                        },
-                        'progress': 100
-                    }) + '\n'
+                    # Send final result with proper error handling for large responses
+                    try:
+                        final_response = {
+                            'type': 'complete',
+                            'data': {
+                                'video_details': video_details,
+                                'analysis': analysis_result,
+                                'research': research_result,
+                                'sources': research_result.get('search_results', [])  
+                            },
+                            'progress': 100
+                        }
+                        
+                        # Check if response is too large and handle accordingly
+                        response_json = safe_json_dumps(final_response)
+                        
+                        # If response is very large (>50KB), send a simplified version
+                        if len(response_json) > 50000:
+                            logger.warning("Response too large, sending simplified version")
+                            simplified_response = {
+                                'type': 'complete',
+                                'data': {
+                                    'video_details': video_details,
+                                    'analysis': analysis_result,
+                                    'research': {
+                                        'choices': research_result.get('choices', []),
+                                        'citations': research_result.get('citations', [])
+                                    },
+                                    'sources': research_result.get('search_results', [])[:10]  # Limit sources
+                                },
+                                'progress': 100
+                            }
+                            yield safe_json_dumps(simplified_response) + '\n'
+                        else:
+                            yield response_json + '\n'
+                            
+                    except Exception as json_error:
+                        logger.error(f"Error serializing final response: {json_error}")
+                        yield safe_json_dumps({
+                            'type': 'error',
+                            'message': 'Failed to serialize research results'
+                        }) + '\n'
 
                 except Exception as e:
                     logger.error(f"Error in workflow: {str(e)}")
-                    yield json.dumps({
+                    yield safe_json_dumps({
                         'type': 'error',
                         'message': str(e)
                     }) + '\n'
 
-            return Response(generate(), mimetype='text/event-stream')
+            return Response(generate(), mimetype='text/event-stream', headers={
+                'Cache-Control': 'no-cache',
+                'Connection': 'keep-alive',
+                'X-Accel-Buffering': 'no'  # Disable nginx buffering
+            })
 
         except Exception as e:
             return jsonify({'success': False, 'error': str(e)}), 500

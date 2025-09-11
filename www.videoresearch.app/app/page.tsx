@@ -180,38 +180,11 @@ function Logo({ className = "w-12 h-12" }: { className?: string }) {
 }
 
 // Inside the DeepResearchLanding component, before the return statement
-const AnimatedGif = ({ className }: { className?: string }) => {
-  const imgRef = useRef<HTMLImageElement>(null);
-
-  useEffect(() => {
-    const reloadGif = () => {
-      if (imgRef.current) {
-        imgRef.current.src = '/Twelve Labs.gif?' + Date.now();
-      }
-    };
-
-    // Initial load only - remove the continuous reloading interval
-    reloadGif();
-
-    // Remove the interval that was causing periodic refreshes
-    // const interval = setInterval(reloadGif, 3000);
-    // return () => clearInterval(interval);
-  }, []);
-
+const LoaderSpinner = ({ className }: { className?: string }) => {
   return (
-    <img 
-      ref={imgRef}
-      alt="TwelveLabs"
-      className={`w-8 h-8 object-contain ${className || ''}`}
-      style={{
-        opacity: 0,
-        transition: 'opacity 0.2s ease-in'
-      }}
-      onLoad={(e) => {
-        const img = e.target as HTMLImageElement;
-        img.style.opacity = '1';
-      }}
-    />
+    <div className={`w-8 h-8 flex items-center justify-center ${className || ''}`}>
+      <div className="animate-spin rounded-full h-6 w-6 border-2 border-gray-300 border-t-blue-600"></div>
+    </div>
   );
 };
 
@@ -834,6 +807,7 @@ export default function DeepResearchLanding() {
       }
 
       let finalData: any = null
+      let buffer = ''  // Buffer to accumulate partial JSON
       
       while (true) {
         const { done, value } = await reader.read()
@@ -841,7 +815,13 @@ export default function DeepResearchLanding() {
 
         // Convert the chunk to text
         const chunk = new TextDecoder().decode(value)
-        const lines = chunk.split('\n').filter(line => line.trim())
+        buffer += chunk
+            console.log("Buffer length:", buffer.length, "Chunk length:", chunk.length)
+        
+        // Process complete lines from buffer
+        const lines = buffer.split('\n')
+        buffer = lines.pop() || ''  // Keep the last incomplete line in buffer
+        for (const line of lines) {
 
         for (const line of lines) {
           // Skip empty lines or lines that don't look like JSON
@@ -850,6 +830,7 @@ export default function DeepResearchLanding() {
           }
           
           try {
+            console.log("Parsing line:", line.substring(0, 100) + (line.length > 100 ? "..." : ""))
             const data = JSON.parse(line)
             
             // Validate that we have the expected structure
@@ -904,6 +885,7 @@ export default function DeepResearchLanding() {
                 break
 
               case 'research_chunk':
+                console.log("Received research chunk:", data.chunk_index, "of", data.total_chunks, "isFinal:", data.is_final)
                 // Handle research content chunks for large responses
                 const chunkIndex = data.chunk_index || 0
                 const chunkContent = data.content || ''
@@ -1090,7 +1072,7 @@ export default function DeepResearchLanding() {
               console.warn('JSON parsing failed, skipping malformed chunk')
               continue
             }
-          }
+      }          }
         }
       }
     
@@ -1590,7 +1572,7 @@ Please provide a comprehensive answer that builds upon the previous research and
                         })()}
                       </span>
                       <div className="w-8 h-8 flex items-center justify-center">
-                        <AnimatedGif />
+                        <LoaderSpinner />
                       </div>
                     </div>
                     

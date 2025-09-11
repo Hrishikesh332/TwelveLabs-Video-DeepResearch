@@ -2249,3 +2249,79 @@
 2025-09-11 14:43:41,367 - routes.api_routes - INFO - Starting workflow for video 68c1899156b3061a68f5590c in index 689e9b6574950e11a06f2b8a
 2025-09-11 14:43:41,367 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 14:43:41] "POST /api/workflow HTTP/1.1" 200 -
 2025-09-11 14:43:47,999 - httpx - INFO - HTTP Request: POST https://api.twelvelabs.io/v1.3/analyze "HTTP/1.1 200 OK"
+2025-09-11 14:45:11,460 - werkzeug - INFO -  * Detected change in '/Users/hrishikesh/Desktop/Video DeepResearch/TwelveLabs-Video-DeepResearch/backend/routes/api_routes.py', reloading
+2025-09-11 14:45:12,339 - werkzeug - INFO -  * Restarting with watchdog (fsevents)
+2025-09-11 14:45:12,801 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-09-11 14:45:12,802 - apscheduler.scheduler - INFO - Added job "wake_up_app" to job store "default"
+2025-09-11 14:45:12,802 - apscheduler.scheduler - INFO - Scheduler started
+2025-09-11 14:45:12,805 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 10
+2025-09-11 14:45:12,805 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 13
+2025-09-11 14:45:12,808 - werkzeug - WARNING -  * Debugger is active!
+2025-09-11 14:45:12,815 - werkzeug - INFO -  * Debugger PIN: 129-317-657
+2025-09-11 14:52:29,284 - werkzeug - INFO -  * Detected change in '/Users/hrishikesh/Desktop/Video DeepResearch/TwelveLabs-Video-DeepResearch/backend/routes/api_routes.py', reloading
+2025-09-11 14:52:29,543 - werkzeug - INFO -  * Restarting with watchdog (fsevents)
+2025-09-11 14:52:30,108 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-09-11 14:52:30,109 - apscheduler.scheduler - INFO - Added job "wake_up_app" to job store "default"
+2025-09-11 14:52:30,109 - apscheduler.scheduler - INFO - Scheduler started
+2025-09-11 14:52:30,112 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 10
+2025-09-11 14:52:30,112 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 13
+2025-09-11 14:52:30,115 - werkzeug - WARNING -  * Debugger is active!
+2025-09-11 14:52:30,122 - werkzeug - INFO -  * Debugger PIN: 129-317-657
+2025-09-11 14:52:30,145 - apscheduler.executors.default - INFO - Running job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-11 15:01:30 CEST)" (scheduled at 2025-09-11 14:52:30.139423+02:00)
+2025-09-11 14:52:30,157 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 14:52:30] "GET /health HTTP/1.1" 200 -
+2025-09-11 14:52:30,158 - apscheduler.executors.default - INFO - Job "wake_up_app (trigger: interval[0:09:00], next run at: 2025-09-11 15:01:30 CEST)" executed successfully
+2025-09-11 14:57:10,250 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-09-11 14:57:10,251 - apscheduler.scheduler - INFO - Added job "wake_up_app" to job store "default"
+2025-09-11 14:57:10,251 - apscheduler.scheduler - INFO - Scheduler started
+2025-09-11 14:57:10,254 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 10
+2025-09-11 14:57:10,254 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 13
+2025-09-11 14:57:10,261 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.25.18.243:5000
+2025-09-11 14:57:10,261 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-09-11 14:57:10,267 - werkzeug - INFO -  * Restarting with watchdog (fsevents)
+2025-09-11 14:57:10,691 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-09-11 14:57:10,692 - apscheduler.scheduler - INFO - Added job "wake_up_app" to job store "default"
+2025-09-11 14:57:10,692 - apscheduler.scheduler - INFO - Scheduler started
+2025-09-11 14:57:10,695 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 10
+2025-09-11 14:57:10,695 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 13
+2025-09-11 14:57:10,697 - werkzeug - WARNING -  * Debugger is active!
+2025-09-11 14:57:10,707 - werkzeug - INFO -  * Debugger PIN: 129-317-657
+2025-09-11 14:57:38,147 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 14:57:38] "OPTIONS /api/indexes HTTP/1.1" 200 -
+2025-09-11 14:57:38,148 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 14:57:38] "OPTIONS /api/indexes HTTP/1.1" 200 -
+2025-09-11 14:57:38,831 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 14:57:38] "POST /api/indexes HTTP/1.1" 200 -
+2025-09-11 14:57:38,832 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 14:57:38] "POST /api/indexes HTTP/1.1" 200 -
+2025-09-11 14:57:38,890 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 14:57:38] "OPTIONS /api/videos HTTP/1.1" 200 -
+2025-09-11 14:57:38,890 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 14:57:38] "OPTIONS /api/videos HTTP/1.1" 200 -
+2025-09-11 14:57:39,411 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 14:57:39] "POST /api/videos HTTP/1.1" 200 -
+2025-09-11 14:57:39,412 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 14:57:39] "POST /api/videos HTTP/1.1" 200 -
+2025-09-11 14:57:44,351 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 14:57:44] "OPTIONS /api/workflow HTTP/1.1" 200 -
+2025-09-11 14:57:44,353 - routes.api_routes - INFO - === WORKFLOW REQUEST START ===
+2025-09-11 14:57:44,353 - routes.api_routes - INFO - Request data: {
+  "index_id": "689e9b6574950e11a06f2b8a",
+  "video_id": "68c1899156b3061a68f5590c",
+  "analysis_prompt": "Research about it",
+  "research_query": "Research about it"
+}
+2025-09-11 14:57:44,353 - routes.api_routes - INFO - Starting workflow for video 68c1899156b3061a68f5590c in index 689e9b6574950e11a06f2b8a
+2025-09-11 14:57:44,353 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 14:57:44] "POST /api/workflow HTTP/1.1" 200 -
+2025-09-11 14:57:50,458 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 14:57:50] "OPTIONS /api/indexes HTTP/1.1" 200 -
+2025-09-11 14:57:50,459 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 14:57:50] "OPTIONS /api/indexes HTTP/1.1" 200 -
+2025-09-11 14:57:50,634 - httpx - INFO - HTTP Request: POST https://api.twelvelabs.io/v1.3/analyze "HTTP/1.1 200 OK"
+2025-09-11 14:57:50,978 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 14:57:50] "POST /api/indexes HTTP/1.1" 200 -
+2025-09-11 14:57:50,991 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 14:57:50] "POST /api/indexes HTTP/1.1" 200 -
+2025-09-11 14:57:51,044 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 14:57:51] "OPTIONS /api/videos HTTP/1.1" 200 -
+2025-09-11 14:57:51,566 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 14:57:51] "POST /api/videos HTTP/1.1" 200 -
+2025-09-11 14:57:51,592 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 14:57:51] "POST /api/videos HTTP/1.1" 200 -
+2025-09-11 14:57:57,732 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 14:57:57] "OPTIONS /api/workflow HTTP/1.1" 200 -
+2025-09-11 14:57:57,733 - routes.api_routes - INFO - === WORKFLOW REQUEST START ===
+2025-09-11 14:57:57,733 - routes.api_routes - INFO - Request data: {
+  "index_id": "689e9b6574950e11a06f2b8a",
+  "video_id": "68c1899156b3061a68f5590c",
+  "analysis_prompt": "Research about it",
+  "research_query": "Research about it"
+}
+2025-09-11 14:57:57,733 - routes.api_routes - INFO - Starting workflow for video 68c1899156b3061a68f5590c in index 689e9b6574950e11a06f2b8a
+2025-09-11 14:57:57,733 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 14:57:57] "POST /api/workflow HTTP/1.1" 200 -
+2025-09-11 14:58:04,837 - httpx - INFO - HTTP Request: POST https://api.twelvelabs.io/v1.3/analyze "HTTP/1.1 200 OK"

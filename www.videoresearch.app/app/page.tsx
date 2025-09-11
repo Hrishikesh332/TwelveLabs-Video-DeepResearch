@@ -180,13 +180,7 @@ function Logo({ className = "w-12 h-12" }: { className?: string }) {
 }
 
 // Inside the DeepResearchLanding component, before the return statement
-const LoaderSpinner = ({ className }: { className?: string }) => {
-  return (
-    <div className={`w-8 h-8 flex items-center justify-center ${className || ''}`}>
-      <div className="animate-spin rounded-full h-6 w-6 border-2 border-gray-300 border-t-blue-600"></div>
-    </div>
-  );
-};
+
 
 // Convert numeric citations like [1], [2] into hyperlinks to the corresponding sources
 function linkifyReferences(markdown: string, sources?: Source[]): string {
@@ -1571,9 +1565,6 @@ Please provide a comprehensive answer that builds upon the previous research and
                           }
                         })()}
                       </span>
-                      <div className="w-8 h-8 flex items-center justify-center">
-                        <LoaderSpinner />
-                      </div>
                     </div>
                     
                     <div className="w-full bg-gray-200 rounded-full h-2 relative overflow-hidden">

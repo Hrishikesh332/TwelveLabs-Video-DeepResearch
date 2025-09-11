@@ -2325,3 +2325,526 @@
 2025-09-11 14:57:57,733 - routes.api_routes - INFO - Starting workflow for video 68c1899156b3061a68f5590c in index 689e9b6574950e11a06f2b8a
 2025-09-11 14:57:57,733 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 14:57:57] "POST /api/workflow HTTP/1.1" 200 -
 2025-09-11 14:58:04,837 - httpx - INFO - HTTP Request: POST https://api.twelvelabs.io/v1.3/analyze "HTTP/1.1 200 OK"
+2025-09-11 15:23:29,654 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-09-11 15:23:29,655 - apscheduler.scheduler - INFO - Added job "wake_up_app" to job store "default"
+2025-09-11 15:23:29,655 - apscheduler.scheduler - INFO - Scheduler started
+2025-09-11 15:23:29,659 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 10
+2025-09-11 15:23:29,659 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 13
+2025-09-11 15:23:29,665 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.25.18.243:5000
+2025-09-11 15:23:29,665 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-09-11 15:23:29,671 - werkzeug - INFO -  * Restarting with watchdog (fsevents)
+2025-09-11 15:23:30,063 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-09-11 15:23:30,063 - apscheduler.scheduler - INFO - Added job "wake_up_app" to job store "default"
+2025-09-11 15:23:30,063 - apscheduler.scheduler - INFO - Scheduler started
+2025-09-11 15:23:30,067 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 10
+2025-09-11 15:23:30,067 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 13
+2025-09-11 15:23:30,068 - werkzeug - WARNING -  * Debugger is active!
+2025-09-11 15:23:30,076 - werkzeug - INFO -  * Debugger PIN: 129-317-657
+2025-09-11 15:23:57,117 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 15:23:57] "OPTIONS /api/indexes HTTP/1.1" 200 -
+2025-09-11 15:23:57,118 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 15:23:57] "OPTIONS /api/indexes HTTP/1.1" 200 -
+2025-09-11 15:23:57,807 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 15:23:57] "POST /api/indexes HTTP/1.1" 200 -
+2025-09-11 15:23:57,807 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 15:23:57] "POST /api/indexes HTTP/1.1" 200 -
+2025-09-11 15:23:57,862 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 15:23:57] "OPTIONS /api/videos HTTP/1.1" 200 -
+2025-09-11 15:23:57,863 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 15:23:57] "OPTIONS /api/videos HTTP/1.1" 200 -
+2025-09-11 15:23:58,382 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 15:23:58] "POST /api/videos HTTP/1.1" 200 -
+2025-09-11 15:23:58,389 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 15:23:58] "POST /api/videos HTTP/1.1" 200 -
+2025-09-11 15:24:01,445 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 15:24:01] "POST /api/indexes HTTP/1.1" 200 -
+2025-09-11 15:24:01,452 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 15:24:01] "POST /api/indexes HTTP/1.1" 200 -
+2025-09-11 15:24:02,020 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 15:24:02] "POST /api/videos HTTP/1.1" 200 -
+2025-09-11 15:24:02,045 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 15:24:02] "POST /api/videos HTTP/1.1" 200 -
+2025-09-11 15:24:05,154 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 15:24:05] "OPTIONS /api/indexes HTTP/1.1" 200 -
+2025-09-11 15:24:05,155 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 15:24:05] "OPTIONS /api/indexes HTTP/1.1" 200 -
+2025-09-11 15:24:05,675 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 15:24:05] "POST /api/indexes HTTP/1.1" 200 -
+2025-09-11 15:24:05,677 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 15:24:05] "POST /api/indexes HTTP/1.1" 200 -
+2025-09-11 15:24:05,731 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 15:24:05] "OPTIONS /api/videos HTTP/1.1" 200 -
+2025-09-11 15:24:06,355 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 15:24:06] "POST /api/videos HTTP/1.1" 200 -
+2025-09-11 15:24:06,356 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 15:24:06] "POST /api/videos HTTP/1.1" 200 -
+2025-09-11 15:24:09,491 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 15:24:09] "POST /api/indexes HTTP/1.1" 200 -
+2025-09-11 15:24:09,492 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 15:24:09] "POST /api/indexes HTTP/1.1" 200 -
+2025-09-11 15:24:10,062 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 15:24:10] "POST /api/videos HTTP/1.1" 200 -
+2025-09-11 15:24:10,065 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 15:24:10] "POST /api/videos HTTP/1.1" 200 -
+2025-09-11 15:24:11,448 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 15:24:11] "OPTIONS /api/indexes HTTP/1.1" 200 -
+2025-09-11 15:24:11,449 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 15:24:11] "OPTIONS /api/indexes HTTP/1.1" 200 -
+2025-09-11 15:24:11,965 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 15:24:11] "POST /api/indexes HTTP/1.1" 200 -
+2025-09-11 15:24:11,967 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 15:24:11] "POST /api/indexes HTTP/1.1" 200 -
+2025-09-11 15:24:12,030 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 15:24:12] "OPTIONS /api/videos HTTP/1.1" 200 -
+2025-09-11 15:24:12,547 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 15:24:12] "POST /api/videos HTTP/1.1" 200 -
+2025-09-11 15:24:12,640 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 15:24:12] "POST /api/videos HTTP/1.1" 200 -
+2025-09-11 15:24:15,659 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 15:24:15] "POST /api/indexes HTTP/1.1" 200 -
+2025-09-11 15:24:15,660 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 15:24:15] "POST /api/indexes HTTP/1.1" 200 -
+2025-09-11 15:24:16,248 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 15:24:16] "POST /api/videos HTTP/1.1" 200 -
+2025-09-11 15:24:16,251 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 15:24:16] "POST /api/videos HTTP/1.1" 200 -
+2025-09-11 15:24:19,195 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 15:24:19] "OPTIONS /api/indexes HTTP/1.1" 200 -
+2025-09-11 15:24:19,201 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 15:24:19] "OPTIONS /api/indexes HTTP/1.1" 200 -
+2025-09-11 15:24:19,724 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 15:24:19] "POST /api/indexes HTTP/1.1" 200 -
+2025-09-11 15:24:19,749 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 15:24:19] "POST /api/indexes HTTP/1.1" 200 -
+2025-09-11 15:24:20,449 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 15:24:20] "OPTIONS /api/videos HTTP/1.1" 200 -
+2025-09-11 15:24:20,450 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 15:24:20] "OPTIONS /api/videos HTTP/1.1" 200 -
+2025-09-11 15:24:20,975 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 15:24:20] "POST /api/videos HTTP/1.1" 200 -
+2025-09-11 15:24:21,132 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 15:24:21] "POST /api/videos HTTP/1.1" 200 -
+2025-09-11 15:24:24,347 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 15:24:24] "OPTIONS /api/indexes HTTP/1.1" 200 -
+2025-09-11 15:24:24,349 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 15:24:24] "OPTIONS /api/indexes HTTP/1.1" 200 -
+2025-09-11 15:24:24,865 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 15:24:24] "POST /api/indexes HTTP/1.1" 200 -
+2025-09-11 15:24:24,871 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 15:24:24] "POST /api/indexes HTTP/1.1" 200 -
+2025-09-11 15:24:25,971 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 15:24:25] "POST /api/videos HTTP/1.1" 200 -
+2025-09-11 15:24:25,972 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 15:24:25] "POST /api/videos HTTP/1.1" 200 -
+2025-09-11 15:24:29,861 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 15:24:29] "POST /api/indexes HTTP/1.1" 200 -
+2025-09-11 15:24:29,865 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 15:24:29] "POST /api/indexes HTTP/1.1" 200 -
+2025-09-11 15:24:30,447 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 15:24:30] "OPTIONS /api/videos HTTP/1.1" 200 -
+2025-09-11 15:24:30,448 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 15:24:30] "OPTIONS /api/videos HTTP/1.1" 200 -
+2025-09-11 15:24:30,967 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 15:24:30] "POST /api/videos HTTP/1.1" 200 -
+2025-09-11 15:24:31,139 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 15:24:31] "POST /api/videos HTTP/1.1" 200 -
+2025-09-11 15:24:34,291 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 15:24:34] "OPTIONS /api/indexes HTTP/1.1" 200 -
+2025-09-11 15:24:34,292 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 15:24:34] "OPTIONS /api/indexes HTTP/1.1" 200 -
+2025-09-11 15:24:34,829 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 15:24:34] "POST /api/indexes HTTP/1.1" 200 -
+2025-09-11 15:24:34,830 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 15:24:34] "POST /api/indexes HTTP/1.1" 200 -
+2025-09-11 15:24:35,968 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 15:24:35] "POST /api/videos HTTP/1.1" 200 -
+2025-09-11 15:24:35,974 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 15:24:35] "POST /api/videos HTTP/1.1" 200 -
+2025-09-11 15:24:39,386 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 15:24:39] "OPTIONS /api/indexes HTTP/1.1" 200 -
+2025-09-11 15:24:39,387 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 15:24:39] "OPTIONS /api/indexes HTTP/1.1" 200 -
+2025-09-11 15:24:40,066 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 15:24:40] "POST /api/indexes HTTP/1.1" 200 -
+2025-09-11 15:24:40,237 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 15:24:40] "POST /api/indexes HTTP/1.1" 200 -
+2025-09-11 15:24:40,450 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 15:24:40] "OPTIONS /api/videos HTTP/1.1" 200 -
+2025-09-11 15:24:40,451 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 15:24:40] "OPTIONS /api/videos HTTP/1.1" 200 -
+2025-09-11 15:24:40,969 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 15:24:40] "POST /api/videos HTTP/1.1" 200 -
+2025-09-11 15:24:40,972 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 15:24:40] "POST /api/videos HTTP/1.1" 200 -
+2025-09-11 15:24:44,850 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 15:24:44] "POST /api/indexes HTTP/1.1" 200 -
+2025-09-11 15:24:44,851 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 15:24:44] "POST /api/indexes HTTP/1.1" 200 -
+2025-09-11 15:24:45,967 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 15:24:45] "POST /api/videos HTTP/1.1" 200 -
+2025-09-11 15:24:45,970 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 15:24:45] "POST /api/videos HTTP/1.1" 200 -
+2025-09-11 15:24:49,341 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 15:24:49] "OPTIONS /api/indexes HTTP/1.1" 200 -
+2025-09-11 15:24:49,341 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 15:24:49] "OPTIONS /api/indexes HTTP/1.1" 200 -
+2025-09-11 15:24:49,862 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 15:24:49] "POST /api/indexes HTTP/1.1" 200 -
+2025-09-11 15:24:50,011 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 15:24:50] "POST /api/indexes HTTP/1.1" 200 -
+2025-09-11 15:24:50,446 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 15:24:50] "OPTIONS /api/videos HTTP/1.1" 200 -
+2025-09-11 15:24:50,963 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 15:24:50] "POST /api/videos HTTP/1.1" 200 -
+2025-09-11 15:24:50,965 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 15:24:50] "POST /api/videos HTTP/1.1" 200 -
+2025-09-11 15:24:54,839 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 15:24:54] "POST /api/indexes HTTP/1.1" 200 -
+2025-09-11 15:24:54,843 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 15:24:54] "POST /api/indexes HTTP/1.1" 200 -
+2025-09-11 15:24:55,970 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 15:24:55] "POST /api/videos HTTP/1.1" 200 -
+2025-09-11 15:24:56,140 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 15:24:56] "POST /api/videos HTTP/1.1" 200 -
+2025-09-11 15:24:59,314 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 15:24:59] "OPTIONS /api/indexes HTTP/1.1" 200 -
+2025-09-11 15:24:59,314 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 15:24:59] "OPTIONS /api/indexes HTTP/1.1" 200 -
+2025-09-11 15:24:59,845 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 15:24:59] "POST /api/indexes HTTP/1.1" 200 -
+2025-09-11 15:25:00,001 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 15:25:00] "POST /api/indexes HTTP/1.1" 200 -
+2025-09-11 15:25:00,447 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 15:25:00] "OPTIONS /api/videos HTTP/1.1" 200 -
+2025-09-11 15:25:00,964 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 15:25:00] "POST /api/videos HTTP/1.1" 200 -
+2025-09-11 15:25:00,968 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 15:25:00] "POST /api/videos HTTP/1.1" 200 -
+2025-09-11 15:25:04,728 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 15:25:04] "POST /api/indexes HTTP/1.1" 200 -
+2025-09-11 15:25:04,730 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 15:25:04] "POST /api/indexes HTTP/1.1" 200 -
+2025-09-11 15:25:05,976 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 15:25:05] "POST /api/videos HTTP/1.1" 200 -
+2025-09-11 15:25:05,977 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 15:25:05] "POST /api/videos HTTP/1.1" 200 -
+2025-09-11 15:25:09,330 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 15:25:09] "OPTIONS /api/indexes HTTP/1.1" 200 -
+2025-09-11 15:25:09,330 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 15:25:09] "OPTIONS /api/indexes HTTP/1.1" 200 -
+2025-09-11 15:25:09,854 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 15:25:09] "POST /api/indexes HTTP/1.1" 200 -
+2025-09-11 15:25:09,856 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 15:25:09] "POST /api/indexes HTTP/1.1" 200 -
+2025-09-11 15:25:10,448 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 15:25:10] "OPTIONS /api/videos HTTP/1.1" 200 -
+2025-09-11 15:25:10,448 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 15:25:10] "OPTIONS /api/videos HTTP/1.1" 200 -
+2025-09-11 15:25:10,971 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 15:25:10] "POST /api/videos HTTP/1.1" 200 -
+2025-09-11 15:25:11,075 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 15:25:11] "POST /api/videos HTTP/1.1" 200 -
+2025-09-11 15:25:14,861 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 15:25:14] "POST /api/indexes HTTP/1.1" 200 -
+2025-09-11 15:25:14,974 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 15:25:14] "POST /api/indexes HTTP/1.1" 200 -
+2025-09-11 15:25:15,969 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 15:25:15] "POST /api/videos HTTP/1.1" 200 -
+2025-09-11 15:25:15,976 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 15:25:15] "POST /api/videos HTTP/1.1" 200 -
+2025-09-11 15:25:20,219 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 15:25:20] "OPTIONS /api/indexes HTTP/1.1" 200 -
+2025-09-11 15:25:20,220 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 15:25:20] "OPTIONS /api/indexes HTTP/1.1" 200 -
+2025-09-11 15:25:20,737 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 15:25:20] "POST /api/indexes HTTP/1.1" 200 -
+2025-09-11 15:25:20,740 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 15:25:20] "POST /api/indexes HTTP/1.1" 200 -
+2025-09-11 15:25:21,449 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 15:25:21] "OPTIONS /api/videos HTTP/1.1" 200 -
+2025-09-11 15:25:21,449 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 15:25:21] "OPTIONS /api/videos HTTP/1.1" 200 -
+2025-09-11 15:25:21,970 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 15:25:21] "POST /api/videos HTTP/1.1" 200 -
+2025-09-11 15:25:21,983 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 15:25:21] "POST /api/videos HTTP/1.1" 200 -
+2025-09-11 15:26:47,622 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-09-11 15:26:47,623 - apscheduler.scheduler - INFO - Added job "wake_up_app" to job store "default"
+2025-09-11 15:26:47,623 - apscheduler.scheduler - INFO - Scheduler started
+2025-09-11 15:26:47,626 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 10
+2025-09-11 15:26:47,626 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 13
+2025-09-11 15:26:47,632 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.25.18.243:5000
+2025-09-11 15:26:47,632 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-09-11 15:26:47,637 - werkzeug - INFO -  * Restarting with watchdog (fsevents)
+2025-09-11 15:26:48,032 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-09-11 15:26:48,033 - apscheduler.scheduler - INFO - Added job "wake_up_app" to job store "default"
+2025-09-11 15:26:48,033 - apscheduler.scheduler - INFO - Scheduler started
+2025-09-11 15:26:48,036 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 10
+2025-09-11 15:26:48,037 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 13
+2025-09-11 15:26:48,038 - werkzeug - WARNING -  * Debugger is active!
+2025-09-11 15:26:48,044 - werkzeug - INFO -  * Debugger PIN: 129-317-657
+2025-09-11 15:27:00,931 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 15:27:00] "OPTIONS /api/indexes HTTP/1.1" 200 -
+2025-09-11 15:27:00,933 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 15:27:00] "OPTIONS /api/indexes HTTP/1.1" 200 -
+2025-09-11 15:27:01,589 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 15:27:01] "POST /api/indexes HTTP/1.1" 200 -
+2025-09-11 15:27:01,592 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 15:27:01] "POST /api/indexes HTTP/1.1" 200 -
+2025-09-11 15:27:01,644 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 15:27:01] "OPTIONS /api/videos HTTP/1.1" 200 -
+2025-09-11 15:27:02,172 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 15:27:02] "POST /api/videos HTTP/1.1" 200 -
+2025-09-11 15:27:02,176 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 15:27:02] "POST /api/videos HTTP/1.1" 200 -
+2025-09-11 15:27:12,981 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 15:27:12] "OPTIONS /api/workflow HTTP/1.1" 200 -
+2025-09-11 15:27:12,982 - routes.api_routes - INFO - === WORKFLOW REQUEST START ===
+2025-09-11 15:27:12,982 - routes.api_routes - INFO - Request data: {
+  "index_id": "689e9b6574950e11a06f2b8a",
+  "video_id": "68c2cbe114d6189bb8cc266f",
+  "analysis_prompt": "Do research about it",
+  "research_query": "Do research about it"
+}
+2025-09-11 15:27:12,982 - routes.api_routes - INFO - Starting workflow for video 68c2cbe114d6189bb8cc266f in index 689e9b6574950e11a06f2b8a
+2025-09-11 15:27:12,982 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 15:27:12] "POST /api/workflow HTTP/1.1" 200 -
+2025-09-11 15:27:15,660 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 15:27:15] "OPTIONS /api/indexes HTTP/1.1" 200 -
+2025-09-11 15:27:15,661 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 15:27:15] "OPTIONS /api/indexes HTTP/1.1" 200 -
+2025-09-11 15:27:16,195 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 15:27:16] "POST /api/indexes HTTP/1.1" 200 -
+2025-09-11 15:27:16,198 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 15:27:16] "POST /api/indexes HTTP/1.1" 200 -
+2025-09-11 15:27:16,260 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 15:27:16] "OPTIONS /api/videos HTTP/1.1" 200 -
+2025-09-11 15:27:16,784 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 15:27:16] "POST /api/videos HTTP/1.1" 200 -
+2025-09-11 15:27:16,814 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 15:27:16] "POST /api/videos HTTP/1.1" 200 -
+2025-09-11 15:27:28,191 - httpx - INFO - HTTP Request: POST https://api.twelvelabs.io/v1.3/analyze "HTTP/1.1 200 OK"
+2025-09-11 15:30:32,391 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-09-11 15:30:32,392 - apscheduler.scheduler - INFO - Added job "wake_up_app" to job store "default"
+2025-09-11 15:30:32,392 - apscheduler.scheduler - INFO - Scheduler started
+2025-09-11 15:30:32,395 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 10
+2025-09-11 15:30:32,395 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 13
+2025-09-11 15:30:32,402 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.25.18.243:5000
+2025-09-11 15:30:32,402 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-09-11 15:30:32,407 - werkzeug - INFO -  * Restarting with watchdog (fsevents)
+2025-09-11 15:30:32,799 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-09-11 15:30:32,799 - apscheduler.scheduler - INFO - Added job "wake_up_app" to job store "default"
+2025-09-11 15:30:32,799 - apscheduler.scheduler - INFO - Scheduler started
+2025-09-11 15:30:32,803 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 10
+2025-09-11 15:30:32,803 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 13
+2025-09-11 15:30:32,805 - werkzeug - WARNING -  * Debugger is active!
+2025-09-11 15:30:32,814 - werkzeug - INFO -  * Debugger PIN: 129-317-657
+2025-09-11 15:30:53,388 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 15:30:53] "OPTIONS /api/indexes HTTP/1.1" 200 -
+2025-09-11 15:30:53,388 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 15:30:53] "OPTIONS /api/indexes HTTP/1.1" 200 -
+2025-09-11 15:30:54,043 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 15:30:54] "POST /api/indexes HTTP/1.1" 200 -
+2025-09-11 15:30:54,052 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 15:30:54] "POST /api/indexes HTTP/1.1" 200 -
+2025-09-11 15:30:54,097 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 15:30:54] "OPTIONS /api/videos HTTP/1.1" 200 -
+2025-09-11 15:30:54,614 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 15:30:54] "POST /api/videos HTTP/1.1" 200 -
+2025-09-11 15:30:54,633 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 15:30:54] "POST /api/videos HTTP/1.1" 200 -
+2025-09-11 15:31:09,345 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 15:31:09] "OPTIONS /api/indexes HTTP/1.1" 200 -
+2025-09-11 15:31:09,346 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 15:31:09] "OPTIONS /api/indexes HTTP/1.1" 200 -
+2025-09-11 15:31:09,868 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 15:31:09] "POST /api/indexes HTTP/1.1" 200 -
+2025-09-11 15:31:09,870 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 15:31:09] "POST /api/indexes HTTP/1.1" 200 -
+2025-09-11 15:31:09,930 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 15:31:09] "OPTIONS /api/videos HTTP/1.1" 200 -
+2025-09-11 15:31:10,450 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 15:31:10] "POST /api/videos HTTP/1.1" 200 -
+2025-09-11 15:31:10,486 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 15:31:10] "POST /api/videos HTTP/1.1" 200 -
+2025-09-11 15:31:25,932 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 15:31:25] "OPTIONS /api/workflow HTTP/1.1" 200 -
+2025-09-11 15:31:25,934 - routes.api_routes - INFO - === WORKFLOW REQUEST START ===
+2025-09-11 15:31:25,934 - routes.api_routes - INFO - Request data: {
+  "index_id": "689e9b6574950e11a06f2b8a",
+  "video_id": "68c2cbe114d6189bb8cc266f",
+  "analysis_prompt": "research about it",
+  "research_query": "research about it"
+}
+2025-09-11 15:31:25,934 - routes.api_routes - INFO - Starting workflow for video 68c2cbe114d6189bb8cc266f in index 689e9b6574950e11a06f2b8a
+2025-09-11 15:31:25,935 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 15:31:25] "POST /api/workflow HTTP/1.1" 200 -
+2025-09-11 15:31:37,134 - httpx - INFO - HTTP Request: POST https://api.twelvelabs.io/v1.3/analyze "HTTP/1.1 200 OK"
+2025-09-11 15:32:02,716 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 15:32:02] "OPTIONS /api/config/twelvelabs HTTP/1.1" 200 -
+2025-09-11 15:32:02,718 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 15:32:02] "DELETE /api/config/twelvelabs HTTP/1.1" 200 -
+2025-09-11 15:32:02,751 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 15:32:02] "OPTIONS /api/indexes HTTP/1.1" 200 -
+2025-09-11 15:32:03,268 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 15:32:03] "POST /api/indexes HTTP/1.1" 200 -
+2025-09-11 15:32:03,325 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 15:32:03] "OPTIONS /api/videos HTTP/1.1" 200 -
+2025-09-11 15:32:03,854 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 15:32:03] "POST /api/videos HTTP/1.1" 200 -
+2025-09-11 15:32:21,907 - routes.api_routes - INFO - Temporary file created: /var/folders/px/_t8jhry50rj7ttj9m12l3mk80000gn/T/tmpwchee9ry
+2025-09-11 15:32:21,923 - routes.api_routes - INFO - Starting video upload and indexing...
+2025-09-11 15:35:12,724 - routes.api_routes - INFO - Upload and indexing completed with result: {'status': 'ready', 'video_id': '68c2cf7114d6189bb8cc2860', 'task': {'_id': '68c2cf7114d6189bb8cc2860', 'index_id': '689e9b6574950e11a06f2b8a', 'video_id': '68c2cf7114d6189bb8cc2860', 'status': 'ready', 'system_metadata': {'filename': 'tmpwchee9ry', 'duration': 182.044444, 'width': 640, 'height': 360}, 'created_at': '2025-09-11T13:32:33.309Z', 'updated_at': '2025-09-11T13:35:12.07Z', 'hls': {'video_url': 'https://deuqpmn4rs7j5.cloudfront.net/689e9b4e9dd2f92b85682ca2/68c2cf7114d6189bb8cc2860/stream/5a2ba377-7502-474f-a89a-2fc9e53175d2.m3u8', 'thumbnail_urls': ['https://deuqpmn4rs7j5.cloudfront.net/689e9b4e9dd2f92b85682ca2/68c2cf7114d6189bb8cc2860/thumbnails/5a2ba377-7502-474f-a89a-2fc9e53175d2.0000001.jpg'], 'status': 'COMPLETE', 'updated_at': '2025-09-11T13:33:23.274Z'}}}
+2025-09-11 15:35:12,725 - routes.api_routes - INFO - Temporary file deleted: /var/folders/px/_t8jhry50rj7ttj9m12l3mk80000gn/T/tmpwchee9ry
+2025-09-11 15:35:12,728 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 15:35:12] "POST /api/upload HTTP/1.1" 200 -
+2025-09-11 15:35:15,808 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 15:35:15] "OPTIONS /api/indexes HTTP/1.1" 200 -
+2025-09-11 15:35:15,808 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 15:35:15] "OPTIONS /api/indexes HTTP/1.1" 200 -
+2025-09-11 15:35:16,335 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 15:35:16] "POST /api/indexes HTTP/1.1" 200 -
+2025-09-11 15:35:16,427 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 15:35:16] "OPTIONS /api/videos HTTP/1.1" 200 -
+2025-09-11 15:35:16,487 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 15:35:16] "POST /api/indexes HTTP/1.1" 200 -
+2025-09-11 15:35:16,947 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 15:35:16] "POST /api/videos HTTP/1.1" 200 -
+2025-09-11 15:35:17,075 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 15:35:17] "POST /api/videos HTTP/1.1" 200 -
+2025-09-11 15:35:25,911 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 15:35:25] "OPTIONS /api/workflow HTTP/1.1" 200 -
+2025-09-11 15:35:25,912 - routes.api_routes - INFO - === WORKFLOW REQUEST START ===
+2025-09-11 15:35:25,912 - routes.api_routes - INFO - Request data: {
+  "index_id": "689e9b6574950e11a06f2b8a",
+  "video_id": "68c2cf7114d6189bb8cc2860",
+  "analysis_prompt": "Please do research about it",
+  "research_query": "Please do research about it"
+}
+2025-09-11 15:35:25,912 - routes.api_routes - INFO - Starting workflow for video 68c2cf7114d6189bb8cc2860 in index 689e9b6574950e11a06f2b8a
+2025-09-11 15:35:25,912 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 15:35:25] "POST /api/workflow HTTP/1.1" 200 -
+2025-09-11 15:35:39,006 - httpx - INFO - HTTP Request: POST https://api.twelvelabs.io/v1.3/analyze "HTTP/1.1 200 OK"
+2025-09-11 15:36:10,758 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 15:36:10] "OPTIONS /api/indexes HTTP/1.1" 200 -
+2025-09-11 15:36:10,758 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 15:36:10] "OPTIONS /api/indexes HTTP/1.1" 200 -
+2025-09-11 15:36:11,273 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 15:36:11] "POST /api/indexes HTTP/1.1" 200 -
+2025-09-11 15:36:11,287 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 15:36:11] "POST /api/indexes HTTP/1.1" 200 -
+2025-09-11 15:36:11,361 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 15:36:11] "OPTIONS /api/videos HTTP/1.1" 200 -
+2025-09-11 15:36:11,361 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 15:36:11] "OPTIONS /api/videos HTTP/1.1" 200 -
+2025-09-11 15:36:11,876 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 15:36:11] "POST /api/videos HTTP/1.1" 200 -
+2025-09-11 15:36:11,937 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 15:36:11] "POST /api/videos HTTP/1.1" 200 -
+2025-09-11 15:36:27,828 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 15:36:27] "OPTIONS /api/indexes HTTP/1.1" 200 -
+2025-09-11 15:36:27,829 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 15:36:27] "OPTIONS /api/indexes HTTP/1.1" 200 -
+2025-09-11 15:36:28,376 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 15:36:28] "POST /api/indexes HTTP/1.1" 200 -
+2025-09-11 15:36:28,378 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 15:36:28] "POST /api/indexes HTTP/1.1" 200 -
+2025-09-11 15:36:28,440 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 15:36:28] "OPTIONS /api/videos HTTP/1.1" 200 -
+2025-09-11 15:36:28,958 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 15:36:28] "POST /api/videos HTTP/1.1" 200 -
+2025-09-11 15:36:28,990 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 15:36:28] "POST /api/videos HTTP/1.1" 200 -
+2025-09-11 15:37:28,965 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 15:37:28] "OPTIONS /api/workflow HTTP/1.1" 200 -
+2025-09-11 15:37:28,967 - routes.api_routes - INFO - === WORKFLOW REQUEST START ===
+2025-09-11 15:37:28,967 - routes.api_routes - INFO - Request data: {
+  "index_id": "689e9b6574950e11a06f2b8a",
+  "video_id": "68c045a52542e277f211dacd",
+  "analysis_prompt": "Please do research about it",
+  "research_query": "Please do research about it"
+}
+2025-09-11 15:37:28,967 - routes.api_routes - INFO - Starting workflow for video 68c045a52542e277f211dacd in index 689e9b6574950e11a06f2b8a
+2025-09-11 15:37:28,967 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 15:37:28] "POST /api/workflow HTTP/1.1" 200 -
+2025-09-11 15:37:38,685 - httpx - INFO - HTTP Request: POST https://api.twelvelabs.io/v1.3/analyze "HTTP/1.1 200 OK"
+2025-09-11 15:38:21,611 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-09-11 15:38:21,612 - apscheduler.scheduler - INFO - Added job "wake_up_app" to job store "default"
+2025-09-11 15:38:21,612 - apscheduler.scheduler - INFO - Scheduler started
+2025-09-11 15:38:21,615 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 10
+2025-09-11 15:38:21,615 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 13
+2025-09-11 15:38:21,622 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.25.18.243:5000
+2025-09-11 15:38:21,622 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-09-11 15:38:21,628 - werkzeug - INFO -  * Restarting with watchdog (fsevents)
+2025-09-11 15:38:22,027 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-09-11 15:38:22,027 - apscheduler.scheduler - INFO - Added job "wake_up_app" to job store "default"
+2025-09-11 15:38:22,027 - apscheduler.scheduler - INFO - Scheduler started
+2025-09-11 15:38:22,031 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 10
+2025-09-11 15:38:22,031 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 13
+2025-09-11 15:38:22,032 - werkzeug - WARNING -  * Debugger is active!
+2025-09-11 15:38:22,040 - werkzeug - INFO -  * Debugger PIN: 129-317-657
+2025-09-11 15:38:34,009 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 15:38:34] "OPTIONS /api/indexes HTTP/1.1" 200 -
+2025-09-11 15:38:34,011 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 15:38:34] "OPTIONS /api/indexes HTTP/1.1" 200 -
+2025-09-11 15:38:34,678 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 15:38:34] "POST /api/indexes HTTP/1.1" 200 -
+2025-09-11 15:38:34,681 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 15:38:34] "POST /api/indexes HTTP/1.1" 200 -
+2025-09-11 15:38:34,765 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 15:38:34] "OPTIONS /api/videos HTTP/1.1" 200 -
+2025-09-11 15:38:34,766 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 15:38:34] "OPTIONS /api/videos HTTP/1.1" 200 -
+2025-09-11 15:38:35,310 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 15:38:35] "POST /api/videos HTTP/1.1" 200 -
+2025-09-11 15:38:35,314 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 15:38:35] "POST /api/videos HTTP/1.1" 200 -
+2025-09-11 15:38:51,042 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 15:38:51] "OPTIONS /api/indexes HTTP/1.1" 200 -
+2025-09-11 15:38:51,043 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 15:38:51] "OPTIONS /api/indexes HTTP/1.1" 200 -
+2025-09-11 15:38:51,607 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 15:38:51] "POST /api/indexes HTTP/1.1" 200 -
+2025-09-11 15:38:51,611 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 15:38:51] "POST /api/indexes HTTP/1.1" 200 -
+2025-09-11 15:38:51,683 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 15:38:51] "OPTIONS /api/videos HTTP/1.1" 200 -
+2025-09-11 15:38:52,246 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 15:38:52] "POST /api/videos HTTP/1.1" 200 -
+2025-09-11 15:38:52,250 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 15:38:52] "POST /api/videos HTTP/1.1" 200 -
+2025-09-11 15:38:58,867 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 15:38:58] "OPTIONS /api/workflow HTTP/1.1" 200 -
+2025-09-11 15:38:58,869 - routes.api_routes - INFO - === WORKFLOW REQUEST START ===
+2025-09-11 15:38:58,869 - routes.api_routes - INFO - Request data: {
+  "index_id": "689e9b6574950e11a06f2b8a",
+  "video_id": "68c2cf7114d6189bb8cc2860",
+  "analysis_prompt": "Please do research",
+  "research_query": "Please do research"
+}
+2025-09-11 15:38:58,869 - routes.api_routes - INFO - Starting workflow for video 68c2cf7114d6189bb8cc2860 in index 689e9b6574950e11a06f2b8a
+2025-09-11 15:38:58,870 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 15:38:58] "POST /api/workflow HTTP/1.1" 200 -
+2025-09-11 15:39:10,876 - httpx - INFO - HTTP Request: POST https://api.twelvelabs.io/v1.3/analyze "HTTP/1.1 200 OK"
+2025-09-11 15:44:40,751 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-09-11 15:44:40,751 - apscheduler.scheduler - INFO - Added job "wake_up_app" to job store "default"
+2025-09-11 15:44:40,751 - apscheduler.scheduler - INFO - Scheduler started
+2025-09-11 15:44:40,755 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 10
+2025-09-11 15:44:40,755 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 13
+2025-09-11 15:44:40,761 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.25.18.243:5000
+2025-09-11 15:44:40,761 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-09-11 15:44:40,765 - werkzeug - INFO -  * Restarting with watchdog (fsevents)
+2025-09-11 15:44:41,265 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-09-11 15:44:41,266 - apscheduler.scheduler - INFO - Added job "wake_up_app" to job store "default"
+2025-09-11 15:44:41,266 - apscheduler.scheduler - INFO - Scheduler started
+2025-09-11 15:44:41,270 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 10
+2025-09-11 15:44:41,270 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 13
+2025-09-11 15:44:41,272 - werkzeug - WARNING -  * Debugger is active!
+2025-09-11 15:44:41,281 - werkzeug - INFO -  * Debugger PIN: 129-317-657
+2025-09-11 15:44:55,762 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 15:44:55] "OPTIONS /api/indexes HTTP/1.1" 200 -
+2025-09-11 15:44:55,763 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 15:44:55] "OPTIONS /api/indexes HTTP/1.1" 200 -
+2025-09-11 15:44:56,463 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 15:44:56] "POST /api/indexes HTTP/1.1" 200 -
+2025-09-11 15:44:56,560 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 15:44:56] "OPTIONS /api/videos HTTP/1.1" 200 -
+2025-09-11 15:44:56,630 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 15:44:56] "POST /api/indexes HTTP/1.1" 200 -
+2025-09-11 15:44:57,094 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 15:44:57] "POST /api/videos HTTP/1.1" 200 -
+2025-09-11 15:44:57,217 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 15:44:57] "POST /api/videos HTTP/1.1" 200 -
+2025-09-11 15:45:05,642 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 15:45:05] "OPTIONS /api/workflow HTTP/1.1" 200 -
+2025-09-11 15:45:05,644 - routes.api_routes - INFO - === WORKFLOW REQUEST START ===
+2025-09-11 15:45:05,644 - routes.api_routes - INFO - Request data: {
+  "index_id": "689e9b6574950e11a06f2b8a",
+  "video_id": "68c04622272a2a4517783384",
+  "analysis_prompt": "Research about it",
+  "research_query": "Research about it"
+}
+2025-09-11 15:45:05,645 - routes.api_routes - INFO - Starting workflow for video 68c04622272a2a4517783384 in index 689e9b6574950e11a06f2b8a
+2025-09-11 15:45:05,645 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 15:45:05] "POST /api/workflow HTTP/1.1" 200 -
+2025-09-11 15:45:11,927 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 15:45:11] "OPTIONS /api/indexes HTTP/1.1" 200 -
+2025-09-11 15:45:11,928 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 15:45:11] "OPTIONS /api/indexes HTTP/1.1" 200 -
+2025-09-11 15:45:12,467 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 15:45:12] "POST /api/indexes HTTP/1.1" 200 -
+2025-09-11 15:45:12,468 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 15:45:12] "POST /api/indexes HTTP/1.1" 200 -
+2025-09-11 15:45:12,527 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 15:45:12] "OPTIONS /api/videos HTTP/1.1" 200 -
+2025-09-11 15:45:12,528 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 15:45:12] "OPTIONS /api/videos HTTP/1.1" 200 -
+2025-09-11 15:45:13,054 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 15:45:13] "POST /api/videos HTTP/1.1" 200 -
+2025-09-11 15:45:13,056 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 15:45:13] "POST /api/videos HTTP/1.1" 200 -
+2025-09-11 15:45:18,700 - httpx - INFO - HTTP Request: POST https://api.twelvelabs.io/v1.3/analyze "HTTP/1.1 200 OK"
+2025-09-11 15:58:49,973 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-09-11 15:58:49,974 - apscheduler.scheduler - INFO - Added job "wake_up_app" to job store "default"
+2025-09-11 15:58:49,974 - apscheduler.scheduler - INFO - Scheduler started
+2025-09-11 15:58:49,978 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 10
+2025-09-11 15:58:49,978 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 13
+2025-09-11 15:58:49,985 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.25.18.243:5000
+2025-09-11 15:58:49,985 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-09-11 15:58:49,991 - werkzeug - INFO -  * Restarting with watchdog (fsevents)
+2025-09-11 15:58:50,410 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-09-11 15:58:50,410 - apscheduler.scheduler - INFO - Added job "wake_up_app" to job store "default"
+2025-09-11 15:58:50,410 - apscheduler.scheduler - INFO - Scheduler started
+2025-09-11 15:58:50,414 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 10
+2025-09-11 15:58:50,414 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 13
+2025-09-11 15:58:50,416 - werkzeug - WARNING -  * Debugger is active!
+2025-09-11 15:58:50,426 - werkzeug - INFO -  * Debugger PIN: 129-317-657
+2025-09-11 16:00:04,588 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-09-11 16:00:04,589 - apscheduler.scheduler - INFO - Added job "wake_up_app" to job store "default"
+2025-09-11 16:00:04,589 - apscheduler.scheduler - INFO - Scheduler started
+2025-09-11 16:00:04,592 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 10
+2025-09-11 16:00:04,592 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 13
+2025-09-11 16:00:04,598 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.25.18.243:5000
+2025-09-11 16:00:04,598 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-09-11 16:00:04,601 - werkzeug - INFO -  * Restarting with watchdog (fsevents)
+2025-09-11 16:00:05,027 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-09-11 16:00:05,027 - apscheduler.scheduler - INFO - Added job "wake_up_app" to job store "default"
+2025-09-11 16:00:05,028 - apscheduler.scheduler - INFO - Scheduler started
+2025-09-11 16:00:05,032 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 10
+2025-09-11 16:00:05,032 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 13
+2025-09-11 16:00:05,034 - werkzeug - WARNING -  * Debugger is active!
+2025-09-11 16:00:05,041 - werkzeug - INFO -  * Debugger PIN: 129-317-657
+2025-09-11 16:00:13,369 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 16:00:13] "OPTIONS /api/indexes HTTP/1.1" 200 -
+2025-09-11 16:00:13,370 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 16:00:13] "OPTIONS /api/indexes HTTP/1.1" 200 -
+2025-09-11 16:00:14,094 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 16:00:14] "POST /api/indexes HTTP/1.1" 200 -
+2025-09-11 16:00:14,096 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 16:00:14] "POST /api/indexes HTTP/1.1" 200 -
+2025-09-11 16:00:14,150 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 16:00:14] "OPTIONS /api/videos HTTP/1.1" 200 -
+2025-09-11 16:00:14,151 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 16:00:14] "OPTIONS /api/videos HTTP/1.1" 200 -
+2025-09-11 16:00:14,673 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 16:00:14] "POST /api/videos HTTP/1.1" 200 -
+2025-09-11 16:00:14,675 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 16:00:14] "POST /api/videos HTTP/1.1" 200 -
+2025-09-11 16:00:25,018 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 16:00:25] "OPTIONS /api/workflow HTTP/1.1" 200 -
+2025-09-11 16:00:25,020 - routes.api_routes - INFO - === WORKFLOW REQUEST START ===
+2025-09-11 16:00:25,021 - routes.api_routes - INFO - Request data: {
+  "index_id": "689e9b6574950e11a06f2b8a",
+  "video_id": "68c04622272a2a4517783384",
+  "analysis_prompt": "Research about it",
+  "research_query": "Research about it"
+}
+2025-09-11 16:00:25,021 - routes.api_routes - INFO - Starting workflow for video 68c04622272a2a4517783384 in index 689e9b6574950e11a06f2b8a
+2025-09-11 16:00:25,021 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 16:00:25] "POST /api/workflow HTTP/1.1" 200 -
+2025-09-11 16:00:26,653 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 16:00:26] "OPTIONS /api/indexes HTTP/1.1" 200 -
+2025-09-11 16:00:26,654 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 16:00:26] "OPTIONS /api/indexes HTTP/1.1" 200 -
+2025-09-11 16:00:27,189 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 16:00:27] "POST /api/indexes HTTP/1.1" 200 -
+2025-09-11 16:00:27,191 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 16:00:27] "POST /api/indexes HTTP/1.1" 200 -
+2025-09-11 16:00:27,263 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 16:00:27] "OPTIONS /api/videos HTTP/1.1" 200 -
+2025-09-11 16:00:27,800 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 16:00:27] "POST /api/videos HTTP/1.1" 200 -
+2025-09-11 16:00:27,816 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 16:00:27] "POST /api/videos HTTP/1.1" 200 -
+2025-09-11 16:00:37,071 - httpx - INFO - HTTP Request: POST https://api.twelvelabs.io/v1.3/analyze "HTTP/1.1 200 OK"
+2025-09-11 16:02:10,447 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 16:02:10] "OPTIONS /api/indexes HTTP/1.1" 200 -
+2025-09-11 16:02:10,988 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 16:02:10] "POST /api/indexes HTTP/1.1" 200 -
+2025-09-11 16:02:11,045 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 16:02:11] "OPTIONS /api/videos HTTP/1.1" 200 -
+2025-09-11 16:02:11,564 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 16:02:11] "POST /api/videos HTTP/1.1" 200 -
+2025-09-11 16:03:58,106 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-09-11 16:03:58,107 - apscheduler.scheduler - INFO - Added job "wake_up_app" to job store "default"
+2025-09-11 16:03:58,107 - apscheduler.scheduler - INFO - Scheduler started
+2025-09-11 16:03:58,110 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 10
+2025-09-11 16:03:58,110 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 13
+2025-09-11 16:03:58,117 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.25.18.243:5000
+2025-09-11 16:03:58,117 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-09-11 16:03:58,121 - werkzeug - INFO -  * Restarting with watchdog (fsevents)
+2025-09-11 16:03:58,516 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-09-11 16:03:58,516 - apscheduler.scheduler - INFO - Added job "wake_up_app" to job store "default"
+2025-09-11 16:03:58,516 - apscheduler.scheduler - INFO - Scheduler started
+2025-09-11 16:03:58,520 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 10
+2025-09-11 16:03:58,520 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 13
+2025-09-11 16:03:58,521 - werkzeug - WARNING -  * Debugger is active!
+2025-09-11 16:03:58,529 - werkzeug - INFO -  * Debugger PIN: 129-317-657
+2025-09-11 16:04:11,989 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 16:04:11] "OPTIONS /api/indexes HTTP/1.1" 200 -
+2025-09-11 16:04:12,660 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 16:04:12] "POST /api/indexes HTTP/1.1" 200 -
+2025-09-11 16:04:28,950 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 16:04:28] "OPTIONS /api/indexes HTTP/1.1" 200 -
+2025-09-11 16:04:29,498 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 16:04:29] "POST /api/indexes HTTP/1.1" 200 -
+2025-09-11 16:05:19,082 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 16:05:19] "OPTIONS /api/indexes HTTP/1.1" 200 -
+2025-09-11 16:05:19,608 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 16:05:19] "POST /api/indexes HTTP/1.1" 200 -
+2025-09-11 16:06:12,968 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 16:06:12] "OPTIONS /api/indexes HTTP/1.1" 200 -
+2025-09-11 16:06:12,968 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 16:06:12] "OPTIONS /api/indexes HTTP/1.1" 200 -
+2025-09-11 16:06:13,531 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 16:06:13] "POST /api/indexes HTTP/1.1" 200 -
+2025-09-11 16:06:13,535 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 16:06:13] "POST /api/indexes HTTP/1.1" 200 -
+2025-09-11 16:06:14,104 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 16:06:14] "OPTIONS /api/videos HTTP/1.1" 200 -
+2025-09-11 16:06:14,104 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 16:06:14] "OPTIONS /api/videos HTTP/1.1" 200 -
+2025-09-11 16:06:14,625 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 16:06:14] "POST /api/videos HTTP/1.1" 200 -
+2025-09-11 16:06:14,626 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 16:06:14] "POST /api/videos HTTP/1.1" 200 -
+2025-09-11 16:08:32,183 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-09-11 16:08:32,184 - apscheduler.scheduler - INFO - Added job "wake_up_app" to job store "default"
+2025-09-11 16:08:32,184 - apscheduler.scheduler - INFO - Scheduler started
+2025-09-11 16:08:32,188 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 10
+2025-09-11 16:08:32,188 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 13
+2025-09-11 16:08:32,194 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.25.18.243:5000
+2025-09-11 16:08:32,194 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-09-11 16:08:32,199 - werkzeug - INFO -  * Restarting with watchdog (fsevents)
+2025-09-11 16:08:32,612 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-09-11 16:08:32,612 - apscheduler.scheduler - INFO - Added job "wake_up_app" to job store "default"
+2025-09-11 16:08:32,612 - apscheduler.scheduler - INFO - Scheduler started
+2025-09-11 16:08:32,616 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 10
+2025-09-11 16:08:32,616 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 13
+2025-09-11 16:08:32,618 - werkzeug - WARNING -  * Debugger is active!
+2025-09-11 16:08:32,626 - werkzeug - INFO -  * Debugger PIN: 129-317-657
+2025-09-11 16:08:32,645 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 16:08:32] "OPTIONS /api/indexes HTTP/1.1" 200 -
+2025-09-11 16:08:32,646 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 16:08:32] "OPTIONS /api/indexes HTTP/1.1" 200 -
+2025-09-11 16:08:33,285 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 16:08:33] "POST /api/indexes HTTP/1.1" 200 -
+2025-09-11 16:08:33,286 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 16:08:33] "POST /api/indexes HTTP/1.1" 200 -
+2025-09-11 16:08:34,104 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 16:08:34] "OPTIONS /api/videos HTTP/1.1" 200 -
+2025-09-11 16:08:34,105 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 16:08:34] "OPTIONS /api/videos HTTP/1.1" 200 -
+2025-09-11 16:08:34,629 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 16:08:34] "POST /api/videos HTTP/1.1" 200 -
+2025-09-11 16:08:34,630 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 16:08:34] "POST /api/videos HTTP/1.1" 200 -
+2025-09-11 16:08:56,775 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 16:08:56] "OPTIONS /api/indexes HTTP/1.1" 200 -
+2025-09-11 16:08:56,776 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 16:08:56] "OPTIONS /api/indexes HTTP/1.1" 200 -
+2025-09-11 16:08:57,294 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 16:08:57] "POST /api/indexes HTTP/1.1" 200 -
+2025-09-11 16:08:57,298 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 16:08:57] "POST /api/indexes HTTP/1.1" 200 -
+2025-09-11 16:08:57,408 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 16:08:57] "OPTIONS /api/videos HTTP/1.1" 200 -
+2025-09-11 16:08:57,409 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 16:08:57] "OPTIONS /api/videos HTTP/1.1" 200 -
+2025-09-11 16:08:57,952 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 16:08:57] "POST /api/videos HTTP/1.1" 200 -
+2025-09-11 16:08:58,096 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 16:08:58] "POST /api/videos HTTP/1.1" 200 -
+2025-09-11 16:09:08,853 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 16:09:08] "OPTIONS /api/workflow HTTP/1.1" 200 -
+2025-09-11 16:09:08,855 - routes.api_routes - INFO - === WORKFLOW REQUEST START ===
+2025-09-11 16:09:08,855 - routes.api_routes - INFO - Request data: {
+  "index_id": "689e9b6574950e11a06f2b8a",
+  "video_id": "68c2cf7114d6189bb8cc2860",
+  "analysis_prompt": "Please do research about it",
+  "research_query": "Please do research about it"
+}
+2025-09-11 16:09:08,855 - routes.api_routes - INFO - Starting workflow for video 68c2cf7114d6189bb8cc2860 in index 689e9b6574950e11a06f2b8a
+2025-09-11 16:09:08,855 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 16:09:08] "POST /api/workflow HTTP/1.1" 200 -
+2025-09-11 16:09:11,157 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 16:09:11] "OPTIONS /api/indexes HTTP/1.1" 200 -
+2025-09-11 16:09:11,158 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 16:09:11] "OPTIONS /api/indexes HTTP/1.1" 200 -
+2025-09-11 16:09:11,672 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 16:09:11] "POST /api/indexes HTTP/1.1" 200 -
+2025-09-11 16:09:11,673 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 16:09:11] "POST /api/indexes HTTP/1.1" 200 -
+2025-09-11 16:09:11,728 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 16:09:11] "OPTIONS /api/videos HTTP/1.1" 200 -
+2025-09-11 16:09:11,729 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 16:09:11] "OPTIONS /api/videos HTTP/1.1" 200 -
+2025-09-11 16:09:12,247 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 16:09:12] "POST /api/videos HTTP/1.1" 200 -
+2025-09-11 16:09:12,248 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 16:09:12] "POST /api/videos HTTP/1.1" 200 -
+2025-09-11 16:09:26,385 - httpx - INFO - HTTP Request: POST https://api.twelvelabs.io/v1.3/analyze "HTTP/1.1 200 OK"
+2025-09-11 16:10:19,863 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 16:10:19] "OPTIONS /api/workflow HTTP/1.1" 200 -
+2025-09-11 16:10:19,864 - routes.api_routes - INFO - === WORKFLOW REQUEST START ===
+2025-09-11 16:10:19,866 - routes.api_routes - INFO - Request data: {
+  "index_id": "689e9b6574950e11a06f2b8a",
+  "video_id": "68c2cf7114d6189bb8cc2860",
+  "analysis_prompt": "research about it",
+  "research_query": "research about it"
+}
+2025-09-11 16:10:19,867 - routes.api_routes - INFO - Starting workflow for video 68c2cf7114d6189bb8cc2860 in index 689e9b6574950e11a06f2b8a
+2025-09-11 16:10:19,867 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 16:10:19] "POST /api/workflow HTTP/1.1" 200 -
+2025-09-11 16:10:31,001 - httpx - INFO - HTTP Request: POST https://api.twelvelabs.io/v1.3/analyze "HTTP/1.1 200 OK"

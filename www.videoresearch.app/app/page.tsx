@@ -405,6 +405,12 @@ export default function DeepResearchLanding() {
   const [currentStepDetail, setCurrentStepDetail] = useState("")
   const [sources, setSources] = useState<Source[]>([])
   
+  // Research chunk accumulation for large responses
+  const [researchChunks, setResearchChunks] = useState<{[key: number]: string}>({})
+  const [expectedChunkCount, setExpectedChunkCount] = useState<number>(0)
+  const [accumulatedResearchContent, setAccumulatedResearchContent] = useState<string>("")
+  const [chunkTimeout, setChunkTimeout] = useState<NodeJS.Timeout | null>(null)
+  
   // Research context for follow-up questions
   const [researchContext, setResearchContext] = useState<{
     twelvelabsAnalysis: string
@@ -779,6 +785,17 @@ export default function DeepResearchLanding() {
     setActivityLogs([])
     setChatMessages([])
     
+    // Clear research chunk accumulation
+    setResearchChunks({})
+    setExpectedChunkCount(0)
+    setAccumulatedResearchContent("")
+    
+    // Clear any pending chunk timeout
+    if (chunkTimeout) {
+      clearTimeout(chunkTimeout)
+      setChunkTimeout(null)
+    }
+    
     // Add initial user message
     setChatMessages([{
       id: `user-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`,
@@ -886,6 +903,108 @@ export default function DeepResearchLanding() {
                               'Research phase complete', 'complete')
                 break
 
+              case 'research_chunk':
+                // Handle research content chunks for large responses
+                const chunkIndex = data.chunk_index || 0
+                const chunkContent = data.content || ''
+                const isFinalChunk = data.is_final || false
+                const totalLength = data.total_length || 0
+                const totalChunks = data.total_chunks || 0
+                
+                // Clear any existing timeout
+                if (chunkTimeout) {
+                  clearTimeout(chunkTimeout)
+                }
+                
+                // Store this chunk
+                setResearchChunks(prev => ({
+                  ...prev,
+                  [chunkIndex]: chunkContent
+                }))
+                
+                // If this is the final chunk, reconstruct the full content
+                if (isFinalChunk) {
+                  // Include the current chunk in the reconstruction
+                  const allChunks = { ...researchChunks, [chunkIndex]: chunkContent }
+                  const maxChunkIndex = Math.max(...Object.keys(allChunks).map(k => parseInt(k)))
+                  let fullContent = ''
+                  let missingChunks = []
+                  
+                  // Reconstruct content in order and check for missing chunks
+                  for (let i = 0; i <= maxChunkIndex; i++) {
+                    if (allChunks[i]) {
+                      fullContent += allChunks[i]
+                    } else {
+                      missingChunks.push(i)
+                    }
+                  }
+                  
+                  if (missingChunks.length > 0) {
+                    console.warn(`Missing chunks: ${missingChunks.join(', ')}. Content may be incomplete.`)
+                    addActivityLog(`Received research content with ${missingChunks.length} missing chunks`, 'error')
+                  } else {
+                    addActivityLog(`Received complete research content (${fullContent.length}/${totalLength} chars)`, 'complete')
+                  }
+                  
+                  console.log('Chunk reconstruction - fullContent length:', fullContent.length)
+                  console.log('Chunk reconstruction - fullContent preview:', fullContent.substring(0, 100))
+                  setAccumulatedResearchContent(fullContent)
+                  
+                  // Clear chunks after reconstruction
+                  setResearchChunks({})
+                  setChunkTimeout(null)
+                } else {
+                  addActivityLog(`Receiving research content... (chunk ${chunkIndex + 1}${totalChunks ? `/${totalChunks}` : ''})`, 'progress')
+                  
+                  // Set timeout to handle missing chunks (30 seconds)
+                  const timeout = setTimeout(() => {
+                    console.warn('Chunk timeout reached, using partial content')
+                    const currentChunks = researchChunks
+                    const maxIndex = Math.max(...Object.keys(currentChunks).map(k => parseInt(k)), chunkIndex)
+                    let partialContent = ''
+                    
+                    for (let i = 0; i <= maxIndex; i++) {
+                      if (i === chunkIndex) {
+                        partialContent += chunkContent
+                      } else if (currentChunks[i]) {
+                        partialContent += currentChunks[i]
+                      }
+                    }
+                    
+                    setAccumulatedResearchContent(partialContent)
+                    addActivityLog('Using partial research content due to timeout', 'error')
+                    setResearchChunks({})
+                    setChunkTimeout(null)
+                  }, 30000)
+                  
+                  setChunkTimeout(timeout)
+                }
+                break
+
+              
+              case 'sources':
+                // Handle sources data
+                const sourcesData = data.sources || []
+                const totalCount = data.total_count || sourcesData.length
+                
+                if (sourcesData.length > 0) {
+                  // Convert sources to the expected format
+                  const formattedSources = sourcesData.map((source: any, index: number) => ({
+                    title: source.title || `Source ${index + 1}`,
+                    url: source.url || '#',
+                    description: source.snippet || source.description || 'No description available',
+                    isReal: true,
+                    timestamp: new Date(),
+                    queryContext: 'Research Sources',
+                    messageId: `sources-${Date.now()}`
+                  }))
+                  
+                  // Update sources state
+                  setSources(prev => [...prev, ...formattedSources])
+                  addActivityLog(`Received ${sourcesData.length} sources`, 'complete')
+                }
+                break
+              
               case 'complete':
                 const responseData = data.data
                 finalData = responseData
@@ -895,9 +1014,23 @@ export default function DeepResearchLanding() {
                 })))
                 addActivityLog('Research completed', 'complete')
 
-                // Set the research content
+                // Set the research content (use accumulated content if available)
                 if (responseData.research) {
-                  const researchContent = responseData.research.choices?.[0]?.message?.content || responseData.research
+                  console.log('Complete case - accumulatedResearchContent:', accumulatedResearchContent ? 'has content' : 'empty')
+                  
+                  
+                  let researchContent = responseData.research.choices?.[0]?.message?.content || responseData.research
+                                    // If content was chunked, use accumulated content instead of placeholder
+                  if (researchContent === '[CHUNKED_CONTENT]' && accumulatedResearchContent) {
+                    researchContent = accumulatedResearchContent
+                    console.log('Using accumulated content for chunked response')
+                  } else if (accumulatedResearchContent && !researchContent) {
+                    researchContent = accumulatedResearchContent
+                    console.log('Using accumulated content as fallback')
+                  } 
+                  
+                  console.log('Complete case - final researchContent length:', researchContent.length)
+                  console.log('Complete case - researchContent preview:', researchContent.substring(0, 100))
             setStreamingContent(researchContent)
             
                   // Generate message ID
@@ -905,8 +1038,8 @@ export default function DeepResearchLanding() {
                   
                   // Get sources from research results
                   let initialSources: Source[] = []
-                  if (responseData.research.search_results && Array.isArray(responseData.research.search_results)) {
-                    initialSources = responseData.research.search_results.map((result: any) => ({
+                  if (responseData.sources && Array.isArray(responseData.sources)) {
+                    initialSources = responseData.sources.map((result: any) => ({
                       title: result.title || 'Untitled',
                       url: result.url || '#',
                       description: result.snippet || result.description || 'No description available',

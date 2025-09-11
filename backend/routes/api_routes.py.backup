@@ -506,7 +506,7 @@ Provide comprehensive insights with clear structure and professional formatting.
                                 'research': {
                                     'choices': [{
                                         'message': {
-                                            'content': research_content if len(research_content) <= max_chunk_size else f"[CHUNKED_CONTENT]"
+                                            'content': research_content if len(research_content) <= max_chunk_size else f"[Large content sent in chunks - {len(research_content)} chars total]"
                                         }
                                     }],
                                     'citations': research_result.get('citations', [])[:20],  # Limit citations

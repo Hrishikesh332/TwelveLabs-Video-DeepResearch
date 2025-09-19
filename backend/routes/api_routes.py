@@ -2,10 +2,34 @@ from flask import jsonify, request, Response
 from datetime import datetime
 import json
 import logging
+import os
 from service.twelvelabs_service import TwelveLabsService
 from service.sonar_service import SonarService
 
 logger = logging.getLogger(__name__)
+
+def load_prompt_from_file(filename):
+    """Load a prompt template from a markdown file in the instructions folder."""
+    try:
+        # Get the directory where this file is located
+        current_dir = os.path.dirname(os.path.abspath(__file__))
+        instructions_dir = os.path.join(current_dir, '..', 'instructions')
+        prompt_file = os.path.join(instructions_dir, filename)
+        
+        if not os.path.exists(prompt_file):
+            logger.error(f"Prompt file not found: {prompt_file}")
+            return None
+            
+        with open(prompt_file, 'r', encoding='utf-8') as f:
+            content = f.read().strip()
+            
+        logger.info(f"Loaded prompt from {filename}")
+        return content
+        
+    except Exception as e:
+        logger.error(f"Error loading prompt from {filename}: {str(e)}")
+        return None
+
 
 def safe_json_dumps(obj):
 
@@ -354,6 +378,23 @@ def register_routes(app):
 
     @app.route('/api/workflow', methods=['POST'])
     def complete_workflow():
+        # Load prompts from markdown files first
+        default_analysis_prompt = load_prompt_from_file('video_analysis_prompt.md')
+        if not default_analysis_prompt:
+            default_analysis_prompt = 'Describe what happens in this video'
+        
+        research_prompt_template = load_prompt_from_file('research_prompt.md')
+        if not research_prompt_template:
+            research_prompt_template = """Based on this video analysis: {analysis_result}
+
+Please research: {research_query}
+
+IMPORTANT: Please provide a comprehensive research response using proper markdown formatting including:
+- Use ## for main headings and ### for subheadings
+- If table, then proper mardkown table format
+
+Provide comprehensive insights with clear structure and professional formatting."""
+        
         try:
             data = request.get_json()
             logger.info(f"=== WORKFLOW REQUEST START ===")
@@ -363,7 +404,8 @@ def register_routes(app):
             twelvelabs_api_key = data.get('twelvelabs_api_key') or app.config.get('TWELVELABS_API_KEY_ENV')
             index_id = data.get('index_id')
             video_id = data.get('video_id')
-            analysis_prompt = data.get('analysis_prompt', 'Describe what happens in this video')
+            
+            analysis_prompt = data.get('analysis_prompt', default_analysis_prompt)
             research_query = data.get('research_query')
 
             def generate():
@@ -442,18 +484,11 @@ def register_routes(app):
                         'progress': 66
                     }) + '\n'
 
-                    # Create research query with markdown formatting request
-                    enhanced_query = f"""
-Based on this video analysis: {analysis_result}
-
-Please research: {research_query}
-
-IMPORTANT: Please provide a comprehensive research response using proper markdown formatting including:
-- Use ## for main headings and ### for subheadings
-- If table, then proper mardkown table format
-
-Provide comprehensive insights with clear structure and professional formatting.
-"""
+                    # Create research query with markdown formatting request using pre-loaded template
+                    enhanced_query = research_prompt_template.format(
+                        analysis_result=analysis_result,
+                        research_query=research_query
+                    )
                     
                     sonar_service = SonarService()
                     research_result = sonar_service.deep_research(enhanced_query, timeout=180)

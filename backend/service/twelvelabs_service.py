@@ -18,25 +18,19 @@ class TwelveLabsService:
                 print("No API key available")
                 return []
             
-            url = "https://api.twelvelabs.io/v1.3/indexes"
-            headers = {
-                "accept": "application/json",
-                "x-api-key": self.api_key
-            }
+            # Use TwelveLabs client to get indexes
+            indexes = self.client.indexes.list()
             
-            response = requests.get(url, headers=headers)
-            if response.status_code == 200:
-                data = response.json()
-                result = []
-                for index in data.get('data', []):
-                    result.append({
-                        "id": index['_id'],
-                        "name": index['index_name']
-                    })
-                return result
-            else:
-                print(f"Failed to fetch indexes: Status {response.status_code}")
-                return []
+            result = []
+            for index in indexes:
+                result.append({
+                    "id": index.id,
+                    "name": index.index_name
+                })
+                print(f"ID: {index.id}")
+                print(f"  Name: {index.index_name}")
+            
+            return result
         except Exception as e:
             print(f"Error fetching indexes: {e}")
             return []

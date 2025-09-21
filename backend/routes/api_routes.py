@@ -9,9 +9,7 @@ from service.sonar_service import SonarService
 logger = logging.getLogger(__name__)
 
 def load_prompt_from_file(filename):
-    """Load a prompt template from a markdown file in the instructions folder."""
     try:
-        # Get the directory where this file is located
         current_dir = os.path.dirname(os.path.abspath(__file__))
         instructions_dir = os.path.join(current_dir, '..', 'instructions')
         prompt_file = os.path.join(instructions_dir, filename)
@@ -31,7 +29,6 @@ def load_prompt_from_file(filename):
         return None
 
 def generate_workflow(twelvelabs_api_key, index_id, video_id, analysis_prompt, research_query, research_prompt_template):
-    """Generate workflow response as a streaming generator."""
     # Input validation
     if not twelvelabs_api_key:
         yield json.dumps({'type': 'error', 'message': 'TwelveLabs API key is required'}) + '\n'
@@ -177,7 +174,6 @@ def safe_json_dumps(obj):
 
     try:
         json_str = json.dumps(obj, ensure_ascii=False, separators=(',', ':'))
-        # Validate that we can parse it back (double-check)
         json.loads(json_str)
         return json_str
     except (TypeError, ValueError, json.JSONDecodeError) as e:
@@ -217,7 +213,7 @@ def register_routes(app):
             'status': 'healthy',
             'timestamp': datetime.now().isoformat(),
             'message': 'TwelveLabs Video DeepResearch API is running',
-            'version': '1.0.1'  # Updated version to confirm deployment
+            'version': '1.0.1' 
         })
 
     @app.route('/api/config/twelvelabs', methods=['POST'])
@@ -558,7 +554,7 @@ Provide comprehensive insights with clear structure and professional formatting.
                 headers={
                     'Cache-Control': 'no-cache',
                     'Connection': 'keep-alive',
-                    'X-Accel-Buffering': 'no'  # Disable nginx buffering
+                    'X-Accel-Buffering': 'no'  
                 }
             )
 

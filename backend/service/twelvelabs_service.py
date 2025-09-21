@@ -35,44 +35,36 @@ class TwelveLabsService:
             print(f"Error fetching indexes: {e}")
             return []
     
-    def get_videos(self, index_id):
+    def get_videos(self, index_id, page=1):
         try:
             if not self.api_key:
                 print("No API key available")
                 return []
             
-            url = f"https://api.twelvelabs.io/v1.3/indexes/{index_id}/videos"
-            headers = {
-                "accept": "application/json",
-                "x-api-key": self.api_key
-            }
+            # Use TwelveLabs client to get videos
+            videos_response = self.client.indexes.videos.list(index_id=index_id, page=page)
             
-            response = requests.get(url, headers=headers)
-            if response.status_code == 200:
-                data = response.json()
-                result = []
-                for video in data.get('data', []):
-                    system_metadata = video.get('system_metadata', {})
-                    hls_data = video.get('hls', {})
-                    thumbnail_urls = hls_data.get('thumbnail_urls', [])
-                    thumbnail_url = thumbnail_urls[0] if thumbnail_urls else None
-                    video_url = hls_data.get('video_url')
-                    
-                    result.append({
-                        "id": video['_id'],
-                        "name": system_metadata.get('filename', f'Video {video["_id"]}'),
-                        "duration": system_metadata.get('duration', 0),
-                        "thumbnail_url": thumbnail_url,
-                        "video_url": video_url,
-                        "width": system_metadata.get('width', 0),
-                        "height": system_metadata.get('height', 0),
-                        "fps": system_metadata.get('fps', 0),
-                        "size": system_metadata.get('size', 0)
-                    })
-                return result
-            else:
-                print(f"Failed to fetch videos: Status {response.status_code}")
-                return []
+            result = []
+            for video in videos_response.items:
+                system_metadata = video.system_metadata
+                hls_data = video.hls
+                thumbnail_urls = hls_data.get('thumbnail_urls', []) if hls_data else []
+                thumbnail_url = thumbnail_urls[0] if thumbnail_urls else None
+                video_url = hls_data.get('video_url') if hls_data else None
+                
+                result.append({
+                    "id": video.id,
+                    "name": system_metadata.filename if system_metadata and system_metadata.filename else f'Video {video.id}',
+                    "duration": system_metadata.duration if system_metadata else 0,
+                    "thumbnail_url": thumbnail_url,
+                    "video_url": video_url,
+                    "width": system_metadata.width if system_metadata else 0,
+                    "height": system_metadata.height if system_metadata else 0,
+                    "fps": system_metadata.fps if system_metadata else 0,
+                    "size": system_metadata.size if system_metadata else 0
+                })
+            
+            return result
         except Exception as e:
             print(f"Error fetching videos for index {index_id}: {e}")
             return []

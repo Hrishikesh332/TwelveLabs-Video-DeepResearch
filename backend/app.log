@@ -2848,3 +2848,218 @@
 2025-09-11 16:10:19,867 - routes.api_routes - INFO - Starting workflow for video 68c2cf7114d6189bb8cc2860 in index 689e9b6574950e11a06f2b8a
 2025-09-11 16:10:19,867 - werkzeug - INFO - 127.0.0.1 - - [11/Sep/2025 16:10:19] "POST /api/workflow HTTP/1.1" 200 -
 2025-09-11 16:10:31,001 - httpx - INFO - HTTP Request: POST https://api.twelvelabs.io/v1.3/analyze "HTTP/1.1 200 OK"
+2025-09-21 22:37:25,360 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-09-21 22:37:25,361 - apscheduler.scheduler - INFO - Added job "wake_up_app" to job store "default"
+2025-09-21 22:37:25,361 - apscheduler.scheduler - INFO - Scheduler started
+2025-09-21 22:37:25,379 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 10
+2025-09-21 22:37:25,380 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 13
+2025-09-21 22:37:25,397 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.2.73:5000
+2025-09-21 22:37:25,397 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-09-21 22:37:25,404 - werkzeug - INFO -  * Restarting with watchdog (fsevents)
+2025-09-21 22:37:26,026 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-09-21 22:37:26,026 - apscheduler.scheduler - INFO - Added job "wake_up_app" to job store "default"
+2025-09-21 22:37:26,027 - apscheduler.scheduler - INFO - Scheduler started
+2025-09-21 22:37:26,030 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 10
+2025-09-21 22:37:26,031 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 13
+2025-09-21 22:37:26,033 - werkzeug - WARNING -  * Debugger is active!
+2025-09-21 22:37:26,044 - werkzeug - INFO -  * Debugger PIN: 129-317-657
+2025-09-21 22:37:40,604 - werkzeug - INFO - 127.0.0.1 - - [21/Sep/2025 22:37:40] "OPTIONS /api/indexes HTTP/1.1" 200 -
+2025-09-21 22:37:40,606 - werkzeug - INFO - 127.0.0.1 - - [21/Sep/2025 22:37:40] "OPTIONS /api/indexes HTTP/1.1" 200 -
+2025-09-21 22:37:41,338 - httpx - INFO - HTTP Request: GET https://api.twelvelabs.io/v1.3/indexes?page=1 "HTTP/1.1 200 OK"
+2025-09-21 22:37:41,345 - httpx - INFO - HTTP Request: GET https://api.twelvelabs.io/v1.3/indexes?page=1 "HTTP/1.1 200 OK"
+2025-09-21 22:37:41,537 - httpx - INFO - HTTP Request: GET https://api.twelvelabs.io/v1.3/indexes?page=2 "HTTP/1.1 200 OK"
+2025-09-21 22:37:41,541 - werkzeug - INFO - 127.0.0.1 - - [21/Sep/2025 22:37:41] "POST /api/indexes HTTP/1.1" 200 -
+2025-09-21 22:37:41,541 - httpx - INFO - HTTP Request: GET https://api.twelvelabs.io/v1.3/indexes?page=2 "HTTP/1.1 200 OK"
+2025-09-21 22:37:41,543 - werkzeug - INFO - 127.0.0.1 - - [21/Sep/2025 22:37:41] "POST /api/indexes HTTP/1.1" 200 -
+2025-09-21 22:37:41,599 - werkzeug - INFO - 127.0.0.1 - - [21/Sep/2025 22:37:41] "OPTIONS /api/videos HTTP/1.1" 200 -
+2025-09-21 22:37:42,178 - httpx - INFO - HTTP Request: GET https://api.twelvelabs.io/v1.3/indexes/689e9b6574950e11a06f2b8a/videos?page=1 "HTTP/1.1 200 OK"
+2025-09-21 22:37:42,184 - werkzeug - INFO - 127.0.0.1 - - [21/Sep/2025 22:37:42] "POST /api/videos HTTP/1.1" 200 -
+2025-09-21 22:37:42,217 - httpx - INFO - HTTP Request: GET https://api.twelvelabs.io/v1.3/indexes/689e9b6574950e11a06f2b8a/videos?page=1 "HTTP/1.1 200 OK"
+2025-09-21 22:37:42,222 - werkzeug - INFO - 127.0.0.1 - - [21/Sep/2025 22:37:42] "POST /api/videos HTTP/1.1" 200 -
+2025-09-21 22:38:33,241 - werkzeug - INFO -  * Detected change in '/Users/hrishikesh/Desktop/Video DeepResearch/TwelveLabs-Video-DeepResearch/backend/service/twelvelabs_service.py', reloading
+2025-09-21 22:38:33,553 - werkzeug - INFO -  * Restarting with watchdog (fsevents)
+2025-09-21 22:38:34,123 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-09-21 22:38:34,124 - apscheduler.scheduler - INFO - Added job "wake_up_app" to job store "default"
+2025-09-21 22:38:34,124 - apscheduler.scheduler - INFO - Scheduler started
+2025-09-21 22:38:34,127 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 10
+2025-09-21 22:38:34,127 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 13
+2025-09-21 22:38:34,130 - werkzeug - WARNING -  * Debugger is active!
+2025-09-21 22:38:34,138 - werkzeug - INFO -  * Debugger PIN: 129-317-657
+2025-09-21 22:38:38,685 - werkzeug - INFO - 127.0.0.1 - - [21/Sep/2025 22:38:38] "OPTIONS /api/indexes HTTP/1.1" 200 -
+2025-09-21 22:38:38,687 - werkzeug - INFO - 127.0.0.1 - - [21/Sep/2025 22:38:38] "OPTIONS /api/indexes HTTP/1.1" 200 -
+2025-09-21 22:38:39,391 - httpx - INFO - HTTP Request: GET https://api.twelvelabs.io/v1.3/indexes?page=1 "HTTP/1.1 200 OK"
+2025-09-21 22:38:39,393 - httpx - INFO - HTTP Request: GET https://api.twelvelabs.io/v1.3/indexes?page=1 "HTTP/1.1 200 OK"
+2025-09-21 22:38:39,596 - httpx - INFO - HTTP Request: GET https://api.twelvelabs.io/v1.3/indexes?page=2 "HTTP/1.1 200 OK"
+2025-09-21 22:38:39,598 - werkzeug - INFO - 127.0.0.1 - - [21/Sep/2025 22:38:39] "POST /api/indexes HTTP/1.1" 200 -
+2025-09-21 22:38:39,608 - httpx - INFO - HTTP Request: GET https://api.twelvelabs.io/v1.3/indexes?page=2 "HTTP/1.1 200 OK"
+2025-09-21 22:38:39,610 - werkzeug - INFO - 127.0.0.1 - - [21/Sep/2025 22:38:39] "POST /api/indexes HTTP/1.1" 200 -
+2025-09-21 22:38:39,662 - werkzeug - INFO - 127.0.0.1 - - [21/Sep/2025 22:38:39] "OPTIONS /api/videos HTTP/1.1" 200 -
+2025-09-21 22:38:40,267 - httpx - INFO - HTTP Request: GET https://api.twelvelabs.io/v1.3/indexes/689e9b6574950e11a06f2b8a/videos?page=1 "HTTP/1.1 200 OK"
+2025-09-21 22:38:40,271 - werkzeug - INFO - 127.0.0.1 - - [21/Sep/2025 22:38:40] "POST /api/videos HTTP/1.1" 200 -
+2025-09-21 22:38:40,284 - httpx - INFO - HTTP Request: GET https://api.twelvelabs.io/v1.3/indexes/689e9b6574950e11a06f2b8a/videos?page=1 "HTTP/1.1 200 OK"
+2025-09-21 22:38:40,287 - werkzeug - INFO - 127.0.0.1 - - [21/Sep/2025 22:38:40] "POST /api/videos HTTP/1.1" 200 -
+2025-09-21 22:39:05,943 - werkzeug - INFO -  * Detected change in '/Users/hrishikesh/Desktop/Video DeepResearch/TwelveLabs-Video-DeepResearch/backend/service/twelvelabs_service.py', reloading
+2025-09-21 22:39:06,522 - werkzeug - INFO -  * Restarting with watchdog (fsevents)
+2025-09-21 22:39:07,273 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-09-21 22:39:07,274 - apscheduler.scheduler - INFO - Added job "wake_up_app" to job store "default"
+2025-09-21 22:39:07,274 - apscheduler.scheduler - INFO - Scheduler started
+2025-09-21 22:39:07,278 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 10
+2025-09-21 22:39:07,278 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 13
+2025-09-21 22:39:07,281 - werkzeug - WARNING -  * Debugger is active!
+2025-09-21 22:39:07,288 - werkzeug - INFO -  * Debugger PIN: 129-317-657
+2025-09-21 22:39:09,077 - werkzeug - INFO -  * Detected change in '/Users/hrishikesh/Desktop/Video DeepResearch/TwelveLabs-Video-DeepResearch/backend/service/twelvelabs_service.py', reloading
+2025-09-21 22:39:09,409 - werkzeug - INFO -  * Restarting with watchdog (fsevents)
+2025-09-21 22:39:10,090 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-09-21 22:39:10,091 - apscheduler.scheduler - INFO - Added job "wake_up_app" to job store "default"
+2025-09-21 22:39:10,091 - apscheduler.scheduler - INFO - Scheduler started
+2025-09-21 22:39:10,096 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 10
+2025-09-21 22:39:10,096 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 13
+2025-09-21 22:39:10,099 - werkzeug - WARNING -  * Debugger is active!
+2025-09-21 22:39:10,107 - werkzeug - INFO -  * Debugger PIN: 129-317-657
+2025-09-21 22:39:26,251 - werkzeug - INFO - 127.0.0.1 - - [21/Sep/2025 22:39:26] "OPTIONS /api/indexes HTTP/1.1" 200 -
+2025-09-21 22:39:26,252 - werkzeug - INFO - 127.0.0.1 - - [21/Sep/2025 22:39:26] "OPTIONS /api/indexes HTTP/1.1" 200 -
+2025-09-21 22:39:26,999 - httpx - INFO - HTTP Request: GET https://api.twelvelabs.io/v1.3/indexes?page=1 "HTTP/1.1 200 OK"
+2025-09-21 22:39:26,999 - httpx - INFO - HTTP Request: GET https://api.twelvelabs.io/v1.3/indexes?page=1 "HTTP/1.1 200 OK"
+2025-09-21 22:39:27,210 - httpx - INFO - HTTP Request: GET https://api.twelvelabs.io/v1.3/indexes?page=2 "HTTP/1.1 200 OK"
+2025-09-21 22:39:27,211 - httpx - INFO - HTTP Request: GET https://api.twelvelabs.io/v1.3/indexes?page=2 "HTTP/1.1 200 OK"
+2025-09-21 22:39:27,213 - werkzeug - INFO - 127.0.0.1 - - [21/Sep/2025 22:39:27] "POST /api/indexes HTTP/1.1" 200 -
+2025-09-21 22:39:27,214 - werkzeug - INFO - 127.0.0.1 - - [21/Sep/2025 22:39:27] "POST /api/indexes HTTP/1.1" 200 -
+2025-09-21 22:39:27,271 - werkzeug - INFO - 127.0.0.1 - - [21/Sep/2025 22:39:27] "OPTIONS /api/videos HTTP/1.1" 200 -
+2025-09-21 22:39:27,272 - werkzeug - INFO - 127.0.0.1 - - [21/Sep/2025 22:39:27] "OPTIONS /api/videos HTTP/1.1" 200 -
+2025-09-21 22:39:27,873 - httpx - INFO - HTTP Request: GET https://api.twelvelabs.io/v1.3/indexes/689e9b6574950e11a06f2b8a/videos?page=1 "HTTP/1.1 200 OK"
+2025-09-21 22:39:27,879 - werkzeug - INFO - 127.0.0.1 - - [21/Sep/2025 22:39:27] "POST /api/videos HTTP/1.1" 200 -
+2025-09-21 22:39:27,880 - httpx - INFO - HTTP Request: GET https://api.twelvelabs.io/v1.3/indexes/689e9b6574950e11a06f2b8a/videos?page=1 "HTTP/1.1 200 OK"
+2025-09-21 22:39:27,885 - werkzeug - INFO - 127.0.0.1 - - [21/Sep/2025 22:39:27] "POST /api/videos HTTP/1.1" 200 -
+2025-09-21 22:39:53,807 - werkzeug - INFO -  * Detected change in '/Users/hrishikesh/Desktop/Video DeepResearch/TwelveLabs-Video-DeepResearch/backend/service/twelvelabs_service.py', reloading
+2025-09-21 22:39:54,526 - werkzeug - INFO -  * Restarting with watchdog (fsevents)
+2025-09-21 22:39:55,208 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-09-21 22:39:55,208 - apscheduler.scheduler - INFO - Added job "wake_up_app" to job store "default"
+2025-09-21 22:39:55,208 - apscheduler.scheduler - INFO - Scheduler started
+2025-09-21 22:39:55,212 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 10
+2025-09-21 22:39:55,213 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 13
+2025-09-21 22:39:55,216 - werkzeug - WARNING -  * Debugger is active!
+2025-09-21 22:39:55,226 - werkzeug - INFO -  * Debugger PIN: 129-317-657
+2025-09-21 22:39:58,191 - werkzeug - INFO -  * Detected change in '/Users/hrishikesh/Desktop/Video DeepResearch/TwelveLabs-Video-DeepResearch/backend/service/twelvelabs_service.py', reloading
+2025-09-21 22:39:58,381 - werkzeug - INFO -  * Restarting with watchdog (fsevents)
+2025-09-21 22:39:58,917 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-09-21 22:39:58,917 - apscheduler.scheduler - INFO - Added job "wake_up_app" to job store "default"
+2025-09-21 22:39:58,917 - apscheduler.scheduler - INFO - Scheduler started
+2025-09-21 22:39:58,921 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 10
+2025-09-21 22:39:58,922 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 13
+2025-09-21 22:39:58,925 - werkzeug - WARNING -  * Debugger is active!
+2025-09-21 22:39:58,934 - werkzeug - INFO -  * Debugger PIN: 129-317-657
+2025-09-21 22:40:03,285 - werkzeug - INFO - 127.0.0.1 - - [21/Sep/2025 22:40:03] "OPTIONS /api/indexes HTTP/1.1" 200 -
+2025-09-21 22:40:03,287 - werkzeug - INFO - 127.0.0.1 - - [21/Sep/2025 22:40:03] "OPTIONS /api/indexes HTTP/1.1" 200 -
+2025-09-21 22:40:03,989 - httpx - INFO - HTTP Request: GET https://api.twelvelabs.io/v1.3/indexes?page=1 "HTTP/1.1 200 OK"
+2025-09-21 22:40:03,990 - httpx - INFO - HTTP Request: GET https://api.twelvelabs.io/v1.3/indexes?page=1 "HTTP/1.1 200 OK"
+2025-09-21 22:40:04,196 - httpx - INFO - HTTP Request: GET https://api.twelvelabs.io/v1.3/indexes?page=2 "HTTP/1.1 200 OK"
+2025-09-21 22:40:04,197 - werkzeug - INFO - 127.0.0.1 - - [21/Sep/2025 22:40:04] "POST /api/indexes HTTP/1.1" 200 -
+2025-09-21 22:40:04,198 - httpx - INFO - HTTP Request: GET https://api.twelvelabs.io/v1.3/indexes?page=2 "HTTP/1.1 200 OK"
+2025-09-21 22:40:04,199 - werkzeug - INFO - 127.0.0.1 - - [21/Sep/2025 22:40:04] "POST /api/indexes HTTP/1.1" 200 -
+2025-09-21 22:40:04,261 - werkzeug - INFO - 127.0.0.1 - - [21/Sep/2025 22:40:04] "OPTIONS /api/videos HTTP/1.1" 200 -
+2025-09-21 22:40:04,867 - httpx - INFO - HTTP Request: GET https://api.twelvelabs.io/v1.3/indexes/689e9b6574950e11a06f2b8a/videos?page=1 "HTTP/1.1 200 OK"
+2025-09-21 22:40:04,869 - werkzeug - INFO - 127.0.0.1 - - [21/Sep/2025 22:40:04] "POST /api/videos HTTP/1.1" 200 -
+2025-09-21 22:40:04,889 - httpx - INFO - HTTP Request: GET https://api.twelvelabs.io/v1.3/indexes/689e9b6574950e11a06f2b8a/videos?page=1 "HTTP/1.1 200 OK"
+2025-09-21 22:40:04,891 - werkzeug - INFO - 127.0.0.1 - - [21/Sep/2025 22:40:04] "POST /api/videos HTTP/1.1" 200 -
+2025-09-21 22:40:35,256 - werkzeug - INFO -  * Detected change in '/Users/hrishikesh/Desktop/Video DeepResearch/TwelveLabs-Video-DeepResearch/backend/service/twelvelabs_service.py', reloading
+2025-09-21 22:40:36,283 - werkzeug - INFO -  * Restarting with watchdog (fsevents)
+2025-09-21 22:40:38,601 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-09-21 22:40:38,602 - apscheduler.scheduler - INFO - Added job "wake_up_app" to job store "default"
+2025-09-21 22:40:38,602 - apscheduler.scheduler - INFO - Scheduler started
+2025-09-21 22:40:38,606 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 10
+2025-09-21 22:40:38,606 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 13
+2025-09-21 22:40:38,615 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.2.73:5000
+2025-09-21 22:40:38,615 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-09-21 22:40:38,622 - werkzeug - INFO -  * Restarting with watchdog (fsevents)
+2025-09-21 22:40:39,078 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-09-21 22:40:39,079 - apscheduler.scheduler - INFO - Added job "wake_up_app" to job store "default"
+2025-09-21 22:40:39,079 - apscheduler.scheduler - INFO - Scheduler started
+2025-09-21 22:40:39,083 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 10
+2025-09-21 22:40:39,083 - dotenv.main - WARNING - python-dotenv could not parse statement starting at line 13
+2025-09-21 22:40:39,085 - werkzeug - WARNING -  * Debugger is active!
+2025-09-21 22:40:39,094 - werkzeug - INFO -  * Debugger PIN: 129-317-657
+2025-09-21 22:40:42,310 - werkzeug - INFO - 127.0.0.1 - - [21/Sep/2025 22:40:42] "OPTIONS /api/indexes HTTP/1.1" 200 -
+2025-09-21 22:40:42,312 - werkzeug - INFO - 127.0.0.1 - - [21/Sep/2025 22:40:42] "OPTIONS /api/indexes HTTP/1.1" 200 -
+2025-09-21 22:40:43,180 - httpx - INFO - HTTP Request: GET https://api.twelvelabs.io/v1.3/indexes?page=1 "HTTP/1.1 200 OK"
+2025-09-21 22:40:43,180 - httpx - INFO - HTTP Request: GET https://api.twelvelabs.io/v1.3/indexes?page=1 "HTTP/1.1 200 OK"
+2025-09-21 22:40:43,378 - httpx - INFO - HTTP Request: GET https://api.twelvelabs.io/v1.3/indexes?page=2 "HTTP/1.1 200 OK"
+2025-09-21 22:40:43,383 - werkzeug - INFO - 127.0.0.1 - - [21/Sep/2025 22:40:43] "POST /api/indexes HTTP/1.1" 200 -
+2025-09-21 22:40:43,467 - werkzeug - INFO - 127.0.0.1 - - [21/Sep/2025 22:40:43] "OPTIONS /api/videos HTTP/1.1" 200 -
+2025-09-21 22:40:43,540 - httpx - INFO - HTTP Request: GET https://api.twelvelabs.io/v1.3/indexes?page=2 "HTTP/1.1 200 OK"
+2025-09-21 22:40:43,541 - werkzeug - INFO - 127.0.0.1 - - [21/Sep/2025 22:40:43] "POST /api/indexes HTTP/1.1" 200 -
+2025-09-21 22:40:44,062 - httpx - INFO - HTTP Request: GET https://api.twelvelabs.io/v1.3/indexes/689e9b6574950e11a06f2b8a/videos?page=1 "HTTP/1.1 200 OK"
+2025-09-21 22:40:44,064 - werkzeug - INFO - 127.0.0.1 - - [21/Sep/2025 22:40:44] "POST /api/videos HTTP/1.1" 200 -
+2025-09-21 22:40:44,171 - httpx - INFO - HTTP Request: GET https://api.twelvelabs.io/v1.3/indexes/689e9b6574950e11a06f2b8a/videos?page=1 "HTTP/1.1 200 OK"
+2025-09-21 22:40:44,173 - werkzeug - INFO - 127.0.0.1 - - [21/Sep/2025 22:40:44] "POST /api/videos HTTP/1.1" 200 -
+2025-09-21 22:40:49,814 - werkzeug - INFO - 127.0.0.1 - - [21/Sep/2025 22:40:49] "OPTIONS /api/indexes HTTP/1.1" 200 -
+2025-09-21 22:40:49,816 - werkzeug - INFO - 127.0.0.1 - - [21/Sep/2025 22:40:49] "OPTIONS /api/indexes HTTP/1.1" 200 -
+2025-09-21 22:40:50,426 - httpx - INFO - HTTP Request: GET https://api.twelvelabs.io/v1.3/indexes?page=1 "HTTP/1.1 200 OK"
+2025-09-21 22:40:50,434 - httpx - INFO - HTTP Request: GET https://api.twelvelabs.io/v1.3/indexes?page=1 "HTTP/1.1 200 OK"
+2025-09-21 22:40:50,629 - httpx - INFO - HTTP Request: GET https://api.twelvelabs.io/v1.3/indexes?page=2 "HTTP/1.1 200 OK"
+2025-09-21 22:40:50,630 - werkzeug - INFO - 127.0.0.1 - - [21/Sep/2025 22:40:50] "POST /api/indexes HTTP/1.1" 200 -
+2025-09-21 22:40:50,635 - httpx - INFO - HTTP Request: GET https://api.twelvelabs.io/v1.3/indexes?page=2 "HTTP/1.1 200 OK"
+2025-09-21 22:40:50,637 - werkzeug - INFO - 127.0.0.1 - - [21/Sep/2025 22:40:50] "POST /api/indexes HTTP/1.1" 200 -
+2025-09-21 22:40:50,702 - werkzeug - INFO - 127.0.0.1 - - [21/Sep/2025 22:40:50] "OPTIONS /api/videos HTTP/1.1" 200 -
+2025-09-21 22:40:50,703 - werkzeug - INFO - 127.0.0.1 - - [21/Sep/2025 22:40:50] "OPTIONS /api/videos HTTP/1.1" 200 -
+2025-09-21 22:40:51,305 - httpx - INFO - HTTP Request: GET https://api.twelvelabs.io/v1.3/indexes/689e9b6574950e11a06f2b8a/videos?page=1 "HTTP/1.1 200 OK"
+2025-09-21 22:40:51,308 - werkzeug - INFO - 127.0.0.1 - - [21/Sep/2025 22:40:51] "POST /api/videos HTTP/1.1" 200 -
+2025-09-21 22:40:51,312 - httpx - INFO - HTTP Request: GET https://api.twelvelabs.io/v1.3/indexes/689e9b6574950e11a06f2b8a/videos?page=1 "HTTP/1.1 200 OK"
+2025-09-21 22:40:51,314 - werkzeug - INFO - 127.0.0.1 - - [21/Sep/2025 22:40:51] "POST /api/videos HTTP/1.1" 200 -
+2025-09-21 22:40:55,670 - werkzeug - INFO - 127.0.0.1 - - [21/Sep/2025 22:40:55] "OPTIONS /api/config/twelvelabs HTTP/1.1" 200 -
+2025-09-21 22:40:56,252 - httpx - INFO - HTTP Request: GET https://api.twelvelabs.io/v1.3/indexes?page=1 "HTTP/1.1 200 OK"
+2025-09-21 22:40:56,580 - httpx - INFO - HTTP Request: GET https://api.twelvelabs.io/v1.3/indexes?page=2 "HTTP/1.1 200 OK"
+2025-09-21 22:40:56,581 - werkzeug - INFO - 127.0.0.1 - - [21/Sep/2025 22:40:56] "POST /api/config/twelvelabs HTTP/1.1" 200 -
+2025-09-21 22:40:56,637 - werkzeug - INFO - 127.0.0.1 - - [21/Sep/2025 22:40:56] "OPTIONS /api/videos HTTP/1.1" 200 -
+2025-09-21 22:40:57,231 - httpx - INFO - HTTP Request: GET https://api.twelvelabs.io/v1.3/indexes/68c137e877af783f0ce790a2/videos?page=1 "HTTP/1.1 200 OK"
+2025-09-21 22:40:57,233 - werkzeug - INFO - 127.0.0.1 - - [21/Sep/2025 22:40:57] "POST /api/videos HTTP/1.1" 200 -
+2025-09-21 22:41:01,439 - werkzeug - INFO - 127.0.0.1 - - [21/Sep/2025 22:41:01] "OPTIONS /api/config/twelvelabs HTTP/1.1" 200 -
+2025-09-21 22:41:01,441 - werkzeug - INFO - 127.0.0.1 - - [21/Sep/2025 22:41:01] "DELETE /api/config/twelvelabs HTTP/1.1" 200 -
+2025-09-21 22:41:01,445 - werkzeug - INFO - 127.0.0.1 - - [21/Sep/2025 22:41:01] "OPTIONS /api/indexes HTTP/1.1" 200 -
+2025-09-21 22:41:02,023 - httpx - INFO - HTTP Request: GET https://api.twelvelabs.io/v1.3/indexes?page=1 "HTTP/1.1 200 OK"
+2025-09-21 22:41:02,220 - httpx - INFO - HTTP Request: GET https://api.twelvelabs.io/v1.3/indexes?page=2 "HTTP/1.1 200 OK"
+2025-09-21 22:41:02,223 - werkzeug - INFO - 127.0.0.1 - - [21/Sep/2025 22:41:02] "POST /api/indexes HTTP/1.1" 200 -
+2025-09-21 22:41:02,280 - werkzeug - INFO - 127.0.0.1 - - [21/Sep/2025 22:41:02] "OPTIONS /api/videos HTTP/1.1" 200 -
+2025-09-21 22:41:02,861 - httpx - INFO - HTTP Request: GET https://api.twelvelabs.io/v1.3/indexes/689e9b6574950e11a06f2b8a/videos?page=1 "HTTP/1.1 200 OK"
+2025-09-21 22:41:02,870 - werkzeug - INFO - 127.0.0.1 - - [21/Sep/2025 22:41:02] "POST /api/videos HTTP/1.1" 200 -
+2025-09-21 22:41:09,307 - werkzeug - INFO - 127.0.0.1 - - [21/Sep/2025 22:41:09] "OPTIONS /api/config/twelvelabs HTTP/1.1" 200 -
+2025-09-21 22:41:09,891 - httpx - INFO - HTTP Request: GET https://api.twelvelabs.io/v1.3/indexes?page=1 "HTTP/1.1 200 OK"
+2025-09-21 22:41:10,088 - httpx - INFO - HTTP Request: GET https://api.twelvelabs.io/v1.3/indexes?page=2 "HTTP/1.1 200 OK"
+2025-09-21 22:41:10,090 - werkzeug - INFO - 127.0.0.1 - - [21/Sep/2025 22:41:10] "POST /api/config/twelvelabs HTTP/1.1" 200 -
+2025-09-21 22:41:10,147 - werkzeug - INFO - 127.0.0.1 - - [21/Sep/2025 22:41:10] "OPTIONS /api/videos HTTP/1.1" 200 -
+2025-09-21 22:41:10,743 - httpx - INFO - HTTP Request: GET https://api.twelvelabs.io/v1.3/indexes/68c137e877af783f0ce790a2/videos?page=1 "HTTP/1.1 200 OK"
+2025-09-21 22:41:10,745 - werkzeug - INFO - 127.0.0.1 - - [21/Sep/2025 22:41:10] "POST /api/videos HTTP/1.1" 200 -
+2025-09-21 22:41:12,783 - httpx - INFO - HTTP Request: GET https://api.twelvelabs.io/v1.3/indexes/689df72e4427a7b96b7a2cb8/videos?page=1 "HTTP/1.1 200 OK"
+2025-09-21 22:41:12,786 - werkzeug - INFO - 127.0.0.1 - - [21/Sep/2025 22:41:12] "POST /api/videos HTTP/1.1" 200 -
+2025-09-21 22:41:14,622 - werkzeug - INFO - 127.0.0.1 - - [21/Sep/2025 22:41:14] "OPTIONS /api/config/twelvelabs HTTP/1.1" 200 -
+2025-09-21 22:41:14,625 - werkzeug - INFO - 127.0.0.1 - - [21/Sep/2025 22:41:14] "DELETE /api/config/twelvelabs HTTP/1.1" 200 -
+2025-09-21 22:41:14,630 - werkzeug - INFO - 127.0.0.1 - - [21/Sep/2025 22:41:14] "OPTIONS /api/indexes HTTP/1.1" 200 -
+2025-09-21 22:41:15,208 - httpx - INFO - HTTP Request: GET https://api.twelvelabs.io/v1.3/indexes?page=1 "HTTP/1.1 200 OK"
+2025-09-21 22:41:15,402 - httpx - INFO - HTTP Request: GET https://api.twelvelabs.io/v1.3/indexes?page=2 "HTTP/1.1 200 OK"
+2025-09-21 22:41:15,404 - werkzeug - INFO - 127.0.0.1 - - [21/Sep/2025 22:41:15] "POST /api/indexes HTTP/1.1" 200 -
+2025-09-21 22:41:15,460 - werkzeug - INFO - 127.0.0.1 - - [21/Sep/2025 22:41:15] "OPTIONS /api/videos HTTP/1.1" 200 -
+2025-09-21 22:41:15,594 - werkzeug - INFO - 127.0.0.1 - - [21/Sep/2025 22:41:15] "DELETE /api/config/twelvelabs HTTP/1.1" 200 -
+2025-09-21 22:41:16,035 - httpx - INFO - HTTP Request: GET https://api.twelvelabs.io/v1.3/indexes/689e9b6574950e11a06f2b8a/videos?page=1 "HTTP/1.1 200 OK"
+2025-09-21 22:41:16,039 - werkzeug - INFO - 127.0.0.1 - - [21/Sep/2025 22:41:16] "POST /api/videos HTTP/1.1" 200 -
+2025-09-21 22:41:16,182 - httpx - INFO - HTTP Request: GET https://api.twelvelabs.io/v1.3/indexes?page=1 "HTTP/1.1 200 OK"
+2025-09-21 22:41:16,376 - httpx - INFO - HTTP Request: GET https://api.twelvelabs.io/v1.3/indexes?page=2 "HTTP/1.1 200 OK"
+2025-09-21 22:41:16,377 - werkzeug - INFO - 127.0.0.1 - - [21/Sep/2025 22:41:16] "POST /api/indexes HTTP/1.1" 200 -
+2025-09-21 22:41:17,008 - httpx - INFO - HTTP Request: GET https://api.twelvelabs.io/v1.3/indexes/689e9b6574950e11a06f2b8a/videos?page=1 "HTTP/1.1 200 OK"
+2025-09-21 22:41:17,013 - werkzeug - INFO - 127.0.0.1 - - [21/Sep/2025 22:41:17] "POST /api/videos HTTP/1.1" 200 -
+2025-09-21 22:41:24,753 - werkzeug - INFO - 127.0.0.1 - - [21/Sep/2025 22:41:24] "OPTIONS /api/workflow HTTP/1.1" 200 -
+2025-09-21 22:41:24,757 - routes.api_routes - INFO - Loaded prompt from video_analysis_prompt.md
+2025-09-21 22:41:24,757 - routes.api_routes - INFO - Loaded prompt from research_prompt.md
+2025-09-21 22:41:24,758 - routes.api_routes - INFO - === WORKFLOW REQUEST START ===
+2025-09-21 22:41:24,758 - routes.api_routes - INFO - Request data: {
+  "index_id": "689e9b6574950e11a06f2b8a",
+  "video_id": "68c045a52542e277f211dacd",
+  "analysis_prompt": "Please do research about it",
+  "research_query": "Please do research about it"
+}
+2025-09-21 22:41:24,772 - werkzeug - INFO - 127.0.0.1 - - [21/Sep/2025 22:41:24] "POST /api/workflow HTTP/1.1" 200 -
+2025-09-21 22:41:34,560 - httpx - INFO - HTTP Request: POST https://api.twelvelabs.io/v1.3/analyze "HTTP/1.1 200 OK"

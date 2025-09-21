@@ -320,6 +320,7 @@ def register_routes(app):
             # Try client API key first, then fall back to environment
             api_key = data.get('api_key') or app.config.get('TWELVELABS_API_KEY_ENV')
             index_id = data.get('index_id')
+            page = data.get('page', 1)  # Default to page 1 if not provided
             
             if not api_key or api_key == '':
                 return jsonify({'success': False, 'error': 'TwelveLabs API key is required. Please connect your API key in the UI or set TWELVELABS_API_KEY in environment variables.'}), 400
@@ -329,11 +330,12 @@ def register_routes(app):
             
             # Create service with provided API key
             service = TwelveLabsService(api_key=api_key)
-            videos = service.get_videos(index_id)
+            videos = service.get_videos(index_id, page=page)
             
             return jsonify({
                 'success': True,
-                'videos': videos
+                'videos': videos,
+                'page': page
             })
             
         except Exception as e:

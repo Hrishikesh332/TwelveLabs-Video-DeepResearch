@@ -32,200 +32,145 @@ def load_prompt_from_file(filename):
 
 def generate_workflow(twelvelabs_api_key, index_id, video_id, analysis_prompt, research_query, research_prompt_template):
     """Generate workflow response as a streaming generator."""
+    # Input validation
+    if not twelvelabs_api_key:
+        yield json.dumps({'type': 'error', 'message': 'TwelveLabs API key is required'}) + '\n'
+        return
+    if not index_id or not video_id:
+        yield json.dumps({'type': 'error', 'message': 'Index ID and Video ID are required'}) + '\n'
+        return
+    if not research_query:
+        yield json.dumps({'type': 'error', 'message': 'Research query is required'}) + '\n'
+        return
+
     try:
-        # Initial validation
-        logger.info(f"Starting workflow for video {video_id} in index {index_id}")
+        twelvelabs_service = TwelveLabsService(api_key=twelvelabs_api_key)
         
-        if not twelvelabs_api_key:
-            yield json.dumps({
-                'type': 'error',
-                'message': 'TwelveLabs API key is required'
-            }) + '\n'
+        # Step 1: Get video details
+        yield safe_json_dumps({
+            'type': 'progress',
+            'step': 'video_details',
+            'message': 'Fetching video details...',
+            'progress': 0
+        }) + '\n'
+
+        video_details = twelvelabs_service.get_video_details(index_id, video_id)
+        if not video_details:
+            yield safe_json_dumps({'type': 'error', 'message': 'Could not retrieve video details'}) + '\n'
             return
 
-        if not index_id or not video_id:
-            yield json.dumps({
-                'type': 'error',
-                'message': 'Index ID and Video ID are required'
-            }) + '\n'
+        yield safe_json_dumps({
+            'type': 'data',
+            'step': 'video_details',
+            'data': {
+                'id': video_details.get('_id', ''),
+                'filename': video_details.get('system_metadata', {}).get('filename', ''),
+                'duration': video_details.get('system_metadata', {}).get('duration', 0)
+            },
+            'progress': 33
+        }) + '\n'
+
+        # Step 2: Analyze video
+        yield safe_json_dumps({
+            'type': 'progress',
+            'step': 'analysis',
+            'message': 'Analyzing video content...',
+            'progress': 33
+        }) + '\n'
+
+        analysis_result = twelvelabs_service.analyze_video(video_id, analysis_prompt)
+        yield safe_json_dumps({
+            'type': 'data',
+            'step': 'analysis',
+            'data': analysis_result,
+            'progress': 66
+        }) + '\n'
+
+        # Step 3: Research with context
+        yield safe_json_dumps({
+            'type': 'progress',
+            'step': 'research',
+            'message': 'Conducting deep research...',
+            'progress': 66
+        }) + '\n'
+
+        enhanced_query = research_prompt_template.format(
+            analysis_result=analysis_result,
+            research_query=research_query
+        )
+        
+        sonar_service = SonarService()
+        research_result = sonar_service.deep_research(enhanced_query, timeout=180)
+
+        if 'error' in research_result:
+            yield safe_json_dumps({'type': 'error', 'message': f'Research failed: {research_result["error"]}'}) + '\n'
             return
 
-        if not research_query:
-            yield json.dumps({
-                'type': 'error',
-                'message': 'Research query is required'
-            }) + '\n'
-            return
-
-        try:
-            # Step 1: Get video details
-            yield safe_json_dumps({
-                'type': 'progress',
-                'step': 'video_details',
-                'message': 'Fetching video details...',
-                'progress': 0
-            }) + '\n'
-
-            twelvelabs_service = TwelveLabsService(api_key=twelvelabs_api_key)
-            video_details = twelvelabs_service.get_video_details(index_id, video_id)
-
-            if not video_details:
-                yield safe_json_dumps({
-                    'type': 'error',
-                    'message': 'Could not retrieve video details'
-                }) + '\n'
-                return
-
-            yield safe_json_dumps({
-                'type': 'data',
-                'step': 'video_details',
-                'data': video_details,
-                'progress': 33
-            }) + '\n'
-
-            # Step 2: Analyze video
-            yield safe_json_dumps({
-                'type': 'progress',
-                'step': 'analysis',
-                'message': 'Analyzing video content...',
-                'progress': 33
-            }) + '\n'
-
-            analysis_result = twelvelabs_service.analyze_video(video_id, analysis_prompt)
-            
-            yield safe_json_dumps({
-                'type': 'data',
-                'step': 'analysis',
-                'data': analysis_result,
-                'progress': 66
-            }) + '\n'
-
-            # Step 3: Research with context
-            yield safe_json_dumps({
-                'type': 'progress',
-                'step': 'research',
-                'message': 'Conducting deep research...',
-                'progress': 66
-            }) + '\n'
-
-            # Create research query with markdown formatting request using pre-loaded template
-            enhanced_query = research_prompt_template.format(
-                analysis_result=analysis_result,
-                research_query=research_query
-            )
-            
-            sonar_service = SonarService()
-            research_result = sonar_service.deep_research(enhanced_query, timeout=180)
-
-            if 'error' in research_result:
-                yield safe_json_dumps({
-                    'type': 'error',
-                    'message': f'Research failed: {research_result["error"]}'
-                }) + '\n'
-                return
-
-            # Send final result in smaller chunks to avoid large JSON issues
-            try:
-                # First, send the research content separately in manageable pieces
-                research_content = ""
-                if research_result and research_result.get('choices'):
-                    research_content = research_result['choices'][0].get('message', {}).get('content', '')
+        # Extract research content
+        research_content = ""
+        if research_result and research_result.get('choices'):
+            research_content = research_result['choices'][0].get('message', {}).get('content', '')
+        
+        # Send research content in chunks if large
+        max_chunk_size = 10000
+        if len(research_content) > max_chunk_size:
+            for i in range(0, len(research_content), max_chunk_size):
+                chunk = research_content[i:i + max_chunk_size]
+                is_final = (i + max_chunk_size) >= len(research_content)
                 
-                # Send research content in chunks if it's large
-                max_chunk_size = 8000  # 8KB chunks
-                if len(research_content) > max_chunk_size:
-                    total_chunks = (len(research_content) + max_chunk_size - 1) // max_chunk_size
-                    logger.info(f"Large research content ({len(research_content)} chars), sending in {total_chunks} chunks")
-                    
-                    # Send research content in multiple chunks
-                    for i in range(0, len(research_content), max_chunk_size):
-                        chunk = research_content[i:i + max_chunk_size]
-                        chunk_index = i // max_chunk_size
-                        is_final_chunk = (i + max_chunk_size) >= len(research_content)
-                        
-                        chunk_data = {
-                            'type': 'research_chunk',
-                            'content': chunk,
-                            'chunk_index': chunk_index,
-                            'is_final': is_final_chunk,
-                            'total_length': len(research_content),
-                            'total_chunks': total_chunks
-                        }
-                        
-                        chunk_json = safe_json_dumps(chunk_data)
-                        logger.info(f"Sending chunk {chunk_index + 1}/{total_chunks} ({len(chunk_json)} chars)")
-                        yield chunk_json + '\n'
-                
-                # Send the complete response with minimal research data
-                final_response = {
-                    'type': 'complete',
-                    'data': {
-                        'video_details': video_details,
-                        'analysis': analysis_result,
-                        'research': {
-                            'choices': [{
-                                'message': {
-                                    'content': research_content if len(research_content) <= max_chunk_size else f"[CHUNKED_CONTENT]"
-                                }
-                            }],
-                            'citations': research_result.get('citations', [])[:20],  # Limit citations
-                            'usage': research_result.get('usage', {})
-                        },
-                        'sources': research_result.get('search_results', [])[:15]  # Limit sources
+                yield safe_json_dumps({
+                    'type': 'research_chunk',
+                    'content': chunk,
+                    'is_final': is_final,
+                    'progress': 80 + (i / len(research_content)) * 20
+                }) + '\n'
+            
+            # Send completion with chunked content indicator
+            yield safe_json_dumps({
+                'type': 'complete',
+                'data': {
+                    'research': {
+                        'choices': [{
+                            'message': {
+                                'content': '[CHUNKED_CONTENT]'
+                            }
+                        }],
+                        'citations': research_result.get('citations', [])[:10],
+                        'usage': research_result.get('usage', {})
                     },
-                    'progress': 100
-                }
-                
-                # Test the size and send
-                response_json = safe_json_dumps(final_response)
-                if len(response_json) > 30000:  # Still too large, send minimal version
-                    logger.warning(f"Response still large ({len(response_json)} chars), sending minimal version")
-                    minimal_response = {
-                        'type': 'complete',
-                        'data': {
-                            'video_details': {
-                                '_id': video_details.get('_id', ''),
-                                'system_metadata': {
-                                    'filename': video_details.get('system_metadata', {}).get('filename', ''),
-                                    'duration': video_details.get('system_metadata', {}).get('duration', 0)
-                                }
-                            },
-                            'analysis': analysis_result[:1000] + "..." if len(str(analysis_result)) > 1000 else analysis_result,
-                            'research': {
-                                'choices': [{
-                                    'message': {
-                                        'content': research_content if len(research_content) <= max_chunk_size else "[Content sent in chunks]"
-                                    }
-                                }],
-                                'citations': research_result.get('citations', [])[:5]
-                            },
-                            'sources': research_result.get('search_results', [])[:5]
-                        },
-                        'progress': 100
-                    }
-                    yield safe_json_dumps(minimal_response) + '\n'
-                else:
-                    yield response_json + '\n'
-                    
-            except Exception as json_error:
-                logger.error(f"Error serializing final response: {json_error}")
-                yield safe_json_dumps({
-                    'type': 'error',
-                    'message': f'Failed to serialize research results: {str(json_error)}'
-                }) + '\n'
-
-        except Exception as e:
-            logger.error(f"Error in workflow: {str(e)}")
+                    'sources': research_result.get('search_results', [])[:10]
+                },
+                'progress': 100
+            }) + '\n'
+        else:
+            # Send research content directly
             yield safe_json_dumps({
-                'type': 'error',
-                'message': str(e)
+                'type': 'data',
+                'step': 'research',
+                'data': research_content,
+                'progress': 100
+            }) + '\n'
+            
+            # Send completion with research data
+            yield safe_json_dumps({
+                'type': 'complete',
+                'data': {
+                    'research': {
+                        'choices': [{
+                            'message': {
+                                'content': research_content
+                            }
+                        }],
+                        'citations': research_result.get('citations', [])[:10],
+                        'usage': research_result.get('usage', {})
+                    },
+                    'sources': research_result.get('search_results', [])[:10]
+                },
+                'progress': 100
             }) + '\n'
 
     except Exception as e:
-        yield json.dumps({
-            'type': 'error',
-            'message': str(e)
-        }) + '\n'
+        yield safe_json_dumps({'type': 'error', 'message': str(e)}) + '\n'
 
 
 def safe_json_dumps(obj):

@@ -140,15 +140,7 @@ def generate_workflow(twelvelabs_api_key, index_id, video_id, analysis_prompt, r
                 'progress': 100
             }) + '\n'
         else:
-            # Send research content directly
-            yield safe_json_dumps({
-                'type': 'data',
-                'step': 'research',
-                'data': research_content,
-                'progress': 100
-            }) + '\n'
-            
-            # Send completion with research data
+            # Send completion with research data directly (no separate data message)
             yield safe_json_dumps({
                 'type': 'complete',
                 'data': {

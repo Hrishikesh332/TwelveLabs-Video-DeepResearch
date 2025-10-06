@@ -26,6 +26,7 @@ import ReactMarkdown from 'react-markdown'
 import remarkGfm from 'remark-gfm'
 import { Label } from "@/components/ui/label"
 import { API_CONFIG, APP_CONFIG, ERROR_MESSAGES, validateApiKey, validateVideoFile, formatDuration, formatFileSize } from "@/lib/config"
+import { useIsMobile } from "@/hooks/use-mobile"
 
 type IndexItem = { id: string; name: string }
 type VideoItem = { 
@@ -198,6 +199,7 @@ function linkifyReferences(markdown: string, sources?: Source[]): string {
 
 export default function DeepResearchLanding() {
   const { toast } = useToast()
+  const isMobile = useIsMobile()
 
   const [isApiModalOpen, setIsApiModalOpen] = useState(false)
   const [isComingSoonOpen, setIsComingSoonOpen] = useState(false)
@@ -1303,6 +1305,46 @@ Please provide a comprehensive answer that builds upon the previous research and
     } finally {
       setIsUploading(false)
     }
+  }
+
+  // Mobile-only layout - show desktop access message
+  if (isMobile) {
+    return (
+      <div className="min-h-screen bg-white flex flex-col items-center justify-center p-6">
+        <Toaster />
+        
+        {/* Logo */}
+        <div className="mb-8">
+          <Logo className="w-16 h-16" />
+        </div>
+        
+        {/* Main Content */}
+        <div className="text-center max-w-md mx-auto">
+          <h1 className="text-2xl font-bold text-gray-900 mb-4">
+            Video Deep Research
+          </h1>
+          
+          <div className="mb-6">
+            <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <svg className="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
+              </svg>
+            </div>
+          </div>
+          
+          <h2 className="text-xl font-semibold text-gray-800 mb-3">
+            Better Experience on Desktop
+          </h2>
+          
+          <p className="text-gray-600 mb-6 leading-relaxed">
+            For the best experience with Video Deep Research, please access this application on a desktop or laptop computer. 
+            The full functionality and interface are optimized for larger screens.
+          </p>
+      
+
+        </div>
+      </div>
+    )
   }
 
   // If research has started, show only the chat interface

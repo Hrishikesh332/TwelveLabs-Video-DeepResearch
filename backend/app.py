@@ -56,7 +56,7 @@ CORS(app, resources={
 # Default configuration
 app.config['TWELVELABS_API_KEY'] = os.environ.get('TWELVELABS_API_KEY', '')
 app.config['TWELVELABS_API_KEY_ENV'] = os.environ.get('TWELVELABS_API_KEY', '')  # Store original env value
-app.config['PERPLEXITY_API_KEY'] = os.environ.get('PERPLEXITY', '')
+app.config['PERPLEXITY_API_KEY'] = os.environ.get('PERPLEXITY_API_KEY') or os.environ.get('PERPLEXITY', '')
 app.config['TWELVELABS_DEFAULT_INDEX_ID'] = os.environ.get('TWELVELABS_INDEX_ID', '')
 
 # Register routes
@@ -72,4 +72,4 @@ if __name__ == '__main__':
         print("Scheduler stopped")
     except Exception as e:
         print(f"Error starting app: {e}")
-        scheduler.shutdown() 
+        scheduler.shutdown()

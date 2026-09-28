@@ -1,5 +1,5 @@
 Flask
-twelvelabs==1.0.0
+twelvelabs==1.3.3
 requests
 python-dotenv
 flask-cors

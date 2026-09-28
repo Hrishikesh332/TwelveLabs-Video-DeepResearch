@@ -1,4 +1,5 @@
 from twelvelabs import TwelveLabs
+from twelvelabs.types import AnalyzePromptV2, VideoContext_AssetId
 import requests
 import sys
 import os
@@ -45,15 +46,20 @@ class TwelveLabsService:
             videos_response = self.client.indexes.videos.list(index_id=index_id, page=page)
             
             result = []
-            for video in videos_response.items:
+            for video in videos_response.items or []:
                 system_metadata = video.system_metadata
-                hls_data = video.hls
+                hls_data = getattr(video, 'hls', None)
+                if hls_data and hasattr(hls_data, 'model_dump'):
+                    hls_data = hls_data.model_dump()
+                elif hls_data and hasattr(hls_data, 'dict'):
+                    hls_data = hls_data.dict()
                 thumbnail_urls = hls_data.get('thumbnail_urls', []) if hls_data else []
                 thumbnail_url = thumbnail_urls[0] if thumbnail_urls else None
                 video_url = hls_data.get('video_url') if hls_data else None
                 
                 result.append({
                     "id": video.id,
+                    "asset_id": video.asset_id,
                     "name": system_metadata.filename if system_metadata and system_metadata.filename else f'Video {video.id}',
                     "duration": system_metadata.duration if system_metadata else 0,
                     "thumbnail_url": thumbnail_url,
@@ -69,30 +75,53 @@ class TwelveLabsService:
             print(f"Error fetching videos for index {index_id}: {e}")
             return []
     
-    def analyze_video(self, video_id, prompt):
+    def analyze_video(self, video_id, prompt, *, index_id=None, asset_id=None):
         try:
+            if not self.api_key:
+                raise ValueError("TwelveLabs API key is required")
+            if not prompt:
+                raise ValueError("Prompt is required")
+
+            if not asset_id:
+                if not index_id:
+                    raise ValueError(
+                        "Pegasus 1.5 analysis requires asset_id or index_id to resolve the indexed video's asset"
+                    )
+                video_details = self.get_video_details(index_id, video_id)
+                asset_id = video_details.get('asset_id') if video_details else None
+
+            if not asset_id:
+                raise ValueError(f"No asset ID is associated with video {video_id}")
+
             analysis_response = self.client.analyze(
-                video_id=video_id,
-                prompt=prompt
+                model_name="pegasus1.5",
+                video=VideoContext_AssetId(asset_id=asset_id),
+                prompt_v_2=AnalyzePromptV2(input_text=prompt),
             )
+
+            if analysis_response.error:
+                raise RuntimeError(analysis_response.error.message)
+            if analysis_response.data is None:
+                raise RuntimeError("TwelveLabs returned no analysis text")
+
             return analysis_response.data
         except Exception as e:
             print(f"Error analyzing video {video_id}: {e}")
-            raise e
+            raise
 
     def get_video_details(self, index_id, video_id):
         if not hasattr(self, 'client') or not getattr(self, 'client', None):
             return None
         if not self.api_key:
             return None
-        url = f"https://api.twelvelabs.io/v1.3/indexes/{index_id}/videos/{video_id}?embed=false"
+        url = f"https://api.twelvelabs.io/v1.3/indexes/{index_id}/videos/{video_id}"
         headers = {
             "accept": "application/json",
             "x-api-key": self.api_key,
             "Content-Type": "application/json"
         }
         try:
-            response = requests.get(url, headers=headers)
+            response = requests.get(url, headers=headers, timeout=30)
             if response.status_code == 200:
                 return response.json()
             else:
@@ -204,4 +233,4 @@ class TwelveLabsService:
             print(f"[DEBUG] Upload timed out after {timeout_seconds} seconds", file=sys.stderr)
             return {"error": "Upload timed out"}
         except Exception as e:
-            return {"error": str(e)} 
+            return {"error": str(e)}

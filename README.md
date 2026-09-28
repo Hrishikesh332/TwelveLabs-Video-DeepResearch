@@ -2,7 +2,7 @@
 
 ## Overview
 
-**Video Deep Research** is a platform that enables intelligent video analysis, deep research, and reliable citation extraction. Unlike traditional search engines, which cannot directly search inside videos or provide verifiable references, Here **TwelveLabs Analyze Pegasus 1.2** for video understanding and **Sonar by Perplexity** for knowledge retrieval and citation.
+**Video Deep Research** is a platform that enables intelligent video analysis, deep research, and reliable citation extraction. Unlike traditional search engines, which cannot directly search inside videos or provide verifiable references, it uses **TwelveLabs Analyze Pegasus 1.5** for video understanding and **Perplexity's Agent API with Sonar** for knowledge retrieval and citations.
 
 This enables researchers, creators, and professionals to explore video content at a semantic level, generate structured insights, and link them with verifiable sources.
 
@@ -11,13 +11,13 @@ This enables researchers, creators, and professionals to explore video content a
 
 * Python 3.9+
 * Flask
-* Twelve Labs Analyze (Pegasus 1.2) – [Get API Key](https://www.twelvelabs.io/)
-* Perplexity Sonar API – [Get API Key](https://sonar.perplexity.ai/)
+* Twelve Labs Analyze (Pegasus 1.5) – [Get API Key](https://www.twelvelabs.io/)
+* Perplexity Agent API – [Get API Key](https://www.perplexity.ai/settings/api)
 
 ## Features
 
-1. Video content is processed and analyzed using **TwelveLabs Pegasus 1.2**
-2. Extracted insights are enriched with **Sonar by Perplexity** to provide citations
+1. Video content is processed and analyzed using **TwelveLabs Pegasus 1.5**
+2. Extracted insights are enriched with **Sonar through the Perplexity Agent API** to provide citations
 3. Semantic search enables **deep video understanding** beyond keywords
 4. Returns **verified research outputs** with proper references
 
@@ -96,16 +96,16 @@ The frontend is built with **Next.js**, while the backend runs on **Flask** with
 1. Sign up at [Twelve Labs](https://www.twelvelabs.io/)
 2. Generate your **TwelveLabs API Key**
 
-### Perplexity Sonar Setup
+### Perplexity Setup
 
-1. Sign up at [Sonar Perplexity](https://sonar.perplexity.ai/)
-2. Get API credentials for **Sonar API**
+1. Sign up at [Perplexity](https://www.perplexity.ai/)
+2. Get API credentials for the **Agent API**
 
 ### Configure `.env`
 
 ```
 TWELVELABS_API_KEY=your_twelvelabs_api_key
-SONAR_API_KEY=your_perplexity_sonar_api_key
+PERPLEXITY_API_KEY=your_perplexity_api_key
 ```
 
 ## Installation

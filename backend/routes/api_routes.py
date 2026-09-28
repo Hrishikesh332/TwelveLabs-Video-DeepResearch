@@ -75,7 +75,12 @@ def generate_workflow(twelvelabs_api_key, index_id, video_id, analysis_prompt, r
             'progress': 33
         }) + '\n'
 
-        analysis_result = twelvelabs_service.analyze_video(video_id, analysis_prompt)
+        analysis_result = twelvelabs_service.analyze_video(
+            video_id,
+            analysis_prompt,
+            index_id=index_id,
+            asset_id=video_details.get('asset_id'),
+        )
         yield safe_json_dumps({
             'type': 'data',
             'step': 'analysis',
@@ -410,16 +415,29 @@ def register_routes(app):
             # Try client API key first, then fall back to environment
             api_key = data.get('api_key') or app.config.get('TWELVELABS_API_KEY_ENV')
             prompt = data.get('prompt')
+            index_id = data.get('index_id')
+            asset_id = data.get('asset_id')
             
             if not api_key or api_key == '':
                 return jsonify({'success': False, 'error': 'TwelveLabs API key is required. Please connect your API key in the UI or set TWELVELABS_API_KEY in environment variables.'}), 400
             
             if not prompt:
                 return jsonify({'success': False, 'error': 'Prompt is required'}), 400
+
+            if not index_id and not asset_id:
+                return jsonify({
+                    'success': False,
+                    'error': 'Pegasus 1.5 requires index_id or asset_id for video analysis'
+                }), 400
             
             # Create service with provided API key
             service = TwelveLabsService(api_key=api_key)
-            analysis = service.analyze_video(video_id, prompt)
+            analysis = service.analyze_video(
+                video_id,
+                prompt,
+                index_id=index_id,
+                asset_id=asset_id,
+            )
             
             return jsonify({
                 'success': True,
@@ -630,5 +648,4 @@ Provide comprehensive insights with clear structure and professional formatting.
             
 #         except Exception as e:
 #             return jsonify({'success': False, 'error': str(e)}), 500 
-
 

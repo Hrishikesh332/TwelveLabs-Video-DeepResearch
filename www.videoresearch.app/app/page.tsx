@@ -205,7 +205,6 @@ export default function DeepResearchLanding() {
   const [isComingSoonOpen, setIsComingSoonOpen] = useState(false)
   const [isUploadVideoModalOpen, setIsUploadVideoModalOpen] = useState(false)
   const [isInfoModalOpen, setIsInfoModalOpen] = useState(false)
-  const [isBlogModalOpen, setIsBlogModalOpen] = useState(false)
   const [currentInfoStep, setCurrentInfoStep] = useState(0)
   
   const infoSteps = [
@@ -1838,14 +1837,22 @@ Please provide a comprehensive answer that builds upon the previous research and
               </Button>
               {/* Blog Logo */}
               <Button
-                onClick={() => setIsBlogModalOpen(true)}
+                asChild
                 variant="outline"
                 size="sm"
                 className="text-gray-600 border-gray-200 bg-transparent hover:bg-gray-50"
               >
-                <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M21 5c-1.11-.35-2.33-.5-3.5-.5-1.95 0-4.05.4-5.5 1.5-1.45-1.1-3.55-1.5-5.5-1.5S2.45 4.9 1 6v14.65c0 .25.25.5.5.5.1 0 .15-.05.25-.05C3.1 20.45 5.05 20 6.5 20c1.95 0 4.05.4 5.5 1.5 1.35-.85 3.8-1.5 5.5-1.5 1.65 0 3.35.3 4.75 1.05.1.05.15.05.25.05.25 0 .5-.25.5-.5V6c-.6-.45-1.25-.75-2-1zm0 13.5c-1.1-.35-2.3-.5-3.5-.5-1.7 0-4.15.65-5.5 1.5V8c1.35-.85 3.8-1.5 5.5-1.5 1.2 0 2.4.15 3.5.5v11.5z"/>
-                </svg>
+                <a
+                  href="https://www.twelvelabs.io/blog/video-deep-research"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Read the TwelveLabs Video Deep Research article"
+                  title="Read the TwelveLabs Video Deep Research article"
+                >
+                  <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M21 5c-1.11-.35-2.33-.5-3.5-.5-1.95 0-4.05.4-5.5 1.5-1.45-1.1-3.55-1.5-5.5-1.5S2.45 4.9 1 6v14.65c0 .25.25.5.5.5.1 0 .15-.05.25-.05C3.1 20.45 5.05 20 6.5 20c1.95 0 4.05.4 5.5 1.5 1.35-.85 3.8-1.5 5.5-1.5 1.65 0 3.35.3 4.75 1.05.1.05.15.05.25.05.25 0 .5-.25.5-.5V6c-.6-.45-1.25-.75-2-1zm0 13.5c-1.1-.35-2.3-.5-3.5-.5-1.7 0-4.15.65-5.5 1.5V8c1.35-.85 3.8-1.5 5.5-1.5 1.2 0 2.4.15 3.5.5v11.5z"/>
+                  </svg>
+                </a>
               </Button>
               <Button 
                 variant="outline" 
@@ -2526,32 +2533,6 @@ Please provide a comprehensive answer that builds upon the previous research and
         </DialogContent>
       </Dialog>
 
-      {/* Blog Modal */}
-      <Dialog open={isBlogModalOpen} onOpenChange={setIsBlogModalOpen}>
-        <DialogContent className="sm:max-w-md !rounded-[58px]">
-          <DialogHeader>
-            <DialogTitle className="text-center text-xl font-semibold text-gray-900">
-              Coming Soon!
-            </DialogTitle>
-          </DialogHeader>
-          <div className="text-center py-6">
-            <div className="mb-4">
-              <svg className="w-16 h-16 mx-auto text-gray-400" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M21 5c-1.11-.35-2.33-.5-3.5-.5-1.95 0-4.05.4-5.5 1.5-1.45-1.1-3.55-1.5-5.5-1.5S2.45 4.9 1 6v14.65c0 .25.25.5.5.5.1 0 .15-.05.25-.05C3.1 20.45 5.05 20 6.5 20c1.95 0 4.05.4 5.5 1.5 1.35-.85 3.8-1.5 5.5-1.5 1.65 0 3.35.3 4.75 1.05.1.05.15.05.25.05.25 0 .5-.25.5-.5V6c-.6-.45-1.25-.75-2-1zm0 13.5c-1.1-.35-2.3-.5-3.5-.5-1.7 0-4.15.65-5.5 1.5V8c1.35-.85 3.8-1.5 5.5-1.5 1.2 0 2.4.15 3.5.5v11.5z"/>
-              </svg>
-            </div>
-            <p className="text-gray-600 mb-6">
-              We're working on bringing you insightful technical content about building video deep research.
-            </p>
-            <Button 
-              onClick={() => setIsBlogModalOpen(false)}
-              className="w-full bg-gray-900 text-white hover:bg-gray-800"
-            >
-              Got it!
-            </Button>
-          </div>
-        </DialogContent>
-      </Dialog>
     </div>
   )
 }

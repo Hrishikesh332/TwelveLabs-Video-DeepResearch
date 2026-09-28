@@ -170,6 +170,7 @@ curl -X POST http://localhost:5000/api/analyze/Video_ID \
   -H "Content-Type: application/json" \
   -d '{
     "api_key": "TwelveLabs_API_KEY",
+    "index_id": "TwelveLabs_INDEX_ID",
     "prompt": "Describe what happens in this video"
   }'
 ```
@@ -213,17 +214,14 @@ curl -X POST http://localhost:5000/api/sonar/research \
       }
     ],
     "citations": [
-      {
-        "title": "AI Trends Report 2024",
-        "url": "https://example.com/ai-trends-2024"
-      }
+      "https://example.com/ai-trends-2026"
     ],
-    "created": 1691234567,
     "id": "research-id-123",
-    "model": "sonar-deep-research",
+    "model": "perplexity/sonar",
+    "status": "completed",
     "usage": {
-      "completion_tokens": 1500,
-      "prompt_tokens": 50,
+      "output_tokens": 1500,
+      "input_tokens": 50,
       "total_tokens": 1550
     }
   }
@@ -318,4 +316,3 @@ curl -X POST http://localhost:5000/api/workflow \
 | `/api/sonar/*` | 400 | Missing query parameter |
 
 ---
-

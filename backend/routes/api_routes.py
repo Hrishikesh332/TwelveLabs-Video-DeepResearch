@@ -116,25 +116,32 @@ def generate_workflow(twelvelabs_api_key, index_id, video_id, analysis_prompt, r
         # Send research content in chunks if large
         max_chunk_size = 10000
         if len(research_content) > max_chunk_size:
-            for i in range(0, len(research_content), max_chunk_size):
+            total_chunks = (len(research_content) + max_chunk_size - 1) // max_chunk_size
+
+            for chunk_index, i in enumerate(range(0, len(research_content), max_chunk_size)):
                 chunk = research_content[i:i + max_chunk_size]
-                is_final = (i + max_chunk_size) >= len(research_content)
+                is_final = chunk_index == total_chunks - 1
                 
                 yield safe_json_dumps({
                     'type': 'research_chunk',
                     'content': chunk,
+                    'chunk_index': chunk_index,
+                    'total_chunks': total_chunks,
+                    'total_length': len(research_content),
                     'is_final': is_final,
                     'progress': 80 + (i / len(research_content)) * 20
                 }) + '\n'
             
-            # Send completion with chunked content indicator
+            # Keep the final response self-contained. Chunk events provide streaming
+            # progress, while the complete event remains safe for clients that miss
+            # or cannot reconstruct one of those chunks.
             yield safe_json_dumps({
                 'type': 'complete',
                 'data': {
                     'research': {
                         'choices': [{
                             'message': {
-                                'content': '[CHUNKED_CONTENT]'
+                                'content': research_content
                             }
                         }],
                         'citations': research_result.get('citations', [])[:10],
@@ -648,4 +655,3 @@ Provide comprehensive insights with clear structure and professional formatting.
             
 #         except Exception as e:
 #             return jsonify({'success': False, 'error': str(e)}), 500 
-

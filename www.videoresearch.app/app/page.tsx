@@ -373,12 +373,6 @@ export default function DeepResearchLanding() {
   const [currentStepDetail, setCurrentStepDetail] = useState("")
   const [sources, setSources] = useState<Source[]>([])
   
-  // Research chunk accumulation for large responses
-  const [researchChunks, setResearchChunks] = useState<{[key: number]: string}>({})
-  const [expectedChunkCount, setExpectedChunkCount] = useState<number>(0)
-  const [accumulatedResearchContent, setAccumulatedResearchContent] = useState<string>("")
-  const [chunkTimeout, setChunkTimeout] = useState<NodeJS.Timeout | null>(null)
-  
   // Research context for follow-up questions
   const [researchContext, setResearchContext] = useState<{
     twelvelabsAnalysis: string
@@ -753,17 +747,6 @@ export default function DeepResearchLanding() {
     setActivityLogs([])
     setChatMessages([])
     
-    // Clear research chunk accumulation
-    setResearchChunks({})
-    setExpectedChunkCount(0)
-    setAccumulatedResearchContent("")
-    
-    // Clear any pending chunk timeout
-    if (chunkTimeout) {
-      clearTimeout(chunkTimeout)
-      setChunkTimeout(null)
-    }
-    
     // Add initial user message
     setChatMessages([{
       id: `user-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`,
@@ -801,23 +784,23 @@ export default function DeepResearchLanding() {
         throw new Error('No response reader available')
       }
 
-      let finalData: any = null
       let buffer = ''  // Buffer to accumulate partial JSON
+      const decoder = new TextDecoder()
+      const researchChunks: Record<number, string> = {}
+      let accumulatedResearchContent = ''
       
       while (true) {
         const { done, value } = await reader.read()
         if (done) break
 
         // Convert the chunk to text
-        const chunk = new TextDecoder().decode(value)
+        const chunk = decoder.decode(value, { stream: true })
         buffer += chunk
-            console.log("Buffer length:", buffer.length, "Chunk length:", chunk.length)
+        console.log("Buffer length:", buffer.length, "Chunk length:", chunk.length)
         
         // Process complete lines from buffer
         const lines = buffer.split('\n')
         buffer = lines.pop() || ''  // Keep the last incomplete line in buffer
-        for (const line of lines) {
-
         for (const line of lines) {
           // Skip empty lines or lines that don't look like JSON
           if (!line.trim() || (!line.startsWith('{') && !line.startsWith('['))) {
@@ -882,35 +865,29 @@ export default function DeepResearchLanding() {
               case 'research_chunk':
                 console.log("Received research chunk:", data.chunk_index, "of", data.total_chunks, "isFinal:", data.is_final)
                 // Handle research content chunks for large responses
-                const chunkIndex = data.chunk_index || 0
+                const chunkIndex = Number.isInteger(data.chunk_index)
+                  ? data.chunk_index
+                  : Object.keys(researchChunks).length
                 const chunkContent = data.content || ''
                 const isFinalChunk = data.is_final || false
                 const totalLength = data.total_length || 0
                 const totalChunks = data.total_chunks || 0
-                
-                // Clear any existing timeout
-                if (chunkTimeout) {
-                  clearTimeout(chunkTimeout)
-                }
-                
+
                 // Store this chunk
-                setResearchChunks(prev => ({
-                  ...prev,
-                  [chunkIndex]: chunkContent
-                }))
+                researchChunks[chunkIndex] = chunkContent
                 
                 // If this is the final chunk, reconstruct the full content
                 if (isFinalChunk) {
-                  // Include the current chunk in the reconstruction
-                  const allChunks = { ...researchChunks, [chunkIndex]: chunkContent }
-                  const maxChunkIndex = Math.max(...Object.keys(allChunks).map(k => parseInt(k)))
+                  const maxChunkIndex = totalChunks > 0
+                    ? totalChunks - 1
+                    : Math.max(...Object.keys(researchChunks).map(Number))
                   let fullContent = ''
-                  let missingChunks = []
+                  const missingChunks: number[] = []
                   
                   // Reconstruct content in order and check for missing chunks
                   for (let i = 0; i <= maxChunkIndex; i++) {
-                    if (allChunks[i]) {
-                      fullContent += allChunks[i]
+                    if (Object.prototype.hasOwnProperty.call(researchChunks, i)) {
+                      fullContent += researchChunks[i]
                     } else {
                       missingChunks.push(i)
                     }
@@ -925,36 +902,9 @@ export default function DeepResearchLanding() {
                   
                   console.log('Chunk reconstruction - fullContent length:', fullContent.length)
                   console.log('Chunk reconstruction - fullContent preview:', fullContent.substring(0, 100))
-                  setAccumulatedResearchContent(fullContent)
-                  
-                  // Clear chunks after reconstruction
-                  setResearchChunks({})
-                  setChunkTimeout(null)
+                  accumulatedResearchContent = fullContent
                 } else {
                   addActivityLog(`Receiving research content... (chunk ${chunkIndex + 1}${totalChunks ? `/${totalChunks}` : ''})`, 'progress')
-                  
-                  // Set timeout to handle missing chunks (30 seconds)
-                  const timeout = setTimeout(() => {
-                    console.warn('Chunk timeout reached, using partial content')
-                    const currentChunks = researchChunks
-                    const maxIndex = Math.max(...Object.keys(currentChunks).map(k => parseInt(k)), chunkIndex)
-                    let partialContent = ''
-                    
-                    for (let i = 0; i <= maxIndex; i++) {
-                      if (i === chunkIndex) {
-                        partialContent += chunkContent
-                      } else if (currentChunks[i]) {
-                        partialContent += currentChunks[i]
-                      }
-                    }
-                    
-                    setAccumulatedResearchContent(partialContent)
-                    addActivityLog('Using partial research content due to timeout', 'error')
-                    setResearchChunks({})
-                    setChunkTimeout(null)
-                  }, 30000)
-                  
-                  setChunkTimeout(timeout)
                 }
                 break
 
@@ -984,7 +934,6 @@ export default function DeepResearchLanding() {
               
               case 'complete':
                 const responseData = data.data
-                finalData = responseData
                 setResearchSteps(prev => prev.map(step => ({
                   ...step,
                   status: 'completed'
@@ -994,11 +943,19 @@ export default function DeepResearchLanding() {
                 // Set the research content (use accumulated content if available)
                 if (responseData.research) {
                   console.log('Complete case - accumulatedResearchContent:', accumulatedResearchContent ? 'has content' : 'empty')
-                  
-                  
-                  let researchContent = responseData.research.choices?.[0]?.message?.content || responseData.research
-                                    // If content was chunked, use accumulated content instead of placeholder
-                  if (researchContent === '[CHUNKED_CONTENT]' && accumulatedResearchContent) {
+
+                  const responseContent = responseData.research.choices?.[0]?.message?.content
+                  let researchContent = typeof responseContent === 'string'
+                    ? responseContent
+                    : typeof responseData.research === 'string'
+                      ? responseData.research
+                      : ''
+
+                  // Support responses from an older backend while deployments roll over.
+                  if (researchContent === '[CHUNKED_CONTENT]') {
+                    if (!accumulatedResearchContent) {
+                      throw new Error('The research response completed before its content was received')
+                    }
                     researchContent = accumulatedResearchContent
                     console.log('Using accumulated content for chunked response')
                   } else if (accumulatedResearchContent && !researchContent) {
@@ -1008,7 +965,7 @@ export default function DeepResearchLanding() {
                   
                   console.log('Complete case - final researchContent length:', researchContent.length)
                   console.log('Complete case - researchContent preview:', researchContent.substring(0, 100))
-            setStreamingContent(researchContent)
+                  setStreamingContent(researchContent)
             
                   // Generate message ID
                   const messageId = `assistant-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`
@@ -1028,10 +985,10 @@ export default function DeepResearchLanding() {
                   }
                   
                   // Add message with its sources
-            setChatMessages(prev => [...prev, {
+                  setChatMessages(prev => [...prev, {
                     id: messageId,
-              type: 'assistant',
-              content: researchContent,
+                    type: 'assistant',
+                    content: researchContent,
                     timestamp: new Date(),
                     sources: initialSources
                   }])
@@ -1067,7 +1024,8 @@ export default function DeepResearchLanding() {
               console.warn('JSON parsing failed, skipping malformed chunk')
               continue
             }
-      }          }
+            throw e
+          }
         }
       }
     
